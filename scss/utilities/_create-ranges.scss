@@ -1,0 +1,19 @@
+@mixin create-ranges($ranges) {
+	// Ugly native property / array access, however this can be put into the tools
+	$range-palm:   (nth(map-get($ranges, 'palm'), 1), nth(map-get($ranges, 'palm'), 4)) !global;
+	$range-palm-s: (nth(map-get($ranges, 'palm'), 1), nth(map-get($ranges, 'palm'), 2)) !global;
+	$range-palm-m: (nth(map-get($ranges, 'palm'), 2), nth(map-get($ranges, 'palm'), 3)) !global;
+	$range-palm-l: (nth(map-get($ranges, 'palm'), 3), nth(map-get($ranges, 'palm'), 4)) !global;
+
+	$range-lap:   (nth(map-get($ranges, 'lap'), 1), nth(map-get($ranges, 'lap'), 4)) !global;
+	$range-lap-s: (nth(map-get($ranges, 'lap'), 1), nth(map-get($ranges, 'lap'), 2)) !global;
+	$range-lap-m: (nth(map-get($ranges, 'lap'), 2), nth(map-get($ranges, 'lap'), 3)) !global;
+	$range-lap-l: (nth(map-get($ranges, 'lap'), 3), nth(map-get($ranges, 'lap'), 4)) !global;
+
+	$range-desk:   (nth(map-get($ranges, 'desk'), 1), nth(map-get($ranges, 'desk'), 4)) !global;
+	$range-desk-s: (nth(map-get($ranges, 'desk'), 1), nth(map-get($ranges, 'desk'), 2)) !global;
+	$range-desk-m: (nth(map-get($ranges, 'desk'), 2), nth(map-get($ranges, 'desk'), 3)) !global;
+	$range-desk-l: (nth(map-get($ranges, 'desk'), 3), nth(map-get($ranges, 'desk'), 4)) !global;
+};
+
+@include create-ranges($ranges);

@@ -1,0 +1,7 @@
+@mixin font-smoothing($is-on) {
+	@if $is-on {
+		-webkit-font-smoothing: antialiased;
+	} @else {
+		-webkit-font-smoothing: auto;
+	}
+}

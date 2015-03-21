@@ -1,0 +1,7 @@
+body {
+	@include font-smoothing(true);
+	font-size: 16px;
+	line-height: 24px;
+	color: $color-black;
+	font-family: $font-family-sans-serif;
+}

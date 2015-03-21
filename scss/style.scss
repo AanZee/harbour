@@ -1,6 +1,41 @@
-body {
-	background-color: white;
-	color: blue;
-	text-align: center;
-	font-size: 24px;
-}
+// Vendor
+@import 'vendor/bourbon/bourbon';
+
+// Vendor Overrides
+
+// Fonts
+@import 'fonts/example';
+
+// Settings
+@import 'settings/colors';
+@import 'settings/fonts';
+@import 'settings/font-weights';
+@import 'settings/ranges';
+
+// Utilities
+@import 'utilities/create-ranges';
+@import 'utilities/font-smoothing';
+@import 'utilities/respond';
+@import 'utilities/media';
+@import 'utilities/hyphens';
+@import 'utilities/overflow-ellipsis';
+@import 'utilities/padding-box';
+
+// Reset
+@import 'reset/normalize';
+@import 'reset/box-sizing';
+
+// Base
+@import 'base/forms';
+@import 'base/headings';
+@import 'base/links';
+
+// Layout
+@import 'layout/body';
+@import 'layout/inner';
+
+// Components
+@import 'components/buttons';
+
+// Pages
+@import 'pages/example';

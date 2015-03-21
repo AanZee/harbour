@@ -1,0 +1,18 @@
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='number'],
+input[type='search'],
+textarea {
+	font-family: $font-family-sans-serif;
+}
+
+input,
+textarea,
+select {
+	background-color: rgba($color-white, .9);
+	&:focus {
+		outline: none;
+		background-color: $color-white;
+	}
+}
