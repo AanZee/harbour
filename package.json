@@ -10,7 +10,7 @@
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-connect": "^2.2.0",
-    "gulp-csscomb": "^3.0.3",
+    "gulp-csscomb": "git+https://github.com/edgargressie/gulp-csscomb.git",
     "gulp-csslint": "^0.1.5",
     "gulp-jshint": "^1.9.4",
     "gulp-ruby-sass": "^1.0.1",

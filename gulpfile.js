@@ -31,16 +31,16 @@ gulp.task('html', function() {
 	.pipe(connect.reload());
 });
 
-gulp.task('js', function() {
+gulp.task('jsLint', function() {
 	return gulp.src(watchFiles.JS)
 	.pipe(jshint())
 	.pipe(jshint.reporter(jshintStylish))
 	.pipe(connect.reload());
 })
 
-gulp.task('css', function() {
+gulp.task('cssLint', function() {
 	gulp.src(watchFiles.CSS)
-	.pipe(csslint())
+	.pipe(csslint('.csslintrc'))
 	.pipe(csslint.reporter());
 })
 
@@ -54,15 +54,15 @@ gulp.task('scssCompile', function() {
 });
 
 gulp.task('scssComb', function() {
-	return gulp.src(watchFiles.CSSComb)
+	return gulp.src(watchFiles.CSSComb, { base: 'scss' })
 	.pipe(csscomb())
 	.pipe(gulp.dest('scss'));
 });
 
 gulp.task('watch', function() {
 	gulp.watch(watchFiles.HTML, ['html']);
-	gulp.watch(watchFiles.JS, ['js']);
-	gulp.watch(watchFiles.CSS, ['css']);
+	gulp.watch(watchFiles.JS, ['jsLint']);
+	gulp.watch(watchFiles.CSS, ['cssLint']);
 	gulp.watch(watchFiles.SCSS, ['scssCompile']);
 	gulp.watch(watchFiles.CSSComb, ['scssComb']);
 });

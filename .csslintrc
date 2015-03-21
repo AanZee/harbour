@@ -12,5 +12,8 @@
 	"unique-headings": false,
 	"universal-selector": false,
 	"unqualified-attributes": false,
-	"import": true
+	"import": true,
+	"outline-none": false,
+	"compatible-vendor-prefixes": false,
+	"fallback-colors": false
 }

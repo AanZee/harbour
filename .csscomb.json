@@ -401,7 +401,8 @@
 			"min-zoom",
 			"user-zoom",
 			"orientation",
-			"..."
+			"...",
+			"$include media"
 		]
 	]
 }
