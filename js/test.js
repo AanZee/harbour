@@ -1,1 +1,1 @@
-alert('test');
+console.log('Harbour test console');
