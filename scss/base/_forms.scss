@@ -11,6 +11,7 @@ input,
 textarea,
 select {
 	background-color: rgba($color-white, .9);
+
 	&:focus {
 		outline: none;
 		background-color: $color-white;

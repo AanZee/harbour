@@ -424,11 +424,22 @@ a {
     border-bottom-color: #1d1d1b; }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  color: #1d1d1b;
-  font-size: 16px;
-  font-family: "Helvetica", Arial, sans-serif;
-  line-height: 24px; }
+  color: blue;
+  font-size: 12px; }
+  body:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (min-width: 200px) and (max-width: 399px) {
+    body {
+      color: red; } }
+  body:hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: green;
+    font-size: 12px; }
 
 .inner {
   position: relative; }
