@@ -1,5 +1,14 @@
-$ranges: (
-	'palm': (0, 320, 380, 440),
-	'lap': (440, 600, 800, 1024),
-	'desk': (1024, 1200, 1600, false)
-);
+$range-palm   : (   0,  440);
+$range-palm-s : (   0,  320);
+$range-palm-m : ( 321,  380);
+$range-palm-l : ( 381,  440);
+
+$range-lap    : ( 441, 1024);
+$range-lap-s  : ( 401,  600);
+$range-lap-m  : ( 601,  800);
+$range-lap-l  : ( 801, 1024);
+
+$range-desk   : (1025, false);
+$range-desk-s : (1025, 1200);
+$range-desk-m : (1201, 1600);
+$range-desk-l : (1601, false);
