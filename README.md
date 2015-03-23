@@ -1,1 +1,1 @@
-# Front-end starting point
+# Front-end framework
