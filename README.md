@@ -15,12 +15,12 @@ No assumptions are made about what tools are installed. These steps cover all st
 ```
 $ npm install --global gulp
 ```
-4.a. [Make sure hidden files are visible](http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) in your Finder (Mac users only)
+4. [Make sure hidden files are visible](http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) in your Finder (Mac users only)
 ```
 $ defaults write com.apple.finder AppleShowAllFiles YES.
 ```
-4.b. Relaunch the Finder
-5. Download this repo with the "Download ZIP" folder on the right
+5. Relaunch the Finder
+6. Download this repo with the "Download ZIP" folder on the right
 7. Unzip and `cd` to the downloaded directory
 8. Install dependencies
 ```
