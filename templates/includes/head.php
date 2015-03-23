@@ -1,3 +1,10 @@
+<?php
+
+if(!$pageTitle) {
+	$pageTitle = "[Page title]";
+}
+
+?>
 <!DOCTYPE HTML>
 <html lang="nl">
 	<head>
@@ -6,7 +13,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-		<title>Harbour | Front-end framework</title>
+		<title><?php if($pageTitle != "home") { echo $pageTitle . " &middot; "; } ?>Harbour | Front-end framework</title>
 
 		<meta name="description" content="Front-end framework" />
 		<meta name="robots" content="index, follow">
@@ -17,18 +24,3 @@
 		<!-- <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 		<link rel="shortcut icon" href="/images/favicon.ico"> -->
 	</head>
-	<body>
-
-		<h1>Harbour</h1>
-		<p>Front-end framework</p>
-
-		<!-- Javascript files -->
-		<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-		<script>
-			if (!window.jQuery) {
-				document.write('<script src="/js/vendor/jquery-2.1.3.min.js"><\/script>');
-			}
-		</script>
-		<script src="/js/main.js"></script>
-	</body>
-</html>

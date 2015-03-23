@@ -441,15 +441,15 @@ h6,
   font-size: 16px; }
 
 a {
-  border-bottom: 1px solid rgba(29, 29, 27, 0.8);
-  color: #1d1d1b;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  color: #000;
   text-decoration: none; }
   a:hover {
-    border-bottom-color: #1d1d1b; }
+    border-bottom-color: #000; }
 
 body {
   -webkit-font-smoothing: antialiased;
-  color: #1d1d1b;
+  color: #000;
   font-family: "Helvetica", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px; }

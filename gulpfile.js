@@ -1,13 +1,14 @@
 var gulp = require('gulp');
-var connect = require('gulp-connect');
+var connect = require('gulp-connect-php');
 var jshint = require('gulp-jshint');
 var jshintStylish = require('jshint-stylish');
 var csslint = require('gulp-csslint');
 var csscomb = require('gulp-csscomb');
 var sass = require('gulp-ruby-sass');
+var livereload = require('gulp-livereload');
 
 var watchFiles = {
-	HTML: ['html/**/*.html'],
+	templates: ['templates/**/*.php'],
 	JS: ['js/**/*.js'],
 	CSS: ['css/*.css'],
 	SCSS: ['scss/**/*.scss'],
@@ -26,16 +27,16 @@ gulp.task('webserver', function() {
 	});
 });
 
-gulp.task('html', function() {
-	gulp.src(watchFiles.HTML)
-	.pipe(connect.reload());
+gulp.task('templates', function() {
+	gulp.src(watchFiles.templates)
+	.pipe(livereload());
 });
 
 gulp.task('jsLint', function() {
 	return gulp.src(watchFiles.JS)
 	.pipe(jshint())
 	.pipe(jshint.reporter(jshintStylish))
-	.pipe(connect.reload());
+	.pipe(livereload());
 })
 
 gulp.task('cssLint', function() {
@@ -50,7 +51,7 @@ gulp.task('scssCompile', function() {
 		console.error('Error!', err.message);
 		})
 	.pipe(gulp.dest('css/'))
-	.pipe(connect.reload());
+	.pipe(livereload());
 });
 
 gulp.task('scssComb', function() {
@@ -60,7 +61,8 @@ gulp.task('scssComb', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch(watchFiles.HTML, ['html']);
+	livereload.listen();
+	gulp.watch(watchFiles.templates, ['templates']);
 	gulp.watch(watchFiles.JS, ['jsLint']);
 	gulp.watch(watchFiles.CSS, ['cssLint']);
 	gulp.watch(watchFiles.SCSS, ['scssCompile']);
