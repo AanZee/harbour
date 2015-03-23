@@ -8,7 +8,7 @@
 	"eof-newline": true,
 	"leading-zero": false,
 	"quotes": "single",
-	"remove-empty-rulesets": true,
+	"remove-empty-rulesets": false,
 	"space-before-colon": "",
 	"space-after-colon": " ",
 	"space-before-combinator": " ",
