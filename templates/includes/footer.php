@@ -1,3 +1,3 @@
-		<?php include("includes/scripts.php"); ?>
-	</body>
-</html>
+<footer class="footer">
+	<p><a href="https://github.com/edgargressie/harbour">Github</a></p>
+</footer>
