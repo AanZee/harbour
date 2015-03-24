@@ -23,6 +23,7 @@ var watchFiles = {
 
 gulp.task('webserver', function() {
 	connect.server({
+		hostname: '0.0.0.0',
 		port: 3000,
 		livereload: true
 	});
@@ -47,7 +48,7 @@ gulp.task('cssLint', function() {
 })
 
 gulp.task('scssCompile', function() {
-	return sass('scss/', { sourcemap: true }) 
+	return sass('scss/', { sourcemap: true })
 	.on('error', function (err) {
 		console.error('Error!', err.message);
 		})
