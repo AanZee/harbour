@@ -1,12 +1,11 @@
 {
 	"always-semicolon": true,
-	"color-case": "upper",
 	"block-indent": "\t",
 	"color-case": "lower",
 	"color-shorthand": true,
 	"element-case": "lower",
 	"eof-newline": true,
-	"leading-zero": false,
+	"leading-zero": true,
 	"quotes": "single",
 	"remove-empty-rulesets": false,
 	"space-before-colon": "",
