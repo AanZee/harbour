@@ -1,3 +1,6 @@
+// Sass libraries
+@import 'vendor/bourbon/bourbon';
+
 // Fonts
 @import 'fonts/example';
 
@@ -21,7 +24,6 @@
 @import 'reset/box-sizing';
 
 // Vendor
-@import 'vendor/bourbon/bourbon';
 
 // Vendor Overrides
 
