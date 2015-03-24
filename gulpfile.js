@@ -6,6 +6,7 @@ var csslint = require('gulp-csslint');
 var csscomb = require('gulp-csscomb');
 var sass = require('gulp-ruby-sass');
 var livereload = require('gulp-livereload');
+var sourcemaps = require('gulp-sourcemaps');
 
 var watchFiles = {
 	templates: ['templates/**/*.php'],
@@ -46,10 +47,11 @@ gulp.task('cssLint', function() {
 })
 
 gulp.task('scssCompile', function() {
-	return sass('scss/') 
+	return sass('scss/', { sourcemap: true }) 
 	.on('error', function (err) {
 		console.error('Error!', err.message);
 		})
+	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('css/'))
 	.pipe(livereload());
 });
