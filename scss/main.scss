@@ -1,5 +1,5 @@
 // Sass libraries
-@import 'vendor/bourbon/bourbon';
+@import 'libraries/bourbon/bourbon';
 
 // Fonts
 @import 'fonts/example';
@@ -9,14 +9,13 @@
 @import 'settings/fonts';
 @import 'settings/font-sizes';
 @import 'settings/font-weights';
+@import 'settings/line-heights';
 @import 'settings/ranges';
 
 // Utilities
 @import 'utilities/font-smoothing';
 @import 'utilities/respond';
 @import 'utilities/media';
-@import 'utilities/hyphens';
-@import 'utilities/overflow-ellipsis';
 @import 'utilities/padding-box';
 
 // Reset
@@ -28,6 +27,7 @@
 // Vendor Overrides
 
 // Base
+@import 'base/buttons';
 @import 'base/forms';
 @import 'base/headings';
 @import 'base/links';
@@ -35,9 +35,9 @@
 // Layout
 @import 'layout/body';
 @import 'layout/inner';
+@import 'layout/sticky-footer';
 
 // Components
-@import 'components/buttons';
 
 // Pages
 @import 'pages/example';
