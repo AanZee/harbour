@@ -3,7 +3,11 @@
 	$media-1__high: if(type-of($media-1) == number, $media-1, nth($media-1, 2));
 
 	@if $media-2 == null {
-		@include respond($media-1__low + 'px', $media-1__high + 'px') { @content; }
+		@if $media-1__high == false {
+			@include respond($media-1__low + 'px') { @content; }
+		} @else {
+			@include respond($media-1__low + 'px', $media-1__high + 'px') { @content; }
+		}
 	} @else {
 		@if $media-2 == false {
 			@include respond($media-1__low + 'px', false) { @content; }
