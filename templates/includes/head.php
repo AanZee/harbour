@@ -1,10 +1,4 @@
-<?php
-
-if(!$pageTitle) {
-	$pageTitle = "[Page title]";
-}
-
-?>
+<?php if(!$pageTitle) { $pageTitle = "[Page title]"; } ?>
 <head>
 	<meta charset="utf-8">
 	<!-- Viewport and stylesheet at the top for better performance -->

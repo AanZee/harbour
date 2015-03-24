@@ -1,3 +1,3 @@
-	<header class="page-header">
-		<h1>Harbour</h1>
-	</header>
+<header class="page-header">
+	<h1>Harbour</h1>
+</header>
