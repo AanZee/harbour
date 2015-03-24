@@ -1,8 +1,7 @@
 a {
-	border-bottom: 1px solid rgba($color-black, .8);
+	border-bottom: 1px solid rgba($color-black, 0.5);
 	color: $color-black;
 	text-decoration: none;
-
 	&:hover {
 		border-bottom-color: $color-black;
 	}
