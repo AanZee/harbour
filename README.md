@@ -19,7 +19,7 @@ No assumptions are made about what tools are installed. These steps cover all st
 	```
 6. Go to choosen folder
 	```
-	$ cd ~/Sites/newProject
+	$ cd ~/Sites/new-project
 	```
 7. Install dependencies
 	```
@@ -33,7 +33,7 @@ No assumptions are made about what tools are installed. These steps cover all st
 ### Extra steps if you need to connect with a git repository
 	
 1. ```$ git init```
-2. ```git add .```
-3. ```git commit -m 'message'```
-4. ```git remote add origin <url>```
-5. ```git push -u origin master```
+2. ```$ git add .```
+3. ```$ git commit -m 'message'```
+4. ```$ git remote add origin <url>```
+5. ```$ git push -u origin master```
