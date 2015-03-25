@@ -10,7 +10,7 @@
 		}
 	} @else {
 		@if $media-2 == false {
-			@include respond($media-1__low + 'px', false) { @content; }
+			@include respond($media-1__low + 'px') { @content; }
 		} @else {
 			$media-2__low: if(type-of($media-2) == number, $media-2, nth($media-2, 1));
 			$media-2__high: if(type-of($media-2) == number, $media-2, nth($media-2, 2));
@@ -18,7 +18,11 @@
 			$min-width: if($media-2 and $media-1__low < $media-2__low, $media-1__low, $media-2__low);
 			$max-width: if($media-2__low == $media-2__high, $media-2, if($media-2__high and $media-1__high > $media-2__high, $media-1__high, $media-2__high));
 
-			@include respond($min-width + 'px', $max-width + 'px') { @content; }
+			@if $max-width == false {
+				@include respond($min-width + 'px') { @content; }
+			} @else {
+				@include respond($min-width + 'px', $max-width + 'px') { @content; }
+			}
 		}
 	}
 }
