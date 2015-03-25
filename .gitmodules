@@ -1,0 +1,3 @@
+[submodule "scss/libraries/bourbon"]
+	path = scss/libraries/bourbon
+	url = git://github.com/thoughtbot/bourbon.git
