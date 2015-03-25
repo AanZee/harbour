@@ -26,7 +26,8 @@ gulp.task('webserver', function() {
 		hostname: '0.0.0.0',
 		port: 3000,
 		livereload: true,
-		keepalive: false
+		keepalive: false,
+		router: 'router.php'
 	});
 });
 
