@@ -48,7 +48,7 @@ gulp.task('cssLint', function() {
 })
 
 gulp.task('scssCompile', function() {
-	return sass('scss/', { sourcemap: true }) 
+	return sass('scss/', { sourcemap: true })
 	.on('error', function (err) {
 		console.error('Error!', err.message);
 		})
