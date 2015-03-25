@@ -25,7 +25,8 @@ gulp.task('webserver', function() {
 	connect.server({
 		hostname: '0.0.0.0',
 		port: 3000,
-		livereload: true
+		livereload: true,
+		keepalive: false
 	});
 });
 
