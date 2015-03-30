@@ -9,12 +9,12 @@ body {
 }
 
 main {
+	display: table-row;
 	height: 100%;
 }
 
 .page-header,
 .page-footer {
 	display: table-row;
-	overflow: auto;
 	height: 1px;
 }
