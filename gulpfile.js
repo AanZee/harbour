@@ -7,6 +7,7 @@ var csscomb = require('gulp-csscomb');
 var sass = require('gulp-ruby-sass');
 var livereload = require('gulp-livereload');
 var sourcemaps = require('gulp-sourcemaps');
+var plumber = require('gulp-plumber');
 
 var watchFiles = {
 	templates: ['templates/**/*.php'],
@@ -38,9 +39,9 @@ gulp.task('templates', function() {
 
 gulp.task('jsLint', function() {
 	return gulp.src(watchFiles.JS)
-	.pipe(jshint())
-	.pipe(jshint.reporter(jshintStylish))
-	.pipe(livereload());
+		.pipe(jshint())
+		.pipe(jshint.reporter(jshintStylish))
+		.pipe(livereload());
 })
 
 gulp.task('cssLint', function() {
@@ -51,18 +52,19 @@ gulp.task('cssLint', function() {
 
 gulp.task('scssCompile', function() {
 	return sass('scss/main.scss', { sourcemap: true })
-	.on('error', function (err) {
-		console.error('Error!', err.message);
-		})
-	.pipe(sourcemaps.write())
-	.pipe(gulp.dest('css/'))
-	.pipe(livereload());
+		.on('error', function (err) {
+			console.error('Error!', err.message);
+			})
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest('css/'))
+		.pipe(livereload());
 });
 
 gulp.task('scssComb', function() {
 	return gulp.src(watchFiles.CSSComb, { base: 'scss' })
-	.pipe(csscomb())
-	.pipe(gulp.dest('scss'));
+		.pipe(plumber())
+		.pipe(csscomb())
+		.pipe(gulp.dest('scss'));
 });
 
 gulp.task('watch', function() {
