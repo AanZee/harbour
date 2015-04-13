@@ -2,15 +2,15 @@
   "name": "Harbour",
   "description": "Front-end framework",
   "version": "0.0.1",
-  "author": "Edgar Gressie",
+  "author": "Aan Zee",
   "repository": {
     "type": "git",
-    "url": "https://github.com/edgargressie/harbour.git"
+    "url": "https://github.com/AanZee/harbour.git"
   },
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-connect-php": "0.0.5",
-    "gulp-csscomb": "git+https://github.com/edgargressie/gulp-csscomb.git",
+    "gulp-csscomb": "git+https://github.com/AanZee/gulp-csscomb.git",
     "gulp-csslint": "^0.1.5",
     "gulp-jshint": "^1.9.4",
     "gulp-livereload": "^3.8.0",
