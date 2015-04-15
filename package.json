@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "express": "^4.12.3",
+    "gulp-nodemon": "^2.0.2",
     "mustache-express": "^1.2.1"
   }
 }
