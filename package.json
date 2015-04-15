@@ -8,15 +8,23 @@
     "url": "https://github.com/AanZee/harbour.git"
   },
   "devDependencies": {
-    "gulp": "^3.8.11",
+    "gulp": "~3.8.11",
+    "gulp-add-src": "~0.2.0",
+    "gulp-bless": "~3.0.1",
+    "gulp-concat": "~2.5.2",
     "gulp-connect-php": "0.0.5",
     "gulp-csscomb": "git+https://github.com/AanZee/gulp-csscomb.git",
-    "gulp-csslint": "^0.1.5",
-    "gulp-jshint": "^1.9.4",
-    "gulp-livereload": "^3.8.0",
-    "gulp-plumber": "^1.0.0",
-    "gulp-ruby-sass": "^1.0.1",
-    "gulp-sourcemaps": "^1.5.1",
-    "jshint-stylish": "^1.0.1"
+    "gulp-csslint": "~0.1.5",
+    "gulp-jshint": "~1.9.4",
+    "gulp-livereload": "~3.8.0",
+    "gulp-plumber": "~1.0.0",
+    "gulp-rename": "~1.2.2",
+    "gulp-ruby-sass": "~1.0.1",
+    "gulp-sourcemaps": "~1.5.1",
+    "gulp-uglify": "~1.2.0",
+    "jshint-stylish": "~1.0.1",
+    "merge-stream": "~0.1.7",
+    "minimatch": "~2.0.4",
+    "underscore": "~1.8.3"
   }
 }
