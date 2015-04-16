@@ -12,7 +12,6 @@
     "gulp-add-src": "~0.2.0",
     "gulp-bless": "~3.0.1",
     "gulp-concat": "~2.5.2",
-    "gulp-connect-php": "0.0.5",
     "gulp-csscomb": "git+https://github.com/AanZee/gulp-csscomb.git",
     "gulp-csslint": "~0.1.5",
     "gulp-jshint": "~1.9.4",
@@ -25,5 +24,10 @@
     "jshint-stylish": "~1.0.1",
     "merge-stream": "~0.1.7",
     "minimatch": "~2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.12.3",
+    "gulp-nodemon": "^2.0.2",
+    "mustache-express": "^1.2.1"
   }
 }

@@ -25,6 +25,7 @@ var concat = require('gulp-concat');
 var path = require('path');
 var uglify = require('gulp-uglify');
 var addsrc = require('gulp-add-src');
+var nodemon = require('gulp-nodemon');
 
 var settings = {
 	/**
@@ -124,6 +125,7 @@ gulp.task('watch', function () {
 	gulp.watch(settings.src.js, ['jsLint']);
 });
 
+
 gulp.task('buildCss', function () {
 	sass(settings.src.main, { sourcemap: false, style: 'compressed' })
 		.on('error', function (err) {
@@ -159,9 +161,16 @@ gulp.task('buildJs', function () {
 	return merge(tasks);
 });
 
+gulp.task('serve', function () {
+	nodemon({
+		script: 'index.js',
+		ext: 'js html tpl json'
+	})
+});
+
 /**
  * Does not comb your code
  */
 gulp.task('build', ['cssLint', 'jsLint', 'buildCss', 'buildJs']);
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'serve']);
