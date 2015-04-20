@@ -112,11 +112,18 @@ gulp.task('watch', function () {
 	gulp.watch(settings.src.scss, function (event) {
 
 		if ( isMatched(settings.cssComb, event.path) ) {
+			// [Using event.path for source and destination](https://github.com/gulpjs/gulp/issues/212)
+			// Split the filename from the path.
+			var filename = event.path.split('/');
+			filename = filename[filename.length - 1];
+			// For some reason it does need a base to work
+			var base = event.path.replace(filename, '');
+
 			// Only comb the current file if it matches to the settings
-			gulp.src(event.path, { base: 'scss' })
+			gulp.src(event.path, { base: base })
 				.pipe(plumber())
 				.pipe(csscomb())
-				.pipe(gulp.dest('scss'));
+				.pipe(gulp.dest( base ));
 		}
 
 		scssCompileDev();
