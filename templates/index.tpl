@@ -4,7 +4,7 @@
 	<body>
 		{{> includes/page-header }}
 
-		<p>Professional Front-end project boilerplate without the bloat</p>
+		<p>{{ pages.index.intro }}</p>
 
 		{{> includes/page-footer }}
 		{{> includes/javascript }}

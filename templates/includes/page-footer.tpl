@@ -1,3 +1,3 @@
 <footer class="page-footer">
-	<p><a href="https://github.com/AanZee/harbour">Github</a></p>
+	<p>{{ footer.moreInfo }} <a href="{{ footer.githubLink }}">Github</a></p>
 </footer>
