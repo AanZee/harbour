@@ -3,6 +3,8 @@ var mustacheExpress = require('mustache-express');
 
 var app = express();
 
+app.use(express.static(__dirname));
+
 // Define Mustache 
 app.engine('tpl', mustacheExpress());
 
