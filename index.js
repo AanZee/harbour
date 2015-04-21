@@ -12,6 +12,8 @@ fs.readdirSync(dataPath).forEach(function(file) {
 	data[file.split('.')[0]] = require('./data/' + file);
 });
 
+app.use(express.static(__dirname));
+
 // Define Mustache 
 app.engine('tpl', mustacheExpress());
 
