@@ -112,11 +112,18 @@ gulp.task('watch', function () {
 	gulp.watch(settings.src.scss, function (event) {
 
 		if ( isMatched(settings.cssComb, event.path) ) {
+			// [Using event.path for source and destination](https://github.com/gulpjs/gulp/issues/212)
+			// Split the filename from the path.
+			var filename = event.path.split('/');
+			filename = filename[filename.length - 1];
+			// For some reason it does need a base to work
+			var base = event.path.replace(filename, '');
+
 			// Only comb the current file if it matches to the settings
-			gulp.src(event.path, { base: 'scss' })
+			gulp.src(event.path, { base: base })
 				.pipe(plumber())
 				.pipe(csscomb())
-				.pipe(gulp.dest('scss'));
+				.pipe(gulp.dest( base ));
 		}
 
 		scssCompileDev();
@@ -146,13 +153,29 @@ gulp.task('buildJs', function () {
 	var folders = getFolders( settings.src.jsFolder );
 
 	var tasks = folders.map(function (folder) {
+		// Set paths
+		var setupPath = path.join(settings.src.jsFolder, folder, 'setup.js');
+		var jsFilesPath = path.join(settings.src.jsFolder, folder, '/**/*.js');
+		var mainPath = path.join(settings.src.jsFolder, folder, 'main.js');
+		var dependenciesPath = path.join(settings.src.jsFolder, folder, settings.dependenciesFilename);
+
+		// Check for dependencies.json
+		if ( fs.existsSync( dependenciesPath ) ) {
+			// Load dependencies first
+			var dependencies = JSON.parse( fs.readFileSync( dependenciesPath, 'utf8') );
+		} else {
+			// Init an empty array so gulp can continue
+			var dependencies = [];
+		}
+
 		return gulp.src([
-				path.join(settings.src.jsFolder, folder, 'setup.js'),
-				path.join(settings.src.jsFolder, folder, '/**/*.js'),
+				setupPath,
+				jsFilesPath,
 				// Exclude main first before appending
-				path.join('!' + settings.src.jsFolder, folder, 'main.js')
+				path.join('!' + mainPath)
 			])
-			.pipe( addsrc.append( path.join(settings.src.jsFolder, folder, 'main.js') ) )
+			.pipe( addsrc.prepend( dependencies ))
+			.pipe( addsrc.append( mainPath ) )
 			.pipe(concat(folder + '.min.js'))
 			.pipe(uglify())
 			.pipe(gulp.dest( settings.dist.js ));

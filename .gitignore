@@ -36,18 +36,26 @@
 ehthumbs.db
 Thumbs.db
 
-# workspace files are user-specific
+# workspace files are user-specific #
+#####################################
 *.sublime-project
 *.sublime-workspace
 
-# sftp configuration file
+# sftp configuration file #
+###########################
 sftp-config.json
 
-### Sass ###
+# Sass #
+########
 .sass-cache/
 *.css.map
 
 # NPM #
-######################
+#######
 npm-debug.log
 node_modules/
+
+# JS libraries #
+################
+# Contents are installed with bower
+src/lib/
