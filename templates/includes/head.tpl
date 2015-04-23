@@ -2,7 +2,7 @@
 	<meta charset="utf-8">
 	<!-- Viewport and stylesheet at the top for better performance -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="/css/main.css" />
+	<link rel="stylesheet" href="/dist/css/main.css" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 	<title>{{#pageTitle }}{{ pageTitle }} &middot; {{/pageTitle }}{{ title }}</title>
