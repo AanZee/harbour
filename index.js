@@ -25,7 +25,6 @@ app.locals.title = 'Harbour | Front-end framework';
 
 // Default index
 app.get('/', function(req, res) {
-	console.log(data);
     res.render('index', data);
 });
 
