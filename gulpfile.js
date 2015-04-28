@@ -26,6 +26,7 @@ var path = require('path');
 var uglify = require('gulp-uglify');
 var addsrc = require('gulp-add-src');
 var nodemon = require('gulp-nodemon');
+var gulpif = require('gulp-if');
 
 var settings = {
 	/**
@@ -33,6 +34,10 @@ var settings = {
 	 * A new file is created inside the dist folder called main.min.blessed.css
 	 */
 	isBlessed: false,
+	/**
+	 * Disable if you don't need a local server with livereload
+	 */
+	isLocalServerUsed: true, 
 
 	/**
 	 * Minimatch patterns to run CSSComb on
@@ -62,13 +67,24 @@ var settings = {
 		scss: ['src/scss/**/*.scss'],
 		js: ['src/js/**/*.js'],
 		jsFolder: 'src/js'
-	}
+	},
+
+	/**
+	 * Templates for livereload
+	 */
+	templates: ['templates/**/*.tpl']
 };
+
+gulp.task('templates', function() {
+	return gulp.src(settings.templates)
+		.pipe(gulpif(settings.isLocalServerUsed, livereload()));
+});
 
 gulp.task('jsLint', function() {
 	return gulp.src(settings.src.js)
 		.pipe(jshint())
-		.pipe(jshint.reporter(jshintStylish));
+		.pipe(jshint.reporter(jshintStylish))
+		.pipe(gulpif(settings.isLocalServerUsed, livereload()));
 })
 
 gulp.task('cssLint', function() {
@@ -83,7 +99,8 @@ function scssCompileDev () {
 			console.error('Error!', err.message);
 		})
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest( settings.dist.css ));
+		.pipe(gulp.dest( settings.dist.css ))
+		.pipe(gulpif(settings.isLocalServerUsed, livereload()));
 }
 
 /**
@@ -109,6 +126,10 @@ function getFolders (dir) {
 }
 
 gulp.task('watch', function () {
+	if (settings.isLocalServerUsed) {
+		livereload.listen();
+	}
+
 	gulp.watch(settings.src.scss, function (event) {
 
 		if ( isMatched(settings.cssComb, event.path) ) {
@@ -130,6 +151,7 @@ gulp.task('watch', function () {
 	});
 
 	gulp.watch(settings.src.js, ['jsLint']);
+	gulp.watch(settings.templates, ['templates']);
 });
 
 
@@ -185,10 +207,19 @@ gulp.task('buildJs', function () {
 });
 
 gulp.task('serve', function () {
-	nodemon({
-		script: 'index.js',
-		ext: 'js html tpl json'
-	})
+	if (settings.isLocalServerUsed) {
+		nodemon({
+			script: 'index.js',
+			ext: 'js html tpl json'
+		}).on('readable', function() {
+			this.stdout.on('data', function(chunk) {
+				if (/^listening/.test(chunk)) {
+					livereload.reload();
+				}
+				process.stdout.write(chunk);
+			});
+		});
+	}
 });
 
 /**
