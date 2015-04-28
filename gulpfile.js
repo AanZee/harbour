@@ -37,7 +37,7 @@ var settings = {
 	/**
 	 * Disable if you don't need a local server with livereload
 	 */
-	localServer: true, 
+	isLocalServerUsed: true, 
 
 	/**
 	 * Minimatch patterns to run CSSComb on
@@ -77,14 +77,14 @@ var settings = {
 
 gulp.task('templates', function() {
 	return gulp.src(settings.templates)
-		.pipe(gulpif(settings.localServer, livereload()));
+		.pipe(gulpif(settings.isLocalServerUsed, livereload()));
 });
 
 gulp.task('jsLint', function() {
 	return gulp.src(settings.src.js)
 		.pipe(jshint())
 		.pipe(jshint.reporter(jshintStylish))
-		.pipe(gulpif(settings.localServer, livereload()));
+		.pipe(gulpif(settings.isLocalServerUsed, livereload()));
 })
 
 gulp.task('cssLint', function() {
@@ -100,7 +100,7 @@ function scssCompileDev () {
 		})
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest( settings.dist.css ))
-		.pipe(gulpif(settings.localServer, livereload()));
+		.pipe(gulpif(settings.isLocalServerUsed, livereload()));
 }
 
 /**
@@ -126,7 +126,7 @@ function getFolders (dir) {
 }
 
 gulp.task('watch', function () {
-	if (settings.localServer) {
+	if (settings.isLocalServerUsed) {
 		livereload.listen();
 	}
 
@@ -207,7 +207,7 @@ gulp.task('buildJs', function () {
 });
 
 gulp.task('serve', function () {
-	if (settings.localServer) {
+	if (settings.isLocalServerUsed) {
 		nodemon({
 			script: 'index.js',
 			ext: 'js html tpl json'
