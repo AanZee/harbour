@@ -29,15 +29,23 @@ var nodemon = require('gulp-nodemon');
 var gulpif = require('gulp-if');
 
 var settings = {
+
 	/**
 	 * Enable this setting to support IE9 if max selector bug
 	 * A new file is created inside the dist folder called main.min.blessed.css
 	 */
 	isBlessed: false,
+
 	/**
 	 * Disable if you don't need a local server with livereload
 	 */
 	isLocalServerUsed: true, 
+
+	/**
+	 * Filename looked for inside js modules for dependencies
+	 * contains an array with paths to js files (optionally glob patterns)
+	 */
+	dependenciesFilename: 'dependencies.json',
 
 	/**
 	 * Minimatch patterns to run CSSComb on
@@ -85,13 +93,22 @@ gulp.task('jsLint', function() {
 		.pipe(jshint())
 		.pipe(jshint.reporter(jshintStylish))
 		.pipe(gulpif(settings.isLocalServerUsed, livereload()));
-})
+});
 
-gulp.task('cssLint', function() {
-	gulp.src(settings.src.scss)
+gulp.task('cssLint', ['buildCss'], function() {
+	return gulp.src(settings.dist.mainMin)
 		.pipe(csslint('.csslintrc'))
 		.pipe(csslint.reporter());
-})
+});
+
+gulp.task('cssBlessed', ['buildCss'], function() {
+	if (settings.isBlessed) {
+		return gulp.src(settings.dist.mainMin)
+			.pipe(bless())
+			.pipe(rename({ suffix: '.blessed' }))
+			.pipe(gulp.dest( settings.dist.css ));
+	}
+});
 
 function scssCompileDev () {
 	sass(settings.src.main, { sourcemap: true })
@@ -156,19 +173,13 @@ gulp.task('watch', function () {
 
 
 gulp.task('buildCss', function () {
-	sass(settings.src.main, { sourcemap: false, style: 'compressed' })
+	return sass(settings.src.main, { sourcemap: false, style: 'compressed' })
 		.on('error', function (err) {
 			console.error('Error!', err.message);
 			})
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest( settings.dist.css ));
 
-	if (settings.isBlessed) {
-		gulp.src(settings.dist.mainMin)
-			.pipe(bless())
-			.pipe(rename({ suffix: '.blessed' }))
-			.pipe(gulp.dest( settings.dist.css ));
-	}
 });
 
 gulp.task('buildJs', function () {
@@ -225,6 +236,6 @@ gulp.task('serve', function () {
 /**
  * Does not comb your code
  */
-gulp.task('build', ['cssLint', 'jsLint', 'buildCss', 'buildJs']);
+gulp.task('build', ['jsLint', 'cssLint', 'cssBlessed', 'buildJs']);
 
 gulp.task('default', ['watch', 'serve']);
