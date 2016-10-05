@@ -1,0 +1,51 @@
+// # Descriptive colors
+// - Only use descriptive colors to define functional colors in this document.
+
+$color-black: rgb(0, 0, 0);
+$color-white: rgb(255, 255, 255);
+$color-grey: rgb(162, 174, 187);
+$color-yellow: rgb(239, 183, 86);
+$color-purple: rgb(140, 83, 131);
+$color-blue: rgb(49, 133, 252);
+$color-red: rgb(226, 77, 63);
+$color-green: rgb(114, 155, 121);
+
+// # Functional colors
+//
+// ## Rules
+// - Always use a descriptive color to define a functional color.
+// - Always use the right functional color even when two (or more) functional colors are the same descriptive color (e.g. $color-light and $color-text-diap). This will help when you want to change a color from white to a very light grey or blue.
+//
+// ## Notes
+// 1. Default ranges (i.e. $color-ui-200 (10 - 1000)) are generated in the _color-ranges.scss file, keep this file updated too.
+
+// ## User Interface
+$color-ui: $color-grey; // 1
+$color-ui-accent: $color-blue; // 1
+$color-light: $color-white; // 1
+$color-dark: $color-black; // 1
+
+// ## Typography
+$color-heading: $color-blue; // 1
+$color-subheading: $color-blue; // 1
+$color-text: $color-black; // 1
+$color-text-diap: $color-white; // 1
+
+// ## Hierarchical
+$color-cta: $color-yellow; // 1
+$color-primary: $color-blue; // 1
+$color-secondary: $color-purple; // 1
+
+// ## States
+$color-error: $color-red; // 1
+$color-success: $color-green; // 1
+$color-warning: $color-yellow; // 1
+$color-info: $color-blue; // 1
+$color-select: $color-purple; // 1
+$color-focus: $color-green; // 1
+
+// ## Additional colors
+// - Can be used for shared color variables in different components (e.g. $color-card-background), in specific state (e.g. $color-logged-in) or themes (e.g. $color-corporate)
+$color-shadow: $color-black;
+$color-input-background: $color-white;
+$color-site-background: $color-white;
