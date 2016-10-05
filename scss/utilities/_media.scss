@@ -1,0 +1,28 @@
+@mixin media($media-1, $media-2: null) {
+	$media-1__low: if(type-of($media-1) == number, $media-1, nth($media-1, 1));
+	$media-1__high: if(type-of($media-1) == number, $media-1, nth($media-1, 2));
+
+	@if $media-2 == null {
+		@if $media-1__high == false {
+			@include respond($media-1__low + 'px') { @content; }
+		} @else {
+			@include respond($media-1__low + 'px', $media-1__high + 'px') { @content; }
+		}
+	} @else {
+		@if $media-2 == false {
+			@include respond($media-1__low + 'px') { @content; }
+		} @else {
+			$media-2__low: if(type-of($media-2) == number, $media-2, nth($media-2, 1));
+			$media-2__high: if(type-of($media-2) == number, $media-2, nth($media-2, 2));
+
+			$min-width: if($media-2 and $media-1__low < $media-2__low, $media-1__low, $media-2__low);
+			$max-width: if($media-2__low == $media-2__high, $media-2, if($media-2__high and $media-1__high > $media-2__high, $media-1__high, $media-2__high));
+
+			@if $max-width == false {
+				@include respond($min-width + 'px') { @content; }
+			} @else {
+				@include respond($min-width + 'px', $max-width + 'px') { @content; }
+			}
+		}
+	}
+}
