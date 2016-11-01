@@ -1,7 +1,7 @@
 {
 	"exclude": [
 		"scss/main.scss",
-        "scss/vendors",
+		"scss/vendors",
 		"scss/settings",
 		"scss/utilities",
 		"scss/fonts",
@@ -14,7 +14,7 @@
 		"scss/pages/_pages.scss",
 		"scss/themes/_themes.scss",
 		"scss/overrides/_overrides.scss"
-    ],
+	],
 	"always-semicolon": true,
 	"block-indent": "\t",
 	"color-case": "lower",
