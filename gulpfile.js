@@ -17,22 +17,34 @@ var settings = {
 	combExcludedGlobs: combConfig.exclude
 };
 
-function harbourLog (message) {
-	gutil.log('⚓  ' + message); // NOTE: Extra space for emoji bug!? in terminal
+function harbourLog(message) {
+	gutil.log('⚓  Harbour: ' + message); // NOTE: Extra space for emoji bug(!?) in terminal
 }
 
-function compileScss (isProduction) {
+function compileScss(isProduction) {
 	var outputStyle = isProduction ? 'compressed' : 'expanded';
-	var stream = gulp.src(settings.src.scss)
-	    .pipe(sass({outputStyle: outputStyle}).on('error', sass.logError))
+	var hasCompileError = false;
+	var stream = {};
+
+	stream = gulp.src(settings.src.scss)
+	    .pipe(sass({outputStyle: outputStyle}).on('error', function(error) {
+			hasCompileError = true;
+			sass.logError.bind(this)(error);
+		}))
 		.pipe(gulpif(isProduction, rename({ suffix: '.min' })))
 	    .pipe(gulp.dest(settings.dist.css));
 
-	return stream;
+	stream.on('end', function() {
+		if (!hasCompileError) {
+			harbourLog('Compiled SCSS to ' + outputStyle + ' CSS');
+		}
+	});
 }
 
-gulp.task('watchScss', function () {
-	var scssWatcher = gulp.watch(settings.src.scss, compileScss());
+gulp.task('watchScss', function() {
+	var scssWatcher = gulp.watch(settings.src.scss, function() {
+		compileScss(false);
+	});
 
 	function isExcludedPath(path) {
 		var excludedPaths = settings.combExcludedGlobs;
@@ -57,7 +69,7 @@ gulp.task('watchScss', function () {
 	scssWatcher.on('change', checkScssFile);
 })
 
-gulp.task('buildCss', function () {
+gulp.task('buildCss', function() {
 	compileScss(true);
 });
 
