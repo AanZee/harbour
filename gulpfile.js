@@ -18,7 +18,7 @@ var settings = {
 };
 
 function harbourLog(message) {
-	gutil.log('⚓  Harbour: ' + message); // NOTE: Extra space for emoji bug(!?) in terminal
+	gutil.log('Harbour ⚓  ' + message); // NOTE: Extra space for emoji bug(!?) in terminal
 }
 
 function compileScss(isProduction) {
