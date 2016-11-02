@@ -46,6 +46,6 @@ $color-focus: $color-green; // 1
 
 // ## Additional colors
 // - Can be used for shared color variables in different components (e.g. $color-card-background), in specific state (e.g. $color-logged-in) or themes (e.g. $color-corporate)
-$color-shadow: $color-black;
-$color-input-background: $color-white;
-$color-site-background: $color-white;
+$color-shadow: $color-dark;
+$color-input-background: $color-light;
+$color-site-background: $color-light;
