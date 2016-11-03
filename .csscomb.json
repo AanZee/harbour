@@ -421,6 +421,7 @@
 			"..."
 		],
 		["$include media"],
+		["$include media-ie-10-11"],
 		["$include placeholder"]
 	]
 }

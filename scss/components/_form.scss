@@ -211,7 +211,7 @@ $form-feedback-text-color: $color-text;
 		font-size: $font-size-100;
 	}
 
-	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	@include media-ie-10-11 {
 		padding-top: 10px; // FIX: IE 10 and 11 don't support flexbox with min-height. This fixes the layout.
 	}
 
