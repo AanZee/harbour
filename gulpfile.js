@@ -17,10 +17,6 @@ var settings = {
 	combExcludedGlobs: combConfig.exclude
 };
 
-function harbourLog(message) {
-	gutil.log('Harbour ⚓  ' + message); // NOTE: Extra space for emoji bug(!?) in terminal
-}
-
 function compileScss(isProduction) {
 	var outputStyle = isProduction ? 'compressed' : 'expanded';
 	var hasCompileError = false;
@@ -36,7 +32,7 @@ function compileScss(isProduction) {
 
 	stream.on('end', function() {
 		if (!hasCompileError) {
-			harbourLog('Compiled SCSS to ' + outputStyle + ' CSS');
+			gutil.log('Compiled SCSS to ' + outputStyle + ' CSS');
 		}
 	});
 }
@@ -57,12 +53,13 @@ gulp.task('watchScss', function() {
 	}
 
 	function checkScssFile(event) {
-		harbourLog('SCSS change in: ' + event.path);
+		gutil.log('Harbour ⚓  ---------------------------------------------------------'); // NOTE: Extra space after emoji to fix emoji bug(!?) in terminal
+		gutil.log('Change in: ' + event.path);
 
 		if (event.type === 'changed' && !isExcludedPath(event.path)) {
 			comb.processFile(event.path);
 
-			harbourLog('Combed: '+ event.path);
+			gutil.log('Combed: '+ event.path);
 		}
 	}
 
