@@ -53,7 +53,7 @@ gulp.task('watchScss', function() {
 	}
 
 	function checkScssFile(event) {
-		gutil.log('Harbour ⚓  ---------------------------------------------------------'); // NOTE: Extra space after emoji to fix emoji bug(!?) in terminal
+		gutil.log('Harbour ⚓  ---------------------------------------------------------'); // NOTE: Extra space after emoji to fix emoji (bug!?) in terminal
 		gutil.log('Change in: ' + event.path);
 
 		if (event.type === 'changed' && !isExcludedPath(event.path)) {

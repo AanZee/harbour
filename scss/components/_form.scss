@@ -292,7 +292,7 @@ $form-feedback-text-color: $color-text;
 		background-color: $form-input-validation-icon-valid-background-color;
 
 		&::before {
-			content: '\221A'; // TODO: Add SVG icon solution
+			content: '\221A'; // TODO: Add (SVG) icon solution
 		}
 	}
 
@@ -300,7 +300,7 @@ $form-feedback-text-color: $color-text;
 		background-color: $form-input-validation-icon-invalid-background-color;
 
 		&::before {
-			content: '\00d7'; // TODO: Add SVG icon solution
+			content: '\00d7'; // TODO: Add (SVG) icon solution
 		}
 	}
 }
