@@ -1,0 +1,92 @@
+$tooltip-border-color: $color-ui-500;
+$tooltip-background-color: $color-light;
+$tooltip-box-shadow: $box-shadow-100;
+$tooltip-color: $color-text;
+$tooltip-pointer-width: 16px;
+$tooltip-pointer-height: 8px;
+
+@include keyframes(tooltipFadeIn) {
+	0% {
+		@include transform(scale(0));
+		opacity: 0.5;
+	}
+
+	50% {
+		opacity: 0.8;
+	}
+
+	100% {
+		@include transform(scale(1));
+		opacity: 1;
+	}
+}
+
+.tooltip {
+	@include animation(tooltipFadeIn 0.18s $ease-out-back);
+	position: absolute;
+	z-index: 1000;
+	padding: 10px 20px;
+	max-width: 280px;
+	border: 1px solid $tooltip-border-color;
+	border-radius: $border-radius-200;
+	background-color: $tooltip-background-color;
+	box-shadow: $tooltip-box-shadow;
+	color: $color-text;
+	font-size: $font-size-90;
+	line-height: $line-height-80;
+}
+
+.tooltip--pointer-on-bottom {
+	@include transform-origin(center bottom);
+}
+
+.tooltip--pointer-on-top {
+	@include transform-origin(center top);
+}
+
+.tooltip__pointer {
+	position: absolute;
+	left: 50%;
+
+	.tooltip--pointer-on-bottom & {
+		bottom: 0;
+	}
+
+	.tooltip--pointer-on-top & {
+		top: 0;
+	}
+}
+
+.tooltip__pointer::before,
+.tooltip__pointer::after {
+	position: absolute;
+	left: 50%;
+	margin-left: ($tooltip-pointer-width / 2) * -1;
+	content: '';
+}
+
+// NOTE: The pointer's fake border
+.tooltip__pointer::before {
+	.tooltip--pointer-on-bottom & {
+		@include triangle($tooltip-pointer-width $tooltip-pointer-height, $tooltip-border-color, down);
+		top: 1px;
+	}
+
+	.tooltip--pointer-on-top & {
+		@include triangle($tooltip-pointer-width $tooltip-pointer-height, $tooltip-border-color, up);
+		bottom: 1px;
+	}
+}
+
+// NOTE: The pointer's fill
+.tooltip__pointer::after {
+	.tooltip--pointer-on-bottom & {
+		@include triangle($tooltip-pointer-width $tooltip-pointer-height, $tooltip-background-color, down);
+		top: 0;
+	}
+
+	.tooltip--pointer-on-top & {
+		@include triangle($tooltip-pointer-width $tooltip-pointer-height, $tooltip-background-color, up);
+		bottom: 0;
+	}
+}
