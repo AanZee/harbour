@@ -357,7 +357,6 @@ $form-feedback-text-color: $color-text;
 	line-height: $line-height-80;
 
 	&::before {
-		// TODO: Replace with arrow mixin
 		position: absolute;
 		top: 6px;
 		left: 6px;
