@@ -55,3 +55,6 @@ sftp-config.json
 #######
 npm-debug.log
 node_modules/
+
+# Test HTML #
+html/
