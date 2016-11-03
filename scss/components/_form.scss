@@ -364,7 +364,7 @@ $form-feedback-text-color: $color-text;
 		height: 15px;
 		border-bottom: 1px solid $color-ui-300;
 		border-left: 1px solid $color-ui-300;
-		border-bottom-left-radius: 5px;
+		border-bottom-left-radius: $border-radius-100;
 		content: '';
 	}
 
@@ -391,17 +391,8 @@ $form-feedback-text-color: $color-text;
 }
 
 .form__action {
-	@include media(0, $range-hand) {
-		padding: 0 20px;
-	}
-	@include media($range-lap, false) {
-		padding-right: 20px;
-	}
 }
 
 .form__action-helper {
 	margin-bottom: 15px;
-}
-
-.form__action--primary-button {
 }
