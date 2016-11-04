@@ -380,14 +380,8 @@ $form-feedback-text-color: $color-text;
 
 .form__actions {
 	@include clearfix;
+	margin-top: 10px;
 	width: 100%;
-
-	@include media(0, $range-hand) {
-		margin-top: 12px;
-	}
-	@include media($range-lap, false) {
-		margin-top: 10px;
-	}
 }
 
 .form__action {
