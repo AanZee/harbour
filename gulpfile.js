@@ -6,6 +6,7 @@ var gulpif = require('gulp-if');
 var Comb = require('csscomb');
 var combConfig = require('./.csscomb.json');
 var comb = new Comb(combConfig);
+var cleanCSS = require('gulp-clean-css');
 
 var settings = {
 	src: {
@@ -14,25 +15,50 @@ var settings = {
 	dist: {
 		css: 'css/'
 	},
-	combExcludedGlobs: combConfig.exclude
+	combExcludedGlobs: combConfig.exclude,
+	keepSpecialComments: 0 // NOTE: Use 0 to strip all special comments (comments starting with /*!), 1 to keep the first special comment in the document and '*' for all special comments.
 };
 
+/**
+ * Minify main.css to main.min.css
+ * @return {void}
+ */
+function minifyCss() {
+	var stream = {};
+
+	stream = gulp.src(settings.dist.css + 'main.css')
+	   .pipe(cleanCSS({keepSpecialComments: settings.keepSpecialComments}))
+	   .pipe(rename({ suffix: '.min' }))
+	   .pipe(gulp.dest(settings.dist.css));
+
+	stream.on('end', function() {
+		gutil.log('Minified css');
+	});
+}
+
+/**
+ * Compile SCSS to css
+ * @param {Boolean} isProduction - Is the function called in production mode
+ * @return {void}
+ */
 function compileScss(isProduction) {
-	var outputStyle = isProduction ? 'compressed' : 'expanded';
 	var hasCompileError = false;
 	var stream = {};
 
 	stream = gulp.src(settings.src.scss)
-	    .pipe(sass({outputStyle: outputStyle}).on('error', function(error) {
+	    .pipe(sass({outputStyle: 'expanded'}).on('error', function(error) {
 			hasCompileError = true;
 			sass.logError.bind(this)(error);
 		}))
-		.pipe(gulpif(isProduction, rename({ suffix: '.min' })))
 	    .pipe(gulp.dest(settings.dist.css));
 
 	stream.on('end', function() {
 		if (!hasCompileError) {
-			gutil.log('Compiled SCSS to ' + outputStyle + ' CSS');
+			gutil.log('Compiled SCSS to CSS');
+
+			if (isProduction) {
+				minifyCss();
+			}
 		}
 	});
 }
@@ -42,6 +68,11 @@ gulp.task('watchScss', function() {
 		compileScss(false);
 	});
 
+	/**
+	 * Checks if the inserted path occurs in the exclude array inside the csscomb.json file
+	 * @param {string} path - A file or folder path
+	 * @return {Boolean} - Is the checked file exluded
+	 */
 	function isExcludedPath(path) {
 		var excludedPaths = settings.combExcludedGlobs;
 
@@ -52,6 +83,11 @@ gulp.task('watchScss', function() {
 		return (excludedPaths.filter(matchPaths).length > 0);
 	}
 
+	/**
+	 * Checks if the changed file needs to be combed
+	 * @param {object} event - Gulp event
+	 * @return {void}
+	 */
 	function checkScssFile(event) {
 		gutil.log('Harbour ⚓  ---------------------------------------------------------'); // NOTE: Extra space after emoji to fix emoji (bug!?) in terminal
 		gutil.log('Change in: ' + event.path);
