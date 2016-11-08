@@ -39,10 +39,12 @@ $tooltip-pointer-height: 8px;
 
 .tooltip--pointer-on-bottom {
 	@include transform-origin(center bottom);
+	margin-bottom: $tooltip-pointer-height; // NOTE: By default the tooltips balloon is positioned directly against the triggered element (by JavaScript). By adding a margin you can adjust this. By default this is the same height as the pointer.
 }
 
 .tooltip--pointer-on-top {
 	@include transform-origin(center top);
+	margin-top: $tooltip-pointer-height; // NOTE: By default the tooltips balloon is positioned directly against the triggered element (by JavaScript). By adding a margin you can adjust this. By default this is the same height as the pointer.
 }
 
 .tooltip__pointer {
