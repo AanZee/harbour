@@ -34,6 +34,7 @@ $tooltip-pointer-height: 8px;
 	color: $color-text;
 	font-size: $font-size-90;
 	line-height: $line-height-80;
+	pointer-events: none; // NOTE: Triggers mouse events on parent to prevent retriggering the tooltip in JavaScript
 }
 
 .tooltip--pointer-on-bottom {
