@@ -1,9 +1,9 @@
-$tooltip-border-color: $color-ui-500;
+$tooltip-border-color: $color-ui-300;
 $tooltip-background-color: $color-light;
-$tooltip-box-shadow: $box-shadow-100;
+$tooltip-box-shadow: $box-shadow-200;
 $tooltip-color: $color-text;
-$tooltip-pointer-width: 16px;
-$tooltip-pointer-height: 8px;
+$tooltip-pointer-width: 14px;
+$tooltip-pointer-height: 7px;
 
 @include keyframes(tooltipFadeIn) {
 	0% {
@@ -31,20 +31,20 @@ $tooltip-pointer-height: 8px;
 	border-radius: $border-radius-200;
 	background-color: $tooltip-background-color;
 	box-shadow: $tooltip-box-shadow;
-	color: $color-text;
-	font-size: $font-size-90;
-	line-height: $line-height-80;
+	color: $tooltip-color;
+	font-size: $font-size-80;
+	line-height: $line-height-70;
 	pointer-events: none; // NOTE: Triggers mouse events on parent to prevent retriggering the tooltip in JavaScript
 }
 
 .tooltip--pointer-on-bottom {
 	@include transform-origin(center bottom);
-	margin-bottom: $tooltip-pointer-height; // NOTE: By default the tooltips balloon is positioned directly against the triggered element (by JavaScript). By adding a margin you can adjust this. By default this is the same height as the pointer.
+	margin-bottom: $tooltip-pointer-height + 2px; // NOTE: By default the tooltips balloon is positioned directly against the triggered element (by JavaScript). By adding a margin you can adjust this. By default this is the pointer height plus 2 pixels.
 }
 
 .tooltip--pointer-on-top {
 	@include transform-origin(center top);
-	margin-top: $tooltip-pointer-height; // NOTE: By default the tooltips balloon is positioned directly against the triggered element (by JavaScript). By adding a margin you can adjust this. By default this is the same height as the pointer.
+	margin-top: $tooltip-pointer-height + 2px; // NOTE: By default the tooltips balloon is positioned directly against the triggered element (by JavaScript). By adding a margin you can adjust this. By default this is the pointer height plus 2 pixels.
 }
 
 .tooltip__pointer {
