@@ -2,16 +2,20 @@ $form-section-border: 1px solid $color-ui-40;
 $form-section-title-color: $color-text;
 $form-fieldset-invalid-background-color: $color-ui-90;
 $form-fieldset-invalid-border-color: $color-error;
-$form-fieldset-feedback-text-background-color: $color-error;
+$form-fieldset-feedback-text-background-color: $color-info;
 $form-fieldset-feedback-text-color: $color-text-diap;
 $form-label-helper-text-color: $color-text;
-$form-input-validation-icon-color: $color-light;
-$form-input-validation-icon-invalid-background-color: $color-error;
-$form-input-validation-icon-valid-background-color: $color-success;
 $form-field-text-color: $color-text;
+$form-input-indicator-icon-color: $color-text;
+$form-input-indicator-icon-color-diap: $color-text-diap;
+$form-input-indicator-icon-border: 1px solid $color-input-border;
+$form-input-indicator-icon-background-color: $color-input-background;
+$form-input-indicator-icon-invalid-background-color: $color-error;
+$form-input-indicator-icon-valid-background-color: $color-success;
 $form-helper-text-color: $color-text;
 $form-strong-text-color: $color-text;
 $form-feedback-text-color: $color-text;
+$form-feedback-text-icon-border: 1px solid $color-ui-300;
 
 .form {
 }
@@ -174,6 +178,34 @@ $form-feedback-text-color: $color-text;
 	}
 }
 
+.form__field-text {
+	color: $form-field-text-color;
+
+	@include media(0, $range-hand) {
+		margin-top: 5px;
+		font-size: $font-size-90;
+		line-height: $line-height-100;
+	}
+	@include media($range-lap, false) {
+		margin-top: 10px;
+		padding-right: 60px;
+		font-size: $font-size-100;
+		line-height: $line-height-90;
+	}
+}
+
+.form__field-text--full {
+	margin: 10px auto 0;
+	padding-right: 0;
+	max-width: 600px;
+	font-size: $font-size-100;
+	line-height: $line-height-90;
+
+	@include media($range-lap, false) {
+		text-align: center;
+	}
+}
+
 .form__label-box {
 	@include media($range-lap, false) {
 		display: table-cell;
@@ -266,21 +298,26 @@ $form-feedback-text-color: $color-text;
 .form__input {
 }
 
-.form__input-validation-icon {
+.form__input-indicator-icon {
 	@include user-select(none);
 	@include align(absolute, null, center);
 	left: -7px;
+	display: none;
 	width: 16px;
 	height: 16px;
+	border: 1px solid $form-input-indicator-icon-border;
 	border-radius: 50%;
-	color: $form-input-validation-icon-color;
+	background-color: $form-input-indicator-icon-background-color;
+	color: $form-input-indicator-icon-color;
 	text-align: center;
 	font-size: 12px;
 	line-height: 16px;
 	pointer-events: none;
 
 	.form__input.is-valid ~ & {
-		background-color: $form-input-validation-icon-valid-background-color;
+		display: block;
+		background-color: $form-input-indicator-icon-valid-background-color;
+		color: $form-input-indicator-icon-color-diap;
 
 		&::before {
 			content: '\221A'; // TODO: Add (SVG) icon solution
@@ -288,50 +325,34 @@ $form-feedback-text-color: $color-text;
 	}
 
 	.form.is-submitted .form__input.is-invalid ~ & {
-		background-color: $form-input-validation-icon-invalid-background-color;
+		display: block;
+		background-color: $form-input-indicator-icon-invalid-background-color;
+		color: $form-input-indicator-icon-color-diap;
 
 		&::before {
 			content: '\00d7'; // TODO: Add (SVG) icon solution
 		}
 	}
-}
 
-.form__field-text {
-	color: $form-field-text-color;
+	.form__input.is-loading ~ & {
+		display: block;
+		cursor: progress;
 
-	@include media(0, $range-hand) {
-		margin-top: 5px;
-		font-size: $font-size-90;
-		line-height: $line-height-100;
-	}
-	@include media($range-lap, false) {
-		margin-top: 10px;
-		padding-right: 60px;
-		font-size: $font-size-100;
-		line-height: $line-height-90;
-	}
-}
-
-.form__field-text--full {
-	margin: 10px auto 0;
-	padding-right: 0;
-	max-width: 600px;
-	font-size: $font-size-100;
-	line-height: $line-height-90;
-
-	@include media($range-lap, false) {
-		text-align: center;
+		&::after {
+			@include animation(spin 1.5s infinite linear);
+			display: block;
+			content: '\221E'; // TODO: Add (SVG) icon solution
+		}
 	}
 }
 
 .form__helper-text {
 	display: block;
 	margin-top: 4px;
-	max-width: 40em;
+	max-width: 35em;
 	color: $form-helper-text-color;
 	font-size: $font-size-90;
 	line-height: $line-height-90;
-	max-width: 35em;
 }
 
 .form__strong-text {
@@ -344,10 +365,10 @@ $form-feedback-text-color: $color-text;
 	display: block;
 	padding-top: 10px;
 	padding-left: 28px;
+	max-width: 35em;
 	color: $form-feedback-text-color;
 	font-size: $font-size-90;
 	line-height: $line-height-80;
-	max-width: 35em;
 
 	&::before {
 		position: absolute;
@@ -355,8 +376,8 @@ $form-feedback-text-color: $color-text;
 		left: 6px;
 		width: 15px;
 		height: 15px;
-		border-bottom: 1px solid $color-ui-300;
-		border-left: 1px solid $color-ui-300;
+		border-bottom: $form-feedback-text-icon-border;
+		border-left: $form-feedback-text-icon-border;
 		border-bottom-left-radius: $border-radius-100;
 		content: '';
 	}
