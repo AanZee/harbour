@@ -5,7 +5,6 @@ $form-fieldset-invalid-border-color: $color-error;
 $form-fieldset-feedback-text-background-color: $color-error;
 $form-fieldset-feedback-text-color: $color-text-diap;
 $form-label-helper-text-color: $color-text;
-$form-input-helper-text-color: $color-text;
 $form-input-validation-icon-color: $color-light;
 $form-input-validation-icon-invalid-background-color: $color-error;
 $form-input-validation-icon-valid-background-color: $color-success;
@@ -264,15 +263,7 @@ $form-feedback-text-color: $color-text;
 	position: relative;
 }
 
-.form__input-helper-text {
-	display: block;
-	margin-top: 3px;
-	color: $form-input-helper-text-color;
-	font-size: $font-size-90;
-	line-height: $line-height-80;
-}
-
-.form__text-input {
+.form__input {
 }
 
 .form__input-validation-icon {
@@ -288,7 +279,7 @@ $form-feedback-text-color: $color-text;
 	line-height: 16px;
 	pointer-events: none;
 
-	.form__text-input.is-valid ~ & {
+	.form__input.is-valid ~ & {
 		background-color: $form-input-validation-icon-valid-background-color;
 
 		&::before {
@@ -296,7 +287,7 @@ $form-feedback-text-color: $color-text;
 		}
 	}
 
-	.form.is-submitted .form__text-input.is-invalid ~ & {
+	.form.is-submitted .form__input.is-invalid ~ & {
 		background-color: $form-input-validation-icon-invalid-background-color;
 
 		&::before {
@@ -340,6 +331,7 @@ $form-feedback-text-color: $color-text;
 	color: $form-helper-text-color;
 	font-size: $font-size-90;
 	line-height: $line-height-90;
+	max-width: 35em;
 }
 
 .form__strong-text {
@@ -355,6 +347,7 @@ $form-feedback-text-color: $color-text;
 	color: $form-feedback-text-color;
 	font-size: $font-size-90;
 	line-height: $line-height-80;
+	max-width: 35em;
 
 	&::before {
 		position: absolute;
