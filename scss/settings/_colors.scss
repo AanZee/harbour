@@ -1,6 +1,5 @@
 // # Descriptive colors
 // - Only use descriptive colors to define functional colors in this document.
-
 $color-black: rgb(0, 0, 0);
 $color-white: rgb(255, 255, 255);
 $color-grey: rgb(162, 174, 187);
@@ -55,7 +54,7 @@ $color-instagram: #3f729b;
 $color-google-plus: #db4a39;
 
 // # Ranges
-// - Please keep the variable order the same as above
+// - Please keep the same variable order as above
 // TODO: Update city blocks with necessary ranges
 $color-ui-40: tint($color-ui, 60%);
 $color-ui-90: tint($color-ui, 10%);
