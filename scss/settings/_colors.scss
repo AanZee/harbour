@@ -11,13 +11,11 @@ $color-green: rgb(114, 155, 121);
 
 // # Functional colors
 // - Always use a descriptive color to define a functional color.
-// - Always use the right functional color even when two (or more) functional colors have the same descriptive color (e.g. $color-light and $color-text-diap). This will help when you want to target a specific color.
+// - Always use the right functional color even when two (or more) functional colors have the same descriptive color (e.g. $color-heading and $color-primary). This will help when you want to target a specific color.
 
 // ## User Interface
 $color-ui: $color-grey;
 $color-ui-accent: $color-blue;
-$color-light: $color-white;
-$color-dark: $color-black;
 
 // ## Typography
 $color-heading: $color-blue;
@@ -40,10 +38,11 @@ $color-focus: $color-green;
 
 // # Additional colors
 // - Can be used for shared color variables in different components (e.g. $color-card-background), in specific state (e.g. $color-logged-in) or themes (e.g. $color-corporate)
-$color-shadow: $color-dark;
-$color-site-background: $color-light;
-$color-input-background: $color-light;
+$color-shadow: $color-black;
+$color-site-background: $color-white;
+$color-input-background: $color-white;
 $color-input-border: $color-ui;
+$color-pop-out: $color-white;
 
 // # Social media colors
 $color-facebook: #3b5998;
