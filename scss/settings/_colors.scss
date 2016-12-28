@@ -57,6 +57,7 @@ $color-google-plus: #db4a39;
 // # Ranges
 // - Please keep the same variable order as above
 // TODO: Update city blocks with necessary ranges
+// IDEA: Add all color ranges to support shared components and use double colors when there are not enough colors avaiable. E.g. $color-text-300: $color-text-200; $color-text-400: $color-text-200;
 $color-ui-40: tint($color-ui, 60%);
 $color-ui-90: tint($color-ui, 10%);
 $color-ui-300: shade($color-ui, 20%);
