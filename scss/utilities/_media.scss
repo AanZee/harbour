@@ -1,27 +1,64 @@
-@mixin media($media-1, $media-2: null) {
-	$media-1__low: if(type-of($media-1) == number, $media-1, nth($media-1, 1));
-	$media-1__high: if(type-of($media-1) == number, $media-1, nth($media-1, 2));
+@mixin media($media-1: null, $media-2: null, $orientation: null) {
+	$media-1-length: length($media-1);
+	$media-1-start: nth($media-1, 1);
+	$media-1-end: nth($media-1, $media-1-length);
+	$media-2-length: length($media-2);
+	$media-2-start: nth($media-2, 1);
+	$media-2-end: nth($media-2, $media-2-length);
+	$is-range: ($media-1-length > 1) and ($media-2-length > 1);
+	$min-width: $media-1-start;
+	$max-width: if($media-2 == null, $media-1-end, $media-2-end);
 
-	@if $media-2 == null {
-		@if $media-1__high == false {
-			@include respond($media-1__low + 'px') { @content; }
+	@if ($min-width == 0 and $max-width == false) or $min-width == false or $max-width == 0 {
+		@error "Ranges can't start with 'false', end with '0' or start with '0' and end with false in the same query";
+	}
+
+	@if ($is-range == false and $max-width and $max-width < $min-width) {
+		@error "The min width can't be smaller than the max width";
+	}
+
+	@if ($is-range and $media-2-start < $media-1-start) {
+		@error "The start of your first range can't be higher than the start of the second range";
+	}
+
+	@if ($is-range and $media-2-end and $media-1-end > $media-2-end) {
+		@error "The end of your second range can't be lower than the end of the first range";
+	}
+
+	@if ($orientation and ($orientation != landscape and $orientation != portrait)) {
+		@error "Orientation value must be landscape or portrait";
+	}
+
+	@if ($orientation) {
+		@if $min-width == null and $max-width == null {
+			@media screen and (orientation: $orientation) {
+				@content;
+			}
+		} @elseif $min-width == 0 {
+			@media screen and (max-width: $max-width) and (orientation: $orientation) {
+				@content;
+			}
+		} @elseif $max-width == false {
+			@media screen and (min-width: $min-width) and (orientation: $orientation) {
+				@content;
+			}
 		} @else {
-			@include respond($media-1__low + 'px', $media-1__high + 'px') { @content; }
+			@media screen and (min-width: $min-width) and (max-width: $max-width) and (orientation: $orientation) {
+				@content;
+			}
 		}
 	} @else {
-		@if $media-2 == false {
-			@include respond($media-1__low + 'px') { @content; }
+		@if $min-width == 0 {
+			@media screen and (max-width: $max-width) {
+				@content;
+			}
+		} @elseif $max-width == false {
+			@media screen and (min-width: $min-width) {
+				@content;
+			}
 		} @else {
-			$media-2__low: if(type-of($media-2) == number, $media-2, nth($media-2, 1));
-			$media-2__high: if(type-of($media-2) == number, $media-2, nth($media-2, 2));
-
-			$min-width: if($media-2 and $media-1__low < $media-2__low, $media-1__low, $media-2__low);
-			$max-width: if($media-2__low == $media-2__high, $media-2, if($media-2__high and $media-1__high > $media-2__high, $media-1__high, $media-2__high));
-
-			@if $max-width == false {
-				@include respond($min-width + 'px') { @content; }
-			} @else {
-				@include respond($min-width + 'px', $max-width + 'px') { @content; }
+			@media screen and (min-width: $min-width) and (max-width: $max-width) {
+				@content;
 			}
 		}
 	}
