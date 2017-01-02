@@ -1,4 +1,4 @@
-$form-section-border: 1px solid $color-ui-40 !default;
+$form-section-border: $border-ui-90 !default;
 $form-section-title-color: $color-text !default;
 $form-fieldset-invalid-background-color: $color-ui-90 !default;
 $form-fieldset-invalid-border-color: $color-error !default;
@@ -8,14 +8,14 @@ $form-label-helper-text-color: $color-text !default;
 $form-field-text-color: $color-text !default;
 $form-input-indicator-icon-color: $color-text !default;
 $form-input-indicator-icon-color-diap: $color-text-diap !default;
-$form-input-indicator-icon-border: 1px solid $color-input-border !default;
+$form-input-indicator-icon-border: $border-ui-100 !default;
 $form-input-indicator-icon-background-color: $color-input-background !default;
 $form-input-indicator-icon-invalid-background-color: $color-error !default;
 $form-input-indicator-icon-valid-background-color: $color-success !default;
 $form-helper-text-color: $color-text !default;
 $form-strong-text-color: $color-text !default;
 $form-feedback-text-color: $color-text !default;
-$form-feedback-text-icon-border: 1px solid $color-ui-300 !default;
+$form-feedback-text-icon-border: $border-ui-200 !default;
 
 .form {
 }
