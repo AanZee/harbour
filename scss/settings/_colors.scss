@@ -14,7 +14,7 @@ $color-green: rgb(114, 155, 121) !default;
 // - Always use the right functional color even when two (or more) functional colors have the same descriptive color (e.g. $color-heading and $color-primary). This will help when you want to target a specific color.
 
 // ## User Interface
-$color-ui: $color-grey !default;
+$color-ui-100: $color-grey !default;
 $color-ui-accent: $color-blue !default;
 
 // ## Typography
@@ -54,9 +54,10 @@ $color-google-plus: #db4a39;
 
 // # Ranges
 // - Please keep the same variable order as above
+// - When you add a new variation of a color without a range, replace $color-name with $color-name-100 to indicate that there is a range
 // TODO: Update city blocks with necessary ranges
 // IDEA: Add all color ranges to support shared components and use double colors when there are not enough colors avaiable. E.g. $color-text-300: $color-text-200; $color-text-400: $color-text-200;
-$color-ui-40: tint($color-ui, 60%) !default;
-$color-ui-90: tint($color-ui, 10%) !default;
-$color-ui-300: shade($color-ui, 20%) !default;
-$color-ui-500: shade($color-ui, 40%) !default;
+$color-ui-40: tint($color-ui-100, 60%) !default;
+$color-ui-90: tint($color-ui-100, 10%) !default;
+$color-ui-300: shade($color-ui-100, 20%) !default;
+$color-ui-500: shade($color-ui-100, 40%) !default;
