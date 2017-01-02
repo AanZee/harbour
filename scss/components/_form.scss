@@ -320,7 +320,7 @@ $form-feedback-text-icon-border: 1px solid $color-ui-300;
 		color: $form-input-indicator-icon-color-diap;
 
 		&::before {
-			content: '\221A'; // TODO: Add (SVG) icon solution
+			content: '\221A'; // TODO: Add valid icon solution
 		}
 	}
 
@@ -330,7 +330,7 @@ $form-feedback-text-icon-border: 1px solid $color-ui-300;
 		color: $form-input-indicator-icon-color-diap;
 
 		&::before {
-			content: '\00d7'; // TODO: Add (SVG) icon solution
+			content: '\00d7'; // TODO: Add invalid icon solution
 		}
 	}
 
@@ -341,7 +341,7 @@ $form-feedback-text-icon-border: 1px solid $color-ui-300;
 		&::after {
 			@include animation(spin 1.5s infinite linear);
 			display: block;
-			content: '\221E'; // TODO: Add (SVG) icon solution
+			content: '\221E'; // TODO: Add loading icon solution
 		}
 	}
 }
