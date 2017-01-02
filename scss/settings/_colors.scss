@@ -1,48 +1,48 @@
 // # Descriptive colors
 // - Only use descriptive colors to define functional colors in this document.
-$color-black: rgb(0, 0, 0);
-$color-white: rgb(255, 255, 255);
-$color-grey: rgb(162, 174, 187);
-$color-yellow: rgb(239, 183, 86);
-$color-purple: rgb(140, 83, 131);
-$color-blue: rgb(49, 133, 252);
-$color-red: rgb(226, 77, 63);
-$color-green: rgb(114, 155, 121);
+$color-black: rgb(0, 0, 0) !default;
+$color-white: rgb(255, 255, 255) !default;
+$color-grey: rgb(162, 174, 187) !default;
+$color-yellow: rgb(239, 183, 86) !default;
+$color-purple: rgb(140, 83, 131) !default;
+$color-blue: rgb(49, 133, 252) !default;
+$color-red: rgb(226, 77, 63) !default;
+$color-green: rgb(114, 155, 121) !default;
 
 // # Functional colors
 // - Always use a descriptive color to define a functional color.
 // - Always use the right functional color even when two (or more) functional colors have the same descriptive color (e.g. $color-heading and $color-primary). This will help when you want to target a specific color.
 
 // ## User Interface
-$color-ui: $color-grey;
-$color-ui-accent: $color-blue;
+$color-ui: $color-grey !default;
+$color-ui-accent: $color-blue !default;
 
 // ## Typography
-$color-heading: $color-blue;
-$color-subheading: $color-blue;
-$color-text: $color-black;
-$color-text-diap: $color-white;
+$color-heading: $color-blue !default;
+$color-subheading: $color-blue !default;
+$color-text: $color-black !default;
+$color-text-diap: $color-white !default;
 
 // ## Hierarchical
-$color-cta: $color-yellow;
-$color-primary: $color-blue;
-$color-secondary: $color-purple;
+$color-cta: $color-yellow !default;
+$color-primary: $color-blue !default;
+$color-secondary: $color-purple !default;
 
 // ## States
-$color-error: $color-red;
-$color-success: $color-green;
-$color-warning: $color-yellow;
-$color-info: $color-blue;
-$color-select: $color-purple;
-$color-focus: $color-green;
+$color-error: $color-red !default;
+$color-success: $color-green !default;
+$color-warning: $color-yellow !default;
+$color-info: $color-blue !default;
+$color-select: $color-purple !default;
+$color-focus: $color-green !default;
 
 // # Additional colors
 // - Can be used for shared color variables in different components (e.g. $color-card-background), in specific state (e.g. $color-logged-in) or themes (e.g. $color-corporate)
-$color-shadow: $color-black;
-$color-site-background: $color-white;
-$color-input-background: $color-white;
-$color-input-border: $color-ui;
-$color-pop-out: $color-white;
+$color-shadow: $color-black !default;
+$color-site-background: $color-white !default;
+$color-input-background: $color-white !default;
+$color-input-border: $color-ui !default;
+$color-pop-out: $color-white !default;
 
 // # Social media colors
 $color-facebook: #3b5998;
@@ -57,7 +57,7 @@ $color-google-plus: #db4a39;
 // - Please keep the same variable order as above
 // TODO: Update city blocks with necessary ranges
 // IDEA: Add all color ranges to support shared components and use double colors when there are not enough colors avaiable. E.g. $color-text-300: $color-text-200; $color-text-400: $color-text-200;
-$color-ui-40: tint($color-ui, 60%);
-$color-ui-90: tint($color-ui, 10%);
-$color-ui-300: shade($color-ui, 20%);
-$color-ui-500: shade($color-ui, 40%);
+$color-ui-40: tint($color-ui, 60%) !default;
+$color-ui-90: tint($color-ui, 10%) !default;
+$color-ui-300: shade($color-ui, 20%) !default;
+$color-ui-500: shade($color-ui, 40%) !default;
