@@ -1,21 +1,21 @@
-$form-section-border: 1px solid $color-ui-40;
-$form-section-title-color: $color-text;
-$form-fieldset-invalid-background-color: $color-ui-90;
-$form-fieldset-invalid-border-color: $color-error;
-$form-fieldset-feedback-text-background-color: $color-info;
-$form-fieldset-feedback-text-color: $color-text-diap;
-$form-label-helper-text-color: $color-text;
-$form-field-text-color: $color-text;
-$form-input-indicator-icon-color: $color-text;
-$form-input-indicator-icon-color-diap: $color-text-diap;
-$form-input-indicator-icon-border: 1px solid $color-input-border;
-$form-input-indicator-icon-background-color: $color-input-background;
-$form-input-indicator-icon-invalid-background-color: $color-error;
-$form-input-indicator-icon-valid-background-color: $color-success;
-$form-helper-text-color: $color-text;
-$form-strong-text-color: $color-text;
-$form-feedback-text-color: $color-text;
-$form-feedback-text-icon-border: 1px solid $color-ui-300;
+$form-section-border: 1px solid $color-ui-40 !default;
+$form-section-title-color: $color-text !default;
+$form-fieldset-invalid-background-color: $color-ui-90 !default;
+$form-fieldset-invalid-border-color: $color-error !default;
+$form-fieldset-feedback-text-background-color: $color-info !default;
+$form-fieldset-feedback-text-color: $color-text-diap !default;
+$form-label-helper-text-color: $color-text !default;
+$form-field-text-color: $color-text !default;
+$form-input-indicator-icon-color: $color-text !default;
+$form-input-indicator-icon-color-diap: $color-text-diap !default;
+$form-input-indicator-icon-border: 1px solid $color-input-border !default;
+$form-input-indicator-icon-background-color: $color-input-background !default;
+$form-input-indicator-icon-invalid-background-color: $color-error !default;
+$form-input-indicator-icon-valid-background-color: $color-success !default;
+$form-helper-text-color: $color-text !default;
+$form-strong-text-color: $color-text !default;
+$form-feedback-text-color: $color-text !default;
+$form-feedback-text-icon-border: 1px solid $color-ui-300 !default;
 
 .form {
 }
