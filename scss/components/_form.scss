@@ -217,15 +217,6 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 	}
 }
 
-.form__label-box--full {
-	@include media($range-lap, false) {
-		@include padding(null 40px);
-		display: table-row;
-		width: 100%;
-		text-align: center;
-	}
-}
-
 .form__label {
 	width: 100%;
 	line-height: $line-height-70;
@@ -244,13 +235,6 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 
 	@include media-ie-10-11 {
 		padding-top: 10px; // FIX: IE 10 and 11 don't support flexbox with min-height. This fixes the layout.
-	}
-
-	.form__label-box--full & {
-		@include media($range-lap, false) {
-			@include justify-content(center); // NOTE: To center contents.
-			@include align-items(center);
-		}
 	}
 }
 
@@ -279,14 +263,6 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 	@include media($range-lap, false) {
 		display: table-cell;
 		vertical-align: top;
-	}
-}
-
-.form__inputs--full {
-	@include media($range-lap, false) {
-		display: table-row;
-		width: 100%;
-		text-align: center;
 	}
 }
 
