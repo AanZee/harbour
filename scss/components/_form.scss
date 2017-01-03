@@ -22,8 +22,8 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 		padding-bottom: 12px;
 	}
 	@include media($range-lap, false) {
-		padding-top: 20px;
-		padding-bottom: 20px;
+		padding-top: 16px;
+		padding-bottom: 16px;
 	}
 }
 
@@ -37,10 +37,10 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 	border-bottom: $form-section-border;
 
 	@include media(0, $range-hand) {
-		@include padding(15px null);
+		@include padding(16px null);
 	}
 	@include media($range-lap, false) {
-		@include padding(20px null);
+		@include padding(24px null);
 	}
 
 	&:first-child {
@@ -54,43 +54,39 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 }
 
 .form__section-title {
+	max-width: 45em;
 	color: $form-section-title-color;
 	line-height: $line-height-60;
 
-	@include media(0, $range-palm) {
-		text-align: left;
-	}
 	@include media(0, $range-hand) {
-		@include padding(null 20px);
-		margin-bottom: 10px;
+		@include padding(null 16px);
+		margin-bottom: 8px;
+		text-align: left;
 		font-size: $font-size-300;
-	}
-	@include media($range-hand) {
-		margin-top: 5px;
-		text-align: center;
 	}
 	@include media($range-lap, false) {
 		@include padding(null 40px);
-		margin-top: 10px;
-		margin-bottom: 15px;
+		margin-top: 8px;
+		margin-right: auto;
+		margin-bottom: 16px;
+		margin-left: auto;
 		text-align: center;
 		font-size: $font-size-400;
 	}
 }
 
 .form__section-text {
+	max-width: 45em;
 	line-height: $line-height-80;
 
-	@include media(0, $range-palm) {
-		@include padding(null 20px);
+	@include media(0, $range-hand) {
+		@include padding(null 16px);
 		text-align: left;
-	}
-	@include media($range-hand) {
-		@include padding(null 20px);
-		text-align: center;
 	}
 	@include media($range-lap, false) {
 		@include padding(null 40px);
+		margin-right: auto;
+		margin-left: auto;
 		text-align: center;
 	}
 }
@@ -99,10 +95,10 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 	position: relative;
 
 	@include media(0, $range-hand) {
-		@include margin(5px null);
+		@include margin(4px null);
 	}
 	@include media($range-lap, false) {
-		@include margin(10px null);
+		@include margin(8px null);
 	}
 
 	&:first-child {
@@ -121,7 +117,7 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 			border-bottom: 2px solid $form-fieldset-invalid-border-color;
 		}
 		@include media($range-lap, false) {
-			@include padding(10px null);
+			@include padding(8px null);
 			border-radius: $border-radius-200;
 			box-shadow: 0 0 0 2px $form-fieldset-invalid-border-color;
 		}
@@ -130,9 +126,9 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 
 .form__fieldset-feedback-text {
 	position: relative;
-	top: 10px;
-	margin-top: -10px;
-	padding: 5px 20px;
+	top: 8px;
+	margin-top: -8px;
+	padding: 4px 16px;
 	background-color: $form-fieldset-feedback-text-background-color;
 	color: $form-fieldset-feedback-text-color;
 	text-align: center;
@@ -149,13 +145,13 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 	width: 100%;
 
 	@include media(0, $range-hand) {
-		@include padding(null 20px);
-		@include margin(5px null);
+		@include padding(null 16px);
+		@include margin(4px null);
 		display: block;
 	}
 	@include media($range-lap, false) {
 		@include padding(null 40px);
-		@include margin(10px null);
+		@include margin(8px null);
 		display: table;
 	}
 
@@ -175,7 +171,7 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 .form__label-box {
 	@include media($range-lap, false) {
 		display: table-cell;
-		padding-right: 20px;
+		padding-right: 16px;
 		min-width: 220px;
 		width: 36%;
 		vertical-align: top;
@@ -188,6 +184,8 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 	line-height: $line-height-70;
 
 	@include media(0, $range-hand) {
+		display: block;
+		margin-bottom: 2px;
 		font-size: $font-size-90;
 	}
 	@include media($range-lap, false) {
@@ -200,14 +198,14 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 	}
 
 	@include media-ie-10-11 {
-		padding-top: 10px; // FIX: IE 10 and 11 don't support flexbox with min-height. This fixes the layout.
+		padding-top: 8px; // FIX: IE 10 and 11 don't support flexbox with min-height. This fixes the layout.
 	}
 }
 
 .form__label-helper-text {
 	color: $form-label-helper-text-color;
 	font-size: $font-size-80;
-	line-height: $line-height-20;
+	line-height: $line-height-60;
 
 	&::before {
 		@include media(0, $range-hand) {
@@ -300,7 +298,7 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 .form__feedback-text {
 	position: relative;
 	display: block;
-	padding-top: 10px;
+	padding-top: 8px;
 	padding-left: 28px;
 	max-width: 35em;
 	color: $form-feedback-text-color;
@@ -309,10 +307,10 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 
 	&::before {
 		position: absolute;
-		top: 6px;
-		left: 6px;
-		width: 15px;
-		height: 15px;
+		top: 8px;
+		left: 8px;
+		width: 16px;
+		height: 16px;
 		border-bottom: $form-feedback-text-icon-border;
 		border-left: $form-feedback-text-icon-border;
 		border-bottom-left-radius: $border-radius-100;
@@ -325,13 +323,13 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 }
 
 .form__summary {
-	margin-bottom: 15px;
+	margin-bottom: 16px;
 	width: 100%;
 }
 
 .form__actions {
 	@include clearfix;
-	margin-top: 10px;
+	margin-top: 8px;
 	width: 100%;
 }
 
@@ -339,5 +337,5 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 }
 
 .form__action-helper {
-	margin-bottom: 15px;
+	margin-bottom: 16px;
 }
