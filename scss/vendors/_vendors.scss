@@ -1,2 +1,3 @@
 @import '../node_modules/bourbon/app/assets/stylesheets/bourbon';
 @import '../node_modules/normalize.css/normalize';
+@import '../node_modules/reset-css/_reset'; // NOTE: Needs to be after normalize to overrule some properties. Underscore needed for SCSS to recognize the difference between the SCSS and CSS file.
