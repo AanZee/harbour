@@ -193,7 +193,7 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 		@include justify-content(center); // NOTE: Align vertical.
 		@include align-items(flex-end); // NOTE: To place contents to the right.
 		@include flex-direction(column);
-		min-height: 40px;
+		min-height: 32px;
 		font-size: $font-size-100;
 	}
 
