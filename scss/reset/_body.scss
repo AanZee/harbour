@@ -1,10 +1,13 @@
 body {
 	position: relative; // NOTE: Fix alignment on absolute childeren (e.g. tooltips or notifications)
-	overflow-x: hidden; // NOTE: Make sure there is no horizontal scroll bar in IE 11.
 	min-width: 320px; // NOTE: Viewports with a smaller width will see a horizontal scrollbar
 	background-color: $color-site-background;
 	color: $color-text;
 	font-family: $font-family-sans-serif;
 	font-size: $font-size-100;
 	line-height: $line-height-100;
+
+	@include media-ie-10-11 {
+		overflow-x: hidden; // NOTE: Make sure there is no horizontal scroll bar in IE 11.
+	}
 }
