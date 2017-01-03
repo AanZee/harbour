@@ -215,7 +215,7 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 			content: ' (';
 		}
 		@include media($range-lap, false) {
-			content: '\A';
+			content: '\A'; // NOTE: Line break
 		}
 	}
 
@@ -263,7 +263,7 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 		color: $form-input-indicator-icon-color-diap;
 
 		&::before {
-			content: '\221A'; // TODO: Add valid icon solution
+			content: '\221A'; // TODO: Add valid icon
 		}
 	}
 
@@ -273,7 +273,7 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 		color: $form-input-indicator-icon-color-diap;
 
 		&::before {
-			content: '\00d7'; // TODO: Add invalid icon solution
+			content: '\00d7'; // TODO: Add invalid icon
 		}
 	}
 
@@ -284,7 +284,7 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 		&::after {
 			@include animation(spin 1.5s infinite linear);
 			display: block;
-			content: '\221E'; // TODO: Add loading icon solution
+			content: '\221E'; // TODO: Add loading icon
 		}
 	}
 }
