@@ -234,8 +234,8 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 	}
 	@include media($range-lap, false) {
 		@include display(flex); // NOTE: To be able to align content.
-		@include justify-content(center); // NOTE: To place contents to the right.
-		@include align-items(flex-end); // NOTE: Align vertical.
+		@include justify-content(center); // NOTE: Align vertical.
+		@include align-items(flex-end); // NOTE: To place contents to the right.
 		@include flex-direction(column);
 		min-height: 40px;
 		font-size: $font-size-100;
