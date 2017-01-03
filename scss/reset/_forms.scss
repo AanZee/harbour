@@ -1,0 +1,38 @@
+[type='color'],
+[type='email'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='url'],
+textarea,
+select {
+	@include appearance(none);
+	border: 1px solid #000000; // NOTE: Chrome and Safari on OS X allow very limited styling of 'select', unless a border is set.
+	background-color: #ffffff;
+	box-shadow: none; // NOTE: Reset FF box shadow
+	color: $color-text;
+	font-family: $font-family-sans-serif;
+	font-size: 16px; // NOTE: Font size of 16px or heigher disables zooming on form fields with iOS.
+	line-height: $line-height-80;
+}
+
+[type='submit'],
+[type='button'],
+button {
+	@include appearance(none);
+}
+
+::-ms-clear {
+	display: none; // NOTE: Remove the cross from input fields in IE
+}
+
+label[for] {
+	@include user-select(none);
+	cursor: pointer;
+}
+
+label * {
+	pointer-events: none; // NOTE make labels better clickable on (iOS?) touch devices
+}
