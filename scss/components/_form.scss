@@ -259,14 +259,14 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 	}
 }
 
-.form__inputs {
+.form__input-box {
 	@include media($range-lap, false) {
 		display: table-cell;
 		vertical-align: top;
 	}
 }
 
-.form__input-box {
+.form__inputs {
 	@include clearfix;
 	position: relative;
 }
