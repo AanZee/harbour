@@ -22,6 +22,7 @@ select {
 [type='button'],
 button {
 	@include appearance(none);
+	border: none;
 }
 
 ::-ms-clear {
