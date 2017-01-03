@@ -18,6 +18,14 @@ $form-feedback-text-color: $color-text !default;
 $form-feedback-text-icon-border: $border-ui-200 !default;
 
 .form {
+	@include media(0, $range-hand) {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+	@include media($range-lap, false) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 }
 
 .form__inner {
