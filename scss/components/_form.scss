@@ -173,47 +173,6 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 	@include padding(null 0px);
 }
 
-.form__field-title {
-	margin-top: 20px;
-	line-height: $line-height-70;
-
-	@include media(0, $range-hand) {
-		font-size: $font-size-100;
-	}
-	@include media($range-lap, false) {
-		text-align: center;
-		font-size: $font-size-200;
-	}
-}
-
-.form__field-text {
-	color: $form-field-text-color;
-
-	@include media(0, $range-hand) {
-		margin-top: 5px;
-		font-size: $font-size-90;
-		line-height: $line-height-100;
-	}
-	@include media($range-lap, false) {
-		margin-top: 10px;
-		padding-right: 60px;
-		font-size: $font-size-100;
-		line-height: $line-height-90;
-	}
-}
-
-.form__field-text--full {
-	margin: 10px auto 0;
-	padding-right: 0;
-	max-width: 600px;
-	font-size: $font-size-100;
-	line-height: $line-height-90;
-
-	@include media($range-lap, false) {
-		text-align: center;
-	}
-}
-
 .form__label-box {
 	@include media($range-lap, false) {
 		display: table-cell;
