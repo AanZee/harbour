@@ -13,7 +13,6 @@ $form-input-indicator-icon-background-color: $color-input-background !default;
 $form-input-indicator-icon-invalid-background-color: $color-error !default;
 $form-input-indicator-icon-valid-background-color: $color-success !default;
 $form-helper-text-color: $color-text !default;
-$form-strong-text-color: $color-text !default;
 $form-feedback-text-color: $color-text !default;
 $form-feedback-text-icon-border: $border-ui-200 !default;
 
@@ -296,11 +295,6 @@ $form-feedback-text-icon-border: $border-ui-200 !default;
 	color: $form-helper-text-color;
 	font-size: $font-size-90;
 	line-height: $line-height-90;
-}
-
-.form__strong-text {
-	color: $form-strong-text-color;
-	font-weight: bold;
 }
 
 .form__feedback-text {
