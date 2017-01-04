@@ -1,19 +1,10 @@
 $form-section-border: $border-ui-90 !default;
-$form-section-title-color: $color-text !default;
-$form-fieldset-invalid-background-color: $color-ui-90 !default;
-$form-fieldset-invalid-border-color: $color-error !default;
-$form-fieldset-feedback-text-background-color: $color-info !default;
-$form-fieldset-feedback-text-color: $color-text-diap !default;
-$form-label-helper-text-color: $color-text !default;
-$form-field-text-color: $color-text !default;
-$form-input-indicator-icon-color: $color-text !default;
-$form-input-indicator-icon-color-diap: $color-text-diap !default;
-$form-input-indicator-icon-border: $border-ui-100 !default;
-$form-input-indicator-icon-background-color: $color-input-background !default;
-$form-input-indicator-icon-invalid-background-color: $color-error !default;
-$form-input-indicator-icon-valid-background-color: $color-success !default;
-$form-helper-text-color: $color-text !default;
-$form-feedback-text-color: $color-text !default;
+$form-section-title-color: inherit !default;
+$form-section-text-color: inherit !default;
+$form-label-color: inherit !default;
+$form-label-helper-text-color: inherit !default;
+$form-helper-text-color: inherit !default;
+$form-feedback-text-color: inherit !default;
 $form-feedback-text-icon-border: $border-input-100 !default;
 
 .form {
@@ -66,6 +57,7 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 
 .form__section-text {
 	max-width: 45em;
+	color: $form-section-text-color;
 	line-height: $line-height-80;
 
 	@include media(0, $range-hand) {
@@ -136,6 +128,7 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 
 .form__label {
 	width: 100%;
+	color: $form-label-color;
 	line-height: $line-height-70;
 
 	@include media(0, $range-hand) {
@@ -178,66 +171,10 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 	}
 }
 
-.form__input-box {
+.form__inputs-box {
 	@include media($range-lap, false) {
 		display: table-cell;
 		vertical-align: top;
-	}
-}
-
-.form__inputs {
-	@include clearfix;
-	position: relative;
-}
-
-.form__input {
-}
-
-.form__input-indicator-icon {
-	@include user-select(none);
-	@include align(absolute, null, center);
-	left: -7px;
-	display: none;
-	width: 16px;
-	height: 16px;
-	border: 1px solid $form-input-indicator-icon-border;
-	border-radius: 50%;
-	background-color: $form-input-indicator-icon-background-color;
-	color: $form-input-indicator-icon-color;
-	text-align: center;
-	font-size: 12px;
-	line-height: 16px;
-	pointer-events: none;
-
-	.form__input.is-valid ~ & {
-		display: block;
-		background-color: $form-input-indicator-icon-valid-background-color;
-		color: $form-input-indicator-icon-color-diap;
-
-		&::before {
-			content: '\221A'; // TODO: Add valid icon
-		}
-	}
-
-	.form.is-submitted .form__input.is-invalid ~ & {
-		display: block;
-		background-color: $form-input-indicator-icon-invalid-background-color;
-		color: $form-input-indicator-icon-color-diap;
-
-		&::before {
-			content: '\00d7'; // TODO: Add invalid icon
-		}
-	}
-
-	.form__input.is-loading ~ & {
-		display: block;
-		cursor: progress;
-
-		&::after {
-			@include animation(spin 1.5s infinite linear);
-			display: block;
-			content: '\221E'; // TODO: Add loading icon
-		}
 	}
 }
 
