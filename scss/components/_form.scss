@@ -191,7 +191,7 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 	position: relative;
 	display: block;
 	padding-top: 8px;
-	padding-left: 28px;
+	padding-left: 20px;
 	max-width: 35em;
 	color: $form-feedback-text-color;
 	font-size: $font-size-90;
@@ -199,8 +199,8 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 
 	&::before {
 		position: absolute;
-		top: 8px;
-		left: 8px;
+		top: 4px;
+		left: 0;
 		width: 16px;
 		height: 16px;
 		border-bottom: $form-feedback-text-icon-border;
