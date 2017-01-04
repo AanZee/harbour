@@ -28,7 +28,7 @@ $input-box-indicator-icon-valid-background-color: $color-success !default;
 	color: $input-box-indicator-icon-color;
 	text-align: center;
 	font-size: $icon-size-80;
-	line-height: 16px;
+	line-height: 14px;
 	pointer-events: none;
 
 	.input-box__input.is-valid ~ & {
