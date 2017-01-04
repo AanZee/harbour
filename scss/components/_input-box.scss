@@ -14,7 +14,7 @@ $input-box-indicator-icon-valid-background-color: $color-success !default;
 .input-box__input {
 }
 
-.input-box__indicator-icon {
+.input-box__state-indicator {
 	@include user-select(none);
 	position: absolute;
 	top: 8px;
