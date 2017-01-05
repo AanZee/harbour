@@ -33,42 +33,6 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 	}
 }
 
-.form__section-title {
-	max-width: 45em;
-	color: $form-section-title-color;
-	line-height: $line-height-60;
-
-	@include media(0, $range-hand) {
-		@include padding(null 16px);
-		@include margin(8px null);
-		text-align: left;
-		font-size: $font-size-300;
-	}
-	@include media($range-lap, false) {
-		@include padding(null 40px);
-		@include margin(16px auto);
-		text-align: center;
-		font-size: $font-size-400;
-	}
-}
-
-.form__section-text {
-	max-width: 45em;
-	color: $form-section-text-color;
-	line-height: $line-height-80;
-
-	@include media(0, $range-hand) {
-		@include padding(null 16px);
-		@include margin(8px null);
-		text-align: left;
-	}
-	@include media($range-lap, false) {
-		@include padding(null 40px);
-		@include margin(16px auto);
-		text-align: center;
-	}
-}
-
 .form__fieldset {
 	@include media(0, $range-hand) {
 		@include margin(4px null);
