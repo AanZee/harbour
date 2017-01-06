@@ -21,6 +21,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-util": "^3.0.7",
-    "normalize.css": "^4.2.0"
+    "normalize.css": "^4.2.0",
+    "reset-css": "^2.2.0"
   }
 }

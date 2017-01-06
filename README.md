@@ -24,3 +24,6 @@ To use Harbour you'll need [node](https://nodejs.org/), [npm](https://www.npmjs.
 	$ npm run watch
 	```
 5. Start designing with the SCSS files in SCSS folder
+
+### Docs
+[See documentation](docs/README.md)
