@@ -10,6 +10,9 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 .form {
 }
 
+.form--labels-top {
+}
+
 .form__sections {
 }
 
@@ -77,13 +80,15 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 }
 
 .form__label-box {
-	@include media($range-lap, false) {
-		display: table-cell;
-		padding-right: 16px;
-		min-width: 220px;
-		width: 36%;
-		vertical-align: top;
-		text-align: right;
+	.form:not(.form--labels-top) & {
+		@include media($range-lap, false) {
+			display: table-cell;
+			padding-right: 16px;
+			min-width: 220px;
+			width: 36%;
+			vertical-align: top;
+			text-align: right;
+		}
 	}
 }
 
@@ -98,16 +103,27 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 		font-size: $font-size-90;
 	}
 	@include media($range-lap, false) {
-		@include display(flex); // NOTE: To be able to align content.
-		@include justify-content(center); // NOTE: Align vertical.
-		@include align-items(flex-end); // NOTE: To place contents to the right.
-		@include flex-direction(column);
-		min-height: 32px;
 		font-size: $font-size-100;
 	}
 
-	@include media-ie-10-11 {
-		padding-top: 8px; // FIX: IE 10 and 11 don't support flexbox with min-height. This fixes the layout.
+	.form:not(.form--labels-top) & {
+		@include media($range-lap, false) {
+			@include display(flex); // NOTE: To be able to align content.
+			@include justify-content(center); // NOTE: Align vertical.
+			@include align-items(flex-end); // NOTE: To place contents to the right.
+			@include flex-direction(column);
+			min-height: 32px;
+		}
+
+		@include media-ie-10-11 {
+			padding-top: 8px; // FIX: IE 10 and 11 don't support flexbox with min-height. This fixes the layout.
+		}
+	}
+
+	.form--labels-top & {
+		@include media($range-lap, false) {
+			display: block;
+		}
 	}
 }
 
@@ -120,8 +136,11 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 		@include media(0, $range-hand) {
 			content: ' (';
 		}
-		@include media($range-lap, false) {
-			content: '\A'; // NOTE: Line break
+
+		.form:not(.form--labels-top) & {
+			@include media($range-lap, false) {
+				content: '\A'; // NOTE: Line break
+			}
 		}
 	}
 
@@ -133,9 +152,11 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 }
 
 .form__inputs-box {
-	@include media($range-lap, false) {
-		display: table-cell;
-		vertical-align: top;
+	.form:not(.form--labels-top) & {
+		@include media($range-lap, false) {
+			display: table-cell;
+			vertical-align: top;
+		}
 	}
 }
 
@@ -190,7 +211,9 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 }
 
 .form__action:first-child {
-	@include media($range-lap, false) {
-		margin-left: 36%;
+	.form:not(.form--labels-top) & {
+		@include media($range-lap, false) {
+			margin-left: 36%;
+		}
 	}
 }
