@@ -1,6 +1,9 @@
 # Harbour ⚓
 Professional SCSS project boilerplate without the bloat.
 
+## Docs
+[See documentation](docs/README.md)
+
 ## Features
 - Ordered folder structure
 - Well designed components and controls
@@ -24,6 +27,3 @@ To use Harbour you'll need [node](https://nodejs.org/), [npm](https://www.npmjs.
 	$ npm run watch
 	```
 5. Start designing with the SCSS files in SCSS folder
-
-### Docs
-[See documentation](docs/README.md)
