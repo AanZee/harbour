@@ -73,10 +73,10 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 	&:last-child {
 		margin-bottom: 0;
 	}
-}
 
-.form__field--full {
-	@include padding(null 0px);
+	.form--full & {
+		@include padding(null 0px);
+	}
 }
 
 .form__label-box {
@@ -192,10 +192,6 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 		border-left: $form-feedback-text-icon-border;
 		border-bottom-left-radius: $border-radius-100;
 		content: '';
-	}
-
-	&.is-hidden {
-		display: none;
 	}
 }
 
