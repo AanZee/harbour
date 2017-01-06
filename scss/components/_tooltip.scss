@@ -37,9 +37,6 @@ $tooltip-pointer-height: 7px !default;
 	pointer-events: none; // NOTE: Triggers mouse events on parent to prevent retriggering the tooltip in JavaScript
 }
 
-.tooltip__content {
-}
-
 .tooltip--pointer-bottom {
 	@include transform-origin(center bottom);
 	margin-bottom: $tooltip-pointer-height + 2px; // NOTE: By default the tooltips balloon is positioned directly against the triggered element (by JavaScript). By adding a margin you can adjust this. By default this is the pointer height plus 2 pixels.
@@ -48,6 +45,9 @@ $tooltip-pointer-height: 7px !default;
 .tooltip--pointer-top {
 	@include transform-origin(center top);
 	margin-top: $tooltip-pointer-height + 2px; // NOTE: By default the tooltips balloon is positioned directly against the triggered element (by JavaScript). By adding a margin you can adjust this. By default this is the pointer height plus 2 pixels.
+}
+
+.tooltip__content {
 }
 
 .tooltip__pointer {
