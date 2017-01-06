@@ -37,12 +37,15 @@ $tooltip-pointer-height: 7px !default;
 	pointer-events: none; // NOTE: Triggers mouse events on parent to prevent retriggering the tooltip in JavaScript
 }
 
-.tooltip--pointer-on-bottom {
+.tooltip__content {
+}
+
+.tooltip--pointer-bottom {
 	@include transform-origin(center bottom);
 	margin-bottom: $tooltip-pointer-height + 2px; // NOTE: By default the tooltips balloon is positioned directly against the triggered element (by JavaScript). By adding a margin you can adjust this. By default this is the pointer height plus 2 pixels.
 }
 
-.tooltip--pointer-on-top {
+.tooltip--pointer-top {
 	@include transform-origin(center top);
 	margin-top: $tooltip-pointer-height + 2px; // NOTE: By default the tooltips balloon is positioned directly against the triggered element (by JavaScript). By adding a margin you can adjust this. By default this is the pointer height plus 2 pixels.
 }
@@ -51,11 +54,11 @@ $tooltip-pointer-height: 7px !default;
 	position: absolute;
 	left: 50%;
 
-	.tooltip--pointer-on-bottom & {
+	.tooltip--pointer-bottom & {
 		bottom: 0;
 	}
 
-	.tooltip--pointer-on-top & {
+	.tooltip--pointer-top & {
 		top: 0;
 	}
 }
@@ -70,12 +73,12 @@ $tooltip-pointer-height: 7px !default;
 
 // NOTE: The pointer's fake border
 .tooltip__pointer::before {
-	.tooltip--pointer-on-bottom & {
+	.tooltip--pointer-bottom & {
 		@include triangle($tooltip-pointer-width $tooltip-pointer-height, $tooltip-border-color, down);
 		top: 1px;
 	}
 
-	.tooltip--pointer-on-top & {
+	.tooltip--pointer-top & {
 		@include triangle($tooltip-pointer-width $tooltip-pointer-height, $tooltip-border-color, up);
 		bottom: 1px;
 	}
@@ -83,12 +86,12 @@ $tooltip-pointer-height: 7px !default;
 
 // NOTE: The pointer's fill
 .tooltip__pointer::after {
-	.tooltip--pointer-on-bottom & {
+	.tooltip--pointer-bottom & {
 		@include triangle($tooltip-pointer-width $tooltip-pointer-height, $tooltip-background-color, down);
 		top: 0;
 	}
 
-	.tooltip--pointer-on-top & {
+	.tooltip--pointer-top & {
 		@include triangle($tooltip-pointer-width $tooltip-pointer-height, $tooltip-background-color, up);
 		bottom: 0;
 	}
