@@ -32,7 +32,7 @@ $tooltip-pointer-height
 ## Example HTML
 ```html
 <div class="tooltip">
-	<div class="tooltip__content"></div>
+	<div class="tooltip__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 	<div class="tooltip__pointer"></div>
 </div>
 ```
