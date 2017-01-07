@@ -33,8 +33,6 @@ form
 ## Available local variables
 ```scss
 $form-section-border
-$form-section-title-color
-$form-section-text-color
 $form-label-color
 $form-label-helper-text-color
 $form-helper-text-color
