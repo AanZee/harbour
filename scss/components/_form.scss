@@ -14,11 +14,7 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 .form--full {
 }
 
-.form__sections {
-}
-
 .form__section {
-	border-bottom: $form-section-border;
 
 	@include media(0, $range-hand) {
 		@include padding(16px null);
@@ -33,7 +29,10 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 
 	&:last-child {
 		padding-bottom: 0;
-		border-bottom: none;
+	}
+
+	+ .form__section {
+		border-top: $form-section-border;
 	}
 }
 
