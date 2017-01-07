@@ -1,6 +1,6 @@
 # Input box
 - [See SCSS component](../../scss/components/_input-box.scss)
-- This component needs a JavaScript solution
+- This component might need a JavaScript solution
 
 ## Available states
 **Shows a valid icon in the state indicator**

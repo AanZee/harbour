@@ -1,6 +1,6 @@
 # Form
 - [See SCSS component](../../scss/components/_form.scss)
-- This component needs a JavaScript solution
+- This component might need a JavaScript solution
 
 ## Available modifiers
 **Shows labels above the input on all ranges**
