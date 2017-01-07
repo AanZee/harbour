@@ -197,12 +197,19 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 
 .form__actions {
 	@include media(0, $range-hand) {
-		@include padding(null 16px);
 		margin-top: 4px;
 	}
 	@include media($range-lap, false) {
-		@include padding(null 40px);
 		margin-top: 8px;
+	}
+
+	.form:not(.form--full) & {
+		@include media(0, $range-hand) {
+			@include padding(null 16px);
+		}
+		@include media($range-lap, false) {
+			@include padding(null 40px);
+		}
 	}
 }
 
