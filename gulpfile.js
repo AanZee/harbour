@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var gutil = require('gulp-util');
-var gulpif = require('gulp-if');
 var Comb = require('csscomb');
 var combConfig = require('./.csscomb.json');
 var comb = new Comb(combConfig);
