@@ -108,10 +108,10 @@ $form-feedback-text-icon-border: $border-input-100 !default;
 
 	.form:not(.form--labels-top) & {
 		@include media($range-lap, false) {
-			@include display(flex); // NOTE: To be able to align content.
-			@include justify-content(center); // NOTE: Align vertical.
-			@include align-items(flex-end); // NOTE: To place contents to the right.
-			@include flex-direction(column);
+			display: flex; // NOTE: To be able to align content.
+			justify-content: center; // NOTE: Align vertical.
+			align-items: flex-end; // NOTE: To place contents to the right.
+			flex-direction: column;
 			min-height: 32px;
 		}
 

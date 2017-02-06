@@ -55,10 +55,10 @@ $input-box-indicator-icon-valid-background-color: $color-success !default;
 		display: block;
 		cursor: progress;
 
-		&::after {
-			@include animation(spin 1.5s infinite linear);
+		&::before {
 			display: block;
 			content: '\221E'; // TODO: Add loading icon
+			animation: spin 1.5s infinite linear;
 		}
 	}
 }
