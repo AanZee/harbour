@@ -1,0 +1,8 @@
+label[for] {
+	@include user-select(none);
+	cursor: pointer;
+}
+
+label * {
+	pointer-events: none; // NOTE: make labels better clickable on (iOS?) touch devices
+}

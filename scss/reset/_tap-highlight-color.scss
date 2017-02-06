@@ -1,0 +1,9 @@
+input,
+textarea,
+label,
+button,
+select,
+form,
+a {
+	@include remove-tap-highlight-color;
+}
