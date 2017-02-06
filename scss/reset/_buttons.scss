@@ -1,0 +1,12 @@
+button:not([disabled]) {
+	cursor: pointer;
+}
+
+[type='submit'],
+[type='button'],
+button {
+	@include appearance(none);
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
