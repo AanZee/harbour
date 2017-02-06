@@ -1,11 +1,10 @@
-$input-box-indicator-icon-color: $color-text !default;
-$input-box-indicator-icon-color-diap: $color-text-diap !default;
+// IDEA: Add has-helper-button modifier?
+$input-box-indicator-icon-color: $color-icon !default;
+$input-box-indicator-icon-color-diap: $color-icon-diap !default;
 $input-box-indicator-icon-border: $border-input-100 !default;
 $input-box-indicator-icon-background-color: $color-input-background !default;
 $input-box-indicator-icon-invalid-background-color: $color-error !default;
 $input-box-indicator-icon-valid-background-color: $color-success !default;
-
-// IDEA: Add has-helper-button modifier?
 
 .input-box {
 	position: relative;
