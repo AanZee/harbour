@@ -45,15 +45,6 @@ $color-pop-out-background: $color-white !default;
 $color-icon: $color-black !default;
 $color-icon-diap: $color-white !default;
 
-// # Social media colors
-$color-facebook: #3b5998;
-$color-twitter: #00a0d1;
-$color-linkedin: #0e76a8;
-$color-youtube: #c4302b;
-$color-pinterest: #c8232c;
-$color-instagram: #3f729b;
-$color-google-plus: #db4a39;
-
 // # Ranges
 // - Please keep the same variable order as above
 // - When you add a new variation of a color without a range, replace $color-name with $color-name-100 to indicate that there is a range
@@ -63,3 +54,12 @@ $color-ui-40: tint($color-ui-100, 60%) !default;
 $color-ui-90: tint($color-ui-100, 10%) !default;
 $color-ui-300: shade($color-ui-100, 20%) !default;
 $color-ui-500: shade($color-ui-100, 40%) !default;
+
+// # Social media colors
+$color-facebook: #3b5998;
+$color-twitter: #00a0d1;
+$color-linkedin: #0e76a8;
+$color-youtube: #c4302b;
+$color-pinterest: #c8232c;
+$color-instagram: #3f729b;
+$color-google-plus: #db4a39;
