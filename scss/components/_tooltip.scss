@@ -5,9 +5,9 @@ $tooltip-color: $color-text !default;
 $tooltip-pointer-width: 14px !default;
 $tooltip-pointer-height: 7px !default;
 
-@include keyframes(tooltipFadeIn) {
+@keyframes(tooltipFadeIn) {
 	0% {
-		@include transform(scale(0));
+		transform: scale(0);
 		opacity: 0.5;
 	}
 
@@ -16,13 +16,13 @@ $tooltip-pointer-height: 7px !default;
 	}
 
 	100% {
-		@include transform(scale(1));
+		transform: scale(1);
 		opacity: 1;
 	}
 }
 
 .tooltip {
-	@include animation(tooltipFadeIn 0.18s $ease-out-back);
+	animation: tooltipFadeIn 0.18s $ease-out-back;
 	position: absolute;
 	z-index: 1000;
 	padding: 10px 20px;
@@ -38,12 +38,12 @@ $tooltip-pointer-height: 7px !default;
 }
 
 .tooltip--pointer-bottom {
-	@include transform-origin(center bottom);
+	transform-origin: center bottom;
 	margin-bottom: $tooltip-pointer-height + 2px; // NOTE: By default the tooltips balloon is positioned directly against the triggered element (by JavaScript). By adding a margin you can adjust this. By default this is the pointer height plus 2 pixels.
 }
 
 .tooltip--pointer-top {
-	@include transform-origin(center top);
+	transform-origin: center top;
 	margin-top: $tooltip-pointer-height + 2px; // NOTE: By default the tooltips balloon is positioned directly against the triggered element (by JavaScript). By adding a margin you can adjust this. By default this is the pointer height plus 2 pixels.
 }
 

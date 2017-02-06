@@ -11,18 +11,18 @@
 		position: absolute;
 
 		@if $horizontal == 'center' and $vertical == 'center' {
-			@include transform(translate(-50%, -50%));
+			transform: translate(-50%, -50%);
 			left: 50%;
 			top: 50%;
 		}
 
 		@else if $horizontal == 'center' {
-			@include transform(translateX(-50%));
+			transform: translateX(-50%);
 			left: 50%;
 		}
 
 		@else if $vertical == 'center' {
-			@include transform(translateY(-50%));
+			transform: translateY(-50%);
 			top: 50%;
 		}
 
@@ -47,60 +47,60 @@
 
 		@if $parent {
 			@at-root #{$parent} {
-				@include display(flex);
+				display: flex;
 
 				@if $horizontal == 'left' {
-					@include justify-content(flex-start);
+					justify-content: flex-start;
 				}
 
 				@else if $horizontal == 'center' {
-					@include justify-content(center);
+					justify-content: center;
 				}
 
 				@else if $horizontal == 'right' {
-					@include justify-content(flex-end);
+					justify-content: flex-end;
 				}
 
 				@if $vertical == 'top' {
-					@include align-items(flex-start);
+					align-items: flex-start;
 				}
 
 				@else if $vertical == 'center' {
-					@include align-items(center);
+					align-items: center;
 				}
 
 				@else if $vertical == 'bottom' {
-					@include align-items(flex-end);
+					align-items: flex-end;
 				}
 			}
 		}
 
 		@else {
 
-			@include display(flex);
+			display: flex;
 
 			@if $horizontal == 'left' {
-				@include justify-content(flex-start);
+				justify-content: flex-start;
 			}
 
 			@else if $horizontal == 'center' {
-				@include justify-content(center);
+				justify-content: center;
 			}
 
 			@else if $horizontal == 'right' {
-				@include justify-content(flex-end);
+				justify-content: flex-end;
 			}
 
 			@if $vertical == 'top' {
-				@include align-items(flex-start);
+				align-items: flex-start;
 			}
 
 			@else if $vertical == 'center' {
-				@include align-items(center);
+				align-items: center;
 			}
 
 			@else if $vertical == 'bottom' {
-				@include align-items(flex-end);
+				align-items: flex-end;
 			}
 
 		}
