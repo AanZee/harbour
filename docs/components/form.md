@@ -3,11 +3,11 @@
 - This component might need a JavaScript solution
 
 ## Available modifiers
-**Shows labels above the input on all ranges**
+Shows labels above the input on all ranges
 ```
 form--labels-top
 ```
-**Removes field left and right padding**
+Removes field left and right padding
 ```
 form--full
 ```

@@ -2,37 +2,37 @@
 - [See SCSS component](../../scss/controls/_button.scss)
 
 ## Available states
-**Changes the (background) color**
+Changes the (background) color
 ```
 button:hover
 button:focus
 button:active
 ```
-**Changes the (background) color and add not-allowed cursor**
+Changes the (background) color and add not-allowed cursor
 ```
 button:disabled
 ```
 
 ## Available modifiers
-**Colors**
+Colors
 ```
 button--cta
 button--secondary
 button--ui
 button--transparent
 ```
-**Outline version (Not available with the button--transparent modifier)**
+Outline version (Not available with the button--transparent modifier)
 ```
 button--outline
 ```
-**Sizes**
+Sizes
 ```
 button--80
 button--90
 button--200
 button--full
 ```
-**Add ons**
+Add ons
 ```
 button--arrow-up
 button--arrow-right

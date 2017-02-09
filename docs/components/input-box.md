@@ -3,15 +3,15 @@
 - This component might need a JavaScript solution
 
 ## Available states
-**Shows a valid icon in the state indicator**
+Shows a valid icon in the state indicator
 ```
 input-box__input.is-valid
 ```
-**Shows an invalid icon in the state indicator**
+Shows an invalid icon in the state indicator
 ```
 input-box__input.is-invalid
 ```
-**Shows a spinning loading icon in the state indicator**
+Shows a spinning loading icon in the state indicator
 ```
 input-box__input.is-loading
 ```
