@@ -40,11 +40,6 @@ button--arrow-bottom
 button--arrow-left
 ```
 
-## Structure
-```
-button
-```
-
 ## Available local variables
 ```scss
 $button-color
