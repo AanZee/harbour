@@ -3,11 +3,11 @@
 - This components needs a JavaScript solution
 
 ## Available modifiers
-**Shows the pointer below the tooltip**
+Shows the pointer below the tooltip
 ```
 tooltip--pointer-bottom
 ```
-**Shows the pointer above the tooltip**
+Shows the pointer above the tooltip
 ```
 tooltip--pointer-top
 ```
