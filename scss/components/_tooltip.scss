@@ -25,7 +25,7 @@ $tooltip-pointer-height: 7px !default;
 	animation: tooltipFadeIn 0.18s $ease-out-back;
 	position: absolute;
 	z-index: 1000;
-	padding: 10px 20px;
+	padding: 12px 20px;
 	max-width: 280px;
 	border: 1px solid $tooltip-border-color;
 	border-radius: $border-radius-200;
