@@ -13,9 +13,10 @@ $color-green: rgb(114, 155, 121) !default;
 // - Always use a descriptive color to define a functional color.
 // - Always use the right functional color even when two (or more) functional colors have the same descriptive color (e.g. $color-heading and $color-primary). This will help when you want to target a specific color.
 
-// ## User Interface
-$color-ui-100: $color-grey !default;
-$color-ui-accent: $color-blue !default;
+// ## Hierarchical
+$color-cta-100: $color-yellow !default;
+$color-primary-100: $color-blue !default;
+$color-secondary-100: $color-purple !default;
 
 // ## Typography
 $color-heading: $color-blue !default;
@@ -23,10 +24,9 @@ $color-subheading: $color-blue !default;
 $color-text: $color-black !default;
 $color-text-diap: $color-white !default;
 
-// ## Hierarchical
-$color-cta: $color-yellow !default;
-$color-primary: $color-blue !default;
-$color-secondary: $color-purple !default;
+// ## User Interface
+$color-ui-100: $color-grey !default;
+$color-ui-accent: $color-blue !default;
 
 // ## States
 $color-error: $color-red !default;
@@ -50,7 +50,23 @@ $color-icon-diap: $color-white !default;
 // - When you add a new variation of a color without a range, replace $color-name with $color-name-100 to indicate that there is a range
 // TODO: Update city blocks with necessary ranges
 // IDEA: Add all color ranges to support shared components and use double colors when there are not enough colors avaiable. E.g. $color-text-300: $color-text-200; $color-text-400: $color-text-200;
+$color-cta-20: tint($color-cta-100, 80%) !default;
+$color-cta-200: shade($color-cta-100, 10%) !default;
+$color-cta-300: shade($color-cta-100, 20%) !default;
+$color-cta-400: shade($color-cta-100, 30%) !default;
+$color-primary-20: tint($color-primary-100, 80%) !default;
+$color-primary-60: tint($color-primary-100, 40%) !default;
+$color-primary-300: shade($color-primary-100, 20%) !default;
+$color-primary-400: shade($color-primary-100, 30%) !default;
+$color-primary-500: shade($color-primary-100, 40%) !default;
+$color-secondary-20: tint($color-secondary-100, 80%) !default;
+$color-secondary-200: shade($color-secondary-100, 10%) !default;
+$color-secondary-300: shade($color-secondary-100, 10%) !default;
+$color-secondary-400: shade($color-secondary-100, 30%) !default;
 $color-ui-40: tint($color-ui-100, 60%) !default;
+$color-ui-50: tint($color-ui-100, 50%) !default;
+$color-ui-60: tint($color-ui-100, 40%) !default;
+$color-ui-80: tint($color-ui-100, 20%) !default;
 $color-ui-90: tint($color-ui-100, 10%) !default;
 $color-ui-300: shade($color-ui-100, 20%) !default;
 $color-ui-500: shade($color-ui-100, 40%) !default;
