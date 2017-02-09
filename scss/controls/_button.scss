@@ -2,6 +2,7 @@ $button-color: $color-text-diap !default;
 $button-background-color: $color-primary-100 !default;
 $button-hover-color: $color-text-diap !default;
 $button-hover-background-color: $color-primary-300 !default;
+$button-focus-box-shadow: inset 0 0 0 2px $color-primary-500 !default;
 $button-active-color: $color-text-diap !default;
 $button-active-background-color: $color-primary-400 !default;
 $button-disabled-color: $color-text-diap !default;
@@ -10,6 +11,7 @@ $button-ui-color: $color-text !default;
 $button-ui-background-color: $color-ui-60 !default;
 $button-ui-hover-color: $color-text !default;
 $button-ui-hover-background-color: $color-ui-80 !default;
+$button-ui-focus-box-shadow: inset 0 0 0 2px $color-primary-400 !default;
 $button-ui-active-color: $color-text-diap !default;
 $button-ui-active-background-color: $color-primary-300 !default;
 $button-ui-disabled-color: $color-text-diap !default;
@@ -18,10 +20,12 @@ $button-cta-color: $color-text-diap !default;
 $button-cta-background-color: $color-cta-100 !default;
 $button-cta-hover-color: $color-text-diap !default;
 $button-cta-hover-background-color: $color-cta-200 !default;
+$button-cta-focus-box-shadow: inset 0 0 0 2px $color-cta-400 !default;
 $button-cta-active-color: $color-text-diap !default;
 $button-cta-active-background-color: $color-cta-300 !default;
 $button-cta-disabled-color: $color-text-diap !default;
 $button-cta-disabled-background-color: $color-cta-20 !default;
+$button-outline-border-width: 2px !default;
 
 .button {
 	@include user-select(none);
@@ -46,6 +50,10 @@ $button-cta-disabled-background-color: $color-cta-20 !default;
 	&:hover {
 		background-color: $button-hover-background-color;
 		color: $button-hover-color;
+	};
+
+	&:focus {
+		box-shadow: $button-focus-box-shadow;
 	}
 
 	&:active {
@@ -70,6 +78,10 @@ $button-cta-disabled-background-color: $color-cta-20 !default;
 		color: $button-ui-hover-color;
 	}
 
+	&:focus {
+		box-shadow: $button-ui-focus-box-shadow;
+	}
+
 	&:active {
 		background-color: $button-ui-active-background-color;
 		color: $button-ui-active-color;
@@ -88,6 +100,10 @@ $button-cta-disabled-background-color: $color-cta-20 !default;
 	&:hover {
 		background-color: $button-cta-hover-background-color;
 		color: $button-cta-hover-color;
+	}
+
+	&:focus {
+		box-shadow: $button-cta-focus-box-shadow;
 	}
 
 	&:active {
@@ -129,82 +145,81 @@ $button-cta-disabled-background-color: $color-cta-20 !default;
 	}
 }
 
-.button--outline,
-.button--secondary {
+.button--outline {
 	background-color: transparent;
 	background-image: none;
-	box-shadow: inset 0 0 0 2px $button-background-color;
+	box-shadow: inset 0 0 0 $button-outline-border-width $button-background-color;
 	color: $button-background-color;
 
 	&:hover {
 		background-color: transparent;
 		background-image: none;
-		box-shadow: inset 0 0 0 2px $button-hover-background-color;
+		box-shadow: inset 0 0 0 $button-outline-border-width $button-hover-background-color;
 		color: $button-hover-background-color;
 	}
 
 	&:focus {
-		box-shadow: inset 0 0 0 2px $button-background-color, $box-shadow-focus;
+		box-shadow: $button-focus-box-shadow, inset 0 0 0 $button-outline-border-width $button-background-color;
 	}
 
 	&:active {
 		background-color: transparent;
 		background-image: none;
-		box-shadow: inset 0 0 0 2px $button-active-background-color;
+		box-shadow: inset 0 0 0 $button-outline-border-width $button-active-background-color;
 		color: $button-active-background-color;
 	}
 
 	&:disabled {
 		background-color: transparent;
 		background-image: none;
-		box-shadow: inset 0 0 0 2px $button-disabled-background-color;
+		box-shadow: inset 0 0 0 $button-outline-border-width $button-disabled-background-color;
 		color: $button-disabled-background-color;
 	}
 
 	&.button--ui {
-		box-shadow: inset 0 0 0 2px $button-ui-background-color;
+		box-shadow: inset 0 0 0 $button-outline-border-width $button-ui-background-color;
 		color: $button-ui-background-color;
 
 		&:hover {
-			box-shadow: inset 0 0 0 2px $button-ui-hover-background-color;
+			box-shadow: inset 0 0 0 $button-outline-border-width $button-ui-hover-background-color;
 			color: $button-ui-hover-background-color;
 		}
 
 		&:focus {
-			box-shadow: inset 0 0 0 2px $button-ui-background-color, $box-shadow-focus;
+			box-shadow: $button-ui-focus-box-shadow, inset 0 0 0 $button-outline-border-width $button-ui-background-color;
 		}
 
 		&:active {
-			box-shadow: inset 0 0 0 2px $button-ui-active-background-color;
+			box-shadow: inset 0 0 0 $button-outline-border-width $button-ui-active-background-color;
 			color: $button-ui-active-background-color;
 		}
 
 		&:disabled {
-			box-shadow: inset 0 0 0 2px $button-ui-disabled-background-color;
+			box-shadow: inset 0 0 0 $button-outline-border-width $button-ui-disabled-background-color;
 			color: $button-ui-disabled-background-color;
 		}
 	}
 
 	&.button--cta {
-		box-shadow: inset 0 0 0 2px $button-cta-background-color;
+		box-shadow: inset 0 0 0 $button-outline-border-width $button-cta-background-color;
 		color: $button-cta-background-color;
 
 		&:hover {
-			box-shadow: inset 0 0 0 2px $button-cta-hover-background-color;
+			box-shadow: inset 0 0 0 $button-outline-border-width $button-cta-hover-background-color;
 			color: $button-cta-hover-background-color;
 		}
 
 		&:focus {
-			box-shadow: inset 0 0 0 2px $button-cta-background-color, $box-shadow-focus;
+			box-shadow: $button-cta-focus-box-shadow, inset 0 0 0 $button-outline-border-width $button-cta-background-color;
 		}
 
 		&:active {
-			box-shadow: inset 0 0 0 2px $button-cta-active-background-color;
+			box-shadow: inset 0 0 0 $button-outline-border-width $button-cta-active-background-color;
 			color: $button-cta-active-background-color;
 		}
 
 		&:disabled {
-			box-shadow: inset 0 0 0 2px $button-cta-disabled-background-color;
+			box-shadow: inset 0 0 0 $button-outline-border-width $button-cta-disabled-background-color;
 			color: $button-cta-disabled-background-color;
 		}
 	}

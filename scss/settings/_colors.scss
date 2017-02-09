@@ -60,10 +60,12 @@ $color-ui-500: shade($color-ui-100, 40%) !default;
 $color-cta-20: tint($color-cta-100, 80%) !default;
 $color-cta-200: shade($color-cta-100, 10%) !default;
 $color-cta-300: shade($color-cta-100, 20%) !default;
+$color-cta-400: shade($color-cta-100, 30%) !default;
 $color-primary-20: tint($color-primary-100, 80%) !default;
 $color-primary-60: tint($color-primary-100, 40%) !default;
 $color-primary-300: shade($color-primary-100, 20%) !default;
 $color-primary-400: shade($color-primary-100, 30%) !default;
+$color-primary-500: shade($color-primary-100, 40%) !default;
 
 // # Social media colors
 $color-facebook: #3b5998;
