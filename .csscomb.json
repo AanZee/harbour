@@ -7,7 +7,7 @@
 		"scss/fonts",
 		"scss/vendor-overrides/_vendor-overrides.scss",
 		"scss/reset/_reset.scss",
-		"scss/layout/_layout.scss",
+		"scss/layouts/_layouts.scss",
 		"scss/typography/_typography.scss",
 		"scss/controls/_controls.scss",
 		"scss/components/_components.scss",
