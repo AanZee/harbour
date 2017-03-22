@@ -15,6 +15,7 @@ select {
 	color: $color-text;
 	font-family: $font-family-sans-serif;
 	font-size: 16px; // NOTE: Font size of 16px or heigher disables zooming on form fields with iOS.
+	border-radius: 0; // NOTE: Reset border radius (iOS) Safari
 }
 
 ::-ms-clear {
