@@ -6,6 +6,10 @@ var Comb = require('csscomb');
 var combConfig = require('./.csscomb.json');
 var comb = new Comb(combConfig);
 var cleanCSS = require('gulp-clean-css');
+var postcss      = require('gulp-postcss');
+var sourcemaps   = require('gulp-sourcemaps');
+var autoprefixer = require('autoprefixer');
+
 
 var settings = {
 	src: {
@@ -50,6 +54,9 @@ function compileScss(shouldMinify) {
 			hasCompileError = true;
 			sass.logError.bind(this)(error);
 		}))
+		.pipe(sourcemaps.init())
+        .pipe(postcss([ autoprefixer() ]))
+        .pipe(sourcemaps.write('.'))
 	    .pipe(gulp.dest(settings.dist.css));
 
 	stream.on('end', function() {

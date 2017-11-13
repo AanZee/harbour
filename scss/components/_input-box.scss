@@ -14,7 +14,6 @@ $input-box-indicator-icon-valid-background-color: $color-success !default;
 }
 
 .input-box__state-indicator {
-	@include user-select(none);
 	position: absolute;
 	top: 8px;
 	left: -7px;
@@ -29,6 +28,7 @@ $input-box-indicator-icon-valid-background-color: $color-success !default;
 	font-size: $icon-size-80;
 	line-height: 14px;
 	pointer-events: none;
+	user-select: none;
 
 	.input-box__input.is-valid ~ & {
 		display: block;

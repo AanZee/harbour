@@ -45,7 +45,6 @@ $button-transparent-disabled-color: $color-primary-40 !default;
 $button-outline-border-width: 2px !default;
 
 .button {
-	@include user-select(none);
 	display: inline-block;
 	border-radius: $border-radius-100;
 	background-color: $button-background-color;
@@ -54,6 +53,7 @@ $button-outline-border-width: 2px !default;
 	font-weight: normal;
 	line-height: 16px;
 	cursor: pointer;
+	user-select: none;
 
 	@include media(0, $range-palm) {
 		padding: 8px 28px;
