@@ -7,3 +7,6 @@
 
 # Controls
 - [Button](controls/button.md)
+
+# Layouts
+- [Full view](layouts/full-view.md)

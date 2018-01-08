@@ -5,12 +5,8 @@
 }
 
 .full-view__header {
-	flex-shrink: 0; // HACK: min-height on flex is not supported by IE 11. Height larger than 100vh is forced by setting flex shrink 0 on all children.
-}
-
-.full-view__header--sticky {
-	@include position-sticky;
-	top: 0;
+	// HACK: min-height on flex is not supported by IE 11. Height larger than 100vh is forced by setting flex shrink 0 on all children.
+	flex-shrink: 0;
 }
 
 .full-view__main {
@@ -24,5 +20,6 @@
 }
 
 .full-view__footer {
-	flex-shrink: 0; // HACK: min-height on flex is not supported by IE 11. Height larger than 100vh is forced by setting flex shrink 0 on all children.
+	// HACK: min-height on flex is not supported by IE 11. Height larger than 100vh is forced by setting flex shrink 0 on all children.
+	flex-shrink: 0;
 }
