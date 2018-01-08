@@ -1,34 +1,33 @@
 {
   "name": "Harbour",
-  "description": "Front-end framework",
-  "version": "0.2.5",
+  "description": "Professional SCSS project boilerplate without the bloat.",
+  "version": "1.0.0",
   "author": "Aan Zee",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/AanZee/harbour.git"
   },
-  "devDependencies": {
-    "gulp": "~3.8.11",
-    "gulp-add-src": "~0.2.0",
-    "gulp-bless": "~3.0.1",
-    "gulp-concat": "~2.5.2",
-    "gulp-csscomb": "git+https://github.com/AanZee/gulp-csscomb.git",
-    "gulp-csslint": "~0.1.5",
-    "gulp-if": "~1.2.5",
-    "gulp-jshint": "~1.9.4",
-    "gulp-livereload": "~3.8.0",
-    "gulp-plumber": "~1.0.0",
-    "gulp-rename": "~1.2.2",
-    "gulp-ruby-sass": "~1.0.1",
-    "gulp-sourcemaps": "~1.5.1",
-    "gulp-uglify": "~1.2.0",
-    "jshint-stylish": "~1.0.1",
-    "merge-stream": "~0.1.7",
-    "minimatch": "~2.0.4"
+  "scripts": {
+    "watch": "gulp watch",
+    "build": "gulp build"
   },
   "dependencies": {
-    "express": "^4.12.3",
-    "gulp-nodemon": "^2.0.2",
-    "mustache-express": "^1.2.1"
-  }
+    "autoprefixer": "^7.0.1",
+    "bourbon": "^4.3.0",
+    "csscomb": "^4.0.0-alpha",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "normalize.css": "^5.0.0",
+    "reset-css": "^2.2.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }

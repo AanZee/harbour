@@ -1,0 +1,6 @@
+a,
+button,
+input,
+textarea {
+	touch-action: manipulation; // NOTE: Allows you to remove the delay on specific elements or the whole document without disabling pinch-zooming
+}

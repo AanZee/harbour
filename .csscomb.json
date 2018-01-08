@@ -1,27 +1,44 @@
 {
+	"exclude": [
+		"scss/main.scss",
+		"scss/vendors",
+		"scss/settings",
+		"scss/utilities",
+		"scss/fonts",
+		"scss/vendor-overrides/_vendor-overrides.scss",
+		"scss/reset/_reset.scss",
+		"scss/layouts/_layouts.scss",
+		"scss/typography/_typography.scss",
+		"scss/controls/_controls.scss",
+		"scss/components/_components.scss",
+		"scss/pages/_pages.scss",
+		"scss/themes/_themes.scss",
+		"scss/overrides/_overrides.scss"
+	],
 	"always-semicolon": true,
 	"block-indent": "\t",
 	"color-case": "lower",
-	"color-shorthand": true,
+	"color-shorthand": false,
 	"element-case": "lower",
 	"eof-newline": true,
 	"leading-zero": true,
 	"quotes": "single",
 	"remove-empty-rulesets": false,
-	"space-before-colon": "",
-	"space-after-colon": " ",
-	"space-before-combinator": " ",
-	"space-after-combinator": " ",
+	"space-before-colon": 0,
+	"space-after-colon": 1,
+	"space-before-combinator": 1,
+	"space-after-combinator": 1,
 	"space-between-declarations": "\n",
-	"space-before-opening-brace": " ",
+	"space-before-opening-brace": 1,
 	"space-after-opening-brace": "\n",
 	"space-after-selector-delimiter": "\n",
-	"space-before-selector-delimiter": "",
+	"space-before-selector-delimiter": 0,
 	"space-before-closing-brace": "\n",
 	"rules-delimiter": 1,
 	"strip-spaces": true,
 	"unitless-zero": true,
 	"vendor-prefix-align": true,
+	"lines-between-rulesets": 1,
 	"sort-order": [
 		[
 			"$include",
@@ -401,8 +418,10 @@
 			"min-zoom",
 			"user-zoom",
 			"orientation",
-			"...",
-			"$include media"
-		]
+			"..."
+		],
+		["$include media"],
+		["$include media-ie-10-11"],
+		["$include placeholder"]
 	]
 }

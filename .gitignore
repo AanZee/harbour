@@ -45,17 +45,16 @@ Thumbs.db
 ###########################
 sftp-config.json
 
-# Sass #
+# Styling #
 ########
 .sass-cache/
 *.css.map
+*.css
 
 # NPM #
 #######
 npm-debug.log
 node_modules/
 
-# JS libraries #
-################
-# Contents are installed with bower
-src/lib/
+# Test HTML #
+html/
