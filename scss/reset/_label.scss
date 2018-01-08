@@ -1,5 +1,5 @@
 label[for] {
-	@include user-select(none);
+	user-select: none;
 	cursor: pointer;
 }
 

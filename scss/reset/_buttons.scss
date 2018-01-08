@@ -5,8 +5,9 @@ button:not([disabled]) {
 [type='submit'],
 [type='button'],
 button {
-	@include appearance(none);
+	font-family: $font-family-sans-serif;
 	padding: 0;
 	border: none;
 	background-color: transparent;
+	appearance: none;
 }

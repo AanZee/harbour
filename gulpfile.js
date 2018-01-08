@@ -6,6 +6,10 @@ var Comb = require('csscomb');
 var combConfig = require('./.csscomb.json');
 var comb = new Comb(combConfig);
 var cleanCSS = require('gulp-clean-css');
+var postcss      = require('gulp-postcss');
+var sourcemaps   = require('gulp-sourcemaps');
+var autoprefixer = require('autoprefixer');
+
 
 var settings = {
 	src: {
@@ -15,7 +19,8 @@ var settings = {
 		css: 'css/'
 	},
 	combExcludedGlobs: combConfig.exclude,
-	keepSpecialComments: 0 // NOTE: Use 0 to strip all special comments (comments starting with /*!), 1 to keep the first special comment in the document and '*' for all special comments.
+	keepSpecialComments: 0, // NOTE: Use 0 to strip all special comments (comments starting with /*!), 1 to keep the first special comment in the document and '*' for all special comments.
+	compileSCSSOnWatch: true
 };
 
 /**
@@ -37,10 +42,10 @@ function minifyCss() {
 
 /**
  * Compile SCSS to css
- * @param {Boolean} isProduction - Is the function called in production mode
+ * @param {Boolean} shouldMinify - Should the css be minified
  * @return {void}
  */
-function compileScss(isProduction) {
+function compileScss(shouldMinify) {
 	var hasCompileError = false;
 	var stream = {};
 
@@ -49,13 +54,16 @@ function compileScss(isProduction) {
 			hasCompileError = true;
 			sass.logError.bind(this)(error);
 		}))
+		.pipe(sourcemaps.init())
+        .pipe(postcss([ autoprefixer() ]))
+        .pipe(sourcemaps.write('.'))
 	    .pipe(gulp.dest(settings.dist.css));
 
 	stream.on('end', function() {
 		if (!hasCompileError) {
 			gutil.log('Compiled SCSS to CSS');
 
-			if (isProduction) {
+			if (shouldMinify) {
 				minifyCss();
 			}
 		}
@@ -64,13 +72,15 @@ function compileScss(isProduction) {
 
 gulp.task('watchScss', function() {
 	var scssWatcher = gulp.watch(settings.src.scss, function() {
-		compileScss(false);
+		if (settings.compileSCSSOnWatch) {
+			compileScss(false);
+		}
 	});
 
 	/**
 	 * Checks if the inserted path occurs in the exclude array inside the csscomb.json file
 	 * @param {string} path - A file or folder path
-	 * @return {Boolean} - Is the checked file exluded
+	 * @return {Boolean} - Is the checked file excluded
 	 */
 	function isExcludedPath(path) {
 		var excludedPaths = settings.combExcludedGlobs;
