@@ -1,6 +1,6 @@
 {
   "name": "Harbour",
-  "description": "Professional SCSS project boilerplate without the bloat.",
+  "description": "Aan Zee's framework",
   "version": "1.0.0",
   "author": "Aan Zee",
   "license": "MIT",
@@ -8,26 +8,9 @@
     "type": "git",
     "url": "https://github.com/AanZee/harbour.git"
   },
-  "scripts": {
-    "watch": "gulp watch",
-    "build": "gulp build"
-  },
   "dependencies": {
-    "autoprefixer": "^7.0.1",
     "bourbon": "^4.3.0",
-    "csscomb": "^4.0.0-alpha",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.4.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-util": "^3.0.8",
-    "gulp-postcss": "^7.0.0",
-    "gulp-sourcemaps": "^1.5.2",
     "normalize.css": "^5.0.0",
     "reset-css": "^2.2.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+  }
 }

@@ -1,7 +1,9 @@
 # Harbour ⚓
+Aan Zee's framework.
 
 ## Docs
-[See documentation](docs/README.md)
+- [Controls](controls/controls.md)
 
 ## License
 [MIT](LICENSE.md)
+x
