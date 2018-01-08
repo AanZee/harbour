@@ -1,4 +1,4 @@
-// IDEA: Add has-helper-button modifier?
+ // IDEA: Add has-helper-button modifier?
 $input-box-indicator-icon-color: $color-icon !default;
 $input-box-indicator-icon-color-diap: $color-icon-diap !default;
 $input-box-indicator-icon-border: $border-input-100 !default;
@@ -10,7 +10,15 @@ $input-box-indicator-icon-valid-background-color: $color-success !default;
 	position: relative;
 }
 
-.input-box__input {
+.input-box__input {}
+
+@keyframes(inputBoxStateIndicatorIsLoadingBeforeSpin) {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 .input-box__state-indicator {
@@ -28,36 +36,35 @@ $input-box-indicator-icon-valid-background-color: $color-success !default;
 	font-size: $icon-size-80;
 	line-height: 14px;
 	pointer-events: none;
+<<<<<<< HEAD
 	user-select: none;
 
 	.input-box__input.is-valid ~ & {
+=======
+	.input-box__input.is-valid~& {
+>>>>>>> Remove animation folder
 		display: block;
 		background-color: $input-box-indicator-icon-valid-background-color;
 		color: $input-box-indicator-icon-color-diap;
-
 		&::before {
 			content: '\221A'; // TODO: Add valid icon
 		}
 	}
-
-	.input-box__input.is-invalid ~ & {
+	.input-box__input.is-invalid~& {
 		display: block;
 		background-color: $input-box-indicator-icon-invalid-background-color;
 		color: $input-box-indicator-icon-color-diap;
-
 		&::before {
 			content: '\00d7'; // TODO: Add invalid icon
 		}
 	}
-
-	.input-box__input.is-loading ~ & {
+	.input-box__input.is-loading~& {
 		display: block;
 		cursor: progress;
-
 		&::before {
 			display: block;
 			content: '\221E'; // TODO: Add loading icon
-			animation: spin 1.5s infinite linear;
+			animation: inputBoxStateIndicatorIsLoadingBeforeSpin 1.5s infinite linear;
 		}
 	}
 }
