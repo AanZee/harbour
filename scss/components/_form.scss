@@ -1,0 +1,222 @@
+$form-section-border: $border-ui-90 !default;
+$form-label-color: inherit !default;
+$form-label-helper-text-color: inherit !default;
+$form-helper-text-color: inherit !default;
+$form-feedback-text-color: inherit !default;
+$form-feedback-text-icon-border: $border-input-100 !default;
+
+.form {
+}
+
+.form--labels-top {
+}
+
+.form--full {
+}
+
+.form__section {
+
+	@include media(0, $range-hand) {
+		@include padding(16px null);
+	}
+	@include media($range-lap, false) {
+		@include padding(24px null);
+	}
+
+	&:first-child {
+		padding-top: 0;
+	}
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+
+	+ .form__section {
+		border-top: $form-section-border;
+	}
+}
+
+.form__fieldset {
+	@include media(0, $range-hand) {
+		@include margin(4px null);
+	}
+	@include media($range-lap, false) {
+		@include margin(8px null);
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.form__field {
+	@include media(0, $range-hand) {
+		@include padding(null 16px);
+		@include margin(4px null);
+		display: block;
+	}
+	@include media($range-lap, false) {
+		@include padding(null 40px);
+		@include margin(8px null);
+		display: table;
+		width: 100%;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.form--full & {
+		@include padding(null 0px);
+	}
+}
+
+.form__label-box {
+	.form:not(.form--labels-top) & {
+		@include media($range-lap, false) {
+			display: table-cell;
+			padding-right: 16px;
+			min-width: 220px;
+			width: 36%;
+			vertical-align: top;
+			text-align: right;
+		}
+	}
+}
+
+.form__label {
+	width: 100%;
+	color: $form-label-color;
+	line-height: $line-height-70;
+
+	@include media(0, $range-hand) {
+		display: block;
+		margin-bottom: 2px;
+		font-size: $font-size-90;
+	}
+	@include media($range-lap, false) {
+		font-size: $font-size-100;
+	}
+
+	.form:not(.form--labels-top) & {
+		@include media($range-lap, false) {
+			display: flex; // NOTE: To be able to align content.
+			justify-content: center; // NOTE: Align vertical.
+			align-items: flex-end; // NOTE: To place contents to the right.
+			flex-direction: column;
+			min-height: 32px;
+		}
+
+		@include media-ie-10-11 {
+			padding-top: 8px; // FIX: IE 10 and 11 don't support flexbox with min-height. This fixes the layout.
+		}
+	}
+
+	.form--labels-top & {
+		@include media($range-lap, false) {
+			display: block;
+		}
+	}
+}
+
+.form__label-helper-text {
+	color: $form-label-helper-text-color;
+	font-size: $font-size-80;
+	line-height: $line-height-60;
+
+	&::before {
+		@include media(0, $range-hand) {
+			content: ' (';
+		}
+
+		.form:not(.form--labels-top) & {
+			@include media($range-lap, false) {
+				content: '\A'; // NOTE: Line break
+			}
+		}
+	}
+
+	&::after {
+		@include media(0, $range-hand) {
+			content: ')';
+		}
+	}
+}
+
+.form__inputs-box {
+	.form:not(.form--labels-top) & {
+		@include media($range-lap, false) {
+			display: table-cell;
+			vertical-align: top;
+		}
+	}
+}
+
+.form__input-box {
+}
+
+.form__helper-text {
+	display: block;
+	margin-top: 4px;
+	max-width: 35em;
+	color: $form-helper-text-color;
+	font-size: $font-size-90;
+	line-height: $line-height-90;
+}
+
+.form__feedback-text {
+	position: relative;
+	display: block;
+	padding-top: 8px;
+	padding-left: 20px;
+	max-width: 35em;
+	color: $form-feedback-text-color;
+	font-size: $font-size-90;
+	line-height: $line-height-80;
+
+	&::before {
+		position: absolute;
+		top: 4px;
+		left: 0;
+		width: 16px;
+		height: 16px;
+		border-bottom: $form-feedback-text-icon-border;
+		border-left: $form-feedback-text-icon-border;
+		border-bottom-left-radius: $border-radius-100;
+		content: '';
+	}
+}
+
+.form__actions {
+	@include media(0, $range-hand) {
+		margin-top: 4px;
+	}
+	@include media($range-lap, false) {
+		margin-top: 8px;
+	}
+
+	.form:not(.form--full) & {
+		@include media(0, $range-hand) {
+			@include padding(null 16px);
+		}
+		@include media($range-lap, false) {
+			@include padding(null 40px);
+		}
+	}
+}
+
+.form__action:first-child {
+	.form:not(.form--labels-top) & {
+		@include media($range-lap, false) {
+			margin-left: 36%;
+		}
+	}
+}

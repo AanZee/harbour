@@ -1,0 +1,13 @@
+button:not([disabled]) {
+	cursor: pointer;
+}
+
+[type='submit'],
+[type='button'],
+button {
+	font-family: $font-family-sans-serif;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	appearance: none;
+}
