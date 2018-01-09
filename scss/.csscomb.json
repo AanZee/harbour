@@ -418,7 +418,7 @@
 			"..."
 		],
 		["$include media"],
-		["$include media-ie-10-11"],
+		["$include is-ie-10-or-11"],
 		["$include placeholder"]
 	]
 }
