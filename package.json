@@ -1,7 +1,7 @@
 {
   "name": "Harbour",
   "description": "Aan Zee's framework",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Aan Zee",
   "license": "MIT",
   "repository": {
@@ -9,8 +9,8 @@
     "url": "https://github.com/AanZee/harbour.git"
   },
   "dependencies": {
-    "bourbon": "^4.3.0",
-    "normalize.css": "^5.0.0",
-    "reset-css": "^2.2.0"
+    "bourbon": "5.0.0",
+    "normalize.css": "7.0.0",
+    "reset-css": "2.2.1"
   }
 }
