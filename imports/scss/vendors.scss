@@ -1,0 +1,4 @@
+$output-bourbon-deprecation-warnings: false; // NOTE: Temporary fix to hide deprecation warnings, see: https://github.com/thoughtbot/bourbon/issues/997
+@import '../../node_modules/bourbon/core/bourbon';
+@import '../../node_modules/normalize.css/normalize';
+@import '../../node_modules/reset-css/reset'; // NOTE: Needs to be after normalize to overrule some properties. Underscore needed for SCSS to recognize the difference between the SCSS and CSS file.
