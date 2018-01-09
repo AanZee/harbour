@@ -2,45 +2,42 @@
 - [See SCSS component](../../scss/controls/button.scss)
 
 ## Available states
+
+### Hover, focus and active
 Changes the (background) color
 ```
 button:hover
 button:focus
 button:active
 ```
+### Disabled
 Changes the (background) color and add not-allowed cursor
 ```
 button:disabled
 ```
 
 ## Available modifiers
-Colors
+### Colors
 ```
-button--cta
+button--call-to-action
+button--primary
 button--secondary
-button--ui
 button--transparent
 ```
-Outline version (Not available with the button--transparent modifier)
+### Outline version (Available in all colors)
 ```
 button--outline
 ```
-Sizes
+### Sizes
 ```
 button--80
 button--90
 button--200
 button--full
 ```
-Add ons
-```
-button--arrow-up
-button--arrow-right
-button--arrow-bottom
-button--arrow-left
-```
 
 ## Available local variables
+### Default button (ui colors)
 ```scss
 $button-color
 $button-background-color
@@ -51,17 +48,33 @@ $button-active-color
 $button-active-background-color
 $button-disabled-color
 $button-disabled-background-color
-
-$button-cta-color
-$button-cta-background-color
-$button-cta-hover-color
-$button-cta-hover-background-color
-$button-cta-focus-box-shadow
-$button-cta-active-color
-$button-cta-active-background-color
-$button-cta-disabled-color
-$button-cta-disabled-background-color
-
+```
+### Call to action
+```scss
+$button-call-to-action-color
+$button-call-to-action-background-color
+$button-call-to-action-hover-color
+$button-call-to-action-hover-background-color
+$button-call-to-action-focus-box-shadow
+$button-call-to-action-active-color
+$button-call-to-action-active-background-color
+$button-call-to-action-disabled-color
+$button-call-to-action-disabled-background-color
+```
+### Primary
+```scss
+$button-primary-color
+$button-primary-background-color
+$button-primary-hover-color
+$button-primary-hover-background-color
+$button-primary-focus-box-shadow
+$button-primary-active-color
+$button-primary-active-background-color
+$button-primary-disabled-color
+$button-primary-disabled-background-color
+```
+### Secondary
+```scss
 $button-secondary-color
 $button-secondary-background-color
 $button-secondary-hover-color
@@ -71,31 +84,13 @@ $button-secondary-active-color
 $button-secondary-active-background-color
 $button-secondary-disabled-color
 $button-secondary-disabled-background-color
-
-$button-ui-color
-$button-ui-background-color
-$button-ui-hover-color
-$button-ui-hover-background-color
-$button-ui-focus-box-shadow
-$button-ui-active-color
-$button-ui-active-background-color
-$button-ui-disabled-color
-$button-ui-disabled-background-color
-
-$button-transparent-color
-$button-transparent-hover-background-color
-$button-transparent-hover-color
-$button-transparent-focus-box-shadow
-$button-transparent-active-background-color
-$button-transparent-active-color
-$button-transparent-disabled-background-color
-$button-transparent-disabled-color
-
+### Outline version
+```scss
 $button-outline-border-width
 ```
 
 ## Example HTML
 ```html
 <button class="button" type="button">Action</button>
-<a class="button button--ui button--outline" href="/">Link</a>
+<a class="button button--primary button--outline" href="/">Link</a>
 ```

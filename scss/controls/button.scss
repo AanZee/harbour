@@ -1,48 +1,12 @@
 $button-color: $color-text-diap !default;
-$button-background-color: $color-primary-100 !default;
+$button-background-color: $color-ui-90 !default;
 $button-hover-color: $color-text-diap !default;
-$button-hover-background-color: $color-primary-300 !default;
-$button-focus-box-shadow: inset 0 0 0 2px $color-primary-500 !default;
+$button-hover-background-color: $color-ui-200 !default;
+$button-focus-box-shadow: inset 0 0 0 2px $color-primary-400 !default;
 $button-active-color: $color-text-diap !default;
-$button-active-background-color: $color-primary-400 !default;
+$button-active-background-color: $color-ui-400 !default;
 $button-disabled-color: $color-text-diap !default;
-$button-disabled-background-color: $color-primary-40 !default;
-$button-cta-color: $color-text-diap !default;
-$button-cta-background-color: $color-cta-100 !default;
-$button-cta-hover-color: $color-text-diap !default;
-$button-cta-hover-background-color: $color-cta-200 !default;
-$button-cta-focus-box-shadow: inset 0 0 0 2px $color-cta-400 !default;
-$button-cta-active-color: $color-text-diap !default;
-$button-cta-active-background-color: $color-cta-300 !default;
-$button-cta-disabled-color: $color-text-diap !default;
-$button-cta-disabled-background-color: $color-cta-40 !default;
-$button-secondary-color: $color-text-diap !default;
-$button-secondary-background-color: $color-secondary-100 !default;
-$button-secondary-hover-color: $color-text-diap !default;
-$button-secondary-hover-background-color: $color-secondary-200 !default;
-$button-secondary-focus-box-shadow: inset 0 0 0 2px $color-secondary-400 !default;
-$button-secondary-active-color: $color-text-diap !default;
-$button-secondary-active-background-color: $color-secondary-300 !default;
-$button-secondary-disabled-color: $color-text-diap !default;
-$button-secondary-disabled-background-color: $color-secondary-40 !default;
-$button-ui-color: $color-text-diap !default;
-$button-ui-background-color: $color-ui-90 !default;
-$button-ui-hover-color: $color-text-diap !default;
-$button-ui-hover-background-color: $color-ui-200 !default;
-$button-ui-focus-box-shadow: inset 0 0 0 2px $color-primary-400 !default;
-$button-ui-active-color: $color-text-diap !default;
-$button-ui-active-background-color: $color-ui-400 !default;
-$button-ui-disabled-color: $color-text-diap !default;
-$button-ui-disabled-background-color: $color-ui-40 !default;
-$button-transparent-color: $color-primary-100 !default;
-$button-transparent-hover-background-color: transparent !default;
-$button-transparent-hover-color: $color-primary-300 !default;
-$button-transparent-focus-box-shadow: inset 0 0 0 2px $color-primary-100 !default;
-$button-transparent-active-background-color: transparent !default;
-$button-transparent-active-color: $color-primary-400 !default;
-$button-transparent-disabled-background-color: transparent !default;
-$button-transparent-disabled-color: $color-primary-40 !default;
-$button-outline-border-width: 2px !default;
+$button-disabled-background-color: $color-ui-40 !default;
 
 .button {
 	display: inline-block;
@@ -56,7 +20,7 @@ $button-outline-border-width: 2px !default;
 	user-select: none;
 
 	@include media(0, $range-palm) {
-		padding: 8px 28px;
+		padding: 8px 24px;
 		font-size: $font-size-100;
 	}
 	@include media($range-hand, false) {
@@ -86,29 +50,83 @@ $button-outline-border-width: 2px !default;
 }
 
 // Color varations
-.button--cta {
-	background-color: $button-cta-background-color;
-	color: $button-cta-color;
+$button-call-to-action-color: $color-text-diap !default;
+$button-call-to-action-background-color: $color-call-to-action-100 !default;
+$button-call-to-action-hover-color: $color-text-diap !default;
+$button-call-to-action-hover-background-color: $color-call-to-action-200 !default;
+$button-call-to-action-focus-box-shadow: inset 0 0 0 2px $color-call-to-action-400 !default;
+$button-call-to-action-active-color: $color-text-diap !default;
+$button-call-to-action-active-background-color: $color-call-to-action-300 !default;
+$button-call-to-action-disabled-color: $color-text-diap !default;
+$button-call-to-action-disabled-background-color: $color-call-to-action-40 !default;
+
+.button--call-to-action {
+	background-color: $button-call-to-action-background-color;
+	color: $button-call-to-action-color;
 
 	&:hover {
-		background-color: $button-cta-hover-background-color;
-		color: $button-cta-hover-color;
+		background-color: $button-call-to-action-hover-background-color;
+		color: $button-call-to-action-hover-color;
 	}
 
 	&:focus {
-		box-shadow: $button-cta-focus-box-shadow;
+		box-shadow: $button-call-to-action-focus-box-shadow;
 	}
 
 	&:active {
-		background-color: $button-cta-active-background-color;
-		color: $button-cta-active-color;
+		background-color: $button-call-to-action-active-background-color;
+		color: $button-call-to-action-active-color;
 	}
 
 	&:disabled {
-		background-color: $button-cta-disabled-background-color;
-		color: $button-cta-disabled-color;
+		background-color: $button-call-to-action-disabled-background-color;
+		color: $button-call-to-action-disabled-color;
 	}
 }
+
+$button-primary-color: $color-text-diap !default;
+$button-primary-background-color: $color-primary-100 !default;
+$button-primary-hover-color: $color-text-diap !default;
+$button-primary-hover-background-color: $color-primary-300 !default;
+$button-primary-focus-box-shadow: inset 0 0 0 2px $color-primary-500 !default;
+$button-primary-active-color: $color-text-diap !default;
+$button-primary-active-background-color: $color-primary-400 !default;
+$button-primary-disabled-color: $color-text-diap !default;
+$button-primary-disabled-background-color: $color-primary-40 !default;
+
+.button--primary {
+	background-color: $button-primary-background-color;
+	color: $button-primary-color;
+
+	&:hover {
+		background-color: $button-primary-hover-background-color;
+		color: $button-primary-hover-color;
+	}
+
+	&:focus {
+		box-shadow: $button-primary-focus-box-shadow;
+	}
+
+	&:active {
+		background-color: $button-primary-active-background-color;
+		color: $button-primary-active-color;
+	}
+
+	&:disabled {
+		background-color: $button-primary-disabled-background-color;
+		color: $button-primary-disabled-color;
+	}
+}
+
+$button-secondary-color: $color-text-diap !default;
+$button-secondary-background-color: $color-secondary-100 !default;
+$button-secondary-hover-color: $color-text-diap !default;
+$button-secondary-hover-background-color: $color-secondary-200 !default;
+$button-secondary-focus-box-shadow: inset 0 0 0 2px $color-secondary-400 !default;
+$button-secondary-active-color: $color-text-diap !default;
+$button-secondary-active-background-color: $color-secondary-300 !default;
+$button-secondary-disabled-color: $color-text-diap !default;
+$button-secondary-disabled-background-color: $color-secondary-40 !default;
 
 .button--secondary {
 	background-color: $button-secondary-background-color;
@@ -134,55 +152,9 @@ $button-outline-border-width: 2px !default;
 	}
 }
 
-.button--ui {
-	background-color: $button-ui-background-color;
-	color: $button-ui-color;
+// Outline versions
+$button-outline-border-width: 2px !default;
 
-	&:hover {
-		background-color: $button-ui-hover-background-color;
-		color: $button-ui-hover-color;
-	}
-
-	&:focus {
-		box-shadow: $button-ui-focus-box-shadow;
-	}
-
-	&:active {
-		background-color: $button-ui-active-background-color;
-		color: $button-ui-active-color;
-	}
-
-	&:disabled {
-		background-color: $button-ui-disabled-background-color;
-		color: $button-ui-disabled-color;
-	}
-}
-
-.button--transparent {
-	background-color: transparent;
-	color: $button-transparent-color;
-
-	&:hover {
-		background-color: $button-transparent-hover-background-color;
-		color: $button-transparent-hover-color;
-	}
-
-	&:focus {
-		box-shadow: $button-transparent-focus-box-shadow;
-	}
-
-	&:active {
-		background-color: $button-transparent-active-background-color;
-		color: $button-transparent-active-color;
-	}
-
-	&:disabled {
-		background-color: $button-transparent-disabled-background-color;
-		color: $button-transparent-disabled-color;
-	}
-}
-
-// Shape and size variations
 .button--outline {
 	background-color: transparent;
 	background-image: none;
@@ -214,27 +186,51 @@ $button-outline-border-width: 2px !default;
 		color: $button-disabled-background-color;
 	}
 
-	&.button--cta {
-		box-shadow: inset 0 0 0 $button-outline-border-width $button-cta-background-color;
-		color: $button-cta-background-color;
+	&.button--call-to-action {
+		box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-background-color;
+		color: $button-call-to-action-background-color;
 
 		&:hover {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-cta-hover-background-color;
-			color: $button-cta-hover-background-color;
+			box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-hover-background-color;
+			color: $button-call-to-action-hover-background-color;
 		}
 
 		&:focus {
-			box-shadow: $button-cta-focus-box-shadow, inset 0 0 0 $button-outline-border-width $button-cta-background-color;
+			box-shadow: $button-call-to-action-focus-box-shadow, inset 0 0 0 $button-outline-border-width $button-call-to-action-background-color;
 		}
 
 		&:active {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-cta-active-background-color;
-			color: $button-cta-active-background-color;
+			box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-active-background-color;
+			color: $button-call-to-action-active-background-color;
 		}
 
 		&:disabled {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-cta-disabled-background-color;
-			color: $button-cta-disabled-background-color;
+			box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-disabled-background-color;
+			color: $button-call-to-action-disabled-background-color;
+		}
+	}
+
+	&.button--primary {
+		box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-background-color;
+		color: $button-primary-background-color;
+
+		&:hover {
+			box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-hover-background-color;
+			color: $button-primary-hover-background-color;
+		}
+
+		&:focus {
+			box-shadow: $button-primary-focus-box-shadow, inset 0 0 0 $button-outline-border-width $button-primary-background-color;
+		}
+
+		&:active {
+			box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-active-background-color;
+			color: $button-primary-active-background-color;
+		}
+
+		&:disabled {
+			box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-disabled-background-color;
+			color: $button-primary-disabled-background-color;
 		}
 	}
 
@@ -261,32 +257,9 @@ $button-outline-border-width: 2px !default;
 			color: $button-secondary-disabled-background-color;
 		}
 	}
-
-	&.button--ui {
-		box-shadow: inset 0 0 0 $button-outline-border-width $button-ui-background-color;
-		color: $button-ui-background-color;
-
-		&:hover {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-ui-hover-background-color;
-			color: $button-ui-hover-background-color;
-		}
-
-		&:focus {
-			box-shadow: $button-ui-focus-box-shadow, inset 0 0 0 $button-outline-border-width $button-ui-background-color;
-		}
-
-		&:active {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-ui-active-background-color;
-			color: $button-ui-active-background-color;
-		}
-
-		&:disabled {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-ui-disabled-background-color;
-			color: $button-ui-disabled-background-color;
-		}
-	}
 }
 
+// Sizes
 .button--80 {
 	padding: 4px 16px;
 	font-size: $font-size-90;
@@ -305,7 +278,7 @@ $button-outline-border-width: 2px !default;
 
 .button--200 {
 	@include media(0, $range-palm) {
-		padding: 12px 30px;
+		padding: 12px 32px;
 		font-size: $font-size-200;
 	}
 	@include media($range-hand, false) {
@@ -318,30 +291,4 @@ $button-outline-border-width: 2px !default;
 	display: block;
 	max-width: 100%;
 	width: 100%;
-}
-
-// Add-on variations
-// TODO: Fix icon aligment
-.button--arrow-up::after {
-	position: relative;
-	top: -1px;
-	margin-left: 8px;
-	content: '\2191'; // TODO: Add arrow up icon
-}
-
-.button--arrow-right::after {
-	margin-left: 12px;
-	content: '\2192'; // TODO: Add arrow right icon
-}
-
-.button--arrow-down::after {
-	position: relative;
-	top: -1px;
-	margin-left: 8px;
-	content: '\2193'; // TODO: Add arrow down icon
-}
-
-.button--arrow-left::before {
-	margin-right: 12px;
-	content: '\2190'; // TODO: Add arrow left icon
 }
