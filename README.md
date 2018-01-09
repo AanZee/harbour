@@ -1,5 +1,5 @@
 # Harbour ⚓
-Aan Zee's framework.
+Our development library.
 
 ## Docs
 - [Controls](controls/controls.md)
