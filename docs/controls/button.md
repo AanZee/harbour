@@ -24,7 +24,7 @@ button--primary
 button--secondary
 button--transparent
 ```
-### Outline version (Available in all colors)
+### Outline version (available in all colors)
 ```
 button--outline
 ```
@@ -84,6 +84,7 @@ $button-secondary-active-color
 $button-secondary-active-background-color
 $button-secondary-disabled-color
 $button-secondary-disabled-background-color
+```
 ### Outline version
 ```scss
 $button-outline-border-width
