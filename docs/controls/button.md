@@ -22,7 +22,6 @@ button:disabled
 button--call-to-action
 button--primary
 button--secondary
-button--transparent
 ```
 ### Outline version (available in all colors)
 ```
