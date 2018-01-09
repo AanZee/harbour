@@ -1,4 +1,4 @@
-@mixin media-ie-10-11 {
+@mixin is-ie-10-or-11 {
 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 		@content;
 	}
