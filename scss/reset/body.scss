@@ -7,7 +7,7 @@ body {
 	font-size: $font-size-100;
 	line-height: $line-height-100;
 
-	@include media-ie-10-11 {
+	@include is-ie-10-or-11 {
 		overflow-x: hidden; // NOTE: Make sure there is no horizontal scroll bar in IE 11.
 	}
 }

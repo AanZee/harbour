@@ -1,19 +1,16 @@
 {
 	"exclude": [
-		"scss/main.scss",
-		"scss/vendors",
-		"scss/settings",
-		"scss/utilities",
-		"scss/fonts",
-		"scss/vendor-overrides/_vendor-overrides.scss",
-		"scss/reset/_reset.scss",
-		"scss/layouts/_layouts.scss",
-		"scss/typography/_typography.scss",
-		"scss/controls/_controls.scss",
-		"scss/components/_components.scss",
-		"scss/pages/_pages.scss",
-		"scss/themes/_themes.scss",
-		"scss/overrides/_overrides.scss"
+		"harbour.scss",
+		"vendors",
+		"settings",
+		"utilities",
+		"fonts",
+		"vendor-overrides/index.scss",
+		"reset/index.scss",
+		"layouts/index.scss",
+		"controls/index.scss",
+		"components/index.scss",
+		"themes/index.scss"
 	],
 	"always-semicolon": true,
 	"block-indent": "\t",
@@ -421,7 +418,7 @@
 			"..."
 		],
 		["$include media"],
-		["$include media-ie-10-11"],
+		["$include is-ie-10-or-11"],
 		["$include placeholder"]
 	]
 }
