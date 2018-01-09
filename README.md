@@ -2,7 +2,7 @@
 Development library
 
 ## Docs
-- [Controls](controls/controls.md)
+[See documentation](docs/README.md)
 
 ## License
 [MIT](LICENSE.md)

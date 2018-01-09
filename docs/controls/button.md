@@ -1,5 +1,5 @@
 # Button
-- [See SCSS component](../../scss/controls/_button.scss)
+- [See SCSS component](../../scss/controls/button.scss)
 
 ## Available states
 Changes the (background) color
