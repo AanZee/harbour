@@ -1,16 +1,16 @@
 {
 	"exclude": [
-		"scss/main.scss",
-		"scss/vendors",
-		"scss/settings",
-		"scss/utilities",
-		"scss/fonts",
-		"scss/vendor-overrides/index.scss",
-		"scss/reset/index.scss",
-		"scss/layouts/index.scss",
-		"scss/controls/index.scss",
-		"scss/components/index.scss",
-		"scss/themes/index.scss"
+		"harbour.scss",
+		"vendors",
+		"settings",
+		"utilities",
+		"fonts",
+		"vendor-overrides/index.scss",
+		"reset/index.scss",
+		"layouts/index.scss",
+		"controls/index.scss",
+		"components/index.scss",
+		"themes/index.scss"
 	],
 	"always-semicolon": true,
 	"block-indent": "\t",

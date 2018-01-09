@@ -1,5 +1,5 @@
 # Harbour ⚓
-Our development library.
+Development library
 
 ## Docs
 - [Controls](controls/controls.md)
