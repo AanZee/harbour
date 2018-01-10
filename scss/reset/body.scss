@@ -1,7 +1,7 @@
 body {
 	position: relative; // NOTE: Fix alignment on absolute childeren (e.g. tooltips or notifications)
 	min-width: 320px; // NOTE: Viewports with a smaller width will see a horizontal scrollbar
-	background-color: $color-site-background;
+	background-color: $color-background;
 	color: $color-text;
 	font-family: $font-family-sans-serif;
 	font-size: $font-size-100;

@@ -1,4 +1,4 @@
-$output-bourbon-deprecation-warnings: false; // NOTE: Temporary fix to hide deprecation warnings, see: https://github.com/thoughtbot/bourbon/issues/997
-@import '../../node_modules/bourbon/core/bourbon';
-@import '../../node_modules/normalize.css/normalize';
-@import '../../node_modules/reset-css/_reset'; // NOTE: Needs to be after normalize to overrule some properties. Underscore needed for SCSS to recognize the difference between the SCSS and CSS file.
+// NOTE: Use tilde symbol to import dynamic node_modules, you may use a compile plugin to make this work
+@import '~bourbon/core/bourbon';
+@import '~normalize.css/normalize';
+@import '~reset-css/_reset'; // NOTE: Needs to be after normalize to overrule some properties. Underscore needed for SCSS to recognize the difference between the SCSS and CSS file.
