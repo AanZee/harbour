@@ -1,5 +1,5 @@
 # Harbour ⚓
-Development library
+Global component library
 
 ## Docs
 [See documentation](docs/README.md)
