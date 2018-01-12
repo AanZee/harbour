@@ -1,13 +1,13 @@
 // # Descriptive colors
 // Only use descriptive colors to define functional colors in this document.
-$color-black: rgb(0, 0, 0) !default;
-$color-white: rgb(255, 255, 255) !default;
-$color-grey: rgb(162, 174, 187) !default;
-$color-yellow: rgb(239, 183, 86) !default;
-$color-purple: rgb(140, 83, 131) !default;
-$color-blue: rgb(49, 133, 252) !default;
-$color-red: rgb(226, 77, 63) !default;
-$color-green: rgb(114, 155, 121) !default;
+$color-black: #000000 !default;
+$color-white: #ffffff !default;
+$color-grey: #A2AEBB !default;
+$color-yellow: #EFB756 !default;
+$color-purple: #8C5383 !default;
+$color-blue: #3185FC !default;
+$color-red: #E24D3F !default;
+$color-green: #729B79 !default;
 
 // # Functional colors
 // Always use a descriptive color to define a functional color. Always use the right functional color even when two (or more) functional colors have the same descriptive color (e.g. $color-heading and $color-primary). This will help when you want to target a specific color.
@@ -346,10 +346,10 @@ $color-focus-900: shade($color-focus, 80%) !default;
 $color-focus-1000: shade($color-focus, 90%) !default;
 
 // # Social media colors
-$color-facebook: #3b5998;
-$color-twitter: #00a0d1;
-$color-linkedin: #0e76a8;
-$color-youtube: #c4302b;
-$color-pinterest: #c8232c;
-$color-instagram: #3f729b;
-$color-google-plus: #db4a39;
+$color-facebook: #3b5998 !default;
+$color-twitter: #00a0d1 !default;
+$color-linkedin: #0e76a8 !default;
+$color-youtube: #c4302b !default;
+$color-pinterest: #c8232c !default;
+$color-instagram: #3f729b !default;
+$color-google-plus: #db4a39 !default;
