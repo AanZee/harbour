@@ -9,17 +9,6 @@ More about 100vh with mobile browsers on:
 https://nicolas-hoizey.com/2015/02/viewport-height-is-taller-than-the-visible-part-of-the-document-in-some-mobile-browsers.html
 */
 
-body {
-	position: relative; // NOTE: Fix alignment on absolute childeren (e.g. tooltips or notifications)
-	min-width: 320px; // NOTE: Viewports with a smaller width will see a horizontal scrollbar
-	background-color: $color-background;
-	color: $color-text;
-	font-family: $font-family-sans-serif;
-	font-size: $font-size-100;
-	line-height: $line-height-100;
+html {
 	height: 100%; /* 1 */
-
-	@include is-ie-10-or-11 {
-		overflow-x: hidden; // NOTE: Make sure there is no horizontal scroll bar in IE 11.
-	}
 }
