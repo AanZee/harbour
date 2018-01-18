@@ -16,7 +16,6 @@
 	"devDependencies": {
 		"csscomb": "4.2.0",
 		"gulp": "3.9.1",
-		"gulp-sass": "3.1.0",
 		"gulp-util": "3.0.8"
 	}
 }
