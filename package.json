@@ -1,7 +1,7 @@
 {
 	"name": "aanzee-harbour",
 	"description": "Global component library",
-	"version": "1.1.7",
+	"version": "1.1.8",
 	"author": "Aan Zee",
 	"license": "MIT",
 	"repository": {
@@ -16,7 +16,6 @@
 	"devDependencies": {
 		"csscomb": "4.2.0",
 		"gulp": "3.9.1",
-		"gulp-sass": "3.1.0",
 		"gulp-util": "3.0.8"
 	}
 }
