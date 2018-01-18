@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
 var gutil = require('gulp-util');
 var Comb = require('csscomb');
 var combConfig = require('./.csscomb.json');
@@ -8,35 +7,9 @@ var combExcludedGlobs = combConfig.exclude;
 var comb = new Comb(combConfig);
 
 var scssSourceFolder = ['**/*.scss'];
-var scssSourceFile = './harbour.scss';
-var cssDist = './';
-
-/**
- * Compile SCSS to CSS
- * @return {void}
- */
-function compileScss() {
-	var hasCompileError = false;
-	var stream = {};
-
-	stream = gulp.src(scssSourceFile)
-	    .pipe(sass({outputStyle: 'expanded'}).on('error', function(error) {
-			hasCompileError = true;
-			sass.logError.bind(this)(error);
-		}))
-	    .pipe(gulp.dest(cssDist));
-
-	stream.on('end', function() {
-		if (!hasCompileError) {
-			gutil.log('Compiled SCSS to CSS');
-		}
-	});
-}
 
 gulp.task('watchScss', function() {
-	var scssWatcher = gulp.watch(scssSourceFolder, function() {
-		compileScss(false);
-	});
+	var scssWatcher = gulp.watch(scssSourceFolder);
 
 	/**
 	 * Checks if the inserted path occurs in the exclude array inside the csscomb.json file

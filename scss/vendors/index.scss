@@ -1,4 +1,3 @@
-// NOTE: Use tilde symbol to import dynamic node_modules, you may use a compile plugin to make this work
-@import '~bourbon/core/bourbon';
-@import '~normalize.css/normalize';
-@import '~reset-css/_reset'; // NOTE: Needs to be after normalize to overrule some properties. Underscore needed for SCSS to recognize the difference between the SCSS and CSS file.
+@import 'bourbon';
+@import 'normalize';
+@import 'reset'; // NOTE: Needs to be after normalize to overrule some properties.

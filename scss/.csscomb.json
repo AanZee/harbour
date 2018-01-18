@@ -1,6 +1,6 @@
 {
 	"exclude": [
-		"harbour.scss",
+		"index.scss",
 		"vendors",
 		"settings",
 		"utilities",

@@ -7,4 +7,5 @@
 @import 'line-heights';
 @import 'ranges';
 @import 'opacity';
-@import 'borders';
+@import 'borders'; // NOTE: Needs to be placed after the colors import
+@import 'spacing';
