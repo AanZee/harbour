@@ -1,4 +1,9 @@
-// # Descriptive colors
+
+
+@import '../vendors/bourbon';
+
+// # Colors
+// ## Descriptive colors
 // Only use descriptive colors to define functional colors in this document.
 $color-black: #000000 !default;
 $color-white: #ffffff !default;
@@ -9,25 +14,25 @@ $color-blue: #3185FC !default;
 $color-red: #E24D3F !default;
 $color-green: #729B79 !default;
 
-// # Functional colors
+// ## Functional colors
 // Always use a descriptive color to define a functional color. Always use the right functional color even when two (or more) functional colors have the same descriptive color (e.g. $color-heading and $color-primary). This will help when you want to target a specific color.
 
-// ## Hierarchical
+// ### Hierarchical
 $color-call-to-action: $color-yellow !default;
 $color-primary: $color-blue !default;
 $color-secondary: $color-purple !default;
 
-// ## Typography
+// ### Typography
 $color-heading: $color-blue !default;
 $color-subheading: $color-blue !default;
 $color-text: $color-black !default;
 $color-text-diap: $color-white !default;
 
-// ## User Interface
+// ### User Interface
 $color-ui: $color-grey !default;
 $color-ui-accent: $color-blue !default;
 
-// ## States
+// ### States
 $color-error: $color-red !default;
 $color-success: $color-green !default;
 $color-warning: $color-yellow !default;
@@ -35,15 +40,13 @@ $color-info: $color-blue !default;
 $color-select: $color-purple !default;
 $color-focus: $color-green !default;
 
-// # Additional colors
+// ## Additional colors
 // Can be used for shared color variables in different components (e.g. $color-icon), in specific state (e.g. $color-logged-in) or themes (e.g. $color-corporate)
 $color-shadow: $color-black !default;
 $color-background: $color-white !default;
 $color-background-accent: $color-grey !default;
-$color-icon: $color-black !default;
-$color-icon-diap: $color-white !default;
 
-// # Ranges
+// ## Ranges
 // Please keep the same variable order as above
 $color-call-to-action-10: tint($color-call-to-action, 90%) !default;
 $color-call-to-action-20: tint($color-call-to-action, 80%) !default;
@@ -345,7 +348,7 @@ $color-focus-800: shade($color-focus, 70%) !default;
 $color-focus-900: shade($color-focus, 80%) !default;
 $color-focus-1000: shade($color-focus, 90%) !default;
 
-// # Social media colors
+// ## Social media colors
 $color-facebook: #3b5998 !default;
 $color-twitter: #00a0d1 !default;
 $color-linkedin: #0e76a8 !default;
