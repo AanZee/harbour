@@ -48,7 +48,6 @@
 			"at-rules",
 			"custom-properties",
 			"declarations",
-			"rules",
 			{
 				"type": "at-rule",
 				"name": "include",
@@ -66,7 +65,12 @@
 				"name": "include",
 				"parameter": "placeholder",
 				"hasBlock": true
-			}
+			},
+			{
+				"type": "rule",
+				"selector": "/&/"
+			},
+			"rules"
 		],
 		"order/properties-order": [
 			"position",
