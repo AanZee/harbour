@@ -1,50 +1,48 @@
-
-
 @import '../vendors/bourbon';
 
 // # Colors
 // ## Descriptive colors
 // Only use descriptive colors to define functional colors in this document.
-$color-black: #000000 !default;
-$color-white: #ffffff !default;
-$color-grey: #A2AEBB !default;
-$color-yellow: #EFB756 !default;
-$color-purple: #8C5383 !default;
-$color-blue: #3185FC !default;
-$color-red: #E24D3F !default;
-$color-green: #729B79 !default;
+$color-harbour-black: #000000;
+$color-harbour-white: #ffffff;
+$color-harbour-grey: #A2AEBB;
+$color-harbour-yellow: #EFB756;
+$color-harbour-purple: #8C5383;
+$color-harbour-blue: #3185FC;
+$color-harbour-red: #E24D3F;
+$color-harbour-green: #729B79;
 
 // ## Functional colors
 // Always use a descriptive color to define a functional color. Always use the right functional color even when two (or more) functional colors have the same descriptive color (e.g. $color-heading and $color-primary). This will help when you want to target a specific color.
 
 // ### Hierarchical
-$color-call-to-action: $color-yellow !default;
-$color-primary: $color-blue !default;
-$color-secondary: $color-purple !default;
+$color-call-to-action: $color-harbour-yellow !default;
+$color-primary: $color-harbour-blue !default;
+$color-secondary: $color-harbour-purple !default;
 
 // ### Typography
-$color-heading: $color-blue !default;
-$color-subheading: $color-blue !default;
-$color-text: $color-black !default;
-$color-text-diap: $color-white !default;
+$color-heading: $color-harbour-blue !default;
+$color-subheading: $color-harbour-blue !default;
+$color-text: $color-harbour-black !default;
+$color-text-diap: $color-harbour-white !default;
 
 // ### User Interface
-$color-ui: $color-grey !default;
-$color-ui-accent: $color-blue !default;
+$color-ui: $color-harbour-grey !default;
+$color-ui-accent: $color-harbour-blue !default;
 
 // ### States
-$color-error: $color-red !default;
-$color-success: $color-green !default;
-$color-warning: $color-yellow !default;
-$color-info: $color-blue !default;
-$color-select: $color-purple !default;
-$color-focus: $color-green !default;
+$color-error: $color-harbour-red !default;
+$color-success: $color-harbour-green !default;
+$color-warning: $color-harbour-yellow !default;
+$color-info: $color-harbour-blue !default;
+$color-select: $color-harbour-purple !default;
+$color-focus: $color-harbour-green !default;
 
 // ## Additional colors
 // Can be used for shared color variables in different components (e.g. $color-icon), in specific state (e.g. $color-logged-in) or themes (e.g. $color-corporate)
-$color-shadow: $color-black !default;
-$color-background: $color-white !default;
-$color-background-accent: $color-grey !default;
+$color-shadow: $color-harbour-black !default;
+$color-background: $color-harbour-white !default;
+$color-background-accent: $color-harbour-grey !default;
 
 // ## Ranges
 // Please keep the same variable order as above
