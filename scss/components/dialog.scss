@@ -15,6 +15,24 @@
 	}
 }
 
+.dialog--success {
+	border-color: $color-success-200;
+	background-color: $color-success-30;
+	color: $color-success-600;
+}
+
+.dialog--warning {
+	border-color: $color-warning-300;
+	background-color: $color-warning-70;
+	color: $color-warning-700;
+}
+
+.dialog--error {
+	border-color: $color-error-300;
+	background-color: $color-error-50;
+	color: $color-error-600;
+}
+
 .dialog__icon {
 	margin-right: $spacing * 2;
 	flex-shrink: 0;
@@ -28,34 +46,16 @@
 		width: $spacing * 5;
 		height: $spacing * 5;
 	}
-}
 
-.dialog--success {
-	border-color: $color-success-200;
-	background-color: $color-success-30;
-	color: $color-success-600;
-
-	& .dialog__icon {
+	.dialog--success & {
 		fill: $color-success-600;
 	}
-}
 
-.dialog--warning {
-	border-color: $color-warning-300;
-	background-color: $color-warning-70;
-	color: $color-warning-700;
-
-	& .dialog__icon {
+	.dialog--warning & {
 		fill: $color-warning-700;
 	}
-}
 
-.dialog--error {
-	border-color: $color-error-300;
-	background-color: $color-error-50;
-	color: $color-error-600;
-
-	& .dialog__icon {
+	.dialog--error & {
 		fill: $color-error-600;
 	}
 }

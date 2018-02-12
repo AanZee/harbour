@@ -5,10 +5,11 @@
 ## HTML Structure
 ```
 dialog (modifier)
-├── content content--90
-│	├── p
-│	├── a
-
+├── dialog__icon (optional)
+├── dialog__main
+│	├── content content--90
+│	│	├── p
+│	│	├── a (optional)
 ```
 
 ## Available variations
@@ -93,7 +94,6 @@ dialog (modifier)
 </div>
 ```
  ![dialog-warning](/images/dialog-warning.png)
-
 ### Dialog error
 
 ```html
@@ -120,4 +120,3 @@ dialog (modifier)
 </div>
 ```
  ![dialog-error](/images/dialog-error.png)
-
