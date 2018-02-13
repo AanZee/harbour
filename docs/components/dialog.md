@@ -2,14 +2,14 @@
 
 - [See SCSS component](../../scss/components/dialog.scss)
 
-## HTML Structure
+## HTML Structure example
 ```
-dialog (modifier)
-├── dialog__icon (optional)
+dialog
+├── dialog__icon
 ├── dialog__main
 │	├── content content--90
 │	│	├── p
-│	│	├── a (optional)
+│	│	├── a
 ```
 
 ## Available variations
