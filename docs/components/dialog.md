@@ -14,6 +14,7 @@ dialog (dialog--success / dialog--warning / dialog--error)
 
 ### Dialog
 
+![dialog](/images/dialog-icon.png)
 ```html
 <section class="dialog">
 	<svg class="dialog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -26,8 +27,8 @@ dialog (dialog--success / dialog--warning / dialog--error)
 	</div>
 </section>
 ```
-![dialog](/images/dialog-icon.png)
 
+![dialog](/images/dialog.png)
 ```html
 <section class="dialog">
 	<div class="dialog__main">
@@ -37,10 +38,10 @@ dialog (dialog--success / dialog--warning / dialog--error)
 	</div>
 </section>
 ```
-![dialog](/images/dialog.png)
 
 ### Dialog success
 
+ ![dialog-success](/images/dialog-success-icon.png)
 ```html
 <section class="dialog dialog--success">
 	<svg class="dialog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -53,8 +54,8 @@ dialog (dialog--success / dialog--warning / dialog--error)
 	</div>
 </section>
 ```
- ![dialog-success](/images/dialog-success-icon.png)
 
+ ![dialog-success](/images/dialog-success.png)
 ```html
 <section class="dialog dialog--success">
 	<div class="dialog__main">
@@ -64,10 +65,10 @@ dialog (dialog--success / dialog--warning / dialog--error)
 	</div>
 </section>
 ```
- ![dialog-success](/images/dialog-success.png)
 
 ### Dialog warning
 
+ ![dialog-warning](/images/dialog-warning-icon.png)
 ```html
 <section class="dialog dialog--warning">
 	<svg class="dialog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -80,8 +81,8 @@ dialog (dialog--success / dialog--warning / dialog--error)
 	</div>
 </section>
 ```
- ![dialog-warning](/images/dialog-warning-icon.png)
 
+ ![dialog-warning](/images/dialog-warning.png)
 ```html
 <section class="dialog dialog--warning">
 	<div class="dialog__main">
@@ -91,9 +92,9 @@ dialog (dialog--success / dialog--warning / dialog--error)
 	</div>
 </section>
 ```
- ![dialog-warning](/images/dialog-warning.png)
 ### Dialog error
 
+ ![dialog-error](/images/dialog-error-icon.png)
 ```html
 <section class="dialog dialog--error">
 	<svg class="dialog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -106,8 +107,8 @@ dialog (dialog--success / dialog--warning / dialog--error)
 	</div>
 </section>
 ```
- ![dialog-error](/images/dialog-error-icon.png)
 
+ ![dialog-error](/images/dialog-error.png)
 ```html
 <section class="dialog dialog--error">
 	<div class="dialog__main">
@@ -117,4 +118,3 @@ dialog (dialog--success / dialog--warning / dialog--error)
 	</div>
 </section>
 ```
- ![dialog-error](/images/dialog-error.png)
