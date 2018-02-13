@@ -1,9 +1,9 @@
 .dialog {
 	display: flex;
-	border: ($spacing / 8) solid $color-info-100;
+	border: ($spacing / 8) solid $color-ui-accent;
 	border-radius: $border-radius-200;
-	background-color: $color-info-20;
-	color: $color-info-500;
+	background-color: $color-ui-accent-20;
+	color: $color-ui-accent-500;
 	font-size: $font-size-100;
 	align-items: center;
 
@@ -36,7 +36,7 @@
 .dialog__icon {
 	margin-right: $spacing * 2;
 	flex-shrink: 0;
-	fill: $color-info-500;
+	fill: $color-ui-accent;
 
 	@include media(0, $range-hand) {
 		width: $spacing * 4;
