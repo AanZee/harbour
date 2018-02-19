@@ -1,0 +1,61 @@
+.dialog {
+	display: flex;
+	border: ($spacing / 8) solid $color-ui-accent;
+	border-radius: $border-radius-200;
+	background-color: $color-ui-accent-20;
+	color: $color-ui-accent-500;
+	font-size: $font-size-100;
+	align-items: center;
+
+	@include media(0, $range-hand) {
+		padding: ($spacing * 1.5);
+	}
+	@include media($range-lap,false) {
+		padding: ($spacing * 2);
+	}
+}
+
+.dialog--success {
+	border-color: $color-success-200;
+	background-color: $color-success-30;
+	color: $color-success-600;
+}
+
+.dialog--warning {
+	border-color: $color-warning-300;
+	background-color: $color-warning-70;
+	color: $color-warning-700;
+}
+
+.dialog--error {
+	border-color: $color-error-300;
+	background-color: $color-error-50;
+	color: $color-error-600;
+}
+
+.dialog__icon {
+	margin-right: $spacing * 2;
+	flex-shrink: 0;
+	fill: $color-ui-accent;
+
+	@include media(0, $range-hand) {
+		width: $spacing * 4;
+		height: $spacing * 4;
+	}
+	@include media($range-lap, false) {
+		width: $spacing * 5;
+		height: $spacing * 5;
+	}
+
+	.dialog--success & {
+		fill: $color-success-600;
+	}
+
+	.dialog--warning & {
+		fill: $color-warning-700;
+	}
+
+	.dialog--error & {
+		fill: $color-error-600;
+	}
+}
