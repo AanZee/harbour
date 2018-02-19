@@ -1,4 +1,7 @@
 # Documentation
 
-# Controls
+## Components
+- [Dialog](components/dialog.md)
+
+## Controls
 - [Button](controls/button.md)
