@@ -1,3 +1,5 @@
+$body-background-color: $color-background !default;
+
 /*
 1. NOTE
 Makes sure its children can use complete height of the html element as minimum height and set a sticky footer if needed.
@@ -12,7 +14,7 @@ https://nicolas-hoizey.com/2015/02/viewport-height-is-taller-than-the-visible-pa
 body {
 	position: relative; // NOTE: Fix alignment on absolute childeren (e.g. tooltips or notifications)
 	min-width: 320px; // NOTE: Viewports with a smaller width will see a horizontal scrollbar
-	background-color: $color-background;
+	background-color: $body-background-color;
 	color: $color-text;
 	font-family: $font-family-sans-serif;
 	font-size: $font-size-100;
