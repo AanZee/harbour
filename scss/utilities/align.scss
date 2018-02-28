@@ -43,6 +43,43 @@
 		}
 	}
 
+	@if $method == 'fixed' {
+
+		position: fixed;
+
+		@if $horizontal == 'center' and $vertical == 'center' {
+			transform: translate(-50%, -50%);
+			left: 50%;
+			top: 50%;
+		}
+
+		@else if $horizontal == 'center' {
+			transform: translateX(-50%);
+			left: 50%;
+		}
+
+		@else if $vertical == 'center' {
+			transform: translateY(-50%);
+			top: 50%;
+		}
+
+		@if $horizontal == 'left' {
+			left: 0;
+		}
+
+		@else if $horizontal == 'right' {
+			right: 0;
+		}
+
+		@if $vertical == 'top' {
+			top: 0;
+		}
+
+		@else if $vertical == 'bottom' {
+			bottom: 0;
+		}
+	}
+
 	@if $method == 'flex' {
 
 		@if $parent {
