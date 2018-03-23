@@ -15,12 +15,13 @@
 	},
 	"dependencies": {
 		"bourbon": "5.0.0",
+		"chokidar-cli": "1.2.0",
 		"normalize.css": "7.0.0",
 		"reset-css": "2.2.1",
-		"chokidar-cli": "1.2.0",
 		"stylelint": "8.4.0",
-		"stylelint-order": "0.8.0",
-		"stylelint-declaration-block-no-ignored-properties": "1.1.0"
+		"stylelint-declaration-block-no-ignored-properties": "1.1.0",
+		"stylelint-declaration-strict-value": "1.0.4",
+		"stylelint-order": "0.8.0"
 	},
 	"devDependencies": {
 		"csscomb": "4.2.0",

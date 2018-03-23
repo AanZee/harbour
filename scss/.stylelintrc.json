@@ -1,10 +1,10 @@
 {
 	"plugins": [
 		"stylelint-order",
-		"stylelint-declaration-block-no-ignored-properties"
+		"stylelint-declaration-block-no-ignored-properties",
+		"stylelint-declaration-strict-value"
 	],
 	"rules": {
-		"plugin/declaration-block-no-ignored-properties": true,
 		"declaration-block-trailing-semicolon": "always",
 		"color-hex-case": "lower",
 		"color-hex-length": "long",
@@ -45,6 +45,15 @@
 		"no-missing-end-of-source-newline": true,
 		"rule-empty-line-before": "always",
 		"indentation": "tab",
+		"plugin/declaration-block-no-ignored-properties": true,
+		"scale-unlimited/declaration-strict-value": [
+			["/color/"],
+			{
+				"ignoreKeywords": {
+					"/color/": ["currentColor", "transparent", "inherit", "none"]
+				}
+			}
+		],
 		"order/order": [
 			"dollar-variables",
 			"at-rules",
