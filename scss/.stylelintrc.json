@@ -1,8 +1,10 @@
 {
 	"plugins": [
-		"stylelint-order"
+		"stylelint-order",
+		"stylelint-declaration-block-no-ignored-properties"
 	],
 	"rules": {
+		"plugin/declaration-block-no-ignored-properties": true,
 		"declaration-block-trailing-semicolon": "always",
 		"color-hex-case": "lower",
 		"color-hex-length": "long",
