@@ -8,10 +8,19 @@
 		"type": "git",
 		"url": "https://github.com/AanZee/harbour.git"
 	},
+	"scripts": {
+		"style:lint": "node stylelint.js",
+		"style:watch": "chokidar 'scss/**/*.scss' -c 'WATCHLINT=1 npm run style:lint'",
+		"style:fix": "FIXLINT=1 npm run style:lint"
+	},
 	"dependencies": {
 		"bourbon": "5.0.0",
 		"normalize.css": "7.0.0",
-		"reset-css": "2.2.1"
+		"reset-css": "2.2.1",
+		"chokidar-cli": "1.2.0",
+		"stylelint": "8.4.0",
+		"stylelint-order": "0.8.0",
+		"stylelint-declaration-block-no-ignored-properties": "1.1.0"
 	},
 	"devDependencies": {
 		"csscomb": "4.2.0",
