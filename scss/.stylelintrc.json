@@ -46,6 +46,7 @@
 		"rule-empty-line-before": "always",
 		"indentation": "tab",
 		"plugin/declaration-block-no-ignored-properties": true,
+		"selector-pseudo-element-colon-notation": "double",
 		"scale-unlimited/declaration-strict-value": [
 			[
 				"/color/",
