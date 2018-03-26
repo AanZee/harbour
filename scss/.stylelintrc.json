@@ -47,10 +47,24 @@
 		"indentation": "tab",
 		"plugin/declaration-block-no-ignored-properties": true,
 		"scale-unlimited/declaration-strict-value": [
-			["/color/", "font-size", "/margin/"],
+			[
+				"/color/",
+				"font-size",
+				"/padding/",
+				"margin",
+				"margin-top",
+				"margin-right",
+				"margin-bottom",
+				"margin-left"
+			],
 			{
 				"ignoreKeywords": {
-					"": ["auto$", "0$", "0 auto", "%"],
+					"margin": ["%", "0"],
+					"margin-top": ["%", "0"],
+					"margin-right": ["%", "0", "auto"],
+					"margin-bottom": ["%", "0"],
+					"margin-left": ["%", "0", "auto"],
+					"/padding/": ["0"],
 					"/color/": ["currentColor", "transparent", "inherit", "none"]
 				}
 			}
