@@ -47,10 +47,11 @@
 		"indentation": "tab",
 		"plugin/declaration-block-no-ignored-properties": true,
 		"scale-unlimited/declaration-strict-value": [
-			["/color/"],
+			["/color/", "font-size", "/margin/"],
 			{
 				"ignoreKeywords": {
-					"/color/": ["currentColor", "transparent", "inherit", "none"]
+					"/color/": ["currentColor", "transparent", "inherit", "none"],
+					"/margin/": ["auto", "0", "0 auto", "%"]
 				}
 			}
 		],
