@@ -51,6 +51,7 @@
 			[
 				"/color/",
 				"font-size",
+				"/width/",
 				"/padding/",
 				"margin",
 				"margin-top",
@@ -60,6 +61,7 @@
 			],
 			{
 				"ignoreKeywords": {
+					"/width/": ["100%", "auto", "0", "none", "min-content"],
 					"margin": ["0"],
 					"margin-top": ["0"],
 					"margin-right": ["0", "auto"],
