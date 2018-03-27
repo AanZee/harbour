@@ -67,7 +67,8 @@
 				"top",
 				"right",
 				"bottom",
-				"left"
+				"left",
+				"opacity"
 			],
 			{
 				"ignoreKeywords": {
@@ -88,7 +89,8 @@
 					"left": ["0", "auto", "100%", "50%", "100vw"],
 					"/padding/": "0",
 					"/color/": ["currentColor", "transparent", "inherit", "none"],
-					"border-radius": ["100%", "50%", "0"]
+					"border-radius": ["100%", "50%", "0"],
+					"opacity": "0"
 				}
 			}
 		],
