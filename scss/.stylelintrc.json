@@ -55,7 +55,7 @@
 				"height",
 				"min-height",
 				"max-height",
-				"box-shadow",
+				"border-radius",
 				"/color/",
 				"font-size",
 				"/padding/",
@@ -87,7 +87,8 @@
 					"bottom": ["0", "auto", "100%", "50%", "100vh"],
 					"left": ["0", "auto", "100%", "50%", "100vw"],
 					"/padding/": "0",
-					"/color/": ["currentColor", "transparent", "inherit", "none"]
+					"/color/": ["currentColor", "transparent", "inherit", "none"],
+					"border-radius": ["100%", "50%", "0"]
 				}
 			}
 		],
