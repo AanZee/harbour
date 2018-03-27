@@ -49,9 +49,15 @@
 		"selector-pseudo-element-colon-notation": "double",
 		"scale-unlimited/declaration-strict-value": [
 			[
+				"width",
+				"min-width",
+				"max-width",
+				"height",
+				"min-height",
+				"max-height",
+				"box-shadow",
 				"/color/",
 				"font-size",
-				"/width/",
 				"/padding/",
 				"margin",
 				"margin-top",
@@ -65,7 +71,12 @@
 			],
 			{
 				"ignoreKeywords": {
-					"/width/": ["100%", "auto", "0", "none", "min-content"],
+					"width": ["100%", "auto", "0", "none", "min-content"],
+					"min-width": ["0", "min-content"],
+					"max-width": ["100%", "0", "none"],
+					"height": ["100%", "auto", "0"],
+					"min-height": ["100%", "0", "min-content"],
+					"max-height": ["100%", "none"],
 					"margin": ["0"],
 					"margin-top": ["0"],
 					"margin-right": ["0", "auto"],
