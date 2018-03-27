@@ -60,6 +60,7 @@
 				"margin-left",
 				"top",
 				"right",
+				"bottom",
 				"left"
 			],
 			{
@@ -72,6 +73,7 @@
 					"margin-left": ["0", "auto"],
 					"top": ["0", "auto", "100%", "50%", "100vh"],
 					"right": ["0", "auto", "100%", "50%", "100vw"],
+					"bottom": ["0", "auto", "100%", "50%", "100vh"],
 					"left": ["0", "auto", "100%", "50%", "100vw"],
 					"/padding/": "0",
 					"/color/": ["currentColor", "transparent", "inherit", "none"]
