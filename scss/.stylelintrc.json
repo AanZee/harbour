@@ -70,7 +70,8 @@
 				"bottom",
 				"left",
 				"opacity",
-				"font-family"
+				"font-family",
+				"box-shadow"
 			],
 			{
 				"ignoreKeywords": {
@@ -92,7 +93,8 @@
 					"/padding/": "0",
 					"/color/": ["currentColor", "transparent", "inherit", "none"],
 					"border-radius": ["100%", "50%", "0"],
-					"opacity": "0"
+					"opacity": "0",
+					"box-shadow": "none"
 				}
 			}
 		],
