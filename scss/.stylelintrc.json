@@ -69,7 +69,8 @@
 				"right",
 				"bottom",
 				"left",
-				"opacity"
+				"opacity",
+				"font-family"
 			],
 			{
 				"ignoreKeywords": {
