@@ -110,7 +110,6 @@
 		],
 		"order/order": [
 			"dollar-variables",
-			"at-rules",
 			"custom-properties",
 			"declarations",
 			{
@@ -133,6 +132,11 @@
 				"type": "at-rule",
 				"name": "include",
 				"parameter": "media",
+				"hasBlock": true
+			},
+			{
+				"type": "at-rule",
+				"name": "media",
 				"hasBlock": true
 			},
 			{
