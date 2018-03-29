@@ -111,15 +111,20 @@
 		"order/order": [
 			"dollar-variables",
 			"custom-properties",
-			"declarations",
 			{
 				"type": "at-rule",
 				"name": "include",
+				"hasBlock": false
+			},
+			"declarations",
+			{
+				"type": "at-rule",
+				"name": "supports",
 				"hasBlock": true
 			},
 			{
 				"type": "at-rule",
-				"name": "supports",
+				"name": "include",
 				"hasBlock": true
 			},
 			{
