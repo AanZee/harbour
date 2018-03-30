@@ -1,6 +1,6 @@
 # 1.3.0
 
-### Features
+## Features
 * Add stylelint as dependency
 * Add stylelint CLI tasks 'lint', 'watch' and 'fix'
 * Add chokidar dependency to watch files
