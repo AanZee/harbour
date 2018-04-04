@@ -1,0 +1,325 @@
+$form-right-aligned-labels-header-width: 33%;
+$form-feedback-text-max-width: 35em;
+$form-right-aligned-labels-form-field-main-width-lap-and-up: 67%;
+
+.form {
+}
+
+.form--right-aligned-labels {
+}
+
+.form--horizontal {
+	display: flex;
+	flex-wrap: wrap;
+	margin: $spacing * -0.75;
+}
+
+.form__section {
+
+	@include media(0, $range-hand) {
+		margin-bottom: $spacing * 3;
+	}
+	@include media($range-lap) {
+		margin-bottom: $spacing * 4;
+	}
+	@include media($range-desk, false) {
+		margin-bottom: $spacing * 5;
+	}
+
+	.form--horizontal & {
+		display: flex;
+		flex-wrap: wrap;
+		margin: $spacing * 0.75;
+	}
+}
+
+.form__section-header {
+	border-top: $border-ui-100;
+
+	@include media(0, $range-hand) {
+		margin-bottom: $spacing * 2;
+		padding-top: $spacing * 1;
+	}
+	@include media($range-lap, false) {
+		margin-bottom: $spacing * 3;
+		padding-top: $spacing * 2;
+	}
+}
+
+.form__section-title {
+	display: block;
+	color: $color-subheading;
+	font-weight: 500;
+
+	@include media(0, $range-palm) {
+		font-size: $font-size-200;
+	}
+	@include media($range-hand, false) {
+		font-size: $font-size-300;
+	}
+}
+
+.form__section-feedback-text {
+	display: block;
+	margin-top: $spacing / 2;
+	max-width: 40em;
+	color: $color-error-200;
+	font-size: $font-size-200;
+	font-weight: 500;
+}
+
+.form__fieldset {
+
+	&:not(:first-child) {
+		@include media(0, $range-hand) {
+			margin-top: $spacing;
+		}
+		@include media($range-lap, false) {
+			margin-top: $spacing * 2;
+		}
+	}
+
+	&:not(:last-child) {
+		@include media(0, $range-hand) {
+			margin-bottom: $spacing;
+		}
+		@include media($range-lap, false) {
+			margin-bottom: $spacing * 2;
+		}
+	}
+
+	.form--horizontal & {
+		display: flex;
+		flex-wrap: wrap;
+		margin: $spacing * -0.75;
+	}
+}
+
+.form__fieldset-header {
+	border-top: $border-ui-100;
+
+	@include media(0, $range-hand) {
+		margin-bottom: $spacing * 2;
+		padding-top: $spacing / 2;
+	}
+	@include media($range-lap, false) {
+		margin-bottom: $spacing * 2;
+		padding-top: $spacing;
+	}
+}
+
+.form__fieldset-title {
+	display: block;
+	color: $color-subheading;
+	font-weight: 500;
+
+	@include media(0, $range-palm) {
+		font-size: $font-size-100;
+	}
+	@include media($range-hand, false) {
+		font-size: $font-size-200;
+	}
+}
+
+.form__fieldset-supporting-text {
+	color: $color-text-90;
+
+	@include media($range-hand, false) {
+		margin-top: $spacing / 2;
+	}
+}
+
+.form__fieldset-feedback-text {
+	display: block;
+	color: $color-text-300;
+	font-size: $font-size-200;
+
+	&:not(:first-child) {
+		@include media(0, $range-hand) {
+			margin-top: $spacing;
+		}
+		@include media($range-lap, false) {
+			margin-top: $spacing * 2;
+		}
+	}
+
+	&:not(:last-child) {
+		@include media(0, $range-hand) {
+			margin-bottom: $spacing;
+		}
+		@include media($range-lap, false) {
+			margin-bottom: $spacing * 2;
+		}
+	}
+}
+
+.form__field {
+
+	&:not(:first-child) {
+		@include media(0, $range-hand) {
+			margin-top: $spacing;
+		}
+		@include media($range-lap, false) {
+			margin-top: $spacing * 2;
+		}
+	}
+
+	&:not(:last-child) {
+		@include media(0, $range-hand) {
+			margin-bottom: $spacing;
+		}
+		@include media($range-lap, false) {
+			margin-bottom: $spacing * 2;
+		}
+	}
+
+	.form--right-aligned-labels & {
+		@include media($range-lap, false) {
+			display: flex;
+			width: 100%;
+		}
+	}
+
+	.form--horizontal & {
+		margin: $spacing * 0.75;
+	}
+}
+
+.form__field-header {
+	display: block;
+	margin-bottom: $spacing / 4;
+
+	.form--right-aligned-labels & {
+		@include media($range-lap, false) {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 0;
+			padding-right: $spacing * 2;
+			width: $form-right-aligned-labels-header-width;
+			text-align: right;
+		}
+	}
+}
+
+.form__field-label {
+	display: block;
+	margin-bottom: $spacing / 2;
+	max-width: 40em;
+	width: 100%;
+	font-size: $font-size-100;
+	line-height: $line-height-20;
+
+	.form--right-aligned-labels & {
+
+		@include is-ie-10-or-11 {
+			padding-top: $spacing; // FIX: IE 10 and 11 don't support flexbox with min-height. This fixes the layout.
+		}
+		@include media($range-lap, false) {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 0;
+			font-size: $font-size-200;
+			justify-content: center;
+			flex-basis: $character-input-height;
+		}
+	}
+}
+
+.form__field-label-helper-text {
+	font-size: $font-size-80;
+	line-height: $line-height-60;
+
+	&::before {
+		content: ' (';
+
+		.form--right-aligned-labels & {
+			@include media($range-lap, false) {
+				content: '\A'; // NOTE: Line break
+			}
+		}
+	}
+
+	&::after {
+		content: ')';
+
+		.form--right-aligned-labels & {
+			@include media($range-lap, false) {
+				content: '';
+			}
+		}
+	}
+}
+
+.form__field-main {
+
+	.form--right-aligned-labels & {
+		@include media($range-lap, false) {
+			width: $form-right-aligned-labels-form-field-main-width-lap-and-up;
+		}
+	}
+}
+
+.form__input-feedback-text {
+	position: relative;
+	display: block;
+	margin-top: $spacing;
+	margin-left: $spacing * 3.5;
+	max-width: $form-input-feedback-text-max-width;
+	color: $color-text-400;
+	font-size: $font-size-90;
+	line-height: $line-height-80;
+
+	&::before {
+		position: absolute;
+		top: $spacing * -0.5;
+		left: $spacing * -2.5;
+		width: $spacing * 2;
+		height: $spacing * 2;
+		border-bottom: $border-ui-300;
+		border-left: $border-ui-300;
+		border-bottom-left-radius: $border-radius-200;
+		content: '';
+	}
+}
+
+.form__input-helper-text {
+	display: block;
+	margin-top: $spacing / 2;
+	max-width: 40em;
+	font-size: $font-size-90;
+	line-height: $line-height-90;
+
+	.is-disabled & {
+		color: $color-text-80;
+	}
+}
+
+.form__actions {
+	display: flex;
+	margin: $spacing * -1;
+
+	.form--horizontal & {
+		align-items: flex-end;
+		margin: 0;
+		flex-wrap: wrap;
+	}
+}
+
+.form__actions--vertical {
+	flex-direction: column;
+
+}
+
+.form__action {
+	margin: $spacing;
+
+	.form--horizontal & {
+		margin: $spacing * 0.75;
+	}
+}
+
+.form__action--indented-lap-and-up {
+	@include media($range-lap, false) {
+		margin-left: $form-right-aligned-labels-header-width;
+	}
+}
