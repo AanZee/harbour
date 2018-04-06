@@ -110,6 +110,7 @@
 				"hasBlock": false
 			},
 			"declarations",
+			"at-rules",
 			{
 				"type": "at-rule",
 				"name": "supports",
@@ -145,23 +146,23 @@
 			},
 			{
 				"type": "rule",
-				"selector": "^&:\\w.+$"
+				"selector": "^&:[A-Za-z][\\s\\S]*"
 			},
 			{
 				"type": "rule",
-				"selector": "^&\\[.+$"
+				"selector": "^&\\[[\\s\\S]*"
 			},
 			{
 				"type": "rule",
-				"selector": "^&\\..+$"
+				"selector": "^&\\.[\\s\\S]*"
 			},
 			{
 				"type": "rule",
-				"selector": ".+ &$"
+				"selector": "[\\s\\S]* & {$"
 			},
 			{
 				"type": "rule",
-				"selector": "^&::.+$"
+				"selector": "^&::[\\s\\S]*"
 			},
 			"rules"
 		],
