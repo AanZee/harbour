@@ -37,7 +37,6 @@ $layout-section-rounded-border-radius-lap-and-up: $border-radius-200;
 
 $layout-section-colored-background-color: $color-background-colored;
 $layout-section-light-background-color: $color-background-light;
-$layout-section-light-200-background-color: $color-background-light-200;
 $layout-section-dark-background-color: $color-background-dark;
 
 $layout-section-box-shadowed-box-shadow: $box-shadow-bottom-ui-100;
@@ -119,10 +118,6 @@ $layout-section-box-shadowed-box-shadow: $box-shadow-bottom-ui-100;
 
 .layout__section--light {
 	background-color: $layout-section-light-background-color;
-}
-
-.layout__section--light-200 {
-	background-color: $layout-section-light-200-background-color;
 }
 
 .layout__section--dark {
