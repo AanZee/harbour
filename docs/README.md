@@ -5,3 +5,6 @@
 
 ## Controls
 - [Button](controls/button.md)
+
+## Layouts
+- [Layout](layouts/layout.md)
