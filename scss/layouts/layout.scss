@@ -44,9 +44,14 @@ $layout-section-box-shadowed-box-shadow: $box-shadow !default;
 .layout {
 	display: flex;
 	flex-direction: column;
+	flex-shrink: 0;
 }
 
 .layout__section {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+
 	@include media(0, $range-palm) {
 		margin-top: $layout-spacing-palm-and-lower;
 	}
@@ -252,6 +257,8 @@ $layout-section-box-shadowed-box-shadow: $box-shadow !default;
 	margin-left: auto;
 	max-width: $spacing * 160;
 	flex-grow: 1;
+	flex-shrink: 0;
+	width: 100%;
 
 	@include media(0, $range-palm) {
 		padding: $layout-spacing-palm-and-lower;
