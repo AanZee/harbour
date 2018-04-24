@@ -1,5 +1,6 @@
 $button-color: $color-text-diap !default;
 $button-background-color: $color-ui-90 !default;
+$button-box-shadow: 0 ($spacing / 4) 0 0 $color-ui-500 !default;
 $button-hover-color: $color-text-diap !default;
 $button-hover-background-color: $color-ui-200 !default;
 $button-focus-box-shadow: inset 0 0 0 2px $color-primary-400 !default;
@@ -18,6 +19,9 @@ $button-disabled-background-color: $color-ui-40 !default;
 	line-height: 16px;
 	cursor: pointer;
 	user-select: none;
+	@if ($button-box-shadow != '') {
+		box-shadow: $button-box-shadow;
+	}
 
 	@include media(0, $range-palm) {
 		padding: 8px 24px;
@@ -52,6 +56,7 @@ $button-disabled-background-color: $color-ui-40 !default;
 // Color varations
 $button-call-to-action-color: $color-text-diap !default;
 $button-call-to-action-background-color: $color-call-to-action-100 !default;
+$button-call-to-action-box-shadow: 0 ($spacing / 4) 0 0 $color-call-to-action-500 !default;
 $button-call-to-action-hover-color: $color-text-diap !default;
 $button-call-to-action-hover-background-color: $color-call-to-action-200 !default;
 $button-call-to-action-focus-box-shadow: inset 0 0 0 2px $color-call-to-action-400 !default;
@@ -59,10 +64,14 @@ $button-call-to-action-active-color: $color-text-diap !default;
 $button-call-to-action-active-background-color: $color-call-to-action-300 !default;
 $button-call-to-action-disabled-color: $color-text-diap !default;
 $button-call-to-action-disabled-background-color: $color-call-to-action-40 !default;
+$button-call-to-action-disabled-box-shadow: 0 ($spacing / 4) 0 0 $color-call-to-action-40 !default;
 
 .button--call-to-action {
 	background-color: $button-call-to-action-background-color;
 	color: $button-call-to-action-color;
+	@if ($button-call-to-action-box-shadow != '') {
+		box-shadow: $button-call-to-action-box-shadow;
+	}
 
 	&:hover {
 		background-color: $button-call-to-action-hover-background-color;
@@ -81,11 +90,15 @@ $button-call-to-action-disabled-background-color: $color-call-to-action-40 !defa
 	&:disabled {
 		background-color: $button-call-to-action-disabled-background-color;
 		color: $button-call-to-action-disabled-color;
+		@if ($button-call-to-action-disabled-box-shadow != '') {
+			box-shadow: $button-call-to-action-disabled-box-shadow;
+		}
 	}
 }
 
 $button-primary-color: $color-text-diap !default;
 $button-primary-background-color: $color-primary-100 !default;
+$button-primary-box-shadow: 0 ($spacing / 4) 0 0 $color-primary-400 !default;
 $button-primary-hover-color: $color-text-diap !default;
 $button-primary-hover-background-color: $color-primary-300 !default;
 $button-primary-focus-box-shadow: inset 0 0 0 2px $color-primary-500 !default;
@@ -97,6 +110,9 @@ $button-primary-disabled-background-color: $color-primary-40 !default;
 .button--primary {
 	background-color: $button-primary-background-color;
 	color: $button-primary-color;
+	@if ($button-primary-box-shadow != '') {
+		box-shadow: $button-primary-box-shadow;
+	}
 
 	&:hover {
 		background-color: $button-primary-hover-background-color;
@@ -120,6 +136,7 @@ $button-primary-disabled-background-color: $color-primary-40 !default;
 
 $button-secondary-color: $color-text-diap !default;
 $button-secondary-background-color: $color-secondary-100 !default;
+$button-secondary-box-shadow: 0 ($spacing / 4) 0 0 $color-secondary-400 !default;
 $button-secondary-hover-color: $color-text-diap !default;
 $button-secondary-hover-background-color: $color-secondary-200 !default;
 $button-secondary-focus-box-shadow: inset 0 0 0 2px $color-secondary-400 !default;
@@ -131,6 +148,9 @@ $button-secondary-disabled-background-color: $color-secondary-40 !default;
 .button--secondary {
 	background-color: $button-secondary-background-color;
 	color: $button-secondary-color;
+	@if ($button-secondary-box-shadow != '') {
+		box-shadow: $button-secondary-box-shadow;
+	}
 
 	&:hover {
 		background-color: $button-secondary-hover-background-color;
