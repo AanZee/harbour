@@ -210,7 +210,6 @@ $button-outline-secondary-active-box-shadow: inset 0 0 0 $button-outline-border-
 		box-shadow: $button-outline-active-box-shadow;
 		color: $button-active-background-color;
 		@if ($button-outset) {
-			position: relative;
 			top: 0;
 		}
 	}
