@@ -66,7 +66,7 @@ A form with labels on the left side of the form.
 							<input class="character-input"
 								type="text"
 								id="given-name"
-							/>
+							>
 						</div>
 						<div class="input-box__state-indicator"></div>
 					</div>
@@ -86,7 +86,7 @@ A form with labels on the left side of the form.
 							<input class="character-input"
 								type="text"
 								id="family-name"
-							/>
+							>
 						</div>
 						<div class="input-box__state-indicator"></div>
 					</div>
@@ -108,7 +108,7 @@ A form with labels on the left side of the form.
 							<input class="character-input"
 								type="text"
 								id="street"
-							/>
+							>
 						</div>
 						<div class="input-box__state-indicator"></div>
 					</div>
@@ -136,7 +136,7 @@ A form with labels on the left side of the form.
 							<input class="character-input"
 								type="number"
 								id="house-number"
-							/>
+							>
 						</div>
 						<div class="input-box__state-indicator"></div>
 					</div>
@@ -178,7 +178,7 @@ A simple form with labels above the input fields.
 							<input class="character-input"
 								type="email"
 								id="email"
-							/>
+							>
 						</div>
 						<div class="input-box__state-indicator"></div>
 					</div>
@@ -198,7 +198,7 @@ A simple form with labels above the input fields.
 							<input class="character-input"
 								type="password"
 								id="password"
-							/>
+							>
 						</div>
 						<div class="input-box__state-indicator"></div>
 					</div>
