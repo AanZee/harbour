@@ -39,9 +39,10 @@ $button-disabled-opacity: 0.35 !default;
 	}
 
 	&:focus {
-		box-shadow: $button-focus-box-shadow;
 		@if ($button-outset) {
 			box-shadow: $button-focus-box-shadow, $button-outset-box-shadow;
+		} @else {
+			box-shadow: $button-focus-box-shadow;
 		}
 	}
 
