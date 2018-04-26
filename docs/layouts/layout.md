@@ -2,14 +2,24 @@
 - [See SCSS component](../../scss/layouts/layout.scss)
 
 ## Available modifiers
-Adjust section (top)margin
+Adjust space between sections (modifier 100 doesn't exists since this is the default behavior)
 ```
-layout__section--margin-0
-layout__section--margin-70
-layout__section--margin-80
-layout__section--margin-90
-layout__section--margin-200
-layout__section--margin-300
+layout__section--spaced-0
+layout__section--spaced-70
+layout__section--spaced-80
+layout__section--spaced-90
+layout__section--spaced-200
+layout__section--spaced-300
+```
+
+Adjust space between children of a section
+```
+layout__section--spacing-70
+layout__section--spacing-80
+layout__section--spacing-90
+layout__section--spacing-100
+layout__section--spacing-200
+layout__section--spacing-300
 ```
 
 Adjust section appearance
@@ -21,16 +31,15 @@ layout__section--rounded
 layout__section--colored
 layout__section--light
 layout__section--dark
-layout__section--box-shadowed
+layout__section--elevated
 ```
 
 Adjust section behavior
 ```
 layout__section--wrapping
 layout__section--sticky
-layout__section--content-right-aligned
-layout__section--content-vertical-centered
-layout__section--pull-under
+layout__section--right-aligning
+layout__section--vertical-centering
 ```
 
 Adjust section__inner max-width
@@ -45,56 +54,56 @@ layout__inner--compressed
 
 Adjust section__inner padding
 ```
-layout__inner--padding-0
-layout__inner--padding-70
-layout__inner--padding-80
-layout__inner--padding-90
-layout__inner--padding-200
-layout__inner--padding-300
+layout__inner--padded-0
+layout__inner--padded-70
+layout__inner--padded-80
+layout__inner--padded-90
+layout__inner--padded-200
+layout__inner--padded-300
 
-layout__inner--padding-top-bottom-0
-layout__inner--padding-top-bottom-70
-layout__inner--padding-top-bottom-80
-layout__inner--padding-top-bottom-90
-layout__inner--padding-top-bottom-200
-layout__inner--padding-top-bottom-300
+layout__inner--padded-top-bottom-0
+layout__inner--padded-top-bottom-70
+layout__inner--padded-top-bottom-80
+layout__inner--padded-top-bottom-90
+layout__inner--padded-top-bottom-200
+layout__inner--padded-top-bottom-300
 
-layout__inner--padding-left-right-0
-layout__inner--padding-left-right-70
-layout__inner--padding-left-right-80
-layout__inner--padding-left-right-90
-layout__inner--padding-left-right-200
-layout__inner--padding-left-right-300
+layout__inner--padded-left-right-0
+layout__inner--padded-left-right-70
+layout__inner--padded-left-right-80
+layout__inner--padded-left-right-90
+layout__inner--padded-left-right-200
+layout__inner--padded-left-right-300
 
-layout__inner--padding-top-0
-layout__inner--padding-right-0
-layout__inner--padding-bottom-0
-layout__inner--padding-left-0
+layout__inner--padded-top-0
+layout__inner--padded-right-0
+layout__inner--padded-bottom-0
+layout__inner--padded-left-0
 
-layout__inner--padding-top-70
-layout__inner--padding-right-70
-layout__inner--padding-bottom-70
-layout__inner--padding-left-70
+layout__inner--padded-top-70
+layout__inner--padded-right-70
+layout__inner--padded-bottom-70
+layout__inner--padded-left-70
 
-layout__inner--padding-top-80
-layout__inner--padding-right-80
-layout__inner--padding-bottom-80
-layout__inner--padding-left-80
+layout__inner--padded-top-80
+layout__inner--padded-right-80
+layout__inner--padded-bottom-80
+layout__inner--padded-left-80
 
-layout__inner--padding-top-90
-layout__inner--padding-right-90
-layout__inner--padding-bottom-90
-layout__inner--padding-left-90
+layout__inner--padded-top-90
+layout__inner--padded-right-90
+layout__inner--padded-bottom-90
+layout__inner--padded-left-90
 
-layout__inner--padding-top-200
-layout__inner--padding-right-200
-layout__inner--padding-bottom-200
-layout__inner--padding-left-200
+layout__inner--padded-top-200
+layout__inner--padded-right-200
+layout__inner--padded-bottom-200
+layout__inner--padded-left-200
 
-layout__inner--padding-top-300
-layout__inner--padding-right-300
-layout__inner--padding-bottom-300
-layout__inner--padding-left-300
+layout__inner--padded-top-300
+layout__inner--padded-right-300
+layout__inner--padded-bottom-300
+layout__inner--padded-left-300
 ```
 
 Columns modifiers
@@ -161,7 +170,7 @@ Example with two sub sections which contain columns
 	</div>
 	<div class="layout__section layout__section--colored">
 		<div class="layout__section-inner">
-			<div class="layout__section layout__section--margin-80">
+			<div class="layout__section layout__section--spaced-80">
 				<div class="layout__columns">
 					<div class="layout__column layout__column--one-half">
 						...
@@ -171,7 +180,7 @@ Example with two sub sections which contain columns
 					</div>
 				</div>
 			</div>
-			<div class="layout__section layout__section--margin-80">
+			<div class="layout__section layout__section--spaced-80">
 				<div class="layout__columns">
 					<div class="layout__column layout__column--one-third">
 						...
