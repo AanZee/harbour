@@ -5,6 +5,7 @@
 Adjust space between sections (modifier 100 doesn't exists since this is the default behavior)
 ```
 layout__section--spaced-0
+layout__section--spaced-60
 layout__section--spaced-70
 layout__section--spaced-80
 layout__section--spaced-90
@@ -14,6 +15,7 @@ layout__section--spaced-300
 
 Adjust space between children
 ```
+layout__section--spacing-60
 layout__section--spacing-70
 layout__section--spacing-80
 layout__section--spacing-90
@@ -60,6 +62,7 @@ layout__inner--compressed
 Adjust section__inner padding
 ```
 layout__inner--padded-0
+layout__inner--padded-60
 layout__inner--padded-70
 layout__inner--padded-80
 layout__inner--padded-90
@@ -67,6 +70,7 @@ layout__inner--padded-200
 layout__inner--padded-300
 
 layout__inner--padded-top-bottom-0
+layout__inner--padded-top-bottom-60
 layout__inner--padded-top-bottom-70
 layout__inner--padded-top-bottom-80
 layout__inner--padded-top-bottom-90
@@ -74,6 +78,7 @@ layout__inner--padded-top-bottom-200
 layout__inner--padded-top-bottom-300
 
 layout__inner--padded-left-right-0
+layout__inner--padded-left-right-60
 layout__inner--padded-left-right-70
 layout__inner--padded-left-right-80
 layout__inner--padded-left-right-90
@@ -84,6 +89,11 @@ layout__inner--padded-top-0
 layout__inner--padded-right-0
 layout__inner--padded-bottom-0
 layout__inner--padded-left-0
+
+layout__inner--padded-top-60
+layout__inner--padded-right-60
+layout__inner--padded-bottom-60
+layout__inner--padded-left-60
 
 layout__inner--padded-top-70
 layout__inner--padded-right-70

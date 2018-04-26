@@ -1,4 +1,9 @@
 // Set standardized spacing size for margins and paddings
+$layout-spacing-60-palm-and-lower: $spacing;
+$layout-spacing-60-hand: $spacing;
+$layout-spacing-60-lap: $spacing;
+$layout-spacing-60-desk-and-up: $spacing;
+
 $layout-spacing-70-palm-and-lower: $spacing;
 $layout-spacing-70-hand: $spacing;
 $layout-spacing-70-lap: $spacing * 1.5;
@@ -159,6 +164,21 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	margin-top: 0;
 }
 
+.layout__section--spaced-60 {
+	@include media(0, $range-palm) {
+		margin-top: $layout-spacing-60-palm-and-lower;
+	}
+	@include media($range-hand) {
+		margin-top: $layout-spacing-60-hand;
+	}
+	@include media($range-lap) {
+		margin-top: $layout-spacing-60-lap;
+	}
+	@include media($range-desk, false) {
+		margin-top: $layout-spacing-60-desk-and-up;
+	}
+}
+
 .layout__section--spaced-70 {
 	@include media(0, $range-palm) {
 		margin-top: $layout-spacing-70-palm-and-lower;
@@ -231,6 +251,24 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	}
 	@include media($range-desk, false) {
 		margin-top: $layout-spacing-300-desk-and-up;
+	}
+}
+
+.layout__section--spacing-60 {
+
+	> :not(:first-child) {
+		@include media(0, $range-palm) {
+			margin-top: $layout-spacing-60-palm-and-lower;
+		}
+		@include media($range-hand) {
+			margin-top: $layout-spacing-60-hand;
+		}
+		@include media($range-lap) {
+			margin-top: $layout-spacing-60-lap;
+		}
+		@include media($range-desk, false) {
+			margin-top: $layout-spacing-60-desk-and-up;
+		}
 	}
 }
 
@@ -394,6 +432,21 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	padding: 0;
 }
 
+.layout__inner--padded-60 {
+	@include media(0, $range-palm) {
+		padding: $layout-spacing-60-palm-and-lower;
+	}
+	@include media($range-hand) {
+		padding: $layout-spacing-60-hand;
+	}
+	@include media($range-lap) {
+		padding: $layout-spacing-60-lap;
+	}
+	@include media($range-desk, false) {
+		padding: $layout-spacing-60-desk-and-up;
+	}
+}
+
 .layout__inner--padded-70 {
 	@include media(0, $range-palm) {
 		padding: $layout-spacing-70-palm-and-lower;
@@ -472,6 +525,25 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 .layout__inner--padded-top-bottom-0 {
 	padding-top: 0;
 	padding-bottom: 0;
+}
+
+.layout__inner--padded-top-bottom-60 {
+	@include media(0, $range-palm) {
+		padding-top: $layout-spacing-60-palm-and-lower;
+		padding-bottom: $layout-spacing-60-palm-and-lower;
+	}
+	@include media($range-hand) {
+		padding-top: $layout-spacing-60-hand;
+		padding-bottom: $layout-spacing-60-hand;
+	}
+	@include media($range-lap) {
+		padding-top: $layout-spacing-60-lap;
+		padding-bottom: $layout-spacing-60-lap;
+	}
+	@include media($range-desk, false) {
+		padding-top: $layout-spacing-60-desk-and-up;
+		padding-bottom: $layout-spacing-60-desk-and-up;
+	}
 }
 
 .layout__inner--padded-top-bottom-70 {
@@ -572,6 +644,25 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 .layout__inner--padded-left-right-0 {
 	padding-right: 0;
 	padding-left: 0;
+}
+
+.layout__inner--padded-left-right-60 {
+	@include media(0, $range-palm) {
+		padding-right: $layout-spacing-60-palm-and-lower;
+		padding-left: $layout-spacing-60-palm-and-lower;
+	}
+	@include media($range-hand) {
+		padding-right: $layout-spacing-60-hand;
+		padding-left: $layout-spacing-60-hand;
+	}
+	@include media($range-lap) {
+		padding-right: $layout-spacing-60-lap;
+		padding-left: $layout-spacing-60-lap;
+	}
+	@include media($range-desk, false) {
+		padding-right: $layout-spacing-60-desk-and-up;
+		padding-left: $layout-spacing-60-desk-and-up;
+	}
 }
 
 .layout__inner--padded-left-right-70 {
@@ -683,6 +774,66 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 .layout__inner--padded-left-0 {
 	padding-left: 0;
+}
+
+.layout__inner--padded-top-60 {
+	@include media(0, $range-palm) {
+		padding-top: $layout-spacing-60-palm-and-lower;
+	}
+	@include media($range-hand) {
+		padding-top: $layout-spacing-60-hand;
+	}
+	@include media($range-lap) {
+		padding-top: $layout-spacing-60-lap;
+	}
+	@include media($range-desk, false) {
+		padding-top: $layout-spacing-60-desk-and-up;
+	}
+}
+
+.layout__inner--padded-right-60 {
+	@include media(0, $range-palm) {
+		padding-right: $layout-spacing-60-palm-and-lower;
+	}
+	@include media($range-hand) {
+		padding-right: $layout-spacing-60-hand;
+	}
+	@include media($range-lap) {
+		padding-right: $layout-spacing-60-lap;
+	}
+	@include media($range-desk, false) {
+		padding-right: $layout-spacing-60-desk-and-up;
+	}
+}
+
+.layout__inner--padded-bottom-60 {
+	@include media(0, $range-palm) {
+		padding-bottom: $layout-spacing-60-palm-and-lower;
+	}
+	@include media($range-hand) {
+		padding-bottom: $layout-spacing-60-hand;
+	}
+	@include media($range-lap) {
+		padding-bottom: $layout-spacing-60-lap;
+	}
+	@include media($range-desk, false) {
+		padding-bottom: $layout-spacing-60-desk-and-up;
+	}
+}
+
+.layout__inner--padded-left-60 {
+	@include media(0, $range-palm) {
+		padding-left: $layout-spacing-60-palm-and-lower;
+	}
+	@include media($range-hand) {
+		padding-left: $layout-spacing-60-hand;
+	}
+	@include media($range-lap) {
+		padding-left: $layout-spacing-60-lap;
+	}
+	@include media($range-desk, false) {
+		padding-left: $layout-spacing-60-desk-and-up;
+	}
 }
 
 .layout__inner--padded-top-70 {
