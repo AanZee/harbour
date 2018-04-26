@@ -230,6 +230,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spacing-70 {
+
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-70-palm-and-lower;
@@ -247,6 +248,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spacing-80 {
+
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-80-palm-and-lower;
@@ -264,6 +266,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spacing-90 {
+
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-90-palm-and-lower;
@@ -281,6 +284,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spacing-100 {
+
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-palm-and-lower;
@@ -298,6 +302,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spacing-200 {
+
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-200-palm-and-lower;
@@ -315,6 +320,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spacing-300 {
+
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-300-palm-and-lower;
