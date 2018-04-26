@@ -1,42 +1,64 @@
+$dialog-border-width: ($spacing / 8) !default;
+$dialog-border-radius: $border-radius-200 !default;
+
+$dialog-border-color: $color-ui-accent !default;
+$dialog-background-color: $color-ui-accent-20 !default;
+$dialog-color: $color-ui-accent-500 !default;
+$dialog-icon-fill: $color-ui-accent !default;
+
+$dialog-success-border-color: $color-success-200 !default;
+$dialog-success-background-color: $color-success-30 !default;
+$dialog-success-color: $color-success-600 !default;
+$dialog-success-icon-fill: $color-success-600 !default;
+
+$dialog-warning-border-color: $color-warning-300 !default;
+$dialog-warning-background-color: $color-warning-70 !default;
+$dialog-warning-color: $color-warning-700 !default;
+$dialog-warning-icon-fill: $color-warning-700 !default;
+
+$dialog-error-border-color: $color-error-300 !default;
+$dialog-error-background-color: $color-error-50 !default;
+$dialog-error-color: $color-text-diap !default;
+$dialog-error-icon-fill: $color-error-600 !default;
+
 .dialog {
 	display: flex;
-	border: ($spacing / 8) solid $color-ui-accent;
-	border-radius: $border-radius-200;
-	background-color: $color-ui-accent-20;
-	color: $color-ui-accent-500;
-	font-size: $font-size-100;
+	border: $dialog-border-width solid $border-color;
+	border-radius: $dialog-border-radius;
+	background-color: $dialog-background-color;
+	color: $dialog-color;
 	align-items: center;
 
 	@include media(0, $range-hand) {
-		padding: ($spacing * 1.5);
+		padding: $spacing * 1.5;
 	}
 	@include media($range-lap,false) {
-		padding: ($spacing * 2);
+		padding: $spacing * 2;
 	}
 }
 
 .dialog--success {
-	border-color: $color-success-200;
-	background-color: $color-success-30;
-	color: $color-success-600;
+	border-color: $dialog-success-border-color;
+	background-color: $dialog-success-background-color;
+	color: $dialog-success-color;
 }
 
 .dialog--warning {
-	border-color: $color-warning-300;
-	background-color: $color-warning-70;
-	color: $color-warning-700;
+	border-color: $dialog-warning-border-color;
+	background-color: $dialog-warning-background-color;
+	color: $dialog-warning-color;
 }
 
 .dialog--error {
-	border-color: $color-error-300;
-	background-color: $color-error-50;
-	color: $color-error-600;
+	border-color: $dialog-error-border-color;
+	background-color: $dialog-error-background-color;
+	color: $dialog-error-color;
 }
 
 .dialog__icon {
 	margin-right: $spacing * 2;
 	flex-shrink: 0;
-	fill: $color-ui-accent;
+	fill: $dialog-icon-fill;
 
 	@include media(0, $range-hand) {
 		width: $spacing * 4;
@@ -48,14 +70,14 @@
 	}
 
 	.dialog--success & {
-		fill: $color-success-600;
+		fill: $dialog-success-icon-fill;
 	}
 
 	.dialog--warning & {
-		fill: $color-warning-700;
+		fill: $dialog-warning-icon-fill;
 	}
 
 	.dialog--error & {
-		fill: $color-error-600;
+		fill: $dialog-error-icon-fill;
 	}
 }

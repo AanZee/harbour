@@ -1,3 +1,10 @@
+# 1.4.0
+
+## Features
+* Add layout layout to build flexible interface outlines
+* Add button outset variable to the button control to add a 3D look to your buttons
+* Add variables to dialog component to override default styling
+
 # 1.3.0
 
 ## Features

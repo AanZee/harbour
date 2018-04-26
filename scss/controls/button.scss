@@ -1,12 +1,14 @@
+$button-outset: 0 !default;
+
 $button-color: $color-text-diap !default;
 $button-background-color: $color-ui-90 !default;
 $button-hover-color: $color-text-diap !default;
 $button-hover-background-color: $color-ui-200 !default;
-$button-focus-box-shadow: inset 0 0 0 2px $color-primary-400 !default;
+$button-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-primary-400 !default;
 $button-active-color: $color-text-diap !default;
 $button-active-background-color: $color-ui-400 !default;
-$button-disabled-color: $color-text-diap !default;
-$button-disabled-background-color: $color-ui-40 !default;
+$button-outset-box-shadow: 0 $button-outset 0 0 shade($button-background-color, 25%) !default;
+$button-disabled-opacity: 0.35 !default;
 
 .button {
 	display: inline-block;
@@ -15,54 +17,68 @@ $button-disabled-background-color: $color-ui-40 !default;
 	color: $button-color;
 	text-align: center;
 	font-weight: normal;
-	line-height: 16px;
+	line-height: $spacing * 2;
 	cursor: pointer;
 	user-select: none;
+	@if ($button-outset) {
+		box-shadow: $button-outset-box-shadow;
+	}
 
 	@include media(0, $range-palm) {
-		padding: 8px 24px;
+		padding: $spacing ($spacing * 3);
 		font-size: $font-size-100;
 	}
 	@include media($range-hand, false) {
-		padding: 16px 40px;
+		padding: ($spacing * 2) ($spacing * 5);
 		font-size: $font-size-200;
 	}
 
 	&:hover {
 		background-color: $button-hover-background-color;
 		color: $button-hover-color;
-	};
+	}
 
 	&:focus {
-		box-shadow: $button-focus-box-shadow;
+		@if ($button-outset) {
+			box-shadow: $button-focus-box-shadow, $button-outset-box-shadow;
+		}
+		@else {
+			box-shadow: $button-focus-box-shadow;
+		}
 	}
 
 	&:active {
 		background-color: $button-active-background-color;
 		color: $button-active-color;
+		@if ($button-outset) {
+			position: relative;
+			top: $button-outset;
+		}
 	}
 
 	&:disabled {
-		background-color: $button-disabled-background-color;
-		color: $button-disabled-color;
+		opacity: $button-disabled-opacity;
 		cursor: not-allowed;
+		pointer-events: none;
 	}
 }
 
-// Color varations
+// Color variations
 $button-call-to-action-color: $color-text-diap !default;
 $button-call-to-action-background-color: $color-call-to-action-100 !default;
 $button-call-to-action-hover-color: $color-text-diap !default;
 $button-call-to-action-hover-background-color: $color-call-to-action-200 !default;
-$button-call-to-action-focus-box-shadow: inset 0 0 0 2px $color-call-to-action-400 !default;
+$button-call-to-action-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-call-to-action-400 !default;
 $button-call-to-action-active-color: $color-text-diap !default;
 $button-call-to-action-active-background-color: $color-call-to-action-300 !default;
-$button-call-to-action-disabled-color: $color-text-diap !default;
-$button-call-to-action-disabled-background-color: $color-call-to-action-40 !default;
+$button-call-to-action-outset-box-shadow: 0 $button-outset 0 0 shade($button-call-to-action-background-color, 25%) !default;
 
 .button--call-to-action {
 	background-color: $button-call-to-action-background-color;
 	color: $button-call-to-action-color;
+	@if ($button-outset) {
+		box-shadow: $button-call-to-action-outset-box-shadow;
+	}
 
 	&:hover {
 		background-color: $button-call-to-action-hover-background-color;
@@ -70,33 +86,36 @@ $button-call-to-action-disabled-background-color: $color-call-to-action-40 !defa
 	}
 
 	&:focus {
-		box-shadow: $button-call-to-action-focus-box-shadow;
+		@if $button-outset {
+			box-shadow: $button-call-to-action-focus-box-shadow, $button-call-to-action-outset-box-shadow;
+		}
+		@else {
+			box-shadow: $button-call-to-action-focus-box-shadow;
+		}
 	}
 
 	&:active {
 		background-color: $button-call-to-action-active-background-color;
 		color: $button-call-to-action-active-color;
 	}
-
-	&:disabled {
-		background-color: $button-call-to-action-disabled-background-color;
-		color: $button-call-to-action-disabled-color;
-	}
 }
 
 $button-primary-color: $color-text-diap !default;
 $button-primary-background-color: $color-primary-100 !default;
+$button-primary-box-shadow: 0 ($spacing / 4) 0 0 $color-primary-400 !default;
 $button-primary-hover-color: $color-text-diap !default;
 $button-primary-hover-background-color: $color-primary-300 !default;
-$button-primary-focus-box-shadow: inset 0 0 0 2px $color-primary-500 !default;
+$button-primary-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-primary-500 !default;
 $button-primary-active-color: $color-text-diap !default;
 $button-primary-active-background-color: $color-primary-400 !default;
-$button-primary-disabled-color: $color-text-diap !default;
-$button-primary-disabled-background-color: $color-primary-40 !default;
+$button-primary-outset-box-shadow: 0 $button-outset 0 0 shade($button-primary-background-color, 25%) !default;
 
 .button--primary {
 	background-color: $button-primary-background-color;
 	color: $button-primary-color;
+	@if ($button-outset) {
+		box-shadow: $button-primary-outset-box-shadow;
+	}
 
 	&:hover {
 		background-color: $button-primary-hover-background-color;
@@ -104,33 +123,36 @@ $button-primary-disabled-background-color: $color-primary-40 !default;
 	}
 
 	&:focus {
-		box-shadow: $button-primary-focus-box-shadow;
+		@if ($button-outset) {
+			box-shadow: $button-primary-focus-box-shadow, $button-primary-outset-box-shadow;
+		}
+		@else {
+			box-shadow: $button-primary-focus-box-shadow;
+		}
 	}
 
 	&:active {
 		background-color: $button-primary-active-background-color;
 		color: $button-primary-active-color;
 	}
-
-	&:disabled {
-		background-color: $button-primary-disabled-background-color;
-		color: $button-primary-disabled-color;
-	}
 }
 
 $button-secondary-color: $color-text-diap !default;
 $button-secondary-background-color: $color-secondary-100 !default;
+$button-secondary-box-shadow: 0 ($spacing / 4) 0 0 $color-secondary-400 !default;
 $button-secondary-hover-color: $color-text-diap !default;
 $button-secondary-hover-background-color: $color-secondary-200 !default;
-$button-secondary-focus-box-shadow: inset 0 0 0 2px $color-secondary-400 !default;
+$button-secondary-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-secondary-400 !default;
 $button-secondary-active-color: $color-text-diap !default;
 $button-secondary-active-background-color: $color-secondary-300 !default;
-$button-secondary-disabled-color: $color-text-diap !default;
-$button-secondary-disabled-background-color: $color-secondary-40 !default;
+$button-secondary-outset-box-shadow: 0 $button-outset 0 0 shade($button-secondary-background-color, 25%) !default;
 
 .button--secondary {
 	background-color: $button-secondary-background-color;
 	color: $button-secondary-color;
+	@if ($button-outset) {
+		box-shadow: $button-secondary-outset-box-shadow;
+	}
 
 	&:hover {
 		background-color: $button-secondary-hover-background-color;
@@ -138,151 +160,145 @@ $button-secondary-disabled-background-color: $color-secondary-40 !default;
 	}
 
 	&:focus {
-		box-shadow: $button-secondary-focus-box-shadow;
+		@if ($button-outset) {
+			box-shadow: $button-secondary-focus-box-shadow, $button-secondary-outset-box-shadow;
+		}
+		@else {
+			box-shadow: $button-secondary-focus-box-shadow;
+		}
 	}
 
 	&:active {
 		background-color: $button-secondary-active-background-color;
 		color: $button-secondary-active-color;
 	}
-
-	&:disabled {
-		background-color: $button-secondary-disabled-background-color;
-		color: $button-secondary-disabled-color;
-	}
 }
 
 // Outline versions
-$button-outline-border-width: 2px !default;
+$button-outline-border-width: ($spacing / 4) !default;
+$button-outline-box-shadow: inset 0 0 0 $button-outline-border-width $button-background-color !default;
+$button-outline-hover-box-shadow: inset 0 0 0 $button-outline-border-width $button-hover-background-color !default;
+$button-outline-active-box-shadow: inset 0 0 0 $button-outline-border-width $button-active-background-color !default;
+$button-outline-call-to-action-box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-background-color !default;
+$button-outline-call-to-action-hover-box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-hover-background-color !default;
+$button-outline-call-to-action-active-box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-active-background-color !default;
+$button-outline-primary-box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-background-color !default;
+$button-outline-primary-hover-box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-hover-background-color !default;
+$button-outline-primary-active-box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-active-background-color !default;
+$button-outline-secondary-box-shadow: inset 0 0 0 $button-outline-border-width $button-secondary-background-color !default;
+$button-outline-secondary-hover-box-shadow: inset 0 0 0 $button-outline-border-width $button-secondary-hover-background-color !default;
+$button-outline-secondary-active-box-shadow: inset 0 0 0 $button-outline-border-width $button-secondary-active-background-color !default;
 
 .button--outline {
 	background-color: transparent;
 	background-image: none;
-	box-shadow: inset 0 0 0 $button-outline-border-width $button-background-color;
+	box-shadow: $button-outline-box-shadow;
 	color: $button-background-color;
 
 	&:hover {
 		background-color: transparent;
 		background-image: none;
-		box-shadow: inset 0 0 0 $button-outline-border-width $button-hover-background-color;
+		box-shadow: $button-outline-hover-box-shadow;
 		color: $button-hover-background-color;
 	}
 
 	&:focus {
-		box-shadow: $button-focus-box-shadow, inset 0 0 0 $button-outline-border-width $button-background-color;
+		box-shadow: $button-focus-box-shadow, $button-outline-box-shadow;
 	}
 
 	&:active {
 		background-color: transparent;
 		background-image: none;
-		box-shadow: inset 0 0 0 $button-outline-border-width $button-active-background-color;
+		box-shadow: $button-outline-active-box-shadow;
 		color: $button-active-background-color;
-	}
-
-	&:disabled {
-		background-color: transparent;
-		background-image: none;
-		box-shadow: inset 0 0 0 $button-outline-border-width $button-disabled-background-color;
-		color: $button-disabled-background-color;
+		@if ($button-outset) {
+			top: 0;
+		}
 	}
 
 	&.button--call-to-action {
-		box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-background-color;
+		box-shadow: $button-outline-call-to-action-box-shadow;
 		color: $button-call-to-action-background-color;
 
 		&:hover {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-hover-background-color;
+			box-shadow: $button-outline-call-to-action-hover-box-shadow;
 			color: $button-call-to-action-hover-background-color;
 		}
 
 		&:focus {
-			box-shadow: $button-call-to-action-focus-box-shadow, inset 0 0 0 $button-outline-border-width $button-call-to-action-background-color;
+			box-shadow: $button-call-to-action-focus-box-shadow, $button-outline-call-to-action-box-shadow;
 		}
 
 		&:active {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-active-background-color;
+			box-shadow: $button-outline-call-to-action-active-box-shadow;
 			color: $button-call-to-action-active-background-color;
-		}
-
-		&:disabled {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-disabled-background-color;
-			color: $button-call-to-action-disabled-background-color;
 		}
 	}
 
 	&.button--primary {
-		box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-background-color;
+		box-shadow: $button-outline-primary-box-shadow;
 		color: $button-primary-background-color;
 
 		&:hover {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-hover-background-color;
+			box-shadow: $button-outline-primary-hover-box-shadow;
 			color: $button-primary-hover-background-color;
 		}
 
 		&:focus {
-			box-shadow: $button-primary-focus-box-shadow, inset 0 0 0 $button-outline-border-width $button-primary-background-color;
+			box-shadow: $button-primary-focus-box-shadow, $button-outline-primary-box-shadow;
 		}
 
 		&:active {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-active-background-color;
+			box-shadow: $button-outline-primary-active-box-shadow;
 			color: $button-primary-active-background-color;
-		}
-
-		&:disabled {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-disabled-background-color;
-			color: $button-primary-disabled-background-color;
 		}
 	}
 
 	&.button--secondary {
-		box-shadow: inset 0 0 0 $button-outline-border-width $button-secondary-background-color;
+		box-shadow: $button-outline-secondary-box-shadow;
 		color: $button-secondary-background-color;
 
 		&:hover {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-secondary-hover-background-color;
+			box-shadow: $button-outline-secondary-hover-box-shadow;
 			color: $button-secondary-hover-background-color;
 		}
 
 		&:focus {
-			box-shadow: $button-secondary-focus-box-shadow, inset 0 0 0 $button-outline-border-width $button-secondary-background-color;
+			box-shadow: $button-secondary-focus-box-shadow, $button-outline-secondary-box-shadow;
 		}
 
 		&:active {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-secondary-active-background-color;
+			box-shadow: $button-outline-secondary-active-box-shadow;
 			color: $button-secondary-active-background-color;
-		}
-
-		&:disabled {
-			box-shadow: inset 0 0 0 $button-outline-border-width $button-secondary-disabled-background-color;
-			color: $button-secondary-disabled-background-color;
 		}
 	}
 }
 
 // Sizes
+
 .button--80 {
-	padding: 4px 16px;
+	padding: ($spacing / 2) ($spacing * 2);
 	font-size: $font-size-90;
 }
 
 .button--90 {
 	@include media(0, $range-palm) {
-		padding: 8px 20px;
+		padding: $spacing ($spacing * 2.5);
 		font-size: $font-size-90;
 	}
 	@include media($range-hand, false) {
-		padding: 12px 20px;
+		padding: ($spacing * 1.5) ($spacing * 2.5);
 		font-size: $font-size-100;
 	}
 }
 
 .button--200 {
 	@include media(0, $range-palm) {
-		padding: 12px 32px;
+		padding: ($spacing * 1.5) ($spacing * 4);
 		font-size: $font-size-200;
 	}
 	@include media($range-hand, false) {
-		padding: 20px 40px;
+		padding: ($spacing * 2.5) ($spacing * 5);
 		font-size: $font-size-300;
 	}
 }
