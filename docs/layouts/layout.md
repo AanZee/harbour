@@ -36,7 +36,8 @@ layout__section--elevated
 
 Adjust section behavior
 ```
-layout__section--sticky
+layout__section--sticky-top
+layout__section--sticky-bottom
 ```
 
 Adjust behavior of children
