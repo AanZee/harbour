@@ -1,24 +1,24 @@
-$dialog-border-color: $color-ui-accent;
-$dialog-border-width: ($spacing / 8);
-$dialog-background-color: $color-ui-accent-20;
-$dialog-border-radius: $border-radius-200;
-$dialog-color: $color-ui-accent-500;
-$dialog-icon-fill: $color-ui-accent;
+$dialog-border-color: $color-ui-accent !default;
+$dialog-border-width: ($spacing / 8) !default;
+$dialog-background-color: $color-ui-accent-20 !default;
+$dialog-border-radius: $border-radius-200 !default;
+$dialog-color: $color-ui-accent-500 !default;
+$dialog-icon-fill: $color-ui-accent !default;
 
-$dialog-success-border-color: $color-success-200;
-$dialog-success-background-color: $color-success-30;
-$dialog-success-color: $color-success-600;
-$dialog-success-icon-fill: $color-success-600;
+$dialog-success-border-color: $color-success-200 !default;
+$dialog-success-background-color: $color-success-30 !default;
+$dialog-success-color: $color-success-600 !default;
+$dialog-success-icon-fill: $color-success-600 !default;
 
-$dialog-warning-border-color: $color-warning-300;
-$dialog-warning-background-color: $color-warning-70;
-$dialog-warning-color: $color-warning-700;
-$dialog-warning-icon-fill: $color-warning-700;
+$dialog-warning-border-color: $color-warning-300 !default;
+$dialog-warning-background-color: $color-warning-70 !default;
+$dialog-warning-color: $color-warning-700 !default;
+$dialog-warning-icon-fill: $color-warning-700 !default;
 
-$dialog-error-border-color: $color-error-300;
-$dialog-error-background-color: $color-error-50;
-$dialog-error-color: $color-text-diap;
-$dialog-error-icon-fill: $color-error-600;
+$dialog-error-border-color: $color-error-300 !default;
+$dialog-error-background-color: $color-error-50 !default;
+$dialog-error-color: $color-text-diap !default;
+$dialog-error-icon-fill: $color-error-600 !default;
 
 .dialog {
 	display: flex;
