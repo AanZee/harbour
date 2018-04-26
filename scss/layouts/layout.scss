@@ -404,6 +404,11 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	}
 }
 
+.layout__inner--fitted {
+	max-width: none;
+	width: auto;
+}
+
 .layout__inner--stretched {
 	max-width: none;
 }
