@@ -408,6 +408,10 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	max-width: none;
 }
 
+.layout__inner--expanded {
+	max-width: $spacing * 280;
+}
+
 .layout__inner--extended {
 	max-width: $spacing * 240;
 }

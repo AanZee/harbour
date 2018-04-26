@@ -52,6 +52,7 @@ layout__section--vertical-centering
 Adjust section__inner max-width
 ```
 layout__inner--stretched
+layout__inner--expanded
 layout__inner--extended
 layout__inner--wide
 layout__inner--narrow
