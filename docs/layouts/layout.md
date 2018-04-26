@@ -12,7 +12,7 @@ layout__section--spaced-200
 layout__section--spaced-300
 ```
 
-Adjust space between children of a section
+Adjust space between children
 ```
 layout__section--spacing-70
 layout__section--spacing-80
@@ -36,8 +36,12 @@ layout__section--elevated
 
 Adjust section behavior
 ```
-layout__section--wrapping
 layout__section--sticky
+```
+
+Adjust behavior of children
+```
+layout__section--wrapping
 layout__section--right-aligning
 layout__section--vertical-centering
 ```
@@ -108,9 +112,9 @@ layout__inner--padded-left-300
 
 Columns modifiers
 ```
-layout__columns--margin-0
-layout__columns--margin-90
-layout__columns--nowrap-lap-and-up
+layout__columns--spacing-0
+layout__columns--spacing-90
+layout__columns--not-wrapping-lap-and-up
 ```
 
 Add specific width to column
