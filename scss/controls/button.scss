@@ -87,7 +87,8 @@ $button-call-to-action-outset-box-shadow: 0 $button-outset 0 0 shade($button-cal
 	&:focus {
 		@if $button-outset {
 			box-shadow: $button-call-to-action-focus-box-shadow, $button-call-to-action-outset-box-shadow;
-		} @else {
+		}
+		@else {
 			box-shadow: $button-call-to-action-focus-box-shadow;
 		}
 	}
@@ -123,7 +124,8 @@ $button-primary-outset-box-shadow: 0 $button-outset 0 0 shade($button-primary-ba
 	&:focus {
 		@if ($button-outset) {
 			box-shadow: $button-primary-focus-box-shadow, $button-primary-outset-box-shadow;
-		} @else {
+		}
+		@else {
 			box-shadow: $button-primary-focus-box-shadow;
 		}
 	}
@@ -159,7 +161,8 @@ $button-secondary-outset-box-shadow: 0 $button-outset 0 0 shade($button-secondar
 	&:focus {
 		@if ($button-outset) {
 			box-shadow: $button-secondary-focus-box-shadow, $button-secondary-outset-box-shadow;
-		} @else {
+		}
+		@else {
 			box-shadow: $button-secondary-focus-box-shadow;
 		}
 	}
