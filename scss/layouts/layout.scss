@@ -9,7 +9,7 @@ $layout-spacing-70-hand: $spacing;
 $layout-spacing-70-lap: $spacing * 1.5;
 $layout-spacing-70-desk-and-up: $spacing * 2;
 
-$layout-spacing-80-palm-and-lower: $spacing * 2;
+$layout-spacing-80-palm-and-lower: $spacing * 1.5;
 $layout-spacing-80-hand: $spacing * 2;
 $layout-spacing-80-lap: $spacing * 2;
 $layout-spacing-80-desk-and-up: $spacing * 3;
@@ -138,8 +138,12 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	box-shadow: $layout-section-elevated-box-shadow;
 }
 
-.layout__section--wrapping {
-	flex-wrap: wrap;
+.layout__section--fitted {
+	flex-grow: 0;
+
+	&:last-child {
+		flex-grow: 0;
+	}
 }
 
 .layout__section--sticky-top {
@@ -150,14 +154,6 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 .layout__section--sticky-bottom {
 	position: sticky;
 	bottom: 0;
-}
-
-.layout__section--right-aligning {
-	justify-content: flex-end;
-}
-
-.layout__section--vertical-centering {
-	align-items: center;
 }
 
 .layout__section--spaced-0 {
@@ -378,6 +374,23 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-300-desk-and-up;
 		}
 	}
+}
+
+.layout__section--wrapping {
+	flex-wrap: wrap;
+}
+
+.layout__section--right-aligning {
+	align-items: flex-end;
+}
+
+.layout__section--vertical-centering {
+	justify-content: center;
+}
+
+.layout__section--centering {
+	justify-content: center;
+	align-items: center;
 }
 
 .layout__inner {
