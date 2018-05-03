@@ -3,6 +3,11 @@
 
 ## Available modifiers
 
+Adjust display
+```
+popover--inlined
+```
+
 Adjust position of body
 ```
 popover--left-bottom-aligned-body
@@ -11,6 +16,12 @@ popover--right-bottom-aligned-body
 popover--left-top-aligned-body
 popover--center-top-aligned-body
 popover--right-top-aligned-body
+```
+
+Adjust width of body
+```
+popover--scaled
+popover--flexible
 ```
 
 Add arrow

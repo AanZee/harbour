@@ -26,6 +26,16 @@ $popover-z-index-lap-and-up: 600 !default;
 	}
 }
 
+.popover--inlined {
+	display: inline-flex;
+}
+
+.popover--scaled {
+}
+
+.popover--flexible {
+}
+
 .popover--arrow {
 }
 
@@ -382,6 +392,20 @@ $popover-z-index-lap-and-up: 600 !default;
 	.popover--right-top-aligned-body.popover--arrow & {
 		@include media($range-lap, false) {
 			top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
+		}
+	}
+
+	.popover--scaled & {
+		@include media($range-lap, false) {
+			right: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	.popover--flexible & {
+		@include media($range-lap, false) {
+			width: auto;
 		}
 	}
 }
