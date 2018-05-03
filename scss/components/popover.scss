@@ -5,15 +5,16 @@ $popover-animation-duration-lap-and-higher: 100ms !default;
 // Set arrow size.
 $popover-arrow-size: $spacing * 1.75 !default;
 
-// Set position of arrow relative to action when arrow is set. How much should the arrow cover the action.
-$popover-arrow-vertical-position: $spacing * -1 !default;
+// Set position of arrow relative to action when arrow is set.
+$popover-arrow-horizontal-position: $spacing !default;
+$popover-arrow-vertical-position: $spacing !default;
+
+// Set horizontal position of body to visually separate popover body from action.
+$popover-body-horizontal-position: $spacing * -1 !default;
 
 // Set z-index for different ranges. On hand and lower the popover should be above components such as a persistent-bottom-sheet, on lap and up the popover should be beneath components such as a persistent-bottom-sheet.
 $popover-z-index-hand-and-lower: 800 !default;
 $popover-z-index-lap-and-up: 600 !default;
-
-// Set indention of body to visually separate popover body from action.
-$popover-body-indention: $spacing * -1 !default;
 
 .popover {
 	position: relative;
@@ -98,8 +99,8 @@ $popover-body-indention: $spacing * -1 !default;
 			&::before {
 				top: auto;
 				right: auto;
-				bottom: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1) + 1px;
-				left: 8px;
+				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px;
+				left: $popover-arrow-horizontal-position;
 				border-top-color: transparent;
 				border-bottom-color: rgba($color-black, 0.075);
 			}
@@ -107,8 +108,8 @@ $popover-body-indention: $spacing * -1 !default;
 			&::after {
 				top: auto;
 				right: auto;
-				bottom: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1);
-				left: 9px;
+				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
+				left: $popover-arrow-horizontal-position + 1px;
 				border-top-color: transparent;
 				border-bottom-color: $color-background;
 			}
@@ -118,7 +119,7 @@ $popover-body-indention: $spacing * -1 !default;
 			&::before {
 				top: auto;
 				right: auto;
-				bottom: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1) + 1px;
+				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px;
 				left: 50%;
 				border-top-color: transparent;
 				border-bottom-color: rgba($color-black, 0.075);
@@ -128,7 +129,7 @@ $popover-body-indention: $spacing * -1 !default;
 			&::after {
 				top: auto;
 				right: auto;
-				bottom: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1);
+				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
 				left: 50%;
 				border-top-color: transparent;
 				border-bottom-color: $color-background;
@@ -139,8 +140,8 @@ $popover-body-indention: $spacing * -1 !default;
 		.popover--arrow.popover--right-bottom-aligned-body & {
 			&::before {
 				top: auto;
-				right: 8px;
-				bottom: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1) + 1px;
+				right: $popover-arrow-horizontal-position;
+				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px;
 				left: auto;
 				border-top-color: transparent;
 				border-bottom-color: rgba($color-black, 0.075);
@@ -148,8 +149,8 @@ $popover-body-indention: $spacing * -1 !default;
 
 			&::after {
 				top: auto;
-				right: 9px;
-				bottom: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1);
+				right: $popover-arrow-horizontal-position + 1px;
+				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
 				left: auto;
 				border-top-color: transparent;
 				border-bottom-color: $color-background;
@@ -158,19 +159,19 @@ $popover-body-indention: $spacing * -1 !default;
 
 		.popover--arrow.popover--left-top-aligned-body & {
 			&::before {
-				top: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1) + 1px;
+				top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px;
 				right: auto;
 				bottom: auto;
-				left: 8px;
+				left: $popover-arrow-horizontal-position;
 				border-top-color: rgba($color-black, 0.075);
 				border-bottom-color: transparent;
 			}
 
 			&::after {
-				top: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1);
+				top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
 				right: auto;
 				bottom: auto;
-				left: 9px;
+				left: $popover-arrow-horizontal-position + 1px;
 				border-top-color: $color-background;
 				border-bottom-color: transparent;
 			}
@@ -178,7 +179,7 @@ $popover-body-indention: $spacing * -1 !default;
 
 		.popover--arrow.popover--center-top-aligned-body & {
 			&::before {
-				top: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1) + 1px;
+				top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px;
 				right: auto;
 				bottom: auto;
 				left: 50%;
@@ -188,7 +189,7 @@ $popover-body-indention: $spacing * -1 !default;
 			}
 
 			&::after {
-				top: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1);
+				top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
 				right: auto;
 				bottom: auto;
 				left: 50%;
@@ -200,8 +201,8 @@ $popover-body-indention: $spacing * -1 !default;
 
 		.popover--arrow.popover--right-top-aligned-body & {
 			&::before {
-				top: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1) + 1px;
-				right: 8px;
+				top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px;
+				right: $popover-arrow-horizontal-position;
 				bottom: auto;
 				left: auto;
 				border-top-color: rgba($color-black, 0.075);
@@ -209,8 +210,8 @@ $popover-body-indention: $spacing * -1 !default;
 			}
 
 			&::after {
-				top: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1);
-				right: 9px;
+				top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
+				right: $popover-arrow-horizontal-position + 1px;
 				bottom: auto;
 				left: auto;
 				border-top-color: $color-background;
@@ -265,10 +266,10 @@ $popover-body-indention: $spacing * -1 !default;
 	@include media($range-lap, false) {
 		position: absolute;
 		top: 100%;
-		left: $popover-body-indention;
+		left: $popover-body-horizontal-position;
 		z-index: $popover-z-index-lap-and-up + 1;
 		display: none; // NOTE To make sure area does not increase height of page.
-		width: 320px;
+		width: $spacing * 40;
 	}
 
 	.popover__status:checked ~ & {
@@ -291,14 +292,14 @@ $popover-body-indention: $spacing * -1 !default;
 			top: 100%;
 			right: auto;
 			bottom: auto;
-			left: $popover-body-indention;
+			left: $popover-body-horizontal-position;
 			transform: translate(0, 0);
 		}
 	}
 
 	.popover--left-bottom-aligned-body.popover--arrow & {
 		@include media($range-lap, false) {
-			top: calc(100% + #{$popover-arrow-size + $popover-arrow-vertical-position});
+			top: calc(100% + #{$popover-arrow-size + ($popover-arrow-vertical-position * -1)});
 		}
 	}
 
@@ -307,21 +308,21 @@ $popover-body-indention: $spacing * -1 !default;
 			top: 100%;
 			right: auto;
 			bottom: auto;
-			left: calc(50% - 160px);
+			left: calc(50% - #{$spacing * 20});
 			transform: translate(0, 0);
 		}
 	}
 
 	.popover--center-bottom-aligned-body.popover--arrow & {
 		@include media($range-lap, false) {
-			top: calc(100% + #{$popover-arrow-size + $popover-arrow-vertical-position});
+			top: calc(100% + #{$popover-arrow-size + ($popover-arrow-vertical-position * -1)});
 		}
 	}
 
 	.popover--right-bottom-aligned-body & {
 		@include media($range-lap, false) {
 			top: 100%;
-			right: $popover-body-indention;
+			right: $popover-body-horizontal-position;
 			bottom: auto;
 			left: auto;
 			transform: translate(0, 0);
@@ -330,7 +331,7 @@ $popover-body-indention: $spacing * -1 !default;
 
 	.popover--right-bottom-aligned-body.popover--arrow & {
 		@include media($range-lap, false) {
-			top: calc(100% + #{$popover-arrow-size + $popover-arrow-vertical-position});
+			top: calc(100% + #{$popover-arrow-size + ($popover-arrow-vertical-position * -1)});
 		}
 	}
 
@@ -339,14 +340,14 @@ $popover-body-indention: $spacing * -1 !default;
 			top: 0;
 			right: auto;
 			bottom: auto;
-			left: $popover-body-indention;
+			left: $popover-body-horizontal-position;
 			transform: translate(0, -100%);
 		}
 	}
 
 	.popover--left-top-aligned-body.popover--arrow & {
 		@include media($range-lap, false) {
-			top: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1);
+			top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
 		}
 	}
 
@@ -355,21 +356,21 @@ $popover-body-indention: $spacing * -1 !default;
 			top: 0;
 			right: auto;
 			bottom: auto;
-			left: calc(50% - 160px);
+			left: calc(50% - #{$spacing * 20});
 			transform: translate(0, -100%);
 		}
 	}
 
 	.popover--center-top-aligned-body.popover--arrow & {
 		@include media($range-lap, false) {
-			top: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1);
+			top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
 		}
 	}
 
 	.popover--right-top-aligned-body & {
 		@include media($range-lap, false) {
 			top: 0;
-			right: $popover-body-indention;
+			right: $popover-body-horizontal-position;
 			bottom: auto;
 			left: auto;
 			transform: translate(0, -100%);
@@ -378,7 +379,7 @@ $popover-body-indention: $spacing * -1 !default;
 
 	.popover--right-top-aligned-body.popover--arrow & {
 		@include media($range-lap, false) {
-			top: ($popover-arrow-size * -1) + ($popover-arrow-vertical-position * -1);
+			top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
 		}
 	}
 }
@@ -405,7 +406,7 @@ $popover-body-indention: $spacing * -1 !default;
 	top: 0;
 	display: flex;
 	margin-bottom: $spacing;
-	min-height: 48px;
+	min-height: $spacing * 6;
 	background-color: rgba($color-background, 0.9);
 	text-align: left; // NOTE: Reset text-align of parent elements.
 	align-items: stretch;
