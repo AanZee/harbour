@@ -9,7 +9,6 @@ $popover-arrow-size: $spacing * 1.75 !default;
 $popover-arrow-vertical-position: $spacing * -1 !default;
 
 // Set z-index for different ranges. On hand and lower the popover should be above components such as a persistent-bottom-sheet, on lap and up the popover should be beneath components such as a persistent-bottom-sheet.
-$popover-z-index: 800 !default;
 $popover-z-index-hand-and-lower: 800 !default;
 $popover-z-index-lap-and-up: 600 !default;
 
@@ -29,6 +28,9 @@ $popover-body-indention: $spacing * -1 !default;
 .popover--arrow {
 }
 
+.popover--center-aligned-arrow {
+}
+
 .popover--left-bottom-aligned-body {
 }
 
@@ -45,9 +47,6 @@ $popover-body-indention: $spacing * -1 !default;
 }
 
 .popover--right-top-aligned-body {
-}
-
-.popover--center-aligned-arrow {
 }
 
 .popover__status {
