@@ -5,14 +5,14 @@ $layout-spacing-60-lap: $spacing;
 $layout-spacing-60-desk-and-up: $spacing;
 
 $layout-spacing-70-palm-and-lower: $spacing;
-$layout-spacing-70-hand: $spacing;
+$layout-spacing-70-hand: $spacing * 1.25;
 $layout-spacing-70-lap: $spacing * 1.5;
-$layout-spacing-70-desk-and-up: $spacing * 2;
+$layout-spacing-70-desk-and-up: $spacing * 1.75;
 
-$layout-spacing-80-palm-and-lower: $spacing * 1.5;
-$layout-spacing-80-hand: $spacing * 2;
+$layout-spacing-80-palm-and-lower: $spacing;
+$layout-spacing-80-hand: $spacing * 1.5;
 $layout-spacing-80-lap: $spacing * 2;
-$layout-spacing-80-desk-and-up: $spacing * 3;
+$layout-spacing-80-desk-and-up: $spacing * 2.5;
 
 $layout-spacing-90-palm-and-lower: $spacing * 1.5;
 $layout-spacing-90-hand: $spacing * 2;
@@ -81,6 +81,11 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 .layout__section--bordered {
 	border: $layout-section-bordered-border;
+}
+
+.layout__section--boxed {
+	border: $layout-section-bordered-border;
+	background-color: $layout-section-neutral-background-color;
 }
 
 .layout__section--bordered-top {
