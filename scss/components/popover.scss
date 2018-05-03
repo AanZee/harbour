@@ -246,10 +246,12 @@ $popover-z-index-lap-and-up: 600 !default;
 	overflow-x: none;
 	overflow-y: auto;
 	max-height: 80vh;
+	-webkit-overflow-scrolling: touch;
 	border: 0;
 	background-color: $color-background;
 	box-shadow: $box-shadow-100;
 	opacity: 0;
+	overscroll-behavior: contain;
 
 	@include media(0, $range-hand) {
 		position: fixed;
@@ -403,6 +405,7 @@ $popover-z-index-lap-and-up: 600 !default;
 
 .popover__header {
 	position: sticky;
+	position: -webkit-sticky;
 	top: 0;
 	display: flex;
 	margin-bottom: $spacing;
@@ -412,28 +415,26 @@ $popover-z-index-lap-and-up: 600 !default;
 	align-items: stretch;
 	justify-content: flex-start; // NOTE: Reset justify-content of parent elements.
 
-	@include media($range-lap, false) {
-		display: none;
-	}
 	@include media(0, $range-hand) {
 		z-index: $popover-z-index-hand-and-lower + 2;
 	}
+
 	@include media($range-lap, false) {
-		z-index: $popover-z-index-lap-and-up + 2;
+		display: none;
 	}
 }
 
 .popover__title {
-	display: block;
+	display: flex;
 	overflow: hidden;
 	padding-left: $spacing * 2;
+	padding-right: $spacing * 2;
 	min-width: 0;
 	color: $color-heading;
-	text-transform: uppercase;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	font-size: $font-size-100;
-	font-weight: 600;
+	font-weight: bold;
 	line-height: $line-height-20;
 	align-self: center;
 	flex-grow: 1;
@@ -444,6 +445,10 @@ $popover-z-index-lap-and-up: 600 !default;
 	display: flex;
 	padding-right: $spacing * 2;
 	padding-left: $spacing * 2;
+	color: $color-primary;
+	font-size: $font-size-100;
+	font-weight: bold;
+	line-height: $line-height-20;
 	cursor: pointer;
 	align-items: center;
 	flex-shrink: 0;
