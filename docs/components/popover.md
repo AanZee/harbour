@@ -39,7 +39,7 @@ popover--center-aligned-arrow
 popover (modifier)
 ├── popover__status
 ├── popover__action
-│	├── button
+│	├── ...
 ├── popover__body
 │	├── popover__header
 │	│	├── popover__title
