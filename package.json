@@ -11,7 +11,7 @@
 	"dependencies": {
 		"bourbon": "5.0.0",
 		"chokidar-cli": "1.2.0",
-		"normalize.css": "7.0.0",
+		"normalize-scss": "7.0.1",
 		"reset-css": "2.2.1",
 		"stylelint": "8.4.0",
 		"stylelint-declaration-block-no-ignored-properties": "1.1.0",
