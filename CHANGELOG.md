@@ -1,3 +1,10 @@
+# 1.5.0
+
+## Features
+* Update normalize to Aan Zee's temporary SCSS version
+* Improve layout layout
+* Add popover component
+
 # 1.4.0
 
 ## Features

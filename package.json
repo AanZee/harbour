@@ -1,7 +1,7 @@
 {
 	"name": "aanzee-harbour",
 	"description": "Global component library",
-	"version": "1.4.2",
+	"version": "1.5.0",
 	"author": "Aan Zee",
 	"license": "MIT",
 	"repository": {
@@ -11,7 +11,7 @@
 	"dependencies": {
 		"bourbon": "5.0.0",
 		"chokidar-cli": "1.2.0",
-		"normalize.css": "7.0.0",
+		"normalize.scss": "github:AanZee/normalize.scss#8.0.1",
 		"reset-css": "2.2.1",
 		"stylelint": "8.4.0",
 		"stylelint-declaration-block-no-ignored-properties": "1.1.0",
