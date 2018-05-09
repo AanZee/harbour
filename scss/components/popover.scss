@@ -1,0 +1,527 @@
+// Set animation duration for different ranges. On hand and lower the whole screen is animated and should therefore be slower.
+$popover-animation-duration-hand-and-lower: 200ms !default;
+$popover-animation-duration-lap-and-higher: 100ms !default;
+
+// Set arrow size.
+$popover-arrow-size: $spacing * 1.75 !default;
+
+// Set position of arrow relative to action when arrow is set.
+$popover-arrow-horizontal-position: $spacing !default;
+$popover-arrow-vertical-position: $spacing !default;
+
+// Set horizontal position of body to visually separate popover body from action.
+$popover-body-horizontal-position: $spacing * -1 !default;
+
+// Set z-index for different ranges. On hand and lower the popover should be above components such as a persistent-bottom-sheet, on lap and up the popover should be beneath components such as a persistent-bottom-sheet.
+$popover-z-index-hand-and-lower: 800 !default;
+$popover-z-index-lap-and-up: 600 !default;
+
+.popover {
+	position: relative;
+	display: flex;
+
+	&.is-disabled {
+		opacity: 0.35;
+		pointer-events: none;
+	}
+}
+
+.popover--inlined {
+	display: inline-flex;
+}
+
+.popover--scaled {
+}
+
+.popover--flexible {
+}
+
+.popover--arrow {
+}
+
+.popover--center-aligned-arrow {
+}
+
+.popover--left-bottom-aligned-body {
+}
+
+.popover--center-bottom-aligned-body {
+}
+
+.popover--right-bottom-aligned-body {
+}
+
+.popover--left-top-aligned-body {
+}
+
+.popover--center-top-aligned-body {
+}
+
+.popover--right-top-aligned-body {
+}
+
+.popover__status {
+	position: absolute;
+	top: 0; // FIX: Fixes some render bugs.
+	left: 0; // FIX: Fixes some render bugs.
+	z-index: -100; // NOTE: Put the input behind the label so it doesn't overlay text.
+	opacity: 0; // NOTE: we use this instead of display:none to allow focusing.
+}
+
+.popover__action {
+	display: flex;
+	align-self: stretch;
+	align-items: center;
+
+	@include media($range-lap, false) {
+		.popover--arrow & {
+			&::before,
+			&::after {
+				position: absolute;
+				z-index: $popover-z-index-lap-and-up + 2;
+				display: none;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-color: transparent;
+				content: '';
+				pointer-events: none;
+			}
+
+			&::before {
+				border-width: $popover-arrow-size + 1px;
+			}
+
+			&::after {
+				border-width: $popover-arrow-size;
+			}
+		}
+
+		.popover--arrow .popover__status:checked ~ &::before,
+		.popover--arrow .popover__status:checked ~ &::after {
+			display: block;
+			animation-name: popoverBodyShowLapAndHigher;
+			animation-duration: $popover-animation-duration-lap-and-higher;
+			animation-fill-mode: forwards;
+		}
+
+		.popover--arrow.popover--left-bottom-aligned-body & {
+			&::before {
+				top: auto;
+				right: auto;
+				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px;
+				left: $popover-arrow-horizontal-position;
+				border-top-color: transparent;
+				border-bottom-color: rgba($color-black, 0.075);
+			}
+
+			&::after {
+				top: auto;
+				right: auto;
+				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
+				left: $popover-arrow-horizontal-position + 1px;
+				border-top-color: transparent;
+				border-bottom-color: $color-background;
+			}
+		}
+
+		.popover--arrow.popover--center-bottom-aligned-body & {
+			&::before {
+				top: auto;
+				right: auto;
+				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px;
+				left: 50%;
+				border-top-color: transparent;
+				border-bottom-color: rgba($color-black, 0.075);
+				transform: translate(-50%, 0);
+			}
+
+			&::after {
+				top: auto;
+				right: auto;
+				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
+				left: 50%;
+				border-top-color: transparent;
+				border-bottom-color: $color-background;
+				transform: translate(-50%, 0);
+			}
+		}
+
+		.popover--arrow.popover--right-bottom-aligned-body & {
+			&::before {
+				top: auto;
+				right: $popover-arrow-horizontal-position;
+				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px;
+				left: auto;
+				border-top-color: transparent;
+				border-bottom-color: rgba($color-black, 0.075);
+			}
+
+			&::after {
+				top: auto;
+				right: $popover-arrow-horizontal-position + 1px;
+				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
+				left: auto;
+				border-top-color: transparent;
+				border-bottom-color: $color-background;
+			}
+		}
+
+		.popover--arrow.popover--left-top-aligned-body & {
+			&::before {
+				top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px;
+				right: auto;
+				bottom: auto;
+				left: $popover-arrow-horizontal-position;
+				border-top-color: rgba($color-black, 0.075);
+				border-bottom-color: transparent;
+			}
+
+			&::after {
+				top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
+				right: auto;
+				bottom: auto;
+				left: $popover-arrow-horizontal-position + 1px;
+				border-top-color: $color-background;
+				border-bottom-color: transparent;
+			}
+		}
+
+		.popover--arrow.popover--center-top-aligned-body & {
+			&::before {
+				top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px;
+				right: auto;
+				bottom: auto;
+				left: 50%;
+				border-top-color: rgba($color-black, 0.075);
+				border-bottom-color: transparent;
+				transform: translate(-50%, 0);
+			}
+
+			&::after {
+				top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
+				right: auto;
+				bottom: auto;
+				left: 50%;
+				border-top-color: $color-background;
+				border-bottom-color: transparent;
+				transform: translate(-50%, 0);
+			}
+		}
+
+		.popover--arrow.popover--right-top-aligned-body & {
+			&::before {
+				top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px;
+				right: $popover-arrow-horizontal-position;
+				bottom: auto;
+				left: auto;
+				border-top-color: rgba($color-black, 0.075);
+				border-bottom-color: transparent;
+			}
+
+			&::after {
+				top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
+				right: $popover-arrow-horizontal-position + 1px;
+				bottom: auto;
+				left: auto;
+				border-top-color: $color-background;
+				border-bottom-color: transparent;
+			}
+		}
+
+		.popover--arrow.popover--center-aligned-arrow & {
+			&::before {
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+
+			&::after {
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+		}
+	}
+
+	.popover__status:focus ~ & > * {
+		box-shadow: inset 0 0 0 2px $color-focus;
+
+		&:active,
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}
+
+.popover__body {
+	overflow-x: none;
+	overflow-y: auto;
+	max-height: 80vh;
+	-webkit-overflow-scrolling: touch;
+	border: 0;
+	background-color: $color-background;
+	box-shadow: $box-shadow-100;
+	opacity: 0;
+	overscroll-behavior: contain;
+
+	@include media(0, $range-hand) {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: $popover-z-index-hand-and-lower + 1;
+		visibility: hidden;
+		transition-timing-function: ease-out;
+		transition-duration: $popover-animation-duration-hand-and-lower;
+		transition-property: visibility, transform, opacity;
+		transform: translateY(100%);
+	}
+	@include media($range-lap, false) {
+		position: absolute;
+		top: 100%;
+		left: $popover-body-horizontal-position;
+		z-index: $popover-z-index-lap-and-up + 1;
+		display: none; // NOTE To make sure area does not increase height of page.
+		width: $spacing * 40;
+	}
+
+	.popover__status:checked ~ & {
+		opacity: 1;
+
+		@include media(0, $range-hand) {
+			visibility: visible;
+			transform: translateY(0%);
+		}
+		@include media($range-lap, false) {
+			display: block;
+			animation-name: popoverBodyShowLapAndHigher;
+			animation-duration: $popover-animation-duration-lap-and-higher;
+			animation-fill-mode: forwards;
+		}
+	}
+
+	.popover--left-bottom-aligned-body & {
+		@include media($range-lap, false) {
+			top: 100%;
+			right: auto;
+			bottom: auto;
+			left: $popover-body-horizontal-position;
+			transform: translate(0, 0);
+		}
+	}
+
+	.popover--left-bottom-aligned-body.popover--arrow & {
+		@include media($range-lap, false) {
+			top: calc(100% + #{$popover-arrow-size + ($popover-arrow-vertical-position * -1)});
+		}
+	}
+
+	.popover--center-bottom-aligned-body & {
+		@include media($range-lap, false) {
+			top: 100%;
+			right: auto;
+			bottom: auto;
+			left: calc(50% - #{$spacing * 20});
+			transform: translate(0, 0);
+		}
+	}
+
+	.popover--center-bottom-aligned-body.popover--arrow & {
+		@include media($range-lap, false) {
+			top: calc(100% + #{$popover-arrow-size + ($popover-arrow-vertical-position * -1)});
+		}
+	}
+
+	.popover--right-bottom-aligned-body & {
+		@include media($range-lap, false) {
+			top: 100%;
+			right: $popover-body-horizontal-position;
+			bottom: auto;
+			left: auto;
+			transform: translate(0, 0);
+		}
+	}
+
+	.popover--right-bottom-aligned-body.popover--arrow & {
+		@include media($range-lap, false) {
+			top: calc(100% + #{$popover-arrow-size + ($popover-arrow-vertical-position * -1)});
+		}
+	}
+
+	.popover--left-top-aligned-body & {
+		@include media($range-lap, false) {
+			top: 0;
+			right: auto;
+			bottom: auto;
+			left: $popover-body-horizontal-position;
+			transform: translate(0, -100%);
+		}
+	}
+
+	.popover--left-top-aligned-body.popover--arrow & {
+		@include media($range-lap, false) {
+			top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
+		}
+	}
+
+	.popover--center-top-aligned-body & {
+		@include media($range-lap, false) {
+			top: 0;
+			right: auto;
+			bottom: auto;
+			left: calc(50% - #{$spacing * 20});
+			transform: translate(0, -100%);
+		}
+	}
+
+	.popover--center-top-aligned-body.popover--arrow & {
+		@include media($range-lap, false) {
+			top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
+		}
+	}
+
+	.popover--right-top-aligned-body & {
+		@include media($range-lap, false) {
+			top: 0;
+			right: $popover-body-horizontal-position;
+			bottom: auto;
+			left: auto;
+			transform: translate(0, -100%);
+		}
+	}
+
+	.popover--right-top-aligned-body.popover--arrow & {
+		@include media($range-lap, false) {
+			top: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
+		}
+	}
+
+	.popover--scaled & {
+		@include media($range-lap, false) {
+			right: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	.popover--flexible & {
+		@include media($range-lap, false) {
+			width: auto;
+		}
+	}
+}
+
+@keyframes popoverBodyShowLapAndHigher {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}
+
+.popover__header {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	display: flex;
+	margin-bottom: $spacing;
+	min-height: $spacing * 6;
+	background-color: rgba($color-background, 0.9);
+	text-align: left; // NOTE: Reset text-align of parent elements.
+	align-items: stretch;
+	justify-content: flex-start; // NOTE: Reset justify-content of parent elements.
+
+	@include media(0, $range-hand) {
+		z-index: $popover-z-index-hand-and-lower + 2;
+	}
+
+	@include media($range-lap, false) {
+		display: none;
+	}
+}
+
+.popover__title {
+	display: flex;
+	overflow: hidden;
+	padding-left: $spacing * 2;
+	padding-right: $spacing * 2;
+	min-width: 0;
+	color: $color-heading;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: $font-size-100;
+	font-weight: bold;
+	line-height: $line-height-20;
+	align-self: center;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+.popover__close-action {
+	display: flex;
+	padding-right: $spacing * 2;
+	padding-left: $spacing * 2;
+	color: $color-secondary;
+	font-size: $font-size-100;
+	font-weight: bold;
+	line-height: $line-height-20;
+	cursor: pointer;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.popover__main {
+	@include media(0, $range-hand) {
+		padding-right: $spacing * 2;
+		padding-bottom: $spacing * 4;
+		padding-left: $spacing * 2;
+	}
+	@include media($range-lap, false) {
+		padding: $spacing * 2;
+	}
+}
+
+.popover__backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	color: transparent;
+
+	@include media(0, $range-hand) {
+		z-index: $popover-z-index-hand-and-lower;
+		visibility: hidden;
+		background-color: rgba($color-black, 0.6);
+		opacity: 0;
+		transition-timing-function: ease-out;
+		transition-duration: $popover-animation-duration-hand-and-lower;
+		transition-property: visibility, opacity;
+	}
+	@include media($range-lap, false) {
+		z-index: $popover-z-index-lap-and-up;
+		display: none;
+	}
+
+	&[for] {
+		cursor: default; // NOTE: To reset cursor in ../reset/label.scss
+	}
+
+	.popover__status:checked ~ & {
+		@include media(0, $range-hand) {
+			visibility: visible;
+			opacity: 1;
+		}
+		@include media($range-lap, false) {
+			display: block;
+		}
+	}
+}
