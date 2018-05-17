@@ -1,3 +1,8 @@
+# 1.5.2
+
+## Bugfix
+* Remove color-info from colors as was decided to not use this variable anymore
+
 # 1.5.1
 
 ## Bugfix
