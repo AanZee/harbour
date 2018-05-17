@@ -1,3 +1,8 @@
+# 1.5.1
+
+## Bugfix
+* Add .scss to bourbon import to fix bug where import retrieved folder in stead of file with node-sass-tilde-importer plugin [node-sass-title-importer issue 8](https://github.com/matthewdavidson/node-sass-tilde-importer/issues/8)
+
 # 1.5.0
 
 ## Features
