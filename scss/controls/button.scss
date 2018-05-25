@@ -16,10 +16,8 @@ $button-disabled-opacity: 0.35 !default;
 	background-color: $button-background-color;
 	color: $button-color;
 	text-align: center;
-	font-weight: normal;
 	line-height: $spacing * 2;
 	cursor: pointer;
-	user-select: none;
 	@if ($button-outset) {
 		box-shadow: $button-outset-box-shadow;
 	}
@@ -33,12 +31,14 @@ $button-disabled-opacity: 0.35 !default;
 		font-size: $font-size-200;
 	}
 
-	&:hover {
+	&:hover,
+	&.is-hovered {
 		background-color: $button-hover-background-color;
 		color: $button-hover-color;
 	}
 
-	&:focus {
+	&:focus:not(:hover):not(.is-hovered):not(:active):not(.is-active),
+	&.is-focused:not(:hover):not(.is-hovered):not(:active):not(.is-active) {
 		@if ($button-outset) {
 			box-shadow: $button-focus-box-shadow, $button-outset-box-shadow;
 		}
@@ -47,16 +47,19 @@ $button-disabled-opacity: 0.35 !default;
 		}
 	}
 
-	&:active {
+	&:active,
+	&.is-active {
 		background-color: $button-active-background-color;
 		color: $button-active-color;
 		@if ($button-outset) {
 			position: relative;
 			top: $button-outset;
+			box-shadow: none;
 		}
 	}
 
-	&:disabled {
+	&:disabled,
+	&.is-disabled {
 		opacity: $button-disabled-opacity;
 		cursor: not-allowed;
 		pointer-events: none;
@@ -80,12 +83,14 @@ $button-call-to-action-outset-box-shadow: 0 $button-outset 0 0 shade($button-cal
 		box-shadow: $button-call-to-action-outset-box-shadow;
 	}
 
-	&:hover {
+	&:hover,
+	&.is-hovered {
 		background-color: $button-call-to-action-hover-background-color;
 		color: $button-call-to-action-hover-color;
 	}
 
-	&:focus {
+	&:focus:not(:hover):not(.is-hovered):not(:active):not(.is-active),
+	&.is-focused:not(:hover):not(.is-hovered):not(:active):not(.is-active) {
 		@if $button-outset {
 			box-shadow: $button-call-to-action-focus-box-shadow, $button-call-to-action-outset-box-shadow;
 		}
@@ -94,7 +99,8 @@ $button-call-to-action-outset-box-shadow: 0 $button-outset 0 0 shade($button-cal
 		}
 	}
 
-	&:active {
+	&:active,
+	&.is-active {
 		background-color: $button-call-to-action-active-background-color;
 		color: $button-call-to-action-active-color;
 	}
@@ -117,12 +123,14 @@ $button-primary-outset-box-shadow: 0 $button-outset 0 0 shade($button-primary-ba
 		box-shadow: $button-primary-outset-box-shadow;
 	}
 
-	&:hover {
+	&:hover,
+	&.is-hovered {
 		background-color: $button-primary-hover-background-color;
 		color: $button-primary-hover-color;
 	}
 
-	&:focus {
+	&:focus:not(:hover):not(.is-hovered):not(:active):not(.is-active),
+	&.is-focused:not(:hover):not(.is-hovered):not(:active):not(.is-active) {
 		@if ($button-outset) {
 			box-shadow: $button-primary-focus-box-shadow, $button-primary-outset-box-shadow;
 		}
@@ -131,7 +139,8 @@ $button-primary-outset-box-shadow: 0 $button-outset 0 0 shade($button-primary-ba
 		}
 	}
 
-	&:active {
+	&:active,
+	&.is-active {
 		background-color: $button-primary-active-background-color;
 		color: $button-primary-active-color;
 	}
@@ -154,12 +163,14 @@ $button-secondary-outset-box-shadow: 0 $button-outset 0 0 shade($button-secondar
 		box-shadow: $button-secondary-outset-box-shadow;
 	}
 
-	&:hover {
+	&:hover,
+	&.is-hovered {
 		background-color: $button-secondary-hover-background-color;
 		color: $button-secondary-hover-color;
 	}
 
-	&:focus {
+	&:focus:not(:hover):not(.is-hovered):not(:active):not(.is-active),
+	&.is-focused:not(:hover):not(.is-hovered):not(:active):not(.is-active) {
 		@if ($button-outset) {
 			box-shadow: $button-secondary-focus-box-shadow, $button-secondary-outset-box-shadow;
 		}
@@ -168,7 +179,8 @@ $button-secondary-outset-box-shadow: 0 $button-outset 0 0 shade($button-secondar
 		}
 	}
 
-	&:active {
+	&:active,
+	&.is-active {
 		background-color: $button-secondary-active-background-color;
 		color: $button-secondary-active-color;
 	}
@@ -195,18 +207,21 @@ $button-outline-secondary-active-box-shadow: inset 0 0 0 $button-outline-border-
 	box-shadow: $button-outline-box-shadow;
 	color: $button-background-color;
 
-	&:hover {
+	&:hover,
+	&.is-hovered {
 		background-color: transparent;
 		background-image: none;
 		box-shadow: $button-outline-hover-box-shadow;
 		color: $button-hover-background-color;
 	}
 
-	&:focus {
+	&:focus:not(:hover):not(.is-hovered):not(:active):not(.is-active),
+	&.is-focused:not(:hover):not(.is-hovered):not(:active):not(.is-active) {
 		box-shadow: $button-focus-box-shadow, $button-outline-box-shadow;
 	}
 
-	&:active {
+	&:active,
+	&.is-active {
 		background-color: transparent;
 		background-image: none;
 		box-shadow: $button-outline-active-box-shadow;
@@ -220,16 +235,19 @@ $button-outline-secondary-active-box-shadow: inset 0 0 0 $button-outline-border-
 		box-shadow: $button-outline-call-to-action-box-shadow;
 		color: $button-call-to-action-background-color;
 
-		&:hover {
+		&:hover,
+		&.is-hovered {
 			box-shadow: $button-outline-call-to-action-hover-box-shadow;
 			color: $button-call-to-action-hover-background-color;
 		}
 
-		&:focus {
+		&:focus:not(:hover):not(.is-hovered):not(:active):not(.is-active),
+		&.is-focused:not(:hover):not(.is-hovered):not(:active):not(.is-active) {
 			box-shadow: $button-call-to-action-focus-box-shadow, $button-outline-call-to-action-box-shadow;
 		}
 
-		&:active {
+		&:active,
+		&.is-active {
 			box-shadow: $button-outline-call-to-action-active-box-shadow;
 			color: $button-call-to-action-active-background-color;
 		}
@@ -239,16 +257,19 @@ $button-outline-secondary-active-box-shadow: inset 0 0 0 $button-outline-border-
 		box-shadow: $button-outline-primary-box-shadow;
 		color: $button-primary-background-color;
 
-		&:hover {
+		&:hover,
+		&.is-hovered {
 			box-shadow: $button-outline-primary-hover-box-shadow;
 			color: $button-primary-hover-background-color;
 		}
 
-		&:focus {
+		&:focus:not(:hover):not(.is-hovered):not(:active):not(.is-active),
+		&.is-focused:not(:hover):not(.is-hovered):not(:active):not(.is-active) {
 			box-shadow: $button-primary-focus-box-shadow, $button-outline-primary-box-shadow;
 		}
 
-		&:active {
+		&:active,
+		&.is-active {
 			box-shadow: $button-outline-primary-active-box-shadow;
 			color: $button-primary-active-background-color;
 		}
@@ -258,16 +279,19 @@ $button-outline-secondary-active-box-shadow: inset 0 0 0 $button-outline-border-
 		box-shadow: $button-outline-secondary-box-shadow;
 		color: $button-secondary-background-color;
 
-		&:hover {
+		&:hover,
+		&.is-hovered {
 			box-shadow: $button-outline-secondary-hover-box-shadow;
 			color: $button-secondary-hover-background-color;
 		}
 
-		&:focus {
+		&:focus:not(:hover):not(.is-hovered):not(:active):not(.is-active),
+		&.is-focused:not(:hover):not(.is-hovered):not(:active):not(.is-active) {
 			box-shadow: $button-secondary-focus-box-shadow, $button-outline-secondary-box-shadow;
 		}
 
-		&:active {
+		&:active,
+		&.is-active {
 			box-shadow: $button-outline-secondary-active-box-shadow;
 			color: $button-secondary-active-background-color;
 		}
