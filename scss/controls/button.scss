@@ -16,10 +16,8 @@ $button-disabled-opacity: 0.35 !default;
 	background-color: $button-background-color;
 	color: $button-color;
 	text-align: center;
-	font-weight: normal;
 	line-height: $spacing * 2;
 	cursor: pointer;
-	user-select: none;
 	@if ($button-outset) {
 		box-shadow: $button-outset-box-shadow;
 	}
