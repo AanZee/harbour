@@ -178,7 +178,7 @@
 	@each $char, $encoded in $encoding-reference {
 		$svg: str-replace($svg, $char, $encoded);
 	}
-	@return 'data:image/svg+xml,' + $svg;
+	@return 'data:image/svg+xml;charset=utf-8,' + $svg;
 }
 
 @function get-svg-uri($svg, $fill-color: #000) {
