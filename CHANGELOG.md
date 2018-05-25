@@ -1,3 +1,11 @@
+# 1.5.3
+
+## Bugfix
+* Move button font weight and user select to button reset styling
+* Improve button state selectors
+* Add missing hidpi import
+
+
 # 1.5.2
 
 ## Bugfix
