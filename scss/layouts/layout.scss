@@ -138,7 +138,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		border-top-left-radius: $layout-section-rounded-border-radius-lap-and-up;
 	}
 
-	> :last-child {
+	> :first-child {
 		@include media(0, $range-hand) {
 			border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
 			border-top-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
