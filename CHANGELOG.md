@@ -1,3 +1,8 @@
+# 1.5.5
+
+## Bugfix
+* Add default to font smoothing utility
+
 # 1.5.4
 
 ## Bugfix
