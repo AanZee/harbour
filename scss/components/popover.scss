@@ -262,6 +262,7 @@ $popover-z-index-lap-and-up: 600 !default;
 	box-shadow: $box-shadow-100;
 	opacity: 0;
 	overscroll-behavior: contain;
+	-ms-scroll-chaining: none;
 
 	@include media(0, $range-hand) {
 		position: fixed;
