@@ -127,6 +127,51 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	}
 }
 
+
+.layout__section--rounded-top {
+	@include media(0, $range-hand) {
+		border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
+		border-top-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+	}
+	@include media($range-lap, false) {
+		border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
+		border-top-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+	}
+
+	> :first-child {
+		@include media(0, $range-hand) {
+			border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
+			border-top-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+		}
+		@include media($range-lap, false) {
+			border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
+			border-top-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+		}
+	}
+}
+
+.layout__section--rounded-bottom {
+	@include media(0, $range-hand) {
+		border-bottom-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
+		border-bottom-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+	}
+	@include media($range-lap, false) {
+		border-bottom-right-radius: $layout-section-rounded-border-radius-lap-and-up;
+		border-bottom-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+	}
+
+	> :last-child {
+		@include media(0, $range-hand) {
+			border-bottom-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
+			border-bottom-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+		}
+		@include media($range-lap, false) {
+			border-bottom-right-radius: $layout-section-rounded-border-radius-lap-and-up;
+			border-bottom-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+		}
+	}
+}
+
 .layout__section--colored {
 	background-color: $layout-section-colored-background-color;
 }
