@@ -1,3 +1,21 @@
+# 1.5.5
+
+## Bugfix
+* Add default to font smoothing utility
+
+# 1.5.4
+
+## Bugfix
+* Add underscore to Bourbon import to fix a bug with some SCSS importers
+
+# 1.5.3
+
+## Bugfix
+* Move button font weight and user select to button reset styling
+* Improve button state selectors
+* Add missing hidpi import
+
+
 # 1.5.2
 
 ## Bugfix
@@ -6,7 +24,7 @@
 # 1.5.1
 
 ## Bugfix
-* Add .scss to bourbon import to fix bug where import retrieved folder in stead of file with node-sass-tilde-importer plugin [node-sass-title-importer issue 8](https://github.com/matthewdavidson/node-sass-tilde-importer/issues/8)
+* Add .scss to bourbon import to fix bug where import retrieved folder instead of file with node-sass-tilde-importer plugin [node-sass-title-importer issue 8](https://github.com/matthewdavidson/node-sass-tilde-importer/issues/8)
 
 # 1.5.0
 
