@@ -1,3 +1,12 @@
+# 1.6.0
+
+## Features
+* Added get-svg-data-uri for faster and easier adding svg icons in SCSS
+* Added layout__section--rounded-top and layout__section--rounded-bottom
+
+## Bugfix
+* Adds overscroll-behavior for older MS browsers, known as ms-scroll-chaining, to popover.
+
 # 1.5.5
 
 ## Bugfix
