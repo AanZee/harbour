@@ -141,7 +141,7 @@ layout__column--two-thirds
 ```
 layout
 ├── layout__section (modifier)
-│	├── layout__section-inner (modifier)
+│	├── layout__inner (modifier)
 │	│	├── layout__section (optional)
 │	│	│	├── layout__columns (modifiers) (optional)
 │	│	│	│	├── layout__column (modifier) (parent required)
@@ -152,7 +152,7 @@ Basic example without columns
 ```html
 <div class="layout">
 	<div class="layout__section">
-		<div class="layout__section-inner">
+		<div class="layout__inner">
 			...
 		</div>
 	</div>
@@ -163,7 +163,7 @@ Example with with two column layout
 ```html
 <div class="layout">
 	<div class="layout__section">
-		<div class="layout__section-inner">
+		<div class="layout__inner">
 			<div class="layout__columns">
 				<div class="layout__column layout__column--one-half">
 					...
@@ -181,12 +181,12 @@ Example with two sub sections which contain columns
 ```html
 <div class="layout">
 	<div class="layout__section">
-		<div class="layout__section-inner">
+		<div class="layout__inner">
 			...
 		</div>
 	</div>
 	<div class="layout__section layout__section--colored">
-		<div class="layout__section-inner">
+		<div class="layout__inner">
 			<div class="layout__section layout__section--spaced-80">
 				<div class="layout__columns">
 					<div class="layout__column layout__column--one-half">
