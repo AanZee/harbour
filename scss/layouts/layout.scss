@@ -1278,21 +1278,21 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		margin: $layout-column-spacing-lap-and-larger;
 	}
 
-	.layout__columns--spacing-0 & {
-		@include media(0, $range-hand) {
-			margin: 0;
-		}
-		@include media($range-lap, false) {
-			margin: 0;
-		}
-	}
-
 	.layout__columns--spacing-90 & {
 		@include media(0, $range-hand) {
 			margin: $layout-column-spacing-90-hand-and-smaller;
 		}
 		@include media($range-lap, false) {
 			margin: $layout-column-spacing-90-lap-and-larger;
+		}
+	}
+
+	.layout__columns--spacing-0 & {
+		@include media(0, $range-hand) {
+			margin: 0;
+		}
+		@include media($range-lap, false) {
+			margin: 0;
 		}
 	}
 }
@@ -1315,6 +1315,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			min-width: calc(50% - #{$layout-column-spacing-90-lap-and-larger * 2});
 		}
 	}
+
+	.layout__columns--spacing-0 & {
+		@include media(0, $range-hand) {
+			min-width: 50%;
+		}
+		@include media($range-lap, false) {
+			min-width: 50%;
+		}
+	}
 }
 
 .layout__column--one-third {
@@ -1333,6 +1342,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		}
 		@include media($range-lap, false) {
 			min-width: calc(33% - #{$layout-column-spacing-90-lap-and-larger * 2});
+		}
+	}
+
+	.layout__columns--spacing-0 & {
+		@include media(0, $range-hand) {
+			min-width: 33%;
+		}
+		@include media($range-lap, false) {
+			min-width: 33%;
 		}
 	}
 }
@@ -1354,6 +1372,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		}
 		@include media($range-lap, false) {
 			min-width: calc(67% - #{$layout-column-spacing-90-lap-and-larger * 2});
+		}
+	}
+
+	.layout__columns--spacing-0 & {
+		@include media(0, $range-hand) {
+			min-width: 67%;
+		}
+		@include media($range-lap, false) {
+			min-width: 67%;
 		}
 	}
 }
