@@ -23,7 +23,7 @@ $dialog-error-icon-fill: $color-error-600 !default;
 
 .dialog {
 	display: flex;
-	border: $dialog-border-width solid $border-color;
+	border: $dialog-border-width solid $dialog-border-color;
 	border-radius: $dialog-border-radius;
 	background-color: $dialog-background-color;
 	color: $dialog-color;
