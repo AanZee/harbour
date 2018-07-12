@@ -1,3 +1,8 @@
+# 1.6.1
+
+## Bugfix
+* Add right local border variable to dialog component
+
 # 1.6.0
 
 ## Features
