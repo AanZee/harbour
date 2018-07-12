@@ -11,6 +11,7 @@ $button-outset-box-shadow: 0 $button-outset 0 0 shade($button-background-color, 
 $button-disabled-opacity: 0.35 !default;
 
 .button {
+	@include font-smoothing;
 	display: inline-block;
 	border-radius: $border-radius-100;
 	background-color: $button-background-color;
@@ -18,6 +19,7 @@ $button-disabled-opacity: 0.35 !default;
 	text-align: center;
 	line-height: $spacing * 2;
 	cursor: pointer;
+	font-weight: bold;
 	@if ($button-outset) {
 		box-shadow: $button-outset-box-shadow;
 	}
