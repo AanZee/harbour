@@ -1273,7 +1273,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		margin: $layout-column-spacing-lap-and-larger;
 	}
 
-	.layout__columns--spacing-90 & {
+	.layout__columns--spacing-90 > & {
 		@include media(0, $range-hand) {
 			margin: $layout-column-spacing-90-hand-and-smaller;
 		}
@@ -1282,7 +1282,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		}
 	}
 
-	.layout__columns--spacing-0 & {
+	.layout__columns--spacing-0 > & {
 		margin: 0;
 	}
 }
@@ -1297,7 +1297,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		min-width: calc(50% - #{$layout-column-spacing-lap-and-larger * 2});
 	}
 
-	.layout__columns--spacing-90 & {
+	.layout__columns--spacing-90 > & {
 		@include media(0, $range-hand) {
 			min-width: calc(50% - #{$layout-column-spacing-90-hand-and-smaller * 2});
 		}
@@ -1306,7 +1306,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		}
 	}
 
-	.layout__columns--spacing-0 & {
+	.layout__columns--spacing-0 > & {
 		min-width: 50%;
 	}
 }
@@ -1321,7 +1321,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		min-width: calc(33% - #{$layout-column-spacing-lap-and-larger * 2});
 	}
 
-	.layout__columns--spacing-90 & {
+	.layout__columns--spacing-90 > & {
 		@include media(0, $range-hand) {
 			min-width: calc(33% - #{$layout-column-spacing-90-hand-and-smaller * 2});
 		}
@@ -1330,7 +1330,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		}
 	}
 
-	.layout__columns--spacing-0 & {
+	.layout__columns--spacing-0 > & {
 		min-width: 33%;
 	}
 }
@@ -1346,7 +1346,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		min-width: calc(67% - #{$layout-column-spacing-lap-and-larger * 2});
 	}
 
-	.layout__columns--spacing-90 & {
+	.layout__columns--spacing-90 > & {
 		@include media(0, $range-hand) {
 			min-width: calc(67% - #{$layout-column-spacing-90-hand-and-smaller * 2});
 		}
@@ -1355,7 +1355,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		}
 	}
 
-	.layout__columns--spacing-0 & {
+	.layout__columns--spacing-0 > & {
 		min-width: 67%;
 	}
 }
