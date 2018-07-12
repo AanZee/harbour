@@ -34,7 +34,6 @@ $color-ui-accent: $color-harbour-blue !default;
 $color-error: $color-harbour-red !default;
 $color-success: $color-harbour-green !default;
 $color-warning: $color-harbour-yellow !default;
-$color-info: $color-harbour-blue !default;
 $color-select: $color-harbour-purple !default;
 $color-focus: $color-harbour-green !default;
 
@@ -43,6 +42,7 @@ $color-focus: $color-harbour-green !default;
 $color-shadow: $color-harbour-black !default;
 $color-background: $color-harbour-white !default;
 $color-background-colored: $color-harbour-grey !default;
+$color-background-neutral: $color-harbour-grey !default;
 
 // ## Ranges
 // Please keep the same variable order as above
@@ -285,26 +285,6 @@ $color-warning-700: shade($color-warning, 60%) !default;
 $color-warning-800: shade($color-warning, 70%) !default;
 $color-warning-900: shade($color-warning, 80%) !default;
 $color-warning-1000: shade($color-warning, 90%) !default;
-
-$color-info-10: tint($color-info, 90%) !default;
-$color-info-20: tint($color-info, 80%) !default;
-$color-info-30: tint($color-info, 70%) !default;
-$color-info-40: tint($color-info, 60%) !default;
-$color-info-50: tint($color-info, 50%) !default;
-$color-info-60: tint($color-info, 40%) !default;
-$color-info-70: tint($color-info, 30%) !default;
-$color-info-80: tint($color-info, 20%) !default;
-$color-info-90: tint($color-info, 10%) !default;
-$color-info-100: $color-info !default;
-$color-info-200: shade($color-info, 10%) !default;
-$color-info-300: shade($color-info, 20%) !default;
-$color-info-400: shade($color-info, 30%) !default;
-$color-info-500: shade($color-info, 40%) !default;
-$color-info-600: shade($color-info, 50%) !default;
-$color-info-700: shade($color-info, 60%) !default;
-$color-info-800: shade($color-info, 70%) !default;
-$color-info-900: shade($color-info, 80%) !default;
-$color-info-1000: shade($color-info, 90%) !default;
 
 $color-select-10: tint($color-select, 90%) !default;
 $color-select-20: tint($color-select, 80%) !default;

@@ -1,1 +1,1 @@
-@import '~bourbon/core/bourbon';
+@import '~bourbon/core/_bourbon.scss'; // FIX: Added filename to fix bug where import retrieved the folder bourbon/index.scss instead of file with node-sass-tilde-importer plugin (https://github.com/matthewdavidson/node-sass-tilde-importer/issues/8)

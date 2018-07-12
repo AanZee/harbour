@@ -1,0 +1,29 @@
+// Thanks to Hugo Giraudel for his str-replace function (https://css-tricks.com/snippets/sass/str-replace-function/)
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+	@return $string;
+}
+
+// Thanks to Kevin Weber for his svg-encode function (https://codepen.io/kevinweber/pen/dXWoRw)
+@function svg-encode($svg) {
+	$encoding-reference: (
+		('<','%3C'),
+		('>','%3E'),
+		('"','\''),
+		('#','%23'),
+		('&','%26')
+	);
+	@each $char, $encoded in $encoding-reference {
+		$svg: str-replace($svg, $char, $encoded);
+	}
+	@return 'data:image/svg+xml;charset=utf-8,' + $svg;
+}
+
+@function get-svg-uri($svg, $fill-color: #000) {
+	$svg: str-replace($svg, 'fill=""', 'fill="' + $fill-color + '"' );
+	$svg: svg-encode($svg);
+	@return $svg;
+}
