@@ -1241,12 +1241,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__columns--spacing-0 {
-	@include media(0, $range-hand) {
 		margin: 0;
-	}
-	@include media($range-lap, false) {
-		margin: 0;
-	}
 }
 
 .layout__columns--spacing-90 {
@@ -1288,12 +1283,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	}
 
 	.layout__columns--spacing-0 & {
-		@include media(0, $range-hand) {
-			margin: 0;
-		}
-		@include media($range-lap, false) {
-			margin: 0;
-		}
+		margin: 0;
 	}
 }
 
