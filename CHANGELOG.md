@@ -1,3 +1,9 @@
+# 1.7.0
+
+## Features
+* Update layout columns with min-width, to remain size when view is switched (for example with a segmented control)
+* Improve button. Add font smoothing and font weight. Improve horizontal padding on button--80
+
 # 1.6.1
 
 ## Bugfix
