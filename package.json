@@ -9,23 +9,29 @@
 		"url": "https://github.com/AanZee/harbour.git"
 	},
 	"scripts": {
-		"style:lint": "node stylelint.js",
-		"style:watch": "chokidar 'scss/**/*.scss' -c 'WATCHLINT=1 npm run style:lint'",
-		"style:fix": "FIXLINT=1 npm run style:lint"
+		"start": "gulp start",
+		"build": "gulp build"
 	},
 	"dependencies": {
 		"bourbon": "5.0.0",
-		"chokidar-cli": "1.2.0",
 		"normalize.scss": "github:AanZee/normalize.scss#8.0.1",
 		"reset-css": "2.2.1",
-		"stylelint": "8.4.0",
+		"stylelint": "9.3.0",
 		"stylelint-declaration-block-no-ignored-properties": "1.1.0",
 		"stylelint-declaration-strict-value": "1.0.4",
-		"stylelint-order": "0.8.0"
+		"stylelint-order": "0.8.1"
 	},
 	"devDependencies": {
-		"csscomb": "4.2.0",
+		"express": "4.16.3",
 		"gulp": "3.9.1",
-		"gulp-util": "3.0.8"
+		"gulp-nodemon": "2.2.1",
+		"gulp-postcss": "7.0.1",
+		"gulp-sass": "4.0.1",
+		"gulp-util": "3.0.8",
+		"mustache-express": "1.2.6",
+		"node-sass-tilde-importer": "1.0.2",
+		"postcss-reporter": "5.0.0",
+		"postcss-scss": "1.0.5",
+		"reload": "2.3.0"
 	}
 }
