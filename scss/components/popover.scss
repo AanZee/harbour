@@ -121,7 +121,7 @@ $popover-z-index-lap-and-up: 600 !default;
 				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
 				left: $popover-arrow-horizontal-position + 1px;
 				border-top-color: transparent;
-				border-bottom-color: $color-background;
+				border-bottom-color: $color-background-light;
 			}
 		}
 
@@ -142,7 +142,7 @@ $popover-z-index-lap-and-up: 600 !default;
 				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
 				left: 50%;
 				border-top-color: transparent;
-				border-bottom-color: $color-background;
+				border-bottom-color: $color-background-light;
 				transform: translate(-50%, 0);
 			}
 		}
@@ -163,7 +163,7 @@ $popover-z-index-lap-and-up: 600 !default;
 				bottom: ($popover-arrow-size * -1) + $popover-arrow-vertical-position;
 				left: auto;
 				border-top-color: transparent;
-				border-bottom-color: $color-background;
+				border-bottom-color: $color-background-light;
 			}
 		}
 
@@ -182,7 +182,7 @@ $popover-z-index-lap-and-up: 600 !default;
 				right: auto;
 				bottom: auto;
 				left: $popover-arrow-horizontal-position + 1px;
-				border-top-color: $color-background;
+				border-top-color: $color-background-light;
 				border-bottom-color: transparent;
 			}
 		}
@@ -203,7 +203,7 @@ $popover-z-index-lap-and-up: 600 !default;
 				right: auto;
 				bottom: auto;
 				left: 50%;
-				border-top-color: $color-background;
+				border-top-color: $color-background-light;
 				border-bottom-color: transparent;
 				transform: translate(-50%, 0);
 			}
@@ -224,7 +224,7 @@ $popover-z-index-lap-and-up: 600 !default;
 				right: $popover-arrow-horizontal-position + 1px;
 				bottom: auto;
 				left: auto;
-				border-top-color: $color-background;
+				border-top-color: $color-background-light;
 				border-bottom-color: transparent;
 			}
 		}
@@ -258,7 +258,7 @@ $popover-z-index-lap-and-up: 600 !default;
 	max-height: 80vh;
 	-webkit-overflow-scrolling: touch;
 	border: 0;
-	background-color: $color-background;
+	background-color: $color-background-light;
 	box-shadow: $box-shadow-100;
 	opacity: 0;
 	overscroll-behavior: contain;
@@ -435,7 +435,7 @@ $popover-z-index-lap-and-up: 600 !default;
 	display: flex;
 	margin-bottom: $spacing;
 	min-height: $spacing * 6;
-	background-color: rgba($color-background, 0.9);
+	background-color: rgba($color-background-light, 0.9);
 	text-align: left; // NOTE: Reset text-align of parent elements.
 	align-items: stretch;
 	justify-content: flex-start; // NOTE: Reset justify-content of parent elements.
