@@ -127,25 +127,24 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	}
 }
 
-
 .layout__section--rounded-top {
 	@include media(0, $range-hand) {
-		border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
 		border-top-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+		border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
 	}
 	@include media($range-lap, false) {
-		border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
 		border-top-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+		border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
 	}
 
 	> :first-child {
 		@include media(0, $range-hand) {
-			border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
 			border-top-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+			border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
 		}
 		@include media($range-lap, false) {
-			border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
 			border-top-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+			border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
 		}
 	}
 }
@@ -333,12 +332,14 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spaced-0 {
+
 	&:not(:first-child) {
 		margin-top: 0;
 	}
 }
 
 .layout__section--spaced-60 {
+
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-60-palm-and-lower;
@@ -356,6 +357,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spaced-70 {
+
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-70-palm-and-lower;
@@ -373,6 +375,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spaced-80 {
+
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-80-palm-and-lower;
@@ -390,6 +393,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spaced-90 {
+
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-90-palm-and-lower;
@@ -407,6 +411,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spaced-200 {
+
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-200-palm-and-lower;
@@ -424,6 +429,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spaced-300 {
+
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-300-palm-and-lower;
