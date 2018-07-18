@@ -121,12 +121,7 @@ gulp.task('buildScss', ['buildStylelintScss'], function() {
 })
 
 gulp.task('serve', function () {
-	// return nodemon({
-	// 	script: 'styleguide/index.js',
-	// 	ext: 'css js tpl'
-	// });
-
-	return console.log('TODO: implement styleguide');
+	return console.log('TODO (HAR-125): implement styleguide');
 });
 
 // CLI Tasks
