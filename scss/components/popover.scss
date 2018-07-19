@@ -65,7 +65,7 @@ $popover-z-index-lap-and-up: 600 !default;
 	top: 0; // FIX: Fixes some render bugs.
 	left: 0; // FIX: Fixes some render bugs.
 	z-index: -100; // NOTE: Put the input behind the label so it doesn't overlay text.
-	opacity: $opacity-transparent; // NOTE: we use this instead of display:none to allow focusing.
+	opacity: 0; // NOTE: we use this instead of display:none to allow focusing.
 }
 
 .popover__action {
@@ -269,7 +269,7 @@ $popover-z-index-lap-and-up: 600 !default;
 	border: 0;
 	background-color: $color-background;
 	box-shadow: $box-shadow-100;
-	opacity: $opacity-transparent;
+	opacity: 0;
 	overscroll-behavior: contain;
 	-ms-scroll-chaining: none;
 
@@ -424,12 +424,12 @@ $popover-z-index-lap-and-up: 600 !default;
 
 	0% {
 		display: none;
-		opacity: $opacity-transparent;
+		opacity: 0;
 	}
 
 	1% {
 		display: block;
-		opacity: $opacity-transparent;
+		opacity: 0;
 	}
 
 	100% {
@@ -511,7 +511,7 @@ $popover-z-index-lap-and-up: 600 !default;
 		z-index: $popover-z-index-hand-and-lower;
 		visibility: hidden;
 		background-color: rgba($color-ui-100, 0.6);
-		opacity: $opacity-transparent;
+		opacity: 0;
 		transition-timing-function: ease-out;
 		transition-duration: $popover-animation-duration-hand-and-lower;
 		transition-property: visibility, opacity;
