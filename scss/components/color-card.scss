@@ -1,0 +1,1231 @@
+$color-card-background-color: $color-background-light;
+$color-card-colors: (
+	// Base colors
+	(
+		variable: $color-call-to-action,
+		modifier: 'call-to-action'
+	),
+	(
+		variable: $color-primary,
+		modifier: 'primary'
+	),
+	(
+		variable: $color-secondary,
+		modifier: 'secondary'
+	),
+	(
+		variable: $color-heading,
+		modifier: 'heading'
+	),
+	(
+		variable: $color-subheading,
+		modifier: 'subheading'
+	),
+	(
+		variable: $color-text,
+		modifier: 'text'
+	),
+	(
+		variable: $color-text-diap,
+		modifier: 'text-diap'
+	),
+	(
+		variable: $color-ui,
+		modifier: 'ui'
+	),
+	(
+		variable: $color-ui-accent,
+		modifier: 'ui-accent'
+	),
+	(
+		variable: $color-error,
+		modifier: 'error'
+	),
+	(
+		variable: $color-success,
+		modifier: 'success'
+	),
+	(
+		variable: $color-warning,
+		modifier: 'warning'
+	),
+	(
+		variable: $color-select,
+		modifier: 'select'
+	),
+	(
+		variable: $color-focus,
+		modifier: 'focus'
+	),
+	(
+		variable: $color-shadow,
+		modifier: 'shadow'
+	),
+	// Background colors
+	(
+		variable: $color-background,
+		modifier: 'background'
+	),
+	(
+		variable: $color-background-light,
+		modifier: 'background-light'
+	),
+	(
+		variable: $color-background-dark,
+		modifier: 'background-dark'
+	),
+	(
+		variable: $color-background-colored,
+		modifier: 'background-colored'
+	),
+	(
+		variable: $color-background-neutral,
+		modifier: 'background-neutral'
+	),
+	// Tints
+	// Color call to action
+	(
+		variable: $color-call-to-action-10,
+		modifier: 'call-to-action-10'
+	),
+	(
+		variable: $color-call-to-action-20,
+		modifier: 'call-to-action-20'
+	),
+	(
+		variable: $color-call-to-action-30,
+		modifier: 'call-to-action-30'
+	),
+	(
+		variable: $color-call-to-action-40,
+		modifier: 'call-to-action-40'
+	),
+	(
+		variable: $color-call-to-action-50,
+		modifier: 'call-to-action-50'
+	),
+	(
+		variable: $color-call-to-action-60,
+		modifier: 'call-to-action-60'
+	),
+	(
+		variable: $color-call-to-action-70,
+		modifier: 'call-to-action-70'
+	),
+	(
+		variable: $color-call-to-action-80,
+		modifier: 'call-to-action-80'
+	),
+	(
+		variable: $color-call-to-action-90,
+		modifier: 'call-to-action-90'
+	),
+	(
+		variable: $color-call-to-action-100,
+		modifier: 'call-to-action-100'
+	),
+	(
+		variable: $color-call-to-action-200,
+		modifier: 'call-to-action-200'
+	),
+	(
+		variable: $color-call-to-action-300,
+		modifier: 'call-to-action-300'
+	),
+	(
+		variable: $color-call-to-action-400,
+		modifier: 'call-to-action-400'
+	),
+	(
+		variable: $color-call-to-action-500,
+		modifier: 'call-to-action-500'
+	),
+	(
+		variable: $color-call-to-action-600,
+		modifier: 'call-to-action-600'
+	),
+	(
+		variable: $color-call-to-action-700,
+		modifier: 'call-to-action-700'
+	),
+	(
+		variable: $color-call-to-action-800,
+		modifier: 'call-to-action-800'
+	),
+	(
+		variable: $color-call-to-action-900,
+		modifier: 'call-to-action-900'
+	),
+	(
+		variable: $color-call-to-action-1000,
+		modifier: 'call-to-action-1000'
+	),
+
+	// Color primary
+	(
+		variable: $color-primary-10,
+		modifier: 'primary-10'
+	),
+	(
+		variable: $color-primary-20,
+		modifier: 'primary-20'
+	),
+	(
+		variable: $color-primary-30,
+		modifier: 'primary-30'
+	),
+	(
+		variable: $color-primary-40,
+		modifier: 'primary-40'
+	),
+	(
+		variable: $color-primary-50,
+		modifier: 'primary-50'
+	),
+	(
+		variable: $color-primary-60,
+		modifier: 'primary-60'
+	),
+	(
+		variable: $color-primary-70,
+		modifier: 'primary-70'
+	),
+	(
+		variable: $color-primary-80,
+		modifier: 'primary-80'
+	),
+	(
+		variable: $color-primary-90,
+		modifier: 'primary-90'
+	),
+	(
+		variable: $color-primary-100,
+		modifier: 'primary-100'
+	),
+	(
+		variable: $color-primary-200,
+		modifier: 'primary-200'
+	),
+	(
+		variable: $color-primary-300,
+		modifier: 'primary-300'
+	),
+	(
+		variable: $color-primary-400,
+		modifier: 'primary-400'
+	),
+	(
+		variable: $color-primary-500,
+		modifier: 'primary-500'
+	),
+	(
+		variable: $color-primary-600,
+		modifier: 'primary-600'
+	),
+	(
+		variable: $color-primary-700,
+		modifier: 'primary-700'
+	),
+	(
+		variable: $color-primary-800,
+		modifier: 'primary-800'
+	),
+	(
+		variable: $color-primary-900,
+		modifier: 'primary-900'
+	),
+	(
+		variable: $color-primary-1000,
+		modifier: 'primary-1000'
+	),
+
+	// Color secondary
+	(
+		variable: $color-secondary-10,
+		modifier: 'secondary-10'
+	),
+	(
+		variable: $color-secondary-20,
+		modifier: 'secondary-20'
+	),
+	(
+		variable: $color-secondary-30,
+		modifier: 'secondary-30'
+	),
+	(
+		variable: $color-secondary-40,
+		modifier: 'secondary-40'
+	),
+	(
+		variable: $color-secondary-50,
+		modifier: 'secondary-50'
+	),
+	(
+		variable: $color-secondary-60,
+		modifier: 'secondary-60'
+	),
+	(
+		variable: $color-secondary-70,
+		modifier: 'secondary-70'
+	),
+	(
+		variable: $color-secondary-80,
+		modifier: 'secondary-80'
+	),
+	(
+		variable: $color-secondary-90,
+		modifier: 'secondary-90'
+	),
+	(
+		variable: $color-secondary-100,
+		modifier: 'secondary-100'
+	),
+	(
+		variable: $color-secondary-200,
+		modifier: 'secondary-200'
+	),
+	(
+		variable: $color-secondary-300,
+		modifier: 'secondary-300'
+	),
+	(
+		variable: $color-secondary-400,
+		modifier: 'secondary-400'
+	),
+	(
+		variable: $color-secondary-500,
+		modifier: 'secondary-500'
+	),
+	(
+		variable: $color-secondary-600,
+		modifier: 'secondary-600'
+	),
+	(
+		variable: $color-secondary-700,
+		modifier: 'secondary-700'
+	),
+	(
+		variable: $color-secondary-800,
+		modifier: 'secondary-800'
+	),
+	(
+		variable: $color-secondary-900,
+		modifier: 'secondary-900'
+	),
+	(
+		variable: $color-secondary-1000,
+		modifier: 'secondary-1000'
+	),
+
+	// Color heading
+	(
+		variable: $color-heading-10,
+		modifier: 'heading-10'
+	),
+	(
+		variable: $color-heading-20,
+		modifier: 'heading-20'
+	),
+	(
+		variable: $color-heading-30,
+		modifier: 'heading-30'
+	),
+	(
+		variable: $color-heading-40,
+		modifier: 'heading-40'
+	),
+	(
+		variable: $color-heading-50,
+		modifier: 'heading-50'
+	),
+	(
+		variable: $color-heading-60,
+		modifier: 'heading-60'
+	),
+	(
+		variable: $color-heading-70,
+		modifier: 'heading-70'
+	),
+	(
+		variable: $color-heading-80,
+		modifier: 'heading-80'
+	),
+	(
+		variable: $color-heading-90,
+		modifier: 'heading-90'
+	),
+	(
+		variable: $color-heading-100,
+		modifier: 'heading-100'
+	),
+	(
+		variable: $color-heading-200,
+		modifier: 'heading-200'
+	),
+	(
+		variable: $color-heading-300,
+		modifier: 'heading-300'
+	),
+	(
+		variable: $color-heading-400,
+		modifier: 'heading-400'
+	),
+	(
+		variable: $color-heading-500,
+		modifier: 'heading-500'
+	),
+	(
+		variable: $color-heading-600,
+		modifier: 'heading-600'
+	),
+	(
+		variable: $color-heading-700,
+		modifier: 'heading-700'
+	),
+	(
+		variable: $color-heading-800,
+		modifier: 'heading-800'
+	),
+	(
+		variable: $color-heading-900,
+		modifier: 'heading-900'
+	),
+	(
+		variable: $color-heading-1000,
+		modifier: 'heading-1000'
+	),
+
+	// Color subheading
+	(
+		variable: $color-subheading-10,
+		modifier: 'subheading-10'
+	),
+	(
+		variable: $color-subheading-20,
+		modifier: 'subheading-20'
+	),
+	(
+		variable: $color-subheading-30,
+		modifier: 'subheading-30'
+	),
+	(
+		variable: $color-subheading-40,
+		modifier: 'subheading-40'
+	),
+	(
+		variable: $color-subheading-50,
+		modifier: 'subheading-50'
+	),
+	(
+		variable: $color-subheading-60,
+		modifier: 'subheading-60'
+	),
+	(
+		variable: $color-subheading-70,
+		modifier: 'subheading-70'
+	),
+	(
+		variable: $color-subheading-80,
+		modifier: 'subheading-80'
+	),
+	(
+		variable: $color-subheading-90,
+		modifier: 'subheading-90'
+	),
+	(
+		variable: $color-subheading-100,
+		modifier: 'subheading-100'
+	),
+	(
+		variable: $color-subheading-200,
+		modifier: 'subheading-200'
+	),
+	(
+		variable: $color-subheading-300,
+		modifier: 'subheading-300'
+	),
+	(
+		variable: $color-subheading-400,
+		modifier: 'subheading-400'
+	),
+	(
+		variable: $color-subheading-500,
+		modifier: 'subheading-500'
+	),
+	(
+		variable: $color-subheading-600,
+		modifier: 'subheading-600'
+	),
+	(
+		variable: $color-subheading-700,
+		modifier: 'subheading-700'
+	),
+	(
+		variable: $color-subheading-800,
+		modifier: 'subheading-800'
+	),
+	(
+		variable: $color-subheading-900,
+		modifier: 'subheading-900'
+	),
+	(
+		variable: $color-subheading-1000,
+		modifier: 'subheading-1000'
+	),
+
+	// Color text
+	(
+		variable: $color-text-10,
+		modifier: 'text-10'
+	),
+	(
+		variable: $color-text-20,
+		modifier: 'text-20'
+	),
+	(
+		variable: $color-text-30,
+		modifier: 'text-30'
+	),
+	(
+		variable: $color-text-40,
+		modifier: 'text-40'
+	),
+	(
+		variable: $color-text-50,
+		modifier: 'text-50'
+	),
+	(
+		variable: $color-text-60,
+		modifier: 'text-60'
+	),
+	(
+		variable: $color-text-70,
+		modifier: 'text-70'
+	),
+	(
+		variable: $color-text-80,
+		modifier: 'text-80'
+	),
+	(
+		variable: $color-text-90,
+		modifier: 'text-90'
+	),
+	(
+		variable: $color-text-100,
+		modifier: 'text-100'
+	),
+	(
+		variable: $color-text-200,
+		modifier: 'text-200'
+	),
+	(
+		variable: $color-text-300,
+		modifier: 'text-300'
+	),
+	(
+		variable: $color-text-400,
+		modifier: 'text-400'
+	),
+	(
+		variable: $color-text-500,
+		modifier: 'text-500'
+	),
+	(
+		variable: $color-text-600,
+		modifier: 'text-600'
+	),
+	(
+		variable: $color-text-700,
+		modifier: 'text-700'
+	),
+	(
+		variable: $color-text-800,
+		modifier: 'text-800'
+	),
+	(
+		variable: $color-text-900,
+		modifier: 'text-900'
+	),
+	(
+		variable: $color-text-1000,
+		modifier: 'subheading-1000'
+	),
+
+	// Color text diap
+	(
+		variable: $color-text-diap-10,
+		modifier: 'text-diap-10'
+	),
+	(
+		variable: $color-text-diap-20,
+		modifier: 'text-diap-20'
+	),
+	(
+		variable: $color-text-diap-30,
+		modifier: 'text-diap-30'
+	),
+	(
+		variable: $color-text-diap-40,
+		modifier: 'text-diap-40'
+	),
+	(
+		variable: $color-text-diap-50,
+		modifier: 'text-diap-50'
+	),
+	(
+		variable: $color-text-diap-60,
+		modifier: 'text-diap-60'
+	),
+	(
+		variable: $color-text-diap-70,
+		modifier: 'text-diap-70'
+	),
+	(
+		variable: $color-text-diap-80,
+		modifier: 'text-diap-80'
+	),
+	(
+		variable: $color-text-diap-90,
+		modifier: 'text-diap-90'
+	),
+	(
+		variable: $color-text-diap-100,
+		modifier: 'text-diap-100'
+	),
+	(
+		variable: $color-text-diap-200,
+		modifier: 'text-diap-200'
+	),
+	(
+		variable: $color-text-diap-300,
+		modifier: 'text-diap-300'
+	),
+	(
+		variable: $color-text-diap-400,
+		modifier: 'text-diap-400'
+	),
+	(
+		variable: $color-text-diap-500,
+		modifier: 'text-diap-500'
+	),
+	(
+		variable: $color-text-diap-600,
+		modifier: 'text-diap-600'
+	),
+	(
+		variable: $color-text-diap-700,
+		modifier: 'text-diap-700'
+	),
+	(
+		variable: $color-text-diap-800,
+		modifier: 'text-diap-800'
+	),
+	(
+		variable: $color-text-diap-900,
+		modifier: 'text-diap-900'
+	),
+	(
+		variable: $color-text-diap-1000,
+		modifier: 'text-diap-1000'
+	),
+
+	// Color ui
+	(
+		variable: $color-ui-10,
+		modifier: 'ui-10'
+	),
+	(
+		variable: $color-ui-20,
+		modifier: 'ui-20'
+	),
+	(
+		variable: $color-ui-30,
+		modifier: 'ui-30'
+	),
+	(
+		variable: $color-ui-40,
+		modifier: 'ui-40'
+	),
+	(
+		variable: $color-ui-50,
+		modifier: 'ui-50'
+	),
+	(
+		variable: $color-ui-60,
+		modifier: 'ui-60'
+	),
+	(
+		variable: $color-ui-70,
+		modifier: 'ui-70'
+	),
+	(
+		variable: $color-ui-80,
+		modifier: 'ui-80'
+	),
+	(
+		variable: $color-ui-90,
+		modifier: 'ui-90'
+	),
+	(
+		variable: $color-ui-100,
+		modifier: 'ui-100'
+	),
+	(
+		variable: $color-ui-200,
+		modifier: 'ui-200'
+	),
+	(
+		variable: $color-ui-300,
+		modifier: 'ui-300'
+	),
+	(
+		variable: $color-ui-400,
+		modifier: 'ui-400'
+	),
+	(
+		variable: $color-ui-500,
+		modifier: 'ui-500'
+	),
+	(
+		variable: $color-ui-600,
+		modifier: 'ui-600'
+	),
+	(
+		variable: $color-ui-700,
+		modifier: 'ui-700'
+	),
+	(
+		variable: $color-ui-800,
+		modifier: 'ui-800'
+	),
+	(
+		variable: $color-ui-900,
+		modifier: 'ui-900'
+	),
+	(
+		variable: $color-ui-1000,
+		modifier: 'ui-1000'
+	),
+
+	// Color ui accent
+	(
+		variable: $color-ui-accent-10,
+		modifier: 'ui-accent-10'
+	),
+	(
+		variable: $color-ui-accent-20,
+		modifier: 'ui-accent-20'
+	),
+	(
+		variable: $color-ui-accent-30,
+		modifier: 'ui-accent-30'
+	),
+	(
+		variable: $color-ui-accent-40,
+		modifier: 'ui-accent-40'
+	),
+	(
+		variable: $color-ui-accent-50,
+		modifier: 'ui-accent-50'
+	),
+	(
+		variable: $color-ui-accent-60,
+		modifier: 'ui-accent-60'
+	),
+	(
+		variable: $color-ui-accent-70,
+		modifier: 'ui-accent-70'
+	),
+	(
+		variable: $color-ui-accent-80,
+		modifier: 'ui-accent-80'
+	),
+	(
+		variable: $color-ui-accent-90,
+		modifier: 'ui-accent-90'
+	),
+	(
+		variable: $color-ui-accent-100,
+		modifier: 'ui-accent-100'
+	),
+	(
+		variable: $color-ui-accent-200,
+		modifier: 'ui-accent-200'
+	),
+	(
+		variable: $color-ui-accent-300,
+		modifier: 'ui-accent-300'
+	),
+	(
+		variable: $color-ui-accent-400,
+		modifier: 'ui-accent-400'
+	),
+	(
+		variable: $color-ui-accent-500,
+		modifier: 'ui-accent-500'
+	),
+	(
+		variable: $color-ui-accent-600,
+		modifier: 'ui-accent-600'
+	),
+	(
+		variable: $color-ui-accent-700,
+		modifier: 'ui-accent-700'
+	),
+	(
+		variable: $color-ui-accent-800,
+		modifier: 'ui-accent-800'
+	),
+	(
+		variable: $color-ui-accent-900,
+		modifier: 'ui-accent-900'
+	),
+	(
+		variable: $color-ui-accent-1000,
+		modifier: 'ui-accent-1000'
+	),
+
+	// Color error
+	(
+		variable: $color-error-10,
+		modifier: 'error-10'
+	),
+	(
+		variable: $color-error-20,
+		modifier: 'error-20'
+	),
+	(
+		variable: $color-error-30,
+		modifier: 'error-30'
+	),
+	(
+		variable: $color-error-40,
+		modifier: 'error-40'
+	),
+	(
+		variable: $color-error-50,
+		modifier: 'error-50'
+	),
+	(
+		variable: $color-error-60,
+		modifier: 'error-60'
+	),
+	(
+		variable: $color-error-70,
+		modifier: 'error-70'
+	),
+	(
+		variable: $color-error-80,
+		modifier: 'error-80'
+	),
+	(
+		variable: $color-error-90,
+		modifier: 'error-90'
+	),
+	(
+		variable: $color-error-100,
+		modifier: 'error-100'
+	),
+	(
+		variable: $color-error-200,
+		modifier: 'error-200'
+	),
+	(
+		variable: $color-error-300,
+		modifier: 'error-300'
+	),
+	(
+		variable: $color-error-400,
+		modifier: 'error-400'
+	),
+	(
+		variable: $color-error-500,
+		modifier: 'error-500'
+	),
+	(
+		variable: $color-error-600,
+		modifier: 'error-600'
+	),
+	(
+		variable: $color-error-700,
+		modifier: 'error-700'
+	),
+	(
+		variable: $color-error-800,
+		modifier: 'error-800'
+	),
+	(
+		variable: $color-error-900,
+		modifier: 'error-900'
+	),
+	(
+		variable: $color-error-1000,
+		modifier: 'error-1000'
+	),
+
+	// Color success
+	(
+		variable: $color-success-10,
+		modifier: 'success-10'
+	),
+	(
+		variable: $color-success-20,
+		modifier: 'success-20'
+	),
+	(
+		variable: $color-success-30,
+		modifier: 'success-30'
+	),
+	(
+		variable: $color-success-40,
+		modifier: 'success-40'
+	),
+	(
+		variable: $color-success-50,
+		modifier: 'success-50'
+	),
+	(
+		variable: $color-success-60,
+		modifier: 'success-60'
+	),
+	(
+		variable: $color-success-70,
+		modifier: 'success-70'
+	),
+	(
+		variable: $color-success-80,
+		modifier: 'success-80'
+	),
+	(
+		variable: $color-success-90,
+		modifier: 'success-90'
+	),
+	(
+		variable: $color-success-100,
+		modifier: 'success-100'
+	),
+	(
+		variable: $color-success-200,
+		modifier: 'success-200'
+	),
+	(
+		variable: $color-success-300,
+		modifier: 'success-300'
+	),
+	(
+		variable: $color-success-400,
+		modifier: 'success-400'
+	),
+	(
+		variable: $color-success-500,
+		modifier: 'success-500'
+	),
+	(
+		variable: $color-success-600,
+		modifier: 'success-600'
+	),
+	(
+		variable: $color-success-700,
+		modifier: 'success-700'
+	),
+	(
+		variable: $color-success-800,
+		modifier: 'success-800'
+	),
+	(
+		variable: $color-success-900,
+		modifier: 'success-900'
+	),
+	(
+		variable: $color-success-1000,
+		modifier: 'success-1000'
+	),
+
+	// Color warning
+	(
+		variable: $color-warning-10,
+		modifier: 'warning-10'
+	),
+	(
+		variable: $color-warning-20,
+		modifier: 'warning-20'
+	),
+	(
+		variable: $color-warning-30,
+		modifier: 'warning-30'
+	),
+	(
+		variable: $color-warning-40,
+		modifier: 'warning-40'
+	),
+	(
+		variable: $color-warning-50,
+		modifier: 'warning-50'
+	),
+	(
+		variable: $color-warning-60,
+		modifier: 'warning-60'
+	),
+	(
+		variable: $color-warning-70,
+		modifier: 'warning-70'
+	),
+	(
+		variable: $color-warning-80,
+		modifier: 'warning-80'
+	),
+	(
+		variable: $color-warning-90,
+		modifier: 'warning-90'
+	),
+	(
+		variable: $color-warning-100,
+		modifier: 'warning-100'
+	),
+	(
+		variable: $color-warning-200,
+		modifier: 'warning-200'
+	),
+	(
+		variable: $color-warning-300,
+		modifier: 'warning-300'
+	),
+	(
+		variable: $color-warning-400,
+		modifier: 'warning-400'
+	),
+	(
+		variable: $color-warning-500,
+		modifier: 'warning-500'
+	),
+	(
+		variable: $color-warning-600,
+		modifier: 'warning-600'
+	),
+	(
+		variable: $color-warning-700,
+		modifier: 'warning-700'
+	),
+	(
+		variable: $color-warning-800,
+		modifier: 'warning-800'
+	),
+	(
+		variable: $color-warning-900,
+		modifier: 'warning-900'
+	),
+	(
+		variable: $color-warning-1000,
+		modifier: 'warning-1000'
+	),
+
+	// Color select
+	(
+		variable: $color-select-10,
+		modifier: 'select-10'
+	),
+	(
+		variable: $color-select-20,
+		modifier: 'select-20'
+	),
+	(
+		variable: $color-select-30,
+		modifier: 'select-30'
+	),
+	(
+		variable: $color-select-40,
+		modifier: 'select-40'
+	),
+	(
+		variable: $color-select-50,
+		modifier: 'select-50'
+	),
+	(
+		variable: $color-select-60,
+		modifier: 'select-60'
+	),
+	(
+		variable: $color-select-70,
+		modifier: 'select-70'
+	),
+	(
+		variable: $color-select-80,
+		modifier: 'select-80'
+	),
+	(
+		variable: $color-select-90,
+		modifier: 'select-90'
+	),
+	(
+		variable: $color-select-100,
+		modifier: 'select-100'
+	),
+	(
+		variable: $color-select-200,
+		modifier: 'select-200'
+	),
+	(
+		variable: $color-select-300,
+		modifier: 'select-300'
+	),
+	(
+		variable: $color-select-400,
+		modifier: 'select-400'
+	),
+	(
+		variable: $color-select-500,
+		modifier: 'select-500'
+	),
+	(
+		variable: $color-select-600,
+		modifier: 'select-600'
+	),
+	(
+		variable: $color-select-700,
+		modifier: 'select-700'
+	),
+	(
+		variable: $color-select-800,
+		modifier: 'select-800'
+	),
+	(
+		variable: $color-select-900,
+		modifier: 'select-900'
+	),
+	(
+		variable: $color-select-1000,
+		modifier: 'select-1000'
+	),
+
+	// Color focus
+	(
+		variable: $color-focus-10,
+		modifier: 'focus-10'
+	),
+	(
+		variable: $color-focus-20,
+		modifier: 'focus-20'
+	),
+	(
+		variable: $color-focus-30,
+		modifier: 'focus-30'
+	),
+	(
+		variable: $color-focus-40,
+		modifier: 'focus-40'
+	),
+	(
+		variable: $color-focus-50,
+		modifier: 'focus-50'
+	),
+	(
+		variable: $color-focus-60,
+		modifier: 'focus-60'
+	),
+	(
+		variable: $color-focus-70,
+		modifier: 'focus-70'
+	),
+	(
+		variable: $color-focus-80,
+		modifier: 'focus-80'
+	),
+	(
+		variable: $color-focus-90,
+		modifier: 'focus-90'
+	),
+	(
+		variable: $color-focus-100,
+		modifier: 'focus-100'
+	),
+	(
+		variable: $color-focus-200,
+		modifier: 'focus-200'
+	),
+	(
+		variable: $color-focus-300,
+		modifier: 'focus-300'
+	),
+	(
+		variable: $color-focus-400,
+		modifier: 'focus-400'
+	),
+	(
+		variable: $color-focus-500,
+		modifier: 'focus-500'
+	),
+	(
+		variable: $color-focus-600,
+		modifier: 'focus-600'
+	),
+	(
+		variable: $color-focus-700,
+		modifier: 'focus-700'
+	),
+	(
+		variable: $color-focus-800,
+		modifier: 'focus-800'
+	),
+	(
+		variable: $color-focus-900,
+		modifier: 'focus-900'
+	),
+	(
+		variable: $color-focus-1000,
+		modifier: 'focus-1000'
+	)
+);
+
+.color-card {
+
+	&::before {
+		@include border-top-radius($border-radius-100);
+		display: block;
+		padding-top: $spacing * 6;
+		padding-bottom: $spacing * 6;
+		width: $spacing * 15;
+		border: $border-ui-100;
+		color: rgba($color-text, 0.5);
+		content: '';
+		text-align: center;
+		font-size: $font-size-80;
+		line-height: $spacing * 3;
+	}
+}
+
+.color-card--90 {
+
+	&::before {
+		padding-top: $spacing * 4;
+		padding-bottom: $spacing * 4;
+		width: $spacing * 10;
+		line-height: $spacing * 2;
+	}
+}
+
+@each $color in $color-card-colors {
+	$color-variable: map-get($color, 'variable');
+	$color-modifier: map-get($color, 'modifier');
+
+	.color-card--#{$color-modifier}::before {
+		background-color: $color-variable;
+		content: '#{$color-variable}';
+
+		@if not isLightColor($color-variable) {
+			border: none;
+			color: rgba($color-text-diap, 0.5);
+		}
+	}
+}
+
+.color-card__title {
+	@include border-bottom-radius($border-radius-100);
+	padding: $spacing ($spacing / 2);
+	border-right: $border-ui-100;
+	border-bottom: $border-ui-100;
+	border-left: $border-ui-100;
+	background-color: $color-card-background-color;
+	text-align: center;
+	font-size: $font-size-70;
+	line-height: $line-height-20;
+}

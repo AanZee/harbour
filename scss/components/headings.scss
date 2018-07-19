@@ -1,0 +1,140 @@
+.headings {
+
+	& > *:first-child {
+		margin-top: 0;
+	}
+
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.headings--diap {
+	@include font-smoothing;
+}
+
+.headings__running-head {
+	color: $color-heading;
+	font-weight: 600;
+
+	@include media(0, $range-hand) {
+		font-size: $font-size-90;
+	}
+	@include media($range-lap, false) {
+		font-size: $font-size-100;
+	}
+
+	.headings--diap & {
+		color: $color-text-diap;
+	}
+}
+
+.headings__overline {}
+
+.headings__headline {
+	color: $color-heading-200;
+	font-family: $font-family-display;
+	font-weight: 700;
+	line-height: $line-height-40;
+
+	@include media(0, $range-hand) {
+		font-size: $font-size-400;
+	}
+	@include media($range-lap) {
+		font-size: $font-size-500;
+	}
+	@include media($range-desk, false) {
+		font-size: $font-size-600;
+	}
+
+	.headings--diap & {
+		color: $color-text-diap;
+	}
+}
+
+.headings__title {
+	color: $color-heading-200;
+	font-weight: 400;
+	line-height: $line-height-40;
+
+	@include media(0, $range-hand) {
+		font-size: $font-size-200;
+	}
+	@include media($range-lap) {
+		font-size: $font-size-300;
+	}
+	@include media($range-desk, false) {
+		font-size: $font-size-400;
+	}
+
+	.headings--diap & {
+		color: $color-text-diap;
+	}
+}
+
+.headings__subtitle {
+	color: $color-heading-200;
+	font-weight: 400;
+	line-height: $line-height-40;
+
+	@include media(0, $range-hand) {
+		font-size: $font-size-100;
+	}
+	@include media($range-lap) {
+		font-size: $font-size-200;
+	}
+	@include media($range-desk, false) {
+		font-size: $font-size-300;
+	}
+
+	.headings--diap & {
+		color: $color-text-diap;
+	}
+}
+
+.headings__deck {}
+
+.headings__underline {
+	color: $color-heading-30;
+	text-transform: uppercase;
+	line-height: $line-height-40;
+
+	@include media(0, $range-hand) {
+		font-size: $font-size-90;
+	}
+	@include media($range-lap) {
+		margin-top: $spacing / 4;
+		font-size: $font-size-100;
+	}
+	@include media($range-desk, false) {
+		margin-top: $spacing / 4;
+		font-size: $font-size-100;
+	}
+
+	.headings--diap & {
+		color: $color-text-diap;
+	}
+}
+
+.headings__supporting-text {
+	color: $color-text-90;
+	line-height: $line-height-40;
+
+	@include media(0, $range-hand) {
+		margin-top: $spacing / 4;
+		font-size: $font-size-100;
+	}
+	@include media($range-lap, false) {
+		margin-top: $spacing / 2;
+		font-size: $font-size-200;
+	}
+
+	.headings--diap & {
+		color: $color-text-diap;
+	}
+}
+
+.headings__emphasis {
+	color: $color-ui-accent;
+	font-weight: 600;
+}

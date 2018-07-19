@@ -1,0 +1,218 @@
+$content-a-border: ($spacing / 8) solid; // NOTE: No color is set to inherit the color of its parent
+
+.content {
+
+	& > :first-child {
+		margin-top: 0;
+	}
+
+	& > :last-child {
+		margin-bottom: 0;
+	}
+}
+
+.content--diap {
+	color: $color-text-diap;
+}
+
+h1 {
+
+	.content & {
+		font-weight: 600;
+		line-height: $line-height-30;
+
+		@include media(0, $range-palm) {
+			font-size: $font-size-400;
+		}
+		@include media($range-hand) {
+			font-size: $font-size-500;
+		}
+		@include media($range-lap, false) {
+			font-size: $font-size-600;
+		}
+	}
+}
+
+h2 {
+
+	.content & {
+		font-weight: 600;
+		line-height: $line-height-40;
+
+		@include media(0, $range-palm) {
+			font-size: $font-size-300;
+		}
+		@include media($range-hand) {
+			font-size: $font-size-400;
+		}
+		@include media($range-lap, false) {
+			font-size: $font-size-500;
+		}
+	}
+}
+
+h3 {
+
+	.content & {
+		font-weight: 600;
+		line-height: $line-height-50;
+
+		@include media(0, $range-palm) {
+			font-size: $font-size-200;
+		}
+		@include media($range-hand) {
+			font-size: $font-size-300;
+		}
+		@include media($range-lap, false) {
+			font-size: $font-size-400;
+		}
+	}
+}
+
+h4 {
+
+	.content & {
+		font-weight: 600;
+		line-height: $line-height-50;
+
+		@include media(0, $range-palm) {
+			font-size: $font-size-100;
+		}
+		@include media($range-hand) {
+			font-size: $font-size-200;
+		}
+		@include media($range-lap, false) {
+			font-size: $font-size-300;
+		}
+	}
+}
+
+h5 {
+
+	.content & {
+		font-weight: 600;
+		line-height: $line-height-50;
+
+		@include media(0, $range-hand) {
+			font-size: $font-size-100;
+		}
+		@include media($range-lap, false) {
+			font-size: $font-size-200;
+		}
+	}
+}
+
+h6 {
+
+	.content & {
+		font-weight: normal;
+		line-height: $line-height-50;
+
+		@include media(0, $range-hand) {
+			font-size: $font-size-100;
+		}
+		@include media($range-lap, false) {
+			font-size: $font-size-200;
+		}
+	}
+}
+
+p {
+
+	.content & {
+		max-width: 40em;
+		line-height: $line-height-100;
+
+		@include media(0, $range-hand) {
+			margin-top: $line-height-80 * $font-size-100;
+			margin-bottom: $line-height-80 * $font-size-100;
+			font-size: $font-size-100;
+		}
+		@include media($range-lap, false) {
+			margin-top: $line-height-80 * $font-size-200;
+			margin-bottom: $line-height-80 * $font-size-200;
+			font-size: $font-size-200;
+		}
+	}
+
+	.content--90 & {
+
+		@include media(0, $range-hand) {
+			margin-top: $line-height-80 * $font-size-90;
+			margin-bottom: $line-height-80 * $font-size-90;
+			font-size: $font-size-90;
+		}
+		@include media($range-lap, false) {
+			margin-top: $line-height-80 * $font-size-100;
+			margin-bottom: $line-height-80 * $font-size-100;
+			font-size: $font-size-100;
+		}
+	}
+}
+
+ol,
+ul {
+
+	.content & {
+		max-width: 40em;
+		line-height: $line-height-100;
+
+		@include media(0, $range-hand) {
+			margin-top: $line-height-80 * $font-size-100;
+			margin-bottom: $line-height-80 * $font-size-100;
+			padding-left: $line-height-80 * $font-size-100;
+			font-size: $font-size-100;
+		}
+		@include media($range-lap, false) {
+			margin-top: $line-height-80 * $font-size-200;
+			margin-bottom: $line-height-80 * $font-size-200;
+			padding-left: $line-height-80 * $font-size-200;
+			font-size: $font-size-200;
+		}
+	}
+
+	.content--90 & {
+
+		@include media(0, $range-hand) {
+			font-size: $font-size-90;
+		}
+		@include media($range-lap, false) {
+			font-size: $font-size-100;
+		}
+	}
+}
+
+ol {
+
+	.content & {
+		list-style: decimal;
+	}
+}
+
+ul {
+
+	.content & {
+		list-style: disc;
+	}
+}
+
+a {
+
+	.content & {
+		border-bottom: $content-a-border;
+	}
+}
+
+strong {
+
+	.content & {
+		font-weight: bold;
+	}
+}
+
+em {
+
+	.content & {
+		font-style: italic;
+	}
+}
