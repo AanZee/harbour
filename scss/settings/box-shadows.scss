@@ -1,2 +1,6 @@
 $box-shadow: 0 0 16px rgba($color-shadow, 0.25) !default;
+$box-shadow-100: $box-shadow !default;
+
 $box-shadow-bottom: 0 4px 12px rgba($color-shadow, 0.1) !default;
+
+$box-shadow-focus: inset 0 0 0 2px $color-focus !default;

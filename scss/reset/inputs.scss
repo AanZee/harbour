@@ -1,3 +1,5 @@
+$input-font-size: 16px; // NOTE: Font size of 16px or higher disables zooming on form fields with iOS.
+
 [type='color'],
 [type='email'],
 [type='number'],
@@ -14,7 +16,7 @@ select {
 	box-shadow: none; // NOTE: Reset FF box shadow
 	color: $color-text;
 	font-family: $font-family-sans-serif;
-	font-size: 16px; // NOTE: Font size of 16px or heigher disables zooming on form fields with iOS.
+	font-size: $input-font-size; // NOTE: Font size of 16px or higher disables zooming on form fields with iOS.
 	appearance: none;
 }
 

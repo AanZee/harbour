@@ -40,6 +40,9 @@ $layout-column-spacing-lap-and-larger: $spacing * 2;
 $layout-column-spacing-90-hand-and-smaller: $spacing * 0.75;
 $layout-column-spacing-90-lap-and-larger: $spacing;
 
+$layout-column-one-third-percentage: 33%;
+$layout-column-two-thirds-percentage: 67%;
+
 // Other local variables
 $layout-section-bordered-border: $border-ui-200 !default;
 
@@ -133,25 +136,24 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	}
 }
 
-
 .layout__section--rounded-top {
 	@include media(0, $range-hand) {
-		border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
 		border-top-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+		border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
 	}
 	@include media($range-lap, false) {
-		border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
 		border-top-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+		border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
 	}
 
 	> :first-child {
 		@include media(0, $range-hand) {
-			border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
 			border-top-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+			border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
 		}
 		@include media($range-lap, false) {
-			border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
 			border-top-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+			border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
 		}
 	}
 }
@@ -339,12 +341,14 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spaced-0 {
+
 	&:not(:first-child) {
 		margin-top: 0;
 	}
 }
 
 .layout__section--spaced-60 {
+
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-60-palm-and-lower;
@@ -362,6 +366,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spaced-70 {
+
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-70-palm-and-lower;
@@ -379,6 +384,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spaced-80 {
+
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-80-palm-and-lower;
@@ -396,6 +402,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spaced-90 {
+
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-90-palm-and-lower;
@@ -413,6 +420,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spaced-200 {
+
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-200-palm-and-lower;
@@ -430,6 +438,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__section--spaced-300 {
+
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
 			margin-top: $layout-spacing-300-palm-and-lower;
@@ -1241,7 +1250,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 }
 
 .layout__columns--spacing-0 {
-		margin: 0;
+	margin: 0;
 }
 
 .layout__columns--spacing-90 {
@@ -1315,23 +1324,23 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	flex-basis: $spacing * 35;
 
 	@include media(0, $range-hand) {
-		min-width: calc(33% - #{$layout-column-spacing-hand-and-smaller * 2});
+		min-width: calc($layout-column-one-third-percentage - #{$layout-column-spacing-hand-and-smaller * 2});
 	}
 	@include media($range-lap, false) {
-		min-width: calc(33% - #{$layout-column-spacing-lap-and-larger * 2});
+		min-width: calc($layout-column-one-third-percentage - #{$layout-column-spacing-lap-and-larger * 2});
 	}
 
 	.layout__columns--spacing-90 > & {
 		@include media(0, $range-hand) {
-			min-width: calc(33% - #{$layout-column-spacing-90-hand-and-smaller * 2});
+			min-width: calc($layout-column-one-third-percentage - #{$layout-column-spacing-90-hand-and-smaller * 2});
 		}
 		@include media($range-lap, false) {
-			min-width: calc(33% - #{$layout-column-spacing-90-lap-and-larger * 2});
+			min-width: calc($layout-column-one-third-percentage - #{$layout-column-spacing-90-lap-and-larger * 2});
 		}
 	}
 
 	.layout__columns--spacing-0 > & {
-		min-width: 33%;
+		min-width: $layout-column-one-third-percentage;
 	}
 }
 
@@ -1340,22 +1349,22 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	flex-grow: 2;
 
 	@include media(0, $range-hand) {
-		min-width: calc(67% - #{$layout-column-spacing-hand-and-smaller * 2});
+		min-width: calc($layout-column-two-thirds-percentage - #{$layout-column-spacing-hand-and-smaller * 2});
 	}
 	@include media($range-lap, false) {
-		min-width: calc(67% - #{$layout-column-spacing-lap-and-larger * 2});
+		min-width: calc($layout-column-two-thirds-percentage - #{$layout-column-spacing-lap-and-larger * 2});
 	}
 
 	.layout__columns--spacing-90 > & {
 		@include media(0, $range-hand) {
-			min-width: calc(67% - #{$layout-column-spacing-90-hand-and-smaller * 2});
+			min-width: calc($layout-column-two-thirds-percentage - #{$layout-column-spacing-90-hand-and-smaller * 2});
 		}
 		@include media($range-lap, false) {
-			min-width: calc(67% - #{$layout-column-spacing-90-lap-and-larger * 2});
+			min-width: calc($layout-column-two-thirds-percentage - #{$layout-column-spacing-90-lap-and-larger * 2});
 		}
 	}
 
 	.layout__columns--spacing-0 > & {
-		min-width: 67%;
+		min-width: $layout-column-two-thirds-percentage;
 	}
 }
