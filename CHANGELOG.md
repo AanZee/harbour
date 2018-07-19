@@ -1,3 +1,12 @@
+# 1.8.0
+
+## Features
+* Add gulp tasks to watch and build SCSS, using stylelint as linter
+* Update SCSS in various components to comply with linting rules
+
+## Breaking changes
+* Move `.stylelintrc.json` to the root of the project. Projects including this setting file should update the path in their `stylelint.js` file
+
 # 1.7.0
 
 ## Features
