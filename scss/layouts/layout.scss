@@ -1,38 +1,38 @@
 // Set standardized spacing size for margins and paddings
-$layout-spacing-60-palm-and-lower: $spacing;
+$layout-spacing-60-palm-and-smaller: $spacing;
 $layout-spacing-60-hand: $spacing;
 $layout-spacing-60-lap: $spacing;
-$layout-spacing-60-desk-and-up: $spacing;
+$layout-spacing-60-desk-and-larger: $spacing;
 
-$layout-spacing-70-palm-and-lower: $spacing;
+$layout-spacing-70-palm-and-smaller: $spacing;
 $layout-spacing-70-hand: $spacing * 1.25;
 $layout-spacing-70-lap: $spacing * 1.5;
-$layout-spacing-70-desk-and-up: $spacing * 1.75;
+$layout-spacing-70-desk-and-larger: $spacing * 1.75;
 
-$layout-spacing-80-palm-and-lower: $spacing;
+$layout-spacing-80-palm-and-smaller: $spacing;
 $layout-spacing-80-hand: $spacing * 1.5;
 $layout-spacing-80-lap: $spacing * 2;
-$layout-spacing-80-desk-and-up: $spacing * 2.5;
+$layout-spacing-80-desk-and-larger: $spacing * 2.5;
 
-$layout-spacing-90-palm-and-lower: $spacing * 1.5;
+$layout-spacing-90-palm-and-smaller: $spacing * 1.5;
 $layout-spacing-90-hand: $spacing * 2;
 $layout-spacing-90-lap: $spacing * 3;
-$layout-spacing-90-desk-and-up: $spacing * 4;
+$layout-spacing-90-desk-and-larger: $spacing * 4;
 
-$layout-spacing-palm-and-lower: $spacing * 2;
+$layout-spacing-palm-and-smaller: $spacing * 2;
 $layout-spacing-hand: $spacing * 3;
 $layout-spacing-lap: $spacing * 4;
-$layout-spacing-desk-and-up: $spacing * 5;
+$layout-spacing-desk-and-larger: $spacing * 5;
 
-$layout-spacing-200-palm-and-lower: $spacing * 2;
+$layout-spacing-200-palm-and-smaller: $spacing * 2;
 $layout-spacing-200-hand: $spacing * 4;
 $layout-spacing-200-lap: $spacing * 6;
-$layout-spacing-200-desk-and-up: $spacing * 8;
+$layout-spacing-200-desk-and-larger: $spacing * 8;
 
-$layout-spacing-300-palm-and-lower: $spacing * 2;
+$layout-spacing-300-palm-and-smaller: $spacing * 2;
 $layout-spacing-300-hand: $spacing * 5;
 $layout-spacing-300-lap: $spacing * 8;
-$layout-spacing-300-desk-and-up: $spacing * 11;
+$layout-spacing-300-desk-and-larger: $spacing * 11;
 
 $layout-column-spacing-hand-and-smaller: $spacing;
 $layout-column-spacing-lap-and-larger: $spacing * 2;
@@ -43,8 +43,8 @@ $layout-column-spacing-90-lap-and-larger: $spacing;
 // Other local variables
 $layout-section-bordered-border: $border-ui-200 !default;
 
-$layout-section-rounded-border-radius-hand-and-lower: $border-radius-100 !default;
-$layout-section-rounded-border-radius-lap-and-up: $border-radius-200 !default;
+$layout-section-rounded-border-radius-hand-and-smaller: $border-radius-100 !default;
+$layout-section-rounded-border-radius-lap-and-larger: $border-radius-200 !default;
 
 $layout-section-colored-background-color: $color-background-colored !default;
 $layout-section-neutral-background-color: $color-background-neutral !default;
@@ -67,7 +67,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-palm-and-lower;
+			margin-top: $layout-spacing-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-hand;
@@ -76,7 +76,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-desk-and-up;
+			margin-top: $layout-spacing-desk-and-larger;
 		}
 	}
 
@@ -104,31 +104,31 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 .layout__section--rounded {
 	@include media(0, $range-hand) {
-		border-radius: $layout-section-rounded-border-radius-hand-and-lower;
+		border-radius: $layout-section-rounded-border-radius-hand-and-smaller;
 	}
 	@include media($range-lap, false) {
-		border-radius: $layout-section-rounded-border-radius-lap-and-up;
+		border-radius: $layout-section-rounded-border-radius-lap-and-larger;
 	}
 
 	> :first-child {
 		@include media(0, $range-hand) {
-			border-top-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
-			border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
+			border-top-left-radius: $layout-section-rounded-border-radius-hand-and-smaller;
+			border-top-right-radius: $layout-section-rounded-border-radius-hand-and-smaller;
 		}
 		@include media($range-lap, false) {
-			border-top-left-radius: $layout-section-rounded-border-radius-lap-and-up;
-			border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
+			border-top-left-radius: $layout-section-rounded-border-radius-lap-and-larger;
+			border-top-right-radius: $layout-section-rounded-border-radius-lap-and-larger;
 		}
 	}
 
 	> :last-child {
 		@include media(0, $range-hand) {
-			border-bottom-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
-			border-bottom-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+			border-bottom-right-radius: $layout-section-rounded-border-radius-hand-and-smaller;
+			border-bottom-left-radius: $layout-section-rounded-border-radius-hand-and-smaller;
 		}
 		@include media($range-lap, false) {
-			border-bottom-right-radius: $layout-section-rounded-border-radius-lap-and-up;
-			border-bottom-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+			border-bottom-right-radius: $layout-section-rounded-border-radius-lap-and-larger;
+			border-bottom-left-radius: $layout-section-rounded-border-radius-lap-and-larger;
 		}
 	}
 }
@@ -136,44 +136,44 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 .layout__section--rounded-top {
 	@include media(0, $range-hand) {
-		border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
-		border-top-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+		border-top-right-radius: $layout-section-rounded-border-radius-hand-and-smaller;
+		border-top-left-radius: $layout-section-rounded-border-radius-hand-and-smaller;
 	}
 	@include media($range-lap, false) {
-		border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
-		border-top-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+		border-top-right-radius: $layout-section-rounded-border-radius-lap-and-larger;
+		border-top-left-radius: $layout-section-rounded-border-radius-lap-and-larger;
 	}
 
 	> :first-child {
 		@include media(0, $range-hand) {
-			border-top-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
-			border-top-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+			border-top-right-radius: $layout-section-rounded-border-radius-hand-and-smaller;
+			border-top-left-radius: $layout-section-rounded-border-radius-hand-and-smaller;
 		}
 		@include media($range-lap, false) {
-			border-top-right-radius: $layout-section-rounded-border-radius-lap-and-up;
-			border-top-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+			border-top-right-radius: $layout-section-rounded-border-radius-lap-and-larger;
+			border-top-left-radius: $layout-section-rounded-border-radius-lap-and-larger;
 		}
 	}
 }
 
 .layout__section--rounded-bottom {
 	@include media(0, $range-hand) {
-		border-bottom-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
-		border-bottom-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+		border-bottom-right-radius: $layout-section-rounded-border-radius-hand-and-smaller;
+		border-bottom-left-radius: $layout-section-rounded-border-radius-hand-and-smaller;
 	}
 	@include media($range-lap, false) {
-		border-bottom-right-radius: $layout-section-rounded-border-radius-lap-and-up;
-		border-bottom-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+		border-bottom-right-radius: $layout-section-rounded-border-radius-lap-and-larger;
+		border-bottom-left-radius: $layout-section-rounded-border-radius-lap-and-larger;
 	}
 
 	> :last-child {
 		@include media(0, $range-hand) {
-			border-bottom-right-radius: $layout-section-rounded-border-radius-hand-and-lower;
-			border-bottom-left-radius: $layout-section-rounded-border-radius-hand-and-lower;
+			border-bottom-right-radius: $layout-section-rounded-border-radius-hand-and-smaller;
+			border-bottom-left-radius: $layout-section-rounded-border-radius-hand-and-smaller;
 		}
 		@include media($range-lap, false) {
-			border-bottom-right-radius: $layout-section-rounded-border-radius-lap-and-up;
-			border-bottom-left-radius: $layout-section-rounded-border-radius-lap-and-up;
+			border-bottom-right-radius: $layout-section-rounded-border-radius-lap-and-larger;
+			border-bottom-left-radius: $layout-section-rounded-border-radius-lap-and-larger;
 		}
 	}
 }
@@ -216,7 +216,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-60-palm-and-lower;
+			margin-top: $layout-spacing-60-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-60-hand;
@@ -225,7 +225,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-60-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-60-desk-and-up;
+			margin-top: $layout-spacing-60-desk-and-larger;
 		}
 	}
 }
@@ -234,7 +234,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-70-palm-and-lower;
+			margin-top: $layout-spacing-70-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-70-hand;
@@ -243,7 +243,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-70-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-70-desk-and-up;
+			margin-top: $layout-spacing-70-desk-and-larger;
 		}
 	}
 }
@@ -252,7 +252,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-80-palm-and-lower;
+			margin-top: $layout-spacing-80-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-80-hand;
@@ -261,7 +261,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-80-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-80-desk-and-up;
+			margin-top: $layout-spacing-80-desk-and-larger;
 		}
 	}
 }
@@ -270,7 +270,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-90-palm-and-lower;
+			margin-top: $layout-spacing-90-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-90-hand;
@@ -279,7 +279,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-90-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-90-desk-and-up;
+			margin-top: $layout-spacing-90-desk-and-larger;
 		}
 	}
 }
@@ -288,7 +288,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-palm-and-lower;
+			margin-top: $layout-spacing-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-hand;
@@ -297,7 +297,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-desk-and-up;
+			margin-top: $layout-spacing-desk-and-larger;
 		}
 	}
 }
@@ -306,7 +306,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-200-palm-and-lower;
+			margin-top: $layout-spacing-200-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-200-hand;
@@ -315,7 +315,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-200-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-200-desk-and-up;
+			margin-top: $layout-spacing-200-desk-and-larger;
 		}
 	}
 }
@@ -324,7 +324,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 	> :not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-300-palm-and-lower;
+			margin-top: $layout-spacing-300-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-300-hand;
@@ -333,7 +333,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-300-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-300-desk-and-up;
+			margin-top: $layout-spacing-300-desk-and-larger;
 		}
 	}
 }
@@ -347,7 +347,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 .layout__section--spaced-60 {
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-60-palm-and-lower;
+			margin-top: $layout-spacing-60-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-60-hand;
@@ -356,7 +356,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-60-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-60-desk-and-up;
+			margin-top: $layout-spacing-60-desk-and-larger;
 		}
 	}
 }
@@ -364,7 +364,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 .layout__section--spaced-70 {
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-70-palm-and-lower;
+			margin-top: $layout-spacing-70-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-70-hand;
@@ -373,7 +373,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-70-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-70-desk-and-up;
+			margin-top: $layout-spacing-70-desk-and-larger;
 		}
 	}
 }
@@ -381,7 +381,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 .layout__section--spaced-80 {
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-80-palm-and-lower;
+			margin-top: $layout-spacing-80-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-80-hand;
@@ -390,7 +390,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-80-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-80-desk-and-up;
+			margin-top: $layout-spacing-80-desk-and-larger;
 		}
 	}
 }
@@ -398,7 +398,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 .layout__section--spaced-90 {
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-90-palm-and-lower;
+			margin-top: $layout-spacing-90-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-90-hand;
@@ -407,7 +407,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-90-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-90-desk-and-up;
+			margin-top: $layout-spacing-90-desk-and-larger;
 		}
 	}
 }
@@ -415,7 +415,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 .layout__section--spaced-200 {
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-200-palm-and-lower;
+			margin-top: $layout-spacing-200-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-200-hand;
@@ -424,7 +424,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-200-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-200-desk-and-up;
+			margin-top: $layout-spacing-200-desk-and-larger;
 		}
 	}
 }
@@ -432,7 +432,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 .layout__section--spaced-300 {
 	&:not(:first-child) {
 		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-300-palm-and-lower;
+			margin-top: $layout-spacing-300-palm-and-smaller;
 		}
 		@include media($range-hand) {
 			margin-top: $layout-spacing-300-hand;
@@ -441,7 +441,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 			margin-top: $layout-spacing-300-lap;
 		}
 		@include media($range-desk, false) {
-			margin-top: $layout-spacing-300-desk-and-up;
+			margin-top: $layout-spacing-300-desk-and-larger;
 		}
 	}
 }
@@ -474,7 +474,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	width: 100%;
 
 	@include media(0, $range-palm) {
-		padding: $layout-spacing-palm-and-lower;
+		padding: $layout-spacing-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding: $layout-spacing-hand;
@@ -483,7 +483,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding: $layout-spacing-lap;
 	}
 	@include media($range-desk, false) {
-		padding: $layout-spacing-desk-and-up;
+		padding: $layout-spacing-desk-and-larger;
 	}
 }
 
@@ -526,7 +526,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 .layout__inner--padded-60 {
 	@include media(0, $range-palm) {
-		padding: $layout-spacing-60-palm-and-lower;
+		padding: $layout-spacing-60-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding: $layout-spacing-60-hand;
@@ -535,13 +535,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding: $layout-spacing-60-lap;
 	}
 	@include media($range-desk, false) {
-		padding: $layout-spacing-60-desk-and-up;
+		padding: $layout-spacing-60-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-70 {
 	@include media(0, $range-palm) {
-		padding: $layout-spacing-70-palm-and-lower;
+		padding: $layout-spacing-70-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding: $layout-spacing-70-hand;
@@ -550,13 +550,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding: $layout-spacing-70-lap;
 	}
 	@include media($range-desk, false) {
-		padding: $layout-spacing-70-desk-and-up;
+		padding: $layout-spacing-70-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-80 {
 	@include media(0, $range-palm) {
-		padding: $layout-spacing-80-palm-and-lower;
+		padding: $layout-spacing-80-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding: $layout-spacing-80-hand;
@@ -565,13 +565,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding: $layout-spacing-80-lap;
 	}
 	@include media($range-desk, false) {
-		padding: $layout-spacing-80-desk-and-up;
+		padding: $layout-spacing-80-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-90 {
 	@include media(0, $range-palm) {
-		padding: $layout-spacing-90-palm-and-lower;
+		padding: $layout-spacing-90-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding: $layout-spacing-90-hand;
@@ -580,13 +580,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding: $layout-spacing-90-lap;
 	}
 	@include media($range-desk, false) {
-		padding: $layout-spacing-90-desk-and-up;
+		padding: $layout-spacing-90-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-200 {
 	@include media(0, $range-palm) {
-		padding: $layout-spacing-200-palm-and-lower;
+		padding: $layout-spacing-200-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding: $layout-spacing-200-hand;
@@ -595,13 +595,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding: $layout-spacing-200-lap;
 	}
 	@include media($range-desk, false) {
-		padding: $layout-spacing-200-desk-and-up;
+		padding: $layout-spacing-200-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-300 {
 	@include media(0, $range-palm) {
-		padding: $layout-spacing-300-palm-and-lower;
+		padding: $layout-spacing-300-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding: $layout-spacing-300-hand;
@@ -610,7 +610,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding: $layout-spacing-300-lap;
 	}
 	@include media($range-desk, false) {
-		padding: $layout-spacing-300-desk-and-up;
+		padding: $layout-spacing-300-desk-and-larger;
 	}
 }
 
@@ -621,8 +621,8 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 .layout__inner--padded-top-bottom-60 {
 	@include media(0, $range-palm) {
-		padding-top: $layout-spacing-60-palm-and-lower;
-		padding-bottom: $layout-spacing-60-palm-and-lower;
+		padding-top: $layout-spacing-60-palm-and-smaller;
+		padding-bottom: $layout-spacing-60-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-top: $layout-spacing-60-hand;
@@ -633,15 +633,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-bottom: $layout-spacing-60-lap;
 	}
 	@include media($range-desk, false) {
-		padding-top: $layout-spacing-60-desk-and-up;
-		padding-bottom: $layout-spacing-60-desk-and-up;
+		padding-top: $layout-spacing-60-desk-and-larger;
+		padding-bottom: $layout-spacing-60-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-top-bottom-70 {
 	@include media(0, $range-palm) {
-		padding-top: $layout-spacing-70-palm-and-lower;
-		padding-bottom: $layout-spacing-70-palm-and-lower;
+		padding-top: $layout-spacing-70-palm-and-smaller;
+		padding-bottom: $layout-spacing-70-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-top: $layout-spacing-70-hand;
@@ -652,15 +652,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-bottom: $layout-spacing-70-lap;
 	}
 	@include media($range-desk, false) {
-		padding-top: $layout-spacing-70-desk-and-up;
-		padding-bottom: $layout-spacing-70-desk-and-up;
+		padding-top: $layout-spacing-70-desk-and-larger;
+		padding-bottom: $layout-spacing-70-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-top-bottom-80 {
 	@include media(0, $range-palm) {
-		padding-top: $layout-spacing-80-palm-and-lower;
-		padding-bottom: $layout-spacing-80-palm-and-lower;
+		padding-top: $layout-spacing-80-palm-and-smaller;
+		padding-bottom: $layout-spacing-80-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-top: $layout-spacing-80-hand;
@@ -671,15 +671,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-bottom: $layout-spacing-80-lap;
 	}
 	@include media($range-desk, false) {
-		padding-top: $layout-spacing-80-desk-and-up;
-		padding-bottom: $layout-spacing-80-desk-and-up;
+		padding-top: $layout-spacing-80-desk-and-larger;
+		padding-bottom: $layout-spacing-80-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-top-bottom-90 {
 	@include media(0, $range-palm) {
-		padding-top: $layout-spacing-90-palm-and-lower;
-		padding-bottom: $layout-spacing-90-palm-and-lower;
+		padding-top: $layout-spacing-90-palm-and-smaller;
+		padding-bottom: $layout-spacing-90-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-top: $layout-spacing-90-hand;
@@ -690,15 +690,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-bottom: $layout-spacing-90-lap;
 	}
 	@include media($range-desk, false) {
-		padding-top: $layout-spacing-90-desk-and-up;
-		padding-bottom: $layout-spacing-90-desk-and-up;
+		padding-top: $layout-spacing-90-desk-and-larger;
+		padding-bottom: $layout-spacing-90-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-top-bottom-200 {
 	@include media(0, $range-palm) {
-		padding-top: $layout-spacing-200-palm-and-lower;
-		padding-bottom: $layout-spacing-200-palm-and-lower;
+		padding-top: $layout-spacing-200-palm-and-smaller;
+		padding-bottom: $layout-spacing-200-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-top: $layout-spacing-200-hand;
@@ -709,15 +709,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-bottom: $layout-spacing-200-lap;
 	}
 	@include media($range-desk, false) {
-		padding-top: $layout-spacing-200-desk-and-up;
-		padding-bottom: $layout-spacing-200-desk-and-up;
+		padding-top: $layout-spacing-200-desk-and-larger;
+		padding-bottom: $layout-spacing-200-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-top-bottom-300 {
 	@include media(0, $range-palm) {
-		padding-top: $layout-spacing-300-palm-and-lower;
-		padding-bottom: $layout-spacing-300-palm-and-lower;
+		padding-top: $layout-spacing-300-palm-and-smaller;
+		padding-bottom: $layout-spacing-300-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-top: $layout-spacing-300-hand;
@@ -728,8 +728,8 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-bottom: $layout-spacing-300-lap;
 	}
 	@include media($range-desk, false) {
-		padding-top: $layout-spacing-300-desk-and-up;
-		padding-bottom: $layout-spacing-300-desk-and-up;
+		padding-top: $layout-spacing-300-desk-and-larger;
+		padding-bottom: $layout-spacing-300-desk-and-larger;
 	}
 }
 
@@ -740,8 +740,8 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 .layout__inner--padded-left-right-60 {
 	@include media(0, $range-palm) {
-		padding-right: $layout-spacing-60-palm-and-lower;
-		padding-left: $layout-spacing-60-palm-and-lower;
+		padding-right: $layout-spacing-60-palm-and-smaller;
+		padding-left: $layout-spacing-60-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-right: $layout-spacing-60-hand;
@@ -752,15 +752,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-left: $layout-spacing-60-lap;
 	}
 	@include media($range-desk, false) {
-		padding-right: $layout-spacing-60-desk-and-up;
-		padding-left: $layout-spacing-60-desk-and-up;
+		padding-right: $layout-spacing-60-desk-and-larger;
+		padding-left: $layout-spacing-60-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-left-right-70 {
 	@include media(0, $range-palm) {
-		padding-right: $layout-spacing-70-palm-and-lower;
-		padding-left: $layout-spacing-70-palm-and-lower;
+		padding-right: $layout-spacing-70-palm-and-smaller;
+		padding-left: $layout-spacing-70-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-right: $layout-spacing-70-hand;
@@ -771,15 +771,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-left: $layout-spacing-70-lap;
 	}
 	@include media($range-desk, false) {
-		padding-right: $layout-spacing-70-desk-and-up;
-		padding-left: $layout-spacing-70-desk-and-up;
+		padding-right: $layout-spacing-70-desk-and-larger;
+		padding-left: $layout-spacing-70-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-left-right-80 {
 	@include media(0, $range-palm) {
-		padding-right: $layout-spacing-80-palm-and-lower;
-		padding-left: $layout-spacing-80-palm-and-lower;
+		padding-right: $layout-spacing-80-palm-and-smaller;
+		padding-left: $layout-spacing-80-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-right: $layout-spacing-80-hand;
@@ -790,15 +790,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-left: $layout-spacing-80-lap;
 	}
 	@include media($range-desk, false) {
-		padding-right: $layout-spacing-80-desk-and-up;
-		padding-left: $layout-spacing-80-desk-and-up;
+		padding-right: $layout-spacing-80-desk-and-larger;
+		padding-left: $layout-spacing-80-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-left-right-90 {
 	@include media(0, $range-palm) {
-		padding-right: $layout-spacing-90-palm-and-lower;
-		padding-left: $layout-spacing-90-palm-and-lower;
+		padding-right: $layout-spacing-90-palm-and-smaller;
+		padding-left: $layout-spacing-90-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-right: $layout-spacing-90-hand;
@@ -809,15 +809,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-left: $layout-spacing-90-lap;
 	}
 	@include media($range-desk, false) {
-		padding-right: $layout-spacing-90-desk-and-up;
-		padding-left: $layout-spacing-90-desk-and-up;
+		padding-right: $layout-spacing-90-desk-and-larger;
+		padding-left: $layout-spacing-90-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-left-right-200 {
 	@include media(0, $range-palm) {
-		padding-right: $layout-spacing-200-palm-and-lower;
-		padding-left: $layout-spacing-200-palm-and-lower;
+		padding-right: $layout-spacing-200-palm-and-smaller;
+		padding-left: $layout-spacing-200-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-right: $layout-spacing-200-hand;
@@ -828,15 +828,15 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-left: $layout-spacing-200-lap;
 	}
 	@include media($range-desk, false) {
-		padding-right: $layout-spacing-200-desk-and-up;
-		padding-left: $layout-spacing-200-desk-and-up;
+		padding-right: $layout-spacing-200-desk-and-larger;
+		padding-left: $layout-spacing-200-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-left-right-300 {
 	@include media(0, $range-palm) {
-		padding-right: $layout-spacing-300-palm-and-lower;
-		padding-left: $layout-spacing-300-palm-and-lower;
+		padding-right: $layout-spacing-300-palm-and-smaller;
+		padding-left: $layout-spacing-300-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-right: $layout-spacing-300-hand;
@@ -847,8 +847,8 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-left: $layout-spacing-300-lap;
 	}
 	@include media($range-desk, false) {
-		padding-right: $layout-spacing-300-desk-and-up;
-		padding-left: $layout-spacing-300-desk-and-up;
+		padding-right: $layout-spacing-300-desk-and-larger;
+		padding-left: $layout-spacing-300-desk-and-larger;
 	}
 }
 
@@ -870,7 +870,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 
 .layout__inner--padded-top-60 {
 	@include media(0, $range-palm) {
-		padding-top: $layout-spacing-60-palm-and-lower;
+		padding-top: $layout-spacing-60-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-top: $layout-spacing-60-hand;
@@ -879,13 +879,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-top: $layout-spacing-60-lap;
 	}
 	@include media($range-desk, false) {
-		padding-top: $layout-spacing-60-desk-and-up;
+		padding-top: $layout-spacing-60-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-right-60 {
 	@include media(0, $range-palm) {
-		padding-right: $layout-spacing-60-palm-and-lower;
+		padding-right: $layout-spacing-60-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-right: $layout-spacing-60-hand;
@@ -894,13 +894,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-right: $layout-spacing-60-lap;
 	}
 	@include media($range-desk, false) {
-		padding-right: $layout-spacing-60-desk-and-up;
+		padding-right: $layout-spacing-60-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-bottom-60 {
 	@include media(0, $range-palm) {
-		padding-bottom: $layout-spacing-60-palm-and-lower;
+		padding-bottom: $layout-spacing-60-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-bottom: $layout-spacing-60-hand;
@@ -909,13 +909,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-bottom: $layout-spacing-60-lap;
 	}
 	@include media($range-desk, false) {
-		padding-bottom: $layout-spacing-60-desk-and-up;
+		padding-bottom: $layout-spacing-60-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-left-60 {
 	@include media(0, $range-palm) {
-		padding-left: $layout-spacing-60-palm-and-lower;
+		padding-left: $layout-spacing-60-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-left: $layout-spacing-60-hand;
@@ -924,13 +924,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-left: $layout-spacing-60-lap;
 	}
 	@include media($range-desk, false) {
-		padding-left: $layout-spacing-60-desk-and-up;
+		padding-left: $layout-spacing-60-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-top-70 {
 	@include media(0, $range-palm) {
-		padding-top: $layout-spacing-70-palm-and-lower;
+		padding-top: $layout-spacing-70-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-top: $layout-spacing-70-hand;
@@ -939,13 +939,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-top: $layout-spacing-70-lap;
 	}
 	@include media($range-desk, false) {
-		padding-top: $layout-spacing-70-desk-and-up;
+		padding-top: $layout-spacing-70-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-right-70 {
 	@include media(0, $range-palm) {
-		padding-right: $layout-spacing-70-palm-and-lower;
+		padding-right: $layout-spacing-70-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-right: $layout-spacing-70-hand;
@@ -954,13 +954,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-right: $layout-spacing-70-lap;
 	}
 	@include media($range-desk, false) {
-		padding-right: $layout-spacing-70-desk-and-up;
+		padding-right: $layout-spacing-70-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-bottom-70 {
 	@include media(0, $range-palm) {
-		padding-bottom: $layout-spacing-70-palm-and-lower;
+		padding-bottom: $layout-spacing-70-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-bottom: $layout-spacing-70-hand;
@@ -969,13 +969,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-bottom: $layout-spacing-70-lap;
 	}
 	@include media($range-desk, false) {
-		padding-bottom: $layout-spacing-70-desk-and-up;
+		padding-bottom: $layout-spacing-70-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-left-70 {
 	@include media(0, $range-palm) {
-		padding-left: $layout-spacing-70-palm-and-lower;
+		padding-left: $layout-spacing-70-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-left: $layout-spacing-70-hand;
@@ -984,13 +984,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-left: $layout-spacing-70-lap;
 	}
 	@include media($range-desk, false) {
-		padding-left: $layout-spacing-70-desk-and-up;
+		padding-left: $layout-spacing-70-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-top-80 {
 	@include media(0, $range-palm) {
-		padding-top: $layout-spacing-80-palm-and-lower;
+		padding-top: $layout-spacing-80-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-top: $layout-spacing-80-hand;
@@ -999,13 +999,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-top: $layout-spacing-80-lap;
 	}
 	@include media($range-desk, false) {
-		padding-top: $layout-spacing-80-desk-and-up;
+		padding-top: $layout-spacing-80-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-right-80 {
 	@include media(0, $range-palm) {
-		padding-right: $layout-spacing-80-palm-and-lower;
+		padding-right: $layout-spacing-80-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-right: $layout-spacing-80-hand;
@@ -1014,13 +1014,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-right: $layout-spacing-80-lap;
 	}
 	@include media($range-desk, false) {
-		padding-right: $layout-spacing-80-desk-and-up;
+		padding-right: $layout-spacing-80-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-bottom-80 {
 	@include media(0, $range-palm) {
-		padding-bottom: $layout-spacing-80-palm-and-lower;
+		padding-bottom: $layout-spacing-80-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-bottom: $layout-spacing-80-hand;
@@ -1029,13 +1029,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-bottom: $layout-spacing-80-lap;
 	}
 	@include media($range-desk, false) {
-		padding-bottom: $layout-spacing-80-desk-and-up;
+		padding-bottom: $layout-spacing-80-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-left-80 {
 	@include media(0, $range-palm) {
-		padding-left: $layout-spacing-80-palm-and-lower;
+		padding-left: $layout-spacing-80-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-left: $layout-spacing-80-hand;
@@ -1044,13 +1044,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-left: $layout-spacing-80-lap;
 	}
 	@include media($range-desk, false) {
-		padding-left: $layout-spacing-80-desk-and-up;
+		padding-left: $layout-spacing-80-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-top-90 {
 	@include media(0, $range-palm) {
-		padding-top: $layout-spacing-90-palm-and-lower;
+		padding-top: $layout-spacing-90-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-top: $layout-spacing-90-hand;
@@ -1059,13 +1059,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-top: $layout-spacing-90-lap;
 	}
 	@include media($range-desk, false) {
-		padding-top: $layout-spacing-90-desk-and-up;
+		padding-top: $layout-spacing-90-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-right-90 {
 	@include media(0, $range-palm) {
-		padding-right: $layout-spacing-90-palm-and-lower;
+		padding-right: $layout-spacing-90-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-right: $layout-spacing-90-hand;
@@ -1074,13 +1074,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-right: $layout-spacing-90-lap;
 	}
 	@include media($range-desk, false) {
-		padding-right: $layout-spacing-90-desk-and-up;
+		padding-right: $layout-spacing-90-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-bottom-90 {
 	@include media(0, $range-palm) {
-		padding-bottom: $layout-spacing-90-palm-and-lower;
+		padding-bottom: $layout-spacing-90-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-bottom: $layout-spacing-90-hand;
@@ -1089,13 +1089,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-bottom: $layout-spacing-90-lap;
 	}
 	@include media($range-desk, false) {
-		padding-bottom: $layout-spacing-90-desk-and-up;
+		padding-bottom: $layout-spacing-90-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-left-90 {
 	@include media(0, $range-palm) {
-		padding-left: $layout-spacing-90-palm-and-lower;
+		padding-left: $layout-spacing-90-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-left: $layout-spacing-90-hand;
@@ -1104,13 +1104,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-left: $layout-spacing-90-lap;
 	}
 	@include media($range-desk, false) {
-		padding-left: $layout-spacing-90-desk-and-up;
+		padding-left: $layout-spacing-90-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-top-200 {
 	@include media(0, $range-palm) {
-		padding-top: $layout-spacing-200-palm-and-lower;
+		padding-top: $layout-spacing-200-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-top: $layout-spacing-200-hand;
@@ -1119,13 +1119,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-top: $layout-spacing-200-lap;
 	}
 	@include media($range-desk, false) {
-		padding-top: $layout-spacing-200-desk-and-up;
+		padding-top: $layout-spacing-200-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-right-200 {
 	@include media(0, $range-palm) {
-		padding-right: $layout-spacing-200-palm-and-lower;
+		padding-right: $layout-spacing-200-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-right: $layout-spacing-200-hand;
@@ -1134,13 +1134,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-right: $layout-spacing-200-lap;
 	}
 	@include media($range-desk, false) {
-		padding-right: $layout-spacing-200-desk-and-up;
+		padding-right: $layout-spacing-200-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-bottom-200 {
 	@include media(0, $range-palm) {
-		padding-bottom: $layout-spacing-200-palm-and-lower;
+		padding-bottom: $layout-spacing-200-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-bottom: $layout-spacing-200-hand;
@@ -1149,13 +1149,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-bottom: $layout-spacing-200-lap;
 	}
 	@include media($range-desk, false) {
-		padding-bottom: $layout-spacing-200-desk-and-up;
+		padding-bottom: $layout-spacing-200-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-left-200 {
 	@include media(0, $range-palm) {
-		padding-left: $layout-spacing-200-palm-and-lower;
+		padding-left: $layout-spacing-200-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-left: $layout-spacing-200-hand;
@@ -1164,13 +1164,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-left: $layout-spacing-200-lap;
 	}
 	@include media($range-desk, false) {
-		padding-left: $layout-spacing-200-desk-and-up;
+		padding-left: $layout-spacing-200-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-top-300 {
 	@include media(0, $range-palm) {
-		padding-top: $layout-spacing-300-palm-and-lower;
+		padding-top: $layout-spacing-300-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-top: $layout-spacing-300-hand;
@@ -1179,13 +1179,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-top: $layout-spacing-300-lap;
 	}
 	@include media($range-desk, false) {
-		padding-top: $layout-spacing-300-desk-and-up;
+		padding-top: $layout-spacing-300-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-right-300 {
 	@include media(0, $range-palm) {
-		padding-right: $layout-spacing-300-palm-and-lower;
+		padding-right: $layout-spacing-300-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-right: $layout-spacing-300-hand;
@@ -1194,13 +1194,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-right: $layout-spacing-300-lap;
 	}
 	@include media($range-desk, false) {
-		padding-right: $layout-spacing-300-desk-and-up;
+		padding-right: $layout-spacing-300-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-bottom-300 {
 	@include media(0, $range-palm) {
-		padding-bottom: $layout-spacing-300-palm-and-lower;
+		padding-bottom: $layout-spacing-300-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-bottom: $layout-spacing-300-hand;
@@ -1209,13 +1209,13 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-bottom: $layout-spacing-300-lap;
 	}
 	@include media($range-desk, false) {
-		padding-bottom: $layout-spacing-300-desk-and-up;
+		padding-bottom: $layout-spacing-300-desk-and-larger;
 	}
 }
 
 .layout__inner--padded-left-300 {
 	@include media(0, $range-palm) {
-		padding-left: $layout-spacing-300-palm-and-lower;
+		padding-left: $layout-spacing-300-palm-and-smaller;
 	}
 	@include media($range-hand) {
 		padding-left: $layout-spacing-300-hand;
@@ -1224,7 +1224,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 		padding-left: $layout-spacing-300-lap;
 	}
 	@include media($range-desk, false) {
-		padding-left: $layout-spacing-300-desk-and-up;
+		padding-left: $layout-spacing-300-desk-and-larger;
 	}
 }
 
@@ -1253,7 +1253,7 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	}
 }
 
-.layout__columns--not-wrapping-lap-and-up {
+.layout__columns--not-wrapping-lap-and-larger {
 	@include media($range-lap, false) {
 		flex-wrap: nowrap;
 	}

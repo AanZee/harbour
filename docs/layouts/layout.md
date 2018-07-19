@@ -127,7 +127,7 @@ Columns modifiers
 ```
 layout__columns--spacing-0
 layout__columns--spacing-90
-layout__columns--not-wrapping-lap-and-up
+layout__columns--not-wrapping-lap-and-larger
 ```
 
 Add specific width to column

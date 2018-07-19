@@ -1,6 +1,6 @@
 // Set animation duration for different ranges. On hand and lower the whole screen is animated and should therefore be slower.
-$popover-animation-duration-hand-and-lower: 200ms !default;
-$popover-animation-duration-lap-and-higher: 100ms !default;
+$popover-animation-duration-hand-and-smaller: 200ms !default;
+$popover-animation-duration-lap-and-larger: 100ms !default;
 
 // Set arrow size.
 $popover-arrow-size: $spacing * 1.75 !default;
@@ -13,8 +13,8 @@ $popover-arrow-vertical-position: $spacing !default;
 $popover-body-horizontal-position: $spacing * -1 !default;
 
 // Set z-index for different ranges. On hand and lower the popover should be above components such as a persistent-bottom-sheet, on lap and up the popover should be beneath components such as a persistent-bottom-sheet.
-$popover-z-index-hand-and-lower: 800 !default;
-$popover-z-index-lap-and-up: 600 !default;
+$popover-z-index-hand-and-smaller: 800 !default;
+$popover-z-index-lap-and-larger: 600 !default;
 
 .popover {
 	position: relative;
@@ -78,7 +78,7 @@ $popover-z-index-lap-and-up: 600 !default;
 			&::before,
 			&::after {
 				position: absolute;
-				z-index: $popover-z-index-lap-and-up + 2;
+				z-index: $popover-z-index-lap-and-larger + 2;
 				display: none;
 				width: 0;
 				height: 0;
@@ -101,7 +101,7 @@ $popover-z-index-lap-and-up: 600 !default;
 		.popover--arrow .popover__status:checked ~ &::after {
 			display: block;
 			animation-name: popoverBodyShowLapAndHigher;
-			animation-duration: $popover-animation-duration-lap-and-higher;
+			animation-duration: $popover-animation-duration-lap-and-larger;
 			animation-fill-mode: forwards;
 		}
 
@@ -269,10 +269,10 @@ $popover-z-index-lap-and-up: 600 !default;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		z-index: $popover-z-index-hand-and-lower + 1;
+		z-index: $popover-z-index-hand-and-smaller + 1;
 		visibility: hidden;
 		transition-timing-function: ease-out;
-		transition-duration: $popover-animation-duration-hand-and-lower;
+		transition-duration: $popover-animation-duration-hand-and-smaller;
 		transition-property: visibility, transform, opacity;
 		transform: translateY(100%);
 	}
@@ -280,7 +280,7 @@ $popover-z-index-lap-and-up: 600 !default;
 		position: absolute;
 		top: 100%;
 		left: $popover-body-horizontal-position;
-		z-index: $popover-z-index-lap-and-up + 1;
+		z-index: $popover-z-index-lap-and-larger + 1;
 		display: none; // NOTE To make sure area does not increase height of page.
 		width: $spacing * 40;
 	}
@@ -295,7 +295,7 @@ $popover-z-index-lap-and-up: 600 !default;
 		@include media($range-lap, false) {
 			display: block;
 			animation-name: popoverBodyShowLapAndHigher;
-			animation-duration: $popover-animation-duration-lap-and-higher;
+			animation-duration: $popover-animation-duration-lap-and-larger;
 			animation-fill-mode: forwards;
 		}
 	}
@@ -441,7 +441,7 @@ $popover-z-index-lap-and-up: 600 !default;
 	justify-content: flex-start; // NOTE: Reset justify-content of parent elements.
 
 	@include media(0, $range-hand) {
-		z-index: $popover-z-index-hand-and-lower + 2;
+		z-index: $popover-z-index-hand-and-smaller + 2;
 	}
 
 	@include media($range-lap, false) {
@@ -499,16 +499,16 @@ $popover-z-index-lap-and-up: 600 !default;
 	color: transparent;
 
 	@include media(0, $range-hand) {
-		z-index: $popover-z-index-hand-and-lower;
+		z-index: $popover-z-index-hand-and-smaller;
 		visibility: hidden;
 		background-color: rgba($color-black, 0.6);
 		opacity: 0;
 		transition-timing-function: ease-out;
-		transition-duration: $popover-animation-duration-hand-and-lower;
+		transition-duration: $popover-animation-duration-hand-and-smaller;
 		transition-property: visibility, opacity;
 	}
 	@include media($range-lap, false) {
-		z-index: $popover-z-index-lap-and-up;
+		z-index: $popover-z-index-lap-and-larger;
 		display: none;
 	}
 
