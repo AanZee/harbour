@@ -1,0 +1,92 @@
+.collection {
+}
+
+.collection--grid,
+.collection--grid-90,
+.collection--grid-80,
+.collection--grid-70,
+.collection--grid-60,
+.collection--grid-50,
+.collection--grid-40 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.collection--grid {
+	margin: $spacing * -2;
+}
+
+.collection--grid-90 {
+	margin: $spacing * -2;
+}
+
+.collection--grid-80 {
+	margin: $spacing * -2;
+}
+
+.collection--grid-70 {
+	margin: $spacing * -2;
+}
+
+.collection--grid-60 {
+	margin: $spacing * -1;
+}
+
+.collection--grid-50 {
+	margin: $spacing * -1;
+}
+
+.collection--grid-40 {
+	margin: $spacing * -1;
+}
+
+.collection__item {
+
+	.collection--list & {
+		@include media(0, $range-hand) {
+			margin-bottom: $spacing;
+		}
+		@include media($range-lap, false) {
+			margin-bottom: $spacing * 2;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.collection--grid & {
+		flex-basis: $spacing * 40;
+		margin: $spacing * 2;
+	}
+
+	.collection--grid-90 & {
+		flex-basis: $spacing * 35;
+		margin: $spacing * 2;
+	}
+
+	.collection--grid-80 & {
+		flex-basis: $spacing * 30;
+		margin: $spacing * 2;
+	}
+
+	.collection--grid-70 & {
+		flex-basis: $spacing * 25;
+		margin: $spacing * 2;
+	}
+
+	.collection--grid-60 & {
+		flex-basis: $spacing * 20;
+		margin: $spacing * 1;
+	}
+
+	.collection--grid-50 & {
+		flex-basis: $spacing * 15;
+		margin: $spacing * 1;
+	}
+
+	.collection--grid-40 & {
+		flex-basis: $spacing * 10;
+		margin: $spacing * 1;
+	}
+}
