@@ -1,12 +1,13 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var nodemon = require('gulp-nodemon');
+var open = require('gulp-open');
 var postcss = require('gulp-postcss');
 var postcssScssParser = require('postcss-scss');
 var postcssReporter = require('postcss-reporter');
 var autoprefixer = require('autoprefixer');
 var tildeImporter = require('node-sass-tilde-importer');
 var stylelint = require('stylelint');
-var nodemon = require('gulp-nodemon');
 
 var harbourStylelintJson = '.stylelintrc.json';
 
@@ -121,9 +122,17 @@ gulp.task('buildScss', ['buildStylelintScss'], function() {
 })
 
 gulp.task('serve', function () {
-	return console.log('TODO (HAR-125): implement styleguide');
+	return nodemon({
+		script: 'styleguide/index.js',
+		ext: 'css js tpl'
+	});
+});
+
+gulp.task('openBrowser', function(){
+	gulp.src(__filename)
+		.pipe(open({uri: 'http://localhost:3000'}));
 });
 
 // CLI Tasks
-gulp.task('start', ['serve', 'compileScss']);
+gulp.task('start', ['serve', 'openBrowser', 'compileScss']);
 gulp.task('build', ['buildScss']);
