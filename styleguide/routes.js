@@ -19,4 +19,9 @@ module.exports = [
 		slug: 'colors',
 		category: 'settings',
 	},
+	{
+		name: 'Layout',
+		slug: 'layout',
+		category: 'layouts',
+	},
 ];
