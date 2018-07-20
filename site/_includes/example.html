@@ -12,10 +12,11 @@ optional: hide_markup - disabled (default)
 
 {%- if include.hide_preview == null -%}
 <div class="layout">
-	<div class="layout__section">
-		<div class="layout__inner layout__inner--padded-left-right-0">
-		<div{% if preview_id %} id="{{ preview_id }}"{% endif %} class="bd-example{% if preview_class %} {{ preview_class }}{% endif %}">
-			{{- include.content -}}
+	<div class="layout__section layout__section--colored">
+		<div class="layout__inner">
+			<div{% if preview_id %} id="{{ preview_id }}"{% endif %} class="bd-example{% if preview_class %} {{ preview_class }}{% endif %}">
+				{{- include.content -}}
+			</div>
 		</div>
 	</div>
 </div>

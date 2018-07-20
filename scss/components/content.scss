@@ -1,4 +1,19 @@
+// TODO: move to colors?
+$highlight-color-monokai-dark-gray: #2c292d;
+$highlight-color-monokai-light-gray: #949076;
+$highlight-color-monokai-white: #f8f8f2;
+$highlight-color-monokai-magenta: #f94e8a;
+$highlight-color-monokai-green: #a6e22e;
+$highlight-color-monokai-yellow: #e6db74;
+$highlight-color-monokai-orange: #fc9867;
+$highlight-color-monokai-purple: #ae81ff;
+$highlight-color-monokai-blue: #57abe6;
+$highlight-color-monokai-cyan: #66d9ef;
+
 $content-a-border: ($spacing / 8) solid; // NOTE: No color is set to inherit the color of its parent
+
+$content-highlight-background-color: $highlight-color-monokai-dark-gray;
+$content-highlight-color: $highlight-color-monokai-white;
 
 .content {
 
@@ -217,5 +232,45 @@ em {
 
 	.content & {
 		font-style: italic;
+	}
+}
+
+code,
+pre,
+kbd {
+
+	.content & {
+		font-family: $font-family-monospace;
+		font-size: $font-size-90;
+	}
+}
+
+figure.highlight,
+div.highlight {
+	// NOTE: example and markdown code blocks have a different structure. Markdown codeblocks get two nested elements both with the .highlight class.
+	overflow-x: scroll;
+	background-color: $content-highlight-background-color;
+	color: $content-highlight-color;
+
+	.content & {
+		@include media(0, $range-palm) {
+			margin-bottom: $spacing * 2;
+		}
+		@include media($range-hand) {
+			margin-bottom: $spacing * 3;
+		}
+		@include media($range-lap) {
+			margin-bottom: $spacing * 4;
+		}
+		@include media($range-desk, false) {
+			margin-bottom: $spacing * 5;
+		}
+	}
+}
+
+pre {
+
+	.content & {
+		padding: $spacing * 2;
 	}
 }
