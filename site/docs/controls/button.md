@@ -2,11 +2,7 @@
 layout: docs
 title: Button
 ---
-
-This is a button
-
 ## Available states
-
 ### Hover, focus and active
 Changes the (background) color
 ```

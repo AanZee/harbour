@@ -15,6 +15,7 @@ $highlight-font-family: monospace, monospace;
 
 .highlight {
 	overflow-x: scroll;
+	border-radius: $border-radius-100;
 	background-color: $highlight-background-color;
 	color: $highlight-color;
 	font-family: $highlight-font-family;
