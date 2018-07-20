@@ -5,7 +5,7 @@ title: Hackmans
 # Componenten
 
 ## Controls
-* [Button](/docs/controls/button)
+* [Button](/docs/controls/button.html)
 
 ```bash
 sudo rm rf *
