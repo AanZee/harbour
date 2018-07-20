@@ -1,12 +1,17 @@
 ---
 layout: home
-title: Hackmans
+title: Documentation
 ---
-# Componenten
+# Documentation
+
+## Components
+* [Content](/docs/components/content.html)
+* [Headings](/docs/components/headings.html)
 
 ## Controls
+
 * [Button](/docs/controls/button.html)
 
-```bash
-sudo rm rf *
-```
+## Layouts
+
+* [Layout](/docs/layouts/layout.html) 

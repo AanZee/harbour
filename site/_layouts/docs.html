@@ -6,16 +6,32 @@
 	<body>
 		<section class="page">
 			<header class="page__header">
-				<div class="layout">
-					<div class="layout__section">
-						<div class="layout__inner">
-							<a href="/">Harbour</a>
-						</div>
-					</div>
-				</div>
+				{% include page-header.html %}
 			</header>
 			<main class="page__main">
 				<div class="layout">
+						<div class="layout__section layout__section--dark">
+							<div class="layout__inner layout__inner--padded-90">
+								<div class="layout__columns">
+									<div class="layout__column layout__column--two-thirds">
+										<div class="headings headings--diap">
+											<div class="headings__headline">
+												{{ page.title }}
+											</div>
+										</div>
+									</div>
+									<div class="layout__column layout__column--one-third">
+										<div class="layout__section layout__section--right-aligning layout__section--vertical-centering">
+											<a class="button button--outline button--90"
+												href="/docs"
+											>
+												Back to documentation
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					<div class="layout__section">
 						<div class="layout__inner">
 							{{ content }}
@@ -24,11 +40,7 @@
 				</div>
 			</main>
 			<footer class="page__footer">
-				<div class="layout__section">
-					<div class="layout__inner">
-						When I'm not surfing or sailing, I am to be found at the harbour working on my boat.
-					</div>
-				</div>
+				{% include page-footer.html %}
 			</footer>
 		</section>
 	</body>
