@@ -24,7 +24,7 @@ $highlight-font-family: monospace, monospace;
 .highlight .hll { background-color: $highlight-color-monokai-light-gray} /* Highlighted */
 .highlight .c { color: $highlight-color-monokai-light-gray; } /* Comment */
 .highlight .err { color: $highlight-color-monokai-magenta; background-color: $highlight-color-monokai-light-gray } /* Error */
-.highlight .k { color: $highlight-color-monokai-cyan; } /* Keyword */
+.highlight .k { color: $highlight-color-monokai-white; } /* Keyword */
 .highlight .l { color: $highlight-color-monokai-purple; } /* Literal */
 .highlight .n { color: $highlight-color-monokai-white } /* Name */
 .highlight .o { color: $highlight-color-monokai-magenta } /* Operator */
@@ -40,7 +40,7 @@ $highlight-font-family: monospace, monospace;
 .highlight .gi { color: $highlight-color-monokai-green; } /* Generic.Inserted */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: $highlight-color-monokai-light-gray; } /* Generic.Subheading */
-.highlight .kc { color: $highlight-color-monokai-cyan; } /* Keyword.Constant */
+.highlight .kc { color: $highlight-color-monokai-purple; } /* Keyword.Constant */
 .highlight .kd { color: $highlight-color-monokai-cyan; } /* Keyword.Declaration */
 .highlight .kn { color: $highlight-color-monokai-magenta } /* Keyword.Namespace */
 .highlight .kp { color: $highlight-color-monokai-cyan; } /* Keyword.Pseudo */
