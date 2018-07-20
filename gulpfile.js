@@ -1,8 +1,10 @@
+var browserSync = require('browser-sync').create();
+var child = require('child_process');
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var nodemon = require('gulp-nodemon');
 var open = require('gulp-open');
 var postcss = require('gulp-postcss');
+var gutil = require('gulp-util');
 var postcssScssParser = require('postcss-scss');
 var postcssReporter = require('postcss-reporter');
 var autoprefixer = require('autoprefixer');
@@ -10,6 +12,8 @@ var tildeImporter = require('node-sass-tilde-importer');
 var stylelint = require('stylelint');
 
 var harbourStylelintJson = '.stylelintrc.json';
+
+var jekyllSiteRoot = '_gh_pages';
 
 var scssIndex = 'scss/index.scss';
 var scssGlobs = 'scss/**/*.scss';
@@ -22,7 +26,7 @@ var stylelintGlobs = [
 	'scss/vendor-overrides/*.scss',
 	'!scss/**/index.scss'
 ];
-var cssFolder = 'css/';
+var cssFolder = 'site/css/';
 
 /**
  * stylelintScss
@@ -88,6 +92,10 @@ function compileScss(isBuild) {
 		});
 }
 
+/**
+ * getTimestamp
+ * Return current time
+ */
 function getTimestamp() {
 	var time = new Date();
 	var hours = time.getHours();
@@ -102,37 +110,52 @@ gulp.task('stylelintScss', function() {
 	gulp.watch(scssGlobs, function() {
 		return stylelintScss(isBuild);
 	});
-})
+});
 
 gulp.task('compileScss', ['stylelintScss'], function() {
 	var isBuild = false;
 	gulp.watch(scssGlobs, function() {
 		return compileScss(isBuild);
 	});
-})
+});
 
 gulp.task('buildStylelintScss', function() {
 	var isBuild = true;
 	return stylelintScss(isBuild);
-})
+});
 
 gulp.task('buildScss', ['buildStylelintScss'], function() {
 	var isBuild = true;
 	return compileScss(isBuild);
-})
+});
 
-gulp.task('serve', function () {
-	return nodemon({
-		script: 'styleguide/index.js',
-		ext: 'css js tpl'
+gulp.task('watchJekyll', () => {
+	var jekyll = child.spawn('jekyll', ['build',
+		'--watch',
+		'--incremental',
+		'--drafts',
+	]);
+
+	var jekyllLogger = (buffer) => {
+		buffer.toString()
+			.split(/\n/)
+			.forEach((message) => gutil.log('Jekyll: ' + message));
+	};
+
+	jekyll.stdout.on('data', jekyllLogger);
+	jekyll.stderr.on('data', jekyllLogger);
+});
+
+gulp.task('serveJekyll', () => {
+	browserSync.init({
+		files: [jekyllSiteRoot + '/**'],
+		port: 4000,
+		server: {
+			baseDir: jekyllSiteRoot
+		}
 	});
 });
 
-gulp.task('openBrowser', function(){
-	gulp.src(__filename)
-		.pipe(open({uri: 'http://localhost:3000'}));
-});
-
 // CLI Tasks
-gulp.task('start', ['serve', 'openBrowser', 'compileScss']);
+gulp.task('start', ['compileScss', 'watchJekyll', 'serveJekyll']);
 gulp.task('build', ['buildScss']);
