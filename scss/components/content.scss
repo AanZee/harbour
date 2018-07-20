@@ -199,7 +199,10 @@ ul {
 a {
 
 	.content & {
-		border-bottom: $content-a-border;
+
+		&:not(.button) {
+			border-bottom: $content-a-border;
+		}
 	}
 }
 
