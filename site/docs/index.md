@@ -2,8 +2,6 @@
 layout: home
 title: Documentation
 ---
-# Documentation
-
 ## Components
 * [Content](/docs/components/content.html)
 * [Headings](/docs/components/headings.html)
