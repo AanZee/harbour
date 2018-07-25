@@ -1,3 +1,8 @@
+# 1.8.1
+
+## Bugfix
+* Improve layout spacing scale
+
 # 1.8.0
 
 ## Features
