@@ -1,3 +1,8 @@
+# 1.8.2
+
+## Bugfix
+* Add missing spacing variable to local layout variable
+
 # 1.8.1
 
 ## Bugfix
