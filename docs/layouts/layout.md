@@ -127,7 +127,7 @@ Columns modifiers
 ```
 layout__columns--spacing-0
 layout__columns--spacing-90
-layout__columns--not-wrapping-lap-and-up
+layout__columns--not-wrapping-lap-and-larger
 ```
 
 Add specific width to column
@@ -141,14 +141,23 @@ layout__column--two-thirds
 ```
 layout
 ├── layout__section (modifier)
-│	├── layout__inner (modifier)
+│	├── layout__inner (modifier) (optional)
 │	│	├── layout__section (optional)
 │	│	│	├── layout__columns (modifiers) (optional)
 │	│	│	│	├── layout__column (modifier) (parent required)
 ```
 
 ## Example HTML
-Basic example without columns
+Basic example without inner and columns
+```html
+<div class="layout">
+	<div class="layout__section">
+		...
+	</div>
+</div>
+```
+
+Basic example with inner
 ```html
 <div class="layout">
 	<div class="layout__section">
