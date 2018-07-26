@@ -1,6 +1,6 @@
 $input-stepper-input-padding: ($control-height-100 - ($line-height-20 * $font-size-200)) / 2 !default;
-$input-stepper-border-color: $color-ui-300 !default;
-$input-stepper-button-background-color: $color-primary !default;
+$input-stepper-input-border: 2px solid $color-ui-300 !default;
+$input-stepper-button-background-color: $color-ui-80 !default;
 
 .input-stepper {
 	@include clearfix;
@@ -27,6 +27,9 @@ $input-stepper-button-background-color: $color-primary !default;
 	flex-direction: column;
 }
 
+.input-stepper--primary {
+}
+
 .input-stepper--90 {
 }
 
@@ -37,6 +40,7 @@ $input-stepper-button-background-color: $color-primary !default;
 	padding-left: $spacing;
 	width: $control-height-200;
 	height: $control-height-100;
+	border: $input-stepper-input-border;
 	border-radius: 0;
 	color: $color-text;
 	text-align: center;
@@ -84,6 +88,7 @@ $input-stepper-button-background-color: $color-primary !default;
 	background-position: center;
 	background-size: $golden-ratio-80 auto;
 	background-repeat: no-repeat;
+	border: none;
 	text-align: center;
 	appearance: none;
 	user-select: none;
@@ -100,6 +105,10 @@ $input-stepper-button-background-color: $color-primary !default;
 		height: $control-height-90;
 	}
 
+	.input-stepper--primary & {
+		background-color: $color-primary;
+	}
+
 	.input-stepper--90 & {
 		width: $control-height-90;
 		height: $control-height-90;
@@ -112,31 +121,31 @@ $input-stepper-button-background-color: $color-primary !default;
 
 .input-stepper__control--decrease {
 	@include border-left-radius($border-radius-200);
-	border-top: $input-stepper-border-color;
-	border-right: none;
-	border-bottom: $input-stepper-border-color;
-	border-left: $input-stepper-border-color;
-	background-image: url(get-svg-uri($icon-minus, $color-text-diap));
+	background-image: url(get-svg-uri($icon-minus, $color-text));
 	order: 1;
 
 	.input-stepper--vertical & {
 		border-radius: 0 0 $border-radius-100 $border-radius-100;
 		order: 3;
 	}
+
+	.input-stepper--primary & {
+		background-image: url(get-svg-uri($icon-minus, $color-text-diap));
+	}
 }
 
 .input-stepper__control--increase {
 	@include border-right-radius($border-radius-200);
-	border-top: $input-stepper-border-color;
-	border-right: $input-stepper-border-color;
-	border-bottom: $input-stepper-border-color;
-	border-left: none;
-	background-image: url(get-svg-uri($icon-plus, $color-text-diap));
+	background-image: url(get-svg-uri($icon-plus, $color-text));
 	order: 3;
 
 	.input-stepper--vertical & {
 		border-radius: $border-radius-100 $border-radius-100 0 0;
 		order: 1;
+	}
+
+	.input-stepper--primary & {
+		background-image: url(get-svg-uri($icon-plus, $color-text-diap));
 	}
 }
 

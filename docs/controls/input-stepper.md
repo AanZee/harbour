@@ -19,6 +19,14 @@ Places the increase/decrease buttons above and below input instead of next to it
 input-stepper--vertical
 ```
 
+### Primary
+
+Uses primary color for the increase/decrease buttons
+
+```css
+input-stepper--primary
+```
+
 ### Sizes
 
 ```css
@@ -27,11 +35,9 @@ input-stepper--90
 
 ## Available local variables
 
-### Default button (ui colors)
-
 ```scss
 $input-stepper-input-padding
-$input-stepper-border-color
+$input-stepper-input-border
 $input-stepper-button-background-color
 ```
 
