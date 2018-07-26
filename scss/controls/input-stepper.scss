@@ -3,7 +3,6 @@ $input-stepper-input-border: 2px solid $color-ui-300 !default;
 $input-stepper-button-background-color: $color-ui-80 !default;
 
 .input-stepper {
-	@include clearfix;
 	display: flex;
 
 	&.is-skeleton {
