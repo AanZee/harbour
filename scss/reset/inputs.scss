@@ -12,7 +12,7 @@ textarea,
 select {
 	border: 1px solid $color-ui-100; // NOTE: Chrome and Safari on OS X allow very limited styling of 'select', unless a border is set.
 	border-radius: 0; // NOTE: Reset border radius (iOS) Safari
-	background-color: $color-background;
+	background-color: $color-background-light;
 	box-shadow: none; // NOTE: Reset FF box shadow
 	color: $color-text;
 	font-family: $font-family-sans-serif;
