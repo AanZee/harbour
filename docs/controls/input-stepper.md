@@ -36,7 +36,6 @@ input-stepper--90
 ## Available local variables
 
 ```scss
-$input-stepper-input-padding
 $input-stepper-input-border
 $input-stepper-button-background-color
 ```
