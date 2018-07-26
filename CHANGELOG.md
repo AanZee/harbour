@@ -1,3 +1,10 @@
+# 1.9.0
+
+## Features
+* Update range specific modifiers to match the Aan Zee conventions
+* Replace $color-background with $color-background-light
+* Clarify that layout__inner is optional in the layout documentation
+
 # 1.8.2
 
 ## Bugfix
