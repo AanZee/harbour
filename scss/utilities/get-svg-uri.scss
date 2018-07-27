@@ -22,10 +22,8 @@
 	@return 'data:image/svg+xml;charset=utf-8,' + $svg;
 }
 
-@function get-svg-uri($svg, $color: #000) {
-	$svg: str-replace($svg, 'fill=""', 'fill="' + $color + '"');
+@function get-svg-uri($svg, $color: #000000) {
 	$svg: str-replace($svg, '#000000', $color);
-	$svg: str-replace($svg, '#000', $color);
 	$svg: svg-encode($svg);
 	@return $svg;
 }

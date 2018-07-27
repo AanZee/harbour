@@ -59,7 +59,7 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 		background-size: 50px 50px;
 		background-repeat: repeat;
 		opacity: $opacity-100; // NOTE: reset disabled styling.
-		animation: InputStepperIndeterminateProgress 2s linear infinite;
+		animation: InputStepperIndeterminateProgress 2000ms linear infinite;
 	}
 
 	.input-stepper--vertical & {
@@ -90,10 +90,7 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	appearance: none;
 	user-select: none;
 
-	&.is-disabled {
-		opacity: $opacity-disabled;
-	}
-
+	&:disabled,
 	.input-stepper.is-disabled & {
 		opacity: $opacity-disabled;
 	}
