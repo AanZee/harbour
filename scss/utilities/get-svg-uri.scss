@@ -24,8 +24,8 @@
 
 @function get-svg-uri($svg, $color: #000) {
 	$svg: str-replace($svg, 'fill=""', 'fill="' + $color + '"');
-	$svg: str-replace($svg, '#000', $color);
 	$svg: str-replace($svg, '#000000', $color);
+	$svg: str-replace($svg, '#000', $color);
 	$svg: svg-encode($svg);
 	@return $svg;
 }
