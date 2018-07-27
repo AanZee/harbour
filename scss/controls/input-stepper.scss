@@ -1,4 +1,3 @@
-$input-stepper-input-border: 1px solid $color-ui-300 !default;
 $input-stepper-button-background-color: $color-ui-80 !default;
 
 .input-stepper {
@@ -38,7 +37,7 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	padding-left: $spacing;
 	width: $control-height-200;
 	height: $control-height-100;
-	border: $input-stepper-input-border;
+	border: $border-input-100;
 	border-radius: 0;
 	color: $color-text;
 	text-align: center;
