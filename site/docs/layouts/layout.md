@@ -2,19 +2,14 @@
 layout: docs
 title: Layout
 ---
+
 ## Available modifiers
-Adjust space between sections (modifier 100 doesn't exists since this is the default behavior)
+### Adjust space between sections (modifier 100 doesn't exists since this is the default behavior)
 ```
-layout__section--spaced-0
-layout__section--spaced-60
-layout__section--spaced-70
-layout__section--spaced-80
-layout__section--spaced-90
-layout__section--spaced-200
-layout__section--spaced-300
+layout__section--spaced-0 (60, 70, 80, 90, 200, 300)
 ```
 
-Adjust space between children
+### Adjust space between children
 ```
 layout__section--spacing-60
 layout__section--spacing-70
@@ -25,7 +20,7 @@ layout__section--spacing-200
 layout__section--spacing-300
 ```
 
-Adjust section appearance
+### Adjust section appearance
 ```
 layout__section--bordered
 layout__section--bordered-top
@@ -37,20 +32,20 @@ layout__section--dark
 layout__section--elevated
 ```
 
-Adjust section behavior
+### Adjust section behavior
 ```
 layout__section--sticky-top
 layout__section--sticky-bottom
 ```
 
-Adjust behavior of children
+### Adjust behavior of children
 ```
 layout__section--wrapping
 layout__section--right-aligning
 layout__section--vertical-centering
 ```
 
-Adjust section__inner max-width
+### Adjust section__inner max-width
 ```
 layout__inner--fitted
 layout__inner--stretched
@@ -62,7 +57,8 @@ layout__inner--condensed
 layout__inner--compressed
 ```
 
-Adjust section__inner padding
+### Adjust section__inner padding
+
 ```
 layout__inner--padded-0
 layout__inner--padded-60
@@ -124,14 +120,14 @@ layout__inner--padded-bottom-300
 layout__inner--padded-left-300
 ```
 
-Columns modifiers
+### Columns modifiers
 ```
 layout__columns--spacing-0
 layout__columns--spacing-90
 layout__columns--not-wrapping-lap-and-up
 ```
 
-Add specific width to column
+### Add specific width to column
 ```
 layout__column--one-half
 layout__column--one-third
@@ -149,9 +145,9 @@ layout
 ```
 
 ## Example HTML
-### Two columns one-third two-thirds
 
-{% capture example %}
+### Two columns one-third two-thirds
+{% capture layout-section-one-third-two-thirds %}
 <div class="layout">
 	<div class="layout__section">
 		<div class="layout__columns">
@@ -204,11 +200,12 @@ layout
 	</div>
 </div>
 {% endcapture %}
-{% include example.html content=example %}
+{% include example.html
+content=layout-section-one-third-two-thirds
+%}
 
 ### Two columns one-half and one-half
-
-{% capture example %}
+{% capture layout-two-columns-one-half %}
 <div class="layout">
 	<div class="layout__section">
 		<div class="layout__columns">
@@ -225,7 +222,7 @@ layout
 			<div class="layout__column layout__column--one-half">
 				<div class="layout__section layout__section--elevated">
 					<div class="layout__inner layout__inner--padded-90">
-					<div class="content">
+						<div class="content">
 							<h2>Column one half</h2>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit! Dolorum cumque ad quisquam eligendi.</p>
 						</div>
@@ -236,4 +233,6 @@ layout
 	</div>
 </div>
 {% endcapture %}
-{% include example.html content=example %}
+{% include example.html
+content=layout-two-columns-one-half
+%}
