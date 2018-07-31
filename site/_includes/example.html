@@ -1,29 +1,37 @@
-{%- comment -%}
-Usage: {% include example.html content=markup %},
-where content is a capture with the HTML content
-id - null (default)
-class - "bd-example" (default)
-optional: hide_preview - disabled (default)
-optional: hide_markup - disabled (default)
-{%- endcomment -%}
+{::nomarkdown}
+</div>
+{:/nomarkdown}
 
-{%- assign preview_id = include.id -%}
-{%- assign preview_class = include.class -%}
-
-{%- if include.hide_preview == null -%}
-<div class="layout">
-	<div class="layout__section layout__section--colored">
-		<div class="layout__inner">
-			<div{% if preview_id %} id="{{ preview_id }}"{% endif %} class="bd-example{% if preview_class %} {{ preview_class }}{% endif %}">
-				{{- include.content -}}
+<div class="layout__section">
+	{% if include.content %}
+	<div class="layout__section layout__section--fitted layout__section--spaced-80 layout__section--bordered layout__section--rounded">
+		<div class="layout__section">
+			<div class="layout__inner layout__inner--padded-90">
+				<div>
+					{{- include.content -}}
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
-{%- endif -%}
 
-{%- if include.hide_markup == null -%}
-  {%- highlight html -%}
-    {{- include.content | replace: 'data-src="holder.js', 'src="...' -}}
-  {%- endhighlight -%}
-{%- endif -%}
+		<div class="layout__section layout__section--spaced-0 layout__section--bordered-top layout__section--rounded-bottom">
+			{%- if include.hide_markup == null -%}
+				{%- highlight html -%}
+					{{- include.content | replace: 'data-src="holder.js', 'src="...' -}}
+				{%- endhighlight -%}
+			{%- endif -%}
+		</div>
+	</div>
+	{% endif %}
+
+	{% if include.scss-block %}
+		<div class="layout__section layout__section--rounded layout__section--spaced-80">
+		{%- if include.hide_markup == null -%}
+			{%- highlight html -%}
+				{{ include.scss-block }}
+			{%- endhighlight -%}
+		{%- endif -%}
+		</div>
+	{% endif %}
+</div>
+
+<div class="content" markdown="1">

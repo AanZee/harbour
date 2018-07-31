@@ -10,11 +10,11 @@
 			</header>
 			<main class="page__main">
 				<div class="layout">
-						<div class="layout__section layout__section--dark">
+						<div class="layout__section layout__section--bordered-bottom">
 							<div class="layout__inner layout__inner--padded-90">
 								<div class="layout__columns">
 									<div class="layout__column layout__column--two-thirds">
-										<div class="headings headings--diap">
+										<div class="headings">
 											<div class="headings__headline">
 												{{ page.title }}
 											</div>
@@ -22,7 +22,7 @@
 									</div>
 									<div class="layout__column layout__column--one-third">
 										<div class="layout__section layout__section--right-aligning layout__section--vertical-centering">
-											<a class="button button--outline button--90"
+											<a class="button button--90"
 												href="/docs"
 											>
 												Back to documentation
@@ -34,8 +34,10 @@
 						</div>
 					<div class="layout__section layout__section--spaced-0">
 						<div class="layout__inner">
-							<div class="content">
-								{{ content }}
+							<div class="layout__section layout__section--spacing-100">
+								<div class="content">
+									{{ content }}
+								</div>
 							</div>
 						</div>
 					</div>
