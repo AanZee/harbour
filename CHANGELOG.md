@@ -1,3 +1,8 @@
+# 1.10.0
+
+## Features
+* Add input stepper component
+
 # 1.9.0
 
 ## Features
