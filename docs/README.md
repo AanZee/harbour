@@ -9,3 +9,4 @@
 
 ## Layouts
 - [Layout](layouts/layout.md)
+- [Page](layouts/page.md)
