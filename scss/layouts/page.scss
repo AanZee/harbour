@@ -1,0 +1,30 @@
+.page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
+	@include is-ie-10-or-11 {
+		height: 100%; // FIX For IE11 use 'height' instead of 'min-height'. The height will increase because 'page__main' has 'flex-grow: 1;' which overrules height of parent;
+	}
+}
+
+.page__header {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+.page__main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.page__main--colored {
+	background-color: $color-background-colored;
+}
+
+.page__footer {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
