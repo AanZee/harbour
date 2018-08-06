@@ -1,4 +1,4 @@
-# Layout
+# Page
 
 - [See SCSS component](../../scss/layouts/page.scss)
 
@@ -19,7 +19,7 @@ page
 
 ## Example HTML
 
-Basic example without inner and columns
+Basic example
 
 ```html
 <section class="page">
