@@ -1,16 +1,25 @@
+// For IE11 we use 'tables' to fix a render bug with sticky bottom bar
+
 .page {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
 
 	@include is-ie-10-or-11 {
-		height: 100%; // FIX For IE11 use 'height' instead of 'min-height'. The height will increase because 'page__main' has 'flex-grow: 1;' which overrules height of parent;
+		display: table;
+		width: 100%;
+		height: 100%;
 	}
 }
 
 .page__header {
 	flex-grow: 0;
 	flex-shrink: 0;
+
+	@include is-ie-10-or-11 {
+		display: table-row;
+		height: 1px;
+	}
 }
 
 .page__main {
@@ -18,6 +27,11 @@
 	flex-direction: column;
 	flex-grow: 1;
 	flex-shrink: 0;
+
+	@include is-ie-10-or-11 {
+		padding-bottom: $spacing * 0.5;
+		height: 100%;
+	}
 }
 
 .page__main--colored {
@@ -27,4 +41,9 @@
 .page__footer {
 	flex-grow: 0;
 	flex-shrink: 0;
+
+	@include is-ie-10-or-11 {
+		display: table-row;
+		height: 1px;
+	}
 }
