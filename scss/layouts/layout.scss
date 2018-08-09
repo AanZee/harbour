@@ -1324,18 +1324,18 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	flex-basis: $spacing * 35;
 
 	@include media(0, $range-hand) {
-		min-width: calc($layout-column-one-third-percentage - #{$layout-column-spacing-hand-and-smaller * 2});
+		min-width: calc(#{$layout-column-one-third-percentage} - #{$layout-column-spacing-hand-and-smaller * 2});
 	}
 	@include media($range-lap, false) {
-		min-width: calc($layout-column-one-third-percentage - #{$layout-column-spacing-lap-and-larger * 2});
+		min-width: calc(#{$layout-column-one-third-percentage} - #{$layout-column-spacing-lap-and-larger * 2});
 	}
 
 	.layout__columns--spacing-90 > & {
 		@include media(0, $range-hand) {
-			min-width: calc($layout-column-one-third-percentage - #{$layout-column-spacing-90-hand-and-smaller * 2});
+			min-width: calc(#{$layout-column-one-third-percentage} - #{$layout-column-spacing-90-hand-and-smaller * 2});
 		}
 		@include media($range-lap, false) {
-			min-width: calc($layout-column-one-third-percentage - #{$layout-column-spacing-90-lap-and-larger * 2});
+			min-width: calc(#{$layout-column-one-third-percentage} - #{$layout-column-spacing-90-lap-and-larger * 2});
 		}
 	}
 
@@ -1349,18 +1349,18 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	flex-grow: 2;
 
 	@include media(0, $range-hand) {
-		min-width: calc($layout-column-two-thirds-percentage - #{$layout-column-spacing-hand-and-smaller * 2});
+		min-width: calc(#{$layout-column-two-thirds-percentage} - #{$layout-column-spacing-hand-and-smaller * 2});
 	}
 	@include media($range-lap, false) {
-		min-width: calc($layout-column-two-thirds-percentage - #{$layout-column-spacing-lap-and-larger * 2});
+		min-width: calc(#{$layout-column-two-thirds-percentage} - #{$layout-column-spacing-lap-and-larger * 2});
 	}
 
 	.layout__columns--spacing-90 > & {
 		@include media(0, $range-hand) {
-			min-width: calc($layout-column-two-thirds-percentage - #{$layout-column-spacing-90-hand-and-smaller * 2});
+			min-width: calc(#{$layout-column-two-thirds-percentage} - #{$layout-column-spacing-90-hand-and-smaller * 2});
 		}
 		@include media($range-lap, false) {
-			min-width: calc($layout-column-two-thirds-percentage - #{$layout-column-spacing-90-lap-and-larger * 2});
+			min-width: calc(#{$layout-column-two-thirds-percentage} - #{$layout-column-spacing-90-lap-and-larger * 2});
 		}
 	}
 
