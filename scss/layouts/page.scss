@@ -1,0 +1,49 @@
+// For IE11 we use 'tables' to fix a render bug with sticky bottom bar
+
+.page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
+	@include is-ie-10-or-11 {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.page__header {
+	flex-grow: 0;
+	flex-shrink: 0;
+
+	@include is-ie-10-or-11 {
+		display: table-row;
+		height: $spacing / 8;
+	}
+}
+
+.page__main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: 0;
+
+	@include is-ie-10-or-11 {
+		padding-bottom: $spacing * 0.5;
+		height: 100%;
+	}
+}
+
+.page__main--colored {
+	background-color: $color-background-colored;
+}
+
+.page__footer {
+	flex-grow: 0;
+	flex-shrink: 0;
+
+	@include is-ie-10-or-11 {
+		display: table-row;
+		height: $spacing / 8;
+	}
+}
