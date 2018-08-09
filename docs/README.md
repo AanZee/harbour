@@ -6,6 +6,7 @@
 
 ## Controls
 - [Button](controls/button.md)
+- [Input stepper](controls/input-stepper.md)
 
 ## Layouts
 - [Layout](layouts/layout.md)

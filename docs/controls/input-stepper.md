@@ -4,10 +4,12 @@
 
 ## Available states
 
-.input-stepper.is-skeleton
-.input-stepper.is-disabled
-.input-stepper.is-frozen
-.input-stepper.is-loading
+```
+input-stepper.is-skeleton
+input-stepper.is-disabled
+input-stepper.is-frozen
+input-stepper.is-loading
+```
 
 ## Available modifiers
 
@@ -15,7 +17,7 @@
 
 Places the increase/decrease buttons above and below input instead of next to it
 
-```css
+```
 input-stepper--vertical
 ```
 
@@ -23,13 +25,13 @@ input-stepper--vertical
 
 Uses primary color for the increase/decrease buttons
 
-```css
+```
 input-stepper--primary
 ```
 
 ### Sizes
 
-```css
+```
 input-stepper--90
 ```
 
