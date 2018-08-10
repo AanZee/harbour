@@ -1,3 +1,14 @@
+# 1.11.1
+
+## Bugfix
+* Fix wrong scss variables in calc functions
+
+# 1.11.0
+
+## Features
+* Add page layout
+* Update input stepper docs
+
 # 1.10.0
 
 ## Features
