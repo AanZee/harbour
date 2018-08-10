@@ -16,9 +16,9 @@ $color-harbour-green: #729B79;
 // Always use a descriptive color to define a functional color. Always use the right functional color even when two (or more) functional colors have the same descriptive color (e.g. $color-heading and $color-primary). This will help when you want to target a specific color.
 
 // ### Hierarchical
-$color-call-to-action: $color-harbour-yellow !default;
-$color-primary: $color-harbour-blue !default;
-$color-secondary: $color-harbour-purple !default;
+$color-primary: $color-harbour-yellow !default;
+$color-secondary: $color-harbour-blue !default;
+$color-tertiary: $color-harbour-purple !default;
 
 // ### Typography
 $color-heading: $color-harbour-blue !default;
@@ -47,26 +47,6 @@ $color-background-dark: $color-harbour-black !default;
 
 // ## Ranges
 // Please keep the same variable order as above
-$color-call-to-action-10: tint($color-call-to-action, 90%) !default;
-$color-call-to-action-20: tint($color-call-to-action, 80%) !default;
-$color-call-to-action-30: tint($color-call-to-action, 70%) !default;
-$color-call-to-action-40: tint($color-call-to-action, 60%) !default;
-$color-call-to-action-50: tint($color-call-to-action, 50%) !default;
-$color-call-to-action-60: tint($color-call-to-action, 40%) !default;
-$color-call-to-action-70: tint($color-call-to-action, 30%) !default;
-$color-call-to-action-80: tint($color-call-to-action, 20%) !default;
-$color-call-to-action-90: tint($color-call-to-action, 10%) !default;
-$color-call-to-action-100: $color-call-to-action !default;
-$color-call-to-action-200: shade($color-call-to-action, 10%) !default;
-$color-call-to-action-300: shade($color-call-to-action, 20%) !default;
-$color-call-to-action-400: shade($color-call-to-action, 30%) !default;
-$color-call-to-action-500: shade($color-call-to-action, 40%) !default;
-$color-call-to-action-600: shade($color-call-to-action, 50%) !default;
-$color-call-to-action-700: shade($color-call-to-action, 60%) !default;
-$color-call-to-action-800: shade($color-call-to-action, 70%) !default;
-$color-call-to-action-900: shade($color-call-to-action, 80%) !default;
-$color-call-to-action-1000: shade($color-call-to-action, 90%) !default;
-
 $color-primary-10: tint($color-primary, 90%) !default;
 $color-primary-20: tint($color-primary, 80%) !default;
 $color-primary-30: tint($color-primary, 70%) !default;
@@ -106,6 +86,26 @@ $color-secondary-700: shade($color-secondary, 60%) !default;
 $color-secondary-800: shade($color-secondary, 70%) !default;
 $color-secondary-900: shade($color-secondary, 80%) !default;
 $color-secondary-1000: shade($color-secondary, 90%) !default;
+
+$color-tertiary-10: tint($color-tertiary, 90%) !default;
+$color-tertiary-20: tint($color-tertiary, 80%) !default;
+$color-tertiary-30: tint($color-tertiary, 70%) !default;
+$color-tertiary-40: tint($color-tertiary, 60%) !default;
+$color-tertiary-50: tint($color-tertiary, 50%) !default;
+$color-tertiary-60: tint($color-tertiary, 40%) !default;
+$color-tertiary-70: tint($color-tertiary, 30%) !default;
+$color-tertiary-80: tint($color-tertiary, 20%) !default;
+$color-tertiary-90: tint($color-tertiary, 10%) !default;
+$color-tertiary-100: $color-tertiary !default;
+$color-tertiary-200: shade($color-tertiary, 10%) !default;
+$color-tertiary-300: shade($color-tertiary, 20%) !default;
+$color-tertiary-400: shade($color-tertiary, 30%) !default;
+$color-tertiary-500: shade($color-tertiary, 40%) !default;
+$color-tertiary-600: shade($color-tertiary, 50%) !default;
+$color-tertiary-700: shade($color-tertiary, 60%) !default;
+$color-tertiary-800: shade($color-tertiary, 70%) !default;
+$color-tertiary-900: shade($color-tertiary, 80%) !default;
+$color-tertiary-1000: shade($color-tertiary, 90%) !default;
 
 $color-heading-10: tint($color-heading, 90%) !default;
 $color-heading-20: tint($color-heading, 80%) !default;

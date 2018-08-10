@@ -21,12 +21,12 @@ Places the increase/decrease buttons above and below input instead of next to it
 input-stepper--vertical
 ```
 
-### Primary
+### Secondary
 
-Uses primary color for the increase/decrease buttons
+Uses secondary color for the increase/decrease buttons
 
 ```
-input-stepper--primary
+input-stepper--secondary
 ```
 
 ### Sizes
