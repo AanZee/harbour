@@ -124,7 +124,7 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	}
 
 	.input-stepper--secondary & {
-		background-image: url(get-svg-uri($icon-minus, $color-text-diap));
+		background-image: url(get-svg-uri($icon-minus, $color-text-light));
 	}
 }
 
@@ -139,7 +139,7 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	}
 
 	.input-stepper--secondary & {
-		background-image: url(get-svg-uri($icon-plus, $color-text-diap));
+		background-image: url(get-svg-uri($icon-plus, $color-text-light));
 	}
 }
 
