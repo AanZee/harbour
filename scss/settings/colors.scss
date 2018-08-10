@@ -40,10 +40,11 @@ $color-focus: $color-harbour-green !default;
 // ## Additional colors
 // Can be used for shared color variables in different components (e.g. $color-icon), in specific state (e.g. $color-logged-in) or themes (e.g. $color-corporate)
 $color-shadow: $color-harbour-black !default;
-$color-background-colored: $color-harbour-grey !default;
-$color-background-neutral: $color-harbour-grey !default;
 $color-background-light: $color-harbour-white !default;
 $color-background-dark: $color-harbour-black !default;
+$color-background-neutral: $color-harbour-grey !default;
+$color-background-colored: $color-harbour-blue !default;
+$color-background-complementary: $color-harbour-yellow !default;
 
 // ## Ranges
 // Please keep the same variable order as above
