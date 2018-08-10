@@ -28,7 +28,6 @@ $color-text-light: $color-harbour-white !default;
 
 // ### User Interface
 $color-ui: $color-harbour-grey !default;
-$color-ui-accent: $color-harbour-blue !default;
 
 // ### States
 $color-error: $color-harbour-red !default;
@@ -207,26 +206,6 @@ $color-ui-700: shade($color-ui, 60%) !default;
 $color-ui-800: shade($color-ui, 70%) !default;
 $color-ui-900: shade($color-ui, 80%) !default;
 $color-ui-1000: shade($color-ui, 90%) !default;
-
-$color-ui-accent-10: tint($color-ui-accent, 90%) !default;
-$color-ui-accent-20: tint($color-ui-accent, 80%) !default;
-$color-ui-accent-30: tint($color-ui-accent, 70%) !default;
-$color-ui-accent-40: tint($color-ui-accent, 60%) !default;
-$color-ui-accent-50: tint($color-ui-accent, 50%) !default;
-$color-ui-accent-60: tint($color-ui-accent, 40%) !default;
-$color-ui-accent-70: tint($color-ui-accent, 30%) !default;
-$color-ui-accent-80: tint($color-ui-accent, 20%) !default;
-$color-ui-accent-90: tint($color-ui-accent, 10%) !default;
-$color-ui-accent-100: $color-ui-accent !default;
-$color-ui-accent-200: shade($color-ui-accent, 10%) !default;
-$color-ui-accent-300: shade($color-ui-accent, 20%) !default;
-$color-ui-accent-400: shade($color-ui-accent, 30%) !default;
-$color-ui-accent-500: shade($color-ui-accent, 40%) !default;
-$color-ui-accent-600: shade($color-ui-accent, 50%) !default;
-$color-ui-accent-700: shade($color-ui-accent, 60%) !default;
-$color-ui-accent-800: shade($color-ui-accent, 70%) !default;
-$color-ui-accent-900: shade($color-ui-accent, 80%) !default;
-$color-ui-accent-1000: shade($color-ui-accent, 90%) !default;
 
 $color-error-10: tint($color-error, 90%) !default;
 $color-error-20: tint($color-error, 80%) !default;
