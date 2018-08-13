@@ -16,7 +16,7 @@
 
 ## Features
 * Add input stepper component
-* Update get-svg-uri function to check for #000000 fill
+* Update get-svg-uri function to check for #000000 fill or stroke
 * Remove 'em' from line-height variables
 * Add golden-ratio and control-height variables
 
