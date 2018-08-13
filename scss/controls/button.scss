@@ -9,7 +9,7 @@ $button-active-color: $color-text-diap !default;
 $button-active-background-color: $color-ui-400 !default;
 $button-outset-box-shadow: 0 $button-outset 0 0 shade($button-background-color, 25%) !default;
 $button-disabled-opacity: 0.35 !default;
-$button-line-height: $font-size-100 * $line-height-40; // NOTE: Line-height needs to be in pixels to be used for calculations (for padding top and bottom)
+$button-line-height: round($font-size-100 * $line-height-40); // NOTE: Line-height needs to be in pixels to be used for calculations (for padding top and bottom)
 
 .button {
 	@include font-smoothing;
