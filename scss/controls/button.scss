@@ -2,6 +2,8 @@ $button-outset: 0 !default;
 
 $button-color: $color-text-diap !default;
 $button-background-color: $color-ui-90 !default;
+$button-font-size: $font-size-100 !default;
+$button-line-height: $line-height-40 !default;
 $button-hover-color: $color-text-diap !default;
 $button-hover-background-color: $color-ui-200 !default;
 $button-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-primary-400 !default;
@@ -9,15 +11,13 @@ $button-active-color: $color-text-diap !default;
 $button-active-background-color: $color-ui-400 !default;
 $button-outset-box-shadow: 0 $button-outset 0 0 shade($button-background-color, 25%) !default;
 $button-disabled-opacity: 0.35 !default;
-$button-line-height: $line-height-40 !default;
-$button-font-size: $font-size-100 !default;
 
 .button {
 	@include font-smoothing;
 	display: inline-block;
-	padding-top: floor(($control-size-100 - ($font-size-100 * $button-line-height)) / 2); // NOTE: Floor function is added to the padding to ensure the min-height of the button does not exceed the control-size
+	padding-top: floor(($control-size-100 - ($button-font-size * $button-line-height)) / 2); // NOTE: Floor function is added to the padding to ensure the min-height of the button does not exceed the control-size
 	padding-right: $spacing * 3;
-	padding-bottom: floor(($control-size-100 - ($font-size-100 *  $button-line-height)) / 2); // NOTE: Floor function is added to the padding to ensure the min-height of the button does not exceed the control-size
+	padding-bottom: floor(($control-size-100 - ($button-font-size *  $button-line-height)) / 2); // NOTE: Floor function is added to the padding to ensure the min-height of the button does not exceed the control-size
 	padding-left: $spacing * 3;
 	min-height: $control-size-100;
 	border-radius: $border-radius-100;
