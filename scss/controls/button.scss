@@ -1,13 +1,13 @@
 $button-outset: 0 !default;
 
-$button-color: $color-text-diap !default;
-$button-background-color: $color-ui-90 !default;
 $button-font-size: $font-size-100 !default;
 $button-line-height: $line-height-40 !default;
-$button-hover-color: $color-text-diap !default;
+$button-color: $color-text-light !default;
+$button-background-color: $color-ui-90 !default;
+$button-hover-color: $color-text-light !default;
 $button-hover-background-color: $color-ui-200 !default;
-$button-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-primary-400 !default;
-$button-active-color: $color-text-diap !default;
+$button-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-secondary-400 !default;
+$button-active-color: $color-text-light !default;
 $button-active-background-color: $color-ui-400 !default;
 $button-outset-box-shadow: 0 $button-outset 0 0 shade($button-background-color, 25%) !default;
 $button-disabled-opacity: 0.35 !default;
@@ -69,52 +69,13 @@ $button-disabled-opacity: 0.35 !default;
 }
 
 // Color variations
-$button-call-to-action-color: $color-text-diap !default;
-$button-call-to-action-background-color: $color-call-to-action-100 !default;
-$button-call-to-action-hover-color: $color-text-diap !default;
-$button-call-to-action-hover-background-color: $color-call-to-action-200 !default;
-$button-call-to-action-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-call-to-action-400 !default;
-$button-call-to-action-active-color: $color-text-diap !default;
-$button-call-to-action-active-background-color: $color-call-to-action-300 !default;
-$button-call-to-action-outset-box-shadow: 0 $button-outset 0 0 shade($button-call-to-action-background-color, 25%) !default;
-
-.button--call-to-action {
-	background-color: $button-call-to-action-background-color;
-	color: $button-call-to-action-color;
-	@if ($button-outset) {
-		box-shadow: $button-call-to-action-outset-box-shadow;
-	}
-
-	&:hover,
-	&.is-hovered {
-		background-color: $button-call-to-action-hover-background-color;
-		color: $button-call-to-action-hover-color;
-	}
-
-	&:focus:not(:hover):not(.is-hovered):not(:active):not(.is-active),
-	&.is-focused:not(:hover):not(.is-hovered):not(:active):not(.is-active) {
-		@if $button-outset {
-			box-shadow: $button-call-to-action-focus-box-shadow, $button-call-to-action-outset-box-shadow;
-		}
-		@else {
-			box-shadow: $button-call-to-action-focus-box-shadow;
-		}
-	}
-
-	&:active,
-	&.is-active {
-		background-color: $button-call-to-action-active-background-color;
-		color: $button-call-to-action-active-color;
-	}
-}
-
-$button-primary-color: $color-text-diap !default;
+$button-primary-color: $color-text-light !default;
 $button-primary-background-color: $color-primary-100 !default;
 $button-primary-box-shadow: 0 ($spacing / 4) 0 0 $color-primary-400 !default;
-$button-primary-hover-color: $color-text-diap !default;
+$button-primary-hover-color: $color-text-light !default;
 $button-primary-hover-background-color: $color-primary-300 !default;
 $button-primary-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-primary-500 !default;
-$button-primary-active-color: $color-text-diap !default;
+$button-primary-active-color: $color-text-light !default;
 $button-primary-active-background-color: $color-primary-400 !default;
 $button-primary-outset-box-shadow: 0 $button-outset 0 0 shade($button-primary-background-color, 25%) !default;
 
@@ -148,13 +109,13 @@ $button-primary-outset-box-shadow: 0 $button-outset 0 0 shade($button-primary-ba
 	}
 }
 
-$button-secondary-color: $color-text-diap !default;
+$button-secondary-color: $color-text-light !default;
 $button-secondary-background-color: $color-secondary-100 !default;
 $button-secondary-box-shadow: 0 ($spacing / 4) 0 0 $color-secondary-400 !default;
-$button-secondary-hover-color: $color-text-diap !default;
+$button-secondary-hover-color: $color-text-light !default;
 $button-secondary-hover-background-color: $color-secondary-200 !default;
 $button-secondary-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-secondary-400 !default;
-$button-secondary-active-color: $color-text-diap !default;
+$button-secondary-active-color: $color-text-light !default;
 $button-secondary-active-background-color: $color-secondary-300 !default;
 $button-secondary-outset-box-shadow: 0 $button-outset 0 0 shade($button-secondary-background-color, 25%) !default;
 
@@ -188,20 +149,59 @@ $button-secondary-outset-box-shadow: 0 $button-outset 0 0 shade($button-secondar
 	}
 }
 
+$button-tertiary-color: $color-text-light !default;
+$button-tertiary-background-color: $color-tertiary-100 !default;
+$button-tertiary-hover-color: $color-text-light !default;
+$button-tertiary-hover-background-color: $color-tertiary-200 !default;
+$button-tertiary-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-tertiary-400 !default;
+$button-tertiary-active-color: $color-text-light !default;
+$button-tertiary-active-background-color: $color-tertiary-300 !default;
+$button-tertiary-outset-box-shadow: 0 $button-outset 0 0 shade($button-tertiary-background-color, 25%) !default;
+
+.button--tertiary {
+	background-color: $button-tertiary-background-color;
+	color: $button-tertiary-color;
+	@if ($button-outset) {
+		box-shadow: $button-tertiary-outset-box-shadow;
+	}
+
+	&:hover,
+	&.is-hovered {
+		background-color: $button-tertiary-hover-background-color;
+		color: $button-tertiary-hover-color;
+	}
+
+	&:focus:not(:hover):not(.is-hovered):not(:active):not(.is-active),
+	&.is-focused:not(:hover):not(.is-hovered):not(:active):not(.is-active) {
+		@if $button-outset {
+			box-shadow: $button-tertiary-focus-box-shadow, $button-tertiary-outset-box-shadow;
+		}
+		@else {
+			box-shadow: $button-tertiary-focus-box-shadow;
+		}
+	}
+
+	&:active,
+	&.is-active {
+		background-color: $button-tertiary-active-background-color;
+		color: $button-tertiary-active-color;
+	}
+}
+
 // Outline versions
 $button-outline-border-width: ($spacing / 4) !default;
 $button-outline-box-shadow: inset 0 0 0 $button-outline-border-width $button-background-color !default;
 $button-outline-hover-box-shadow: inset 0 0 0 $button-outline-border-width $button-hover-background-color !default;
 $button-outline-active-box-shadow: inset 0 0 0 $button-outline-border-width $button-active-background-color !default;
-$button-outline-call-to-action-box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-background-color !default;
-$button-outline-call-to-action-hover-box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-hover-background-color !default;
-$button-outline-call-to-action-active-box-shadow: inset 0 0 0 $button-outline-border-width $button-call-to-action-active-background-color !default;
 $button-outline-primary-box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-background-color !default;
 $button-outline-primary-hover-box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-hover-background-color !default;
 $button-outline-primary-active-box-shadow: inset 0 0 0 $button-outline-border-width $button-primary-active-background-color !default;
 $button-outline-secondary-box-shadow: inset 0 0 0 $button-outline-border-width $button-secondary-background-color !default;
 $button-outline-secondary-hover-box-shadow: inset 0 0 0 $button-outline-border-width $button-secondary-hover-background-color !default;
 $button-outline-secondary-active-box-shadow: inset 0 0 0 $button-outline-border-width $button-secondary-active-background-color !default;
+$button-outline-tertiary-box-shadow: inset 0 0 0 $button-outline-border-width $button-tertiary-background-color !default;
+$button-outline-tertiary-hover-box-shadow: inset 0 0 0 $button-outline-border-width $button-tertiary-hover-background-color !default;
+$button-outline-tertiary-active-box-shadow: inset 0 0 0 $button-outline-border-width $button-tertiary-active-background-color !default;
 
 .button--outline {
 	background-color: transparent;
@@ -233,25 +233,25 @@ $button-outline-secondary-active-box-shadow: inset 0 0 0 $button-outline-border-
 		}
 	}
 
-	&.button--call-to-action {
-		box-shadow: $button-outline-call-to-action-box-shadow;
-		color: $button-call-to-action-background-color;
+	&.button--tertiary {
+		box-shadow: $button-outline-tertiary-box-shadow;
+		color: $button-tertiary-background-color;
 
 		&:hover,
 		&.is-hovered {
-			box-shadow: $button-outline-call-to-action-hover-box-shadow;
-			color: $button-call-to-action-hover-background-color;
+			box-shadow: $button-outline-tertiary-hover-box-shadow;
+			color: $button-tertiary-hover-background-color;
 		}
 
 		&:focus:not(:hover):not(.is-hovered):not(:active):not(.is-active),
 		&.is-focused:not(:hover):not(.is-hovered):not(:active):not(.is-active) {
-			box-shadow: $button-call-to-action-focus-box-shadow, $button-outline-call-to-action-box-shadow;
+			box-shadow: $button-tertiary-focus-box-shadow, $button-outline-tertiary-box-shadow;
 		}
 
 		&:active,
 		&.is-active {
-			box-shadow: $button-outline-call-to-action-active-box-shadow;
-			color: $button-call-to-action-active-background-color;
+			box-shadow: $button-outline-tertiary-active-box-shadow;
+			color: $button-tertiary-active-background-color;
 		}
 	}
 

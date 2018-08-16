@@ -24,7 +24,7 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	flex-direction: column;
 }
 
-.input-stepper--primary {
+.input-stepper--secondary {
 }
 
 .input-stepper--90 {
@@ -99,8 +99,8 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 		height: $control-size-90;
 	}
 
-	.input-stepper--primary & {
-		background-color: $color-primary;
+	.input-stepper--secondary & {
+		background-color: $color-secondary;
 	}
 
 	.input-stepper--90 & {
@@ -123,8 +123,8 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 		order: 3;
 	}
 
-	.input-stepper--primary & {
-		background-image: url(get-svg-uri($icon-minus, $color-text-diap));
+	.input-stepper--secondary & {
+		background-image: url(get-svg-uri($icon-minus, $color-text-light));
 	}
 }
 
@@ -138,8 +138,8 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 		order: 1;
 	}
 
-	.input-stepper--primary & {
-		background-image: url(get-svg-uri($icon-plus, $color-text-diap));
+	.input-stepper--secondary & {
+		background-image: url(get-svg-uri($icon-plus, $color-text-light));
 	}
 }
 

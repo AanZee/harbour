@@ -16,19 +16,18 @@ $color-harbour-green: #729B79;
 // Always use a descriptive color to define a functional color. Always use the right functional color even when two (or more) functional colors have the same descriptive color (e.g. $color-heading and $color-primary). This will help when you want to target a specific color.
 
 // ### Hierarchical
-$color-call-to-action: $color-harbour-yellow !default;
-$color-primary: $color-harbour-blue !default;
-$color-secondary: $color-harbour-purple !default;
+$color-primary: $color-harbour-yellow !default;
+$color-secondary: $color-harbour-blue !default;
+$color-tertiary: $color-harbour-purple !default;
 
 // ### Typography
 $color-heading: $color-harbour-blue !default;
 $color-subheading: $color-harbour-blue !default;
 $color-text: $color-harbour-black !default;
-$color-text-diap: $color-harbour-white !default;
+$color-text-light: $color-harbour-white !default;
 
 // ### User Interface
 $color-ui: $color-harbour-grey !default;
-$color-ui-accent: $color-harbour-blue !default;
 
 // ### States
 $color-error: $color-harbour-red !default;
@@ -40,33 +39,14 @@ $color-focus: $color-harbour-green !default;
 // ## Additional colors
 // Can be used for shared color variables in different components (e.g. $color-icon), in specific state (e.g. $color-logged-in) or themes (e.g. $color-corporate)
 $color-shadow: $color-harbour-black !default;
-$color-background-colored: $color-harbour-grey !default;
-$color-background-neutral: $color-harbour-grey !default;
 $color-background-light: $color-harbour-white !default;
 $color-background-dark: $color-harbour-black !default;
+$color-background-neutral: $color-harbour-grey !default;
+$color-background-colored: $color-harbour-blue !default;
+$color-background-complementary: $color-harbour-yellow !default;
 
 // ## Ranges
 // Please keep the same variable order as above
-$color-call-to-action-10: tint($color-call-to-action, 90%) !default;
-$color-call-to-action-20: tint($color-call-to-action, 80%) !default;
-$color-call-to-action-30: tint($color-call-to-action, 70%) !default;
-$color-call-to-action-40: tint($color-call-to-action, 60%) !default;
-$color-call-to-action-50: tint($color-call-to-action, 50%) !default;
-$color-call-to-action-60: tint($color-call-to-action, 40%) !default;
-$color-call-to-action-70: tint($color-call-to-action, 30%) !default;
-$color-call-to-action-80: tint($color-call-to-action, 20%) !default;
-$color-call-to-action-90: tint($color-call-to-action, 10%) !default;
-$color-call-to-action-100: $color-call-to-action !default;
-$color-call-to-action-200: shade($color-call-to-action, 10%) !default;
-$color-call-to-action-300: shade($color-call-to-action, 20%) !default;
-$color-call-to-action-400: shade($color-call-to-action, 30%) !default;
-$color-call-to-action-500: shade($color-call-to-action, 40%) !default;
-$color-call-to-action-600: shade($color-call-to-action, 50%) !default;
-$color-call-to-action-700: shade($color-call-to-action, 60%) !default;
-$color-call-to-action-800: shade($color-call-to-action, 70%) !default;
-$color-call-to-action-900: shade($color-call-to-action, 80%) !default;
-$color-call-to-action-1000: shade($color-call-to-action, 90%) !default;
-
 $color-primary-10: tint($color-primary, 90%) !default;
 $color-primary-20: tint($color-primary, 80%) !default;
 $color-primary-30: tint($color-primary, 70%) !default;
@@ -106,6 +86,26 @@ $color-secondary-700: shade($color-secondary, 60%) !default;
 $color-secondary-800: shade($color-secondary, 70%) !default;
 $color-secondary-900: shade($color-secondary, 80%) !default;
 $color-secondary-1000: shade($color-secondary, 90%) !default;
+
+$color-tertiary-10: tint($color-tertiary, 90%) !default;
+$color-tertiary-20: tint($color-tertiary, 80%) !default;
+$color-tertiary-30: tint($color-tertiary, 70%) !default;
+$color-tertiary-40: tint($color-tertiary, 60%) !default;
+$color-tertiary-50: tint($color-tertiary, 50%) !default;
+$color-tertiary-60: tint($color-tertiary, 40%) !default;
+$color-tertiary-70: tint($color-tertiary, 30%) !default;
+$color-tertiary-80: tint($color-tertiary, 20%) !default;
+$color-tertiary-90: tint($color-tertiary, 10%) !default;
+$color-tertiary-100: $color-tertiary !default;
+$color-tertiary-200: shade($color-tertiary, 10%) !default;
+$color-tertiary-300: shade($color-tertiary, 20%) !default;
+$color-tertiary-400: shade($color-tertiary, 30%) !default;
+$color-tertiary-500: shade($color-tertiary, 40%) !default;
+$color-tertiary-600: shade($color-tertiary, 50%) !default;
+$color-tertiary-700: shade($color-tertiary, 60%) !default;
+$color-tertiary-800: shade($color-tertiary, 70%) !default;
+$color-tertiary-900: shade($color-tertiary, 80%) !default;
+$color-tertiary-1000: shade($color-tertiary, 90%) !default;
 
 $color-heading-10: tint($color-heading, 90%) !default;
 $color-heading-20: tint($color-heading, 80%) !default;
@@ -167,25 +167,25 @@ $color-text-800: shade($color-text, 70%) !default;
 $color-text-900: shade($color-text, 80%) !default;
 $color-text-1000: shade($color-text, 90%) !default;
 
-$color-text-diap-10: tint($color-text-diap, 90%) !default;
-$color-text-diap-20: tint($color-text-diap, 80%) !default;
-$color-text-diap-30: tint($color-text-diap, 70%) !default;
-$color-text-diap-40: tint($color-text-diap, 60%) !default;
-$color-text-diap-50: tint($color-text-diap, 50%) !default;
-$color-text-diap-60: tint($color-text-diap, 40%) !default;
-$color-text-diap-70: tint($color-text-diap, 30%) !default;
-$color-text-diap-80: tint($color-text-diap, 20%) !default;
-$color-text-diap-90: tint($color-text-diap, 10%) !default;
-$color-text-diap-100: $color-text-diap !default;
-$color-text-diap-200: shade($color-text-diap, 10%) !default;
-$color-text-diap-300: shade($color-text-diap, 20%) !default;
-$color-text-diap-400: shade($color-text-diap, 30%) !default;
-$color-text-diap-500: shade($color-text-diap, 40%) !default;
-$color-text-diap-600: shade($color-text-diap, 50%) !default;
-$color-text-diap-700: shade($color-text-diap, 60%) !default;
-$color-text-diap-800: shade($color-text-diap, 70%) !default;
-$color-text-diap-900: shade($color-text-diap, 80%) !default;
-$color-text-diap-1000: shade($color-text-diap, 90%) !default;
+$color-text-light-10: tint($color-text-light, 90%) !default;
+$color-text-light-20: tint($color-text-light, 80%) !default;
+$color-text-light-30: tint($color-text-light, 70%) !default;
+$color-text-light-40: tint($color-text-light, 60%) !default;
+$color-text-light-50: tint($color-text-light, 50%) !default;
+$color-text-light-60: tint($color-text-light, 40%) !default;
+$color-text-light-70: tint($color-text-light, 30%) !default;
+$color-text-light-80: tint($color-text-light, 20%) !default;
+$color-text-light-90: tint($color-text-light, 10%) !default;
+$color-text-light-100: $color-text-light !default;
+$color-text-light-200: shade($color-text-light, 10%) !default;
+$color-text-light-300: shade($color-text-light, 20%) !default;
+$color-text-light-400: shade($color-text-light, 30%) !default;
+$color-text-light-500: shade($color-text-light, 40%) !default;
+$color-text-light-600: shade($color-text-light, 50%) !default;
+$color-text-light-700: shade($color-text-light, 60%) !default;
+$color-text-light-800: shade($color-text-light, 70%) !default;
+$color-text-light-900: shade($color-text-light, 80%) !default;
+$color-text-light-1000: shade($color-text-light, 90%) !default;
 
 $color-ui-10: tint($color-ui, 90%) !default;
 $color-ui-20: tint($color-ui, 80%) !default;
@@ -206,26 +206,6 @@ $color-ui-700: shade($color-ui, 60%) !default;
 $color-ui-800: shade($color-ui, 70%) !default;
 $color-ui-900: shade($color-ui, 80%) !default;
 $color-ui-1000: shade($color-ui, 90%) !default;
-
-$color-ui-accent-10: tint($color-ui-accent, 90%) !default;
-$color-ui-accent-20: tint($color-ui-accent, 80%) !default;
-$color-ui-accent-30: tint($color-ui-accent, 70%) !default;
-$color-ui-accent-40: tint($color-ui-accent, 60%) !default;
-$color-ui-accent-50: tint($color-ui-accent, 50%) !default;
-$color-ui-accent-60: tint($color-ui-accent, 40%) !default;
-$color-ui-accent-70: tint($color-ui-accent, 30%) !default;
-$color-ui-accent-80: tint($color-ui-accent, 20%) !default;
-$color-ui-accent-90: tint($color-ui-accent, 10%) !default;
-$color-ui-accent-100: $color-ui-accent !default;
-$color-ui-accent-200: shade($color-ui-accent, 10%) !default;
-$color-ui-accent-300: shade($color-ui-accent, 20%) !default;
-$color-ui-accent-400: shade($color-ui-accent, 30%) !default;
-$color-ui-accent-500: shade($color-ui-accent, 40%) !default;
-$color-ui-accent-600: shade($color-ui-accent, 50%) !default;
-$color-ui-accent-700: shade($color-ui-accent, 60%) !default;
-$color-ui-accent-800: shade($color-ui-accent, 70%) !default;
-$color-ui-accent-900: shade($color-ui-accent, 80%) !default;
-$color-ui-accent-1000: shade($color-ui-accent, 90%) !default;
 
 $color-error-10: tint($color-error, 90%) !default;
 $color-error-20: tint($color-error, 80%) !default;
