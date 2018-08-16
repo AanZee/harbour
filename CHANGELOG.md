@@ -1,3 +1,15 @@
+# 1.12.0
+
+## Improvements
+* Change color and modifiers names 'call to action' to 'primary'
+* Change color and modifiers names 'primary' to 'secondary'
+* Change color and modifiers names 'secondary' to 'tertiary'
+* Change color and modifiers names 'diap' to 'light'
+* Improve button scale
+* Remove color ui-accent, you can use color secondary or tertiary as replacement
+* Add color background complementary
+* Rename 'spacing' setting file to 'sizes'
+
 # 1.11.2
 * Add missing updates in version 1.10.0 to changelog
 
