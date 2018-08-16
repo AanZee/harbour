@@ -24,19 +24,19 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	flex-direction: column;
 }
 
-.input-stepper--primary {
+.input-stepper--secondary {
 }
 
 .input-stepper--90 {
 }
 
 .input-stepper__input {
-	padding-top: (($control-height-100 - ($line-height-20 * $font-size-200)) / 2);
+	padding-top: (($control-size-100 - ($line-height-20 * $font-size-200)) / 2);
 	padding-right: $spacing;
-	padding-bottom: (($control-height-100 - ($line-height-20 * $font-size-200)) / 2);
+	padding-bottom: (($control-size-100 - ($line-height-20 * $font-size-200)) / 2);
 	padding-left: $spacing;
-	width: $control-height-200;
-	height: $control-height-100;
+	width: $control-size-200;
+	height: $control-size-100;
 	border: $border-input-100;
 	border-radius: 0;
 	color: $color-text;
@@ -63,24 +63,24 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	}
 
 	.input-stepper--vertical & {
-		width: $control-height-100;
+		width: $control-size-100;
 	}
 
 	.input-stepper--90 & {
-		width: $control-height-100;
-		height: $control-height-90;
+		width: $control-size-100;
+		height: $control-size-90;
 	}
 
 	.input-stepper--90.input-stepper--vertical & {
-		width: $control-height-90;
+		width: $control-size-90;
 	}
 }
 
 .input-stepper__control {
 	@include hide-text;
 	padding: 0;
-	width: $control-height-100;
-	height: $control-height-100;
+	width: $control-size-100;
+	height: $control-size-100;
 	border: none;
 	background-color: $input-stepper-button-background-color;
 	background-position: center;
@@ -96,20 +96,20 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	}
 
 	.input-stepper--vertical & {
-		height: $control-height-90;
+		height: $control-size-90;
 	}
 
-	.input-stepper--primary & {
-		background-color: $color-primary;
+	.input-stepper--secondary & {
+		background-color: $color-secondary;
 	}
 
 	.input-stepper--90 & {
-		width: $control-height-90;
-		height: $control-height-90;
+		width: $control-size-90;
+		height: $control-size-90;
 	}
 
 	.input-stepper--90.input-stepper--vertical & {
-		height: $control-height-80;
+		height: $control-size-80;
 	}
 }
 
@@ -123,8 +123,8 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 		order: 3;
 	}
 
-	.input-stepper--primary & {
-		background-image: url(get-svg-uri($icon-minus, $color-text-diap));
+	.input-stepper--secondary & {
+		background-image: url(get-svg-uri($icon-minus, $color-text-light));
 	}
 }
 
@@ -138,8 +138,8 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 		order: 1;
 	}
 
-	.input-stepper--primary & {
-		background-image: url(get-svg-uri($icon-plus, $color-text-diap));
+	.input-stepper--secondary & {
+		background-image: url(get-svg-uri($icon-plus, $color-text-light));
 	}
 }
 
