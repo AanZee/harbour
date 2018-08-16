@@ -1,3 +1,6 @@
+# 1.11.2
+* Add missing updates in version 1.10.0 to changelog
+
 # 1.11.1
 
 ## Bugfix
@@ -13,6 +16,9 @@
 
 ## Features
 * Add input stepper component
+* Update get-svg-uri function to check for #000000 fill or stroke
+* Remove 'em' from line-height variables
+* Add golden-ratio and control-height variables
 
 # 1.9.0
 

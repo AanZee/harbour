@@ -29,6 +29,8 @@ button--outline
 ```
 ### Sizes
 ```
+button--60
+button--70
 button--80
 button--90
 button--200
