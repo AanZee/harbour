@@ -31,12 +31,12 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 }
 
 .input-stepper__input {
-	padding-top: (($size-control-100 - ($input-line-height * $input-font-size)) / 2);
+	padding-top: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
 	padding-right: $spacing;
-	padding-bottom: (($size-control-100 - ($input-line-height * $input-font-size)) / 2);
+	padding-bottom: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
 	padding-left: $spacing;
-	width: $size-control-200;
-	height: $size-control-100;
+	width: $control-size-200;
+	height: $control-size-100;
 	border: $input-border;
 	border-radius: $input-border-radius;
 	color: $input-color;
@@ -63,24 +63,24 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	}
 
 	.input-stepper--vertical & {
-		width: $size-control-100;
+		width: $control-size-100;
 	}
 
 	.input-stepper--90 & {
-		width: $size-control-100;
-		height: $size-control-90;
+		width: $control-size-100;
+		height: $control-size-90;
 	}
 
 	.input-stepper--90.input-stepper--vertical & {
-		width: $size-control-90;
+		width: $control-size-90;
 	}
 }
 
 .input-stepper__control {
 	@include hide-text;
 	padding: 0;
-	width: $size-control-100;
-	height: $size-control-100;
+	width: $control-size-100;
+	height: $control-size-100;
 	border: none;
 	background-color: $input-stepper-button-background-color;
 	background-position: center;
@@ -96,7 +96,7 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	}
 
 	.input-stepper--vertical & {
-		height: $size-control-90;
+		height: $control-size-90;
 	}
 
 	.input-stepper--secondary & {
@@ -104,12 +104,12 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	}
 
 	.input-stepper--90 & {
-		width: $size-control-90;
-		height: $size-control-90;
+		width: $control-size-90;
+		height: $control-size-90;
 	}
 
 	.input-stepper--90.input-stepper--vertical & {
-		height: $size-control-80;
+		height: $control-size-80;
 	}
 }
 

@@ -15,11 +15,11 @@ $button-disabled-opacity: 0.35 !default;
 .button {
 	@include font-smoothing;
 	display: inline-block;
-	padding-top: floor(($size-control-100 - ($button-font-size * $button-line-height)) / 2); // NOTE: Floor function is added to the padding to ensure the min-height of the button does not exceed the control-size
+	padding-top: floor(($control-size-100 - ($button-font-size * $button-line-height)) / 2); // NOTE: Floor function is added to the padding to ensure the min-height of the button does not exceed the control-size
 	padding-right: $spacing * 3;
-	padding-bottom: floor(($size-control-100 - ($button-font-size *  $button-line-height)) / 2); // NOTE: Floor function is added to the padding to ensure the min-height of the button does not exceed the control-size
+	padding-bottom: floor(($control-size-100 - ($button-font-size *  $button-line-height)) / 2); // NOTE: Floor function is added to the padding to ensure the min-height of the button does not exceed the control-size
 	padding-left: $spacing * 3;
-	min-height: $size-control-100;
+	min-height: $control-size-100;
 	border-radius: $border-radius-100;
 	background-color: $button-background-color;
 	color: $button-color;
@@ -309,47 +309,47 @@ $button-90-font-size: $font-size-90 !default;
 $button-200-font-size: $font-size-200 !default;
 
 .button--60 {
-	padding-top: floor(($size-control-60 - ($button-60-font-size * $button-line-height)) / 2);
+	padding-top: floor(($control-size-60 - ($button-60-font-size * $button-line-height)) / 2);
 	padding-right: $spacing * 1.5;
-	padding-bottom: floor(($size-control-60 - ($button-60-font-size * $button-line-height)) / 2);
+	padding-bottom: floor(($control-size-60 - ($button-60-font-size * $button-line-height)) / 2);
 	padding-left: $spacing * 1.5;
-	min-height: $size-control-60;
+	min-height: $control-size-60;
 	font-size: $button-60-font-size;
 }
 
 .button--70 {
-	padding-top: floor(($size-control-70 - ($button-70-font-size * $button-line-height)) / 2);
+	padding-top: floor(($control-size-70 - ($button-70-font-size * $button-line-height)) / 2);
 	padding-right: $spacing * 2;
-	padding-bottom: floor(($size-control-70 - ($button-70-font-size * $button-line-height)) / 2);
+	padding-bottom: floor(($control-size-70 - ($button-70-font-size * $button-line-height)) / 2);
 	padding-left: $spacing * 2;
-	min-height: $size-control-70;
+	min-height: $control-size-70;
 	font-size: $button-70-font-size;
 }
 
 .button--80 {
-	padding-top: floor(($size-control-80 - ($button-80-font-size * $button-line-height)) / 2);
+	padding-top: floor(($control-size-80 - ($button-80-font-size * $button-line-height)) / 2);
 	padding-right: $spacing * 2;
-	padding-bottom: floor(($size-control-80 - ($button-80-font-size * $button-line-height)) / 2);
+	padding-bottom: floor(($control-size-80 - ($button-80-font-size * $button-line-height)) / 2);
 	padding-left: $spacing * 2;
-	min-height: $size-control-80;
+	min-height: $control-size-80;
 	font-size: $button-80-font-size;
 }
 
 .button--90 {
-	padding-top: floor(($size-control-90 - ($button-90-font-size * $button-line-height)) / 2);
+	padding-top: floor(($control-size-90 - ($button-90-font-size * $button-line-height)) / 2);
 	padding-right: $spacing * 2.5;
-	padding-bottom: floor(($size-control-90 - ($button-90-font-size * $button-line-height)) / 2);
+	padding-bottom: floor(($control-size-90 - ($button-90-font-size * $button-line-height)) / 2);
 	padding-left: $spacing * 2.5;
-	min-height: $size-control-90;
+	min-height: $control-size-90;
 	font-size: $button-90-font-size;
 }
 
 .button--200 {
-	padding-top: floor(($size-control-200 - ($button-200-font-size * $button-line-height)) / 2);
+	padding-top: floor(($control-size-200 - ($button-200-font-size * $button-line-height)) / 2);
 	padding-right: $spacing * 4;
-	padding-bottom: floor(($size-control-200 - ($button-200-font-size * $button-line-height)) / 2);
+	padding-bottom: floor(($control-size-200 - ($button-200-font-size * $button-line-height)) / 2);
 	padding-left: $spacing * 4;
-	min-height: $size-control-200;
+	min-height: $control-size-200;
 	font-size: $button-200-font-size;
 }
 
