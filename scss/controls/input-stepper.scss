@@ -31,18 +31,18 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 }
 
 .input-stepper__input {
-	padding-top: (($control-size-100 - ($line-height-20 * $font-size-200)) / 2);
+	padding-top: (($size-control-100 - ($input-line-height * $input-font-size)) / 2);
 	padding-right: $spacing;
-	padding-bottom: (($control-size-100 - ($line-height-20 * $font-size-200)) / 2);
+	padding-bottom: (($size-control-100 - ($input-line-height * $input-font-size)) / 2);
 	padding-left: $spacing;
-	width: $control-size-200;
-	height: $control-size-100;
-	border: $border-input-100;
-	border-radius: 0;
-	color: $color-text;
+	width: $size-control-200;
+	height: $size-control-100;
+	border: $input-border;
+	border-radius: $input-border-radius;
+	color: $input-color;
 	text-align: center;
-	font-size: $font-size-200;
-	line-height: $line-height-20;
+	font-size: $input-font-size;
+	line-height: $input-line-height;
 	order: 2;
 	appearance: none;
 
@@ -63,24 +63,24 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	}
 
 	.input-stepper--vertical & {
-		width: $control-size-100;
+		width: $size-control-100;
 	}
 
 	.input-stepper--90 & {
-		width: $control-size-100;
-		height: $control-size-90;
+		width: $size-control-100;
+		height: $size-control-90;
 	}
 
 	.input-stepper--90.input-stepper--vertical & {
-		width: $control-size-90;
+		width: $size-control-90;
 	}
 }
 
 .input-stepper__control {
 	@include hide-text;
 	padding: 0;
-	width: $control-size-100;
-	height: $control-size-100;
+	width: $size-control-100;
+	height: $size-control-100;
 	border: none;
 	background-color: $input-stepper-button-background-color;
 	background-position: center;
@@ -96,7 +96,7 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	}
 
 	.input-stepper--vertical & {
-		height: $control-size-90;
+		height: $size-control-90;
 	}
 
 	.input-stepper--secondary & {
@@ -104,12 +104,12 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	}
 
 	.input-stepper--90 & {
-		width: $control-size-90;
-		height: $control-size-90;
+		width: $size-control-90;
+		height: $size-control-90;
 	}
 
 	.input-stepper--90.input-stepper--vertical & {
-		height: $control-size-80;
+		height: $size-control-80;
 	}
 }
 
