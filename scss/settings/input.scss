@@ -53,7 +53,7 @@ $input-autofill-is-invalid-focus-background-color: $color-error-10 !default;
 $input-autofill-is-invalid-focus-box-shadow: $input-focus-box-shadow-inset $input-focus-box-shadow-offset-x $input-focus-box-shadow-offset-y $input-focus-box-shadow-blur $input-focus-box-shadow-spread $color-focus !default;
 $input-autofill-is-invalid-focus-box-shadow-background: inset 0 0 0 1000px $color-error-10 !default;
 
-$input-is-valid-icon: $icon-check-bold !default;
+$input-is-valid-icon: $icon-check !default;
 $input-is-valid-icon-color: $color-success !default;
-$input-is-invalid-icon: $icon-exclamation-bold !default;
+$input-is-invalid-icon: $icon-exclamation !default;
 $input-is-invalid-icon-color: $color-error !default;
