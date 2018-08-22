@@ -7,6 +7,7 @@
 ## Controls
 - [Button](controls/button.md)
 - [Input stepper](controls/input-stepper.md)
+- [Password input](controls/password-input.md)
 
 ## Layouts
 - [Layout](layouts/layout.md)
