@@ -1,3 +1,14 @@
+# 1.13.0
+
+## Features
+* Add password input control
+* Add input settings
+* Add check and exclamation icon
+
+## Improvements
+* Move icons (and fonts) before settings, so icons can be used by (input) settings
+* Replace 'border-input-100' for input-stepper with new 'input-border' variable
+
 # 1.12.0
 
 ## Improvements
@@ -9,6 +20,7 @@
 * Remove color ui-accent, you can use color secondary or tertiary as replacement
 * Add color background complementary
 * Rename 'spacing' setting file to 'sizes'
+* Rename 'control-height' to 'control-size'
 
 # 1.11.2
 * Add missing updates in version 1.10.0 to changelog
