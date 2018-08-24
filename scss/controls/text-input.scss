@@ -16,15 +16,15 @@
 	transition: $input-transition;
 	appearance: none;
 
+	&:disabled {
+		opacity: $opacity-disabled;
+		pointer-events: none;
+	}
+
 	&:focus {
 		border: $input-focus-border;
 		background-color: $input-focus-background-color;
 		box-shadow: $input-focus-box-shadow;
-	}
-
-	&:disabled {
-		opacity: $opacity-disabled;
-		pointer-events: none;
 	}
 
 	&.is-valid,
@@ -103,7 +103,7 @@
 	max-width: $spacing * 16;
 }
 
-.text-input--multi-line {
+.text-input--multiline {
 	padding-top: $spacing * 1.5;
 	padding-bottom: $spacing * 1.5;
 	height: $spacing * 12;
