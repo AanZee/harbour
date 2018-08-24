@@ -6,6 +6,7 @@
 
 ## Controls
 - [Button](controls/button.md)
+- [Drop-down meu](controls/drop-down-menu.md)
 - [Input stepper](controls/input-stepper.md)
 - [Password input](controls/password-input.md)
 
