@@ -19,9 +19,9 @@ button:disabled
 ## Available modifiers
 ### Colors
 ```
-button--call-to-action
 button--primary
 button--secondary
+button--tertiary
 ```
 ### Outline version (available in all colors)
 ```
@@ -29,6 +29,8 @@ button--outline
 ```
 ### Sizes
 ```
+button--60
+button--70
 button--80
 button--90
 button--200
@@ -47,18 +49,6 @@ $button-active-color
 $button-active-background-color
 $button-disabled-color
 $button-disabled-background-color
-```
-### Call to action
-```scss
-$button-call-to-action-color
-$button-call-to-action-background-color
-$button-call-to-action-hover-color
-$button-call-to-action-hover-background-color
-$button-call-to-action-focus-box-shadow
-$button-call-to-action-active-color
-$button-call-to-action-active-background-color
-$button-call-to-action-disabled-color
-$button-call-to-action-disabled-background-color
 ```
 ### Primary
 ```scss
@@ -83,6 +73,18 @@ $button-secondary-active-color
 $button-secondary-active-background-color
 $button-secondary-disabled-color
 $button-secondary-disabled-background-color
+```
+### Tertiary
+```scss
+$button-tertiary-color
+$button-tertiary-background-color
+$button-tertiary-hover-color
+$button-tertiary-hover-background-color
+$button-tertiary-focus-box-shadow
+$button-tertiary-active-color
+$button-tertiary-active-background-color
+$button-tertiary-disabled-color
+$button-tertiary-disabled-background-color
 ```
 ### Outline version
 ```scss
