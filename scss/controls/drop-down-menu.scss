@@ -93,8 +93,8 @@
 
 	.drop-down-menu.is-valid &,
 	.drop-down-menu.is-invalid & {
-		padding-right: $control-size-100 * 1.5;
-		background-position: right ($spacing * 2) + $spacing + (($control-size-100 - $icon-size-100) / 2) center;
+		padding-right: $control-size-100 * 2;
+		background-position: right ($spacing * 2.5) + $spacing + (($control-size-100 - $icon-size-100) / 2) center;
 		background-size: $icon-size-100 $icon-size-100;
 		background-repeat: no-repeat;
 	}
