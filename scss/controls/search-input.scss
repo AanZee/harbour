@@ -1,0 +1,151 @@
+.search-input {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: $control-size-100;
+	color: $input-color;
+	font-size: $input-font-size;
+	line-height: $input-line-height;
+
+	&::after {
+		@include align(absolute, right, center);
+		right: $spacing * 2;
+		display: block;
+		width: $spacing * 2.5;
+		height: $spacing * 2.5;
+		background-image: url(get-svg-uri($icon-search-bold, $color-text-300));
+		background-position: center center;
+		background-size: $spacing * 2;
+		background-repeat: no-repeat;
+		content: '';
+		pointer-events: none;
+	}
+
+	&.is-valid {
+	}
+
+	&.is-invalid {
+	}
+}
+
+.search-input--90 {
+}
+
+.search-input--max-width-90 {
+	max-width: $spacing * 40;
+}
+
+.search-input--max-width-80 {
+	max-width: $spacing * 24;
+}
+
+.search-input--max-width-70 {
+	max-width: $spacing * 20;
+}
+
+.search-input--max-width-60 {
+	max-width: $spacing * 16;
+}
+
+.search-input__input {
+	@include ellipsis();
+	position: relative;
+	display: block;
+	padding-top: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
+	padding-right: $spacing * 6.25;
+	padding-bottom: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
+	padding-left: $spacing * 1.5;
+	width: 100%;
+	height: $control-size-100;
+	border: $input-border;
+	border-radius: $input-border-radius;
+	background-color: $input-background-color;
+	color: $input-color;
+	font-size: $input-font-size;
+	line-height: $input-line-height;
+	transition: $input-transition;
+	appearance: none;
+
+	& option {
+		color: $color-text; // FIX For IE to make sure all the options are readable and the option does not inherit the text color from the select.
+	}
+
+	&::-ms-expand {
+		display: none; // NOTE To hide select control in IE10+.
+	}
+
+	&::-ms-value {
+		background: none; // NOTE To remove blue background on IE10+ when selected.
+		color: $color-text; // NOTE To make sure the text is readable on a light background from item-pop-up-menu when selected and input is not checked.
+	}
+
+	&::placeholder {
+		color: $color-text-80;
+		opacity: 1;
+	}
+
+	&:focus {
+		border: $input-focus-border;
+		background-color: $input-focus-background-color;
+		box-shadow: $input-focus-box-shadow;
+	}
+
+	&:disabled {
+		opacity: $opacity-disabled;
+		pointer-events: none;
+	}
+
+	&:-webkit-autofill {
+		padding-right: $spacing * 1.5;
+		border: $input-autofill-border;
+		background-color: $input-autofill-background-color;
+		box-shadow: $input-autofill-box-shadow, $input-autofill-box-shadow-background;
+
+		&:focus {
+			border: $input-autofill-focus-border;
+			background-color: $input-autofill-focus-background-color;
+			box-shadow: $input-autofill-focus-box-shadow, $input-autofill-focus-box-shadow-background;
+		}
+	}
+
+	.search-input.is-valid &,
+	.search-input.is-invalid & {
+		padding-right: $control-size-100 * 2;
+		background-position: right ($spacing * 2.5) + $spacing + (($control-size-100 - $icon-size-100) / 2) center;
+		background-size: $icon-size-100 $icon-size-100;
+		background-repeat: no-repeat;
+	}
+
+	.search-input.is-valid & {
+		border: $input-is-valid-border;
+		background-color: $input-is-valid-background-color;
+		background-image: url(get-svg-uri($input-is-valid-icon, $input-is-valid-icon-color));
+		box-shadow: $input-is-valid-box-shadow;
+
+		&:focus {
+			border: $input-is-valid-focus-border;
+			background-color: $input-is-valid-focus-background-color;
+			box-shadow: $input-is-valid-focus-box-shadow;
+		}
+	}
+
+	.search-input.is-invalid & {
+		border: $input-is-invalid-border;
+		background-color: $input-is-invalid-background-color;
+		background-image: url(get-svg-uri($input-is-invalid-icon, $input-is-invalid-icon-color));
+		box-shadow: $input-is-invalid-box-shadow;
+
+		&:focus {
+			border: $input-is-invalid-focus-border;
+			background-color: $input-is-invalid-focus-background-color;
+			box-shadow: $input-is-invalid-focus-box-shadow;
+		}
+	}
+
+	.search-input--90 & {
+		padding-right: $spacing * 1.5;
+		padding-left: $spacing * 1.5;
+		height: $control-size-90;
+		font-size: $font-size-100;
+	}
+}
