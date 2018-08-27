@@ -7,6 +7,12 @@
 	font-size: $input-font-size;
 	line-height: $input-line-height;
 
+	&.is-valid {
+	}
+
+	&.is-invalid {
+	}
+
 	&::after {
 		@include align(absolute, right, center);
 		right: $spacing * 2;
@@ -19,12 +25,6 @@
 		background-repeat: no-repeat;
 		content: '';
 		pointer-events: none;
-	}
-
-	&.is-valid {
-	}
-
-	&.is-invalid {
 	}
 }
 
@@ -66,8 +66,15 @@
 	transition: $input-transition;
 	appearance: none;
 
-	& option {
-		color: $color-text; // FIX For IE to make sure all the options are readable and the option does not inherit the text color from the select.
+	&:disabled {
+		opacity: $opacity-disabled;
+		pointer-events: none;
+	}
+
+	&:focus {
+		border: $input-focus-border;
+		background-color: $input-focus-background-color;
+		box-shadow: $input-focus-box-shadow;
 	}
 
 	&::-ms-expand {
@@ -81,18 +88,7 @@
 
 	&::placeholder {
 		color: $color-text-80;
-		opacity: 1;
-	}
-
-	&:focus {
-		border: $input-focus-border;
-		background-color: $input-focus-background-color;
-		box-shadow: $input-focus-box-shadow;
-	}
-
-	&:disabled {
-		opacity: $opacity-disabled;
-		pointer-events: none;
+		opacity: $opacity-100;
 	}
 
 	&:-webkit-autofill {
@@ -147,5 +143,9 @@
 		padding-left: $spacing * 1.5;
 		height: $control-size-90;
 		font-size: $font-size-100;
+	}
+
+	& option {
+		color: $color-text; // FIX For IE to make sure all the options are readable and the option does not inherit the text color from the select.
 	}
 }
