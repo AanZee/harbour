@@ -29,6 +29,7 @@
 }
 
 .drop-down-menu--90 {
+	height: $control-size-90;
 }
 
 .drop-down-menu--max-width-90 {
@@ -78,12 +79,12 @@
 	}
 
 	&::-ms-expand {
-		display: none; // NOTE To hide select control in IE10+.
+		display: none; // NOTE: To hide select control in IE10+.
 	}
 
 	&::-ms-value {
-		background: none; // NOTE To remove blue background on IE10+ when selected.
-		color: $color-text; // NOTE To make sure the text is readable on a light background from item-pop-up-menu when selected and input is not checked.
+		background: none; // NOTE: To remove blue background on IE10+ when selected.
+		color: $color-text; // NOTE: To make sure the text is readable on a light background from drop-down-menu when selected.
 	}
 
 	&::placeholder {
@@ -146,6 +147,6 @@
 	}
 
 	& option {
-		color: $color-text; // FIX For IE to make sure all the options are readable and the option does not inherit the text color from the select.
+		color: $color-text; // FIX: For IE to make sure all the options are readable and the option does not inherit the text color from the select.
 	}
 }
