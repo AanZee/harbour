@@ -1,6 +1,15 @@
 $content-a-border: ($spacing / 8) solid; // NOTE: No color is set to inherit the color of its parent
 
 .content {
+	max-width: 40em;
+	line-height: $line-height-60;
+
+	@include media(0, $range-hand) {
+		font-size: $font-size-100;
+	}
+	@include media($range-lap, false) {
+		font-size: $font-size-200;
+	}
 
 	& > :first-child {
 		margin-top: 0;
@@ -11,23 +20,54 @@ $content-a-border: ($spacing / 8) solid; // NOTE: No color is set to inherit the
 	}
 }
 
-.content--diap {
-	color: $color-text-diap;
+.content--90 {
+	@include media(0, $range-hand) {
+		font-size: $font-size-90;
+	}
+	@include media($range-lap, false) {
+		font-size: $font-size-100;
+	}
 }
+
+.content--200 {
+	@include media(0, $range-hand) {
+		font-size: $font-size-200;
+	}
+	@include media($range-lap, false) {
+		font-size: $font-size-300;
+	}
+}
+
+.content--centered {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.content--centering {
+	text-align: center;
+}
+
+.content--diap {
+	color: $color-text-light;
+}
+
+// TODO HAR-148: Add content width modifiers (--expanded, narrow, etc) when text width setting is added
 
 h1 {
 
 	.content & {
+		color: $color-heading;
 		font-weight: 600;
-		line-height: $line-height-30;
+		line-height: $line-height-40;
 
-		@include media(0, $range-palm) {
-			font-size: $font-size-400;
-		}
-		@include media($range-hand) {
+		@include media(0, $range-hand) {
+			margin-top: $line-height-40 * $font-size-500 / 2;
+			margin-bottom: $line-height-40 * $font-size-500 / 2;
 			font-size: $font-size-500;
 		}
 		@include media($range-lap, false) {
+			margin-top: $line-height-40 * $font-size-600 / 2;
+			margin-bottom: $line-height-40 * $font-size-600 / 2;
 			font-size: $font-size-600;
 		}
 	}
@@ -36,16 +76,18 @@ h1 {
 h2 {
 
 	.content & {
+		color: $color-heading;
 		font-weight: 600;
 		line-height: $line-height-40;
 
-		@include media(0, $range-palm) {
-			font-size: $font-size-300;
-		}
-		@include media($range-hand) {
+		@include media(0, $range-hand) {
+			margin-top: $line-height-40 * $font-size-400 / 2;
+			margin-bottom: $line-height-40 * $font-size-400 / 2;
 			font-size: $font-size-400;
 		}
 		@include media($range-lap, false) {
+			margin-top: $line-height-40 * $font-size-500 / 2;
+			margin-bottom: $line-height-40 * $font-size-500 / 2;
 			font-size: $font-size-500;
 		}
 	}
@@ -54,16 +96,18 @@ h2 {
 h3 {
 
 	.content & {
+		color: $color-subheading;
 		font-weight: 600;
-		line-height: $line-height-50;
+		line-height: $line-height-40;
 
-		@include media(0, $range-palm) {
-			font-size: $font-size-200;
-		}
-		@include media($range-hand) {
+		@include media(0, $range-hand) {
+			margin-top: $line-height-40 * $font-size-300 / 2;
+			margin-bottom: $line-height-40 * $font-size-300 / 2;
 			font-size: $font-size-300;
 		}
 		@include media($range-lap, false) {
+			margin-top: $line-height-40 * $font-size-400 / 2;
+			margin-bottom: $line-height-40 * $font-size-400 / 2;
 			font-size: $font-size-400;
 		}
 	}
@@ -72,16 +116,18 @@ h3 {
 h4 {
 
 	.content & {
+		color: $color-subheading;
 		font-weight: 600;
-		line-height: $line-height-50;
+		line-height: $line-height-40;
 
-		@include media(0, $range-palm) {
-			font-size: $font-size-100;
-		}
-		@include media($range-hand) {
+		@include media(0, $range-hand) {
+			margin-top: $line-height-40 * $font-size-200 / 2;
+			margin-bottom: $line-height-40 * $font-size-200 / 2;
 			font-size: $font-size-200;
 		}
 		@include media($range-lap, false) {
+			margin-top: $line-height-40 * $font-size-300 / 2;
+			margin-bottom: $line-height-40 * $font-size-300 / 2;
 			font-size: $font-size-300;
 		}
 	}
@@ -90,13 +136,18 @@ h4 {
 h5 {
 
 	.content & {
+		color: $color-subheading;
 		font-weight: 600;
-		line-height: $line-height-50;
+		line-height: $line-height-40;
 
 		@include media(0, $range-hand) {
+			margin-top: $line-height-40 * $font-size-100 / 2;
+			margin-bottom: $line-height-40 * $font-size-100 / 2;
 			font-size: $font-size-100;
 		}
 		@include media($range-lap, false) {
+			margin-top: $line-height-40 * $font-size-200 / 2;
+			margin-bottom: $line-height-40 * $font-size-200 / 2;
 			font-size: $font-size-200;
 		}
 	}
@@ -105,14 +156,19 @@ h5 {
 h6 {
 
 	.content & {
-		font-weight: normal;
-		line-height: $line-height-50;
+		color: $color-subheading;
+		font-weight: 600;
+		line-height: $line-height-40;
 
 		@include media(0, $range-hand) {
-			font-size: $font-size-100;
+			margin-top: $line-height-40 * $font-size-90 / 2;
+			margin-bottom: $line-height-40 * $font-size-90 / 2;
+			font-size: $font-size-90;
 		}
 		@include media($range-lap, false) {
-			font-size: $font-size-200;
+			margin-top: $line-height-40 * $font-size-100 / 2;
+			margin-bottom: $line-height-40 * $font-size-100 / 2;
+			font-size: $font-size-100;
 		}
 	}
 }
@@ -120,32 +176,39 @@ h6 {
 p {
 
 	.content & {
-		max-width: 40em;
-		line-height: $line-height-100;
+		color: $color-text;
 
 		@include media(0, $range-hand) {
-			margin-top: $line-height-80 * $font-size-100;
-			margin-bottom: $line-height-80 * $font-size-100;
-			font-size: $font-size-100;
+			margin-top: $line-height-60 * $font-size-100;
+			margin-bottom: $line-height-60 * $font-size-100;
 		}
 		@include media($range-lap, false) {
-			margin-top: $line-height-80 * $font-size-200;
-			margin-bottom: $line-height-80 * $font-size-200;
-			font-size: $font-size-200;
+			margin-top: $line-height-60 * $font-size-200;
+			margin-bottom: $line-height-60 * $font-size-200;
 		}
 	}
 
 	.content--90 & {
 
 		@include media(0, $range-hand) {
-			margin-top: $line-height-80 * $font-size-90;
-			margin-bottom: $line-height-80 * $font-size-90;
-			font-size: $font-size-90;
+			margin-top: $line-height-60 * $font-size-90;
+			margin-bottom: $line-height-60 * $font-size-90;
 		}
 		@include media($range-lap, false) {
-			margin-top: $line-height-80 * $font-size-100;
-			margin-bottom: $line-height-80 * $font-size-100;
-			font-size: $font-size-100;
+			margin-top: $line-height-60 * $font-size-100;
+			margin-bottom: $line-height-60 * $font-size-100;
+		}
+	}
+
+	.content--200 & {
+
+		@include media(0, $range-hand) {
+			margin-top: $line-height-60 * $font-size-200;
+			margin-bottom: $line-height-60 * $font-size-200;
+		}
+		@include media($range-lap, false) {
+			margin-top: $line-height-60 * $font-size-300;
+			margin-bottom: $line-height-60 * $font-size-300;
 		}
 	}
 }
