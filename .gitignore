@@ -64,3 +64,4 @@ html/
 # Jekyll generated Github pages #
 #################################
 _gh_pages/
+.jekyll-metadata
