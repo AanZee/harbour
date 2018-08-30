@@ -1,6 +1,7 @@
 # 1.14.0
 
 ## Features
+* Add Travis status badge to readme
 * Add text input control
 
 # 1.13.0
