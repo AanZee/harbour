@@ -1,6 +1,8 @@
 # Drop-down menu
 
- - [See SCSS component](../../scss/controls/drop-down-menu.scss)
+- [See SCSS component](../../scss/controls/drop-down-menu.scss)
+
+A drop-down menu is a menu which displays a list of options which are mutually exclusive and not consecutive. A drop-down menu contains a simple arrow pointing downwards on the right, in contrast to a pop-up menu which has two arrows on the right: one pointing upwards and one pointing downwards. Drop-down menu's should be used sparingly, as they hide important information, i.e. the options, from users. In forms use text-input fields or other controls better suited for the job.
 
 ## Available states
 
