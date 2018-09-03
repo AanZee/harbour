@@ -2,10 +2,6 @@
 	position: relative;
 	display: block;
 	width: 100%;
-	height: $control-size-100;
-	color: $input-color;
-	font-size: $input-font-size;
-	line-height: $input-line-height;
 
 	&.is-valid {
 	}
@@ -15,13 +11,12 @@
 
 	&::after {
 		@include align(absolute, right, center);
-		right: $spacing * 2;
 		display: block;
-		width: $spacing * 2.5;
-		height: $spacing * 2.5;
-		background-image: url(get-svg-uri($icon-chevron-down-bold, $color-text-300));
-		background-position: center center;
-		background-size: $spacing * 1.5;
+		width: $control-size-100;
+		height: $icon-size-100;
+		background-image: url(get-svg-uri($icon-chevron-down-bold, $color-ui));
+		background-position: center;
+		background-size: contain;
 		background-repeat: no-repeat;
 		content: '';
 		pointer-events: none;
@@ -29,7 +24,11 @@
 }
 
 .drop-down-menu--90 {
-	height: $control-size-90;
+
+	&::after {
+		width: $control-size-90;
+		height: $icon-size-90;
+	}
 }
 
 .drop-down-menu--max-width-90 {
@@ -53,7 +52,7 @@
 	position: relative;
 	display: block;
 	padding-top: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
-	padding-right: $spacing * 6.25;
+	padding-right: $control-size-100;
 	padding-bottom: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
 	padding-left: $spacing * 1.5;
 	width: 100%;
@@ -94,9 +93,9 @@
 
 	.drop-down-menu.is-valid &,
 	.drop-down-menu.is-invalid & {
-		padding-right: $control-size-100 * 2;
-		background-position: right ($spacing * 2.5) + $spacing + (($control-size-100 - $icon-size-100) / 2) center;
-		background-size: $icon-size-100 $icon-size-100;
+		padding-right: ($control-size-100 * 2) - (($control-size-100 - $icon-size-100) / 2);
+		background-position: right $control-size-100 center;
+		background-size: $icon-size-100;
 		background-repeat: no-repeat;
 	}
 
@@ -127,10 +126,19 @@
 	}
 
 	.drop-down-menu--90 & {
-		padding-right: $spacing * 1.5;
+		padding-top: (($control-size-90 - ($input-line-height * $input-font-size)) / 2);
+		padding-right: $control-size-90;
+		padding-bottom: (($control-size-90 - ($input-line-height * $input-font-size)) / 2);
 		padding-left: $spacing * 1.5;
 		height: $control-size-90;
 		font-size: $font-size-100;
+	}
+
+	.drop-down-menu--90.is-valid &,
+	.drop-down-menu--90.is-invalid & {
+		padding-right: ($control-size-90 * 2) - (($control-size-90 - $icon-size-90) / 2);
+		background-position: right $control-size-90 center;
+		background-size: $icon-size-90;
 	}
 
 	&:-webkit-autofill {
