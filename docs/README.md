@@ -9,6 +9,7 @@
 - [Drop-down meu](controls/drop-down-menu.md)
 - [Input stepper](controls/input-stepper.md)
 - [Password input](controls/password-input.md)
+- [Text input](controls/text-input.md)
 
 ## Layouts
 - [Layout](layouts/layout.md)
