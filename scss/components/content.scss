@@ -301,7 +301,7 @@ em {
 code {
 
 	.content & {
-		font-family: monospace;
+		font-family: $font-family-monospace;
 
 		@include media(0, $range-hand) {
 			font-size: $font-size-90;
