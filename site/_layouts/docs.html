@@ -3,49 +3,47 @@
 	<head>
 		{% include head.html %}
 	</head>
-	<body>
-		<section class="page">
-			<header class="page__header">
-				{% include page-header.html %}
-			</header>
-			<main class="page__main">
-				<div class="layout">
-						<div class="layout__section layout__section--bordered-bottom">
-							<div class="layout__inner layout__inner--padded-90">
-								<div class="layout__columns">
-									<div class="layout__column layout__column--two-thirds">
-										<div class="heading-group">
-											<div class="heading-group__headline">
-												{{ page.title }}
-											</div>
-										</div>
-									</div>
-									<div class="layout__column layout__column--one-third">
-										<div class="layout__section layout__section--right-aligning layout__section--vertical-centering">
-											<a class="button button--90"
-												href="/docs"
-											>
-												Back to documentation
-											</a>
+	<body class="page">
+		<header class="page__header">
+			{% include page-header.html %}
+		</header>
+		<main class="page__main">
+			<div class="layout">
+					<div class="layout__section layout__section--bordered-bottom">
+						<div class="layout__inner layout__inner--padded-90">
+							<div class="layout__columns">
+								<div class="layout__column layout__column--two-thirds">
+									<div class="heading-group">
+										<div class="heading-group__headline">
+											{{ page.title }}
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-					<div class="layout__section layout__section--spaced-0">
-						<div class="layout__inner">
-							<div class="layout__section layout__section--spacing-100">
-								<div class="content">
-									{{ content }}
+								<div class="layout__column layout__column--one-third">
+									<div class="layout__section layout__section--right-aligning layout__section--vertical-centering">
+										<a class="button button--90"
+											href="/docs"
+										>
+											Back to documentation
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+				<div class="layout__section layout__section--spaced-0">
+					<div class="layout__inner">
+						<div class="layout__section layout__section--spacing-100">
+							<div class="content">
+								{{ content }}
+							</div>
+						</div>
+					</div>
 				</div>
-			</main>
-			<footer class="page__footer">
-				{% include page-footer.html %}
-			</footer>
-		</section>
+			</div>
+		</main>
+		<footer class="page__footer">
+			{% include page-footer.html %}
+		</footer>
 	</body>
 </html>

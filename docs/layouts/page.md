@@ -22,7 +22,7 @@ page
 Basic example
 
 ```html
-<section class="page">
+<body class="page">
 	<header class="page__header">
 		...
 	</header>
@@ -32,5 +32,5 @@ Basic example
 	<footer class="page__footer">
 		...
 	</footer>
-</section>
+</body>
 ```

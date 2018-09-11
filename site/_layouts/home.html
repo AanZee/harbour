@@ -3,25 +3,23 @@
 	<head>
 		{% include head.html %}
 	</head>
-	<body>
-		<section class="page">
-			<header class="page__header">
-				{% include page-header.html %}
-			</header>
-			<main class="page__main">
-				<div class="layout">
-					<div class="layout__section">
-						<div class="layout__inner">
-							<div class="content">
-								{{ content }}
-							</div>
+	<body class="page">
+		<header class="page__header">
+			{% include page-header.html %}
+		</header>
+		<main class="page__main">
+			<div class="layout">
+				<div class="layout__section">
+					<div class="layout__inner">
+						<div class="content">
+							{{ content }}
 						</div>
 					</div>
 				</div>
-			</main>
-			<footer class="page__footer">
-				{% include page-footer.html %}
-			</footer>
-		</section>
+			</div>
+		</main>
+		<footer class="page__footer">
+			{% include page-footer.html %}
+		</footer>
 	</body>
 </html>

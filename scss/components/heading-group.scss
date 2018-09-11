@@ -1,13 +1,4 @@
-.heading-group {
-
-	& > *:first-child {
-		margin-top: 0;
-	}
-
-	& > *:last-child {
-		margin-bottom: 0;
-	}
-}
+.heading-group {}
 
 .heading-group--light {
 	@include font-smoothing;
