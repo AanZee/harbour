@@ -9,13 +9,13 @@
 	}
 }
 
-.headings--diap {
+.headings--light {
 	@include font-smoothing;
 }
 
 .headings__running-head {
 	color: $color-heading;
-	font-weight: 600;
+	font-weight: bold;
 
 	@include media(0, $range-hand) {
 		font-size: $font-size-90;
@@ -24,7 +24,7 @@
 		font-size: $font-size-100;
 	}
 
-	.headings--diap & {
+	.headings--light & {
 		color: $color-text-light;
 	}
 }
@@ -34,7 +34,7 @@
 .headings__headline {
 	color: $color-heading-200;
 	font-family: $font-family-display;
-	font-weight: 700;
+	font-weight: bold;
 	line-height: $line-height-40;
 
 	@include media(0, $range-hand) {
@@ -47,7 +47,7 @@
 		font-size: $font-size-600;
 	}
 
-	.headings--diap & {
+	.headings--light & {
 		color: $color-text-light;
 	}
 }
@@ -67,7 +67,7 @@
 		font-size: $font-size-400;
 	}
 
-	.headings--diap & {
+	.headings--light & {
 		color: $color-text-light;
 	}
 }
@@ -87,7 +87,7 @@
 		font-size: $font-size-300;
 	}
 
-	.headings--diap & {
+	.headings--light & {
 		color: $color-text-light;
 	}
 }
@@ -111,7 +111,7 @@
 		font-size: $font-size-100;
 	}
 
-	.headings--diap & {
+	.headings--light & {
 		color: $color-text-light;
 	}
 }
@@ -129,12 +129,12 @@
 		font-size: $font-size-200;
 	}
 
-	.headings--diap & {
+	.headings--light & {
 		color: $color-text-light;
 	}
 }
 
 .headings__emphasis {
 	color: $color-secondary;
-	font-weight: 600;
+	font-weight: bold;
 }
