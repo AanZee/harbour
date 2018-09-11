@@ -5,32 +5,33 @@
 
 <div class="layout__section">
 	{% if include.content %}
-	<div class="layout__section layout__section--fitted layout__section--spaced-80 layout__section--bordered layout__section--rounded">
-		<div class="layout__section">
-			<div class="layout__inner layout__inner--padded-90">
-				<div>
-					{{- include.content -}}
+		<div class="layout__section layout__section--fitted layout__section--spaced-80 layout__section--bordered layout__section--rounded">
+			{%- if include.hide_preview == null -%}
+				<div class="layout__section">
+					<div class="layout__inner layout__inner--padded-90">
+						<div>
+							{{- include.content -}}
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-
-		<div class="layout__section layout__section--spaced-0 layout__section--bordered-top layout__section--rounded-bottom">
-			{%- if include.hide_markup == null -%}
-				{%- highlight html -%}
-					{{- include.content | replace: 'data-src="holder.js', 'src="...' -}}
-				{%- endhighlight -%}
 			{%- endif -%}
-		</div>
-	</div>
-	{% endif %}
 
-	{% if include.scss-block %}
-		<div class="layout__section layout__section--rounded layout__section--spaced-80">
-		{%- if include.hide_markup == null -%}
-			{%- highlight html -%}
-				{{ include.scss-block }}
-			{%- endhighlight -%}
-		{%- endif -%}
+			{%- if include.hide_markup == null -%}
+				<div
+					class="
+						layout__section
+						layout__section--spaced-0
+						layout__section--rounded-bottom
+						{%- if include.hide_preview == null -%}
+							layout__section--bordered-top
+						{%- endif -%}
+					"
+				>
+					{%- highlight html -%}
+						{{- include.content | replace: 'data-src="holder.js', 'src="...' -}}
+					{%- endhighlight -%}
+				</div>
+			{%- endif -%}
 		</div>
 	{% endif %}
 </div>
