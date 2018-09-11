@@ -5,6 +5,8 @@ title: Documentation
 
 ## Components
 * [Content](/docs/components/content.html)
+* [Dialog](/docs/components/dialog.html)
+* [Popover](/docs/components/popover.html)
 
 ## Controls
 * [Button](/docs/controls/button.html)
