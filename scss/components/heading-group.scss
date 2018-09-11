@@ -54,7 +54,7 @@
 
 .heading-group__title {
 	color: $color-heading-200;
-	font-weight: 400;
+	font-weight: bold;
 	line-height: $line-height-40;
 
 	@include media(0, $range-hand) {
@@ -74,7 +74,7 @@
 
 .heading-group__subtitle {
 	color: $color-heading-200;
-	font-weight: 400;
+	font-weight: bold;
 	line-height: $line-height-40;
 
 	@include media(0, $range-hand) {
