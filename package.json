@@ -27,7 +27,6 @@
 		"express": "4.16.3",
 		"gulp": "3.9.1",
 		"gulp-nodemon": "2.2.1",
-		"gulp-open": "^3.0.1",
 		"gulp-postcss": "7.0.1",
 		"gulp-sass": "4.0.1",
 		"gulp-util": "3.0.8",

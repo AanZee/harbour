@@ -2,7 +2,6 @@ var browserSync = require('browser-sync').create();
 var child = require('child_process');
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var open = require('gulp-open');
 var postcss = require('gulp-postcss');
 var gutil = require('gulp-util');
 var postcssScssParser = require('postcss-scss');
