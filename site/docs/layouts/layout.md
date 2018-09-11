@@ -148,7 +148,7 @@ layout
 
 ### Two columns one-third two-thirds
 {% capture layout-section-one-third-two-thirds %}
-<div class="layout">
+<section class="layout">
 	<div class="layout__section">
 		<div class="layout__columns">
 			<div class="layout__column layout__column--one-third">
@@ -165,9 +165,9 @@ layout
 				<div class="layout__section layout__section--elevated">
 					<div class="layout__inner layout__inner--padded-70">
 						<div class="layout__section">
-							<div class="content">
+							<section class="content">
 								<h2>Column two thirds</h2>
-							</div>
+							</section>
 						</div>
 						<div class="layout__section layout__section--spaced-70">
 							<div class="layout__columns layout__columns--spacing-90">
@@ -198,7 +198,7 @@ layout
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 {% endcapture %}
 {% include example.html
 content=layout-section-one-third-two-thirds
@@ -206,32 +206,32 @@ content=layout-section-one-third-two-thirds
 
 ### Two columns one-half and one-half
 {% capture layout-two-columns-one-half %}
-<div class="layout">
+<section class="layout">
 	<div class="layout__section">
 		<div class="layout__columns">
 			<div class="layout__column layout__column--one-half">
 				<div class="layout__section layout__section--elevated">
 					<div class="layout__inner layout__inner--padded-90">
-						<div class="content">
+						<section class="content">
 							<h2>Column one half</h2>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit! Dolorum cumque ad quisquam eligendi.</p>
-						</div>
+						</section>
 					</div>
 				</div>
 			</div>
 			<div class="layout__column layout__column--one-half">
 				<div class="layout__section layout__section--elevated">
 					<div class="layout__inner layout__inner--padded-90">
-						<div class="content">
+						<section class="content">
 							<h2>Column one half</h2>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit! Dolorum cumque ad quisquam eligendi.</p>
-						</div>
+						</section>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 {% endcapture %}
 {% include example.html
 content=layout-two-columns-one-half

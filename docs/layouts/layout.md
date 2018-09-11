@@ -150,27 +150,27 @@ layout
 ## Example HTML
 Basic example without inner and columns
 ```html
-<div class="layout">
+<section class="layout">
 	<div class="layout__section">
 		...
 	</div>
-</div>
+</section>
 ```
 
 Basic example with inner
 ```html
-<div class="layout">
+<section class="layout">
 	<div class="layout__section">
 		<div class="layout__inner">
 			...
 		</div>
 	</div>
-</div>
+</section>
 ```
 
 Example with with two column layout
 ```html
-<div class="layout">
+<section class="layout">
 	<div class="layout__section">
 		<div class="layout__inner">
 			<div class="layout__columns">
@@ -183,12 +183,12 @@ Example with with two column layout
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 ```
 
 Example with two sub sections which contain columns
 ```html
-<div class="layout">
+<section class="layout">
 	<div class="layout__section">
 		<div class="layout__inner">
 			...
@@ -221,5 +221,5 @@ Example with two sub sections which contain columns
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 ```
