@@ -1,4 +1,4 @@
-.headings {
+.heading-group {
 
 	& > *:first-child {
 		margin-top: 0;
@@ -9,11 +9,11 @@
 	}
 }
 
-.headings--light {
+.heading-group--light {
 	@include font-smoothing;
 }
 
-.headings__running-head {
+.heading-group__running-head {
 	color: $color-heading;
 	font-weight: bold;
 
@@ -24,14 +24,14 @@
 		font-size: $font-size-100;
 	}
 
-	.headings--light & {
+	.heading-group--light & {
 		color: $color-text-light;
 	}
 }
 
-.headings__overline {}
+.heading-group__overline {}
 
-.headings__headline {
+.heading-group__headline {
 	color: $color-heading-200;
 	font-family: $font-family-display;
 	font-weight: bold;
@@ -47,12 +47,12 @@
 		font-size: $font-size-600;
 	}
 
-	.headings--light & {
+	.heading-group--light & {
 		color: $color-text-light;
 	}
 }
 
-.headings__title {
+.heading-group__title {
 	color: $color-heading-200;
 	font-weight: 400;
 	line-height: $line-height-40;
@@ -67,12 +67,12 @@
 		font-size: $font-size-400;
 	}
 
-	.headings--light & {
+	.heading-group--light & {
 		color: $color-text-light;
 	}
 }
 
-.headings__subtitle {
+.heading-group__subtitle {
 	color: $color-heading-200;
 	font-weight: 400;
 	line-height: $line-height-40;
@@ -87,14 +87,14 @@
 		font-size: $font-size-300;
 	}
 
-	.headings--light & {
+	.heading-group--light & {
 		color: $color-text-light;
 	}
 }
 
-.headings__deck {}
+.heading-group__deck {}
 
-.headings__underline {
+.heading-group__underline {
 	color: $color-heading-30;
 	text-transform: uppercase;
 	line-height: $line-height-40;
@@ -111,12 +111,12 @@
 		font-size: $font-size-100;
 	}
 
-	.headings--light & {
+	.heading-group--light & {
 		color: $color-text-light;
 	}
 }
 
-.headings__supporting-text {
+.heading-group__supporting-text {
 	color: $color-text-90;
 	line-height: $line-height-40;
 
@@ -129,12 +129,12 @@
 		font-size: $font-size-200;
 	}
 
-	.headings--light & {
+	.heading-group--light & {
 		color: $color-text-light;
 	}
 }
 
-.headings__emphasis {
+.heading-group__emphasis {
 	color: $color-secondary;
 	font-weight: bold;
 }
