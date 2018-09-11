@@ -1,9 +1,6 @@
 # Dependencies
-markdown:       kramdown
-highlighter:    rouge
+markdown: kramdown
+highlighter: rouge
 
-source:         "site"
-destination:    ./_gh_pages
-
-title: Your awesome title
-current_version: 1.7.0
+source: "site"
+destination: ./_gh_pages
