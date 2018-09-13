@@ -16,4 +16,4 @@ title: Documentation
 
 ## Layouts
 * [Layout](/docs/layouts/layout.html)
-* [Layout](/docs/layouts/page.html)
+* [Page](/docs/layouts/page.html)

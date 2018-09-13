@@ -17,15 +17,12 @@
 			{%- endif -%}
 
 			{%- if include.hide_markup == null -%}
+				{% assign layoutClasses="layout__section layout__section--spaced-0 layout__section--rounded-bottom" %}
+				{%- if include.hide_preview == null -%}
+					{% assign layoutClasses="layout__section layout__section--spaced-0 layout__section--rounded-bottom layout__section--bordered-top" %}
+				{%- endif -%}
 				<div
-					class="
-						layout__section
-						layout__section--spaced-0
-						layout__section--rounded-bottom
-						{%- if include.hide_preview == null -%}
-							layout__section--bordered-top
-						{%- endif -%}
-					"
+					class="{{ layoutClasses }}"
 				>
 					{%- highlight html -%}
 						{{- include.content | replace: 'data-src="holder.js', 'src="...' -}}
