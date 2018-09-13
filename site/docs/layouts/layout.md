@@ -201,7 +201,7 @@ layout
 </section>
 {% endcapture %}
 {% include example.html
-content=layout-section-one-third-two-thirds
+	content=layout-section-one-third-two-thirds
 %}
 
 ### Two columns one-half and one-half
@@ -234,5 +234,5 @@ content=layout-section-one-third-two-thirds
 </section>
 {% endcapture %}
 {% include example.html
-content=layout-two-columns-one-half
+	content=layout-two-columns-one-half
 %}

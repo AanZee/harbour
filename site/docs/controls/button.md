@@ -10,7 +10,8 @@ The classes belonging to the `button` component can be used to style both the `<
 <a class="button button--primary button--outline" href="/">Link</a>
 {% endcapture %}
 {% include example.html
-content=button %}
+	content=button
+%}
 
 ## Available states
 ### Hover, focus and active

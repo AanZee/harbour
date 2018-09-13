@@ -15,7 +15,7 @@ title: Content
 </section>
 {% endcapture %}
 {% include example.html
-content=content-headings
+	content=content-headings
 %}
 
 ## Paragraph
@@ -25,7 +25,7 @@ content=content-headings
 </section>
 {% endcapture %}
 {% include example.html
-content=content-paragraph
+	content=content-paragraph
 %}
 
 ## Content example
@@ -63,5 +63,5 @@ content=content-paragraph
 </div>
 {% endcapture %}
 {% include example.html
-content=content-simple
+	content=content-simple
 %}
