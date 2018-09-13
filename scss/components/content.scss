@@ -213,8 +213,8 @@ p {
 
 ol,
 ul {
-	.content & {
 
+	.content & {
 		list-style-position: outside;
 
 		@include media(0, $range-hand) {
