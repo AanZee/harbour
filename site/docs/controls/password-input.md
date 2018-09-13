@@ -1,6 +1,7 @@
-# Password Input
-
-- [See SCSS component](../../scss/controls/password-input.scss)
+---
+layout: docs
+title: Password Input
+---
 
 ## Available states
 
@@ -39,7 +40,7 @@ $password-input-webkit-credentials-auto-fill-button-toggle
 
 ## Example HTML
 
-```html
+{% capture password-input %}
 <div class="password-input">
 	<input class="password-input__input"
 		id="new-password"
@@ -65,5 +66,7 @@ $password-input-webkit-credentials-auto-fill-button-toggle
 		</button>
 	</div>
 </div>
-
-```
+{% endcapture %}
+{% include example.html
+	content=password-input
+%}
