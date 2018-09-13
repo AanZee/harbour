@@ -1,6 +1,7 @@
-# Input Stepper
-
-- [See SCSS component](../../scss/controls/input-stepper.scss)
+---
+layout: docs
+title: Input Stepper
+---
 
 ## Available states
 
@@ -43,19 +44,23 @@ $input-stepper-button-background-color
 
 ## Example HTML
 
-```html
+{% capture input-stepper %}
 <div class="input-stepper">
-    <input class="input-stepper__input"
-        id="element-id"
-        type="number"
-        pattern="[0-9]*"
-        autocomplete="off"
-    >
-    <button class="input-stepper__control input-stepper__control--decrease">
-        -
-    </button>
-    <button class="input-stepper__control input-stepper__control--increase">
-        +
-    </button>
+	<input class="input-stepper__input"
+		id="element-id"
+		type="number"
+		pattern="[0-9]*"
+		autocomplete="off"
+		value="7"
+	>
+	<button class="input-stepper__control input-stepper__control--decrease">
+		-
+	</button>
+	<button class="input-stepper__control input-stepper__control--increase">
+		+
+	</button>
 </div>
-```
+{% endcapture %}
+{% include example.html
+	content=input-stepper
+%}

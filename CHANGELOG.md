@@ -1,3 +1,8 @@
+# 1.16.0
+
+## Features
+* Add visual styleguide
+
 # 1.15.0
 
 ## Features
