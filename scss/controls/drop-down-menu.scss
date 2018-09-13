@@ -1,0 +1,160 @@
+.drop-down-menu {
+	position: relative;
+	display: block;
+	width: 100%;
+
+	&.is-valid {
+	}
+
+	&.is-invalid {
+	}
+
+	&::after {
+		@include align(absolute, right, center);
+		display: block;
+		width: $control-size-100;
+		height: $icon-size-100;
+		background-image: url(get-svg-uri($icon-chevron-down-bold, $color-ui));
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		content: '';
+		pointer-events: none;
+	}
+}
+
+.drop-down-menu--90 {
+
+	&::after {
+		width: $control-size-90;
+		height: $icon-size-90;
+	}
+}
+
+.drop-down-menu--max-width-90 {
+	max-width: $spacing * 40;
+}
+
+.drop-down-menu--max-width-80 {
+	max-width: $spacing * 24;
+}
+
+.drop-down-menu--max-width-70 {
+	max-width: $spacing * 20;
+}
+
+.drop-down-menu--max-width-60 {
+	max-width: $spacing * 16;
+}
+
+.drop-down-menu__select {
+	@include ellipsis();
+	position: relative;
+	display: block;
+	padding-top: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
+	padding-right: $control-size-100;
+	padding-bottom: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
+	padding-left: $spacing * 1.5;
+	width: 100%;
+	height: $control-size-100;
+	border: $input-border;
+	border-radius: $input-border-radius;
+	background-color: $input-background-color;
+	color: $input-color;
+	font-size: $input-font-size;
+	line-height: $input-line-height;
+	transition: $input-transition;
+	appearance: none;
+
+	&:disabled {
+		opacity: $opacity-disabled;
+		pointer-events: none;
+	}
+
+	&:focus {
+		border: $input-focus-border;
+		background-color: $input-focus-background-color;
+		box-shadow: $input-focus-box-shadow;
+	}
+
+	&::-ms-expand {
+		display: none; // NOTE: To hide select control in IE10+.
+	}
+
+	&::-ms-value {
+		background: none; // NOTE: To remove blue background on IE10+ when selected.
+		color: $color-text; // NOTE: To make sure the text is readable on a light background from drop-down-menu when selected.
+	}
+
+	&::placeholder {
+		color: $color-text-80;
+		opacity: $opacity-100;
+	}
+
+	.drop-down-menu.is-valid &,
+	.drop-down-menu.is-invalid & {
+		padding-right: ($control-size-100 * 2) - (($control-size-100 - $icon-size-100) / 2);
+		background-position: right $control-size-100 center;
+		background-size: $icon-size-100;
+		background-repeat: no-repeat;
+	}
+
+	.drop-down-menu.is-valid & {
+		border: $input-is-valid-border;
+		background-color: $input-is-valid-background-color;
+		background-image: url(get-svg-uri($input-is-valid-icon, $input-is-valid-icon-color));
+		box-shadow: $input-is-valid-box-shadow;
+
+		&:focus {
+			border: $input-is-valid-focus-border;
+			background-color: $input-is-valid-focus-background-color;
+			box-shadow: $input-is-valid-focus-box-shadow;
+		}
+	}
+
+	.drop-down-menu.is-invalid & {
+		border: $input-is-invalid-border;
+		background-color: $input-is-invalid-background-color;
+		background-image: url(get-svg-uri($input-is-invalid-icon, $input-is-invalid-icon-color));
+		box-shadow: $input-is-invalid-box-shadow;
+
+		&:focus {
+			border: $input-is-invalid-focus-border;
+			background-color: $input-is-invalid-focus-background-color;
+			box-shadow: $input-is-invalid-focus-box-shadow;
+		}
+	}
+
+	.drop-down-menu--90 & {
+		padding-top: (($control-size-90 - ($input-line-height * $input-font-size)) / 2);
+		padding-right: $control-size-90;
+		padding-bottom: (($control-size-90 - ($input-line-height * $input-font-size)) / 2);
+		padding-left: $spacing;
+		height: $control-size-90;
+		font-size: $font-size-100;
+	}
+
+	.drop-down-menu--90.is-valid &,
+	.drop-down-menu--90.is-invalid & {
+		padding-right: ($control-size-90 * 2) - (($control-size-90 - $icon-size-90) / 2);
+		background-position: right $control-size-90 center;
+		background-size: $icon-size-90;
+	}
+
+	&:-webkit-autofill {
+		padding-right: $spacing * 1.5;
+		border: $input-autofill-border;
+		background-color: $input-autofill-background-color;
+		box-shadow: $input-autofill-box-shadow, $input-autofill-box-shadow-background;
+
+		&:focus {
+			border: $input-autofill-focus-border;
+			background-color: $input-autofill-focus-background-color;
+			box-shadow: $input-autofill-focus-box-shadow, $input-autofill-focus-box-shadow-background;
+		}
+	}
+
+	& option {
+		color: $color-text; // FIX: For IE to make sure all the options are readable and the option does not inherit the text color from the select.
+	}
+}

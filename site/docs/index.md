@@ -10,6 +10,7 @@ title: Documentation
 
 ## Controls
 * [Button](/docs/controls/button.html)
+* [Drop-down menu](/docs/controls/drop-down-menu.html)
 * [Input stepper](/docs/controls/input-stepper.html)
 * [Password input](/docs/controls/password-input.html)
 * [Text input](/docs/controls/text-input.html)
