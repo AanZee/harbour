@@ -213,30 +213,35 @@ p {
 
 ol,
 ul {
-
 	.content & {
 
+		list-style-position: outside;
+
 		@include media(0, $range-hand) {
-			margin-top: $line-height-80 * $font-size-100;
-			margin-bottom: $line-height-80 * $font-size-100;
-			padding-left: $line-height-80 * $font-size-100;
-			font-size: $font-size-100;
+			margin-left: $line-height-60 * $font-size-100;
 		}
 		@include media($range-lap, false) {
-			margin-top: $line-height-80 * $font-size-200;
-			margin-bottom: $line-height-80 * $font-size-200;
-			padding-left: $line-height-80 * $font-size-200;
-			font-size: $font-size-200;
+			margin-left: $line-height-60 * $font-size-200;
 		}
 	}
 
 	.content--90 & {
 
 		@include media(0, $range-hand) {
-			font-size: $font-size-90;
+			margin-left: $line-height-60 * $font-size-90;
 		}
 		@include media($range-lap, false) {
-			font-size: $font-size-100;
+			margin-left: $line-height-60 * $font-size-100;
+		}
+	}
+
+	.content--200 & {
+
+		@include media(0, $range-hand) {
+			margin-left: $line-height-60 * $font-size-200;
+		}
+		@include media($range-lap, false) {
+			margin-left: $line-height-60 * $font-size-300;
 		}
 	}
 }
@@ -258,7 +263,39 @@ ul {
 li {
 
 	.content & {
-		line-height: $line-height-100;
+
+		@include media(0, $range-hand) {
+			margin-top: $line-height-60 * $font-size-100;
+			margin-bottom: $line-height-60 * $font-size-100;
+		}
+		@include media($range-lap, false) {
+			margin-top: $line-height-60 * $font-size-200;
+			margin-bottom: $line-height-60 * $font-size-200;
+		}
+	}
+
+	.content--90 & {
+
+		@include media(0, $range-hand) {
+			margin-top: $line-height-60 * $font-size-90;
+			margin-bottom: $line-height-60 * $font-size-90;
+		}
+		@include media($range-lap, false) {
+			margin-top: $line-height-60 * $font-size-100;
+			margin-bottom: $line-height-60 * $font-size-100;
+		}
+	}
+
+	.content--200 & {
+
+		@include media(0, $range-hand) {
+			margin-top: $line-height-60 * $font-size-200;
+			margin-bottom: $line-height-60 * $font-size-200;
+		}
+		@include media($range-lap, false) {
+			margin-top: $line-height-60 * $font-size-300;
+			margin-bottom: $line-height-60 * $font-size-300;
+		}
 	}
 }
 
