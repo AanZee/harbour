@@ -368,3 +368,9 @@ code {
 		}
 	}
 }
+
+.highlight {
+	.content & {
+		border-radius: $border-radius-100;
+	}
+}
