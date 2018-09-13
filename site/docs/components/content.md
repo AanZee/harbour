@@ -65,28 +65,3 @@ content=content-paragraph
 {% include example.html
 content=content-simple
 %}
-
-## Content light and 90 example
-{% capture content-light-90 %}
-<div class="content content--light content--90">
-	<h1>Bear claw cake lollipop caramels</h1>
-	<p>Fruitcake danish liquorice brownie brownie cupcake. Jelly-o brownie I love cake cheesecake. Candy canes gingerbread gingerbread carrot cake jujubes. Caramels muffin gingerbread I love lemon drops apple pie topping. Sweet jujubes bear claw marzipan I love jujubes wafer I love sweet roll. Chupa chups caramels cake soufflé <a href="">pudding jelly beans.</a> Dragée sugar plum brownie cupcake oat cake sesame snaps marshmallow. Pudding chocolate cake cake. Gummies topping gummies. I love tiramisu chocolate. Dessert candy dessert croissant I love. I love wafer cake oat cake powder. I love tiramisu tootsie roll soufflé fruitcake pastry jelly.</p>
-	<h2>I love carrot cake</h2>
-	<p>Cookie danish wafer I love soufflé liquorice sweet roll brownie. Tootsie roll candy canes jelly-o sweet danish I love pastry jujubes. I love jelly caramels I love soufflé soufflé muffin. I love candy canes brownie. Oat cake bonbon jujubes cake bonbon biscuit icing. Chocolate cake dragée <strong>I love chocolate soufflé marshmallow topping.</strong> Tootsie roll cookie cheesecake liquorice cupcake carrot cake. Apple pie tootsie roll cake candy canes chupa chups. Jelly tiramisu topping pudding donut. Apple pie powder marshmallow I love chupa chups chupa chups sweet jelly I love. Caramels I love chupa chups danish pudding sugar plum. Sweet cake brownie donut pastry pastry sweet icing cake. Gummies jelly chocolate bar I love sweet I love.</p>
-	<h3>Ingredients</h3>
-	<ul>
-		<li>2 cups granulated sugar</li>
-		<li>1 1/2 cups vegetable oil</li>
-		<li>4 fresh whole eggs</li>
-		<li>2 cups pastry flour</li>
-		<li>2 teaspoons baking soda</li>
-		<li>1 teaspoon salt</li>
-		<li>2 teaspoons ground cinnamon</li>
-		<li>3 cups raw finely ground carrots</li>
-		<li>4 ounces finely chopped walnuts</li>
-	</ul>
-</div>
-{% endcapture %}
-{% include example.html
-content=content-light-90
-%}
