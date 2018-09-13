@@ -1,0 +1,39 @@
+{::nomarkdown}
+	</section>
+</div>
+{:/nomarkdown}
+
+<div class="layout__section">
+	{% if include.content %}
+		<div class="layout__section layout__section--fitted layout__section--spaced-80 layout__section--bordered layout__section--rounded">
+			{%- if include.hide_preview == null -%}
+				<div class="layout__section">
+					<div class="layout__inner layout__inner--padded-90">
+						<div>
+							{{- include.content -}}
+						</div>
+					</div>
+				</div>
+			{%- endif -%}
+
+			{%- if include.hide_markup == null -%}
+				{% assign layoutClasses="layout__section layout__section--spaced-0 layout__section--rounded-bottom" %}
+				{%- if include.hide_preview == null -%}
+					{% assign layoutClasses="layout__section layout__section--spaced-0 layout__section--rounded-bottom layout__section--bordered-top" %}
+				{%- endif -%}
+				<div
+					class="{{ layoutClasses }}"
+				>
+					{%- highlight html -%}
+						{{- include.content | replace: 'data-src="holder.js', 'src="...' -}}
+					{%- endhighlight -%}
+				</div>
+			{%- endif -%}
+		</div>
+	{% endif %}
+</div>
+
+<div class="layout__section">
+	<section class="content"
+		markdown="1"
+	>

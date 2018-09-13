@@ -1,15 +1,14 @@
-# Page
-
-- [See SCSS component](../../scss/layouts/page.scss)
+---
+layout: docs
+title: Page
+---
 
 ## Available modifiers
-
 ```
 page__main--colored
 ```
 
 ## Structure
-
 ```
 page
 ├── page__header
@@ -19,10 +18,8 @@ page
 
 ## Example HTML
 
-Basic example
-
-```html
-<section class="page">
+{% capture page %}
+<body class="page">
 	<header class="page__header">
 		...
 	</header>
@@ -32,5 +29,9 @@ Basic example
 	<footer class="page__footer">
 		...
 	</footer>
-</section>
-```
+</body>
+{% endcapture %}
+{% include example.html
+	content=page
+	hide_preview=true
+%}

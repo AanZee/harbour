@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		{% include head.html %}
+	</head>
+	<body class="page">
+		<header class="page__header">
+			{% include page-header.html %}
+		</header>
+		<main class="page__main">
+			<section class="layout">
+				<div class="layout__section">
+					<div class="layout__inner">
+						<section class="content">
+							{{ content }}
+						</section>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="page__footer">
+			{% include page-footer.html %}
+		</footer>
+	</body>
+</html>
