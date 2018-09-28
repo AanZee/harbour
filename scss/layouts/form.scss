@@ -1,0 +1,547 @@
+$form-z-index: 0 !default;
+$form-section-colored-padding-lap-and-larger: $spacing * 3 !default;
+$form-colored: $color-ui-20 !default;
+$form-field-header-width: 36% !default;
+$form-field-main-width: 64% !default;
+$form-section-header-min-width: $spacing * 28 !default;
+
+.form {
+}
+
+.form--90 {
+}
+
+.form--top-aligned-labels {
+}
+
+.form--right-aligned-labels {
+}
+
+.form--left-aligned-labels {
+}
+
+.form__header {
+	@include media(0, $range-hand) {
+		padding-bottom: $spacing * 1.5;
+	}
+	@include media($range-lap) {
+		padding-bottom: $spacing * 2;
+	}
+	@include media($range-desk, false) {
+		padding-bottom: $spacing * 3;
+	}
+}
+
+.form__title {
+	margin: 0;
+
+	@include media(0, $range-hand) {
+		font-size: $font-size-300;
+	}
+	@include media($range-lap, false) {
+		font-size: $font-size-400;
+	}
+}
+
+.form__supporting-text {
+	max-width: 40em;
+
+	@include media(0, $range-hand) {
+		margin-top: $spacing / 4;
+		font-size: $font-size-100;
+	}
+	@include media($range-lap, false) {
+		margin-top: $spacing;
+		font-size: $font-size-200;
+	}
+}
+
+.form__section {
+	border-top: 1px dashed $color-ui-100;
+
+	@include media(0, $range-palm) {
+		padding-top: $spacing * 1.5;
+		padding-bottom: $spacing * 1.5;
+	}
+	@include media($range-hand) {
+		padding-top: $spacing * 2;
+		padding-bottom: $spacing * 2;
+	}
+	@include media($range-lap, false) {
+		padding-top: $spacing * 3;
+		padding-bottom: $spacing * 3;
+	}
+
+	&:first-child {
+		padding-top: 0;
+		border-top: none;
+	}
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+
+	&.is-hidden {
+		display: none;
+	}
+
+	.form--90 & {
+		padding-top: $spacing * 1.5;
+		padding-bottom: $spacing * 1.5;
+		border-top: 0;
+
+		&:first-child {
+			padding-top: 0; // FIX for specificity.
+		}
+
+		&:last-child {
+			padding-bottom: 0; // FIX for specificity.
+		}
+	}
+}
+
+.form__section--no-border {
+	border-top: none;
+}
+
+.form__section--colored {
+	margin-bottom: $spacing / 2;
+	border-top: none;
+	border-radius: $border-radius-100;
+	background-color: $form-colored;
+
+	&,
+	&:first-child,
+	&:last-child {
+		@include media(0, $range-palm) {
+			padding: $spacing * 1.5;
+		}
+		@include media($range-hand) {
+			padding: $spacing * 2;
+		}
+		@include media($range-lap, false) {
+			padding: $form-section-colored-padding-lap-and-larger;
+		}
+	}
+
+	& + .form__section {
+		border-top: none;
+	}
+
+	& + .form__section--colored {
+		margin-top: $spacing;
+	}
+}
+
+.form__section-header {
+	@include media(0, $range-palm) {
+		margin-bottom: $spacing * 1.5;
+	}
+	@include media($range-hand) {
+		margin-bottom: $spacing * 2;
+	}
+	@include media($range-lap, false) {
+		margin-bottom: $spacing * 3;
+	}
+}
+
+.form__section-title {
+	color: $color-text;
+	font-weight: bold;
+	line-height: $line-height-40;
+
+	@include media(0, $range-hand) {
+		font-size: $font-size-100;
+	}
+	@include media($range-lap) {
+		font-size: $font-size-200;
+	}
+	@include media($range-desk, false) {
+		font-size: $font-size-300;
+	}
+}
+
+.form__fieldset {
+	position: relative;
+
+	@include media(0, $range-palm) {
+		margin-top: $spacing * 1.5;
+	}
+	@include media($range-hand) {
+		margin-top: $spacing * 2;
+	}
+	@include media($range-lap, false) {
+		margin-top: $spacing * 3;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	.form--90 & {
+		margin-top: $spacing * 1.25;
+
+		&:first-child {
+			margin-top: 0; // FIX for specificity.
+		}
+	}
+}
+
+.form__fieldset-feedback-text {
+	position: relative;
+	top: $spacing;
+	margin-top: $spacing * -1;
+	padding: ($spacing / 2) ($spacing * 2.5);
+	background-color: $color-error;
+	color: $color-text-light;
+	font-size: $font-size-90;
+	line-height: $line-height-20;
+
+	@include media($range-lap, false) {
+		border-bottom-right-radius: $border-radius-100;
+		border-bottom-left-radius: $border-radius-100;
+	}
+}
+
+.form__field {
+	margin-top: $spacing * 1.5;
+	width: 100%;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&.is-hidden {
+		display: none;
+	}
+
+	.form--right-aligned-labels &,
+	.form--left-aligned-labels & {
+		@include media(0, $range-hand) {
+			display: block;
+		}
+		@include media($range-lap, false) {
+			display: flex;
+		}
+	}
+
+	.form--top-aligned-labels & {
+		@include media($range-lap, false) {
+			display: block;
+		}
+	}
+}
+
+.form__field-header {
+	display: block; // NOTE: Set block for when field-header is a label element.
+	margin-bottom: $spacing / 8;
+
+	.form--right-aligned-labels &,
+	.form--left-aligned-labels & {
+		@include media($range-lap, false) {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 0;
+			padding-right: $spacing * 2;
+			min-width: $form-section-header-min-width;
+			width: $form-field-header-width;
+		}
+	}
+
+	.form--right-aligned-labels & {
+		@include media($range-lap, false) {
+			text-align: right;
+		}
+	}
+
+	.form--left-aligned-labels & {
+		@include media($range-lap, false) {
+			text-align: left;
+		}
+	}
+
+	.form--top-aligned-labels & {
+		@include media($range-lap, false) {
+			display: block;
+			margin-bottom: $spacing / 4;
+			padding-right: 0;
+			min-width: 0;
+			width: auto;
+			text-align: left;
+		}
+	}
+
+	.form--right-aligned-labels .form__section--colored &,
+	.form--left-aligned-labels .form__section--colored & {
+		@include media($range-lap, false) {
+			min-width: ($form-section-header-min-width) - ($form-section-colored-padding-lap-and-larger);
+			width: calc($form-field-header-width - #{ ((36 / 100 * ($form-section-colored-padding-lap-and-larger * 2)) - $form-section-colored-padding-lap-and-larger) * -1 });
+		}
+	}
+}
+
+.form__field-label {
+	display: block;
+	font-size: $font-size-100;
+	line-height: $line-height-60;
+
+	.form--right-aligned-labels &,
+	.form--left-aligned-labels & {
+		@include media($range-lap, false) {
+			display: flex; // NOTE: To be able to align content.
+			flex-direction: column;
+			min-height: $control-size-100;
+			font-size: $font-size-200;
+			justify-content: center; // NOTE: To vertical align content with input. Works in combination flex-direction column.
+		}
+	}
+
+	.form--top-aligned-labels & {
+		@include media($range-lap, false) {
+			display: block;
+			min-height: 0;
+			font-size: $font-size-100;
+		}
+	}
+
+	&.is-hidden {
+		display: none;
+	}
+}
+
+.form__field-supporting-text {
+	color: $color-text-60;
+	font-size: $font-size-80;
+	line-height: $line-height-20;
+
+	&::before {
+		content: ' (';
+	}
+
+	&::after {
+		content: ')';
+	}
+
+	.form--right-aligned-labels &,
+	.form--left-aligned-labels & {
+
+		@include media($range-lap, false) {
+
+			&::before {
+				content: none;
+			}
+
+			&::after {
+				content: none;
+			}
+		}
+	}
+
+	.form--top-aligned-labels & {
+
+		@include media($range-lap, false) {
+
+			&::before {
+				content: ' (';
+			}
+
+			&::after {
+				content: ')';
+			}
+		}
+	}
+}
+
+.form__field-main {
+
+	.form--right-aligned-labels &,
+	.form--left-aligned-labels & {
+		@include media($range-lap, false) {
+			width: $form-field-main-width;
+		}
+	}
+
+	.form--top-aligned-labels & {
+		@include media($range-lap, false) {
+			width: auto;
+		}
+	}
+
+	.form--right-aligned-labels .form__section--colored &,
+	.form--left-aligned-labels .form__section--colored & {
+		@include media($range-lap, false) {
+			width: calc($form-field-main-width + #{ ((64 / 100 * ($form-section-colored-padding-lap-and-larger * 2)) - $form-section-colored-padding-lap-and-larger) });
+		}
+	}
+}
+
+.form__field-section {
+	position: relative;
+	display: block;
+	margin-top: $spacing * 0.75;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	.form--right-aligned-labels &,
+	.form--left-aligned-labels & {
+		@include media($range-lap, false) {
+			max-width: 480px;
+		}
+	}
+
+	.form--top-aligned-labels & {
+		@include media($range-lap, false) {
+			max-width: none;
+		}
+	}
+}
+
+.form__input-feedback-text {
+	position: relative;
+	display: block;
+	margin-top: $spacing / 2;
+	margin-right: 0;
+	margin-bottom: $spacing / 4;
+	max-width: 40em;
+	color: $color-error;
+	line-height: $line-height-60;
+
+	@include media(0, $range-hand) {
+		font-size: $font-size-90;
+	}
+	@include media($range-lap, false) {
+		font-size: $font-size-100;
+	}
+
+	&.is-hidden {
+		display: none;
+	}
+}
+
+.form__input-helper-text {
+	display: block;
+	margin-top: $spacing / 2;
+	margin-right: 0;
+	margin-bottom: $spacing / 4;
+	max-width: 40em;
+	color: $color-text-70;
+	line-height: $line-height-60;
+
+	@include media(0, $range-hand) {
+		font-size: $font-size-90;
+	}
+	@include media($range-lap, false) {
+		font-size: $font-size-100;
+	}
+}
+
+.form__footer {
+	border-top: 1px dashed $color-ui-100;
+
+	@include media(0, $range-hand) {
+		padding-top: $spacing * 1.5;
+	}
+	@include media($range-lap, false) {
+		padding-top: $spacing * 2.5;
+	}
+
+	.form--90 & {
+		padding-top: $spacing;
+		border-top: 0;
+	}
+}
+
+.form__footer--sticky {
+	position: sticky;
+	bottom: 0;
+	z-index: $form-z-index + 1;
+	margin-top: 0;
+	border-top: 1px solid $color-ui-100;
+	box-shadow: 0 -10px 20px -25px rgba($color-shadow, 0.25);
+	backdrop-filter: blur(2px);
+
+	@include media(0, $range-hand) {
+		margin-right: $spacing * -1.5;
+		margin-bottom: $spacing * -1.5;
+		margin-left: $spacing * -1.5;
+		padding: $spacing * 1.5;
+	}
+	@include media($range-lap, false) {
+		margin-right: $spacing * -2.5;
+		margin-bottom: $spacing * -2.5;
+		margin-left: $spacing * -2.5;
+		padding: $spacing * 2.5;
+	}
+
+	&.form--90 {
+		margin-right: $spacing * -1;
+		margin-bottom: $spacing * -1;
+		margin-left: $spacing * -1;
+		padding: $spacing;
+		border-top: 0;
+	}
+
+	&.form__footer--colored {
+		background-color: rgba($color-ui-20, 0.9);
+	}
+}
+
+.form__actions {
+	margin: $spacing * -1;
+
+	.form--right-aligned-labels &,
+	.form--left-aligned-labels & {
+		@include media($range-lap, false) {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			padding-left: $form-field-header-width;
+		}
+	}
+
+	.form--top-aligned-labels & {
+		@include media($range-lap, false) {
+			display: block;
+			margin: $spacing * -1;
+			padding-left: 0;
+		}
+	}
+}
+
+.form__action {
+	margin-top: $spacing;
+	margin-right: $spacing;
+	margin-bottom: $spacing;
+	margin-left: $spacing;
+
+	.form--right-aligned-labels &,
+	.form--left-aligned-labels & {
+		@include media($range-lap, false) {
+			margin-right: 0;
+			margin-bottom: 0;
+			margin-left: 0;
+			max-width: 480px;
+			width: 100%;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.form--top-aligned-labels & {
+		@include media($range-lap, false) {
+			margin-right: $spacing;
+			margin-bottom: $spacing;
+			margin-left: $spacing;
+			max-width: none;
+			width: auto;
+
+			&:first-child {
+				margin-top: $spacing;
+			}
+		}
+	}
+}

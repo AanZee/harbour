@@ -16,5 +16,6 @@ title: Documentation
 * [Text input](/docs/controls/text-input.html)
 
 ## Layouts
+* [Form](/docs/layouts/form.html)
 * [Layout](/docs/layouts/layout.html)
 * [Page](/docs/layouts/page.html)

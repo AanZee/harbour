@@ -1,6 +1,7 @@
-# Form
-- [See SCSS component](../../scss/components/form.scss)
-- This component might need a JavaScript solution
+---
+layout: docs
+title: Form
+---
 
 ## Available modifiers
 Align labels to the right
@@ -14,10 +15,6 @@ form--horizontal
 Display the actions vertically
 ```
 form__actions--vertical
-```
-Indent the actions on lap and up, so that they align with the inputs
-```
-form__action--indented-lap-and-up
 ```
 
 ## Structure
@@ -48,8 +45,8 @@ form (modifier)
 ### Personal info form
 A form with labels on the left side of the form.
 
-```html
-<form class="form">
+{% capture personal-info-form %}
+<form class="form form--right-aligned-labels">
 	<div class="form__section">
 		<div class="form__fieldset">
 			<div class="form__field">
@@ -61,14 +58,11 @@ A form with labels on the left side of the form.
 					</label>
 				</div>
 				<div class="form__field-main">
-					<div class="input-box">
-						<div class="input-box__input">
-							<input class="character-input"
+					<div class="form__field-section">
+							<input class="text-input"
 								type="text"
 								id="given-name"
 							>
-						</div>
-						<div class="input-box__state-indicator"></div>
 					</div>
 				</div>
 			</div>
@@ -81,14 +75,11 @@ A form with labels on the left side of the form.
 					</label>
 				</div>
 				<div class="form__field-main">
-					<div class="input-box">
-						<div class="input-box__input">
-							<input class="character-input"
+					<div class="form__field-section">
+							<input class="text-input"
 								type="text"
 								id="family-name"
 							>
-						</div>
-						<div class="input-box__state-indicator"></div>
 					</div>
 				</div>
 			</div>
@@ -103,14 +94,11 @@ A form with labels on the left side of the form.
 					</label>
 				</div>
 				<div class="form__field-main">
-					<div class="input-box">
-						<div class="input-box__input">
-							<input class="character-input"
+					<div class="form__field-section">
+							<input class="text-input"
 								type="text"
 								id="street"
 							>
-						</div>
-						<div class="input-box__state-indicator"></div>
 					</div>
 					<!-- Display on error
 					<label class="form__input-feedback-text"
@@ -131,14 +119,11 @@ A form with labels on the left side of the form.
 					</label>
 				</div>
 				<div class="form__field-main">
-					<div class="input-box">
-						<div class="input-box__input">
-							<input class="character-input"
-								type="number"
-								id="house-number"
-							>
-						</div>
-						<div class="input-box__state-indicator"></div>
+					<div class="form__field-section">
+						<input class="text-input"
+							type="number"
+							id="house-number"
+						>
 					</div>
 					<label class="form__input-helper-text"
 						for="house-number"
@@ -151,16 +136,19 @@ A form with labels on the left side of the form.
 	</div>
 	<div class="form__actions">
 		<div class="form__action">
-			<button class="button">Submit</button>
+			<button class="button button--full button--primary">Submit</button>
 		</div>
 	</div>
 </form>
-```
+{% endcapture %}
+{% include example.html
+	content=personal-info-form
+%}
 
 ### Login form
 A simple form with labels above the input fields.
 
-```html
+{% capture login-form %}
 <form class="form form--labels-top">
 	<div class="form__section">
 		<div class="form__fieldset">
@@ -173,14 +161,11 @@ A simple form with labels above the input fields.
 					</label>
 				</div>
 				<div class="form__field-main">
-					<div class="input-box">
-						<div class="input-box__input">
-							<input class="character-input"
-								type="email"
-								id="email"
-							>
-						</div>
-						<div class="input-box__state-indicator"></div>
+					<div class="form__field-section">
+						<input class="text-input"
+							type="email"
+							id="email"
+						>
 					</div>
 				</div>
 			</div>
@@ -193,14 +178,11 @@ A simple form with labels above the input fields.
 					</label>
 				</div>
 				<div class="form__field-main">
-					<div class="input-box">
-						<div class="input-box__input">
-							<input class="character-input"
-								type="password"
-								id="password"
-							>
-						</div>
-						<div class="input-box__state-indicator"></div>
+					<div class="form__field-section">
+						<input class="text-input"
+							type="password"
+							id="password"
+						>
 					</div>
 				</div>
 			</div>
@@ -208,8 +190,11 @@ A simple form with labels above the input fields.
 	</div>
 	<div class="form__actions">
 		<div class="form__action">
-			<button class="button button--cta">Submit</button>
+			<button class="button button--primary">Submit</button>
 		</div>
 	</div>
 </form>
-```
+{% endcapture %}
+{% include example.html
+	content=login-form
+%}
