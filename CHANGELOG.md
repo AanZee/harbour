@@ -1,3 +1,97 @@
+# 1.16.0
+
+## Features
+* Add visual styleguide
+
+# 1.15.0
+
+## Features
+* Add drop-down menu control
+
+# 1.14.0
+
+## Features
+* Add Travis status badge to readme
+* Add text input control
+
+# 1.13.0
+
+## Features
+* Add password input control
+* Add input settings
+* Add check and exclamation icon
+
+## Improvements
+* Move icons (and fonts) before settings, so icons can be used by (input) settings
+* Replace 'border-input-100' for input-stepper with new 'input-border' variable
+
+# 1.12.0
+
+## Improvements
+* Change color and modifiers names 'call to action' to 'primary'
+* Change color and modifiers names 'primary' to 'secondary'
+* Change color and modifiers names 'secondary' to 'tertiary'
+* Change color and modifiers names 'diap' to 'light'
+* Improve button scale
+* Remove color ui-accent, you can use color secondary or tertiary as replacement
+* Add color background complementary
+* Rename 'spacing' setting file to 'sizes'
+* Rename 'control-height' to 'control-size'
+
+# 1.11.2
+* Add missing updates in version 1.10.0 to changelog
+
+# 1.11.1
+
+## Bugfix
+* Fix wrong scss variables in calc functions
+
+# 1.11.0
+
+## Features
+* Add page layout
+* Update input stepper docs
+
+# 1.10.0
+
+## Features
+* Add input stepper component
+* Update get-svg-uri function to check for #000000 fill or stroke
+* Remove 'em' from line-height variables
+* Add golden-ratio and control-height variables
+
+# 1.9.0
+
+## Features
+* Update range specific modifiers to match the Aan Zee conventions
+* Replace $color-background with $color-background-light
+* Clarify that layout__inner is optional in the layout documentation
+
+# 1.8.2
+
+## Bugfix
+* Add missing spacing variable to local layout variable
+
+# 1.8.1
+
+## Bugfix
+* Improve layout spacing scale
+
+# 1.8.0
+
+## Features
+* Add gulp tasks to watch and build SCSS, using stylelint as linter
+* Update SCSS in various components to comply with linting rules
+
+## Breaking changes
+* Move `.stylelintrc.json` to the root of the project. Projects including this setting file should update the path in their `stylelint.js` file
+
+# 1.7.0
+
+## Features
+* Update layout columns with min-width, to remain size when view is switched (for example with a segmented control)
+* Improve button. Add font smoothing and font weight. Improve horizontal padding on button--80
+
 # 1.6.1
 
 ## Bugfix
