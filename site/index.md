@@ -14,7 +14,7 @@ npm install aanzee-harbour
 ```
 
 ### Documentation
-A detailed explanation of all the components and how to use them can be found in the [documentation section](/docs).
+A detailed explanation of all the components and how to use them can be found in the [documentation section]({{ '/docs' | relative_url }}).
 
 ## Contributing
 I you want to contribute to this project you can create a pull request on [Github](https://github.com/AanZee/harbour).
@@ -26,10 +26,10 @@ First install `bundler` and `jekyll` gems.
 gem install bundler jekyll
 ```
 
-Checkout the project and open the root folder in your terminal. Run an `npm install` to install all dependencies.
+Checkout the project and open the root folder in your terminal. Run `npm install` to install all dependencies.
 
 ```bash
-npm run install
+npm install
 npm run start
 ```
 
