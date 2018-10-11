@@ -9,6 +9,7 @@ const postcssScssParser = require('postcss-scss');
 const sass = require('gulp-sass');
 const stylelint = require('stylelint');
 const tildeImporter = require('node-sass-tilde-importer');
+const packageJson = require('./package.json');
 
 const harbourStylelintJson = '.stylelintrc.json';
 
@@ -102,8 +103,10 @@ function compileScss(isBuild) {
  */
 function buildJekyll(isWatch, options) {
 	const arguments = ['build'].concat(options);
+	const env = Object.create( process.env );
+	env.packageVersion = packageJson.version;
 
-	const jekyll = child.spawn('jekyll', arguments);
+	const jekyll = child.spawn('jekyll', arguments, { env: env });
 
 	const jekyllLogger = (buffer) => {
 		buffer.toString()
