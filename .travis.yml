@@ -8,9 +8,9 @@ node_js:
 before_install:
   - rvm install 2.5.1
 
-install: gem install jekyll
-
-before_script:
+install:
+  - bundle install
+  - npm install
   - npm install -g gulp-cli
 
 script: npm run build
