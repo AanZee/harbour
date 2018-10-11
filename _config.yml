@@ -5,4 +5,4 @@ highlighter: rouge
 # Settings
 source: "site"
 destination: ./_gh_pages
-# baseurl: "/harbour"
+baseurl: "/harbour"
