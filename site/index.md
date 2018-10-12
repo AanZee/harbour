@@ -34,3 +34,25 @@ npm run start
 ```
 
 A browser window should open and point to `http://localhost:4000`. SCSS linting and live reloading is implemented into the task.
+
+### Github Pages documentation
+The static (Jekyll) documentation is hosted on Github Pages. The documentation is generated from the `master` branch and copied to a `gh-pages` branch.
+
+#### Building the documentation
+Checkout the `master` branch and generate the documentation:
+```bash
+git checkout master
+npm install
+npm run build
+```
+
+#### Committing generated documentation
+Switch to the `gh-pages` (orphan) branch. The generated static website is placed in the `_gh_pages` folder, which is in the `.gitignore` on both branches, so the files are still there when switching branches.
+```bash
+git checkout gh-pages
+```
+
+Remove `index.html`, and the folders `css` & `docs` from the root of the project. Copy the folders from the `_gh_pages` folder to the root of your project. Commit all changes to the `gh-pages` 
+
+#### Deploying to Github Pages
+Push the `gh-pages` branch to Github. The new version should now be present on [Github Pages](https://aanzee.github.io/harbour)
