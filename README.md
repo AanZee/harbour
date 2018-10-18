@@ -2,10 +2,10 @@
 [![Build Status](https://travis-ci.com/AanZee/harbour.svg?branch=master)](https://travis-ci.com/AanZee/harbour)
 
 ## About
-Global component library
+[See Github Pages](https://aanzee.github.io/harbour)
 
 ## Docs
-[See documentation](docs/README.md)
+[See documentation](https://aanzee.github.io/harbour/docs)
 
 ## License
 [MIT](LICENSE.md)

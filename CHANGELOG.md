@@ -1,3 +1,8 @@
+# 1.17.0
+
+## Features
+* Add Github Pages to the project, so that the visual styleguide can be deployed
+
 # 1.16.0
 
 ## Features
