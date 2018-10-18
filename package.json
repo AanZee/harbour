@@ -10,7 +10,7 @@
 	},
 	"scripts": {
 		"start": "gulp start",
-		"build": "gulp build"
+		"build": "JEKYLL_BASE_URL=harbour gulp build"
 	},
 	"dependencies": {
 		"bourbon": "5.0.0",
