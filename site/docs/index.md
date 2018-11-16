@@ -7,6 +7,7 @@ title: Documentation
 * [Content]({{ '/docs/components/content.html' | relative_url }})
 * [Dialog]({{ '/docs/components/dialog.html' | relative_url }})
 * [Popover]({{ '/docs/components/popover.html' | relative_url }})
+* [Card]({{ '/docs/components/card.html' | relative_url }})
 
 ## Controls
 * [Button]({{ '/docs/controls/button.html' | relative_url }})

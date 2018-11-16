@@ -1,0 +1,84 @@
+.tag {
+	display: inline-block;
+	padding: ($spacing * 0.5) ($spacing);
+	border-radius: ($font-size-100 * $line-height-20 / 2) + ($spacing * 0.5); // NOTE: Half of height.
+	background-color: $color-ui;
+	color: $color-text-light;
+	vertical-align: top;
+	font-size: $font-size-100;
+	font-weight: $font-weight-200;
+	line-height: $line-height-20;
+}
+
+.tag--90 {
+	padding: ($spacing * 0.25) ($spacing * 0.75);
+	border-radius: ($font-size-80 * $line-height-20 / 2) + ($spacing * 0.25); // NOTE: Half of height.
+	font-size: $font-size-80;
+}
+
+.tag--80 {
+	padding: ($spacing * 0.25) ($spacing * 0.75);
+	border-radius: ($font-size-70 * $line-height-20 / 2) + ($spacing * 0.25); // NOTE: Half of height.
+	font-size: $font-size-70;
+}
+
+.tag--light {
+	background-color: $color-ui-100;
+	color: $color-text;
+}
+
+.tag--primary {
+	background-color: $color-primary;
+
+	&.tag--light {
+		background-color: $color-primary-10;
+		color: $color-primary-400;
+	}
+}
+
+.tag--secondary {
+	background-color: $color-secondary;
+
+	&.tag--light {
+		background-color: $color-secondary-10;
+		color: $color-secondary-400;
+	}
+}
+
+.tag--tertiary {
+	background-color: $color-tertiary;
+
+	&.tag--light {
+		background-color: $color-tertiary-10;
+		color: $color-tertiary-400;
+	}
+}
+
+.tag--success {
+	background-color: $color-success;
+
+	&.tag--light {
+		background-color: $color-success-10;
+		color: $color-success-400;
+	}
+}
+
+.tag--warning {
+	border-color: $color-warning;
+	background-color: $color-warning;
+
+	&.tag--light {
+		background-color: $color-warning-10;
+		color: $color-warning-300;
+	}
+}
+
+.tag--error {
+	border-color: $color-error;
+	background-color: $color-error;
+
+	&.tag--light {
+		background-color: $color-error-10;
+		color: $color-error-300;
+	}
+}

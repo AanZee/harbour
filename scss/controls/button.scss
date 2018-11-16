@@ -14,7 +14,8 @@ $button-disabled-opacity: 0.35 !default;
 
 .button {
 	@include font-smoothing;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
 	padding-top: floor(($control-size-100 - ($button-font-size * $button-line-height)) / 2); // NOTE: Floor function is added to the padding to ensure the min-height of the button does not exceed the control-size
 	padding-right: $spacing * 3;
 	padding-bottom: floor(($control-size-100 - ($button-font-size *  $button-line-height)) / 2); // NOTE: Floor function is added to the padding to ensure the min-height of the button does not exceed the control-size
@@ -27,7 +28,8 @@ $button-disabled-opacity: 0.35 !default;
 	font-size: $button-font-size;
 	font-weight: bold;
 	line-height: $button-line-height;
-	cursor: pointer;
+	cursor: default;
+	user-select: none;
 
 	@if ($button-outset) {
 		box-shadow: $button-outset-box-shadow;
