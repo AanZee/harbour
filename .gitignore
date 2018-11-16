@@ -69,3 +69,4 @@ _gh_pages/
 # Ruby Configuration #
 ######################
 .ruby-version
+Gemfile.lock
