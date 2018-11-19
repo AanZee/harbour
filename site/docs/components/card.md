@@ -35,7 +35,10 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 				href=""
 			>
 				<div class="card__media">
-					<img src="https://via.placeholder.com/320x180">
+					<img class="image"
+						sizes="480px"
+						srcset="/media/placeholder-image-240w.jpg 240w, /media/placeholder-image-320w.jpg 320w, /media/placeholder-image-480w.jpg 480w, /media/placeholder-image-640w.jpg 640w, /media/placeholder-image-720w.jpg 720w, /media/placeholder-image-800w.jpg 800w, /media/placeholder-image-1024w.jpg 1024w, /media/placeholder-image-1280w.jpg 1280w, /media/placeholder-image-1600w.jpg 1600w, /media/placeholder-image-1920w.jpg 1920w, /media/placeholder-image-2048w.jpg 2048w"
+					>
 				</div>
 				<header class="card__header">
 					<div class="card__icon">
@@ -66,7 +69,10 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 				href=""
 			>
 				<div class="card__media">
-					<img src="https://via.placeholder.com/320x180">
+					<img class="image"
+						sizes="480px"
+						srcset="/media/placeholder-image-240w.jpg 240w, /media/placeholder-image-320w.jpg 320w, /media/placeholder-image-480w.jpg 480w, /media/placeholder-image-640w.jpg 640w, /media/placeholder-image-720w.jpg 720w, /media/placeholder-image-800w.jpg 800w, /media/placeholder-image-1024w.jpg 1024w, /media/placeholder-image-1280w.jpg 1280w, /media/placeholder-image-1600w.jpg 1600w, /media/placeholder-image-1920w.jpg 1920w, /media/placeholder-image-2048w.jpg 2048w"
+					>
 				</div>
 				<header class="card__header">
 					<div class="card__icon">
@@ -115,7 +121,7 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 		<div class="card__details">
 			<section class="content content--90">
 				<p>
-					Hello world
+					Peek a boo
 				</p>
 			</section>
 		</div>
@@ -133,7 +139,10 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 				href=""
 			>
 				<div class="card__media">
-					<img src="https://via.placeholder.com/320x180">
+					<img class="image"
+						sizes="480px"
+						srcset="/media/placeholder-image-240w.jpg 240w, /media/placeholder-image-320w.jpg 320w, /media/placeholder-image-480w.jpg 480w, /media/placeholder-image-640w.jpg 640w, /media/placeholder-image-720w.jpg 720w, /media/placeholder-image-800w.jpg 800w, /media/placeholder-image-1024w.jpg 1024w, /media/placeholder-image-1280w.jpg 1280w, /media/placeholder-image-1600w.jpg 1600w, /media/placeholder-image-1920w.jpg 1920w, /media/placeholder-image-2048w.jpg 2048w"
+					>
 				</div>
 				<header class="card__header">
 					<div class="card__icon">
@@ -168,29 +177,27 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 {% capture card %}
 	<section class="card card--elevated">
 		<div class="card__actions">
-			<a class="card__primary-action"
-				href=""
-			>
+			<div class="card__primary-action">
 				<div class="card__media">
-					<img src="https://via.placeholder.com/320x180">
+					<img class="image"
+						sizes="480px"
+						srcset="/media/placeholder-image-240w.jpg 240w, /media/placeholder-image-320w.jpg 320w, /media/placeholder-image-480w.jpg 480w, /media/placeholder-image-640w.jpg 640w, /media/placeholder-image-720w.jpg 720w, /media/placeholder-image-800w.jpg 800w, /media/placeholder-image-1024w.jpg 1024w, /media/placeholder-image-1280w.jpg 1280w, /media/placeholder-image-1600w.jpg 1600w, /media/placeholder-image-1920w.jpg 1920w, /media/placeholder-image-2048w.jpg 2048w"
+					>
 				</div>
 				<header class="card__header">
-					<div class="card__icon">
-						<img src="https://via.placeholder.com/32x32">
-					</div>
 					<div class="card__heading-group">
 						<h1 class="card__title">
 							Card title
 						</h1>
-						<h2 class="card__subtitle">
-							Card subtitle
-						</h2>
+						<p class="card__excerpt">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et luctus odio. Vestibulum non lobortis lorem. Aliquam erat volutpat. Aenean vel augue interdum, varius lectus a, tristique lacus. Donec sed augue a augue feugiat cursus. Maecenas tincidunt euismod risus in tincidunt...
+						</p>
 					</div>
 				</header>
-			</a>
+			</div>
 			<div class="card__supplemental-actions">
 				<div class="card__supplemental-action">
-					<button class="button button--80">
+					<button class="button button--80 button--primary">
 						Action 2
 					</button>
 				</div>

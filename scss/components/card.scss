@@ -238,6 +238,7 @@ label.card__primary-action {
 	border-bottom-left-radius: 0;
 	user-select: none;
 	align-self: flex-start;
+	background-color: $card-is-skeleton-fill;
 
 	&::before {
 		z-index: $card-z-index - 1;
@@ -305,7 +306,6 @@ label.card__primary-action {
 
 	.card.is-skeleton &,
 	.card.is-loading & {
-		background-color: $card-is-skeleton-fill;
 
 		& > img {
 			visibility: hidden;
