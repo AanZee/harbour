@@ -173,9 +173,9 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 	content=card
 %}
 
-### Card with Supplemental Actions
+### Card with Supplemental Actions and Square Image
 {% capture card %}
-	<section class="card card--elevated">
+	<section class="card card--elevated card--media-square">
 		<div class="card__actions">
 			<div class="card__primary-action">
 				<div class="card__media">
@@ -198,12 +198,12 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 			<div class="card__supplemental-actions">
 				<div class="card__supplemental-action">
 					<button class="button button--80 button--primary">
-						Action 2
+						Add to cart
 					</button>
 				</div>
 				<div class="card__supplemental-action">
-					<button class="button button--80">
-						Action 3
+					<button class="button button--80 button--secondary">
+						Show details
 					</button>
 				</div>
 			</div>
@@ -234,12 +234,12 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 			</a>
 			<div class="card__supplemental-actions">
 				<div class="card__supplemental-action">
-					<button class="button button--80">
+					<button class="button button--70">
 						Action 2
 					</button>
 				</div>
 				<div class="card__supplemental-action">
-					<button class="button button--80">
+					<button class="button button--70">
 						Action 3
 					</button>
 				</div>
