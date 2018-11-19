@@ -14,7 +14,7 @@ $card-subtitle-90-line-height: $line-height-40 !default;
 $card-excerpt-90-font-size: $font-size-100 !default;
 $card-excerpt-90-line-height: $line-height-60 !default;
 $card-icon-90-size: $card-title-90-font-size * $card-title-90-line-height * 2 !default;
-$card-header-90-height: $card-title-90-font-size * $card-title-90-line-height + $card-heading-group-90-spacing + $card-subtitle-90-font-size * $card-subtitle-90-line-height !default;
+$card-header-90-height: $card-title-90-font-size * $card-title-90-line-height + $card-subtitle-90-font-size * $card-subtitle-90-line-height !default;
 @if $card-icon-90-size > $card-header-90-height {
 	$card-icon-90-size: $card-header-90-height;
 }
@@ -618,6 +618,7 @@ label.card__primary-action {
 		min-height: $card-header-100-height;
 	}
 
+
 	.card--horizontal & {
 		@include media($range-hand) {
 			min-height: $card-header-100-height;
@@ -625,6 +626,14 @@ label.card__primary-action {
 		@include media($range-lap, false) {
 			min-height: $card-header-200-height;
 		}
+	}
+
+	.card--90 & {
+		min-height: $card-header-90-height;
+	}
+
+	.card--200 & {
+		min-height: $card-header-200-height;
 	}
 
 	.card.is-skeleton & {
