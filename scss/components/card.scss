@@ -354,15 +354,11 @@ label.card__primary-action {
 	}
 
 	.card--horizontal & {
-		@include media(0, $range-palm) {
-			align-self: flex-start;
-		}
 		@include media($range-hand) {
 			margin-top: $card-padding-top-bottom-100;
 			margin-right: $card-padding-left-right-100;
 			margin-bottom: $card-padding-top-bottom-100;
 			margin-left: $card-padding-left-right-100;
-			align-self: flex-start;
 		}
 		@include media($range-lap, false) {
 			margin-top: $card-padding-top-bottom-200;
