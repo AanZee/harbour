@@ -37,7 +37,7 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 				<div class="card__media">
 					<img class="image"
 						sizes="480px"
-						srcset="/images/placeholder-240w.jpg 240w, /images/placeholder-320w.jpg 320w, /images/placeholder-480w.jpg 480w, /images/placeholder-640w.jpg 640w, /images/placeholder-720w.jpg 720w, /images/placeholder-800w.jpg 800w, /images/placeholder-1024w.jpg 1024w, /images/placeholder-1280w.jpg 1280w, /images/placeholder-1600w.jpg 1600w, /images/placeholder-1920w.jpg 1920w, /images/placeholder-2048w.jpg 2048w"
+						srcset="/images/placeholder-sixteen-nine-240w.jpg 240w, /images/placeholder-sixteen-nine-320w.jpg 320w, /images/placeholder-sixteen-nine-480w.jpg 480w, /images/placeholder-sixteen-nine-640w.jpg 640w, /images/placeholder-sixteen-nine-720w.jpg 720w, /images/placeholder-sixteen-nine-800w.jpg 800w, /images/placeholder-sixteen-nine-1024w.jpg 1024w, /images/placeholder-sixteen-nine-1280w.jpg 1280w, /images/placeholder-sixteen-nine-1600w.jpg 1600w, /images/placeholder-sixteen-nine-1920w.jpg 1920w, /images/placeholder-sixteen-nine-2048w.jpg 2048w"
 					>
 				</div>
 				<header class="card__header">
@@ -71,7 +71,7 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 				<div class="card__media">
 					<img class="image"
 						sizes="480px"
-						srcset="/images/placeholder-240w.jpg 240w, /images/placeholder-320w.jpg 320w, /images/placeholder-480w.jpg 480w, /images/placeholder-640w.jpg 640w, /images/placeholder-720w.jpg 720w, /images/placeholder-800w.jpg 800w, /images/placeholder-1024w.jpg 1024w, /images/placeholder-1280w.jpg 1280w, /images/placeholder-1600w.jpg 1600w, /images/placeholder-1920w.jpg 1920w, /images/placeholder-2048w.jpg 2048w"
+						srcset="/images/placeholder-sixteen-nine-240w.jpg 240w, /images/placeholder-sixteen-nine-320w.jpg 320w, /images/placeholder-sixteen-nine-480w.jpg 480w, /images/placeholder-sixteen-nine-640w.jpg 640w, /images/placeholder-sixteen-nine-720w.jpg 720w, /images/placeholder-sixteen-nine-800w.jpg 800w, /images/placeholder-sixteen-nine-1024w.jpg 1024w, /images/placeholder-sixteen-nine-1280w.jpg 1280w, /images/placeholder-sixteen-nine-1600w.jpg 1600w, /images/placeholder-sixteen-nine-1920w.jpg 1920w, /images/placeholder-sixteen-nine-2048w.jpg 2048w"
 					>
 				</div>
 				<header class="card__header">
@@ -141,7 +141,7 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 				<div class="card__media">
 					<img class="image"
 						sizes="480px"
-						srcset="/images/placeholder-240w.jpg 240w, /images/placeholder-320w.jpg 320w, /images/placeholder-480w.jpg 480w, /images/placeholder-640w.jpg 640w, /images/placeholder-720w.jpg 720w, /images/placeholder-800w.jpg 800w, /images/placeholder-1024w.jpg 1024w, /images/placeholder-1280w.jpg 1280w, /images/placeholder-1600w.jpg 1600w, /images/placeholder-1920w.jpg 1920w, /images/placeholder-2048w.jpg 2048w"
+						srcset="/images/placeholder-sixteen-nine-240w.jpg 240w, /images/placeholder-sixteen-nine-320w.jpg 320w, /images/placeholder-sixteen-nine-480w.jpg 480w, /images/placeholder-sixteen-nine-640w.jpg 640w, /images/placeholder-sixteen-nine-720w.jpg 720w, /images/placeholder-sixteen-nine-800w.jpg 800w, /images/placeholder-sixteen-nine-1024w.jpg 1024w, /images/placeholder-sixteen-nine-1280w.jpg 1280w, /images/placeholder-sixteen-nine-1600w.jpg 1600w, /images/placeholder-sixteen-nine-1920w.jpg 1920w, /images/placeholder-sixteen-nine-2048w.jpg 2048w"
 					>
 				</div>
 				<header class="card__header">
@@ -181,7 +181,7 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 				<div class="card__media">
 					<img class="image"
 						sizes="480px"
-						srcset="/images/placeholder-240w.jpg 240w, /images/placeholder-320w.jpg 320w, /images/placeholder-480w.jpg 480w, /images/placeholder-640w.jpg 640w, /images/placeholder-720w.jpg 720w, /images/placeholder-800w.jpg 800w, /images/placeholder-1024w.jpg 1024w, /images/placeholder-1280w.jpg 1280w, /images/placeholder-1600w.jpg 1600w, /images/placeholder-1920w.jpg 1920w, /images/placeholder-2048w.jpg 2048w"
+						srcset="/images/placeholder-square-240w.jpg 240w, /images/placeholder-square-320w.jpg 320w, /images/placeholder-square-480w.jpg 480w, /images/placeholder-square-640w.jpg 640w, /images/placeholder-square-720w.jpg 720w, /images/placeholder-square-800w.jpg 800w, /images/placeholder-square-1024w.jpg 1024w, /images/placeholder-square-1280w.jpg 1280w, /images/placeholder-square-1600w.jpg 1600w, /images/placeholder-square-1920w.jpg 1920w, /images/placeholder-square-2048w.jpg 2048w"
 					>
 				</div>
 				<header class="card__header">
