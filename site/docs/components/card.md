@@ -5,7 +5,7 @@ title: Card
 
 ## HTML structure
 ```
-card (card--horizontal card--stretched card--boxed card--elevated card--neutral card--right-aligned-metadata card--expandable card--media-portret card--media-landscape card--media-square card--media-sixteen-nine card--media-widescreen card--icon-avatar card--200 card--flat)
+card (card--horizontal card--stretched card--boxed card--neutral card--right-aligned-metadata card--expandable card--media-portret card--media-landscape card--media-square card--media-sixteen-nine card--media-widescreen card--icon-avatar card--200 card--flat)
 ├── card__expand-status (optional)
 ├── card__actions
 	├── card__primary-action
@@ -29,7 +29,7 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 
 ### Standard card
 {% capture card %}
-	<section class="card card--elevated">
+	<section class="card">
 		<div class="card__actions">
 			<a class="card__primary-action"
 				href=""
@@ -63,7 +63,7 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 
 ### Horizontal card with Media and Icon
 {% capture card-horizontal %}
-	<section class="card card--elevated card--horizontal">
+	<section class="card card--horizontal">
 		<div class="card__actions">
 			<a class="card__primary-action"
 				href=""
@@ -97,7 +97,7 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 
 ### Horizontal Expandable Card
 {% capture card-expandable-horizontal %}
-	<section class="card card--elevated card--horizontal card--expandable">
+	<section class="card card--horizontal card--expandable">
 		<input class="card__expand-status"
 			id="card-horizontal-expandable-expand-status"
 			type="checkbox"
@@ -133,7 +133,7 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 
 ### Card with Excerpt and Metadata
 {% capture card %}
-	<section class="card card--elevated">
+	<section class="card">
 		<div class="card__actions">
 			<a class="card__primary-action"
 				href=""
@@ -175,7 +175,7 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 
 ### Card with Supplemental Actions and Square Image
 {% capture card %}
-	<section class="card card--elevated card--media-square">
+	<section class="card card--media-square">
 		<div class="card__actions">
 			<div class="card__primary-action">
 				<div class="card__media">
@@ -216,7 +216,7 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 
 ### Horizontal Card with Supplemental Actions
 {% capture card %}
-	<section class="card card--elevated card--horizontal card--90">
+	<section class="card card--horizontal card--90">
 		<div class="card__actions">
 			<a class="card__primary-action"
 				href=""
@@ -253,7 +253,7 @@ card (card--horizontal card--stretched card--boxed card--elevated card--neutral 
 
 ### Card with Control Item and Details
 {% capture card-with-control %}
-	<section class="card card--elevated card--90">
+	<section class="card card--90">
 		<div class="card__actions">
 			<div class="card__primary-action"
 				href=""

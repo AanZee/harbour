@@ -62,7 +62,9 @@ $card-horizontal-media-width-200: 50% !default;
 	display: flex;
 	flex-direction: column;
 	max-width: $spacing * 60;
+	border-radius: $card-border-radius;
 	background-color: $color-background;
+	box-shadow: $card-elevated-box-shadow;
 
 	&.is-disabled {
 		// NOTE: For when user should not use the card. Can be used with is-updating state.
@@ -105,11 +107,6 @@ $card-horizontal-media-width-200: 50% !default;
 .card--boxed {
 	border: 2px solid $color-ui-80;
 	border-radius: $card-border-radius;
-}
-
-.card--elevated {
-	border-radius: $card-border-radius;
-	box-shadow: $card-elevated-box-shadow;
 }
 
 .card--neutral {
@@ -314,6 +311,12 @@ label.card__primary-action {
 		}
 	}
 
+	.card--horizontal.card--flat & {
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+	}
+
 	.card.is-skeleton &,
 	.card.is-loading & {
 
@@ -510,10 +513,6 @@ label.card__primary-action {
 		.card--90 & {
 			margin-right: $card-padding-left-right-90;
 		}
-	}
-
-	.card--flat & {
-		margin: 0;
 	}
 }
 
