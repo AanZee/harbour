@@ -545,6 +545,7 @@ label.card__primary-action {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		overflow: visible; // NOTE: Makes sure pixels at the border of a svg are visible when resized;
 	}
 
 	.card--icon-avatar & {
