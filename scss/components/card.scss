@@ -279,27 +279,27 @@ label.card__primary-action {
 	}
 
 	.card--horizontal & {
+		min-width: $spacing * 8;
 		width: $card-horizontal-media-width-100;
-		border-radius: ($card-border-radius - 1px);
-		min-width: ($spacing * 8);
+		border-radius: $card-border-radius - 1px;
 
 		@include media(0, $range-hand) {
-			margin-left: $card-padding-left-right-90;
 			margin-top: $card-padding-top-bottom-90;
 			margin-bottom: $card-padding-top-bottom-90;
+			margin-left: $card-padding-left-right-90;
 		}
 		@include media($range-lap, false) {
-			margin-left: $card-padding-left-right-100;
 			margin-top: $card-padding-top-bottom-100;
 			margin-bottom: $card-padding-top-bottom-100;
+			margin-left: $card-padding-left-right-100;
 		}
 
 	}
 
 	.card--horizontal.card--90 & {
-		margin-left: $card-padding-left-right-90;
 		margin-top: $card-padding-top-bottom-90;
 		margin-bottom: $card-padding-top-bottom-90;
+		margin-left: $card-padding-left-right-90;
 		width: $card-horizontal-media-width-90;
 	}
 
@@ -629,7 +629,6 @@ label.card__primary-action {
 	@include media($range-lap, false) {
 		min-height: $card-header-100-height;
 	}
-
 
 	.card--horizontal & {
 		@include media($range-hand) {
