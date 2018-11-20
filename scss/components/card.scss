@@ -283,15 +283,20 @@ label.card__primary-action {
 		width: $card-horizontal-media-width-100;
 		border-radius: $card-border-radius - 1px;
 
-		@include media(0, $range-hand) {
+		@include media(0, $range-palm) {
 			margin-top: $card-padding-top-bottom-90;
 			margin-bottom: $card-padding-top-bottom-90;
 			margin-left: $card-padding-left-right-90;
 		}
-		@include media($range-lap, false) {
+		@include media($range-hand) {
 			margin-top: $card-padding-top-bottom-100;
 			margin-bottom: $card-padding-top-bottom-100;
 			margin-left: $card-padding-left-right-100;
+		}
+		@include media($range-lap, false) {
+			margin-top: $card-padding-top-bottom-200;
+			margin-bottom: $card-padding-top-bottom-200;
+			margin-left: $card-padding-left-right-200;
 		}
 
 	}
