@@ -13,9 +13,7 @@ title: Checkbox
 		value="true"
 		checked
 	>
-	<span class="checkbox__label">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-	</span>
+	<span class="checkbox__label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
 </label>
 {% endcapture %}
 {% include example.html
@@ -80,9 +78,7 @@ title: Checkbox
 		type="checkbox"
 		value="true"
 	>
-	<span class="checkbox__label">
-		Optie 1
-	</span>
+	<span class="checkbox__label">Optie 1</span>
 </label>
 
 <label class="checkbox">
@@ -92,9 +88,7 @@ title: Checkbox
 		type="checkbox"
 		value="true"
 	>
-	<span class="checkbox__label">
-		Optie 2
-	</span>
+	<span class="checkbox__label">Optie 2</span>
 </label>
 
 <label class="checkbox">
@@ -104,9 +98,7 @@ title: Checkbox
 		type="checkbox"
 		value="true"
 	>
-	<span class="checkbox__label">
-		Optie 3
-	</span>
+	<span class="checkbox__label">Optie 3</span>
 </label>
 {% endcapture %}
 {% include example.html
