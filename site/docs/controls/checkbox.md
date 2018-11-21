@@ -3,6 +3,15 @@ layout: docs
 title: Checkbox
 ---
 
+## HTML structure
+```
+checkbox (checkbox--colored checkbox--stretched checkbox--inlined checkbox--90 checkbox--padded-0 checkbox--padded-90 checkbox--padded-100 checkbox--padded-200)
+├── checkbox__input
+├── checkbox__label
+├── link (optional)
+├── checkbox__label (optional)
+```
+
 ## Default Checkbox
 {% capture checkbox %}
 <label class="checkbox">
