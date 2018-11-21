@@ -3,7 +3,7 @@ layout: docs
 title: Checkbox
 ---
 
-## Checkbox
+## Default Checkbox
 {% capture checkbox %}
 <label class="checkbox">
 	<input class="checkbox__input"
