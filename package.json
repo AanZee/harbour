@@ -13,9 +13,9 @@
 		"build": "JEKYLL_BASE_URL=harbour gulp build"
 	},
 	"dependencies": {
-		"bourbon": "5.0.0",
-		"normalize.scss": "github:AanZee/normalize.scss#8.0.1",
-		"reset-css": "2.2.1",
+		"bourbon": "5.1.0",
+		"normalize.scss": "github:AanZee/normalize.scss#8.0.2",
+		"reset-css": "4.0.1",
 		"stylelint": "9.8.0",
 		"stylelint-declaration-block-no-ignored-properties": "1.1.0",
 		"stylelint-declaration-strict-value": "1.1.2",
