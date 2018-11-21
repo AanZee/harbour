@@ -232,8 +232,4 @@ label.checkbox {
 		opacity: $opacity-disabled;
 		cursor: default;
 	}
-
-	.checkbox.is-invalid ~ & {
-		color: $color-error;
-	}
 }
