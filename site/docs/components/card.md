@@ -8,19 +8,19 @@ title: Card
 card (card--horizontal card--stretched card--boxed card--neutral card--right-aligned-metadata card--expandable card--media-portret card--media-landscape card--media-square card--media-sixteen-nine card--media-widescreen card--icon-avatar card--200 card--flat)
 ├── card__expand-status (optional)
 ├── card__actions
-	├── card__primary-action
-		├── card__media (optional)
-		├── card__header
-			├── card__icon (optional)
-			├── card__heading-group
-				├── card__title
-				├── card__subtitle (optional)
-				├── card__excerpt (optional)
-			├── card__control (optional)
-				├── other BEM component (e.g. button, input-stepper)
-	├── card__supplemental-actions (optional)
-		├── card__supplemental-action (optional)
-			├── other BEM component (e.g. button, popover)
+│	├── card__primary-action
+│	│	├── card__media (optional)
+│	│	├── card__header
+│	│	│	├── card__icon (optional)
+│	│	│	├── card__heading-group
+│	│	│	│	├── card__title
+│	│	│	│	├── card__subtitle (optional)
+│	│	│	│	├── card__excerpt (optional)
+│	│	│	├── card__control (optional)
+│	│	│	│	├── other BEM component (e.g. button, input-stepper)
+│	├── card__supplemental-actions (optional)
+│	│	├── card__supplemental-action (optional)
+│	│	│	├── other BEM component (e.g. button, popover)
 ├── card__details (optional)
 │	├── other BEM components
 ```
