@@ -3,6 +3,15 @@ layout: docs
 title: Radio Button
 ---
 
+## HTML structure
+```
+radio-button (radio-button--stretched radio-button--90 radio-button--padded-0 radio-button--padded-90 radio-button--padded-100)
+├── radio-button__input
+├── radio-button__label
+├── link (optional)
+├── radio-button__label (optional)
+```
+
 ## Default Radio Button
 {% capture radio-button %}
 <label class="radio-button">
