@@ -41,16 +41,6 @@ label.radio-button {
 	font-size: $font-size-100;
 }
 
-.radio-button--padded-0 {
-	padding-top: 0;
-	padding-bottom: 0;
-	min-height: $font-size-200 * $line-height-60;
-
-	&.radio-button--90 {
-		min-height: $font-size-100 * $line-height-60;
-	}
-}
-
 .radio-button--padded-90 {
 	padding-top: (($control-size-90 - ($font-size-200 * $line-height-60)) / 2);
 	padding-bottom: (($control-size-90 - ($font-size-200 * $line-height-60)) / 2);
@@ -102,14 +92,6 @@ label.radio-button {
 			top: (($control-size-90 - $radio-button-90-input-size) / 2);
 			width: $radio-button-90-input-size;
 			height: $radio-button-90-input-size;
-		}
-
-		.radio-button--padded-0 & {
-			top: ((($font-size-200 * $line-height-60) - $radio-button-input-size) / 2);
-		}
-
-		.radio-button--padded-0.radio-button--90 & {
-			top: ((($font-size-100 * $line-height-60) - $radio-button-90-input-size) / 2);
 		}
 
 		.radio-button--padded-90 & {
@@ -181,9 +163,5 @@ label.radio-button {
 	input:disabled ~ & {
 		opacity: $opacity-disabled;
 		cursor: default;
-	}
-
-	.radio-button.is-invalid ~ & {
-		color: $color-error;
 	}
 }
