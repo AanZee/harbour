@@ -13,7 +13,7 @@ $checkbox-input-label-spacing: $spacing !default;
 	padding-top: (($control-size-100 - ($font-size-200 * $line-height-60)) / 2);
 	padding-right: 0;
 	padding-bottom: (($control-size-100 - ($font-size-200 * $line-height-60)) / 2);
-	padding-left: ($checkbox-input-size + $checkbox-input-label-spacing);
+	padding-left: $checkbox-input-size + $checkbox-input-label-spacing;
 	min-height: $control-size-100;
 	max-width: 40em;
 	font-size: $font-size-200;
@@ -44,7 +44,7 @@ label.checkbox {
 .checkbox--90 {
 	padding-top: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
 	padding-bottom: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
-	padding-left: ($checkbox-90-input-size + $checkbox-input-label-spacing);
+	padding-left: $checkbox-90-input-size + $checkbox-input-label-spacing;
 	min-height: $control-size-90;
 	font-size: $font-size-100;
 
@@ -211,7 +211,7 @@ label.checkbox {
 		top: 0;
 		left: 0;
 		display: block;
-		width: ($checkbox-input-size + $checkbox-input-label-spacing);
+		width: $checkbox-input-size + $checkbox-input-label-spacing;
 		height: 100%;
 		content: '';
 
