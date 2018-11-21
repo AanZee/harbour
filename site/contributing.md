@@ -18,7 +18,7 @@ First we install `rbenv`, so that we can easily install the correct version of `
 brew install rbenv
 ```
 
-We now need to add `rbenv` to the `PATH`. And add `rbenv` to your shell settings. Check which shell you are using (bash or zsh).
+We now need to add `rbenv` to the `PATH` and to your shell settings. Check which shell you are using (bash or zsh).
 
 ```bash
 # If you use bash 
