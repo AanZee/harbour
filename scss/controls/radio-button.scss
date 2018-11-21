@@ -1,0 +1,189 @@
+$radio-button-input-size: $spacing * 2.5 !default;
+$radio-button-90-input-size: $spacing * 2 !default;
+$radio-button-input-color: $color-ui-300 !default;
+$radio-button-border-width: 2px !default;
+$radio-button-input-label-spacing: $spacing !default;
+
+.radio-button {
+	user-select: none;
+	position: relative;
+	display: block;
+	margin: 0;
+	padding-top: (($control-size-100 - ($font-size-200 * $line-height-60)) / 2);
+	padding-right: 0;
+	padding-bottom: (($control-size-100 - ($font-size-200 * $line-height-60)) / 2);
+	padding-left: ($radio-button-input-size + $radio-button-input-label-spacing);
+	min-height: $control-size-100;
+	max-width: 40em;
+	font-size: $font-size-200;
+	line-height: $line-height-60;
+	cursor: default;
+}
+
+label.radio-button {
+	cursor: pointer; // NOTE: When block is not a label, but the children are (because it also contains URL's), it should fall back to cursor default.
+}
+
+.radio-button--stretched {
+	max-width: none;
+}
+
+.radio-button--inlined {
+	display: inline-block;
+	padding-right: $spacing * 1.5;
+}
+
+.radio-button--90 {
+	padding-top: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
+	padding-bottom: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
+	padding-left: ($radio-button-90-input-size + $radio-button-input-label-spacing);
+	min-height: $control-size-90;
+	font-size: $font-size-100;
+}
+
+.radio-button--padded-0 {
+	padding-top: 0;
+	padding-bottom: 0;
+	min-height: $font-size-200 * $line-height-60;
+
+	&.radio-button--90 {
+		min-height: $font-size-100 * $line-height-60;
+	}
+}
+
+.radio-button--padded-90 {
+	padding-top: (($control-size-90 - ($font-size-200 * $line-height-60)) / 2);
+	padding-bottom: (($control-size-90 - ($font-size-200 * $line-height-60)) / 2);
+	min-height: $control-size-90;
+
+	&.radio-button--90 {
+		padding-top: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
+		padding-bottom: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
+	}
+}
+
+.radio-button--padded-100 {
+
+	&.radio-button--90 {
+		padding-top: (($control-size-100 - ($font-size-100 * $line-height-60)) / 2);
+		padding-bottom: (($control-size-100 - ($font-size-100 * $line-height-60)) / 2);
+		min-height: $control-size-100;
+	}
+}
+
+.radio-button__input {
+	position: absolute;
+	top: 0; // FIX: Fixes some render bugs.
+	left: 0; // FIX: Fixes some render bugs.
+	z-index: -100; // NOTE: Put the input behind the label so it doesn't overlay text.
+	opacity: 0; // NOTE: we use this instead of display:none to allow focusing.
+}
+
+.radio-button__label {
+	display: inline;
+	cursor: pointer;
+
+	&:first-of-type::before {
+		position: absolute;
+		top: (($control-size-100 - $radio-button-input-size) / 2);
+		left: 0;
+		display: block;
+		box-sizing: border-box;
+		width: $radio-button-input-size;
+		height: $radio-button-input-size;
+		border-width: $radio-button-border-width;
+		border-style: solid;
+		border-color: $radio-button-input-color;
+		border-radius: 50%;
+		background-color: $color-background;
+		content: '';
+
+		.radio-button--90 & {
+			top: (($control-size-90 - $radio-button-90-input-size) / 2);
+			width: $radio-button-90-input-size;
+			height: $radio-button-90-input-size;
+		}
+
+		.radio-button--padded-0 & {
+			top: ((($font-size-200 * $line-height-60) - $radio-button-input-size) / 2);
+		}
+
+		.radio-button--padded-0.radio-button--90 & {
+			top: ((($font-size-100 * $line-height-60) - $radio-button-90-input-size) / 2);
+		}
+
+		.radio-button--padded-90 & {
+			top: (($control-size-90 - $radio-button-input-size) / 2);
+		}
+
+		.radio-button--padded-90.radio-button--90 & {
+			top: (($control-size-90 - $radio-button-90-input-size) / 2);
+		}
+
+		.radio-button--padded-100 & {
+			top: (($control-size-100 - $radio-button-input-size) / 2);
+		}
+
+		.radio-button--padded-100.radio-button--90 & {
+			top: (($control-size-100 - $radio-button-90-input-size) / 2);
+		}
+
+		input:checked ~ & {
+			background-image: url(get-svg-uri($icon-circle-solid, $radio-button-input-color));
+			background-position: center center;
+			background-size: ($radio-button-input-size - 8px) ($radio-button-input-size - 8px);
+			background-repeat: no-repeat;
+
+			.radio-button--90 & {
+				background-size: ($radio-button-90-input-size - 8px) ($radio-button-90-input-size - 8px);
+			}
+		}
+
+		input:focus ~ & {
+			border-color: $color-focus;
+			box-shadow: $box-shadow-focus;
+		}
+
+		input:focus:hover ~ & {
+			border-color: $radio-button-input-color;
+			box-shadow: none;
+		}
+
+		input:focus:checked ~ & {
+			border-color: $color-focus;
+			box-shadow: none;
+		}
+
+		input:focus:checked:hover ~ & {
+			border-color: $radio-button-input-color;
+			box-shadow: none;
+		}
+
+		.radio-button.is-invalid & {
+			border-color: $color-error;
+		}
+	}
+
+	&:first-of-type::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: ($radio-button-input-size + $radio-button-input-label-spacing);
+		height: 100%;
+		content: '';
+
+		.radio-button--90 & {
+			width: ($radio-button-90-input-size + $radio-button-input-label-spacing);
+		}
+	}
+
+	input:disabled ~ & {
+		opacity: $opacity-disabled;
+		cursor: default;
+	}
+
+	.radio-button.is-invalid ~ & {
+		color: $color-error;
+	}
+}
