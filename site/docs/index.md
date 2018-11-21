@@ -10,6 +10,7 @@ title: Documentation
 
 ## Controls
 * [Button]({{ '/docs/controls/button.html' | relative_url }})
+* [Checkbox]({{ '/docs/controls/checkbox.html' | relative_url }})
 * [Drop-down menu]({{ '/docs/controls/drop-down-menu.html' | relative_url }})
 * [Input stepper]({{ '/docs/controls/input-stepper.html' | relative_url }})
 * [Password input]({{ '/docs/controls/password-input.html' | relative_url }})
