@@ -201,7 +201,8 @@ label.checkbox {
 			box-shadow: none;
 		}
 
-		.checkbox.is-invalid & {
+		.checkbox.is-invalid &,
+		input:invalid ~ & {
 			border-color: $color-error;
 		}
 	}
