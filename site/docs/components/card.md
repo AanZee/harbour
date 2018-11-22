@@ -96,10 +96,10 @@ card (modifier)
 					</div>
 					<div class="card__heading-group">
 						<h1 class="card__title">
-							Card title
+							Card Title
 						</h1>
 						<h2 class="card__subtitle">
-							Card subtitle
+							Card Subtitle
 						</h2>
 					</div>
 				</header>
@@ -130,10 +130,10 @@ card (modifier)
 					</div>
 					<div class="card__heading-group">
 						<h1 class="card__title">
-							Card title
+							Card Title
 						</h1>
 						<h2 class="card__subtitle">
-							Card subtitle
+							Card Subtitle
 						</h2>
 					</div>
 				</header>
@@ -159,10 +159,10 @@ card (modifier)
 				<header class="card__header">
 					<div class="card__heading-group">
 						<h1 class="card__title">
-							Card title
+							Card Title
 						</h1>
 						<h2 class="card__subtitle">
-							Card subtitle
+							Card Subtitle
 						</h2>
 					</div>
 				</header>
@@ -200,7 +200,7 @@ card (modifier)
 					</div>
 					<div class="card__heading-group">
 						<h1 class="card__title">
-							Card title
+							Card Title
 							<span class="card__metadata">
 								<span class="tag tag--80">
 									Tag
@@ -208,7 +208,7 @@ card (modifier)
 							</span>
 						</h1>
 						<h2 class="card__subtitle">
-							Card subtitle
+							Card Subtitle
 						</h2>
 						<p class="card__excerpt">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et luctus odio. Vestibulum non lobortis lorem. Aliquam erat volutpat. Aenean vel augue interdum, varius lectus a, tristique lacus. Donec sed augue a augue feugiat cursus. Maecenas tincidunt euismod risus in tincidunt...
@@ -237,7 +237,7 @@ card (modifier)
 				<header class="card__header">
 					<div class="card__heading-group">
 						<h1 class="card__title">
-							Card title
+							Card Title
 						</h1>
 						<p class="card__excerpt">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et luctus odio. Vestibulum non lobortis lorem. Aliquam erat volutpat. Aenean vel augue interdum, varius lectus a, tristique lacus. Donec sed augue a augue feugiat cursus. Maecenas tincidunt euismod risus in tincidunt...
@@ -274,10 +274,10 @@ card (modifier)
 				<header class="card__header">
 					<div class="card__heading-group">
 						<h1 class="card__title">
-							Card title
+							Card Title
 						</h1>
 						<h2 class="card__subtitle">
-							Card subtitle
+							Card Subtitle
 						</h2>
 					</div>
 				</header>
@@ -314,10 +314,10 @@ card (modifier)
 					</div>
 					<div class="card__heading-group">
 						<h1 class="card__title">
-							Card title
+							Card Title
 						</h1>
 						<h2 class="card__subtitle">
-							Card subtitle
+							Card Subtitle
 						</h2>
 					</div>
 					<div class="card__control">
