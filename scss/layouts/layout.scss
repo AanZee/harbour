@@ -459,6 +459,10 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	flex-wrap: wrap;
 }
 
+.layout__section--left-aligning {
+	align-items: flex-start;
+}
+
 .layout__section--right-aligning {
 	align-items: flex-end;
 }
