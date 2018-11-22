@@ -1,3 +1,8 @@
+# 1.18.1
+
+## Bugfix
+* Fix relative url to contributing section
+
 # 1.18.0
 
 ## Improvements
