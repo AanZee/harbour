@@ -177,18 +177,6 @@ $card-horizontal-media-width-200: 50% !default;
 	.card--horizontal & {
 		flex-wrap: nowrap;
 	}
-
-	.card.is-loading & {
-		pointer-events: none;
-	}
-
-	.card.is-unavailable & {
-		cursor: default;
-
-		&::after {
-			display: none;
-		}
-	}
 }
 
 a.card__primary-action,
@@ -197,8 +185,8 @@ label.card__primary-action {
 	cursor: default; // NOTE: Reset label reset pointer
 
 	&:focus {
-		box-shadow: $box-shadow-focus-outset;
 		border-radius: $card-border-radius;
+		box-shadow: $box-shadow-focus-outset;
 
 		&:active,
 		&:hover {
@@ -211,8 +199,8 @@ label.card__primary-action {
 	}
 
 	.card__expand-status:focus ~ .card__actions & {
-		box-shadow: $box-shadow-focus-inset;
 		border-radius: $card-border-radius;
+		box-shadow: $box-shadow-focus-inset;
 
 		&:active,
 		&:hover {
@@ -398,13 +386,12 @@ label.card__primary-action {
 	button.card__primary-action &,
 	label.card__primary-action & {
 		position: relative;
-		margin-right: 0;
 
 		@include media(0, $range-hand) {
-			padding-right: (($card-padding-left-right-90 * 1.5) + $icon-size-80);
+			padding-right: (($card-padding-left-right-90 * 0.5) + $icon-size-80);
 		}
 		@include media($range-lap, false) {
-			padding-right: (($card-padding-left-right-100 * 1.5) + $icon-size-80);
+			padding-right: (($card-padding-left-right-100 * 0.5) + $icon-size-80);
 		}
 
 		&::after {
@@ -418,11 +405,21 @@ label.card__primary-action {
 
 			@include media(0, $range-hand) {
 				top: $card-header-90-height / 2;
-				right: $card-padding-left-right-90;
 			}
 			@include media($range-lap, false) {
 				top: $card-header-100-height / 2;
-				right: $card-padding-left-right-100;
+			}
+
+			.card--90 & {
+				top: $card-header-90-height / 2;
+				width: $icon-size-70;
+				height: $icon-size-70;
+			}
+
+			.card--200 & {
+				top: $card-header-200-height / 2;
+				width: $icon-size-90;
+				height: $icon-size-90;
 			}
 
 			.card--horizontal & {
@@ -431,22 +428,7 @@ label.card__primary-action {
 				}
 				@include media($range-lap, false) {
 					top: 50%;
-					right: $card-padding-left-right-200;
 				}
-			}
-
-			.card--90 & {
-				top: $card-header-90-height / 2;
-				right: $card-padding-left-right-90;
-				width: $icon-size-70;
-				height: $icon-size-70;
-			}
-
-			.card--200 & {
-				top: $card-header-200-height / 2;
-				right: $card-padding-left-right-200;
-				width: $icon-size-90;
-				height: $icon-size-90;
 			}
 
 			.card.is-skeleton &,
@@ -458,19 +440,23 @@ label.card__primary-action {
 
 		.card.is-unavailable & {
 			padding-right: 0;
+
+			&::after {
+				display: none;
+			}
 		}
 
 		.card--90 & {
-			padding-right: (($card-padding-left-right-90 * 1.5) + $icon-size-70);
+			padding-right: (($card-padding-left-right-90 * 0.5) + $icon-size-70);
 		}
 
 		.card--200 & {
-			padding-right: (($card-padding-left-right-200 * 1.5) + $icon-size-90);
+			padding-right: (($card-padding-left-right-200 * 0.5) + $icon-size-90);
 		}
 
 		.card--horizontal & {
 			@include media($range-lap, false) {
-				padding-right: (($card-padding-left-right-200 * 1.5) + $icon-size-80);
+				padding-right: (($card-padding-left-right-200 * 0.5) + $icon-size-80);
 			}
 		}
 	}
