@@ -105,13 +105,11 @@ $card-horizontal-media-width-200: 50% !default;
 
 .card--boxed {
 	border: 2px solid $color-ui-40;
-	border-radius: $card-border-radius;
 	background-color: $color-ui-10;
 	box-shadow: none;
 }
 
 .card--neutral {
-	border-radius: $card-border-radius;
 	background-color: $color-background-neutral;
 }
 
@@ -144,7 +142,6 @@ $card-horizontal-media-width-200: 50% !default;
 
 .card--flat {
 	border: none;
-	border-radius: 0;
 	background-color: transparent;
 	box-shadow: none;
 }
