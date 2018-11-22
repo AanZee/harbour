@@ -1,7 +1,7 @@
 {
 	"name": "aanzee-harbour",
 	"description": "Global component library",
-	"version": "1.17.0",
+	"version": "1.18.0",
 	"author": "Aan Zee",
 	"license": "MIT",
 	"repository": {
@@ -13,27 +13,23 @@
 		"build": "JEKYLL_BASE_URL=harbour gulp build"
 	},
 	"dependencies": {
-		"bourbon": "5.0.0",
-		"normalize.scss": "github:AanZee/normalize.scss#8.0.1",
-		"reset-css": "2.2.1",
-		"stylelint": "9.3.0",
+		"bourbon": "5.1.0",
+		"normalize.scss": "github:AanZee/normalize.scss#8.0.2",
+		"reset-css": "4.0.1",
+		"stylelint": "9.8.0",
 		"stylelint-declaration-block-no-ignored-properties": "1.1.0",
-		"stylelint-declaration-strict-value": "1.0.4",
-		"stylelint-order": "0.8.1"
+		"stylelint-declaration-strict-value": "1.1.2",
+		"stylelint-order": "2.0.0"
 	},
 	"devDependencies": {
-		"browser-sync": "2.24.5",
+		"browser-sync": "2.26.3",
 		"child_process": "1.0.2",
-		"express": "4.16.3",
+		"fancy-log": "1.3.2",
 		"gulp": "3.9.1",
-		"gulp-nodemon": "2.2.1",
-		"gulp-postcss": "7.0.1",
-		"gulp-sass": "4.0.1",
-		"gulp-util": "3.0.8",
-		"mustache-express": "1.2.6",
+		"gulp-postcss": "8.0.0",
+		"gulp-sass": "4.0.2",
 		"node-sass-tilde-importer": "1.0.2",
-		"postcss-reporter": "5.0.0",
-		"postcss-scss": "1.0.5",
-		"reload": "2.3.0"
+		"postcss-reporter": "6.0.0",
+		"postcss-scss": "2.0.0"
 	}
 }
