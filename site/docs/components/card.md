@@ -3,9 +3,58 @@ layout: docs
 title: Card
 ---
 
+## Available modifiers
+
+Adjust orientation
+```
+card--horizontal
+```
+
+Adjust action type
+```
+card--expandable
+```
+
+Adjust size
+```
+card--90
+card--200
+```
+
+Adjust width
+```
+card--stretched
+```
+
+Adjust styling
+```
+card--boxed
+card--background-neutral
+card--flat
+```
+
+Adjust orientation of media
+```
+card--media-portret
+card--media-landscape
+card--media-square
+card--media-sixteen-nine
+card--media-widescreen
+```
+
+Adjust shape of icon
+```
+card--icon-avatar
+```
+
+Adjust position of metadata
+```
+card--right-aligned-metadata
+```
+
 ## HTML structure
 ```
-card (card--horizontal card--stretched card--boxed card--neutral card--right-aligned-metadata card--expandable card--media-portret card--media-landscape card--media-square card--media-sixteen-nine card--media-widescreen card--icon-avatar card--200 card--flat)
+card (modifier)
 ├── card__expand-status (optional)
 ├── card__actions
 │	├── card__primary-action
@@ -14,6 +63,7 @@ card (card--horizontal card--stretched card--boxed card--neutral card--right-ali
 │	│	│	├── card__icon (optional)
 │	│	│	├── card__heading-group
 │	│	│	│	├── card__title
+│	│	│	│	│	├── card__metadata (optional)
 │	│	│	│	├── card__subtitle (optional)
 │	│	│	│	├── card__excerpt (optional)
 │	│	│	├── card__control (optional)
