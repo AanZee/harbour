@@ -1,6 +1,5 @@
 $card-z-index: 0 !default;
 $card-is-skeleton-fill: $color-ui-60 !default;
-$card-elevated-box-shadow: $box-shadow-90 !default;
 $card-border-radius: $border-radius-100 !default;
 $card-sections-border: 1px solid $color-ui-20 !default;
 $card-primary-action-icon: $icon-chevron-right !default;
@@ -64,7 +63,7 @@ $card-horizontal-media-width-200: 50% !default;
 	max-width: $spacing * 60;
 	border-radius: $card-border-radius;
 	background-color: $color-background;
-	box-shadow: $card-elevated-box-shadow;
+	box-shadow: $box-shadow-100;
 
 	&.is-disabled {
 		// NOTE: For when user should not use the card. Can be used with is-updating state.
@@ -105,8 +104,10 @@ $card-horizontal-media-width-200: 50% !default;
 }
 
 .card--boxed {
-	border: 2px solid $color-ui-80;
+	border: 2px solid $color-ui-40;
 	border-radius: $card-border-radius;
+	background-color: $color-ui-10;
+	box-shadow: none;
 }
 
 .card--neutral {
@@ -200,14 +201,11 @@ label.card__primary-action {
 
 	&:focus {
 		box-shadow: $box-shadow-focus-outset;
+		border-radius: $card-border-radius;
 
 		&:active,
 		&:hover {
 			box-shadow: none;
-		}
-
-		.card--elevated & {
-			border-radius: $card-border-radius;
 		}
 
 		.card.is-loading & {
@@ -217,6 +215,7 @@ label.card__primary-action {
 
 	.card__expand-status:focus ~ .card__actions & {
 		box-shadow: $box-shadow-focus-inset;
+		border-radius: $card-border-radius;
 
 		&:active,
 		&:hover {
@@ -273,6 +272,11 @@ label.card__primary-action {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+
+	.card--boxed & {
+		border-top-left-radius: $card-border-radius - 2px;
+		border-top-right-radius: $card-border-radius - 2px;
 	}
 
 	.card--horizontal & {
