@@ -20,8 +20,12 @@ title: Segmented Control
 .segmented-control--90
 ```
 
-### Distribution
+### Distribution and Orientation
 ```
+.segmented-control--column
+.segmented-control--column-hand-and-smaller
+.segmented-control--wrapping
+.segmented-control--stretched
 .segmented-control--equal-width
 ```
 
