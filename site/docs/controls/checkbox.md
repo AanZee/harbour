@@ -30,7 +30,7 @@ checkbox (checkbox--colored checkbox--stretched checkbox--inlined checkbox--90 c
 %}
 
 ## Checkbox 90
-{% capture checkbox %}
+{% capture checkbox-90 %}
 <label class="checkbox checkbox--90">
 	<input class="checkbox__input"
 		id="checkbox-90"
@@ -42,7 +42,7 @@ checkbox (checkbox--colored checkbox--stretched checkbox--inlined checkbox--90 c
 </label>
 {% endcapture %}
 {% include example.html
-	content=checkbox
+	content=checkbox-90
 %}
 
 ## Checkbox with Link
