@@ -34,7 +34,9 @@ checkbox (modifier)
 		value="true"
 		checked
 	>
-	<span class="checkbox__label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+	<span class="checkbox__label">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	</span>
 </label>
 {% endcapture %}
 {% include example.html
@@ -50,7 +52,9 @@ checkbox (modifier)
 		type="checkbox"
 		value="true"
 	>
-	<span class="checkbox__label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+	<span class="checkbox__label">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	</span>
 </label>
 {% endcapture %}
 {% include example.html
@@ -66,7 +70,18 @@ checkbox (modifier)
 		type="checkbox"
 		value="agree"
 	>
-	<label class="checkbox__label" for="general-conditions">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi ex, mollis consectetur nibh vel, mattis feugiat ipsum. Morbi iaculis consequat lacus, eu sollicitudin mi tristique iaculis.</label> <a class="link" href="">general conditions</a><label class="checkbox__label" for="general-conditions">. Fusce interdum mauris nec ligula elementum auctor.</label>
+	<label class="checkbox__label"
+		for="general-conditions"
+	>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi ex, mollis consectetur nibh vel, mattis feugiat ipsum. Morbi iaculis consequat lacus, eu sollicitudin mi tristique iaculis.
+	</label>
+	<a class="link" href="#">
+		general conditions</a>.
+	<label class="checkbox__label"
+		for="general-conditions"
+	>
+		Fusce interdum mauris nec ligula elementum auctor.
+	</label>
 </div>
 {% endcapture %}
 {% include example.html
@@ -82,7 +97,9 @@ checkbox (modifier)
 		type="checkbox"
 		value="true"
 	>
-	<span class="checkbox__label">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi ex, mollis consectetur nibh vel, mattis feugiat ipsum. Morbi iaculis consequat lacus, eu sollicitudin mi tristique iaculis.</span>
+	<span class="checkbox__label">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mi ex, mollis consectetur nibh vel, mattis feugiat ipsum. Morbi iaculis consequat lacus, eu sollicitudin mi tristique iaculis.
+	</span>
 </label>
 {% endcapture %}
 {% include example.html
@@ -91,7 +108,6 @@ checkbox (modifier)
 
 ## Multiple Checkboxes
 {% capture multiple-checkboxes %}
-
 <label class="checkbox">
 	<input class="checkbox__input"
 		id="option-1"
@@ -99,9 +115,10 @@ checkbox (modifier)
 		type="checkbox"
 		value="true"
 	>
-	<span class="checkbox__label">Optie 1</span>
+	<span class="checkbox__label">
+		Optie 1
+	</span>
 </label>
-
 <label class="checkbox">
 	<input class="checkbox__input"
 		id="option-2"
@@ -109,9 +126,10 @@ checkbox (modifier)
 		type="checkbox"
 		value="true"
 	>
-	<span class="checkbox__label">Optie 2</span>
+	<span class="checkbox__label">
+		Optie 2
+	</span>
 </label>
-
 <label class="checkbox">
 	<input class="checkbox__input"
 		id="option-3"
@@ -119,7 +137,9 @@ checkbox (modifier)
 		type="checkbox"
 		value="true"
 	>
-	<span class="checkbox__label">Optie 3</span>
+	<span class="checkbox__label">
+		Optie 3
+	</span>
 </label>
 {% endcapture %}
 {% include example.html
