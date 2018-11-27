@@ -2,7 +2,7 @@ const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const child = require('child_process');
 const gulp = require('gulp');
-const gutil = require('gulp-util');
+const log = require('fancy-log');
 const postcss = require('gulp-postcss');
 const postcssReporter = require('postcss-reporter');
 const postcssScssParser = require('postcss-scss');
@@ -111,7 +111,7 @@ function buildJekyll(isWatch, options) {
 	const jekyllLogger = (buffer) => {
 		buffer.toString()
 			.split(/\n/)
-			.forEach((message) => gutil.log('Jekyll: ' + message));
+			.forEach((message) => log('Jekyll: ' + message));
 	};
 
 	jekyll.stdout.on('data', jekyllLogger);
