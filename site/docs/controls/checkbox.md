@@ -3,9 +3,21 @@ layout: docs
 title: Checkbox
 ---
 
+## Available modifiers
+
+```
+checkbox--colored
+checkbox--stretched
+checkbox--90
+checkbox--padded-0
+checkbox--padded-90
+checkbox--padded-100
+checkbox--padded-200
+```
+
 ## HTML structure
 ```
-checkbox (checkbox--colored checkbox--stretched checkbox--inlined checkbox--90 checkbox--padded-0 checkbox--padded-90 checkbox--padded-100 checkbox--padded-200)
+checkbox (modifier)
 ├── checkbox__input
 ├── checkbox__label
 ├── link (optional)
