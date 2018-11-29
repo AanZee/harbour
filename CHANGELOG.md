@@ -1,3 +1,8 @@
+# 1.19.0
+
+## Feature
+* Add checkbox component [HAR-39]
+
 # 1.18.2
 
 ## Bugfix
