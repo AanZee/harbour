@@ -1,3 +1,5 @@
+$search-input-border-radius: $input-border-radius !default;
+
 .search-input {
 	position: relative;
 	display: block;
@@ -58,7 +60,7 @@
 	width: 100%;
 	height: $control-size-100;
 	border: $input-border;
-	border-radius: $input-border-radius;
+	border-radius: $search-input-border-radius;
 	background-color: $input-background-color;
 	color: $input-color;
 	font-size: $input-font-size;

@@ -1,1 +1,7 @@
-theme: jekyll-theme-minimal
+# Dependencies
+markdown: kramdown
+highlighter: rouge
+
+# Settings
+source: "site"
+destination: ./_gh_pages

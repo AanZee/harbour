@@ -1,7 +1,39 @@
+
+* Add search input control
+
+# 1.18.2
+
+## Bugfix
+* Pin ajv dependency because of error in the 'equal' module
+
+# 1.18.1
+
+## Bugfix
+* Fix relative url to contributing section
+
+# 1.18.0
+
+## Improvements
+* Updated layout documentation [HAR-118]
+* Updated both dev and SCSS related (bourbon, reset-css, normalize, stylelint) packages Removed unused packages [HAR-166]
+* Add more detailed documentation about running Harbour and Jekyll on your local machine [HAR-165]
+* Add layout section left aligning modifier [HAR-170]
+* Add Gemfile.lock to the .gitignore
+
+# 1.17.0
+
+## Features
+* Add Github Pages to the project, so that the visual styleguide can be deployed
+
+# 1.16.0
+
+## Features
+* Add visual styleguide
+
 # 1.15.0
 
 ## Features
-* Add search input control
+* Add drop-down menu control
 
 # 1.14.0
 

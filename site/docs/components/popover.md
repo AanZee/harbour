@@ -1,5 +1,7 @@
-# Popover
-- [See SCSS component](../../scss/components/popover.scss)
+---
+layout: docs
+title: Popover
+---
 
 ## Available modifiers
 
@@ -50,8 +52,8 @@ popover (modifier)
 ```
 
 ## Example HTML
-Basic example
-```html
+
+{% capture popover %}
 <div class="popover">
 	<input class="popover__status"
 		type="checkbox"
@@ -86,42 +88,7 @@ Basic example
 		Close
 	</label>
 </div>
-```
-
-Example with arrow and right bottom aligned body
-```html
-<div class="popover popover--arrow popover--right-bottom-aligned-body">
-	<input class="popover__status"
-		type="checkbox"
-		id="popover"
-		aria-hidden="true"
-	>
-	<div class="popover__action">
-		<label class="button"
-			for="popover"
-		>
-			Button
-		</label>
-	</div>
-	<section class="popover__body">
-		<header class="popover__header">
-			<h1 class="popover__title">
-				Title
-			</h1>
-			<label class="popover__close-action"
-				for="popover"
-			>
-				Close
-			</label>
-		</header>
-		<div class="popover__main">
-			...
-		</div>
-	</section>
-	<label class="popover__backdrop"
-		for="popover"
-	>
-		Close
-	</label>
-</div>
-```
+{% endcapture %}
+{% include example.html
+	content=popover
+%}

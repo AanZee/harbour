@@ -1,18 +1,21 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var postcss = require('gulp-postcss');
-var postcssScssParser = require('postcss-scss');
-var postcssReporter = require('postcss-reporter');
-var autoprefixer = require('autoprefixer');
-var tildeImporter = require('node-sass-tilde-importer');
-var stylelint = require('stylelint');
-var nodemon = require('gulp-nodemon');
+const autoprefixer = require('autoprefixer');
+const browserSync = require('browser-sync').create();
+const child = require('child_process');
+const gulp = require('gulp');
+const log = require('fancy-log');
+const postcss = require('gulp-postcss');
+const postcssReporter = require('postcss-reporter');
+const postcssScssParser = require('postcss-scss');
+const sass = require('gulp-sass');
+const stylelint = require('stylelint');
+const tildeImporter = require('node-sass-tilde-importer');
+const packageJson = require('./package.json');
 
-var harbourStylelintJson = '.stylelintrc.json';
+const harbourStylelintJson = '.stylelintrc.json';
 
-var scssIndex = 'scss/index.scss';
-var scssGlobs = 'scss/**/*.scss';
-var stylelintGlobs = [
+// First we define all scss files to watch. Not all watched files need linting, so we define a second glob
+const scssGlobs = 'scss/**/*.scss';
+const stylelintGlobs = [
 	'scss/components/*.scss',
 	'scss/controls/*.scss',
 	'scss/layouts/*.scss',
@@ -21,7 +24,12 @@ var stylelintGlobs = [
 	'scss/vendor-overrides/*.scss',
 	'!scss/**/index.scss'
 ];
-var cssFolder = 'css/';
+const scssIndex = 'scss/index.scss';
+
+// Compiled css is placed in Jekyll source folder.
+const cssFolder = 'site/css/';
+// Destination for build Jekyll site.
+const jekyllSiteRoot = '_gh_pages';
 
 /**
  * stylelintScss
@@ -59,8 +67,8 @@ function stylelintScss(isBuild) {
  * @param {Boolean} isBuild
  */
 function compileScss(isBuild) {
-	var outputStyle = isBuild ? 'compressed' : 'expanded';
-	var hasCompilerError = false;
+	const outputStyle = isBuild ? 'compressed' : 'expanded';
+	const hasCompilerError = false;
 
 	return gulp.src(scssIndex)
 		.pipe(
@@ -87,43 +95,100 @@ function compileScss(isBuild) {
 		});
 }
 
+/**
+ * buildJekyll
+ * Compile Jekyll website from source
+ * @param {Boolean} isWatch - To exit main process when an error occurs in Jekyll while watching
+ * @param {Array} options - Flags to pass to the jekyll process
+ */
+function buildJekyll(isWatch, options) {
+	const arguments = ['build'].concat(options);
+	const env = Object.create( process.env );
+	env.packageVersion = packageJson.version;
+
+	const jekyll = child.spawn('jekyll', arguments, { env: env });
+
+	const jekyllLogger = (buffer) => {
+		buffer.toString()
+			.split(/\n/)
+			.forEach((message) => log('Jekyll: ' + message));
+	};
+
+	jekyll.stdout.on('data', jekyllLogger);
+	jekyll.stderr.on('data', jekyllLogger);
+
+	if (isWatch) {
+		jekyll.on('close', (code) => {
+			console.log(`Jekyll process exited with code ${code}, stopping Gulp task`);
+			process.exit();
+		});
+	}
+}
+
+/**
+ * getTimestamp
+ * Return current time
+ */
 function getTimestamp() {
-	var time = new Date();
-	var hours = time.getHours();
-	var minutes = time.getMinutes();
-	var seconds = time.getSeconds();
+	const time = new Date();
+	const hours = time.getHours();
+	const minutes = time.getMinutes();
+	const seconds = time.getSeconds();
 
 	return hours + ':' + minutes + ':' + seconds;
 }
 
 gulp.task('stylelintScss', function() {
-	var isBuild = false;
+	const isBuild = false;
 	gulp.watch(scssGlobs, function() {
 		return stylelintScss(isBuild);
 	});
-})
+});
 
 gulp.task('compileScss', ['stylelintScss'], function() {
-	var isBuild = false;
+	const isBuild = false;
 	gulp.watch(scssGlobs, function() {
 		return compileScss(isBuild);
 	});
-})
+});
 
 gulp.task('buildStylelintScss', function() {
-	var isBuild = true;
+	const isBuild = true;
 	return stylelintScss(isBuild);
-})
+});
 
 gulp.task('buildScss', ['buildStylelintScss'], function() {
-	var isBuild = true;
+	const isBuild = true;
 	return compileScss(isBuild);
-})
+});
 
-gulp.task('serve', function () {
-	return console.log('TODO (HAR-125): implement styleguide');
+gulp.task('watchJekyll', () => {
+	const isWatch = true;
+	const options = [
+		'--watch', // Enable auto-regeneration of the site when files are modified
+		'--incremental', // Only re-build pages that have changed
+	];
+
+	return buildJekyll(isWatch, options);
+});
+
+gulp.task('buildJekyllSite', ['buildScss'], function() {
+	const isWatch = false;
+	const options = [];
+
+	return buildJekyll(isWatch, options);
+});
+
+gulp.task('serveJekyll', () => {
+	browserSync.init({
+		files: [jekyllSiteRoot + '/**'],
+		port: 4000,
+		server: {
+			baseDir: jekyllSiteRoot
+		}
+	});
 });
 
 // CLI Tasks
-gulp.task('start', ['serve', 'compileScss']);
-gulp.task('build', ['buildScss']);
+gulp.task('start', ['compileScss', 'watchJekyll', 'serveJekyll']);
+gulp.task('build', ['buildJekyllSite']);

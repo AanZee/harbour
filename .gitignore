@@ -58,4 +58,15 @@ node_modules/
 package-lock.json
 
 # Test HTML #
+#############
 html/
+
+# Jekyll generated Github pages #
+#################################
+_gh_pages/
+.jekyll-metadata
+
+# Ruby Configuration #
+######################
+.ruby-version
+Gemfile.lock

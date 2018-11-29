@@ -1,6 +1,7 @@
-# Text Input
-
-- [See SCSS component](../../scss/controls/text-input.scss)
+---
+layout: docs
+title: Text Input
+---
 
 ## Available states
 
@@ -31,10 +32,18 @@ text-input--max-width-60
 
 ## Example HTML
 
-```html
-<input class="text-input">
-```
+{% capture text-input %}
+<input class="text-input"
+	type="text"
+>
+{% endcapture %}
+{% include example.html
+	content=text-input
+%}
 
-```html
+{% capture text-input-multiline %}
 <textarea class="text-input text-input--multiline"></textarea>
-```
+{% endcapture %}
+{% include example.html
+	content=text-input-multiline
+%}
