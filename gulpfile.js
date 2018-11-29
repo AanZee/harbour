@@ -68,7 +68,7 @@ function stylelintScss(isBuild) {
  */
 function compileScss(isBuild) {
 	const outputStyle = isBuild ? 'compressed' : 'expanded';
-	const hasCompilerError = false;
+	let hasCompilerError = false;
 
 	return gulp.src(scssIndex)
 		.pipe(
