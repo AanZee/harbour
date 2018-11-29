@@ -22,19 +22,17 @@ We now need to add `rbenv` to the `PATH` and to your shell settings. Check which
 
 ```bash
 # If you use bash 
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 nano ~/.bash_profile
 
 # If you use zsh:
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc`
-nano ~/.zshrc`
-```
+nano ~/.zshrc
 
-Add the following line to the end and save the file.
-
-```
+# Add the following two lines
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 ```
+
+Save the file using `ctrl + O` and exit `nano` using `ctrl + X`.
 
 Restart your terminal for the changes to take effect.
 
