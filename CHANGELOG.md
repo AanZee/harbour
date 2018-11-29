@@ -1,3 +1,8 @@
+# 1.18.2
+
+## Bugfix
+* Pin ajv dependency because of error in the 'equal' module
+
 # 1.18.1
 
 ## Bugfix
