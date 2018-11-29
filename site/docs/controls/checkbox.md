@@ -116,7 +116,7 @@ checkbox (modifier)
 		value="true"
 	>
 	<span class="checkbox__label">
-		Optie 1
+		Option 1
 	</span>
 </label>
 <label class="checkbox">
@@ -127,7 +127,7 @@ checkbox (modifier)
 		value="true"
 	>
 	<span class="checkbox__label">
-		Optie 2
+		Option 2
 	</span>
 </label>
 <label class="checkbox">
@@ -138,7 +138,7 @@ checkbox (modifier)
 		value="true"
 	>
 	<span class="checkbox__label">
-		Optie 3
+		Option 3
 	</span>
 </label>
 {% endcapture %}
