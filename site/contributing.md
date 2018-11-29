@@ -41,6 +41,7 @@ Restart your terminal for the changes to take effect.
 Harbour has been tested with `Ruby 2.5.1`, but probably also works with other versions of Ruby. Install this version using the following command.
 
 ```
+rbenv install 2.5.1
 rbenv global 2.5.1
 ```
 
