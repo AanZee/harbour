@@ -224,7 +224,7 @@ label.card__primary-action {
 	&::before {
 		z-index: $card-z-index - 1;
 		display: block;
-		padding-bottom: $aspect-ratio-sixteen-nine;
+		padding-bottom: $aspect-ratio-wide;
 		width: 100%;
 		content: '';
 
@@ -241,11 +241,11 @@ label.card__primary-action {
 		}
 
 		.card--media-sixteen-nine & {
-			padding-bottom: $aspect-ratio-sixteen-nine;
+			padding-bottom: $aspect-ratio-wide;
 		}
 
 		.card--media-widescreen & {
-			padding-bottom: $aspect-ratio-widescreen;
+			padding-bottom: $aspect-ratio-ultra-wide;
 		}
 	}
 
