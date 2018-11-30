@@ -1,36 +1,16 @@
-$search-input-border-radius: $input-border-radius !default;
+$search-input-button-gap: $spacing * 2 !default;
+$search-input-border: $input-border  !default;
+$search-input-border-radius: $border-radius-90 !default;
+$search-input-button-background-color: $input-background-color !default;
 
 .search-input {
 	position: relative;
-	display: block;
+	display: flex;
 	width: 100%;
 	height: $control-size-100;
 	color: $input-color;
 	font-size: $input-font-size;
 	line-height: $input-line-height;
-
-	&.is-valid {
-	}
-
-	&.is-invalid {
-	}
-
-	&::after {
-		@include align(absolute, right, center);
-		right: $spacing * 2;
-		display: block;
-		width: $spacing * 2.5;
-		height: $spacing * 2.5;
-		background-image: url(get-svg-uri($icon-search-bold, $color-text-300));
-		background-position: center center;
-		background-size: $spacing * 2;
-		background-repeat: no-repeat;
-		content: '';
-		pointer-events: none;
-	}
-}
-
-.search-input--90 {
 }
 
 .search-input--max-width-90 {
@@ -49,34 +29,78 @@ $search-input-border-radius: $input-border-radius !default;
 	max-width: $spacing * 16;
 }
 
-.search-input__input {
-	@include ellipsis();
+.search-input__container {
 	position: relative;
-	display: block;
+	display: flex;
+	justify-content: stretch;
+	width: 100%;
+	height: $control-size-100;
+	border: $search-input-border;
+	border-top-left-radius: $search-input-border-radius;
+	border-bottom-left-radius: $search-input-border-radius;
+	background-color: $input-background-color;
+
+	&:last-child {
+		border-radius: $search-input-border-radius;
+	}
+
+	.search-input--button-seperated & {
+		border-radius: $search-input-border-radius;
+	}
+
+	.search-input--rounded-ends & {
+		border-top-left-radius: $control-size-100 / 2;
+		border-bottom-left-radius: $control-size-100 / 2;
+
+		&:last-child {
+			border-radius: $control-size-100 / 2;
+		}
+	}
+
+	.search-input--icon & {
+		padding-left: $control-size-100;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: $control-size-100;
+			height: $control-size-100;
+			background-image: url(get-svg-uri($icon-search-bold, $color-ui-400));
+			background-position: center center;
+			background-size: $spacing * 2;
+			background-repeat: no-repeat;
+			content: '';
+			pointer-events: none;
+		}
+	}
+}
+
+.search-input__input {
+	position: relative;
 	padding-top: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
-	padding-right: $spacing * 6.25;
+	padding-right: 0;
 	padding-bottom: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
 	padding-left: $spacing * 1.5;
 	width: 100%;
-	height: $control-size-100;
-	border: $input-border;
-	border-radius: $search-input-border-radius;
-	background-color: $input-background-color;
+	height: $control-size-100 - 2px;
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
 	color: $input-color;
 	font-size: $input-font-size;
 	line-height: $input-line-height;
 	transition: $input-transition;
 	appearance: none;
 
+	&:focus {
+		box-shadow: none;
+	}
+
 	&:disabled {
 		opacity: $opacity-disabled;
 		pointer-events: none;
-	}
-
-	&:focus {
-		border: $input-focus-border;
-		background-color: $input-focus-background-color;
-		box-shadow: $input-focus-box-shadow;
 	}
 
 	&::-ms-expand {
@@ -98,46 +122,6 @@ $search-input-border-radius: $input-border-radius !default;
 		border: $input-autofill-border;
 		background-color: $input-autofill-background-color;
 		box-shadow: $input-autofill-box-shadow, $input-autofill-box-shadow-background;
-
-		&:focus {
-			border: $input-autofill-focus-border;
-			background-color: $input-autofill-focus-background-color;
-			box-shadow: $input-autofill-focus-box-shadow, $input-autofill-focus-box-shadow-background;
-		}
-	}
-
-	.search-input.is-valid &,
-	.search-input.is-invalid & {
-		padding-right: $control-size-100 * 2;
-		background-position: right ($spacing * 2.5) + $spacing + (($control-size-100 - $icon-size-100) / 2) center;
-		background-size: $icon-size-100 $icon-size-100;
-		background-repeat: no-repeat;
-	}
-
-	.search-input.is-valid & {
-		border: $input-is-valid-border;
-		background-color: $input-is-valid-background-color;
-		background-image: url(get-svg-uri($input-is-valid-icon, $input-is-valid-icon-color));
-		box-shadow: $input-is-valid-box-shadow;
-
-		&:focus {
-			border: $input-is-valid-focus-border;
-			background-color: $input-is-valid-focus-background-color;
-			box-shadow: $input-is-valid-focus-box-shadow;
-		}
-	}
-
-	.search-input.is-invalid & {
-		border: $input-is-invalid-border;
-		background-color: $input-is-invalid-background-color;
-		background-image: url(get-svg-uri($input-is-invalid-icon, $input-is-invalid-icon-color));
-		box-shadow: $input-is-invalid-box-shadow;
-
-		&:focus {
-			border: $input-is-invalid-focus-border;
-			background-color: $input-is-invalid-focus-background-color;
-			box-shadow: $input-is-invalid-focus-box-shadow;
-		}
 	}
 
 	.search-input--90 & {
@@ -147,7 +131,102 @@ $search-input-border-radius: $input-border-radius !default;
 		font-size: $font-size-100;
 	}
 
-	& option {
-		color: $color-text; // FIX For IE to make sure all the options are readable and the option does not inherit the text color from the select.
+	.search-input--rounded-ends & {
+		padding-left: $control-size-100 / 2;
+	}
+
+	.search-input--icon & {
+		padding-left: 0;
+	}
+}
+
+.search-input__toolbar {
+	flex: 0 0 auto;
+	display: block;
+
+	&::after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: none;
+		content: '';
+		pointer-events: none;
+
+		.search-input__input:focus ~ & {
+			display: block;
+			border: $input-focus-border;
+			box-shadow: $input-focus-box-shadow;
+
+			.search-input--rounded-ends & {
+				border-radius: $control-size-100 / 2;
+			}
+
+			.search-input__container:not(:last-child) & {
+				border-top-right-radius: $search-input-border-radius;
+				border-bottom-right-radius: $search-input-border-radius;
+			}
+		}
+
+		.search-input__input:-webkit-autofill:focus ~ & {
+			border: $input-autofill-focus-border;
+			box-shadow: $input-autofill-focus-box-shadow, $input-autofill-focus-box-shadow-background;
+		}
+	}
+}
+
+.search-input__action {
+	position: relative;
+	display: inline-block;
+	width: $control-size-100;
+	height: 100%;
+	background-image: url(get-svg-uri($icon-cross, $color-text-300));
+	background-position: center center;
+	background-size: $spacing * 2;
+	background-repeat: no-repeat;
+
+	&:first-child::before {
+		position: absolute;
+		top: 0;
+		right: 100%;
+		bottom: 0;
+		width: $spacing;
+		background: linear-gradient(to right, transparent 0%, $color-harbour-white 100%);
+		content: '';
+	}
+}
+
+.search-input__action--clear {
+	background-image: url(get-svg-uri($icon-cross, $color-text-300));
+}
+
+.search-input__action--search {
+	background-image: url(get-svg-uri($icon-search-bold, $color-text-300));
+}
+
+.search-input__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: $spacing ($spacing * 2);
+	min-width: $control-size-100;
+	border: $search-input-border;
+	border-left: none;
+	border-top-right-radius: $search-input-border-radius;
+	border-bottom-right-radius: $search-input-border-radius;
+	background: $search-input-button-background-color;
+	cursor: default;
+	user-select: none;
+
+	.search-input--button-seperated & {
+		margin-left: $search-input-button-gap;
+		border-left: $input-border;
+		border-radius: $search-input-border-radius;
+	}
+
+	.search-input--rounded-ends & {
+		border-top-right-radius: $control-size-100 / 2;
+		border-bottom-right-radius: $control-size-100 / 2;
 	}
 }
