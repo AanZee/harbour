@@ -28,8 +28,8 @@ card--stretched
 
 Adjust styling
 ```
-card--boxed
-card--background-neutral
+card--boxed // Matching background color and border
+card--background-neutral // Always matches $color-background-neutral
 card--flat
 ```
 
