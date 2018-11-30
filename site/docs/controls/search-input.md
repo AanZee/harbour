@@ -120,9 +120,9 @@ search-input (modifier)
             <button class="search-input__action search-input__action--clear"></button>
         </div>
     </div>
-    <div class="search-input__button">
+    <button class="search-input__button">
         Search
-    </div>
+    </button>
 </div>
 {% endcapture %}
 {% include example.html
@@ -137,9 +137,9 @@ search-input (modifier)
             <button class="search-input__action search-input__action--clear"></button>
         </div>
     </div>
-    <div class="search-input__button">
+    <button class="search-input__button">
         Search
-    </div>
+    </button>
 </div>
 {% endcapture %}
 {% include example.html
@@ -154,9 +154,9 @@ search-input (modifier)
             <button class="search-input__action search-input__action--clear"></button>
         </div>
     </div>
-    <div class="search-input__button">
+    <button class="search-input__button">
         Search
-    </div>
+    </button>
 </div>
 {% endcapture %}
 {% include example.html
@@ -171,9 +171,9 @@ search-input (modifier)
             <button class="search-input__action search-input__action--clear"></button>
         </div>
     </div>
-    <div class="search-input__button">
+    <button class="search-input__button">
         Search
-    </div>
+    </button>
 </div>
 {% endcapture %}
 {% include example.html
