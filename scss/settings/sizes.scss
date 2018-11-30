@@ -12,6 +12,7 @@ $aspect-ratio-square: 100% !default;
 $aspect-ratio-sixteen-nine: 100% / 16 * 9 !default;
 $aspect-ratio-widescreen: 100% / 239 * 100 !default;
 
+$control-size-40: $spacing * 2 !default;
 $control-size-50: $spacing * 2.5 !default;
 $control-size-60: $spacing * 3 !default;
 $control-size-70: $spacing * 3.5 !default;
@@ -19,6 +20,7 @@ $control-size-80: $spacing * 4 !default;
 $control-size-90: $spacing * 4.5 !default;
 $control-size-100: $spacing * 5.5 !default;
 $control-size-200: $spacing * 6.5 !default;
+$control-size-300: $spacing * 8 !default;
 
 $text-width-70: 20em !default; // NOTE: Around 44 characters per line.
 $text-width-80: 25em !default; // NOTE: Around 55 characters per line.

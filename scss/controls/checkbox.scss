@@ -1,0 +1,236 @@
+$checkbox-input-size: $spacing * 2.5 !default;
+$checkbox-90-input-size: $spacing * 2 !default;
+$checkbox-input-color: $color-ui-300 !default;
+$checkbox-border-width: 2px !default;
+$checkbox-border-radius: $checkbox-border-width !default;
+$checkbox-input-label-spacing: $spacing !default;
+
+.checkbox {
+	user-select: none;
+	position: relative;
+	display: block;
+	margin: 0;
+	padding-top: (($control-size-100 - ($font-size-200 * $line-height-60)) / 2);
+	padding-right: 0;
+	padding-bottom: (($control-size-100 - ($font-size-200 * $line-height-60)) / 2);
+	padding-left: $checkbox-input-size + $checkbox-input-label-spacing;
+	min-height: $control-size-100;
+	max-width: 40em;
+	font-size: $font-size-200;
+	line-height: $line-height-60;
+	cursor: default;
+}
+
+label.checkbox {
+	cursor: pointer; // NOTE: When block is not a label, but the children are (because it also contains URL's), it should fall back to cursor default.
+}
+
+.checkbox--colored {
+	padding-right: (($control-size-100 - $checkbox-input-size) / 2);
+	padding-left: $control-size-100;
+	border-radius: $border-radius-100;
+	background-color: $color-ui-20;
+}
+
+.checkbox--stretched {
+	max-width: none;
+}
+
+.checkbox--inlined {
+	display: inline-block;
+	padding-right: $spacing * 1.5;
+}
+
+.checkbox--90 {
+	padding-top: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
+	padding-bottom: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
+	padding-left: $checkbox-90-input-size + $checkbox-input-label-spacing;
+	min-height: $control-size-90;
+	font-size: $font-size-100;
+
+	&.checkbox--colored {
+		padding-right: (($control-size-90 - $checkbox-90-input-size) / 2);
+		padding-left: $control-size-90;
+	}
+}
+
+.checkbox--padded-0 {
+	padding-top: 0;
+	padding-bottom: 0;
+	min-height: $font-size-200 * $line-height-60;
+
+	&.checkbox--90 {
+		min-height: $font-size-100 * $line-height-60;
+	}
+}
+
+.checkbox--padded-90 {
+	padding-top: (($control-size-90 - ($font-size-200 * $line-height-60)) / 2);
+	padding-bottom: (($control-size-90 - ($font-size-200 * $line-height-60)) / 2);
+	min-height: $control-size-90;
+
+	&.checkbox--90 {
+		padding-top: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
+		padding-bottom: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
+	}
+}
+
+.checkbox--padded-100 {
+
+	&.checkbox--90 {
+		padding-top: (($control-size-100 - ($font-size-100 * $line-height-60)) / 2);
+		padding-bottom: (($control-size-100 - ($font-size-100 * $line-height-60)) / 2);
+		min-height: $control-size-100;
+	}
+}
+
+.checkbox--padded-200 {
+	padding-top: (($control-size-200 - ($font-size-200 * $line-height-60)) / 2);
+	padding-bottom: (($control-size-200 - ($font-size-200 * $line-height-60)) / 2);
+	min-height: $control-size-200;
+
+	&.checkbox--90 {
+		padding-top: (($control-size-200 - ($font-size-100 * $line-height-60)) / 2);
+		padding-bottom: (($control-size-200 - ($font-size-100 * $line-height-60)) / 2);
+		min-height: $control-size-200;
+	}
+}
+
+.checkbox__input {
+	position: absolute;
+	top: 0; // FIX: Fixes some render bugs.
+	left: 0; // FIX: Fixes some render bugs.
+	z-index: -100; // NOTE: Put the input behind the label so it doesn't overlay text.
+	opacity: 0; // NOTE: we use this instead of display:none to allow focusing.
+}
+
+.checkbox__label {
+	display: inline;
+	cursor: pointer;
+
+	&:first-of-type::before {
+		position: absolute;
+		top: (($control-size-100 - $checkbox-input-size) / 2);
+		left: 0;
+		display: block;
+		box-sizing: border-box;
+		width: $checkbox-input-size;
+		height: $checkbox-input-size;
+		border-width: $checkbox-border-width;
+		border-style: solid;
+		border-color: $checkbox-input-color;
+		border-radius: $checkbox-border-radius;
+		background-color: $color-background-light;
+		content: '';
+
+		.checkbox--colored & {
+			left: (($control-size-100 - $checkbox-input-size) / 2);
+		}
+
+		.checkbox--90 & {
+			top: (($control-size-90 - $checkbox-90-input-size) / 2);
+			width: $checkbox-90-input-size;
+			height: $checkbox-90-input-size;
+		}
+
+		.checkbox--colored.checkbox--90 & {
+			left: (($control-size-90 - $checkbox-90-input-size) / 2);
+		}
+
+		.checkbox--padded-0 & {
+			top: ((($font-size-200 * $line-height-60) - $checkbox-input-size) / 2);
+		}
+
+		.checkbox--padded-0.checkbox--90 & {
+			top: ((($font-size-100 * $line-height-60) - $checkbox-90-input-size) / 2);
+		}
+
+		.checkbox--padded-90 & {
+			top: (($control-size-90 - $checkbox-input-size) / 2);
+		}
+
+		.checkbox--padded-90.checkbox--90 & {
+			top: (($control-size-90 - $checkbox-90-input-size) / 2);
+		}
+
+		.checkbox--padded-100 & {
+			top: (($control-size-100 - $checkbox-input-size) / 2);
+		}
+
+		.checkbox--padded-100.checkbox--90 & {
+			top: (($control-size-100 - $checkbox-90-input-size) / 2);
+		}
+
+		.checkbox--padded-200 & {
+			top: (($control-size-200 - $checkbox-input-size) / 2);
+		}
+
+		.checkbox--padded-200.checkbox--90 & {
+			top: (($control-size-200 - $checkbox-90-input-size) / 2);
+		}
+
+		input:checked ~ & {
+			background-image: url(get-svg-uri($icon-check, $checkbox-input-color));
+			background-position: center center;
+			background-size: ($checkbox-input-size - 6px) ($checkbox-input-size - 6px);
+			background-repeat: no-repeat;
+
+			.checkbox--90 & {
+				background-image: url(get-svg-uri($icon-check-bold, $checkbox-input-color));
+				background-size: ($checkbox-90-input-size - 6px) ($checkbox-90-input-size - 6px);
+			}
+		}
+
+		input:focus ~ & {
+			border-color: $color-focus;
+			box-shadow: $box-shadow-focus;
+		}
+
+		input:focus:hover ~ & {
+			border-color: $checkbox-input-color;
+			box-shadow: none;
+		}
+
+		input:focus:checked ~ & {
+			border-color: $color-focus;
+			box-shadow: none;
+		}
+
+		input:focus:checked:hover ~ & {
+			border-color: $checkbox-input-color;
+			box-shadow: none;
+		}
+
+		.checkbox.is-invalid &,
+		input:invalid ~ & {
+			border-color: $color-error;
+		}
+	}
+
+	&:first-of-type::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: $checkbox-input-size + $checkbox-input-label-spacing;
+		height: 100%;
+		content: '';
+
+		.checkbox--90 & {
+			width: ($checkbox-90-input-size + $checkbox-input-label-spacing);
+		}
+
+		.checkbox--colored & {
+			width: $control-size-100;
+		}
+
+		.checkbox--colored.checkbox--90 & {
+			width: $control-size-90;
+		}
+	}
+
+	input:disabled ~ & {
+		opacity: $opacity-disabled;
+		cursor: default;
+	}
+}
