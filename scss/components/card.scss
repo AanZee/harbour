@@ -128,10 +128,10 @@ $card-horizontal-media-width-200: 50% !default;
 .card--media-square {
 }
 
-.card--media-sixteen-nine {
+.card--media-wide {
 }
 
-.card--media-widescreen {
+.card--media-ultra-wide {
 }
 
 .card--icon-avatar {
@@ -239,11 +239,11 @@ label.card__primary-action {
 			padding-bottom: $aspect-ratio-square;
 		}
 
-		.card--media-sixteen-nine & {
+		.card--media-wide & {
 			padding-bottom: $aspect-ratio-wide;
 		}
 
-		.card--media-widescreen & {
+		.card--media-ultra-wide & {
 			padding-bottom: $aspect-ratio-ultra-wide;
 		}
 	}

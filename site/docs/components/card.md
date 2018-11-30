@@ -38,8 +38,8 @@ Adjust orientation of media
 card--media-portret
 card--media-landscape
 card--media-square
-card--media-sixteen-nine
-card--media-widescreen
+card--media-wide
+card--media-ultra-wide
 ```
 
 Adjust shape of icon
@@ -87,7 +87,7 @@ card (modifier)
 				<div class="card__media">
 					<img class="image"
 						sizes="480px"
-						srcset="/images/placeholder-sixteen-nine-240w.jpg 240w, /images/placeholder-sixteen-nine-320w.jpg 320w, /images/placeholder-sixteen-nine-480w.jpg 480w, /images/placeholder-sixteen-nine-640w.jpg 640w, /images/placeholder-sixteen-nine-720w.jpg 720w, /images/placeholder-sixteen-nine-800w.jpg 800w, /images/placeholder-sixteen-nine-1024w.jpg 1024w, /images/placeholder-sixteen-nine-1280w.jpg 1280w, /images/placeholder-sixteen-nine-1600w.jpg 1600w, /images/placeholder-sixteen-nine-1920w.jpg 1920w, /images/placeholder-sixteen-nine-2048w.jpg 2048w"
+						srcset="/images/placeholder-wide-240w.jpg 240w, /images/placeholder-wide-320w.jpg 320w, /images/placeholder-wide-480w.jpg 480w, /images/placeholder-wide-640w.jpg 640w, /images/placeholder-wide-720w.jpg 720w, /images/placeholder-wide-800w.jpg 800w, /images/placeholder-wide-1024w.jpg 1024w, /images/placeholder-wide-1280w.jpg 1280w, /images/placeholder-wide-1600w.jpg 1600w, /images/placeholder-wide-1920w.jpg 1920w, /images/placeholder-wide-2048w.jpg 2048w"
 					>
 				</div>
 				<header class="card__header">
@@ -121,7 +121,7 @@ card (modifier)
 				<div class="card__media">
 					<img class="image"
 						sizes="480px"
-						srcset="/images/placeholder-sixteen-nine-240w.jpg 240w, /images/placeholder-sixteen-nine-320w.jpg 320w, /images/placeholder-sixteen-nine-480w.jpg 480w, /images/placeholder-sixteen-nine-640w.jpg 640w, /images/placeholder-sixteen-nine-720w.jpg 720w, /images/placeholder-sixteen-nine-800w.jpg 800w, /images/placeholder-sixteen-nine-1024w.jpg 1024w, /images/placeholder-sixteen-nine-1280w.jpg 1280w, /images/placeholder-sixteen-nine-1600w.jpg 1600w, /images/placeholder-sixteen-nine-1920w.jpg 1920w, /images/placeholder-sixteen-nine-2048w.jpg 2048w"
+						srcset="/images/placeholder-wide-240w.jpg 240w, /images/placeholder-wide-320w.jpg 320w, /images/placeholder-wide-480w.jpg 480w, /images/placeholder-wide-640w.jpg 640w, /images/placeholder-wide-720w.jpg 720w, /images/placeholder-wide-800w.jpg 800w, /images/placeholder-wide-1024w.jpg 1024w, /images/placeholder-wide-1280w.jpg 1280w, /images/placeholder-wide-1600w.jpg 1600w, /images/placeholder-wide-1920w.jpg 1920w, /images/placeholder-wide-2048w.jpg 2048w"
 					>
 				</div>
 				<header class="card__header">
@@ -191,7 +191,7 @@ card (modifier)
 				<div class="card__media">
 					<img class="image"
 						sizes="480px"
-						srcset="/images/placeholder-sixteen-nine-240w.jpg 240w, /images/placeholder-sixteen-nine-320w.jpg 320w, /images/placeholder-sixteen-nine-480w.jpg 480w, /images/placeholder-sixteen-nine-640w.jpg 640w, /images/placeholder-sixteen-nine-720w.jpg 720w, /images/placeholder-sixteen-nine-800w.jpg 800w, /images/placeholder-sixteen-nine-1024w.jpg 1024w, /images/placeholder-sixteen-nine-1280w.jpg 1280w, /images/placeholder-sixteen-nine-1600w.jpg 1600w, /images/placeholder-sixteen-nine-1920w.jpg 1920w, /images/placeholder-sixteen-nine-2048w.jpg 2048w"
+						srcset="/images/placeholder-wide-240w.jpg 240w, /images/placeholder-wide-320w.jpg 320w, /images/placeholder-wide-480w.jpg 480w, /images/placeholder-wide-640w.jpg 640w, /images/placeholder-wide-720w.jpg 720w, /images/placeholder-wide-800w.jpg 800w, /images/placeholder-wide-1024w.jpg 1024w, /images/placeholder-wide-1280w.jpg 1280w, /images/placeholder-wide-1600w.jpg 1600w, /images/placeholder-wide-1920w.jpg 1920w, /images/placeholder-wide-2048w.jpg 2048w"
 					>
 				</div>
 				<header class="card__header">
