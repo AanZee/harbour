@@ -185,6 +185,7 @@ $search-input-button-background-color: $input-background-color !default;
 	background-position: center center;
 	background-size: $spacing * 2;
 	background-repeat: no-repeat;
+	border-radius: $search-input-border-radius;
 
 	&:first-child::before {
 		position: absolute;
@@ -194,6 +195,11 @@ $search-input-button-background-color: $input-background-color !default;
 		width: $spacing;
 		background: linear-gradient(to right, transparent 0%, $color-harbour-white 100%);
 		content: '';
+	}
+
+	.search-input--rounded-ends .search-input__container &:last-child {
+		border-top-right-radius: $control-size-100 / 2;
+		border-bottom-right-radius: $control-size-100 / 2;
 	}
 }
 

@@ -113,6 +113,21 @@ search-input (modifier)
 %}
 
 {% capture search-input %}
+<div class="search-input search-input--rounded-ends">
+    <div class="search-input__container">
+        <input class="search-input__input">
+        <div class="search-input__toolbar">
+            <button class="search-input__action search-input__action--clear"></button>
+            <button class="search-input__action search-input__action--search"></button>
+        </div>
+    </div>
+</div>
+{% endcapture %}
+{% include example.html
+	content=search-input
+%}
+
+{% capture search-input %}
 <div class="search-input">
     <div class="search-input__container">
         <input class="search-input__input">
