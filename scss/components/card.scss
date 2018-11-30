@@ -62,7 +62,7 @@ $card-horizontal-media-width-200: 50% !default;
 	flex-direction: column;
 	max-width: $spacing * 60;
 	border-radius: $card-border-radius;
-	background-color: $color-background;
+	background-color: $color-background-light;
 	box-shadow: $box-shadow-100;
 
 	&.is-disabled {
