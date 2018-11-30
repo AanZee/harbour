@@ -111,7 +111,7 @@ card (modifier)
 	content=card
 %}
 
-### Horizontal card with Media and Icon
+### Horizontal card with media and icon
 {% capture card-horizontal %}
 	<section class="card card--horizontal">
 		<div class="card__actions">
@@ -145,7 +145,7 @@ card (modifier)
 	content=card-horizontal
 %}
 
-### Horizontal Expandable Card
+### Horizontal expandable card
 {% capture card-expandable-horizontal %}
 	<section class="card card--horizontal card--expandable">
 		<input class="card__expand-status"
@@ -181,7 +181,7 @@ card (modifier)
 	content=card-expandable-horizontal
 %}
 
-### Card with Excerpt and Metadata
+### Card with excerpt and metadata
 {% capture card %}
 	<section class="card">
 		<div class="card__actions">
@@ -223,7 +223,7 @@ card (modifier)
 	content=card
 %}
 
-### Card with Supplemental Actions and Square Image
+### Card with supplemental actions and square image
 {% capture card %}
 	<section class="card card--media-square">
 		<div class="card__actions">
@@ -264,7 +264,7 @@ card (modifier)
 	content=card
 %}
 
-### Horizontal Card with Supplemental Actions
+### Horizontal card with supplemental actions
 {% capture card %}
 	<section class="card card--horizontal card--90">
 		<div class="card__actions">
@@ -301,7 +301,7 @@ card (modifier)
 	content=card
 %}
 
-### Card with Control Item and Details
+### Card with control item and details
 {% capture card-with-control %}
 	<section class="card card--90">
 		<div class="card__actions">
