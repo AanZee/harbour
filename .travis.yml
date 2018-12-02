@@ -1,15 +1,32 @@
 language: node_js
 
 node_js:
-  - "8"
-  - "10"
+- '8'
+- '10'
 
 before_install:
-  - rvm install 2.5.1
+- rvm install 2.5.1
 
 install:
-  - bundle install
-  - npm install
-  - npm install -g gulp-cli
+- bundle install
+- pip install --user awscli
+- npm install
+- npm install -g gulp-cli
 
 script: npm run build
+
+deploy:
+#   on:
+#     branch: master
+  provider: s3
+  bucket: $AWS_BUCKET
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  region: $AWS_REGION
+  skip_cleanup: true
+  local_dir: ./_gh_pages
+  upload-dir: travis-builds
+
+# after_deploy:
+#   - aws configure set preview.cloudfront true
+#   - test $TRAVIS_BRANCH = "master" && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
