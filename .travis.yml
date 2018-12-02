@@ -25,7 +25,7 @@ deploy:
   region: $AWS_REGION
   skip_cleanup: true
   local_dir: ./_gh_pages
-  upload-dir: travis-builds
+  acl: public_read
 
 # after_deploy:
 #   - aws configure set preview.cloudfront true
