@@ -16,8 +16,8 @@ install:
 script: npm run build
 
 deploy:
-#   on:
-#     branch: master
+  on:
+    branch: feature/HAR-161-s3-deployments
   provider: s3
   bucket: $AWS_BUCKET
   access_key_id: $AWS_ACCESS_KEY_ID
