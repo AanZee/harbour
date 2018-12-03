@@ -103,10 +103,6 @@ $search-input-button-background-color: $input-background-color !default;
 		pointer-events: none;
 	}
 
-	&::-ms-expand {
-		display: none; // NOTE To hide select control in IE10+.
-	}
-
 	&::-ms-value {
 		background: none; // NOTE To remove blue background on IE10+ when selected.
 		color: $color-text; // NOTE To make sure the text is readable on a light background from item-pop-up-menu when selected and input is not checked.
