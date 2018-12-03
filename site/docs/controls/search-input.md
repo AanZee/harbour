@@ -19,7 +19,6 @@ search-input__input:focus
 ### Sizes
 
 ```text
-search-input--90
 search-input--max-width-90 (80, 90)
 ```
 
@@ -40,6 +39,14 @@ search-input__action--clear
 search-input__action--search
 ```
 
+#### search-input__button
+
+```text
+search-input__button--primary
+search-input__button--secondary
+search-input__button--tertiary
+```
+
 ## Structure
 
 ```text
@@ -47,8 +54,8 @@ search-input (modifier)
 ├── search-input__container
 │   ├── search-input__input
 │   ├── search-input__toolbar
-│   │   ├── search-input__action
-├── search-input__button (optional)
+│   │   ├── search-input__action (modifier)
+├── search-input__button (optional) (modifier)
 ```
 
 ## Example HTML
@@ -59,6 +66,7 @@ search-input (modifier)
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
+            <button class="search-input__action search-input__action--search"></button>
         </div>
     </div>
 </div>
@@ -68,11 +76,29 @@ search-input (modifier)
 %}
 
 {% capture search-input %}
-<div class="search-input search-input--max-width-80">
+<div class="search-input">
     <div class="search-input__container">
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
+            <button class="search-input__action">
+                Search
+            </button>
+        </div>
+    </div>
+</div>
+{% endcapture %}
+{% include example.html
+	content=search-input
+%}
+
+{% capture search-input %}
+<div class="search-input search-input--max-width-90">
+    <div class="search-input__container">
+        <input class="search-input__input">
+        <div class="search-input__toolbar">
+            <button class="search-input__action search-input__action--clear"></button>
+            <button class="search-input__action search-input__action--search"></button>
         </div>
     </div>
 </div>
@@ -87,6 +113,7 @@ search-input (modifier)
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
+            <button class="search-input__action search-input__action--search"></button>
         </div>
     </div>
 </div>
@@ -101,36 +128,6 @@ search-input (modifier)
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
-        </div>
-    </div>
-</div>
-{% endcapture %}
-{% include example.html
-	content=search-input
-%}
-
-{% capture search-input %}
-<div class="search-input">
-    <div class="search-input__container">
-        <input class="search-input__input">
-        <div class="search-input__toolbar">
-            <button class="search-input__action search-input__action--clear"></button>
-            <button class="search-input__action search-input__action--search"></button>
-        </div>
-    </div>
-</div>
-{% endcapture %}
-{% include example.html
-	content=search-input
-%}
-
-{% capture search-input %}
-<div class="search-input search-input--rounded-ends">
-    <div class="search-input__container">
-        <input class="search-input__input">
-        <div class="search-input__toolbar">
-            <button class="search-input__action search-input__action--clear"></button>
-            <button class="search-input__action search-input__action--search"></button>
         </div>
     </div>
 </div>
@@ -199,6 +196,23 @@ search-input (modifier)
         </div>
     </div>
     <button class="search-input__button">
+        Search
+    </button>
+</div>
+{% endcapture %}
+{% include example.html
+	content=search-input
+%}
+
+{% capture search-input %}
+<div class="search-input">
+    <div class="search-input__container">
+        <input class="search-input__input">
+        <div class="search-input__toolbar">
+            <button class="search-input__action search-input__action--clear"></button>
+        </div>
+    </div>
+    <button class="search-input__button search-input__button--primary">
         Search
     </button>
 </div>

@@ -171,13 +171,15 @@ $search-input-button-background-color: $input-background-color !default;
 .search-input__action {
 	position: relative;
 	display: inline-block;
-	width: $control-size-100;
+	padding: $spacing ($spacing * 2);
+	min-width: $control-size-100;
 	height: 100%;
-	background-image: url(get-svg-uri($icon-cross, $color-text-300));
+	border-radius: $search-input-border-radius;
 	background-position: center center;
 	background-size: $spacing * 2;
 	background-repeat: no-repeat;
-	border-radius: $search-input-border-radius;
+	vertical-align: middle;
+	cursor: default;
 
 	&:first-child::before {
 		position: absolute;
@@ -187,6 +189,11 @@ $search-input-button-background-color: $input-background-color !default;
 		width: $spacing;
 		background: linear-gradient(to right, transparent 0%, $color-harbour-white 100%);
 		content: '';
+	}
+
+	.search-input__action--clear ~ &:not(.search-input__action--clear):not(.search-input__action--search),
+	.search-input__action--search ~ &:not(.search-input__action--clear):not(.search-input__action--search) {
+		padding-left: $spacing * 0.5;
 	}
 
 	.search-input--rounded-ends .search-input__container:last-child &:last-child {
@@ -227,4 +234,16 @@ $search-input-button-background-color: $input-background-color !default;
 		border-top-right-radius: $control-size-100 / 2;
 		border-bottom-right-radius: $control-size-100 / 2;
 	}
+}
+
+.search-input__button--primary {
+	background: $color-primary;
+}
+
+.search-input__button--secondary {
+	background: $color-secondary;
+}
+
+.search-input__button--tertiary {
+	background: $color-tertiary;
 }
