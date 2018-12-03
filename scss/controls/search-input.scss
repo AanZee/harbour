@@ -11,6 +11,10 @@ $search-input-button-background-color: $input-background-color !default;
 	color: $input-color;
 	font-size: $input-font-size;
 	line-height: $input-line-height;
+
+	.search-input--90 & {
+		height: $control-size-90;
+	}
 }
 
 .search-input--max-width-90 {
@@ -67,6 +71,10 @@ $search-input-button-background-color: $input-background-color !default;
 			pointer-events: none;
 		}
 	}
+
+	.search-input--90 & {
+		height: $control-size-90;
+	}
 }
 
 .search-input__input {
@@ -117,14 +125,17 @@ $search-input-button-background-color: $input-background-color !default;
 	}
 
 	.search-input--90 & {
-		padding-right: $spacing * 1.5;
-		padding-left: $spacing * 1.5;
-		height: $control-size-90;
+		padding: ($spacing * 0.75) $spacing * 1.5;
+		height: $control-size-90 - 2px;
 		font-size: $font-size-100;
 	}
 
 	.search-input--rounded-ends & {
 		padding-left: $control-size-100 / 2;
+	}
+
+	.search-input--90.search-input--rounded-ends & {
+		padding-left: $control-size-90 / 2;
 	}
 
 	.search-input--icon & {
@@ -191,6 +202,10 @@ $search-input-button-background-color: $input-background-color !default;
 		content: '';
 	}
 
+	.search-input--90 & {
+		min-width: $control-size-90;
+	}
+
 	.search-input__action--clear ~ &:not(.search-input__action--clear):not(.search-input__action--search),
 	.search-input__action--search ~ &:not(.search-input__action--clear):not(.search-input__action--search) {
 		padding-left: $spacing * 0.5;
@@ -223,6 +238,10 @@ $search-input-button-background-color: $input-background-color !default;
 	background: $search-input-button-background-color;
 	cursor: default;
 	user-select: none;
+
+	.search-input--90 & {
+		min-width: $control-size-90;
+	}
 
 	.search-input--button-seperated & {
 		margin-left: $search-input-button-gap;

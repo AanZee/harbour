@@ -19,6 +19,7 @@ search-input__input:focus
 ### Sizes
 
 ```text
+search-input--90
 search-input--max-width-90 (80, 90)
 ```
 
@@ -59,6 +60,38 @@ search-input (modifier)
 ```
 
 ## Example HTML
+
+{% capture search-input %}
+<div class="search-input">
+    <div class="search-input__container">
+        <input class="search-input__input"
+            placeholder="search"
+        >
+        <div class="search-input__toolbar">
+            <button class="search-input__action search-input__action--clear"></button>
+        </div>
+    </div>
+</div>
+{% endcapture %}
+{% include example.html
+	content=search-input
+%}
+
+{% capture search-input %}
+<div class="search-input search-input--90 search-input--rounded-ends">
+    <div class="search-input__container">
+        <input class="search-input__input"
+            placeholder="search"
+        >
+        <div class="search-input__toolbar">
+            <button class="search-input__action search-input__action--clear"></button>
+        </div>
+    </div>
+</div>
+{% endcapture %}
+{% include example.html
+	content=search-input
+%}
 
 {% capture search-input %}
 <div class="search-input">
