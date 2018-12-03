@@ -18,15 +18,7 @@ $search-input-button-background-color: $input-background-color !default;
 }
 
 .search-input--max-width-80 {
-	max-width: $spacing * 24;
-}
-
-.search-input--max-width-70 {
-	max-width: $spacing * 20;
-}
-
-.search-input--max-width-60 {
-	max-width: $spacing * 16;
+	max-width: $spacing * 32;
 }
 
 .search-input__container {
