@@ -18,7 +18,7 @@ A detailed explanation of all the components, combined with visual use cases and
 
 ## Contributing
 
-More details on running Harbour on your local machine and adding to the project can be found on the [contributing page](https://aanzee.github.io/harbour/contributing.html).
+We happily accept contributions to Harbour. Please check the [contributing guideline](CONTRIBUTING.md) for more information.
 
 ## License
 [MIT](LICENSE.md)
