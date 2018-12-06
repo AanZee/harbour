@@ -1,3 +1,18 @@
+# 1.20.3
+
+## Bugfix
+* Add missing commas srcset in the card documentation
+
+# 1.20.2
+
+## Bugfix
+* Add changelog for 1.20.1 and update package.json
+
+# 1.20.1
+
+## Bugfix
+* Add relative url pipe to images so they render on GitHub pages
+
 # 1.20.0
 
 ## Feature

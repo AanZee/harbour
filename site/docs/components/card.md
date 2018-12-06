@@ -87,7 +87,19 @@ card (modifier)
 				<div class="card__media">
 					<img class="image"
 						sizes="480px"
-						srcset="/images/placeholder-wide-240w.jpg 240w, /images/placeholder-wide-320w.jpg 320w, /images/placeholder-wide-480w.jpg 480w, /images/placeholder-wide-640w.jpg 640w, /images/placeholder-wide-720w.jpg 720w, /images/placeholder-wide-800w.jpg 800w, /images/placeholder-wide-1024w.jpg 1024w, /images/placeholder-wide-1280w.jpg 1280w, /images/placeholder-wide-1600w.jpg 1600w, /images/placeholder-wide-1920w.jpg 1920w, /images/placeholder-wide-2048w.jpg 2048w"
+						srcset="
+							{{ '/images/placeholder-wide-240w.jpg' | relative_url }} 240w,
+							{{ '/images/placeholder-wide-320w.jpg' | relative_url }} 320w,
+							{{ '/images/placeholder-wide-480w.jpg' | relative_url }} 480w,
+							{{ '/images/placeholder-wide-640w.jpg' | relative_url }} 640w,
+							{{ '/images/placeholder-wide-720w.jpg' | relative_url }} 720w,
+							{{ '/images/placeholder-wide-800w.jpg' | relative_url }} 800w,
+							{{ '/images/placeholder-wide-1024w.jpg' | relative_url }} 1024w,
+							{{ '/images/placeholder-wide-1280w.jpg' | relative_url }} 1280w,
+							{{ '/images/placeholder-wide-1600w.jpg' | relative_url }} 1600w,
+							{{ '/images/placeholder-wide-1920w.jpg' | relative_url }} 1920w,
+							{{ '/images/placeholder-wide-2048w.jpg' | relative_url }} 2048w
+						"
 					>
 				</div>
 				<header class="card__header">
@@ -121,7 +133,19 @@ card (modifier)
 				<div class="card__media">
 					<img class="image"
 						sizes="480px"
-						srcset="/images/placeholder-wide-240w.jpg 240w, /images/placeholder-wide-320w.jpg 320w, /images/placeholder-wide-480w.jpg 480w, /images/placeholder-wide-640w.jpg 640w, /images/placeholder-wide-720w.jpg 720w, /images/placeholder-wide-800w.jpg 800w, /images/placeholder-wide-1024w.jpg 1024w, /images/placeholder-wide-1280w.jpg 1280w, /images/placeholder-wide-1600w.jpg 1600w, /images/placeholder-wide-1920w.jpg 1920w, /images/placeholder-wide-2048w.jpg 2048w"
+						srcset="
+							{{ '/images/placeholder-wide-240w.jpg' | relative_url }} 240w,
+							{{ '/images/placeholder-wide-320w.jpg' | relative_url }} 320w,
+							{{ '/images/placeholder-wide-480w.jpg' | relative_url }} 480w,
+							{{ '/images/placeholder-wide-640w.jpg' | relative_url }} 640w,
+							{{ '/images/placeholder-wide-720w.jpg' | relative_url }} 720w,
+							{{ '/images/placeholder-wide-800w.jpg' | relative_url }} 800w,
+							{{ '/images/placeholder-wide-1024w.jpg' | relative_url }} 1024w,
+							{{ '/images/placeholder-wide-1280w.jpg' | relative_url }} 1280w,
+							{{ '/images/placeholder-wide-1600w.jpg' | relative_url }} 1600w
+							{{ '/images/placeholder-wide-1920w.jpg' | relative_url }} 1920w,
+							{{ '/images/placeholder-wide-2048w.jpg' | relative_url }} 2048w
+						"
 					>
 				</div>
 				<header class="card__header">
@@ -191,7 +215,19 @@ card (modifier)
 				<div class="card__media">
 					<img class="image"
 						sizes="480px"
-						srcset="/images/placeholder-wide-240w.jpg 240w, /images/placeholder-wide-320w.jpg 320w, /images/placeholder-wide-480w.jpg 480w, /images/placeholder-wide-640w.jpg 640w, /images/placeholder-wide-720w.jpg 720w, /images/placeholder-wide-800w.jpg 800w, /images/placeholder-wide-1024w.jpg 1024w, /images/placeholder-wide-1280w.jpg 1280w, /images/placeholder-wide-1600w.jpg 1600w, /images/placeholder-wide-1920w.jpg 1920w, /images/placeholder-wide-2048w.jpg 2048w"
+						srcset="
+							{{ '/images/placeholder-wide-240w.jpg' | relative_url }} 240w,
+							{{ '/images/placeholder-wide-320w.jpg' | relative_url }} 320w,
+							{{ '/images/placeholder-wide-480w.jpg' | relative_url }} 480w,
+							{{ '/images/placeholder-wide-640w.jpg' | relative_url }} 640w,
+							{{ '/images/placeholder-wide-720w.jpg' | relative_url }} 720w,
+							{{ '/images/placeholder-wide-800w.jpg' | relative_url }} 800w,
+							{{ '/images/placeholder-wide-1024w.jpg' | relative_url }} 1024w,
+							{{ '/images/placeholder-wide-1280w.jpg' | relative_url }} 1280w,
+							{{ '/images/placeholder-wide-1600w.jpg' | relative_url }} 1600w
+							{{ '/images/placeholder-wide-1920w.jpg' | relative_url }} 1920w,
+							{{ '/images/placeholder-wide-2048w.jpg' | relative_url }} 2048w
+						"
 					>
 				</div>
 				<header class="card__header">
@@ -231,7 +267,19 @@ card (modifier)
 				<div class="card__media">
 					<img class="image"
 						sizes="480px"
-						srcset="/images/placeholder-square-240w.jpg 240w, /images/placeholder-square-320w.jpg 320w, /images/placeholder-square-480w.jpg 480w, /images/placeholder-square-640w.jpg 640w, /images/placeholder-square-720w.jpg 720w, /images/placeholder-square-800w.jpg 800w, /images/placeholder-square-1024w.jpg 1024w, /images/placeholder-square-1280w.jpg 1280w, /images/placeholder-square-1600w.jpg 1600w, /images/placeholder-square-1920w.jpg 1920w, /images/placeholder-square-2048w.jpg 2048w"
+						srcset="
+							{{ '/images/placeholder-square-240w.jpg' | relative_url }} 240w,
+							{{ '/images/placeholder-square-320w.jpg' | relative_url }} 320w,
+							{{ '/images/placeholder-square-480w.jpg' | relative_url }} 480w,
+							{{ '/images/placeholder-square-640w.jpg' | relative_url }} 640w,
+							{{ '/images/placeholder-square-720w.jpg' | relative_url }} 720w,
+							{{ '/images/placeholder-square-800w.jpg' | relative_url }} 800w,
+							{{ '/images/placeholder-square-1024w.jpg' | relative_url }} 1024w,
+							{{ '/images/placeholder-square-1280w.jpg' | relative_url }} 1280w
+							{{ '/images/placeholder-square-1600w.jpg' | relative_url }} 1600w,
+							{{ '/images/placeholder-square-1920w.jpg' | relative_url }} 1920w,
+							{{ '/images/placeholder-square-2048w.jpg' | relative_url }} 2048w
+						"
 					>
 				</div>
 				<header class="card__header">
