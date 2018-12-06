@@ -1,3 +1,32 @@
+# 1.20.3
+
+## Bugfix
+* Add missing commas srcset in the card documentation
+
+# 1.20.2
+
+## Bugfix
+* Add changelog for 1.20.1 and update package.json
+
+# 1.20.1
+
+## Bugfix
+* Add relative url pipe to images so they render on GitHub pages
+
+# 1.20.0
+
+## Feature
+* Add card component [HAR-163]
+* Add tag component [HAR-163]
+* Add placeholder images [HAR-163]
+
+## Improvements
+* Change font-families
+* Add icons used in card
+* Add box shadow variations
+* Add font-weight settings
+* Add aspect-ratio and text-width size settings
+
 # 1.19.0
 
 ## Feature
