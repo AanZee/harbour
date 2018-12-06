@@ -1,16 +1,8 @@
----
-layout: home
-title: Contributing
----
-## Contributing
-
-I you want to contribute to this project you can create a pull request on [Github](https://github.com/AanZee/harbour).
-
-## Running Harbour locally
+# Running Harbour locally
 
 In order to actively contribute to the project you can test your changes by running Harbour locally. The static website you are reading right now is generated using [Jekyll](https://jekyllrb.com/). In order to use Jekyll, you probably have to update ruby on your machine first.
 
-### Installing ruby/rbenv
+## Installing ruby/rbenv
 
 First we install `rbenv`, so that we can easily install the correct version of `Ruby`. Installing `rbenv` on Mac OS can best be done using [Homebrew](https://brew.sh/).
 
@@ -43,7 +35,7 @@ rbenv install 2.5.1
 rbenv global 2.5.1
 ```
 
-### Installing project
+## Installing project
 
 Checkout the project and open the root folder in your terminal. 
 
@@ -54,7 +46,7 @@ gem install bundler jekyll
 npm install
 ```
 
-### Running the project
+## Running the project
 
 ```bash
 npm run start

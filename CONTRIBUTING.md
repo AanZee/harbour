@@ -4,7 +4,7 @@ Thank you for taking the time to contribute to Harbour.
 
 ## Local testing
 
-To prevent builds from failing you should test your changes on your local machine before pushing. Read the [Run Local Harbour](/docs/run-local-harbour.md) guide.
+To prevent builds from failing you should test your changes on your local machine before pushing. Read the [Run Local Harbour](/run-local-harbour.md) guide.
 
 ## Pull request
 
