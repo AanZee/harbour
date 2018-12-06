@@ -1,6 +1,6 @@
 $search-input-button-gap: $spacing * 2 !default;
 $search-input-border: $input-border  !default;
-$search-input-border-radius: $border-radius-90 !default;
+$search-input-border-radius: $input-border-radius !default;
 $search-input-button-background-color: $input-background-color !default;
 
 .search-input {
@@ -11,17 +11,18 @@ $search-input-button-background-color: $input-background-color !default;
 	color: $input-color;
 	font-size: $input-font-size;
 	line-height: $input-line-height;
-
-	.search-input--90 & {
-		height: $control-size-90;
-	}
 }
 
-.search-input--max-width-90 {
+.search-input--90 {
+	height: $control-size-90;
+}
+
+.search-input--narrow,
+.search-input--narrow-100 {
 	max-width: $spacing * 40;
 }
 
-.search-input--max-width-80 {
+.search-input--narrow-90 {
 	max-width: $spacing * 32;
 }
 
@@ -65,7 +66,7 @@ $search-input-button-background-color: $input-background-color !default;
 			height: $control-size-100;
 			background-image: url(get-svg-uri($icon-search-bold, $color-ui-400));
 			background-position: center center;
-			background-size: $spacing * 2;
+			background-size: $icon-size-100;
 			background-repeat: no-repeat;
 			content: '';
 			pointer-events: none;
@@ -121,7 +122,7 @@ $search-input-button-background-color: $input-background-color !default;
 	}
 
 	.search-input--90 & {
-		padding: ($spacing * 0.75) $spacing * 1.5;
+		padding: ($spacing * 0.75) ($spacing * 1.5);
 		height: $control-size-90 - 2px;
 		font-size: $font-size-100;
 	}
@@ -183,7 +184,7 @@ $search-input-button-background-color: $input-background-color !default;
 	height: 100%;
 	border-radius: $search-input-border-radius;
 	background-position: center center;
-	background-size: $spacing * 2;
+	background-size: $icon-size-100;
 	background-repeat: no-repeat;
 	vertical-align: middle;
 	cursor: default;
@@ -194,7 +195,7 @@ $search-input-button-background-color: $input-background-color !default;
 		right: 100%;
 		bottom: 0;
 		width: $spacing;
-		background: linear-gradient(to right, transparent 0%, $color-harbour-white 100%);
+		background-image: linear-gradient(to right, transparent 0%, $color-harbour-white 100%);
 		content: '';
 	}
 
@@ -231,7 +232,7 @@ $search-input-button-background-color: $input-background-color !default;
 	border-left: none;
 	border-top-right-radius: $search-input-border-radius;
 	border-bottom-right-radius: $search-input-border-radius;
-	background: $search-input-button-background-color;
+	background-color: $search-input-button-background-color;
 	cursor: default;
 	user-select: none;
 
@@ -252,13 +253,13 @@ $search-input-button-background-color: $input-background-color !default;
 }
 
 .search-input__button--primary {
-	background: $color-primary;
+	background-color: $color-primary;
 }
 
 .search-input__button--secondary {
-	background: $color-secondary;
+	background-color: $color-secondary;
 }
 
 .search-input__button--tertiary {
-	background: $color-tertiary;
+	background-color: $color-tertiary;
 }
