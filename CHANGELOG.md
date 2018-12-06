@@ -1,3 +1,17 @@
+# 1.20.0
+
+## Feature
+* Add card component [HAR-163]
+* Add tag component [HAR-163]
+* Add placeholder images [HAR-163]
+
+## Improvements
+* Change font-families
+* Add icons used in card
+* Add box shadow variations
+* Add font-weight settings
+* Add aspect-ratio and text-width size settings
+
 # 1.19.0
 
 ## Feature
