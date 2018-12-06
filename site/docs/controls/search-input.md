@@ -20,8 +20,8 @@ search-input__input:focus
 
 ```text
 search-input--90
-search-input--max-width
-search-input--max-width-90 (100, 90)
+search-input--narrow
+search-input--narrow-90 (100, 90)
 ```
 
 ### Other
@@ -127,7 +127,7 @@ search-input (modifier)
 %}
 
 {% capture search-input %}
-<div class="search-input search-input--max-width">
+<div class="search-input search-input--narrow">
     <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
