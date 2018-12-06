@@ -21,7 +21,7 @@ search-input__input:focus
 ```text
 search-input--90
 search-input--narrow
-search-input--narrow-90 (100, 90)
+search-input--condensed
 ```
 
 ### Other

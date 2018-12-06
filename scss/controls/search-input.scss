@@ -17,12 +17,11 @@ $search-input-button-background-color: $input-background-color !default;
 	height: $control-size-90;
 }
 
-.search-input--narrow,
-.search-input--narrow-100 {
+.search-input--narrow {
 	max-width: $spacing * 40;
 }
 
-.search-input--narrow-90 {
+.search-input--condensed {
 	max-width: $spacing * 32;
 }
 
