@@ -138,7 +138,7 @@ card (modifier)
 							{{ '/images/placeholder-wide-320w.jpg' | relative_url }} 320w,
 							{{ '/images/placeholder-wide-480w.jpg' | relative_url }} 480w,
 							{{ '/images/placeholder-wide-640w.jpg' | relative_url }} 640w,
-							{{ '/images/placeholder-wide-720w.jpg' | relative_url }} 720w
+							{{ '/images/placeholder-wide-720w.jpg' | relative_url }} 720w,
 							{{ '/images/placeholder-wide-800w.jpg' | relative_url }} 800w,
 							{{ '/images/placeholder-wide-1024w.jpg' | relative_url }} 1024w,
 							{{ '/images/placeholder-wide-1280w.jpg' | relative_url }} 1280w,
@@ -220,7 +220,7 @@ card (modifier)
 							{{ '/images/placeholder-wide-320w.jpg' | relative_url }} 320w,
 							{{ '/images/placeholder-wide-480w.jpg' | relative_url }} 480w,
 							{{ '/images/placeholder-wide-640w.jpg' | relative_url }} 640w,
-							{{ '/images/placeholder-wide-720w.jpg' | relative_url }} 720w
+							{{ '/images/placeholder-wide-720w.jpg' | relative_url }} 720w,
 							{{ '/images/placeholder-wide-800w.jpg' | relative_url }} 800w,
 							{{ '/images/placeholder-wide-1024w.jpg' | relative_url }} 1024w,
 							{{ '/images/placeholder-wide-1280w.jpg' | relative_url }} 1280w,
@@ -271,7 +271,7 @@ card (modifier)
 							{{ '/images/placeholder-square-240w.jpg' | relative_url }} 240w,
 							{{ '/images/placeholder-square-320w.jpg' | relative_url }} 320w,
 							{{ '/images/placeholder-square-480w.jpg' | relative_url }} 480w,
-							{{ '/images/placeholder-square-640w.jpg' | relative_url }} 640w
+							{{ '/images/placeholder-square-640w.jpg' | relative_url }} 640w,
 							{{ '/images/placeholder-square-720w.jpg' | relative_url }} 720w,
 							{{ '/images/placeholder-square-800w.jpg' | relative_url }} 800w,
 							{{ '/images/placeholder-square-1024w.jpg' | relative_url }} 1024w,
