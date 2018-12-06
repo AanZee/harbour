@@ -25,7 +25,7 @@ $search-input-button-background-color: $input-background-color !default;
 	max-width: $spacing * 32;
 }
 
-.search-input__container {
+.search-input__input-box {
 	position: relative;
 	display: flex;
 	justify-content: stretch;
@@ -162,7 +162,7 @@ $search-input-button-background-color: $input-background-color !default;
 				border-radius: $control-size-100 / 2;
 			}
 
-			.search-input__container:not(:last-child) & {
+			.search-input__input-box:not(:last-child) & {
 				border-top-right-radius: $search-input-border-radius;
 				border-bottom-right-radius: $search-input-border-radius;
 			}
@@ -207,7 +207,7 @@ $search-input-button-background-color: $input-background-color !default;
 		padding-left: $spacing * 0.5;
 	}
 
-	.search-input--rounded-ends .search-input__container:last-child &:last-child {
+	.search-input--rounded-ends .search-input__input-box:last-child &:last-child {
 		border-top-right-radius: $control-size-100 / 2;
 		border-bottom-right-radius: $control-size-100 / 2;
 	}

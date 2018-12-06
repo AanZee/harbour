@@ -52,7 +52,7 @@ search-input__button--tertiary
 
 ```text
 search-input (modifier)
-├── search-input__container
+├── search-input__input-box
 │   ├── search-input__input
 │   ├── search-input__toolbar
 │   │   ├── search-input__action (modifier)
@@ -63,7 +63,7 @@ search-input (modifier)
 
 {% capture search-input %}
 <div class="search-input">
-    <div class="search-input__container">
+    <div class="search-input__input-box">
         <input class="search-input__input"
             placeholder="search"
         >
@@ -79,7 +79,7 @@ search-input (modifier)
 
 {% capture search-input %}
 <div class="search-input search-input--90 search-input--rounded-ends">
-    <div class="search-input__container">
+    <div class="search-input__input-box">
         <input class="search-input__input"
             placeholder="search"
         >
@@ -95,7 +95,7 @@ search-input (modifier)
 
 {% capture search-input %}
 <div class="search-input">
-    <div class="search-input__container">
+    <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
@@ -110,7 +110,7 @@ search-input (modifier)
 
 {% capture search-input %}
 <div class="search-input">
-    <div class="search-input__container">
+    <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
@@ -127,7 +127,7 @@ search-input (modifier)
 
 {% capture search-input %}
 <div class="search-input search-input--max-width-90">
-    <div class="search-input__container">
+    <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
@@ -142,7 +142,7 @@ search-input (modifier)
 
 {% capture search-input %}
 <div class="search-input search-input--rounded-ends">
-    <div class="search-input__container">
+    <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
@@ -157,7 +157,7 @@ search-input (modifier)
 
 {% capture search-input %}
 <div class="search-input search-input--rounded-ends search-input--icon">
-    <div class="search-input__container">
+    <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
@@ -171,7 +171,7 @@ search-input (modifier)
 
 {% capture search-input %}
 <div class="search-input">
-    <div class="search-input__container">
+    <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
@@ -188,7 +188,7 @@ search-input (modifier)
 
 {% capture search-input %}
 <div class="search-input search-input--rounded-ends">
-    <div class="search-input__container">
+    <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
@@ -205,7 +205,7 @@ search-input (modifier)
 
 {% capture search-input %}
 <div class="search-input search-input--button-seperated">
-    <div class="search-input__container">
+    <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
@@ -222,7 +222,7 @@ search-input (modifier)
 
 {% capture search-input %}
 <div class="search-input search-input--rounded-ends search-input--button-seperated">
-    <div class="search-input__container">
+    <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
@@ -239,7 +239,7 @@ search-input (modifier)
 
 {% capture search-input %}
 <div class="search-input">
-    <div class="search-input__container">
+    <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
             <button class="search-input__action search-input__action--clear"></button>
