@@ -1,3 +1,8 @@
+# 1.20.3
+
+## Bugfix
+* Add missing commas srcset in the card documentation
+
 # 1.20.2
 
 ## Bugfix
