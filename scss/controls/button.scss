@@ -28,7 +28,7 @@ $button-disabled-opacity: 0.35 !default;
 	font-size: $button-font-size;
 	font-weight: bold;
 	line-height: $button-line-height;
-	cursor: default;
+	cursor: pointer;
 	user-select: none;
 
 	@if ($button-outset) {
