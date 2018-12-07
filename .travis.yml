@@ -28,7 +28,9 @@ jobs:
   include:
     - stage: Deploy
       node_js: '10'
-      script: npm run build
+      script:
+      - PACKAGE_VERSION=$(cat package.json \ | grep version \ | head -1 \ | awk -F: '{ print $2 }' \ | sed 's/[",]//g')
+      - npm run build
       deploy:
         on:
           branch: feature/HAR-161-s3-deployments
