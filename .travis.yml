@@ -43,18 +43,18 @@ jobs:
         skip_cleanup: true
         local_dir: ./_gh_pages
         acl: public_read
-      # deploy:
-      #   on:
-      #     branch: feature/HAR-161-s3-deployments
-      #   provider: s3
-      #   bucket: $AWS_BUCKET
-      #   access_key_id: $AWS_ACCESS_KEY_ID
-      #   secret_access_key: $AWS_SECRET_ACCESS_KEY
-      #   region: $AWS_REGION
-      #   skip_cleanup: true
-      #   local_dir: ./_gh_pages
-      #   acl: public_read
-      #   upload-dir: $PACKAGE_VERSION
+      deploy:
+        on:
+          branch: feature/HAR-161-s3-deployments
+        provider: s3
+        bucket: $AWS_BUCKET
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key: $AWS_SECRET_ACCESS_KEY
+        region: $AWS_REGION
+        skip_cleanup: true
+        local_dir: ./_gh_pages
+        acl: public_read
+        upload-dir: '0.0.1'
     - stage: After deploy
       after_deploy:
         - aws configure set preview.cloudfront true
