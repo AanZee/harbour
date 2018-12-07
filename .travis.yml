@@ -12,7 +12,7 @@ install:
 - pip install --user awscli
 - npm install
 - npm install -g gulp-cli
-- PACKAGE_VERSION=$(cat package.json \ | grep version \ | head -1 \ | awk -F: '{ print $2 }' \ | sed 's/[",]//g')
+# - PACKAGE_VERSION=$(cat package.json \ | grep version \ | head -1 \ | awk -F: '{ print $2 }' \ | sed 's/[",]//g')
 # Multiple commands, on single line
 # PACKAGE_VERSION=$(cat package.json \
 # | grep version \
@@ -40,18 +40,18 @@ jobs:
         skip_cleanup: true
         local_dir: ./_gh_pages
         acl: public_read
-      deploy:
-        on:
-          branch: feature/HAR-161-s3-deployments
-        provider: s3
-        bucket: $AWS_BUCKET
-        access_key_id: $AWS_ACCESS_KEY_ID
-        secret_access_key: $AWS_SECRET_ACCESS_KEY
-        region: $AWS_REGION
-        skip_cleanup: true
-        local_dir: ./_gh_pages
-        acl: public_read
-        upload-dir: $PACKAGE_VERSION
+      # deploy:
+      #   on:
+      #     branch: feature/HAR-161-s3-deployments
+      #   provider: s3
+      #   bucket: $AWS_BUCKET
+      #   access_key_id: $AWS_ACCESS_KEY_ID
+      #   secret_access_key: $AWS_SECRET_ACCESS_KEY
+      #   region: $AWS_REGION
+      #   skip_cleanup: true
+      #   local_dir: ./_gh_pages
+      #   acl: public_read
+      #   upload-dir: $PACKAGE_VERSION
     - stage: After deploy
       after_deploy:
         - aws configure set preview.cloudfront true
