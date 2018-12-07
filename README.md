@@ -18,7 +18,7 @@ A detailed explanation of all the components, combined with visual use cases and
 
 ## Contributing
 
-We happily accept contributions to Harbour. Please check the [contributing guideline](CONTRIBUTING.md) for more information.
+We happily accept contributions to Harbour. Please check the [contributing guideline](/docs/CONTRIBUTING.md) for more information.
 
 ## License
 [MIT](LICENSE.md)
