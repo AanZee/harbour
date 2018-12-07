@@ -15,19 +15,22 @@ install:
 
 script: npm run build
 
-deploy:
-  on:
-    branch: feature/HAR-161-s3-deployments
-  provider: s3
-  bucket: $AWS_BUCKET
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  region: $AWS_REGION
-  skip_cleanup: true
-  local_dir: ./_gh_pages
-  acl: public_read
-
-after_deploy:
-  - aws configure set preview.cloudfront true
+jobs:
+  include:
+    - stage: deploy
+      node_js: '10'
+      on:
+        branch: feature/HAR-161-s3-deployments
+        provider: s3
+        bucket: $AWS_BUCKET
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key: $AWS_SECRET_ACCESS_KEY
+        region: $AWS_REGION
+        skip_cleanup: true
+        local_dir: ./_gh_pages
+        acl: public_read
+    - stage: after_deploy
+      script:
+        - aws configure set preview.cloudfront true
 #   - test $TRAVIS_BRANCH = "master" && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
-  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+        - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
