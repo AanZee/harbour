@@ -19,7 +19,7 @@ jobs:
   include:
     - stage: Deploy
       node_js: '10'
-      script: echo "Deploying to S3"
+      script: npm run build
       deploy:
         on:
           branch: feature/HAR-161-s3-deployments
