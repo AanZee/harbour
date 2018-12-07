@@ -17,20 +17,23 @@ script: npm run build
 
 jobs:
   include:
-    - stage: deploy
+    - stage: Deploy
       node_js: '10'
-      on:
-        branch: feature/HAR-161-s3-deployments
-      provider: s3
-      bucket: $AWS_BUCKET
-      access_key_id: $AWS_ACCESS_KEY_ID
-      secret_access_key: $AWS_SECRET_ACCESS_KEY
-      region: $AWS_REGION
-      skip_cleanup: true
-      local_dir: ./_gh_pages
-      acl: public_read
-    - stage: after_deploy
-      script:
+      script: echo "Deploying to S3"
+      deploy:
+        on:
+          branch: feature/HAR-161-s3-deployments
+        provider: s3
+        bucket: $AWS_BUCKET
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key: $AWS_SECRET_ACCESS_KEY
+        region: $AWS_REGION
+        skip_cleanup: true
+        local_dir: ./_gh_pages
+        acl: public_read
+    - stage: After deploy
+      script: echo "Invalidating Cloudfront cache"
+      after_deploy:
         - aws configure set preview.cloudfront true
 #   - test $TRAVIS_BRANCH = "master" && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
         - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"

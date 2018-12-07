@@ -7,5 +7,7 @@
 ## Docs
 [See documentation](https://aanzee.github.io/harbour/docs)
 
+DEBUG
+
 ## License
 [MIT](LICENSE.md)
