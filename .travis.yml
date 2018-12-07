@@ -6,11 +6,13 @@ node_js:
 
 before_install:
 - rvm install 2.5.1
-- PACKAGE_VERSION=$(cat package.json \
-  | grep version \
-  | head -1 \
-  | awk -F: '{ print $2 }' \
-  | sed 's/[",]//g')
+- PACKAGE_VERSION=$(cat package.json \ | grep version \ | head -1 \ | awk -F: '{ print $2 }' \ | sed 's/[",]//g')
+# Multiple commands, on single line
+# PACKAGE_VERSION=$(cat package.json \
+# | grep version \
+# | head -1 \
+# | awk -F: '{ print $2 }' \
+# | sed 's/[",]//g')
 
 install:
 - bundle install
