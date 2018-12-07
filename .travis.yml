@@ -6,6 +6,12 @@ node_js:
 
 before_install:
 - rvm install 2.5.1
+
+install:
+- bundle install
+- pip install --user awscli
+- npm install
+- npm install -g gulp-cli
 - PACKAGE_VERSION=$(cat package.json \ | grep version \ | head -1 \ | awk -F: '{ print $2 }' \ | sed 's/[",]//g')
 # Multiple commands, on single line
 # PACKAGE_VERSION=$(cat package.json \
@@ -14,16 +20,9 @@ before_install:
 # | awk -F: '{ print $2 }' \
 # | sed 's/[",]//g')
 
-install:
-- bundle install
-- pip install --user awscli
-- npm install
-- npm install -g gulp-cli
-
-script:
-- npm run build
-- echo $TRAVIS_EVENT_TYPE
-- echo $TRAVIS_COMMIT
+script: npm run build
+# - echo $TRAVIS_EVENT_TYPE
+# - echo $TRAVIS_COMMIT
 
 jobs:
   include:
