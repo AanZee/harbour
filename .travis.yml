@@ -55,7 +55,6 @@ jobs:
         local_dir: ./_gh_pages
         acl: public_read
         upload-dir: '0.0.1'
-    - stage: After deploy
       after_deploy:
         - aws configure set preview.cloudfront true
         - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
