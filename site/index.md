@@ -20,3 +20,4 @@ npm install aanzee-harbour
 
 More details on running Harbour on your local machine and adding to the project can be found on the [contributing page]({{ '/contributing.html' | relative_url }}).
 
+DEBUG 💩
