@@ -20,8 +20,10 @@ install:
 - npm install
 - npm install -g gulp-cli
 
-script: npm run build
-script: echo "TRAVIS_COMMIT"
+script:
+- npm run build
+- echo $TRAVIS_EVENT_TYPE
+- echo $TRAVIS_COMMIT
 
 jobs:
   include:
