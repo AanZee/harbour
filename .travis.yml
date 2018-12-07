@@ -20,17 +20,17 @@ install:
 # | awk -F: '{ print $2 }' \
 # | sed 's/[",]//g')
 
-script: npm run build
-# - echo $TRAVIS_EVENT_TYPE
-# - echo $TRAVIS_COMMIT
+script:
+- npm run build
+- echo $TRAVIS_EVENT_TYPE
+- echo $TRAVIS_COMMIT
+- echo $TRAVIS_BRANCH
 
 jobs:
   include:
     - stage: Deploy
       node_js: '10'
       script:
-      - echo $TRAVIS_EVENT_TYPE
-      - echo $TRAVIS_COMMIT
       - npm run build
       deploy:
         on:
