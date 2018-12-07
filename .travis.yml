@@ -29,7 +29,8 @@ jobs:
     - stage: Deploy
       node_js: '10'
       script:
-      - PACKAGE_VERSION=$(cat package.json \ | grep version \ | head -1 \ | awk -F: '{ print $2 }' \ | sed 's/[",]//g')
+      - echo $TRAVIS_EVENT_TYPE
+      - echo $TRAVIS_COMMIT
       - npm run build
       deploy:
         on:
