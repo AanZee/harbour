@@ -3,8 +3,6 @@ layout: docs
 title: Search Input
 ---
 
-# Search input
-
 ## Available states
 
 ```text
