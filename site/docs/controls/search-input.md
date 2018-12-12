@@ -5,8 +5,6 @@ title: Search Input
 
 # Search input
 
-- [See SCSS component](../../scss/controls/search-input.scss)
-
 ## Available states
 
 ```text
