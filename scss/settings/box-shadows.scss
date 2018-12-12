@@ -1,6 +1,11 @@
-$box-shadow: 0 0 16px rgba($color-shadow, 0.25) !default;
+$box-shadow: 0 2px 5px rgba($color-shadow, 0.24) !default;
+$box-shadow-90: 0 1px 3px rgba($color-shadow, 0.26) !default;
 $box-shadow-100: $box-shadow !default;
+$box-shadow-200: 0 4px 8px rgba($color-shadow, 0.22) !default;
+$box-shadow-300: 0 6px 12px rgba($color-shadow, 0.20) !default;
+$box-shadow-400: 0 9px 20px rgba($color-shadow, 0.18) !default;
+$box-shadow-500: 0 18px 32px rgba($color-shadow, 0.16) !default;
 
-$box-shadow-bottom: 0 4px 12px rgba($color-shadow, 0.1) !default;
-
-$box-shadow-focus: inset 0 0 0 2px $color-focus !default;
+$box-shadow-focus-inset: inset 0 0 0 2px $color-focus !default;
+$box-shadow-focus-outset: 0 0 0 2px $color-focus !default;
+$box-shadow-focus: $box-shadow-focus-inset;
