@@ -60,6 +60,8 @@ search-input (modifier)
 
 ## Example HTML
 
+### Basic implementation
+
 {% capture search-input %}
 <div class="search-input">
     <div class="search-input__input-box">
@@ -76,7 +78,9 @@ search-input (modifier)
 	content=search-input
 %}
 
-{% capture search-input %}
+### Small with rounded ends
+
+{% capture search-input--small-rounded %}
 <div class="search-input search-input--90 search-input--rounded">
     <div class="search-input__input-box">
         <input class="search-input__input"
@@ -89,10 +93,12 @@ search-input (modifier)
 </div>
 {% endcapture %}
 {% include example.html
-	content=search-input
+	content=search-input--small-rounded
 %}
 
-{% capture search-input %}
+### Multiple actions in toolbar
+
+{% capture search-input--multiple-actions %}
 <div class="search-input">
     <div class="search-input__input-box">
         <input class="search-input__input">
@@ -104,10 +110,12 @@ search-input (modifier)
 </div>
 {% endcapture %}
 {% include example.html
-	content=search-input
+	content=search-input--multiple-actions
 %}
 
-{% capture search-input %}
+### Text action in toolbar
+
+{% capture search-input--text-action %}
 <div class="search-input">
     <div class="search-input__input-box">
         <input class="search-input__input">
@@ -121,10 +129,12 @@ search-input (modifier)
 </div>
 {% endcapture %}
 {% include example.html
-	content=search-input
+	content=search-input--text-action
 %}
 
-{% capture search-input %}
+### Narrow
+
+{% capture search-input--narrow %}
 <div class="search-input search-input--narrow">
     <div class="search-input__input-box">
         <input class="search-input__input">
@@ -136,10 +146,12 @@ search-input (modifier)
 </div>
 {% endcapture %}
 {% include example.html
-	content=search-input
+	content=search-input--narrow
 %}
 
-{% capture search-input %}
+### Rounded ends with multiple actions in toolbar
+
+{% capture search-input--rounded-multiple-actions %}
 <div class="search-input search-input--rounded">
     <div class="search-input__input-box">
         <input class="search-input__input">
@@ -151,10 +163,12 @@ search-input (modifier)
 </div>
 {% endcapture %}
 {% include example.html
-	content=search-input
+	content=search-input--rounded-multiple-actions
 %}
 
-{% capture search-input %}
+### Rounded ends and search icon in front
+
+{% capture search-input--icon-in-front %}
 <div class="search-input search-input--rounded search-input--icon">
     <div class="search-input__input-box">
         <input class="search-input__input">
@@ -165,10 +179,12 @@ search-input (modifier)
 </div>
 {% endcapture %}
 {% include example.html
-	content=search-input
+	content=search-input--icon-in-front
 %}
 
-{% capture search-input %}
+### Search action with devider
+
+{% capture search-input--devided-action %}
 <div class="search-input">
     <div class="search-input__input-box">
         <input class="search-input__input">
@@ -182,10 +198,12 @@ search-input (modifier)
 </div>
 {% endcapture %}
 {% include example.html
-	content=search-input
+	content=search-input--devided-action
 %}
 
-{% capture search-input %}
+### Rounded ends with search action with devider
+
+{% capture search-input--rounded-devided-action %}
 <div class="search-input search-input--rounded">
     <div class="search-input__input-box">
         <input class="search-input__input">
@@ -199,10 +217,12 @@ search-input (modifier)
 </div>
 {% endcapture %}
 {% include example.html
-	content=search-input
+	content=search-input--rounded-devided-action
 %}
 
-{% capture search-input %}
+### Separated search action
+
+{% capture search-input--separated-action %}
 <div class="search-input search-input--button-separated">
     <div class="search-input__input-box">
         <input class="search-input__input">
@@ -216,10 +236,12 @@ search-input (modifier)
 </div>
 {% endcapture %}
 {% include example.html
-	content=search-input
+	content=search-input--separated-action
 %}
 
-{% capture search-input %}
+### Rounded ends and separated search action
+
+{% capture search-input--rounded-separated-action %}
 <div class="search-input search-input--rounded search-input--button-separated">
     <div class="search-input__input-box">
         <input class="search-input__input">
@@ -233,10 +255,12 @@ search-input (modifier)
 </div>
 {% endcapture %}
 {% include example.html
-	content=search-input
+	content=search-input--rounded-separated-action
 %}
 
-{% capture search-input %}
+### Search action modifier
+
+{% capture search-input--action-modifier %}
 <div class="search-input">
     <div class="search-input__input-box">
         <input class="search-input__input">
@@ -250,5 +274,5 @@ search-input (modifier)
 </div>
 {% endcapture %}
 {% include example.html
-	content=search-input
+	content=search-input--action-modifier
 %}
