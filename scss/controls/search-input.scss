@@ -40,7 +40,7 @@ $search-input-button-background-color: $input-background-color !default;
 		border-radius: $search-input-border-radius;
 	}
 
-	.search-input--button-seperated & {
+	.search-input--button-separated & {
 		border-radius: $search-input-border-radius;
 	}
 
@@ -239,7 +239,7 @@ $search-input-button-background-color: $input-background-color !default;
 		min-width: $control-size-90;
 	}
 
-	.search-input--button-seperated & {
+	.search-input--button-separated & {
 		margin-left: $search-input-button-gap;
 		border-left: $input-border;
 		border-radius: $search-input-border-radius;
