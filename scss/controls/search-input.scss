@@ -44,7 +44,7 @@ $search-input-button-background-color: $input-background-color !default;
 		border-radius: $search-input-border-radius;
 	}
 
-	.search-input--rounded-ends & {
+	.search-input--rounded & {
 		border-top-left-radius: $control-size-100 / 2;
 		border-bottom-left-radius: $control-size-100 / 2;
 
@@ -126,11 +126,11 @@ $search-input-button-background-color: $input-background-color !default;
 		font-size: $font-size-100;
 	}
 
-	.search-input--rounded-ends & {
+	.search-input--rounded & {
 		padding-left: $control-size-100 / 2;
 	}
 
-	.search-input--90.search-input--rounded-ends & {
+	.search-input--90.search-input--rounded & {
 		padding-left: $control-size-90 / 2;
 	}
 
@@ -158,7 +158,7 @@ $search-input-button-background-color: $input-background-color !default;
 			border: $input-focus-border;
 			box-shadow: $input-focus-box-shadow;
 
-			.search-input--rounded-ends & {
+			.search-input--rounded & {
 				border-radius: $control-size-100 / 2;
 			}
 
@@ -207,7 +207,7 @@ $search-input-button-background-color: $input-background-color !default;
 		padding-left: $spacing * 0.5;
 	}
 
-	.search-input--rounded-ends .search-input__input-box:last-child &:last-child {
+	.search-input--rounded .search-input__input-box:last-child &:last-child {
 		border-top-right-radius: $control-size-100 / 2;
 		border-bottom-right-radius: $control-size-100 / 2;
 	}
@@ -245,7 +245,7 @@ $search-input-button-background-color: $input-background-color !default;
 		border-radius: $search-input-border-radius;
 	}
 
-	.search-input--rounded-ends & {
+	.search-input--rounded & {
 		border-top-right-radius: $control-size-100 / 2;
 		border-bottom-right-radius: $control-size-100 / 2;
 	}

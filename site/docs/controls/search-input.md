@@ -30,7 +30,7 @@ search-input--condensed
 
 ```text
 search-input--icon
-search-input--rounded-ends
+search-input--rounded
 search-input--button-separated
 ```
 
@@ -79,7 +79,7 @@ search-input (modifier)
 %}
 
 {% capture search-input %}
-<div class="search-input search-input--90 search-input--rounded-ends">
+<div class="search-input search-input--90 search-input--rounded">
     <div class="search-input__input-box">
         <input class="search-input__input"
             placeholder="search"
@@ -142,7 +142,7 @@ search-input (modifier)
 %}
 
 {% capture search-input %}
-<div class="search-input search-input--rounded-ends">
+<div class="search-input search-input--rounded">
     <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
@@ -157,7 +157,7 @@ search-input (modifier)
 %}
 
 {% capture search-input %}
-<div class="search-input search-input--rounded-ends search-input--icon">
+<div class="search-input search-input--rounded search-input--icon">
     <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
@@ -188,7 +188,7 @@ search-input (modifier)
 %}
 
 {% capture search-input %}
-<div class="search-input search-input--rounded-ends">
+<div class="search-input search-input--rounded">
     <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
@@ -222,7 +222,7 @@ search-input (modifier)
 %}
 
 {% capture search-input %}
-<div class="search-input search-input--rounded-ends search-input--button-separated">
+<div class="search-input search-input--rounded search-input--button-separated">
     <div class="search-input__input-box">
         <input class="search-input__input">
         <div class="search-input__toolbar">
