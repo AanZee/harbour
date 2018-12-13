@@ -1,3 +1,8 @@
+# 1.21.1
+
+## Bugfix
+* Move pull request template
+
 # 1.21.0
 
 ## Feature
