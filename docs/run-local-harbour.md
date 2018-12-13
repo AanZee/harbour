@@ -1,16 +1,8 @@
----
-layout: home
-title: Contributing
----
-## Contributing
+# Running Harbour locally
 
-I you want to contribute to this project you can create a pull request on [Github](https://github.com/AanZee/harbour).
+In order to actively contribute to the project you can test your changes by running Harbour and the documentation website locally. The static [documentation website](https://aanzee.github.io/harbour/) is generated using [Jekyll](https://jekyllrb.com/). In order to use Jekyll, you probably have to update ruby on your machine first.
 
-## Running Harbour locally
-
-In order to actively contribute to the project you can test your changes by running Harbour locally. The static website you are reading right now is generated using [Jekyll](https://jekyllrb.com/). In order to use Jekyll, you probably have to update ruby on your machine first.
-
-### Installing ruby/rbenv
+## Installing ruby/rbenv
 
 First we install `rbenv`, so that we can easily install the correct version of `Ruby`. Installing `rbenv` on Mac OS can best be done using [Homebrew](https://brew.sh/).
 
@@ -22,29 +14,28 @@ We now need to add `rbenv` to the `PATH` and to your shell settings. Check which
 
 ```bash
 # If you use bash 
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 nano ~/.bash_profile
 
 # If you use zsh:
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc`
-nano ~/.zshrc`
-```
+nano ~/.zshrc
 
-Add the following line to the end and save the file.
-
-```
+# Add the following two lines
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 ```
+
+Save the file using `ctrl + O` and exit `nano` using `ctrl + X`.
 
 Restart your terminal for the changes to take effect.
 
 Harbour has been tested with `Ruby 2.5.1`, but probably also works with other versions of Ruby. Install this version using the following command.
 
 ```
+rbenv install 2.5.1
 rbenv global 2.5.1
 ```
 
-### Installing project
+## Installing project
 
 Checkout the project and open the root folder in your terminal. 
 
@@ -55,7 +46,7 @@ gem install bundler jekyll
 npm install
 ```
 
-### Running the project
+## Running the project
 
 ```bash
 npm run start
