@@ -14,7 +14,7 @@ npm install aanzee-harbour
 
 ## Documentation
 
-A detailed explanation of all the components, combined with visual use cases and html examples, can be found in the [documentation section](https://aanzee.github.io/harbour/docs).
+A detailed explanation of all the components, combined with visual use cases and html examples, can be found in the [documentation section](https://aanzee.github.io/harbour).
 
 ## Contributing
 
