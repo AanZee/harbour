@@ -1,3 +1,8 @@
+# 1.21.2
+
+## Bugfix
+* Fix link from README.md to GitHub pages documentation
+
 # 1.21.1
 
 ## Bugfix
