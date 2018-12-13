@@ -1,3 +1,12 @@
+# 1.21.0
+
+## Feature
+* Add pull request template
+
+## Improvements
+* Move contributing docs to `/docs` folder
+* Add summary to `README.md`
+
 # 1.20.3
 
 ## Bugfix
