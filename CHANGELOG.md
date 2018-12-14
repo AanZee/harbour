@@ -1,7 +1,7 @@
 # 1.21.3
 
 ## Bugfix
-* Add card-border and card-box-shadow as card variables to enable overrides in other projects.
+* Add card-box-shadow as card variables to enable overrides in other projects.
 * Add card__details border-bottom radius for projects to ensure the card border radius when the card__details has a background-color
 
 # 1.21.2
