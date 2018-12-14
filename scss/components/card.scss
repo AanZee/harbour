@@ -1,6 +1,5 @@
 $card-z-index: 0 !default;
 $card-is-skeleton-fill: $color-ui-60 !default;
-$card-border: none !default;
 $card-border-radius: $border-radius-100 !default;
 $card-box-shadow: $box-shadow-100 !default;
 $card-sections-border: 1px solid $color-ui-20 !default;
@@ -63,7 +62,6 @@ $card-horizontal-media-width-200: 50% !default;
 	display: flex;
 	flex-direction: column;
 	max-width: $spacing * 60;
-	border: $card-border;
 	border-radius: $card-border-radius;
 	background-color: $color-background-light;
 	box-shadow: $card-box-shadow;
