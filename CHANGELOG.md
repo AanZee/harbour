@@ -1,3 +1,8 @@
+# 1.21.4
+
+## Bugfix
+* Revert button reset cursor change
+
 # 1.21.3
 
 ## Bugfix
