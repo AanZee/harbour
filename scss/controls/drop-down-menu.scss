@@ -1,3 +1,5 @@
+$drop-down-menu-icon: $icon-chevron-down !default;
+
 .drop-down-menu {
 	position: relative;
 	display: block;
@@ -14,7 +16,7 @@
 		display: block;
 		width: $control-size-100;
 		height: $icon-size-100;
-		background-image: url(get-svg-uri($icon-chevron-down, $color-ui));
+		background-image: url(get-svg-uri($drop-down-menu-icon, $color-ui));
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
