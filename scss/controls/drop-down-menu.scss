@@ -51,9 +51,7 @@
 	@include ellipsis();
 	position: relative;
 	display: block;
-	padding-top: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
 	padding-right: $control-size-100;
-	padding-bottom: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
 	padding-left: $spacing * 1.5;
 	width: 100%;
 	height: $control-size-100;
