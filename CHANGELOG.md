@@ -1,3 +1,10 @@
+# 1.21.5
+
+## Bugfix
+* Remove top and bottom padding from drop-down menu
+* Add $drop-down-menu-icon local variable to overwrite chevron style
+* Add drop-down menu to visual overview
+
 # 1.21.4
 
 ## Bugfix
