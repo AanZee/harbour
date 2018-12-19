@@ -30,10 +30,10 @@ drop-down-menu--max-width-60
 
 {% capture drop-down-menu %}
 <div class="drop-down-menu">
-    <select class="drop-down-menu__select">
-        <option value="1">option 1</option>
-        <option value="2">option 2</option>
-    </select>
+	<select class="drop-down-menu__select">
+		<option value="1">option 1</option>
+		<option value="2">option 2</option>
+	</select>
 </div>
 {% endcapture %}
 {% include example.html
