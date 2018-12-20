@@ -168,12 +168,12 @@ $card-horizontal-media-width-200: 50% !default;
 	position: relative;
 	display: flex;
 	min-width: 0;
+	border-radius: $card-border-radius;
 	cursor: default;
 	flex-wrap: wrap;
 	flex-grow: 1;
 	flex-shrink: 1;
 	align-items: center;
-	border-radius: $card-border-radius;
 
 	.card--horizontal & {
 		flex-wrap: nowrap;
