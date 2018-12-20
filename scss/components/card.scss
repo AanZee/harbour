@@ -173,6 +173,7 @@ $card-horizontal-media-width-200: 50% !default;
 	flex-grow: 1;
 	flex-shrink: 1;
 	align-items: center;
+	border-radius: $card-border-radius;
 
 	.card--horizontal & {
 		flex-wrap: nowrap;
@@ -185,7 +186,6 @@ label.card__primary-action {
 	cursor: default; // NOTE: Reset label reset pointer
 
 	&:focus {
-		border-radius: $card-border-radius;
 		box-shadow: $box-shadow-focus-outset;
 
 		&:active,
