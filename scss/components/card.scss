@@ -199,6 +199,7 @@ label.card__primary-action {
 	}
 
 	.card__expand-status:focus ~ .card__actions & {
+		border-radius: $card-border-radius;
 		box-shadow: $box-shadow-focus-inset;
 
 		&:active,
