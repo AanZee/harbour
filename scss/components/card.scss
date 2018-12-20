@@ -173,6 +173,7 @@ $card-horizontal-media-width-200: 50% !default;
 	flex-grow: 1;
 	flex-shrink: 1;
 	align-items: center;
+	border-radius: $card-border-radius;
 
 	.card--horizontal & {
 		flex-wrap: nowrap;
@@ -185,7 +186,6 @@ label.card__primary-action {
 	cursor: default; // NOTE: Reset label reset pointer
 
 	&:focus {
-		border-radius: $card-border-radius;
 		box-shadow: $box-shadow-focus-outset;
 
 		&:active,
@@ -199,13 +199,18 @@ label.card__primary-action {
 	}
 
 	.card__expand-status:focus ~ .card__actions & {
-		border-radius: $card-border-radius;
 		box-shadow: $box-shadow-focus-inset;
 
 		&:active,
 		&:hover {
 			box-shadow: none;
 		}
+	}
+
+	.card--expandable .card__expand-status:checked ~ .card__actions &,
+	.card--expandable.is-expanded & {
+		border-bottom-right-radius: 0; // NOTE: Remove bottom radius when details are visible to fix focus ring
+		border-bottom-left-radius: 0; // NOTE: Remove bottom radius when details are visible to fix focus ring
 	}
 }
 
