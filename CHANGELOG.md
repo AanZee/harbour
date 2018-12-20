@@ -1,6 +1,7 @@
 # 1.21.6
 
 ## Bugfix
+* Fix focus state for expandable card
 
 # 1.21.5
 
