@@ -149,6 +149,7 @@ A form with labels on the left side of the form.
 A simple form with labels above the input fields.
 
 {% capture login-form %}
+{% assign layoutInnerClasses="layout__inner--condensed" %}
 <form class="form form--labels-top">
 	<div class="form__section">
 		<div class="form__fieldset">
