@@ -32,7 +32,7 @@ form (modifier)
 │	│	├── form__field
 │	│	│	├── form__field-header
 │	│	│	│	├── form__field-label
-│	│	│	│	│	├── form__field-label-helper-text (optional)
+│	│	│	│	│	├── form__field-supporting-text (optional)
 │	│	│	├── form__field-main
 │	│	│	│	├── form__input-helper-text (optional)
 │	│	│	│	├── form__input-feedback-text (optional)
@@ -115,7 +115,7 @@ A form with labels on the left side of the form.
 						for="house-number"
 					>
 						House number
-						<span class="form__field-label-helper-text">Optional</span>
+						<span class="form__field-supporting-text">Optional</span>
 					</label>
 				</div>
 				<div class="form__field-main">
