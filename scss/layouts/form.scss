@@ -211,10 +211,6 @@ $form-section-header-min-width: $spacing * 28;
 		margin-top: 0;
 	}
 
-	&.is-hidden {
-		display: none;
-	}
-
 	.form--right-aligned-labels &,
 	.form--left-aligned-labels & {
 		@include media(0, $range-hand) {
@@ -230,6 +226,10 @@ $form-section-header-min-width: $spacing * 28;
 			display: block;
 		}
 	}
+}
+
+.form__field.is-hidden { // NOTE: is-hidden styling is seperated from main form__field-label styling due to stylelint settings which doesn't accept .is-hidden to come after modifier styles
+	display: none;
 }
 
 .form__field-header {
@@ -303,10 +303,10 @@ $form-section-header-min-width: $spacing * 28;
 			font-size: $font-size-100;
 		}
 	}
+}
 
-	&.is-hidden {
-		display: none;
-	}
+.form__field-label.is-hidden { // NOTE: is-hidden styling is seperated from main form__field-label styling due to stylelint settings which doesn't accept .is-hidden to come after modifier styles
+	display: none;
 }
 
 .form__field-supporting-text {
