@@ -115,7 +115,7 @@ A form with labels on the left side of the form.
 						for="house-number"
 					>
 						House number
-						<div class="form__field-label-helper-text">Optional</div>
+						<span class="form__field-label-helper-text">Optional</span>
 					</label>
 				</div>
 				<div class="form__field-main">
