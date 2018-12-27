@@ -1,3 +1,8 @@
+# 1.21.7
+
+## Bugfix
+* Fix link to contributing guidelines
+
 # 1.21.6
 
 ## Bugfix
