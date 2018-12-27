@@ -59,10 +59,10 @@ A form with labels on the left side of the form.
 				</div>
 				<div class="form__field-main">
 					<div class="form__field-section">
-							<input class="text-input"
-								type="text"
-								id="given-name"
-							>
+						<input class="text-input"
+							type="text"
+							id="given-name"
+						>
 					</div>
 				</div>
 			</div>
@@ -76,10 +76,10 @@ A form with labels on the left side of the form.
 				</div>
 				<div class="form__field-main">
 					<div class="form__field-section">
-							<input class="text-input"
-								type="text"
-								id="family-name"
-							>
+						<input class="text-input"
+							type="text"
+							id="family-name"
+						>
 					</div>
 				</div>
 			</div>
@@ -95,10 +95,10 @@ A form with labels on the left side of the form.
 				</div>
 				<div class="form__field-main">
 					<div class="form__field-section">
-							<input class="text-input"
-								type="text"
-								id="street"
-							>
+						<input class="text-input"
+							type="text"
+							id="street"
+						>
 					</div>
 					<!-- Display on error
 					<label class="form__input-feedback-text"
@@ -179,10 +179,31 @@ A simple form with labels above the input fields.
 				</div>
 				<div class="form__field-main">
 					<div class="form__field-section">
-						<input class="text-input"
-							type="password"
-							id="password"
-						>
+						<div class="password-input">
+							<input class="password-input__input"
+								id="password"
+								name="password"
+								type="text"
+								required
+								autocomplete="password"
+								spellcheck="false"
+								autocorrect="off"
+							>
+							<div class="password-input__toolbar">
+								<button class="password-input__visibility-toggle"
+									type="button"
+								>
+									<span class="password-input__visibility-toggle-label"
+										style="display:none;"
+									>
+										Show
+									</span>
+									<span class="password-input__visibility-toggle-label">
+										Hide
+									</span>
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
