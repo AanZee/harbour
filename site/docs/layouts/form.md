@@ -212,7 +212,7 @@ A simple form with labels above the input fields.
 	</div>
 	<div class="form__actions">
 		<div class="form__action">
-			<button class="button button--primary">Submit</button>
+			<button class="button button--primary button--full">Submit</button>
 		</div>
 	</div>
 </form>
