@@ -4,20 +4,17 @@ title: Layout
 ---
 
 ## Available modifiers
-### Adjust space between sections (modifier 100 doesn't exists since this is the default behavior)
+
+Available `city block sizes` modifiers are mentioned between parenthesis. Since 100 is the default `city block`, it is only available for the `layout__section--spacing-100`.
+
+### Adjust space between sections
 ```
 layout__section--spaced-0 (60, 70, 80, 90, 200, 300)
 ```
 
 ### Adjust space between children
 ```
-layout__section--spacing-60
-layout__section--spacing-70
-layout__section--spacing-80
-layout__section--spacing-90
-layout__section--spacing-100
-layout__section--spacing-200
-layout__section--spacing-300
+layout__section--spacing-60 (60, 70, 80, 90, 100, 200, 300)
 ```
 
 ### Adjust section appearance
@@ -60,71 +57,20 @@ layout__inner--compressed
 ### Adjust section__inner padding
 
 ```
-layout__inner--padded-0
-layout__inner--padded-60
-layout__inner--padded-70
-layout__inner--padded-80
-layout__inner--padded-90
-layout__inner--padded-200
-layout__inner--padded-300
-
-layout__inner--padded-top-bottom-0
-layout__inner--padded-top-bottom-60
-layout__inner--padded-top-bottom-70
-layout__inner--padded-top-bottom-80
-layout__inner--padded-top-bottom-90
-layout__inner--padded-top-bottom-200
-layout__inner--padded-top-bottom-300
-
-layout__inner--padded-left-right-0
-layout__inner--padded-left-right-60
-layout__inner--padded-left-right-70
-layout__inner--padded-left-right-80
-layout__inner--padded-left-right-90
-layout__inner--padded-left-right-200
-layout__inner--padded-left-right-300
-
-layout__inner--padded-top-0
-layout__inner--padded-right-0
-layout__inner--padded-bottom-0
-layout__inner--padded-left-0
-
-layout__inner--padded-top-60
-layout__inner--padded-right-60
-layout__inner--padded-bottom-60
-layout__inner--padded-left-60
-
-layout__inner--padded-top-70
-layout__inner--padded-right-70
-layout__inner--padded-bottom-70
-layout__inner--padded-left-70
-
-layout__inner--padded-top-80
-layout__inner--padded-right-80
-layout__inner--padded-bottom-80
-layout__inner--padded-left-80
-
-layout__inner--padded-top-90
-layout__inner--padded-right-90
-layout__inner--padded-bottom-90
-layout__inner--padded-left-90
-
-layout__inner--padded-top-200
-layout__inner--padded-right-200
-layout__inner--padded-bottom-200
-layout__inner--padded-left-200
-
-layout__inner--padded-top-300
-layout__inner--padded-right-300
-layout__inner--padded-bottom-300
-layout__inner--padded-left-300
+layout__inner--padded-0 (60, 70, 80, 90, 200, 300)
+layout__inner--padded-top-bottom-0 (60, 70, 80, 90, 200, 300)
+layout__inner--padded-left-right-0 (60, 70, 80, 90, 200, 300)
+layout__inner--padded-top-0 (60, 70, 80, 90, 200, 300)
+layout__inner--padded-right-0 (60, 70, 80, 90, 200, 300)
+layout__inner--padded-bottom-0 (60, 70, 80, 90, 200, 300)
+layout__inner--padded-left-0 (60, 70, 80, 90, 200, 300)
 ```
 
 ### Columns modifiers
 ```
 layout__columns--spacing-0
 layout__columns--spacing-90
-layout__columns--not-wrapping-lap-and-up
+layout__columns--not-wrapping-lap-and-larger
 ```
 
 ### Add specific width to column

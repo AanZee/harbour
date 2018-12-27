@@ -2,35 +2,27 @@
 layout: home
 title: Harbour
 ---
-Harbour is a Global component library created at [Aan Zee](https://www.aanzee.nl).
+Harbour is a UI library created at [Aan Zee](https://www.aanzee.nl). Please check the [GitHub repository](https://github.com/AanZee/harbour) for the `README` and release information. More details on running Harbour on your local machine and adding to the project can be found on the [contributing page]({{ '/contributing.html' | relative_url }}).
 
-## How to use?
+## Components
 
-You can add Harbour to your project through a npm install.
+* [Card]({{ '/docs/components/card.html' | relative_url }})
+* [Content]({{ '/docs/components/content.html' | relative_url }})
+* [Dialog]({{ '/docs/components/dialog.html' | relative_url }})
+* [Popover]({{ '/docs/components/popover.html' | relative_url }})
+* [Tag]({{ '/docs/components/tag.html' | relative_url }})
 
-### Installation
-```
-npm install aanzee-harbour
-```
+## Controls
 
-### Documentation
-A detailed explanation of all the components and how to use them can be found in the [documentation section](/docs).
+* [Button]({{ '/docs/controls/button.html' | relative_url }})
+* [Checkbox]({{ '/docs/controls/checkbox.html' | relative_url }})
+* [Drop-down menu]({{ '/docs/controls/drop-down-menu.html' | relative_url }})
+* [Input stepper]({{ '/docs/controls/input-stepper.html' | relative_url }})
+* [Link]({{ '/docs/controls/link.html' | relative_url }})
+* [Password input]({{ '/docs/controls/password-input.html' | relative_url }})
+* [Text input]({{ '/docs/controls/text-input.html' | relative_url }})
 
-## Contributing
-I you want to contribute to this project you can create a pull request on [Github](https://github.com/AanZee/harbour).
+## Layouts
 
-In order to actively contribute to the project you can test your changes by running Jekyll locally.
-First install `bundler` and `jekyll` gems.
-
-```bash
-gem install bundler jekyll
-```
-
-Checkout the project and open the root folder in your terminal. Run an `npm install` to install all dependencies.
-
-```bash
-npm run install
-npm run start
-```
-
-A browser window should open and point to `http://localhost:4000`. SCSS linting and live reloading is implemented into the task.
+* [Layout]({{ '/docs/layouts/layout.html' | relative_url }})
+* [Page]({{ '/docs/layouts/page.html' | relative_url }})
