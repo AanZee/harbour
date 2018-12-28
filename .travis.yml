@@ -23,6 +23,7 @@ script:
 jobs:
   include:
     - stage: Deploy
+      if: type = push
       node_js: '10'
       script:
       - npm run build
