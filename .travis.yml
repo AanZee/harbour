@@ -26,10 +26,11 @@ jobs:
     if: type = push
     node_js: '10'
     deploy:
-    - if: branch = feature/HAR-161-s3-deployments # TODO: change to master
+    - provider: s3
+      on:
+        branch: feature/HAR-161-s3-deployments # TODO: change to master
       script:
       - npm run build # No base url -> master
-      provider: s3
       bucket: $AWS_BUCKET
       access_key_id: $AWS_ACCESS_KEY_ID
       secret_access_key: $AWS_SECRET_ACCESS_KEY
@@ -37,10 +38,11 @@ jobs:
       skip_cleanup: true
       local_dir: ./_gh_pages
       acl: public_read
-    - if: branch = feature/HAR-161-s3-deployments # TODO: change to master
+    - provider: s3
+      on:
+        branch: feature/HAR-161-s3-deployments # TODO: change to master
       script:
       - JEKYLL_BASE_URL=/0.0.2 npm run build # No base url -> master
-      provider: s3
       bucket: $AWS_BUCKET
       access_key_id: $AWS_ACCESS_KEY_ID
       secret_access_key: $AWS_SECRET_ACCESS_KEY
