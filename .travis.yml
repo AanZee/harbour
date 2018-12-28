@@ -23,14 +23,14 @@ script:
 jobs:
   include:
     - stage: Deploy
+      name: Deploy master
       if: type = push
+      if: branch = feature/HAR-161-s3-deployments # TODO: change to master
       node_js: '10'
       script:
-      - npm run build
+      - npm run build # No base url -> master
       deploy:
         - provider: s3
-          on:
-            branch: feature/HAR-161-s3-deployments
           bucket: $AWS_BUCKET
           access_key_id: $AWS_ACCESS_KEY_ID
           secret_access_key: $AWS_SECRET_ACCESS_KEY
@@ -38,9 +38,18 @@ jobs:
           skip_cleanup: true
           local_dir: ./_gh_pages
           acl: public_read
+        after_deploy:
+        - aws configure set preview.cloudfront true
+        - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+    - stage: Deploy
+      name: Deploy version
+      if: type = push
+      if: branch = feature/HAR-161-s3-deployments # TODO: change to master
+      node_js: '10'
+      script:
+      - JEKYLL_BASE_URL=/0.0.2 npm run build # TODO: make base url variable
+      deploy:
         - provider: s3
-          on:
-            branch: feature/HAR-161-s3-deployments
           bucket: $AWS_BUCKET
           access_key_id: $AWS_ACCESS_KEY_ID
           secret_access_key: $AWS_SECRET_ACCESS_KEY
@@ -49,18 +58,17 @@ jobs:
           local_dir: ./_gh_pages
           acl: public_read
           upload-dir: '0.0.1'
-        - provider: s3
-          on:
-            condition: $TRAVIS_BRANCH =~ ^feature$
-          bucket: $AWS_BUCKET
-          access_key_id: $AWS_ACCESS_KEY_ID
-          secret_access_key: $AWS_SECRET_ACCESS_KEY
-          region: $AWS_REGION
-          skip_cleanup: true
-          local_dir: ./_gh_pages
-          acl: public_read
-          upload-dir: $TRAVIS_BRANCH
-
+        # - provider: s3
+        #   on:
+        #     condition: $TRAVIS_BRANCH =~ ^feature$
+        #   bucket: $AWS_BUCKET
+        #   access_key_id: $AWS_ACCESS_KEY_ID
+        #   secret_access_key: $AWS_SECRET_ACCESS_KEY
+        #   region: $AWS_REGION
+        #   skip_cleanup: true
+        #   local_dir: ./_gh_pages
+        #   acl: public_read
+        #   upload-dir: $TRAVIS_BRANCH
       after_deploy:
         - aws configure set preview.cloudfront true
         - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
