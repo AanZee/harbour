@@ -49,6 +49,18 @@ jobs:
           local_dir: ./_gh_pages
           acl: public_read
           upload-dir: '0.0.1'
+        - provider: s3
+          on:
+            branch: feature
+          bucket: $AWS_BUCKET
+          access_key_id: $AWS_ACCESS_KEY_ID
+          secret_access_key: $AWS_SECRET_ACCESS_KEY
+          region: $AWS_REGION
+          skip_cleanup: true
+          local_dir: ./_gh_pages
+          acl: public_read
+          upload-dir: $TRAVIS_BRANCH
+
       after_deploy:
         - aws configure set preview.cloudfront true
         - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
