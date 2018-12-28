@@ -51,7 +51,7 @@ jobs:
           upload-dir: '0.0.1'
         - provider: s3
           on:
-            condition: $TRAVIS_BRANCH =~ ^feature
+            condition: $TRAVIS_BRANCH =~ ^feature$
           bucket: $AWS_BUCKET
           access_key_id: $AWS_ACCESS_KEY_ID
           secret_access_key: $AWS_SECRET_ACCESS_KEY
