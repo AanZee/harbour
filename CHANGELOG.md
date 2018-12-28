@@ -1,3 +1,41 @@
+# 1.21.7
+
+## Bugfix
+* Fix link to contributing guidelines
+
+# 1.21.6
+
+## Bugfix
+* Fix focus state for expandable card
+
+# 1.21.5
+
+## Bugfix
+* Remove top and bottom padding from drop-down menu
+* Add $drop-down-menu-icon local variable to overwrite chevron style
+* Add drop-down menu to visual overview
+
+# 1.21.4
+
+## Bugfix
+* Revert button reset cursor change
+
+# 1.21.3
+
+## Bugfix
+* Add card-box-shadow as card variables to enable overrides in other projects.
+* Add card__details border-bottom radius for projects to ensure the card border radius when the card__details has a background-color
+
+# 1.21.2
+
+## Bugfix
+* Fix link from README.md to GitHub pages documentation
+
+# 1.21.1
+
+## Bugfix
+* Move pull request template
+
 # 1.21.0
 
 ## Feature
