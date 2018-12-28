@@ -12,57 +12,16 @@ install:
 - pip install --user awscli
 - npm install
 - npm install -g gulp-cli
-- bash ./scripts/set-package-version-variable.sh
-
-script:
-- npm run build
-- echo $TRAVIS_EVENT_TYPE
-- echo $TRAVIS_COMMIT
-- echo $TRAVIS_BRANCH
 
 jobs:
   include:
+  - stage: Test
+    script: npm run build
   - stage: Deploy
     if: type = push
     node_js: '10'
     deploy:
-    - provider: s3
+    - provider: script
       on:
         branch: feature/HAR-161-s3-deployments # TODO: change to master
-      script:
-      - npm run build # No base url -> master
-      bucket: $AWS_BUCKET
-      access_key_id: $AWS_ACCESS_KEY_ID
-      secret_access_key: $AWS_SECRET_ACCESS_KEY
-      region: $AWS_REGION
-      skip_cleanup: true
-      local_dir: ./_gh_pages
-      acl: public_read
-    - provider: s3
-      on:
-        branch: feature/HAR-161-s3-deployments # TODO: change to master
-      script:
-      - JEKYLL_BASE_URL=/0.0.2 npm run build # No base url -> master
-      bucket: $AWS_BUCKET
-      access_key_id: $AWS_ACCESS_KEY_ID
-      secret_access_key: $AWS_SECRET_ACCESS_KEY
-      region: $AWS_REGION
-      skip_cleanup: true
-      local_dir: ./_gh_pages
-      acl: public_read
-      upload-dir: '0.0.2'
-    after_deploy:
-    - aws configure set preview.cloudfront true
-    - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
-
-    # - provider: s3
-    #   on:
-    #     condition: $TRAVIS_BRANCH =~ ^feature$
-    #   bucket: $AWS_BUCKET
-    #   access_key_id: $AWS_ACCESS_KEY_ID
-    #   secret_access_key: $AWS_SECRET_ACCESS_KEY
-    #   region: $AWS_REGION
-    #   skip_cleanup: true
-    #   local_dir: ./_gh_pages
-    #   acl: public_read
-    #   upload-dir: $TRAVIS_BRANCH
+      script: bash scripts/deploy-master.sh
