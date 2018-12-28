@@ -1,9 +1,5 @@
 language: node_js
 
-node_js:
-- '8'
-- '10'
-
 before_install:
 - rvm install 2.5.1
 
@@ -14,6 +10,9 @@ install:
 jobs:
   include:
   - script: echo "This is a test"
+    node_js:
+    - '8'
+    - '10'
   - stage: Deploy
     if: type = push
     node_js: '10'
