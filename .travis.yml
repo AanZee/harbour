@@ -9,8 +9,11 @@ install:
 
 jobs:
   include:
-  - script: echo "This is a test"
-    node_js: '10'
+  - stage: Test
+    script: echo "This is a test"
+    node_js:
+	- '8'
+	- '10'
   - stage: Deploy
     if: type = push
     node_js: '10'
@@ -18,5 +21,5 @@ jobs:
     - provider: script
       on:
         branch: feature/HAR-161-s3-deployments # TODO: change to master
-      skip_cleanup: true
+      skip_cleanup: true # TODO: check if this is still needed
       script: bash scripts/deploy-master.sh
