@@ -14,9 +14,20 @@
 				<div class="form__field-main">
 					<div class="form__field-section">
 						<input class="text-input"
-							type="email"
 							id="email"
+							name="email"
+							type="email"
+							autocomplete="email"
+							autocorrect="off"
+							spellcheck="false"
+							required
 						>
+						<!-- Display on error
+						<label class="form__input-feedback-text"
+							for="email"
+						>
+							You must enter an email
+						</label> -->
 					</div>
 				</div>
 			</div>
@@ -32,13 +43,13 @@
 					<div class="form__field-section">
 						<div class="password-input">
 							<input class="password-input__input"
-								id="new-password"
-								name="new-password"
+								id="password"
+								name="password"
 								type="text"
-								required
-								autocomplete="new-password"
-								spellcheck="false"
+								autocomplete="current-password"
 								autocorrect="off"
+								spellcheck="false"
+								required
 							>
 							<div class="password-input__toolbar">
 								<button class="password-input__visibility-toggle"
@@ -55,6 +66,12 @@
 								</button>
 							</div>
 						</div>
+						<!-- Display on error
+						<label class="form__input-feedback-text"
+							for="password"
+						>
+							You must enter a password
+						</label> -->
 					</div>
 				</div>
 			</div>
@@ -62,7 +79,11 @@
 	</div>
 	<div class="form__actions">
 		<div class="form__action">
-			<button class="button button--primary button--full">Submit</button>
+			<button class="button button--primary button--full"
+				type="submit"
+			>
+				Submit
+			</button>
 		</div>
 	</div>
 </form>

@@ -13,9 +13,22 @@
 				<div class="form__field-main">
 					<div class="form__field-section">
 						<input class="text-input"
-							type="text"
 							id="given-name"
+							name="given-name"
+							type="text"
+							autocapitalize="none"
+							autocomplete="given-name"
+							autocorrect="off"
+							spellcheck="false"
+							required
 						>
+						<!-- Display on error
+						<label class="form__input-feedback-text"
+							for="street"
+						>
+							You must enter a given name
+						</label>
+						-->
 					</div>
 				</div>
 			</div>
@@ -30,9 +43,22 @@
 				<div class="form__field-main">
 					<div class="form__field-section">
 						<input class="text-input"
-							type="text"
 							id="family-name"
+							name="family-name"
+							type="text"
+							autocapitalize="none"
+							autocomplete="family-name"
+							autocorrect="off"
+							spellcheck="false"
+							required
 						>
+						<!-- Display on error
+						<label class="form__input-feedback-text"
+							for="street"
+						>
+							You must enter a family name
+						</label>
+						-->
 					</div>
 				</div>
 			</div>
@@ -41,16 +67,22 @@
 			<div class="form__field">
 				<div class="form__field-header">
 					<label class="form__field-label"
-						for="street"
+						for="street-address"
 					>
-						Street
+						Street and house number
 					</label>
 				</div>
 				<div class="form__field-main">
 					<div class="form__field-section">
 						<input class="text-input"
+							id="street-address"
+							name="street-address"
 							type="text"
-							id="street"
+							autocapitalize="off"
+							autocomplete="street-address"
+							autocorrect="off"
+							spellcheck="false"
+							required
 						>
 					</div>
 					<!-- Display on error
@@ -65,24 +97,61 @@
 			<div class="form__field">
 				<div class="form__field-header">
 					<label class="form__field-label"
-						for="house-number"
+						for="postal-code"
 					>
-						House number
-						<span class="form__field-supporting-text">Optional</span>
+						Postal code
 					</label>
 				</div>
 				<div class="form__field-main">
 					<div class="form__field-section">
-						<input class="text-input"
-							type="number"
-							id="house-number"
+						<input class="text-input text-input--max-width-80"
+							id="postal-code"
+							name="postal_code"
+							type="text"
+							autocapitalize="characters"
+							autocomplete="postal-code"
+							autocorrect="off"
+							spellcheck="false"
+							required
 						>
 					</div>
-					<label class="form__input-helper-text"
-						for="house-number"
+					<!-- Display on error
+					<label class="form__input-feedback-text"
+						for="postal-code"
 					>
-						You don't have to enter an addition for some reason
+						You must enter a postal code
 					</label>
+					-->
+				</div>
+			</div>
+			<div class="form__field">
+				<div class="form__field-header">
+					<label class="form__field-label"
+						for="city"
+					>
+						City
+					</label>
+				</div>
+				<div class="form__field-main">
+					<div class="form__field-section form__field-section--text-input">
+						<input class="text-input"
+							id="city"
+							name="city"
+							type="text"
+							autocapitalize="off"
+							autocorrect="off"
+							autocomplete="off"
+							spellcheck="false"
+							required
+						>
+					</div>
+					<!-- Display on error
+					<label class="form__input-feedback-text"
+						for="city"
+					>
+						You must enter a city
+					</label>
+					-->
 				</div>
 			</div>
 		</div>
@@ -90,7 +159,11 @@
 	<div class="form__footer form__footer--colored">
 		<div class="form__actions">
 			<div class="form__action">
-				<button class="button button--full button--primary">Submit</button>
+				<button class="button button--full button--primary"
+					type="submit"
+				>
+					Submit
+				</button>
 			</div>
 		</div>
 	</div>
