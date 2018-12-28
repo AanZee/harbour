@@ -8,7 +8,7 @@
 		<div class="layout__section layout__section--fitted layout__section--spaced-80 layout__section--bordered layout__section--rounded">
 			{%- if include.hide_preview == null -%}
 				<div class="layout__section">
-					<div class="layout__inner {{ layoutInnerClasses }}">
+					<div class="layout__inner {{ include.layoutInnerClasses }}">
 						<div>
 							{{- include.content -}}
 						</div>

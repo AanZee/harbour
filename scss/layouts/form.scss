@@ -438,7 +438,6 @@ $form-section-header-min-width: $spacing * 28;
 }
 
 .form__footer {
-	border-top: 1px dashed $color-ui-100;
 
 	@include media(0, $range-hand) {
 		padding-top: $spacing * 1.5;

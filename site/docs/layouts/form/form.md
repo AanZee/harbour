@@ -4,13 +4,17 @@ title: Form
 ---
 
 ## Available modifiers
-Align labels to the right
+Align labels to the right on the left side of the input fields
 ```
 form--right-aligned-labels
 ```
-Align all sections, fieldsets, fields and action horizontally
+Align labels to the left on the left side of the input fields
 ```
-form--horizontal
+form--left-aligned-labels
+```
+Align labels above the input fields
+```
+form--top-aligned-labels
 ```
 Display the actions vertically
 ```
@@ -43,20 +47,33 @@ form (modifier)
 
 ## Example HTML
 
+### Modifier examples
+#### Colored sections form
+{% include_relative examples/colored-sections-form.html %}
+{% include example.html
+	content=colored-sections-form
+	layoutInnerClasses="layout__inner--condensed"
+%}
+
+#### Left aligned labels form
+{% include_relative examples/left-aligned-labels-form.html %}
+{% include example.html
+	content=left-aligned-labels-form
+%}
+
+### Login form
+A simple form with labels above the input fields (default).
+
+{% include_relative examples/login-form.html %}
+{% include example.html
+	content=login-form
+	layoutInnerClasses="layout__inner--condensed"
+%}
+
 ### Personal info form
 A form with labels on the left side of the form and right aligned labels.
 
 {% include_relative examples/personal-info-form.html %}
-
 {% include example.html
 	content=personal-info-form
-%}
-
-### Login form
-A simple form with labels above the input fields.
-
-{% include_relative examples/login-form.html %}
-
-{% include example.html
-	content=login-form
 %}
