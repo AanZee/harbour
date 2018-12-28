@@ -19,7 +19,6 @@ script:
 - echo $TRAVIS_EVENT_TYPE
 - echo $TRAVIS_COMMIT
 - echo $TRAVIS_BRANCH
-- echo $PACKAGE_VERSION
 
 jobs:
   include:
