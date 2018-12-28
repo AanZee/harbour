@@ -12,7 +12,7 @@ S3_FOLDER=$AWS_BUCKET/0.0.3
 echo $S3_FOLDER
 echo "Deploying to S3"
 aws configure set preview.cloudfront true
-aws s3 cp ./_gh_pages/. $S3_FOLDER --acl public-read
+aws s3 cp ./_gh_pages/. $AWS_BUCKET --acl public-read
 
 echo "Invalidating cache"
 aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*" # TODO: tweak invalidation
