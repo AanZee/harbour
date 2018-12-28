@@ -24,8 +24,9 @@ $color-quaternary: $color-harbour-grey !default;
 // ### Typography
 $color-heading: $color-harbour-black !default;
 $color-subheading: $color-harbour-black !default;
-$color-text: $color-harbour-black !default;
 $color-text-light: $color-harbour-white !default;
+$color-text-dark: $color-harbour-black !default;
+$color-text: $color-text-light !default;
 
 // ### User Interface
 $color-ui: $color-harbour-grey !default;
@@ -42,6 +43,7 @@ $color-focus: $color-harbour-green !default;
 $color-shadow: $color-harbour-black !default;
 $color-background-light: $color-harbour-white !default;
 $color-background-dark: $color-harbour-black !default;
+$color-background: $color-background-dark !default;
 $color-background-neutral: $color-harbour-grey !default;
 $color-background-colored: $color-harbour-blue !default;
 $color-background-complementary: $color-harbour-yellow !default;
