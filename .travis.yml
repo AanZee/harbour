@@ -15,8 +15,6 @@ install:
 
 jobs:
   include:
-  - stage: Test
-    script: npm run build
   - stage: Deploy
     if: type = push
     node_js: '10'
@@ -24,4 +22,5 @@ jobs:
     - provider: script
       on:
         branch: feature/HAR-161-s3-deployments # TODO: change to master
+      skip_cleanup: true
       script: bash scripts/deploy-master.sh
