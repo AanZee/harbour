@@ -1,0 +1,98 @@
+{% capture personal-info-form %}
+<form class="form form--right-aligned-labels">
+	<div class="form__section">
+		<div class="form__fieldset">
+			<div class="form__field">
+				<div class="form__field-header">
+					<label class="form__field-label"
+						for="given-name"
+					>
+						Given name
+					</label>
+				</div>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<input class="text-input"
+							type="text"
+							id="given-name"
+						>
+					</div>
+				</div>
+			</div>
+			<div class="form__field">
+				<div class="form__field-header">
+					<label class="form__field-label"
+						for="family-name"
+					>
+						Family name
+					</label>
+				</div>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<input class="text-input"
+							type="text"
+							id="family-name"
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form__fieldset">
+			<div class="form__field">
+				<div class="form__field-header">
+					<label class="form__field-label"
+						for="street"
+					>
+						Street
+					</label>
+				</div>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<input class="text-input"
+							type="text"
+							id="street"
+						>
+					</div>
+					<!-- Display on error
+					<label class="form__input-feedback-text"
+						for="street"
+					>
+						You must enter a street name
+					</label>
+					-->
+				</div>
+			</div>
+			<div class="form__field">
+				<div class="form__field-header">
+					<label class="form__field-label"
+						for="house-number"
+					>
+						House number
+						<span class="form__field-supporting-text">Optional</span>
+					</label>
+				</div>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<input class="text-input"
+							type="number"
+							id="house-number"
+						>
+					</div>
+					<label class="form__input-helper-text"
+						for="house-number"
+					>
+						You don't have to enter an addition for some reason
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form__footer form__footer--colored">
+		<div class="form__actions">
+			<div class="form__action">
+				<button class="button button--full button--primary">Submit</button>
+			</div>
+		</div>
+	</div>
+</form>
+{% endcapture %}

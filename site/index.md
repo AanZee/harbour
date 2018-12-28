@@ -24,6 +24,6 @@ Harbour is a UI library created at [Aan Zee](https://www.aanzee.nl). Please chec
 
 ## Layouts
 
-* [Form]({{ '/docs/layouts/form.html' | relative_url }})
+* [Form]({{ '/docs/layouts/form/form.html' | relative_url }})
 * [Layout]({{ '/docs/layouts/layout.html' | relative_url }})
 * [Page]({{ '/docs/layouts/page.html' | relative_url }})
