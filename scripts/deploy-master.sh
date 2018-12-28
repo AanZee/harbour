@@ -1,3 +1,9 @@
+echo "Installing bundle"
+bundle install
+
+echo "Installing npm packages"
+npm install
+
 echo "Building website"
 JEKYLL_BASE_URL=/0.0.2 npm run build # TODO: remove base url
 

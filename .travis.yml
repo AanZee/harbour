@@ -8,13 +8,12 @@ before_install:
 - rvm install 2.5.1
 
 install:
-- bundle install
 - pip install --user awscli
-- npm install
 - npm install -g gulp-cli
 
 jobs:
   include:
+  - script: echo "This is a test"
   - stage: Deploy
     if: type = push
     node_js: '10'
