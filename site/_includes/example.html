@@ -15,19 +15,27 @@
 					</div>
 				</div>
 			{%- endif -%}
-
 			{%- if include.hide_markup == null -%}
 				{% assign layoutClasses="layout__section layout__section--spaced-0 layout__section--rounded-bottom" %}
 				{%- if include.hide_preview == null -%}
 					{% assign layoutClasses="layout__section layout__section--spaced-0 layout__section--rounded-bottom layout__section--bordered-top" %}
 				{%- endif -%}
-				<div
-					class="{{ layoutClasses }}"
-				>
-					{%- highlight html -%}
-						{{- include.content | replace: 'data-src="holder.js', 'src="...' -}}
-					{%- endhighlight -%}
-				</div>
+				<label class="collapsible">
+					<input class="collapsible__input"
+						type="checkbox"
+					>
+					<div class="collapsible__label collapsible__label--show"></> Show code</div>
+					<div class="collapsible__label collapsible__label--hide"></> Hide code</div>
+					<div class="collapsible__content">
+						<div class="layout">
+							<div class="{{ layoutClasses }}">
+								{%- highlight html -%}
+								{{- include.content | replace: 'data-src="holder.js', 'src="...' -}}
+								{%- endhighlight -%}
+							</div>
+						</div>
+					</div>
+				</label>
 			{%- endif -%}
 		</div>
 	{% endif %}
