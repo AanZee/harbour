@@ -27,3 +27,12 @@ jobs:
         branch: master
       skip_cleanup: true
       script: bash scripts/deploy-master-version.sh
+    - stage: Deploy
+    if: type = push
+    node_js: '10'
+    deploy:
+    - provider: script
+      on:
+        condition: $TRAVIS_BRANCH =~ ^feature$
+      skip_cleanup: true
+      script: bash scripts/deploy-feature.sh
