@@ -33,5 +33,5 @@ page
 {% endcapture %}
 {% include example.html
 	content=page
-	hide_preview=true
+	show-code-example-only=true
 %}
