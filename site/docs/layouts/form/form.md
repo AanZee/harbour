@@ -16,10 +16,6 @@ Align labels above the input fields, can be used to reset other form modifiers w
 ```
 form--top-aligned-labels
 ```
-Display the actions vertically
-```
-form__actions--vertical
-```
 
 ## Structure
 ```
