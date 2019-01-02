@@ -10,7 +10,7 @@ title: Icons
 
 **A collection of neutral, basic UI-icons - designed for Harbour-components**
 
-**__With the development of Harbour as a starting point in the development of client applications the need for  well-designed, neutral, basic UI-icons that could be used in the Harbour-components became clear. After defining a list of required icons we started the design of these icons with undermentioned principles.__**
+_**With the development of Harbour as a starting point in the development of client applications the need for  well-designed, neutral, basic UI-icons that could be used in the Harbour-components became clear. After defining a list of required icons we started the design of these icons with undermentioned principles.**_
 
 
 
