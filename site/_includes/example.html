@@ -30,7 +30,7 @@
 						<div class="layout">
 							<div class="{{ layoutClasses }}">
 								{%- highlight html -%}
-								{{- include.content | replace: 'data-src="holder.js', 'src="...' -}}
+									{{- include.content -}}
 								{%- endhighlight -%}
 							</div>
 						</div>
