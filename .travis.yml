@@ -10,24 +10,24 @@ install:
 jobs:
   include:
   - stage: Deploy
-    name: Deploy master
     if: type = push
     node_js: '10'
     deploy:
     - provider: script
       on:
         branch: feature/HAR-161-s3-deployments # TODO: change to master
+      name: Deploy master
       skip_cleanup: true
       script: bash scripts/deploy-master-root.sh
   - script: echo "This is a test"
     node_js: '10'
   - stage: Deploy
-	name: Deploy version
     if: type = push
     node_js: '10'
     deploy:
     - provider: script
       on:
         branch: feature/HAR-161-s3-deployments # TODO: change to master
+      name: Deploy version
       skip_cleanup: true
       script: bash scripts/deploy-master-version.sh
