@@ -6,6 +6,12 @@ $golden-ratio-90: 50% !default;
 $golden-ratio-100: 61.8% !default;
 $golden-ratio-200: 161.8% !default;
 
+$aspect-ratio-portrait: 100% / 2 * 3 !default;
+$aspect-ratio-landscape: 100% / 3 * 2 !default;
+$aspect-ratio-square: 100% !default;
+$aspect-ratio-wide: 100% / 16 * 9 !default;
+$aspect-ratio-ultra-wide: 100% / 239 * 100 !default;
+
 $control-size-40: $spacing * 2 !default;
 $control-size-50: $spacing * 2.5 !default;
 $control-size-60: $spacing * 3 !default;
@@ -15,3 +21,12 @@ $control-size-90: $spacing * 4.5 !default;
 $control-size-100: $spacing * 5.5 !default;
 $control-size-200: $spacing * 6.5 !default;
 $control-size-300: $spacing * 8 !default;
+
+$text-width-70: 20em !default; // NOTE: Around 44 characters per line.
+$text-width-80: 25em !default; // NOTE: Around 55 characters per line.
+$text-width-90: 30em !default; // NOTE: Around 66 characters per line. Is optimal for long text.
+$text-width-100: 35em !default; // NOTE: Around 77 characters per line.
+$text-width-200: 40em !default; // NOTE: Around 88 characters per line.
+$text-width-300: 45em !default; // NOTE: Around 99 characters per line. Use only for one or two line text.
+$text-width-400: 50em !default; // NOTE: Around 110 characters per line. Use only for one or two line text.
+$text-width-500: 55em !default; // NOTE: Around 121 characters per line. Use only for one or two line text.
