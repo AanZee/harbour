@@ -15,7 +15,7 @@ jobs:
     deploy:
     - provider: script
       on:
-        branch: feature/HAR-161-s3-deployments # TODO: change to master
+        branch: master
       skip_cleanup: true
       script: bash scripts/deploy-master-root.sh
   - stage: Deploy
@@ -24,6 +24,6 @@ jobs:
     deploy:
     - provider: script
       on:
-        branch: feature/HAR-161-s3-deployments # TODO: change to master
+        branch: master
       skip_cleanup: true
       script: bash scripts/deploy-master-version.sh
