@@ -6,7 +6,7 @@ before_install:
 jobs:
   include:
   - stage: test
-    script: bas scripts/test-build.sh
+    script: bash scripts/test-build.sh
   - stage: Deploy
     if: type = push
     node_js: '10'
