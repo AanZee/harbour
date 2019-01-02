@@ -27,7 +27,7 @@ jobs:
         branch: master
       skip_cleanup: true
       script: bash scripts/deploy-master-version.sh
-    - stage: Deploy
+  - stage: Deploy
     if: type = push
     node_js: '10'
     deploy:
