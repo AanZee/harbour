@@ -26,7 +26,7 @@
 	<!-- Default example including visual example and code example -->
 	{%- if include.show-code-example-only == null and include.show-visual-example-only == null -%}
 		{{ visual-example }}
-		<div class="layout__section layout__section--spaced-0 layout__section--rounded-bottom">
+		<div class="layout__section layout__section--bordered-top layout__section--spaced-0">
 			<label class="collapsible">
 				<input class="collapsible__input"
 					type="checkbox"
@@ -34,7 +34,11 @@
 				<div class="collapsible__label collapsible__label--show"></> Show code</div>
 				<div class="collapsible__label collapsible__label--hide"></> Hide code</div>
 				<div class="collapsible__content">
-					{{ code-example }}
+					<div class="layout">
+						<div class="layout__section layout__section--bordered-top layout__section--rounded-bottom">
+							{{ code-example }}
+						</div>
+					</div>
 				</div>
 			</label>
 		</div>
