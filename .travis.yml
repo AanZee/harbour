@@ -19,4 +19,15 @@ jobs:
       on:
         branch: feature/HAR-161-s3-deployments # TODO: change to master
       skip_cleanup: true
-      script: bash scripts/deploy-master.sh
+      script: bash scripts/deploy-master-root.sh
+  - script: echo "This is a test"
+    node_js: '10'
+  - stage: Deploy
+    if: type = push
+    node_js: '10'
+    deploy:
+    - provider: script
+      on:
+        branch: feature/HAR-161-s3-deployments # TODO: change to master
+      skip_cleanup: true
+      script: bash scripts/deploy-master-version.sh
