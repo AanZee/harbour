@@ -6,7 +6,6 @@ before_install:
 install:
 - pip install --user awscli
 - npm install -g gulp-cli
-- echo $TRAVIS_BRANCH
 
 jobs:
   include:
