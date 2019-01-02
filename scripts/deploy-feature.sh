@@ -1,3 +1,9 @@
+echo "Installing awscli"
+pip install --user awscli
+
+echo "Installing global gulp"
+npm install -g gulp-cli
+
 echo "Installing bundle"
 bundle install
 
