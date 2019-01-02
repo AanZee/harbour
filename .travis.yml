@@ -6,6 +6,7 @@ before_install:
 install:
 - pip install --user awscli
 - npm install -g gulp-cli
+- echo $TRAVIS_BRANCH
 
 jobs:
   include:
@@ -34,6 +35,6 @@ jobs:
     - provider: script
       on:
         all_branches: true
-        condition: $TRAVIS_BRANCH =~ ^feature$
+        condition: $TRAVIS_BRANCH =~ ^feature\/*
       skip_cleanup: true
       script: bash scripts/deploy-feature.sh
