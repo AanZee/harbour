@@ -9,8 +9,6 @@ install:
 
 jobs:
   include:
-  - script: echo "This is a test"
-    node_js: '10'
   - stage: Deploy
     if: type = push
     node_js: '10'
