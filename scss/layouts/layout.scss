@@ -286,24 +286,6 @@ $layout-section-elevated-box-shadow: $box-shadow !default;
 	}
 }
 
-.layout__section--spacing-100 {
-
-	> :not(:first-child) {
-		@include media(0, $range-palm) {
-			margin-top: $layout-spacing-palm-and-smaller;
-		}
-		@include media($range-hand) {
-			margin-top: $layout-spacing-hand;
-		}
-		@include media($range-lap) {
-			margin-top: $layout-spacing-lap;
-		}
-		@include media($range-desk, false) {
-			margin-top: $layout-spacing-desk-and-larger;
-		}
-	}
-}
-
 .layout__section--spacing-200 {
 
 	> :not(:first-child) {
