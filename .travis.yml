@@ -10,6 +10,7 @@ install:
 jobs:
   include:
   - stage: Deploy
+    name: Deploy master
     if: type = push
     node_js: '10'
     deploy:
@@ -21,6 +22,7 @@ jobs:
   - script: echo "This is a test"
     node_js: '10'
   - stage: Deploy
+	name: Deploy version
     if: type = push
     node_js: '10'
     deploy:
