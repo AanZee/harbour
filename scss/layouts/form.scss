@@ -521,7 +521,7 @@ $form-section-header-min-width: $spacing * 28;
 			margin-right: 0;
 			margin-bottom: 0;
 			margin-left: 0;
-			max-width: 480px;
+			max-width: $spacing * 51;
 			width: 100%;
 
 			&:first-child {

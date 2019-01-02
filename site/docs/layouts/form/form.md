@@ -12,7 +12,7 @@ Align labels to the left on the left side of the input fields
 ```
 form--left-aligned-labels
 ```
-Align labels above the input fields
+Align labels above the input fields, can be used to reset other form modifiers when nesting forms (for example in a popover)
 ```
 form--top-aligned-labels
 ```
@@ -38,8 +38,9 @@ form (modifier)
 │	│	│	│	├── form__field-label
 │	│	│	│	│	├── form__field-supporting-text (optional)
 │	│	│	├── form__field-main
-│	│	│	│	├── form__input-helper-text (optional)
-│	│	│	│	├── form__input-feedback-text (optional)
+│	│	│	│	├── form__field-section
+│	│	│	│	│	├── form__input-helper-text (optional)
+│	│	│	│	│	├── form__input-feedback-text (optional)
 ├── form__footer (modifier)
 │	├── form__actions (modifier)
 │	│	├── form__action (modifier)
@@ -48,6 +49,14 @@ form (modifier)
 ## Example HTML
 
 ### Modifier examples
+
+#### Sections form
+{% include_relative examples/sections-form.html %}
+{% include example.html
+	content=sections-form
+	layoutInnerClasses="layout__inner--condensed"
+%}
+
 #### Colored sections form
 {% include_relative examples/colored-sections-form.html %}
 {% include example.html
