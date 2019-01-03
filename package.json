@@ -1,7 +1,7 @@
 {
 	"name": "aanzee-harbour",
 	"description": "Global component library",
-	"version": "1.21.7",
+	"version": "1.22.0",
 	"author": "Aan Zee",
 	"license": "MIT",
 	"repository": {
@@ -10,7 +10,7 @@
 	},
 	"scripts": {
 		"start": "gulp start",
-		"build": "JEKYLL_BASE_URL=harbour gulp build"
+		"build": "gulp build"
 	},
 	"dependencies": {
 		"bourbon": "5.1.0",
