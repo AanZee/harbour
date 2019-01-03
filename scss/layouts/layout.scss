@@ -121,6 +121,13 @@ $layout-spacing-variations: (
 	}
 }
 
+.layout__section--spacing-0 {
+
+	> :not(:first-child) {
+		margin-top: 0;
+	}
+}
+
 @each $layout-spacing-variation-city-block, $layout-spacing-variation-ranges in $layout-spacing-variations {
 
 	.layout__section--spacing-#{$layout-spacing-variation-city-block} {
