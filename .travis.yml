@@ -1,4 +1,5 @@
 language: node_js
+node_js: '10'
 
 before_install:
 - rvm install 2.5.1
@@ -6,11 +7,9 @@ before_install:
 jobs:
   include:
   - stage: test
-	node_js: '10'
     script: bash scripts/test-build.sh
   - stage: Deploy
     if: type = push
-    node_js: '10'
     deploy:
     - provider: script
       on:
@@ -19,7 +18,6 @@ jobs:
       script: bash scripts/deploy-master-root.sh
   - stage: Deploy
     if: type = push
-    node_js: '10'
     deploy:
     - provider: script
       on:
@@ -28,7 +26,6 @@ jobs:
       script: bash scripts/deploy-master-version.sh
   - stage: Deploy
     if: type = push
-    node_js: '10'
     deploy:
     - provider: script
       on:
