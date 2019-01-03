@@ -3,34 +3,32 @@
 </div>
 {:/nomarkdown}
 
-<div class="layout__section">
-	{% if include.content %}
-		<div class="layout__section layout__section--fitted layout__section--spaced-80 layout__section--bordered layout__section--rounded">
-			{%- if include.hide_preview == null -%}
-				<div class="layout__section">
-					<div class="layout__inner layout__inner--padded-90">
-						<div>
+<div class="layout__section layout__section--spaced-70 layout__section--fitted layout__section--bordered layout__section--rounded">
+	<div class="layout__section">
+		<div class="layout__inner layout__inner--padded-90">
+			<div>
+				{{- include.content -}}
+			</div>
+		</div>
+	</div>
+	<div class="layout__section layout__section--bordered-top layout__section--spaced-0">
+		<label class="collapsible">
+			<input class="collapsible__input"
+				type="checkbox"
+			>
+			<div class="collapsible__label collapsible__label--show"></> Show code</div>
+			<div class="collapsible__label collapsible__label--hide"></> Hide code</div>
+			<div class="collapsible__content">
+				<div class="layout">
+					<div class="layout__section layout__section--bordered-top layout__section--rounded-bottom">
+						{%- highlight html -%}
 							{{- include.content -}}
-						</div>
+						{%- endhighlight -%}
 					</div>
 				</div>
-			{%- endif -%}
-
-			{%- if include.hide_markup == null -%}
-				{% assign layoutClasses="layout__section layout__section--spaced-0 layout__section--rounded-bottom" %}
-				{%- if include.hide_preview == null -%}
-					{% assign layoutClasses="layout__section layout__section--spaced-0 layout__section--rounded-bottom layout__section--bordered-top" %}
-				{%- endif -%}
-				<div
-					class="{{ layoutClasses }}"
-				>
-					{%- highlight html -%}
-						{{- include.content | replace: 'data-src="holder.js', 'src="...' -}}
-					{%- endhighlight -%}
-				</div>
-			{%- endif -%}
-		</div>
-	{% endif %}
+			</div>
+		</label>
+	</div>
 </div>
 
 <div class="layout__section">
