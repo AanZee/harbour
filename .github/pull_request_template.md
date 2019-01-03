@@ -1,4 +1,4 @@
-Issue key: []
+Jira id: [HAR-*]
 
 ## Summary of your proposal
 
