@@ -13,7 +13,7 @@ npm install
 echo "Building website"
 JEKYLL_BASE_URL=/$TRAVIS_BRANCH npm run build
 
-echo "Deploying feature to own folder"
+echo "Deploying branch to own folder"
 aws configure set preview.cloudfront true
 aws s3 sync ./_gh_pages/. s3://$AWS_BUCKET/$TRAVIS_BRANCH --acl public-read
 

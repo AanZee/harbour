@@ -30,6 +30,6 @@ jobs:
     - provider: script
       on:
         all_branches: true
-        condition: $TRAVIS_BRANCH =~ ^feature\/*
+        condition: $TRAVIS_BRANCH =~ ^(feature|release|hotfix)\/*
       skip_cleanup: true
-      script: bash scripts/deploy-feature.sh
+      script: bash scripts/deploy-branch.sh
