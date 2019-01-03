@@ -1,3 +1,5 @@
+$drop-down-menu-icon: $icon-chevron-down !default;
+
 .drop-down-menu {
 	position: relative;
 	display: block;
@@ -14,7 +16,7 @@
 		display: block;
 		width: $control-size-100;
 		height: $icon-size-100;
-		background-image: url(get-svg-uri($icon-chevron-down-bold, $color-ui));
+		background-image: url(get-svg-uri($drop-down-menu-icon, $color-ui));
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -51,9 +53,7 @@
 	@include ellipsis();
 	position: relative;
 	display: block;
-	padding-top: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
 	padding-right: $control-size-100;
-	padding-bottom: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
 	padding-left: $spacing * 1.5;
 	width: 100%;
 	height: $control-size-100;
