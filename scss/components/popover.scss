@@ -30,36 +30,6 @@ $popover-z-index-lap-and-larger: 600 !default;
 	display: inline-flex;
 }
 
-.popover--scaled {
-}
-
-.popover--flexible {
-}
-
-.popover--arrow {
-}
-
-.popover--center-aligned-arrow {
-}
-
-.popover--left-bottom-aligned-body {
-}
-
-.popover--center-bottom-aligned-body {
-}
-
-.popover--right-bottom-aligned-body {
-}
-
-.popover--left-top-aligned-body {
-}
-
-.popover--center-top-aligned-body {
-}
-
-.popover--right-top-aligned-body {
-}
-
 .popover__status {
 	position: absolute;
 	top: 0; // FIX: Fixes some render bugs.
