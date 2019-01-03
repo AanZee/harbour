@@ -1,13 +1,13 @@
-@import 'colors';
 @import 'border-radius';
-@import 'box-shadows'; // NOTE: Needs to be placed after the colors import
+@import 'colors'; // NOTE: Needs to be placed before the borders and box-shadows import
+@import 'borders';
+@import 'box-shadows';
 @import 'font-families';
-@import 'font-weights';
 @import 'font-sizes';
+@import 'font-weights';
 @import 'icon-sizes';
-@import 'line-heights';
-@import 'ranges';
-@import 'opacity';
-@import 'borders'; // NOTE: Needs to be placed after the colors import
-@import 'sizes';
+@import 'line-heights'; // NOTE: Needs to be placed before the input import
 @import 'input';
+@import 'opacity';
+@import 'ranges';
+@import 'sizes';
