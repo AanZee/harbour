@@ -65,7 +65,7 @@ $layout-spacing-variations: (
 	)
 );
 
-// Generates media queries with the provided properties
+// Generates media queries with the provided spacing properties
 @mixin layout-get-ranges($properties, $ranges) {
 	@include media(0, $range-palm) {
 		@each $property in $properties {
