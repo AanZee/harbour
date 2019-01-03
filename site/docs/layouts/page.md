@@ -17,8 +17,7 @@ page
 ```
 
 ## Example HTML
-
-{% capture page %}
+```html
 <body class="page">
 	<header class="page__header">
 		...
@@ -30,8 +29,4 @@ page
 		...
 	</footer>
 </body>
-{% endcapture %}
-{% include example.html
-	content=page
-	show-code-example-only=true
-%}
+```

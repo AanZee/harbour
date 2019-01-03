@@ -3,57 +3,32 @@
 </div>
 {:/nomarkdown}
 
-<!-- Visual example snippet -->
-{% capture visual-example %}
-<div class="layout__section">
-	<div class="layout__inner layout__inner--padded-90">
-		<div>
-			{{- include.content -}}
+<div class="layout__section layout__section--spaced-70 layout__section--fitted layout__section--bordered layout__section--rounded">
+	<div class="layout__section">
+		<div class="layout__inner layout__inner--padded-90">
+			<div>
+				{{- include.content -}}
+			</div>
 		</div>
 	</div>
-</div>
-{% endcapture %}
-
-<!-- Code example snippet -->
-{% capture code-example %}
-	{%- highlight html -%}
-		{{- include.content -}}
-	{%- endhighlight -%}
-{% endcapture %}
-
-<div class="layout__section layout__section--spaced-70 layout__section--fitted layout__section--bordered layout__section--rounded">
-
-	<!-- Default example including visual example and code example -->
-	{%- if include.show-code-example-only == null and include.show-visual-example-only == null -%}
-		{{ visual-example }}
-		<div class="layout__section layout__section--bordered-top layout__section--spaced-0">
-			<label class="collapsible">
-				<input class="collapsible__input"
-					type="checkbox"
-				>
-				<div class="collapsible__label collapsible__label--show"></> Show code</div>
-				<div class="collapsible__label collapsible__label--hide"></> Hide code</div>
-				<div class="collapsible__content">
-					<div class="layout">
-						<div class="layout__section layout__section--bordered-top layout__section--rounded-bottom">
-							{{ code-example }}
-						</div>
+	<div class="layout__section layout__section--bordered-top layout__section--spaced-0">
+		<label class="collapsible">
+			<input class="collapsible__input"
+				type="checkbox"
+			>
+			<div class="collapsible__label collapsible__label--show"></> Show code</div>
+			<div class="collapsible__label collapsible__label--hide"></> Hide code</div>
+			<div class="collapsible__content">
+				<div class="layout">
+					<div class="layout__section layout__section--bordered-top layout__section--rounded-bottom">
+						{%- highlight html -%}
+							{{- include.content -}}
+						{%- endhighlight -%}
 					</div>
 				</div>
-			</label>
-		</div>
-	{%- endif -%}
-
-	<!-- Visual example only -->
-	{%- if include.show-visual-example-only -%}
-		{{ visual-example }}
-	{%- endif -%}
-
-	<!-- Code example only -->
-	{%- if include.show-code-example-only -%}
-		{{ code-example }}
-	{%- endif -%}
-
+			</div>
+		</label>
+	</div>
 </div>
 
 <div class="layout__section">
