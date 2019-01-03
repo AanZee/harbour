@@ -8,7 +8,7 @@ jobs:
   include:
   - stage: test
     script: bash scripts/test-build.sh
-  - stage: Deploy
+  - stage: deploy
     if: type = push
     deploy:
     - provider: script
@@ -16,7 +16,7 @@ jobs:
         branch: master
       skip_cleanup: true
       script: bash scripts/deploy-master-root.sh
-  - stage: Deploy
+  - stage: deploy
     if: type = push
     deploy:
     - provider: script
@@ -24,7 +24,7 @@ jobs:
         branch: master
       skip_cleanup: true
       script: bash scripts/deploy-master-version.sh
-  - stage: Deploy
+  - stage: deploy
     if: type = push
     deploy:
     - provider: script
