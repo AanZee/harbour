@@ -3,6 +3,14 @@
 </div>
 {:/nomarkdown}
 
+{% comment %}
+	NOTE: Creates random number so we have a unique ID for the collapsible code block -->
+{% endcomment %}
+
+{% assign contentLength = include.content | size %}
+{% assign randomNumber = "now" | date: "%N" %}
+{% assign collapsibleId = contentLength | plus: randomNumber %}
+
 <div class="layout__section layout__section--spaced-70 layout__section--fitted layout__section--bordered layout__section--rounded">
 	<div class="layout__section">
 		<div class="layout__inner layout__inner--padded-90">
@@ -12,12 +20,21 @@
 		</div>
 	</div>
 	<div class="layout__section layout__section--bordered-top layout__section--spaced-0">
-		<label class="collapsible">
+		<div class="collapsible">
 			<input class="collapsible__input"
 				type="checkbox"
+				id="{{ collapsibleId }}"
 			>
-			<div class="collapsible__label collapsible__label--show"></> Show code</div>
-			<div class="collapsible__label collapsible__label--hide"></> Hide code</div>
+			<label class="collapsible__label collapsible__label--show"
+				for="{{ collapsibleId }}"
+			>
+				&lt;&#47;&gt; Show code
+			</label>
+			<label class="collapsible__label collapsible__label--hide"
+				for="{{ collapsibleId }}"
+			>
+				&lt;&#47;&gt; Hide code
+			</label>
 			<div class="collapsible__content">
 				<div class="layout">
 					<div class="layout__section layout__section--bordered-top layout__section--rounded-bottom">
@@ -27,7 +44,7 @@
 					</div>
 				</div>
 			</div>
-		</label>
+		</div>
 	</div>
 </div>
 
