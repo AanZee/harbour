@@ -607,6 +607,10 @@ label.card__primary-action {
 	}
 }
 
+.card__icon--arrow-down-bold::after {
+	content: url(get-svg-uri($icon-arrow-down-bold, $color-text));
+}
+
 .card__heading-group {
 	display: flex;
 	flex-direction: column;

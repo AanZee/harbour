@@ -53,22 +53,74 @@ Icon design in general focusses on capturing the essence of a shape into a simpl
 Make sure to optimise your .svg file with SVGO Optimizer plug-in with the custom settings as shared in the Harbour confluence
 
 
-## Example Icons
+## Available icon variables
 
 {% capture page %}
-<body class="page">
-	<header class="page__header">
-		...
-	</header>
-	<main class="page__main">
-		...
-	</main>
-	<footer class="page__footer">
-		...
-	</footer>
-</body>
+<div class="collection collection--grid-one-third">
+	<div class="collection__item">
+		<section class="card card--90 card--boxed">
+			<div class="card__actions">
+				<div class="card__primary-action">
+					<header class="card__header">
+						<div class="card__icon card__icon--arrow-down-bold">
+						</div>
+						<div class="card__heading-group">
+							<h1 class="card__title">
+								$icon-arrow-up-bold
+							</h1>
+							<h2 class="card__excerpt">
+								Used to indicate direction (up) of a follow up action in UI elements.
+							</h2>
+						</div>
+					</header>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="collection__item">
+		<section class="card card--90 card--boxed">
+			<div class="card__actions">
+				<div class="card__primary-action">
+					<header class="card__header">
+						<div class="card__icon card__icon--arrow-down-bold">
+						</div>
+						<div class="card__heading-group">
+							<h1 class="card__title">
+								$icon-arrow-up-bold
+							</h1>
+							<h2 class="card__excerpt">
+								Used to indicate direction (up) of a follow up action in UI elements.
+							</h2>
+						</div>
+					</header>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="collection__item">
+		<section class="card card--90 card--boxed">
+			<div class="card__actions">
+				<div class="card__primary-action">
+					<header class="card__header">
+						<div class="card__icon card__icon--arrow-down-bold">
+						</div>
+						<div class="card__heading-group">
+							<h1 class="card__title">
+								$icon-arrow-up-bold
+							</h1>
+							<h2 class="card__excerpt">
+								Used to indicate direction (up) of a follow up action in UI elements.
+							</h2>
+						</div>
+					</header>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
 {% endcapture %}
+
 {% include example.html
 	content=page
-	hide_preview=true
+	hide_markup=true
 %}
