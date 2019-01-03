@@ -12,7 +12,7 @@ Harbour is a UI library created at [Aan Zee](https://www.aanzee.nl). Please chec
 			<ul>
 			{% for page in collection.docs %}
 				<li>
-					<a href="{{ page.url }}">{{ page.title }}</a>
+					<a href="{{ page.url | relative_url }}">{{ page.title }}</a>
 				</li>
 			{% endfor %}
 			</ul>
