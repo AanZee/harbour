@@ -1,0 +1,221 @@
+$sheet-z-index: 800 !default;
+
+$sheet-animation-duration: 200ms;
+$sheet-main-and-header-box-shadow-palm-and-smaller: 0 0 ($spacing / 2) ($spacing / 2) $color-background-light;
+$sheet-main-and-header-box-shadow-hand: 0 0 ($spacing / 2) ($spacing / 2) $color-background-light;
+$sheet-main-and-header-box-shadow-lap-and-larger: 0 0 $spacing $spacing $color-background-light;
+
+.sheet {
+	position: relative;
+	display: flex;
+}
+
+.sheet__status {
+	position: absolute;
+	top: 0; // FIX: Fixes some render bugs.
+	left: 0; // FIX: Fixes some render bugs.
+	z-index: -100; // NOTE: Put the input behind the label so it doesn't overlay text.
+	opacity: 0; // NOTE: we use this instead of display:none to allow focusing.
+}
+
+.sheet__action {
+	display: flex;
+	align-self: stretch;
+	align-items: center;
+
+	.sheet__status:focus ~ & > * {
+		box-shadow: $box-shadow-focus;
+
+		&:active,
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}
+
+.sheet__body {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: $sheet-z-index + 1;
+	visibility: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	max-width: calc(100vw - #{$spacing * 4});
+	width: $spacing * 50;
+	background-color: $color-background-light;
+	box-shadow: $box-shadow-100;
+	opacity: 0;
+	transition-timing-function: ease-out;
+	transition-duration: $sheet-animation-duration;
+	transition-property: visibility, transform, opacity;
+	will-change: transform;
+	-webkit-font-smoothing: subpixel-antialiased;
+	transform: translateX(100%);
+
+	@include media($range-desk-l, false) {
+		// @TODO: let it float around
+	}
+
+	.sheet__status:checked ~ & {
+		visibility: visible;
+		opacity: $opacity-100;
+		transform: translateX(0%);
+	}
+}
+
+.sheet__header {
+	position: sticky;
+	top: 0;
+	z-index: $sheet-z-index + 2;
+	background-color: $color-background-light;
+
+	@include media(0, $range-palm) {
+		padding-top: $spacing * 2;
+		padding-right: $spacing * 2;
+		padding-bottom: $spacing;
+		padding-left: $spacing * 2;
+		box-shadow: $sheet-main-and-header-box-shadow-palm-and-smaller;
+	}
+
+	@include media($range-hand) {
+		padding-top: $spacing * 2.5;
+		padding-right: $spacing * 3;
+		padding-bottom: $spacing;
+		padding-left: $spacing * 3;
+		box-shadow: $sheet-main-and-header-box-shadow-hand;
+	}
+
+	@include media($range-lap, false) {
+		padding-top: $spacing * 3;
+		padding-right: $spacing * 4;
+		padding-bottom: $spacing;
+		padding-left: $spacing * 4;
+		box-shadow: $sheet-main-and-header-box-shadow-lap-and-larger;
+	}
+}
+
+.sheet__title {
+	padding-right: $spacing * 8; // NOTE To make sure title is not behind close-action.
+	color: $color-heading;
+	font-weight: 500;
+	line-height: $line-height-40;
+
+	@include media(0, $range-hand) {
+		font-size: $font-size-200;
+	}
+
+	@include media($range-lap, false) {
+		font-size: $font-size-300;
+	}
+}
+
+.sheet__close-action {
+	@include hide-text();
+	position: absolute;
+	z-index: $sheet-z-index + 3;
+	border: none;
+	background-color: transparent;
+
+	@include media(0, $range-palm) {
+		top: 0;
+		right: 0;
+		width: ($spacing * 4) + ($spacing * 1.5);
+		height: (($spacing * 4) + ($spacing * 1.5) + 9px);
+	}
+
+	@include media($range-hand) {
+		top: $spacing;
+		right: $spacing;
+		width: ($spacing * 4) + ($spacing * 1.5);
+		height: (($spacing * 4) + ($spacing * 1.5) + 1px);
+	}
+
+	@include media($range-lap, false) {
+		top: $spacing * 2;
+		right: $spacing * 2;
+		width: ($spacing * 4) + ($spacing * 1.5);
+		height: (($spacing * 4) + ($spacing * 1.5) - 4px);
+	}
+
+	&::before {
+		@include align(absolute, center, center);
+		width: $spacing * 1.5;
+		height: $spacing * 1.5;
+		background-image: url(get-svg-uri($icon-cross-bold, $color-text-300));
+		background-position: center center;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		content: '';
+		text-indent: 0;
+	}
+}
+
+.sheet__main {
+
+	@include media(0, $range-palm) {
+		padding-top: $spacing * 2;
+		padding-right: $spacing * 2;
+		padding-bottom: $spacing;
+		padding-left: $spacing * 2;
+		box-shadow: $sheet-main-and-header-box-shadow-palm-and-smaller;
+	}
+
+	@include media($range-hand) {
+		padding-top: $spacing * 2.5;
+		padding-right: $spacing * 3;
+		padding-bottom: $spacing;
+		padding-left: $spacing * 3;
+		box-shadow: $sheet-main-and-header-box-shadow-hand;
+	}
+
+	@include media($range-lap, false) {
+		padding-top: $spacing * 3;
+		padding-right: $spacing * 4;
+		padding-bottom: $spacing;
+		padding-left: $spacing * 4;
+		box-shadow: $sheet-main-and-header-box-shadow-lap-and-larger;
+	}
+}
+
+.sheet__backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	color: transparent;
+
+	@include media(0, $range-hand) {
+		z-index: $sheet-z-index;
+		visibility: hidden;
+		background-color: rgba($color-ui-100, 0.6);
+		opacity: 0;
+		transition-timing-function: ease-out;
+		transition-duration: $sheet-animation-duration;
+		transition-property: visibility, opacity;
+	}
+
+	@include media($range-lap, false) {
+		z-index: $sheet-z-index;
+		display: none;
+	}
+
+	&[for] {
+		cursor: default; // NOTE: To reset cursor in ../reset/label.scss
+	}
+
+	.sheet__status:checked ~ & {
+
+		@include media(0, $range-hand) {
+			visibility: visible;
+			opacity: $opacity-100;
+		}
+
+		@include media($range-lap, false) {
+			display: block;
+		}
+	}
+}
