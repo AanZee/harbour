@@ -46,11 +46,11 @@ sheet
 				</label>
 			</header>
 			<div class="sheet__main">
-				<div class="content">
+				<section class="content">
 					<p>
 						Occaecat consectetur cupidatat pariatur magna officia consequat duis qui Lorem. Lorem exercitation est adipisicing anim Lorem dolor ad. Deserunt reprehenderit amet sint aliqua et ea voluptate aliqua et reprehenderit sint non. Lorem aliqua fugiat sint fugiat aliquip aute aliquip elit dolor esse labore sunt ad ad. Et et nulla laborum veniam magna. Eiusmod proident nisi in sunt excepteur qui exercitation. Nisi mollit culpa consequat consectetur ullamco sint sunt veniam. Anim do aliquip eu mollit amet laboris commodo occaecat aliqua esse labore.
 					</p>
-				</div>
+				</section>
 			</div>
 		</section>
 		<label class="sheet__backdrop"
