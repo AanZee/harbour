@@ -35,13 +35,13 @@ The classes belonging to the `button` component can be used to style both the `<
 
 ## Available modifiers
 ### Colors
-{% capture example %}
+{% capture button-colors %}
 <button class="button button--call-to-action" type="button">button--call-to-action</button>
 <button class="button button--primary" type="button">button--primary</button>
 <button class="button button--secondary" type="button">button--secondary</button>
 {% endcapture %}
 {% include example.html
-	content=example
+	content=button-colors
 %}
 
 ### Outline version (available in all colors)

@@ -1,5 +1,54 @@
 <!doctype html>
 <html lang="en">
+	{% comment %}
+		Collapsible styling is added for the code block toggle in example.html
+	{% endcomment %}
+
+	<style>
+		.collapsible {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.collapsible__label {
+			display: flex;
+			user-select: none;
+			justify-content: center;
+			padding: 8px;
+			color: #3185fc;
+			font-size: 12px;
+			font-weight: 600;
+			cursor: pointer;
+		}
+
+		.collapsible__input:checked ~ .collapsible__label--show {
+			display: none;
+		}
+
+		.collapsible__label--hide {
+			display: none;
+		}
+
+		.collapsible__input:checked ~ .collapsible__label--hide {
+			display: flex;
+		}
+
+		.collapsible__input {
+			position: absolute;
+			top: 0;
+			visibility: hidden;
+		}
+
+		.collapsible__content {
+			overflow: hidden;
+			max-height: 0px;
+		}
+
+		.collapsible__input:checked ~ .collapsible__content {
+			max-height: none;
+		}
+	</style>
+
 	<head>
 		{% include head.html %}
 	</head>
