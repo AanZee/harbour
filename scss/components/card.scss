@@ -1,0 +1,913 @@
+$card-z-index: 0 !default;
+$card-is-skeleton-fill: $color-ui-60 !default;
+$card-border-radius: $border-radius-100 !default;
+$card-box-shadow: $box-shadow-100 !default;
+$card-sections-border: 1px solid $color-ui-20 !default;
+$card-primary-action-icon: $icon-chevron-right !default;
+$card-primary-expand-icon: $icon-chevron-down !default;
+// Setting sizes for size 90
+$card-heading-group-90-spacing: 0 !default;
+$card-title-90-font-size: $font-size-100 !default;
+$card-title-90-line-height: $line-height-30 !default;
+$card-subtitle-90-font-size: $font-size-90 !default;
+$card-subtitle-90-line-height: $line-height-40 !default;
+$card-excerpt-90-font-size: $font-size-100 !default;
+$card-excerpt-90-line-height: $line-height-60 !default;
+$card-icon-90-size: $card-title-90-font-size * $card-title-90-line-height * 2 !default;
+$card-header-90-height: $card-title-90-font-size * $card-title-90-line-height + $card-subtitle-90-font-size * $card-subtitle-90-line-height !default;
+@if $card-icon-90-size > $card-header-90-height {
+	$card-icon-90-size: $card-header-90-height;
+}
+$card-padding-top-bottom-90: $spacing * 1.5 !default;
+$card-padding-left-right-90: $spacing * 1.5 !default;
+$card-height-90: $card-header-90-height + ($card-padding-top-bottom-90 * 2) !default;
+$card-horizontal-media-width-90: 25% !default;
+// Setting sizes for size 100
+$card-heading-group-100-spacing: $spacing * 0.5 !default;
+$card-title-100-font-size: $font-size-200 !default;
+$card-title-100-line-height: $line-height-20 !default;
+$card-subtitle-100-font-size: $font-size-90 !default;
+$card-subtitle-100-line-height: $line-height-40 !default;
+$card-excerpt-100-font-size: $font-size-100 !default;
+$card-excerpt-100-line-height: $line-height-60 !default;
+$card-icon-100-size: $card-title-100-font-size * $card-title-100-line-height * 2 !default;
+$card-header-100-height: $card-title-100-font-size * $card-title-100-line-height + $card-subtitle-100-font-size * $card-subtitle-100-line-height !default;
+@if $card-icon-100-size > $card-header-100-height {
+	$card-icon-100-size: $card-header-100-height;
+}
+$card-padding-top-bottom-100: $spacing * 2 !default;
+$card-padding-left-right-100: $spacing * 2 !default;
+$card-height-100: $card-header-100-height + ($card-padding-top-bottom-100 * 2) !default;
+$card-horizontal-media-width-100: 33.33% !default;
+// Setting sizes for size 200
+$card-heading-group-200-spacing: $spacing * 1 !default;
+$card-title-200-font-size: $font-size-300 !default;
+$card-title-200-line-height: $line-height-20 !default;
+$card-subtitle-200-font-size: $font-size-100 !default;
+$card-subtitle-200-line-height: $line-height-40 !default;
+$card-excerpt-200-font-size: $font-size-200 !default;
+$card-excerpt-200-line-height: $line-height-60 !default;
+$card-icon-200-size: $card-title-200-font-size * $card-title-200-line-height * 2 !default;
+$card-header-200-height: $card-title-200-font-size * $card-title-200-line-height + $card-subtitle-200-font-size * $card-subtitle-200-line-height !default;
+@if $card-icon-200-size > $card-header-200-height {
+	$card-icon-200-size: $card-header-200-height;
+}
+$card-padding-top-bottom-200: $spacing * 2.5 !default;
+$card-padding-left-right-200: $spacing * 2.5 !default;
+$card-height-200: $card-header-200-height + ($card-padding-top-bottom-200 * 2) !default;
+$card-horizontal-media-width-200: 50% !default;
+
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-width: $spacing * 60;
+	border-radius: $card-border-radius;
+	background-color: $color-background-light;
+	box-shadow: $card-box-shadow;
+
+	&.is-disabled {
+		// NOTE: For when user should not use the card. Can be used with is-updating state.
+		opacity: $opacity-disabled;
+		pointer-events: none;
+	}
+
+	&.is-skeleton {
+		// NOTE: For loading is short.
+		pointer-events: none;
+	}
+
+	&.is-loading {
+		// NOTE: For when loading takes more time.
+		pointer-events: none;
+	}
+
+	&.is-updating {
+		// NOTE: For when data in card is updating.
+		cursor: progress;
+		pointer-events: none;
+	}
+
+	&.is-unavailable {
+		border-color: rgba($color-ui-80, $opacity-disabled);
+	}
+}
+
+.card--horizontal {
+	flex-direction: row;
+	max-width: none;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+.card--stretched {
+	max-width: none;
+}
+
+.card--boxed {
+	border: 2px solid $color-ui-40;
+	background-color: $color-ui-10;
+	box-shadow: none;
+}
+
+.card--background-neutral {
+	background-color: $color-background-neutral;
+}
+
+.card--flat {
+	border: none;
+	box-shadow: none;
+}
+
+.card__expand-status {
+	position: absolute;
+	top: 0; // FIX: Fixes some render bugs.
+	left: 0; // FIX: Fixes some render bugs.
+	z-index: -100; // NOTE: Put the input behind the label so it doesn't overlay text.
+	opacity: 0; // NOTE: we use this instead of display:none to allow focusing.
+}
+
+.card__actions {
+	display: flex;
+	flex-direction: column;
+
+	.card--horizontal & {
+		flex-direction: row;
+		flex-basis: 100%;
+	}
+}
+
+.card__primary-action {
+	position: relative;
+	display: flex;
+	min-width: 0;
+	border-radius: $card-border-radius;
+	cursor: default;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	flex-shrink: 1;
+	align-items: center;
+
+	.card--horizontal & {
+		flex-wrap: nowrap;
+	}
+}
+
+a.card__primary-action,
+button.card__primary-action,
+label.card__primary-action {
+	cursor: default; // NOTE: Reset label reset pointer
+
+	&:focus {
+		box-shadow: $box-shadow-focus-outset;
+
+		&:active,
+		&:hover {
+			box-shadow: none;
+		}
+
+		.card.is-loading & {
+			box-shadow: inset 0 0 0 2px rgba($color-focus, 0.2);
+		}
+	}
+
+	.card__expand-status:focus ~ .card__actions & {
+		box-shadow: $box-shadow-focus-inset;
+
+		&:active,
+		&:hover {
+			box-shadow: none;
+		}
+	}
+
+	.card--expandable .card__expand-status:checked ~ .card__actions &,
+	.card--expandable.is-expanded & {
+		border-bottom-right-radius: 0; // NOTE: Remove bottom radius when details are visible to fix focus ring
+		border-bottom-left-radius: 0; // NOTE: Remove bottom radius when details are visible to fix focus ring
+	}
+}
+
+.card__media {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	border-top-left-radius: $card-border-radius;
+	border-top-right-radius: $card-border-radius;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	user-select: none;
+	align-self: flex-start;
+	background-color: $card-is-skeleton-fill;
+
+	&::before {
+		z-index: $card-z-index - 1;
+		display: block;
+		padding-bottom: $aspect-ratio-wide;
+		width: 100%;
+		content: '';
+
+		.card--media-portrait & {
+			padding-bottom: $aspect-ratio-portrait;
+		}
+
+		.card--media-landscape & {
+			padding-bottom: $aspect-ratio-landscape;
+		}
+
+		.card--media-square & {
+			padding-bottom: $aspect-ratio-square;
+		}
+
+		.card--media-wide & {
+			padding-bottom: $aspect-ratio-wide;
+		}
+
+		.card--media-ultra-wide & {
+			padding-bottom: $aspect-ratio-ultra-wide;
+		}
+	}
+
+	& > img,
+	& > picture > img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.card--boxed & {
+		border-top-left-radius: $card-border-radius - 2px;
+		border-top-right-radius: $card-border-radius - 2px;
+	}
+
+	.card--horizontal & {
+		min-width: $spacing * 8;
+		width: $card-horizontal-media-width-100;
+		border-radius: $card-border-radius - 1px;
+
+		@include media(0, $range-palm) {
+			margin-top: $card-padding-top-bottom-90;
+			margin-bottom: $card-padding-top-bottom-90;
+			margin-left: $card-padding-left-right-90;
+		}
+		@include media($range-hand) {
+			margin-top: $card-padding-top-bottom-100;
+			margin-bottom: $card-padding-top-bottom-100;
+			margin-left: $card-padding-left-right-100;
+		}
+		@include media($range-lap, false) {
+			margin-top: $card-padding-top-bottom-200;
+			margin-bottom: $card-padding-top-bottom-200;
+			margin-left: $card-padding-left-right-200;
+		}
+
+	}
+
+	.card--horizontal.card--90 & {
+		margin-top: $card-padding-top-bottom-90;
+		margin-bottom: $card-padding-top-bottom-90;
+		margin-left: $card-padding-left-right-90;
+		width: $card-horizontal-media-width-90;
+	}
+
+	.card--horizontal.card--200 & {
+		@include media($range-lap, false) {
+			width: $card-horizontal-media-width-200;
+		}
+	}
+
+	.card--horizontal.card--flat & {
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+	}
+
+	.card.is-skeleton &,
+	.card.is-loading & {
+
+		& > img {
+			visibility: hidden;
+		}
+	}
+
+	.card.is-updating & {
+
+		& > img {
+			opacity: $opacity-disabled;
+		}
+	}
+
+	.card.is-unavailable & {
+		display: none;
+	}
+}
+
+.card__header {
+	display: flex;
+	min-width: 0;
+	flex-grow: 1;
+	flex-shrink: 1;
+
+	@include media(0, $range-hand) {
+		margin-top: $card-padding-top-bottom-90;
+		margin-right: $card-padding-left-right-90;
+		margin-bottom: $card-padding-top-bottom-90;
+		margin-left: $card-padding-left-right-90;
+	}
+	@include media($range-lap, false) {
+		margin-top: $card-padding-top-bottom-100;
+		margin-right: $card-padding-left-right-100;
+		margin-bottom: $card-padding-top-bottom-100;
+		margin-left: $card-padding-left-right-100;
+	}
+
+	.card--horizontal & {
+		@include media($range-hand) {
+			margin-top: $card-padding-top-bottom-100;
+			margin-right: $card-padding-left-right-100;
+			margin-bottom: $card-padding-top-bottom-100;
+			margin-left: $card-padding-left-right-100;
+		}
+		@include media($range-lap, false) {
+			margin-top: $card-padding-top-bottom-200;
+			margin-right: $card-padding-left-right-200;
+			margin-bottom: $card-padding-top-bottom-200;
+			margin-left: $card-padding-left-right-200;
+		}
+	}
+
+	.card--90 & {
+		margin-top: $card-padding-top-bottom-90;
+		margin-right: $card-padding-left-right-90;
+		margin-bottom: $card-padding-top-bottom-90;
+		margin-left: $card-padding-left-right-90;
+	}
+
+	.card--200 & {
+		@include media(0, $range-hand) {
+			margin-top: $card-padding-top-bottom-100;
+			margin-right: $card-padding-left-right-100;
+			margin-bottom: $card-padding-top-bottom-100;
+			margin-left: $card-padding-left-right-100;
+		}
+		@include media($range-lap, false) {
+			margin-top: $card-padding-top-bottom-200;
+			margin-right: $card-padding-left-right-200;
+			margin-bottom: $card-padding-top-bottom-200;
+			margin-left: $card-padding-left-right-200;
+		}
+	}
+
+	a.card__primary-action &,
+	button.card__primary-action &,
+	label.card__primary-action & {
+		position: relative;
+
+		@include media(0, $range-hand) {
+			padding-right: (($card-padding-left-right-90 * 0.5) + $icon-size-80);
+		}
+		@include media($range-lap, false) {
+			padding-right: (($card-padding-left-right-100 * 0.5) + $icon-size-80);
+		}
+
+		&::after {
+			@include align(absolute, right, center);
+			width: $icon-size-80;
+			height: $icon-size-80;
+			background-position: center center;
+			background-size: auto 100%;
+			background-repeat: no-repeat;
+			content: '';
+
+			@include media(0, $range-hand) {
+				top: $card-header-90-height / 2;
+			}
+			@include media($range-lap, false) {
+				top: $card-header-100-height / 2;
+			}
+
+			.card--90 & {
+				top: $card-header-90-height / 2;
+				width: $icon-size-70;
+				height: $icon-size-70;
+			}
+
+			.card--200 & {
+				top: $card-header-200-height / 2;
+				width: $icon-size-90;
+				height: $icon-size-90;
+			}
+
+			.card--horizontal & {
+				@include media(0, $range-hand) {
+					top: $card-header-90-height / 2;
+				}
+				@include media($range-lap, false) {
+					top: 50%;
+				}
+			}
+
+			.card.is-skeleton &,
+			.card.is-loading &,
+			.card.is-updating & {
+				opacity: $opacity-disabled;
+			}
+		}
+
+		.card.is-unavailable & {
+			padding-right: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		.card--90 & {
+			padding-right: (($card-padding-left-right-90 * 0.5) + $icon-size-70);
+		}
+
+		.card--200 & {
+			padding-right: (($card-padding-left-right-200 * 0.5) + $icon-size-90);
+		}
+
+		.card--horizontal & {
+			@include media($range-lap, false) {
+				padding-right: (($card-padding-left-right-200 * 0.5) + $icon-size-80);
+			}
+		}
+	}
+
+	a.card__primary-action &,
+	button.card__primary-action & {
+
+		&::after {
+			background-image: url(get-svg-uri($card-primary-action-icon, $color-heading));
+		}
+	}
+
+	button.card__primary-action &,
+	label.card__primary-action & {
+
+		&::after {
+
+			.card--expandable .card__expand-status ~ .card__actions & {
+				background-image: url(get-svg-uri($card-primary-expand-icon, $color-heading));
+				transition: transform 200ms;
+			}
+
+			.card--expandable .card__expand-status:checked ~ .card__actions & {
+				transform: rotate(179deg) translateY(50%); // NOTE: 179deg instead of 180deg to force clockwise/counterclockwise rotation.
+			}
+		}
+	}
+
+	.card.is-unavailable & {
+		@include media($range-hand) {
+			margin-right: $card-padding-left-right-100;
+		}
+		@include media($range-lap, false) {
+			margin-right: $card-padding-left-right-200;
+		}
+
+		&::after {
+			display: none;
+		}
+
+		.card--90 & {
+			margin-right: $card-padding-left-right-90;
+		}
+	}
+}
+
+.card__icon {
+	margin-right: $spacing * 1.5;
+	flex-shrink: 0;
+	flex-grow: 0;
+	align-self: flex-start;
+
+	@include media(0, $range-hand) {
+		margin-top: (($card-header-90-height - $card-icon-90-size) / 2);
+		margin-bottom: (($card-header-90-height - $card-icon-90-size) / 2);
+		width: $card-icon-90-size;
+		height: $card-icon-90-size;
+	}
+	@include media($range-lap, false) {
+		margin-top: (($card-header-100-height - $card-icon-100-size) / 2);
+		margin-bottom: (($card-header-100-height - $card-icon-100-size) / 2);
+		width: $card-icon-100-size;
+		height: $card-icon-100-size;
+	}
+
+	& > img,
+	& > svg {
+		overflow: visible; // NOTE: Makes sure pixels at the border of a svg are visible when resized;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.card--icon-avatar & {
+		overflow: hidden;
+		border-radius: 50%;
+	}
+
+	.card--horizontal & {
+		@include media($range-hand) {
+			margin-top: (($card-header-100-height - $card-icon-100-size) / 2);
+			margin-bottom: (($card-header-100-height - $card-icon-100-size) / 2);
+			width: $card-icon-100-size;
+			height: $card-icon-100-size;
+		}
+		@include media($range-lap, false) {
+			margin-top: (($card-header-200-height - $card-icon-200-size) / 2);
+			margin-bottom: (($card-header-200-height - $card-icon-200-size) / 2);
+			width: $card-icon-200-size;
+			height: $card-icon-200-size;
+		}
+	}
+
+	.card--90 & {
+		margin-top: (($card-header-90-height - $card-icon-90-size) / 2);
+		margin-bottom: (($card-header-90-height - $card-icon-90-size) / 2);
+		width: $card-icon-90-size;
+		height: $card-icon-90-size;
+	}
+
+	.card--200 & {
+		margin-top: (($card-header-200-height - $card-icon-200-size) / 2);
+		margin-bottom: (($card-header-200-height - $card-icon-200-size) / 2);
+		width: $card-icon-200-size;
+		height: $card-icon-200-size;
+	}
+
+	.card.is-skeleton &,
+	.card.is-loading & {
+		border-radius: $card-border-radius - 1px;
+		background-color: $card-is-skeleton-fill;
+
+		& > img,
+		& > svg {
+			visibility: hidden;
+		}
+	}
+
+	.card.is-updating & img,
+	.card.is-updating & svg {
+		opacity: $opacity-disabled;
+	}
+
+	.card.is-loading &,
+	.card.is-updating & {
+		position: relative;
+
+		&::after {
+			@include align();
+			display: block;
+			width: 50%;
+			height: 50%;
+			background-image: url(get-svg-uri($icon-spinner, $color-secondary));
+			background-position: center center;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			content: '';
+		}
+	}
+
+	.card.is-unavailable & {
+		display: none;
+	}
+}
+
+.card__heading-group {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	align-self: flex-start;
+	align-items: stretch;
+	justify-content: center;
+
+	@include is-ie-10-or-11 {
+		width: 100%; // FIX: Makes sure title is wrapping in IE.
+	}
+
+	@include media(0, $range-hand) {
+		min-height: $card-header-90-height;
+	}
+	@include media($range-lap, false) {
+		min-height: $card-header-100-height;
+	}
+
+	.card--horizontal & {
+		@include media($range-hand) {
+			min-height: $card-header-100-height;
+		}
+		@include media($range-lap, false) {
+			min-height: $card-header-200-height;
+		}
+	}
+
+	.card--90 & {
+		min-height: $card-header-90-height;
+	}
+
+	.card--200 & {
+		min-height: $card-header-200-height;
+	}
+
+	.card.is-skeleton & {
+		visibility: hidden;
+	}
+
+	.card.is-loading &,
+	.card.is-updating & {
+		opacity: $opacity-disabled;
+	}
+}
+
+.card__title {
+	color: $color-heading;
+	word-break: break-word;
+	font-weight: bold;
+
+	@include media(0, $range-hand) {
+		font-size: $card-title-90-font-size;
+		line-height: $card-title-90-line-height;
+	}
+	@include media($range-lap, false) {
+		font-size: $card-title-100-font-size;
+		line-height: $card-title-100-line-height;
+	}
+
+	.card--90 & {
+		font-size: $card-title-90-font-size;
+		line-height: $card-title-90-line-height;
+	}
+
+	.card--200 & {
+		font-size: $card-title-200-font-size;
+		line-height: $card-title-200-line-height;
+	}
+}
+
+.card__metadata {
+	display: inline-block;
+	max-height: $card-title-100-font-size * $card-title-100-line-height;
+
+	.card--90 & {
+		max-height: $card-title-90-font-size * $card-title-90-line-height;
+	}
+
+	.card--right-aligned-metadata & {
+		float: right;
+	}
+
+	.card.is-unavailable & {
+		display: none;
+	}
+}
+
+.card__subtitle {
+	max-width: $text-width-300;
+	color: $color-text;
+	word-break: break-word;
+	font-weight: normal;
+
+	@include media(0, $range-hand) {
+		font-size: $card-subtitle-90-font-size;
+		line-height: $card-subtitle-90-line-height;
+	}
+	@include media($range-lap, false) {
+		font-size: $card-subtitle-100-font-size;
+		line-height: $card-subtitle-100-line-height;
+	}
+
+	.card--horizontal & {
+		@include media($range-hand) {
+			font-size: $card-subtitle-100-font-size;
+			line-height: $card-subtitle-100-line-height;
+		}
+		@include media($range-lap, false) {
+			font-size: $card-subtitle-200-font-size;
+			line-height: $card-subtitle-200-line-height;
+		}
+	}
+
+	.card--90 & {
+		font-size: $card-subtitle-90-font-size;
+		line-height: $card-subtitle-90-line-height;
+	}
+
+	.card--200 & {
+		font-size: $card-subtitle-200-font-size;
+		line-height: $card-subtitle-200-line-height;
+	}
+}
+
+.card__control {
+	display: flex;
+	align-self: flex-start;
+	align-items: center;
+
+	@include media(0, $range-hand) {
+		margin-left: $card-padding-left-right-90;
+		height: $card-header-90-height;
+	}
+	@include media($range-lap, false) {
+		margin-left: $card-padding-left-right-100;
+		height: $card-header-100-height;
+	}
+
+	.card--horizontal & {
+		@include media($range-hand) {
+			margin-left: $card-padding-left-right-100;
+			height: $card-header-100-height;
+		}
+		@include media($range-lap, false) {
+			margin-left: $card-padding-left-right-200;
+			height: $card-header-200-height;
+			align-self: center;
+		}
+	}
+
+	.card--90 & {
+		margin-left: $card-padding-left-right-90;
+		height: $card-header-90-height;
+	}
+
+	.card.is-skeleton & {
+		visibility: hidden;
+	}
+
+	.card.is-loading &,
+	.card.is-updating & {
+		opacity: $opacity-disabled;
+	}
+
+	.card.is-unavailable & {
+		display: none;
+	}
+}
+
+.card__excerpt {
+	margin-top: $card-heading-group-100-spacing;
+	max-width: $text-width-300;
+	color: $color-text;
+	word-break: break-word;
+	font-weight: normal;
+	flex-basis: 100%;
+
+	@include media(0, $range-hand) {
+		font-size: $card-excerpt-90-font-size;
+		line-height: $card-excerpt-90-line-height;
+	}
+	@include media($range-lap, false) {
+		font-size: $card-excerpt-100-font-size;
+		line-height: $card-excerpt-100-line-height;
+	}
+
+	.card--horizontal & {
+		@include media($range-hand) {
+			font-size: $card-excerpt-100-font-size;
+			line-height: $card-excerpt-100-line-height;
+		}
+		@include media($range-lap, false) {
+			font-size: $card-excerpt-200-font-size;
+			line-height: $card-excerpt-200-line-height;
+		}
+	}
+
+	.card--90 & {
+		margin-top: $card-heading-group-90-spacing;
+		font-size: $card-excerpt-90-font-size;
+		line-height: $card-excerpt-90-line-height;
+	}
+
+	.card--200 & {
+		margin-top: $card-heading-group-200-spacing;
+		font-size: $card-excerpt-200-font-size;
+		line-height: $card-excerpt-200-line-height;
+	}
+}
+
+.card__supplemental-actions {
+	display: flex;
+	border-top: $card-sections-border;
+	flex-shrink: 0;
+	flex-basis: 100%;
+
+	@include media(0, $range-hand) {
+		padding-top: $card-padding-top-bottom-90;
+		padding-right: $card-padding-left-right-90;
+		padding-bottom: $card-padding-top-bottom-90;
+		padding-left: $card-padding-left-right-90;
+	}
+
+	@include media($range-lap, false) {
+		padding-top: $card-padding-top-bottom-100;
+		padding-right: $card-padding-left-right-100;
+		padding-bottom: $card-padding-top-bottom-100;
+		padding-left: $card-padding-left-right-100;
+	}
+
+	.card--horizontal & {
+		@include media(0, $range-hand) {
+			display: none;
+		}
+		@include media($range-lap, false) {
+			padding-top: $card-padding-top-bottom-200;
+			padding-right: $card-padding-left-right-200;
+			padding-bottom: $card-padding-top-bottom-200;
+			padding-left: $card-padding-left-right-200;
+			border-top: none;
+			border-left: $card-sections-border;
+			flex-basis: auto;
+		}
+	}
+
+	.card--90 & {
+		padding-top: $card-padding-top-bottom-90;
+		padding-right: $card-padding-left-right-90;
+		padding-bottom: $card-padding-top-bottom-90;
+		padding-left: $card-padding-left-right-90;
+	}
+
+	.card.is-skeleton &,
+	.card.is-loading &,
+	.card.is-updating &,
+	.card.is-unavailable & {
+		display: none;
+	}
+}
+
+.card__supplemental-action {
+	display: flex;
+	align-items: center;
+	margin-right: $spacing * 1.5;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	.card--horizontal & {
+		@include media($range-lap, false) {
+			height: $card-header-200-height;
+			align-self: center;
+		}
+	}
+
+	.card--horizontal.card--90 & {
+		height: $card-header-90-height;
+	}
+}
+
+.card__details {
+	padding-top: $card-padding-top-bottom-100;
+	padding-right: $card-padding-left-right-100;
+	padding-bottom: $card-padding-top-bottom-100;
+	padding-left: $card-padding-left-right-100;
+	border-top: $card-sections-border;
+	border-bottom-right-radius: $card-border-radius;
+	border-bottom-left-radius: $card-border-radius;
+	flex-basis: 100%;
+
+	.card--horizontal & {
+		@include media($range-lap, false) {
+			padding-top: $card-padding-top-bottom-200;
+			padding-right: $card-padding-left-right-200;
+			padding-bottom: $card-padding-top-bottom-200;
+			padding-left: $card-padding-left-right-200;
+		}
+	}
+
+	.card--90 & {
+		padding-top: $card-padding-top-bottom-90;
+		padding-right: $card-padding-left-right-90;
+		padding-bottom: $card-padding-top-bottom-90;
+		padding-left: $card-padding-left-right-90;
+	}
+
+	.card--expandable .card__expand-status ~ &,
+	.card--expandable.is-collapsed & {
+		display: none;
+	}
+
+	.card--expandable .card__expand-status:checked ~ &,
+	.card--expandable.is-expanded & {
+		display: block;
+	}
+
+	.card.is-skeleton & {
+		display: none;
+	}
+
+	.card.is-loading &,
+	.card.is-updating & {
+		opacity: $opacity-disabled;
+	}
+
+	.card.is-unavailable & {
+		display: none;
+	}
+}
