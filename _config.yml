@@ -5,3 +5,11 @@ highlighter: rouge
 # Settings
 source: "site"
 destination: ./_gh_pages
+collections_dir: docs
+collections:
+  components:
+    output: true
+  controls:
+    output: true
+  layouts:
+    output: true

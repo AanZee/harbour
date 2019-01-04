@@ -30,36 +30,6 @@ $popover-z-index-lap-and-larger: 600 !default;
 	display: inline-flex;
 }
 
-.popover--scaled {
-}
-
-.popover--flexible {
-}
-
-.popover--arrow {
-}
-
-.popover--center-aligned-arrow {
-}
-
-.popover--left-bottom-aligned-body {
-}
-
-.popover--center-bottom-aligned-body {
-}
-
-.popover--right-bottom-aligned-body {
-}
-
-.popover--left-top-aligned-body {
-}
-
-.popover--center-top-aligned-body {
-}
-
-.popover--right-top-aligned-body {
-}
-
 .popover__status {
 	position: absolute;
 	top: 0; // FIX: Fixes some render bugs.
@@ -268,7 +238,7 @@ $popover-z-index-lap-and-larger: 600 !default;
 	-webkit-overflow-scrolling: touch;
 	border: 0;
 	background-color: $color-background-light;
-	box-shadow: $box-shadow-100;
+	box-shadow: $box-shadow-400;
 	opacity: 0;
 	overscroll-behavior: contain;
 	-ms-scroll-chaining: none;

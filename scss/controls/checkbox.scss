@@ -120,7 +120,7 @@ label.checkbox {
 		border-style: solid;
 		border-color: $checkbox-input-color;
 		border-radius: $checkbox-border-radius;
-		background-color: $color-background;
+		background-color: $color-background-light;
 		content: '';
 
 		.checkbox--colored & {
@@ -201,7 +201,8 @@ label.checkbox {
 			box-shadow: none;
 		}
 
-		.checkbox.is-invalid & {
+		.checkbox.is-invalid &,
+		input:invalid ~ & {
 			border-color: $color-error;
 		}
 	}
@@ -231,9 +232,5 @@ label.checkbox {
 	input:disabled ~ & {
 		opacity: $opacity-disabled;
 		cursor: default;
-	}
-
-	.checkbox.is-invalid ~ & {
-		color: $color-error;
 	}
 }
