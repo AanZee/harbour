@@ -149,6 +149,49 @@ layout
 	content=layout-section-one-third-two-thirds
 %}
 
+### Three one-third columns
+{% capture layout-three-one-thirds %}
+<section class="layout">
+	<div class="layout__section">
+		<div class="layout__columns">
+			<div class="layout__column layout__column--one-third">
+				<div class="layout__section layout__section--elevated">
+					<div class="layout__inner layout__inner--padded-90">
+						<div class="content content--90">
+							<h2>Column one third</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit! Dolorum cumque ad quisquam eligendi.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layout__column layout__column--one-third">
+				<div class="layout__section layout__section--elevated">
+					<div class="layout__inner layout__inner--padded-90">
+						<div class="content content--90">
+							<h2>Column one third</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit! Dolorum cumque ad quisquam eligendi.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layout__column layout__column--one-third">
+				<div class="layout__section layout__section--elevated">
+					<div class="layout__inner layout__inner--padded-90">
+						<div class="content content--90">
+							<h2>Column one third</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit! Dolorum cumque ad quisquam eligendi.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endcapture %}
+{% include example.html
+	content=layout-three-one-thirds
+%}
+
 ### Two columns one-half and one-half
 {% capture layout-two-columns-one-half %}
 <section class="layout">

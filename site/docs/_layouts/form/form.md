@@ -50,14 +50,14 @@ form (modifier)
 {% include_relative examples/sections-form.html %}
 {% include example.html
 	content=sections-form
-	layoutInnerClasses="layout__inner--condensed"
+	layoutInnerModifiers="layout__inner--condensed"
 %}
 
 #### Colored sections form
 {% include_relative examples/colored-sections-form.html %}
 {% include example.html
 	content=colored-sections-form
-	layoutInnerClasses="layout__inner--condensed"
+	layoutInnerModifiers="layout__inner--condensed"
 %}
 
 #### Left aligned labels form
@@ -72,7 +72,7 @@ A simple form with labels above the input fields (default).
 {% include_relative examples/login-form.html %}
 {% include example.html
 	content=login-form
-	layoutInnerClasses="layout__inner--condensed"
+	layoutInnerModifiers="layout__inner--condensed"
 %}
 
 ### Personal info form

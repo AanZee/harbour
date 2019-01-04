@@ -3,32 +3,49 @@
 </div>
 {:/nomarkdown}
 
-<div class="layout__section">
-	{% if include.content %}
-		<div class="layout__section layout__section--fitted layout__section--spaced-80 layout__section--bordered layout__section--rounded">
-			{%- if include.hide_preview == null -%}
-				<div class="layout__section">
-					<div class="layout__inner {{ include.layoutInnerClasses }}">
-						<div>
+{% comment %}
+	NOTE: Creates random number so we have a unique ID for the collapsible code block -->
+{% endcomment %}
+
+{% assign contentLength = include.content | size %}
+{% assign randomNumber = "now" | date: "%N" %}
+{% assign collapsibleId = contentLength | plus: randomNumber %}
+
+<div class="layout__section layout__section--spaced-70 layout__section--fitted layout__section--bordered layout__section--rounded">
+	<div class="layout__section">
+		<div class="layout__inner {{ include.layoutInnerModifiers }}">
+			<div>
+				{{- include.content -}}
+			</div>
+		</div>
+	</div>
+	<div class="layout__section layout__section--bordered-top layout__section--spaced-0">
+		<div class="collapsible">
+			<input class="collapsible__input"
+				type="checkbox"
+				id="{{ collapsibleId }}"
+			>
+			<label class="collapsible__label collapsible__label--show"
+				for="{{ collapsibleId }}"
+			>
+				&lt;&#47;&gt; Show code
+			</label>
+			<label class="collapsible__label collapsible__label--hide"
+				for="{{ collapsibleId }}"
+			>
+				&lt;&#47;&gt; Hide code
+			</label>
+			<div class="collapsible__content">
+				<div class="layout">
+					<div class="layout__section layout__section--bordered-top layout__section--rounded-bottom">
+						{%- highlight html -%}
 							{{- include.content -}}
-						</div>
+						{%- endhighlight -%}
 					</div>
 				</div>
-			{%- endif -%}
-
-			{%- if include.hide_markup == null -%}
-				{% assign layoutClasses="layout__section layout__section--spaced-0 layout__section--rounded-bottom" %}
-				{%- if include.hide_preview == null -%}
-					{% assign layoutClasses="layout__section layout__section--spaced-0 layout__section--rounded-bottom layout__section--bordered-top" %}
-				{%- endif -%}
-				<div class="{{ layoutClasses }}">
-					{%- highlight html -%}
-						{{- include.content | replace: 'data-src="holder.js', 'src="...' -}}
-					{%- endhighlight -%}
-				</div>
-			{%- endif -%}
+			</div>
 		</div>
-	{% endif %}
+	</div>
 </div>
 
 <div class="layout__section">

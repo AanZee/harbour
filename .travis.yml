@@ -1,15 +1,35 @@
 language: node_js
-
-node_js:
-  - "8"
-  - "10"
+node_js: '10'
 
 before_install:
-  - rvm install 2.5.1
+- rvm install 2.5.1
 
-install:
-  - bundle install
-  - npm install
-  - npm install -g gulp-cli
-
-script: npm run build
+jobs:
+  include:
+  - stage: test
+    script: bash scripts/test-build.sh
+  - stage: deploy
+    if: type = push
+    deploy:
+    - provider: script
+      on:
+        branch: master
+      skip_cleanup: true
+      script: bash scripts/deploy-master-root.sh
+  - stage: deploy
+    if: type = push
+    deploy:
+    - provider: script
+      on:
+        branch: master
+      skip_cleanup: true
+      script: bash scripts/deploy-master-version.sh
+  - stage: deploy
+    if: type = push
+    deploy:
+    - provider: script
+      on:
+        all_branches: true
+        condition: $TRAVIS_BRANCH =~ ^(feature|release|hotfix)\/*
+      skip_cleanup: true
+      script: bash scripts/deploy-branch.sh
