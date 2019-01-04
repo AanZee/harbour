@@ -1,6 +1,6 @@
 # Running Harbour locally
 
-In order to actively contribute to the project you can test your changes by running Harbour and the documentation website locally. The static [documentation website](https://aanzee.github.io/harbour/) is generated using [Jekyll](https://jekyllrb.com/). In order to use Jekyll, you probably have to update ruby on your machine first.
+In order to actively contribute to the project you can test your changes by running Harbour and the documentation website locally. The static [documentation website](https://harbour.aanzee.cc) is generated using [Jekyll](https://jekyllrb.com/). In order to use Jekyll, you probably have to update ruby on your machine first.
 
 ## Installing ruby/rbenv
 

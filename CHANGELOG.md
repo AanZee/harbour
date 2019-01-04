@@ -1,4 +1,20 @@
-* Add sheet component [HAR-21]
+# 1.22.0
+
+## Feature
+* Enables collapsing code blocks
+* Add multiple documentation versions which are hosted on Cloud Front and served on https://harbour.aanzee.cc
+
+## Improvements
+* Sort SCSS index import on alphabetical order
+* Remove empty CSS selectors
+* Fix layout column one third and two thirds percentages. This will fix the layout when you have three one third columns. Changed the value from 33% and 67% to 33.33% and 66.67%.
+* Remove the layout__section--spacing-100 modifier since this is the default layout section behavior.
+* Add SCSS loops for layout section and layout inner city block modifiers to make it easier to maintain.
+* Builds dynamic links to docs, so that we no longer have to add links manually
+* Rename 'Issue key' to 'Jira id' and add checklist to pull request template.
+
+## Breaking changes
+* Merge icons and settings SCSS folders and imports (scss/icons and scss/settings to scss/variables)
 
 # 1.21.7
 
