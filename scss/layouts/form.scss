@@ -387,7 +387,7 @@ $form-section-header-min-width: $spacing * 28;
 	.form--right-aligned-labels &,
 	.form--left-aligned-labels & {
 		@include media($range-lap, false) {
-			max-width: 480px;
+			max-width: $spacing * 60;
 		}
 	}
 
@@ -521,7 +521,7 @@ $form-section-header-min-width: $spacing * 28;
 			margin-right: 0;
 			margin-bottom: 0;
 			margin-left: 0;
-			max-width: $spacing * 51;
+			max-width: $spacing * 60;
 			width: 100%;
 
 			&:first-child {
