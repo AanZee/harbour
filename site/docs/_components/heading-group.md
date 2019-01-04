@@ -31,7 +31,7 @@ The headline indicates the nature of the page below it. A page should only have 
 
 ### Subtitle
 
-The subtitle is sort of a continuation or sub-element of the title.
+The subtitle is a second title which is often longer and explains more than the title.
 
 ### Underline
 
@@ -43,7 +43,7 @@ The supporting text contains a description or short summary to support the title
 
 ### Emphasis
 
-The emphasys class is used to highlight a certain piece of text to draw the attention of the user.
+The emphasys class is used to highlight a certain piece of text to draw the attention of the user. For example a price or a USP.
 
 ## Available modifiers
 
