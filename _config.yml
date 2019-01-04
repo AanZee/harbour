@@ -8,7 +8,7 @@ destination: ./_gh_pages
 collections_dir: docs
 collections:
   components:
-	output: true
+    output: true
   controls:
     output: true
   layouts:

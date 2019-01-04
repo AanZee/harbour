@@ -58,7 +58,7 @@ Make sure to optimise your .svg file with SVGO Optimizer plug-in with the custom
 {% capture page %}
 <div class="collection collection--grid-one-third">
 	<div class="collection__item">
-		<section class="card card--90 card--boxed">
+		<section class="card card--90">
 			<div class="card__actions">
 				<div class="card__primary-action">
 					<header class="card__header">
@@ -66,7 +66,7 @@ Make sure to optimise your .svg file with SVGO Optimizer plug-in with the custom
 						</div>
 						<div class="card__heading-group">
 							<h1 class="card__title">
-								$icon-arrow-up-bold
+								$icon-arrow-down-bold
 							</h1>
 							<h2 class="card__excerpt">
 								Used to indicate direction (up) of a follow up action in UI elements.
@@ -78,7 +78,7 @@ Make sure to optimise your .svg file with SVGO Optimizer plug-in with the custom
 		</section>
 	</div>
 	<div class="collection__item">
-		<section class="card card--90 card--boxed">
+		<section class="card card--90">
 			<div class="card__actions">
 				<div class="card__primary-action">
 					<header class="card__header">
@@ -86,7 +86,7 @@ Make sure to optimise your .svg file with SVGO Optimizer plug-in with the custom
 						</div>
 						<div class="card__heading-group">
 							<h1 class="card__title">
-								$icon-arrow-up-bold
+								$icon-arrow-down-bold
 							</h1>
 							<h2 class="card__excerpt">
 								Used to indicate direction (up) of a follow up action in UI elements.
@@ -98,7 +98,7 @@ Make sure to optimise your .svg file with SVGO Optimizer plug-in with the custom
 		</section>
 	</div>
 	<div class="collection__item">
-		<section class="card card--90 card--boxed">
+		<section class="card card--90">
 			<div class="card__actions">
 				<div class="card__primary-action">
 					<header class="card__header">
@@ -106,7 +106,7 @@ Make sure to optimise your .svg file with SVGO Optimizer plug-in with the custom
 						</div>
 						<div class="card__heading-group">
 							<h1 class="card__title">
-								$icon-arrow-up-bold
+								$icon-arrow-down-bold
 							</h1>
 							<h2 class="card__excerpt">
 								Used to indicate direction (up) of a follow up action in UI elements.
