@@ -1,4 +1,8 @@
-Issue key: []
+Jira id: [HAR-*]
+
+## Checklist
+- [ ] Code follows the [Aan Zee conventions](https://github.com/aanzee/conventions)
+- [ ] SCSS imports are sorted alphabetically (when possible)
 
 ## Summary of your proposal
 

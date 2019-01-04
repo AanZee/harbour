@@ -24,12 +24,6 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	flex-direction: column;
 }
 
-.input-stepper--secondary {
-}
-
-.input-stepper--90 {
-}
-
 .input-stepper__input {
 	padding-top: (($control-size-100 - ($line-height-20 * $font-size-200)) / 2);
 	padding-right: $spacing;
