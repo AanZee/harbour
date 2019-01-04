@@ -4,6 +4,7 @@ $form-colored: $color-ui-20 !default;
 $form-field-header-width: 36%;
 $form-field-main-width: 64%;
 $form-section-header-min-width: $spacing * 28;
+$form-control-max-width: $spacing * 60;
 
 .form {
 }
@@ -44,7 +45,7 @@ $form-section-header-min-width: $spacing * 28;
 }
 
 .form__supporting-text {
-	max-width: 40em;
+	max-width: $text-width-200;
 
 	@include media(0, $range-hand) {
 		margin-top: $spacing / 4;
@@ -387,7 +388,7 @@ $form-section-header-min-width: $spacing * 28;
 	.form--right-aligned-labels &,
 	.form--left-aligned-labels & {
 		@include media($range-lap, false) {
-			max-width: $spacing * 60;
+			max-width: $form-control-max-width;
 		}
 	}
 
@@ -404,7 +405,7 @@ $form-section-header-min-width: $spacing * 28;
 	margin-top: $spacing / 2;
 	margin-right: 0;
 	margin-bottom: $spacing / 4;
-	max-width: 40em;
+	max-width: $text-width-200;
 	color: $color-error;
 	line-height: $line-height-60;
 
@@ -425,7 +426,7 @@ $form-section-header-min-width: $spacing * 28;
 	margin-top: $spacing / 2;
 	margin-right: 0;
 	margin-bottom: $spacing / 4;
-	max-width: 40em;
+	max-width: $text-width-200;
 	color: $color-text-70;
 	line-height: $line-height-60;
 
@@ -521,7 +522,7 @@ $form-section-header-min-width: $spacing * 28;
 			margin-right: 0;
 			margin-bottom: 0;
 			margin-left: 0;
-			max-width: $spacing * 60;
+			max-width: $form-control-max-width;
 			width: 100%;
 
 			&:first-child {
