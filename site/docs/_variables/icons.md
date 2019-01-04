@@ -52,75 +52,43 @@ Icon design in general focusses on capturing the essence of a shape into a simpl
 
 Make sure to optimise your .svg file with SVGO Optimizer plug-in with the custom settings as shared in the Harbour confluence
 
-
-## Available icon variables
-
-{% capture page %}
-<div class="collection collection--grid-one-third">
-	<div class="collection__item">
-		<section class="card card--90">
-			<div class="card__actions">
-				<div class="card__primary-action">
-					<header class="card__header">
-						<div class="card__icon card__icon--arrow-down-bold">
+{% capture icon-collection %}
+<section class="layout">
+	<div class="layout__section">
+		<div class="heading-group">
+			<h1 class="heading-group__title">Available icon variables</h1>
+		</div>
+	</div>
+	<div class="layout__section layout__section--colored layout__section--spaced-80">
+		<div class="layout__inner layout__inner--padded-80">
+			<div class="collection collection--grid-one-third">
+				<div class="collection__item">
+					<section class="card card--90">
+						<div class="card__actions">
+							<div class="card__primary-action">
+								<header class="card__header">
+									<div class="card__icon">
+										<img src="{{ '/icons/placeholder.svg' | relative_url }}">
+									</div>
+									<div class="card__heading-group">
+										<h1 class="card__title">
+											$icon-arrow-down-bold
+										</h1>
+										<h2 class="card__excerpt">
+											Used to indicate direction (up) of a follow up action in UI elements.
+										</h2>
+									</div>
+								</header>
+							</div>
 						</div>
-						<div class="card__heading-group">
-							<h1 class="card__title">
-								$icon-arrow-down-bold
-							</h1>
-							<h2 class="card__excerpt">
-								Used to indicate direction (up) of a follow up action in UI elements.
-							</h2>
-						</div>
-					</header>
+					</section>
 				</div>
 			</div>
-		</section>
+		</div>
 	</div>
-	<div class="collection__item">
-		<section class="card card--90">
-			<div class="card__actions">
-				<div class="card__primary-action">
-					<header class="card__header">
-						<div class="card__icon card__icon--arrow-down-bold">
-						</div>
-						<div class="card__heading-group">
-							<h1 class="card__title">
-								$icon-arrow-down-bold
-							</h1>
-							<h2 class="card__excerpt">
-								Used to indicate direction (up) of a follow up action in UI elements.
-							</h2>
-						</div>
-					</header>
-				</div>
-			</div>
-		</section>
-	</div>
-	<div class="collection__item">
-		<section class="card card--90">
-			<div class="card__actions">
-				<div class="card__primary-action">
-					<header class="card__header">
-						<div class="card__icon card__icon--arrow-down-bold">
-						</div>
-						<div class="card__heading-group">
-							<h1 class="card__title">
-								$icon-arrow-down-bold
-							</h1>
-							<h2 class="card__excerpt">
-								Used to indicate direction (up) of a follow up action in UI elements.
-							</h2>
-						</div>
-					</header>
-				</div>
-			</div>
-		</section>
-	</div>
-</div>
+</section>
 {% endcapture %}
 
-{% include example.html
-	content=page
-	hide_markup=true
+{% include documentation-html.html
+	content=icon-collection
 %}
