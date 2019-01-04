@@ -51,6 +51,10 @@ The emphasys class is used to highlight a certain piece of text to draw the atte
 heading-group--light
 ```
 
+## HTML tag usage
+
+The HTML tags you use for your individual heading elements should relate to one another. This means that if you don't use a heading, your title can be placed in a 'h1' tag and your subtitle would be a 'h2' tag.
+
 ## HTML structure
 
 ```text
@@ -67,28 +71,28 @@ heading-group (modifiers)
 
 {% capture heading-group %}
 <div class="heading-group">
-	<h1 class="heading-group__running-head">
+	<h4 class="heading-group__running-head">
 		Running head
-	</h1>
+	</h4>
 	<h1 class="heading-group__headline">
 		Headline
 	</h1>
-	<h1 class="heading-group__title">
+	<h2 class="heading-group__title">
 		Title
-	</h1>
-	<h2 class="heading-group__subtitle">
-		Subtitle
 	</h2>
-	<span class="heading-group__underline">
+	<h3 class="heading-group__subtitle">
+		Subtitle
+	</h3>
+	<p class="heading-group__underline">
 		Underline
-	</span>
-	<span class="heading-group__supporting-text">
+	</p>
+	<p class="heading-group__supporting-text">
 		Supporting text to provide more details about your subject with an
 		<span class="heading-group__emphasis">
 			emphasis
 		</span>
 		so you can draw the attention of your user.
-	</span>
+	</p>
 </div>
 {% endcapture %}
 {% include example.html
@@ -101,28 +105,28 @@ heading-group (modifiers)
 <div class="layout__section layout__section--dark">
 	<div class="layout__inner layout__inner--padded-80">
 		<div class="heading-group--light">
-			<h1 class="heading-group__running-head">
+			<h4 class="heading-group__running-head">
 				Running head
-			</h1>
+			</h4>
 			<h1 class="heading-group__headline">
 				Headline
 			</h1>
-			<h1 class="heading-group__title">
+			<h2 class="heading-group__title">
 				Title
-			</h1>
-			<h2 class="heading-group__subtitle">
-				Subtitle
 			</h2>
-			<span class="heading-group__underline">
+			<h3 class="heading-group__subtitle">
+				Subtitle
+			</h3>
+			<p class="heading-group__underline">
 				Underline
-			</span>
-			<span class="heading-group__supporting-text">
+			</p>
+			<p class="heading-group__supporting-text">
 				Supporting text to provide more details about your subject with an
 				<span class="heading-group__emphasis">
 					emphasis
 				</span>
 				so you can draw the attention of your user.
-			</span>
+			</p>
 		</div>
 	</div>
 </div>
