@@ -4,7 +4,9 @@ $card-border-radius: $border-radius-100 !default;
 $card-box-shadow: $box-shadow-100 !default;
 $card-sections-border: 1px solid $color-ui-20 !default;
 $card-primary-action-icon: $icon-chevron-right !default;
+$card-primary-action-icon-color: $color-heading !default;
 $card-primary-expand-icon: $icon-chevron-down !default;
+$card-is-loading-icon-color: $color-secondary !default;
 // Setting sizes for size 90
 $card-heading-group-90-spacing: 0 !default;
 $card-title-90-font-size: $font-size-100 !default;
@@ -443,7 +445,7 @@ label.card__primary-action {
 	button.card__primary-action & {
 
 		&::after {
-			background-image: url(get-svg-uri($card-primary-action-icon, $color-heading));
+			background-image: url(get-svg-uri($card-primary-action-icon, $card-primary-action-icon-color));
 		}
 	}
 
@@ -453,7 +455,7 @@ label.card__primary-action {
 		&::after {
 
 			.card--expandable .card__expand-status ~ .card__actions & {
-				background-image: url(get-svg-uri($card-primary-expand-icon, $color-heading));
+				background-image: url(get-svg-uri($card-primary-expand-icon, $card-primary-action-icon-color));
 				transition: transform 200ms;
 			}
 
@@ -567,7 +569,7 @@ label.card__primary-action {
 			display: block;
 			width: 50%;
 			height: 50%;
-			background-image: url(get-svg-uri($icon-spinner, $color-secondary));
+			background-image: url(get-svg-uri($icon-spinner, $card-is-loading-icon-color));
 			background-position: center center;
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
