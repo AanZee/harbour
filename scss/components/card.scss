@@ -248,6 +248,7 @@ label.card__primary-action {
 		min-width: $spacing * 8;
 		width: $card-horizontal-media-width-100;
 		border-radius: $card-border-radius - 1px;
+		flex-shrink: 0; // NOTE: Needed to maintain width of media when cards in the same view have different length of content
 
 		@include media(0, $range-palm) {
 			margin-top: $card-padding-top-bottom-90;
