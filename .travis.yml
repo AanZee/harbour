@@ -32,6 +32,4 @@ jobs:
         all_branches: true
         condition: $TRAVIS_BRANCH =~ ^(feature|release|hotfix)\/*
       skip_cleanup: true
-      script:
-        - bash scripts/after-deploy-publish.sh
-        - bash scripts/after-deploy-publish.sh
+      script: bash scripts/after-deploy-publish.sh && bash scripts/after-deploy-publish.sh
