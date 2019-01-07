@@ -1,31 +1,31 @@
-{% capture card-expandable-horizontal %}
-	<section class="card card--horizontal card--expandable">
-		<input class="card__expand-status"
-			id="card-horizontal-expandable-expand-status"
-			type="checkbox"
+{% capture horizontal-expandable-card %}
+<section class="card card--horizontal card--expandable">
+	<input class="card__expand-status"
+		id="card-horizontal-expandable-expand-status"
+		type="checkbox"
+	>
+	<div class="card__actions">
+		<label class="card__primary-action"
+			for="card-horizontal-expandable-expand-status"
 		>
-		<div class="card__actions">
-			<label class="card__primary-action"
-				for="card-horizontal-expandable-expand-status"
-			>
-				<header class="card__header">
-					<div class="card__heading-group">
-						<h1 class="card__title">
-							Card Title
-						</h1>
-						<h2 class="card__subtitle">
-							Card Subtitle
-						</h2>
-					</div>
-				</header>
-			</label>
-		</div>
-		<div class="card__details">
-			<section class="content content--90">
-				<p>
-					Peek a boo
-				</p>
-			</section>
-		</div>
-	</section>
+			<header class="card__header">
+				<div class="card__heading-group">
+					<h1 class="card__title">
+						Card Title
+					</h1>
+					<h2 class="card__subtitle">
+						Card Subtitle
+					</h2>
+				</div>
+			</header>
+		</label>
+	</div>
+	<div class="card__details">
+		<section class="content content--90">
+			<p>
+				Peek a boo
+			</p>
+		</section>
+	</div>
+</section>
 {% endcapture %}

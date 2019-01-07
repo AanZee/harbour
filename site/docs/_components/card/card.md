@@ -86,35 +86,35 @@ card (modifier)
 ### Horizontal card with media and icon
 {% include_relative examples/horizontal-card.html %}
 {% include example.html
-	content=card-horizontal
+	content=horizontal-card
 %}
 
 ### Horizontal expandable card
 {% include_relative examples/horizontal-expandable-card.html %}
 {% include example.html
-	content=card-expandable-horizontal
+	content=horizontal-expandable-card
 %}
 
 ### Card with excerpt and metadata
 {% include_relative examples/excerpt-metadata-card.html %}
 {% include example.html
-	content=card
+	content=excerpt-metadata-card
 %}
 
 ### Card with supplemental actions and square image
 {% include_relative examples/square-image-card.html %}
 {% include example.html
-	content=card
+	content=square-image-card
 %}
 
 ### Horizontal card with supplemental actions
 {% include_relative examples/supplemental-actions-card.html %}
 {% include example.html
-	content=card
+	content=supplemental-actions-card
 %}
 
 ### Card with control item and details
 {% include_relative examples/control-card.html %}
 {% include example.html
-	content=card-with-control
+	content=control-card
 %}
