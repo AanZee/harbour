@@ -34,6 +34,15 @@ Harbour Icons are available in 5 weights: bold, regular, light, thin and hair. S
 
 To make the icons pair well with Harbour’s fonts each fontweight has it’s own border radii. In the table below you can find which radius you need when creating new icons. There’s a setting for inner-corners, outer-corners and single points.
 
+| Icon-weights | inner-corner | outer-corner | single-point |
+|-------|--------|---------|---------|
+| Bold - 8px | 1 | 2 | 1 |
+| Regular - 6px | 0.75 | 1.5 | 0.75 |
+| Light - 4px | 0.5 | 1 | 0.5 |
+| Thin - 2px | 0.375 | 0.75 | 0.375 |
+| Hair - 1px | 0.25 | 0.5 | 0.25 |
+
+
 ![alt text][figure_02]
 
 #### Solid shapes in icons
