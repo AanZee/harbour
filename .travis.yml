@@ -32,4 +32,8 @@ jobs:
         all_branches: true
         condition: $TRAVIS_BRANCH =~ ^(feature|release|hotfix)\/*
       skip_cleanup: true
-      script: bash scripts/deploy-branch.sh
+      script:
+        - echo 'test script 0'
+        - bash scripts/deploy-branch.sh
+        - echo 'test script 1'
+        - echo 'test script 2'
