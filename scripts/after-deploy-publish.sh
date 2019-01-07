@@ -1,2 +1,2 @@
-echo "Mock Publicly publishing to NPM registry"
-# npm publish --public
+echo "Publicly publishing to NPM registry"
+npm publish --public
