@@ -1,3 +1,8 @@
+# 1.22.1
+
+## Bugfix
+* Fix cache invalidation paths
+
 # 1.22.0
 
 ## Feature
