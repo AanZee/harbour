@@ -1,6 +1,9 @@
 $dialog-border-width: ($spacing / 8) !default;
 $dialog-border-radius: $border-radius-200 !default;
 
+$dialog-padding-90: $spacing * 1.5 !default;
+$dialog-padding-100: $spacing * 2 !default;
+
 $dialog-border-color: $color-secondary !default;
 $dialog-background-color: $color-secondary-20 !default;
 $dialog-color: $color-secondary-500 !default;
@@ -18,8 +21,11 @@ $dialog-warning-icon-fill: $color-warning-700 !default;
 
 $dialog-error-border-color: $color-error-300 !default;
 $dialog-error-background-color: $color-error-50 !default;
-$dialog-error-color: $color-text-light !default;
+$dialog-error-color: $color-error-600 !default;
 $dialog-error-icon-fill: $color-error-600 !default;
+
+$dialog-icon-90-size: $icon-size-500 !default;
+$dialog-icon-100-size: $icon-size-600 !default;
 
 .dialog {
 	display: flex;
@@ -27,13 +33,38 @@ $dialog-error-icon-fill: $color-error-600 !default;
 	border-radius: $dialog-border-radius;
 	background-color: $dialog-background-color;
 	color: $dialog-color;
-	align-items: center;
 
 	@include media(0, $range-hand) {
-		padding: $spacing * 1.5;
+		padding: $dialog-padding-90;
 	}
-	@include media($range-lap,false) {
-		padding: $spacing * 2;
+	@include media($range-lap, false) {
+		padding: $dialog-padding-100;
+	}
+}
+
+.dialog--icon {
+
+	&::before {
+		display: flex;
+		flex-shrink: 0;
+		flex-grow: 0;
+		align-self: flex-start;
+		background-image: url(get-svg-uri($icon-information-circle-solid, $color-secondary-200));
+		background-position: center;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		content: '';
+
+		@include media(0, $range-hand) {
+			margin-right: $dialog-padding-90;
+			width: $dialog-icon-90-size;
+			height: $dialog-icon-90-size;
+		}
+		@include media($range-lap, false) {
+			margin-right: $dialog-padding-100;
+			width: $dialog-icon-100-size;
+			height: $dialog-icon-100-size;
+		}
 	}
 }
 
@@ -41,43 +72,49 @@ $dialog-error-icon-fill: $color-error-600 !default;
 	border-color: $dialog-success-border-color;
 	background-color: $dialog-success-background-color;
 	color: $dialog-success-color;
+
+	&.dialog--icon {
+
+		&::before {
+			background-image: url(get-svg-uri($icon-check-light, $dialog-success-color)); // TODO: Replace for icon with circle
+		}
+	}
 }
 
 .dialog--warning {
 	border-color: $dialog-warning-border-color;
 	background-color: $dialog-warning-background-color;
 	color: $dialog-warning-color;
+
+	&.dialog--icon {
+
+		&::before {
+			background-image: url(get-svg-uri($icon-exclamation-circle-solid, $dialog-warning-color));
+		}
+	}
 }
 
 .dialog--error {
 	border-color: $dialog-error-border-color;
 	background-color: $dialog-error-background-color;
 	color: $dialog-error-color;
+
+	&.dialog--icon {
+
+		&::before {
+			background-image: url(get-svg-uri($icon-cross-circle-solid, $dialog-error-color));
+		}
+	}
 }
 
-.dialog__icon {
-	margin-right: $spacing * 2;
-	flex-shrink: 0;
-	fill: $dialog-icon-fill;
+.dialog__main {
+	display: flex;
+	align-items: center;
 
 	@include media(0, $range-hand) {
-		width: $spacing * 4;
-		height: $spacing * 4;
+		min-height: $dialog-icon-90-size;
 	}
 	@include media($range-lap, false) {
-		width: $spacing * 5;
-		height: $spacing * 5;
-	}
-
-	.dialog--success & {
-		fill: $dialog-success-icon-fill;
-	}
-
-	.dialog--warning & {
-		fill: $dialog-warning-icon-fill;
-	}
-
-	.dialog--error & {
-		fill: $dialog-error-icon-fill;
+		min-height: $dialog-icon-100-size;
 	}
 }
