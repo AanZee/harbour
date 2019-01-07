@@ -24,8 +24,13 @@ $dialog-error-background-color: $color-error-50 !default;
 $dialog-error-color: $color-error-600 !default;
 $dialog-error-icon-fill: $color-error-600 !default;
 
-$dialog-icon-90-size: $icon-size-500 !default;
-$dialog-icon-100-size: $icon-size-600 !default;
+$dialog-content-90-font-size: $font-size-100;
+$dialog-content-90-line-height: $line-height-60;
+$dialog-content-100-font-size: $font-size-200;
+$dialog-content-100-line-height: $line-height-60;
+
+$dialog-icon-90-size: $dialog-content-90-font-size * $dialog-content-90-line-height * 2 !default;
+$dialog-icon-100-size: $dialog-content-100-font-size * $dialog-content-100-line-height * 2 !default;
 
 .dialog {
 	display: flex;
@@ -113,8 +118,24 @@ $dialog-icon-100-size: $icon-size-600 !default;
 
 	@include media(0, $range-hand) {
 		min-height: $dialog-icon-90-size;
+		font-size: $dialog-content-90-font-size;
+		line-height: $dialog-content-90-line-height;
 	}
 	@include media($range-lap, false) {
 		min-height: $dialog-icon-100-size;
+		font-size: $dialog-content-100-font-size;
+		line-height: $dialog-content-100-line-height;
 	}
 }
+
+// .dialog__content {
+
+// 	@include media(0, $range-hand) {
+// 		font-size: $dialog-content-90-font-size;
+// 		line-height: $dialog-content-90-line-height;
+// 	}
+// 	@include media($range-lap, false) {
+// 		font-size: $dialog-content-100-font-size;
+// 		line-height: $dialog-content-100-line-height;
+// 	}
+// }
