@@ -5,10 +5,15 @@ title: Dialog
 
 ## HTML structure
 ```
-dialog (dialog--success / dialog--warning / dialog--error)
-├── dialog__icon (optional)
-├── dialog__main
-│	├── other BEM component
+dialog (dialog--information / dialog--success / dialog--warning / dialog--error)
+├── dialog__body
+│	├── dialog__message
+│	│	├── dialog__text
+│	│	├── dialog__supporting-text (optional)
+│	├── dialog__accessories (optional)
+│	├── dialog__actions (optional)
+│	│	├── dialog__action (optional)
+├── dialog__dismiss-action (optional)
 ```
 
 ## Available variations
