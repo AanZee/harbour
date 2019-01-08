@@ -34,8 +34,9 @@ jobs:
       skip_cleanup: true
       script: bash scripts/after-deploy-publish.sh
   - stage: deploy
-      if: type = push
-      provider: npm
+    if: type = push
+    deploy:
+    - provider: npm
       email: $NPM_EMAIL_ADDRESS
       api_key: $NPM_AUTH_TOKEN
       on:
