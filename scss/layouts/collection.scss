@@ -1,9 +1,6 @@
 .collection--grid-one-whole-till-one-third {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.collection--grid-one-whole-till-one-third{
 
 	@include media(0, $range-hand-m) {
 		margin: $spacing * -1;
