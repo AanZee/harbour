@@ -30,14 +30,14 @@ dialog (dialog--success / dialog--warning / dialog--error)
 				<a class="button button--primary button--90"
 					href="/"
 				>
-					primary action
+					Primary action
 				</a>
 			</div>
 			<div class="dialog__action">
 				<a class="button button--secondary button--90"
 					href="/"
 				>
-					secondary ction
+					Secondary action
 				</a>
 			</div>
 		</div>
@@ -57,7 +57,7 @@ dialog (dialog--success / dialog--warning / dialog--error)
 				This is a dialog with information modifier. It can be used to convey information to users, such as tips.
 			</p>
 			<p class="dialog__supporting-text">
-				Dialog supporting text
+				Supporting text
 			</p>
 		</div>
 	</div>
@@ -77,7 +77,7 @@ dialog (dialog--success / dialog--warning / dialog--error)
 			</p>
 		</div>
 		<div class="dialog__accessories">
-			Dialog accessories, like bullet lists or other content.
+			Accessories, like bullet lists or other additional content.
 		</div>
 	</div>
 	<button class="dialog__dismiss-action"></button>
