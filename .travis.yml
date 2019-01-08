@@ -40,5 +40,6 @@ jobs:
       email: $NPM_EMAIL_ADDRESS
       api_key: $NPM_AUTH_TOKEN
       on:
-        all_branches: true
+        branch: master
+        tags: true
       skip_cleanup: true
