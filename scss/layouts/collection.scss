@@ -1,16 +1,9 @@
-@import 'variables/index';
-@import 'utilities/index';
-
-.collection--grid-one-half,
-.collection--grid-one-third,
-.collection--grid-one-fourth {
+.collection--grid-one-whole-till-one-third {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.collection--grid-one-half,
-.collection--grid-one-third,
-.collection--grid-one-fourth {
+.collection--grid-one-whole-till-one-third{
 
 	@include media(0, $range-hand-m) {
 		margin: $spacing * -1;
@@ -22,39 +15,7 @@
 
 .collection__item {
 
-	.collection--list > & {
-		@include media(0, $range-hand) {
-			margin-bottom: $spacing;
-		}
-		@include media($range-lap, false) {
-			margin-bottom: $spacing * 2;
-		}
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	.collection--list-bordered > & {
-
-		&:not(:last-child) {
-			border-bottom: $border-ui-100;
-		}
-	}
-
-	.collection--grid-one-half > & {
-
-		@include media(0, $range-hand-m) {
-			margin: $spacing * 1;
-			width: calc(100% - #{$spacing * 2});
-		}
-		@include media($range-hand-l, false) {
-			margin: $spacing * 2;
-			width: calc(50% - #{$spacing * 4});
-		}
-	}
-
-	.collection--grid-one-third > & {
+	.collection--grid-one-whole-till-one-third > & {
 
 		@include media(0, $range-hand-m) {
 			margin: $spacing * 1;
@@ -67,22 +28,6 @@
 		@include media($range-lap-m, false) {
 			margin: $spacing * 2;
 			width: calc(33.33% - #{$spacing * 4});
-		}
-	}
-
-	.collection--grid-one-fourth > & {
-
-		@include media(0, $range-hand-m) {
-			margin: $spacing * 1;
-			width: calc(100% - #{$spacing * 2});
-		}
-		@include media($range-hand-l, $range-lap-m) {
-			margin: $spacing * 2;
-			width: calc(50% - #{$spacing * 4});
-		}
-		@include media($range-lap-l, false) {
-			margin: $spacing * 2;
-			width: calc(25% - #{$spacing * 4});
 		}
 	}
 }

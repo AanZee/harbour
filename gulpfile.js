@@ -9,6 +9,7 @@ const postcssScssParser = require('postcss-scss');
 const sass = require('gulp-sass');
 const stylelint = require('stylelint');
 const tildeImporter = require('node-sass-tilde-importer');
+const jsonImporter = require('node-sass-json-importer');
 const packageJson = require('./package.json');
 
 const harbourStylelintJson = '.stylelintrc.json';
@@ -74,7 +75,7 @@ function compileScss(isBuild) {
 		.pipe(
 			sass({
 				outputStyle: outputStyle,
-				importer: tildeImporter
+				importer: [tildeImporter, jsonImporter()]
 			})
 			.on('error', function(error) {
 				hasCompilerError = true;
@@ -82,7 +83,7 @@ function compileScss(isBuild) {
 			})
 		)
 		.pipe(postcss([
-			autoprefixer()
+				autoprefixer()
 		]))
 		.pipe(gulp.dest(cssFolder))
 		.on('finish', function() {
