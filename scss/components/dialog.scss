@@ -1,4 +1,4 @@
-$dialog-border-width: ($spacing / 2) !default;
+$dialog-border-width: $spacing !default;
 $dialog-border-color: $color-ui-200 !default;
 $dialog-border: $dialog-border-width solid $dialog-border-color !default;
 $dialog-border-radius: $border-radius-100 !default;
@@ -38,7 +38,7 @@ $dialog-icon-100-size: $dialog-content-100-font-size * $dialog-content-100-line-
 
 $dialog-text-max-width: 45em;
 
-$dialog-dismiss-action-icon: $icon-plus !default;
+$dialog-dismiss-action-icon: $icon-plus !default; // TODO: Add correct dismiss icon
 $dialog-dismiss-action-icon-color: $dialog-icon-color !default;
 
 .dialog {

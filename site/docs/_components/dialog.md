@@ -32,6 +32,8 @@ dialog (dialog--success / dialog--warning / dialog--error)
 				>
 					primary action
 				</a>
+			</div>
+			<div class="dialog__action">
 				<a class="button button--secondary button--90"
 					href="/"
 				>
