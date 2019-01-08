@@ -1,28 +1,32 @@
-$dialog-border-width: ($spacing / 8) !default;
-$dialog-border-radius: $border-radius-200 !default;
-
+$dialog-border-width: ($spacing / 2) !default;
+$dialog-border-color: $color-ui-200 !default;
+$dialog-border: $dialog-border-width solid $dialog-border-color !default;
+$dialog-border-radius: $border-radius-100 !default;
+$dialog-background-color: white !default;
+$dialog-color: $color-text !default;
+$dialog-icon-color: $color-ui-200 !default;
 $dialog-padding-90: $spacing * 1.5 !default;
 $dialog-padding-100: $spacing * 2 !default;
 
-$dialog-border-color: $color-secondary !default;
-$dialog-background-color: $color-secondary-20 !default;
-$dialog-color: $color-secondary-500 !default;
-$dialog-icon-fill: $color-secondary !default;
+$dialog-information-border-color: $color-secondary-200 !default;
+$dialog-information-background-color: $color-secondary-30 !default;
+$dialog-information-color: $color-secondary-600 !default;
+$dialog-information-icon-color: $color-secondary-200 !default;
 
 $dialog-success-border-color: $color-success-200 !default;
 $dialog-success-background-color: $color-success-30 !default;
 $dialog-success-color: $color-success-600 !default;
-$dialog-success-icon-fill: $color-success-600 !default;
+$dialog-success-icon-color: $color-success-300 !default;
 
 $dialog-warning-border-color: $color-warning-300 !default;
 $dialog-warning-background-color: $color-warning-70 !default;
 $dialog-warning-color: $color-warning-700 !default;
-$dialog-warning-icon-fill: $color-warning-700 !default;
+$dialog-warning-icon-color: $color-warning-300 !default;
 
 $dialog-error-border-color: $color-error-300 !default;
 $dialog-error-background-color: $color-error-50 !default;
 $dialog-error-color: $color-error-600 !default;
-$dialog-error-icon-fill: $color-error-600 !default;
+$dialog-error-icon-color: $color-error-300 !default;
 
 $dialog-content-90-font-size: $font-size-100;
 $dialog-content-90-line-height: $line-height-60;
@@ -32,11 +36,18 @@ $dialog-content-100-line-height: $line-height-60;
 $dialog-icon-90-size: $dialog-content-90-font-size * $dialog-content-90-line-height * 2 !default;
 $dialog-icon-100-size: $dialog-content-100-font-size * $dialog-content-100-line-height * 2 !default;
 
+$dialog-text-max-width: 45em;
+
+$dialog-dismiss-action-icon: $icon-plus !default;
+$dialog-dismiss-action-icon-color: $dialog-icon-color !default;
+
 .dialog {
+	position: relative;
 	display: flex;
-	border: $dialog-border-width solid $dialog-border-color;
+	border-left: $dialog-border;
 	border-radius: $dialog-border-radius;
 	background-color: $dialog-background-color;
+	box-shadow: $box-shadow-100;
 	color: $dialog-color;
 
 	@include media(0, $range-hand) {
@@ -47,14 +58,16 @@ $dialog-icon-100-size: $dialog-content-100-font-size * $dialog-content-100-line-
 	}
 }
 
-.dialog--icon {
+.dialog--information,
+.dialog--success,
+.dialog--warning,
+.dialog--error {
 
 	&::before {
 		display: flex;
 		flex-shrink: 0;
 		flex-grow: 0;
 		align-self: flex-start;
-		background-image: url(get-svg-uri($icon-information-circle-solid, $color-secondary-200));
 		background-position: center;
 		background-size: auto 100%;
 		background-repeat: no-repeat;
@@ -73,69 +86,111 @@ $dialog-icon-100-size: $dialog-content-100-font-size * $dialog-content-100-line-
 	}
 }
 
+.dialog--information {
+	border-color: $dialog-information-border-color;
+
+	&::before {
+		background-image: url(get-svg-uri($icon-information-circle-solid, $dialog-information-icon-color));
+	}
+}
+
 .dialog--success {
 	border-color: $dialog-success-border-color;
-	background-color: $dialog-success-background-color;
-	color: $dialog-success-color;
 
-	&.dialog--icon {
-
-		&::before {
-			background-image: url(get-svg-uri($icon-check-light, $dialog-success-color)); // TODO: Replace for icon with circle
-		}
+	&::before {
+		background-image: url(get-svg-uri($icon-check-circle-solid, $dialog-success-icon-color));
 	}
 }
 
 .dialog--warning {
 	border-color: $dialog-warning-border-color;
-	background-color: $dialog-warning-background-color;
-	color: $dialog-warning-color;
 
-	&.dialog--icon {
-
-		&::before {
-			background-image: url(get-svg-uri($icon-exclamation-circle-solid, $dialog-warning-color));
-		}
+	&::before {
+		background-image: url(get-svg-uri($icon-exclamation-circle-solid, $dialog-warning-icon-color));
 	}
 }
 
 .dialog--error {
 	border-color: $dialog-error-border-color;
-	background-color: $dialog-error-background-color;
-	color: $dialog-error-color;
 
-	&.dialog--icon {
-
-		&::before {
-			background-image: url(get-svg-uri($icon-cross-circle-solid, $dialog-error-color));
-		}
+	&::before {
+		background-image: url(get-svg-uri($icon-cross-circle-solid, $dialog-error-icon-color));
 	}
 }
 
-.dialog__main {
-	display: flex;
-	align-items: center;
+.dialog__body {
+	flex-basis: 100%; //NOTE: Fix for IE rendering body too big.
+	align-self: center;
+	flex-grow: 1;
 
 	@include media(0, $range-hand) {
 		min-height: $dialog-icon-90-size;
+	}
+	@include media($range-lap, false) {
+		min-height: $dialog-icon-100-size;
+	}
+}
+
+.dialog__message {
+	display: flex;
+	flex-direction: column;
+	margin-right: $spacing * 2;
+	justify-content: center;
+}
+
+.dialog__text {
+	max-width: $dialog-text-max-width;
+
+	@include media(0, $range-hand) {
 		font-size: $dialog-content-90-font-size;
 		line-height: $dialog-content-90-line-height;
 	}
 	@include media($range-lap, false) {
-		min-height: $dialog-icon-100-size;
 		font-size: $dialog-content-100-font-size;
 		line-height: $dialog-content-100-line-height;
 	}
 }
 
-// .dialog__content {
+.dialog__dismiss-action {
 
-// 	@include media(0, $range-hand) {
-// 		font-size: $dialog-content-90-font-size;
-// 		line-height: $dialog-content-90-line-height;
-// 	}
-// 	@include media($range-lap, false) {
-// 		font-size: $dialog-content-100-font-size;
-// 		line-height: $dialog-content-100-line-height;
-// 	}
-// }
+	&::after {
+		position: absolute;
+		top: $spacing;
+		right: $spacing;
+		width: $spacing * 2;
+		height: $spacing * 2;
+		background-image: url(get-svg-uri($dialog-dismiss-action-icon, $dialog-dismiss-action-icon-color));
+		background-position: center;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		content: '';
+	}
+}
+
+.dialog__accessories {
+	@include media(0, $range-hand) {
+		margin-top: $spacing;
+	}
+	@include media($range-lap, false) {
+		margin-top: $spacing * 1.5;
+	}
+}
+
+.dialog__actions {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: $spacing * -0.5;
+	margin-bottom: $spacing * -0.5;
+	margin-left: $spacing * -0.5;
+
+	@include media(0, $range-hand) {
+		margin-top: $spacing * -0.5 + $spacing * 1;
+	}
+	@include media($range-lap, false) {
+		margin-top: $spacing * -0.5 + $spacing * 1.5;
+	}
+}
+
+.dialog__action {
+	margin: $spacing * 0.5;
+}
