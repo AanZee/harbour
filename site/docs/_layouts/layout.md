@@ -5,7 +5,7 @@ title: Layout
 
 ## Available modifiers
 
-Available `city block sizes` modifiers are mentioned between parenthesis. Since 100 is the default `city block`, it is only available for the `layout__section--spacing-100`.
+Available `city block sizes` modifiers are mentioned between parenthesis.
 
 ### Adjust space between sections
 ```
@@ -14,7 +14,7 @@ layout__section--spaced-0 (60, 70, 80, 90, 200, 300)
 
 ### Adjust space between children
 ```
-layout__section--spacing-60 (60, 70, 80, 90, 100, 200, 300)
+layout__section--spacing-0 (60, 70, 80, 90, 200, 300)
 ```
 
 ### Adjust section appearance

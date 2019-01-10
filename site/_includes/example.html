@@ -3,15 +3,9 @@
 </div>
 {:/nomarkdown}
 
-{% comment %}
-	NOTE: Creates random number so we have a unique ID for the collapsible code block -->
-{% endcomment %}
-
-{% assign contentLength = include.content | size %}
-{% assign randomNumber = "now" | date: "%N" %}
-{% assign collapsibleId = contentLength | plus: randomNumber %}
-
-<div class="layout__section layout__section--spaced-70 layout__section--fitted layout__section--bordered layout__section--rounded">
+<div class="layout__section layout__section--spaced-70 layout__section--fitted layout__section--bordered layout__section--rounded"
+	js-code-block-parent
+>
 	<div class="layout__section">
 		<div class="layout__inner {{ include.layoutInnerModifiers }}">
 			<div>
@@ -19,32 +13,22 @@
 			</div>
 		</div>
 	</div>
-	<div class="layout__section layout__section--bordered-top layout__section--spaced-0">
-		<div class="collapsible">
-			<input class="collapsible__input"
-				type="checkbox"
-				id="{{ collapsibleId }}"
-			>
-			<label class="collapsible__label collapsible__label--show"
-				for="{{ collapsibleId }}"
+	<div class="layout__section layout__section--neutral layout__section--bordered-top layout__section--spaced-0">
+		<div class="layout__inner layout__inner--padded-70">
+			<button class="button button--90 button--full"
+				js-code-block-toggle
 			>
 				&lt;&#47;&gt; Show code
-			</label>
-			<label class="collapsible__label collapsible__label--hide"
-				for="{{ collapsibleId }}"
-			>
-				&lt;&#47;&gt; Hide code
-			</label>
-			<div class="collapsible__content">
-				<div class="layout">
-					<div class="layout__section layout__section--bordered-top layout__section--rounded-bottom">
-						{%- highlight html -%}
-							{{- include.content -}}
-						{%- endhighlight -%}
-					</div>
-				</div>
-			</div>
+			</button>
 		</div>
+	</div>
+	<div class="layout__section layout__section--spaced-0 layout__section--bordered-top layout__section--rounded-bottom"
+		js-code-block
+		style="display:none"
+	>
+		{%- highlight html -%}
+			{{- include.content -}}
+		{%- endhighlight -%}
 	</div>
 </div>
 
