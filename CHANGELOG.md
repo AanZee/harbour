@@ -1,3 +1,14 @@
+
+# 1.23.0
+
+## Improvements
+* Add branchname to documentation footer
+* Harbour is now automatically published to NPM.
+* Add Javascript code block toggle
+* Add card-primary-action-icon-color variable
+* Add card-is-loading-icon-color variable
+* Add flex-shrink 0 to card__media in card--horizontal
+
 # 1.22.1
 
 ## Bugfix
