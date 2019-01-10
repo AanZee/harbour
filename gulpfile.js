@@ -37,28 +37,38 @@ const jekyllSiteRoot = '_gh_pages';
  * @param {Boolean} isBuild
  */
 function stylelintScss(isBuild) {
-	return gulp.src(stylelintGlobs)
-		.pipe(postcss(
-			[
-				stylelint({
-					configFile: harbourStylelintJson
-				}),
-				postcssReporter(
-					{
-						clearAllMessages: true,
-						throwError: isBuild
-					}
-				)
-			],
-			{
-				syntax: postcssScssParser
-			}
-		)).on('error', function (error) {
-			console.log('Error in stylelintScss(): ', error);
+	return stylelint.lint({
+		files: stylelintGlobs,
+		configFile: harbourStylelintJson,
+		fix: !isBuild
+	})
+	.then(function(report) {
+		if (report.errored) {
+			let erroredResults = report.results.filter(result => result.errored);
+
+			erroredResults.map((erroredResult) => {
+				log(`Linter: ⚠️  Errors found in ${erroredResult.source}`);
+
+				erroredResult.warnings.map((warning) => {
+					let severity = warning.severity === 'error' ? 'Error' : 'Warning';
+					log(`Linter: ❌ ${severity} caused by line ${warning.line}: ${warning.rule}`);
+				});
+			});
+
+			// Provide exit code for pipeline/CLI integration, when in build mode
 			if (isBuild) {
 				process.exit(1);
 			}
-		});
+		}
+
+		if (!report.errored) {
+			let suffix = isBuild ? 'stylint build task succesful' : 'or we\'ve automatically fixed them';
+			log(`Linter: 🔥💯🔥  No style errors found ${suffix}`);
+		}
+	})
+	.catch(function(err) {
+		console.error(err.stack);
+	});
 }
 
 /**
