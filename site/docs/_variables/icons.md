@@ -3,8 +3,8 @@ layout: docs
 title: Icons
 ---
 
-[figure_01]: ../../images/figure_01.png "figure_01 Lineweight and shape-characteristics"
-[figure_02]: ../../images/figure_02.png "figure_02 Border-radius"
+[figure_01]: {{ site.baseurl }}../../images/figure_01.png "figure_01 Lineweight and shape-characteristics"
+[figure_02]: {{ site.baseurl }}../../images/figure_02.png "figure_02 Border-radius"
 
 **A collection of neutral, basic UI-icons - designed for Harbour-components**
 
