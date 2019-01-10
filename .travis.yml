@@ -33,3 +33,13 @@ jobs:
         condition: $TRAVIS_BRANCH =~ ^(feature|release|hotfix)\/*
       skip_cleanup: true
       script: bash scripts/deploy-branch.sh
+  - stage: deploy
+    if: type = push
+    deploy:
+    - provider: npm
+      email: $NPM_EMAIL_ADDRESS
+      api_key: $NPM_AUTH_TOKEN
+      on:
+        branch: master
+        tags: true
+      skip_cleanup: true
