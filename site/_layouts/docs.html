@@ -1,54 +1,5 @@
 <!doctype html>
 <html lang="en">
-	{% comment %}
-		Collapsible styling is added for the code block toggle in example.html
-	{% endcomment %}
-
-	<style>
-		.collapsible {
-			position: relative;
-			overflow: hidden;
-		}
-
-		.collapsible__label {
-			display: flex;
-			user-select: none;
-			justify-content: center;
-			padding: 8px;
-			color: #3185fc;
-			font-size: 12px;
-			font-weight: 600;
-			cursor: pointer;
-		}
-
-		.collapsible__input:checked ~ .collapsible__label--show {
-			display: none;
-		}
-
-		.collapsible__label--hide {
-			display: none;
-		}
-
-		.collapsible__input:checked ~ .collapsible__label--hide {
-			display: flex;
-		}
-
-		.collapsible__input {
-			position: absolute;
-			top: 0;
-			visibility: hidden;
-		}
-
-		.collapsible__content {
-			overflow: hidden;
-			max-height: 0px;
-		}
-
-		.collapsible__input:checked ~ .collapsible__content {
-			max-height: none;
-		}
-	</style>
-
 	<head>
 		{% include head.html %}
 	</head>
@@ -97,4 +48,24 @@
 			{% include page-footer.html %}
 		</footer>
 	</body>
+
+	<script>
+		const codeBlockParents = document.querySelectorAll('[js-code-block-parent]');
+
+		codeBlockParents.forEach(function(codeBlockParent) {
+			const codeBlockToggle = codeBlockParent.querySelector('[js-code-block-toggle]');
+			const codeBlock = codeBlockParent.querySelector('[js-code-block]');
+
+			codeBlockToggle.addEventListener('click', function() {
+				if (codeBlock.style.display === "none") {
+					codeBlock.style.display = "block";
+					codeBlockToggle.innerHTML = "&lt;&#47;&gt; Hide code";
+				} else {
+					codeBlock.style.display = "none";
+					codeBlockToggle.innerHTML = "&lt;&#47;&gt; Show code";
+				}
+			});
+		});
+	</script>
+
 </html>
