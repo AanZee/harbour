@@ -1,4 +1,5 @@
 Jira id: [HAR-*]
+Documentation url: https://harbour.aanzee.cc/ [add branch name to link]
 
 ## Checklist
 - [ ] Code follows the [Aan Zee conventions](https://github.com/aanzee/conventions)
