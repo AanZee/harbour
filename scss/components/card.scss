@@ -1,10 +1,13 @@
+$card-title-color: $color-heading;
 $card-z-index: 0 !default;
 $card-is-skeleton-fill: $color-ui-60 !default;
 $card-border-radius: $border-radius-100 !default;
 $card-box-shadow: $box-shadow-100 !default;
 $card-sections-border: 1px solid $color-ui-20 !default;
 $card-primary-action-icon: $icon-chevron-right !default;
+$card-primary-action-icon-color: $card-title-color !default;
 $card-primary-expand-icon: $icon-chevron-down !default;
+$card-is-loading-icon-color: $color-secondary !default;
 // Setting sizes for size 90
 $card-heading-group-90-spacing: 0 !default;
 $card-title-90-font-size: $font-size-100 !default;
@@ -20,7 +23,6 @@ $card-header-90-height: $card-title-90-font-size * $card-title-90-line-height + 
 }
 $card-padding-top-bottom-90: $spacing * 1.5 !default;
 $card-padding-left-right-90: $spacing * 1.5 !default;
-$card-height-90: $card-header-90-height + ($card-padding-top-bottom-90 * 2) !default;
 $card-horizontal-media-width-90: 25% !default;
 // Setting sizes for size 100
 $card-heading-group-100-spacing: $spacing * 0.5 !default;
@@ -37,7 +39,6 @@ $card-header-100-height: $card-title-100-font-size * $card-title-100-line-height
 }
 $card-padding-top-bottom-100: $spacing * 2 !default;
 $card-padding-left-right-100: $spacing * 2 !default;
-$card-height-100: $card-header-100-height + ($card-padding-top-bottom-100 * 2) !default;
 $card-horizontal-media-width-100: 33.33% !default;
 // Setting sizes for size 200
 $card-heading-group-200-spacing: $spacing * 1 !default;
@@ -54,7 +55,6 @@ $card-header-200-height: $card-title-200-font-size * $card-title-200-line-height
 }
 $card-padding-top-bottom-200: $spacing * 2.5 !default;
 $card-padding-left-right-200: $spacing * 2.5 !default;
-$card-height-200: $card-header-200-height + ($card-padding-top-bottom-200 * 2) !default;
 $card-horizontal-media-width-200: 50% !default;
 
 .card {
@@ -115,7 +115,6 @@ $card-horizontal-media-width-200: 50% !default;
 }
 
 .card--flat {
-	border: none;
 	box-shadow: none;
 }
 
@@ -246,6 +245,7 @@ label.card__primary-action {
 		min-width: $spacing * 8;
 		width: $card-horizontal-media-width-100;
 		border-radius: $card-border-radius - 1px;
+		flex-shrink: 0; // NOTE: Needed to maintain width of media when cards in the same view have different length of content
 
 		@include media(0, $range-palm) {
 			margin-top: $card-padding-top-bottom-90;
@@ -443,7 +443,7 @@ label.card__primary-action {
 	button.card__primary-action & {
 
 		&::after {
-			background-image: url(get-svg-uri($card-primary-action-icon, $color-heading));
+			background-image: url(get-svg-uri($card-primary-action-icon, $card-primary-action-icon-color));
 		}
 	}
 
@@ -453,7 +453,7 @@ label.card__primary-action {
 		&::after {
 
 			.card--expandable .card__expand-status ~ .card__actions & {
-				background-image: url(get-svg-uri($card-primary-expand-icon, $color-heading));
+				background-image: url(get-svg-uri($card-primary-expand-icon, $card-primary-action-icon-color));
 				transition: transform 200ms;
 			}
 
@@ -567,7 +567,7 @@ label.card__primary-action {
 			display: block;
 			width: 50%;
 			height: 50%;
-			background-image: url(get-svg-uri($icon-spinner, $color-secondary));
+			background-image: url(get-svg-uri($icon-spinner, $card-is-loading-icon-color));
 			background-position: center center;
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
@@ -627,7 +627,7 @@ label.card__primary-action {
 }
 
 .card__title {
-	color: $color-heading;
+	color: $card-title-color;
 	word-break: break-word;
 	font-weight: bold;
 
