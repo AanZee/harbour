@@ -1,10 +1,11 @@
+$card-title-color: $color-heading;
 $card-z-index: 0 !default;
 $card-is-skeleton-fill: $color-ui-60 !default;
 $card-border-radius: $border-radius-100 !default;
 $card-box-shadow: $box-shadow-100 !default;
 $card-sections-border: 1px solid $color-ui-20 !default;
 $card-primary-action-icon: $icon-chevron-right !default;
-$card-primary-action-icon-color: $color-heading !default;
+$card-primary-action-icon-color: $card-title-color !default;
 $card-primary-expand-icon: $icon-chevron-down !default;
 $card-is-loading-icon-color: $color-secondary !default;
 // Setting sizes for size 90
@@ -626,7 +627,7 @@ label.card__primary-action {
 }
 
 .card__title {
-	color: $color-heading;
+	color: $card-title-color;
 	word-break: break-word;
 	font-weight: bold;
 
