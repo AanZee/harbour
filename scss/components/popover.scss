@@ -72,9 +72,9 @@ $popover-z-index-lap-and-larger: 600 !default;
 		.popover--arrow .popover__status:checked ~ &::before,
 		.popover--arrow .popover__status:checked ~ &::after {
 			display: block;
-			animation-fill-mode: forwards;
 			animation-name: popoverBodyShowLapAndHigher;
 			animation-duration: $popover-animation-duration-lap-and-larger;
+			animation-fill-mode: forwards;
 		}
 
 		.popover--arrow.popover--left-bottom-aligned-body & {
@@ -273,9 +273,9 @@ $popover-z-index-lap-and-larger: 600 !default;
 		}
 		@include media($range-lap, false) {
 			display: block;
-			animation-fill-mode: forwards;
 			animation-name: popoverBodyShowLapAndHigher;
 			animation-duration: $popover-animation-duration-lap-and-larger;
+			animation-fill-mode: forwards;
 		}
 	}
 
