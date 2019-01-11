@@ -100,7 +100,7 @@ function compileScss(isBuild) {
 				process.exit(1);
 			}
 			if (!hasCompilerError) {
-				log('🎨 Compiled SCSS to CSS');
+				log('(S)CSS: 🎨 Compiled SCSS to CSS');
 			}
 		});
 }
