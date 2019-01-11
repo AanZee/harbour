@@ -298,18 +298,18 @@ $layout-spacing-variations: (
 }
 
 .layout__section--centering {
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 }
 
 .layout__inner {
 	display: flex;
 	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: 0;
 	margin-right: auto;
 	margin-left: auto;
 	max-width: $spacing * 160;
-	flex-grow: 1;
-	flex-shrink: 0;
 	width: 100%;
 
 	@include media(0, $range-palm) {
@@ -470,9 +470,9 @@ $layout-spacing-variations: (
 }
 
 .layout__column {
-	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
+	flex-grow: 1;
 
 	@include media(0, $range-hand) {
 		flex-basis: $spacing * 30;
