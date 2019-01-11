@@ -100,7 +100,7 @@ function compileScss(isBuild) {
 				process.exit(1);
 			}
 			if (!hasCompilerError) {
-				console.log('[' + getTimestamp() + '] Compiled SCSS to CSS');
+				log('🎨 Compiled SCSS to CSS');
 			}
 		});
 }
@@ -121,7 +121,7 @@ function buildJekyll(isWatch, options) {
 	const jekyllLogger = (buffer) => {
 		buffer.toString()
 			.split(/\n/)
-			.forEach((message) => log('Jekyll: ' + message));
+			.forEach((message) => log(message));
 	};
 
 	jekyll.stdout.on('data', jekyllLogger);
@@ -129,23 +129,10 @@ function buildJekyll(isWatch, options) {
 
 	if (isWatch) {
 		jekyll.on('close', (code) => {
-			console.log(`Jekyll process exited with code ${code}, stopping Gulp task`);
+			log(`Jekyll process exited with code ${code}, stopping Gulp task`);
 			process.exit();
 		});
 	}
-}
-
-/**
- * getTimestamp
- * Return current time
- */
-function getTimestamp() {
-	const time = new Date();
-	const hours = time.getHours();
-	const minutes = time.getMinutes();
-	const seconds = time.getSeconds();
-
-	return hours + ':' + minutes + ':' + seconds;
 }
 
 gulp.task('stylelintScss', function() {
