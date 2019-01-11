@@ -33,7 +33,7 @@ const jekyllSiteRoot = '_gh_pages';
 
 /**
  * stylelintScss
- * Check if there are any stylelint errors in the SCSS
+ * Check if there are any stylelint errors in the SCSS and attempt to fix them when not in build mode
  * @param {Boolean} isBuild
  */
 function stylelintScss(isBuild) {
