@@ -76,6 +76,7 @@
 				"opacity"
 			],
 			{
+				"disableFix": true,
 				"ignoreKeywords": {
 					"top": ["0", "auto", "100%", "50%", "100vh"],
 					"right": ["0", "auto", "100%", "50%", "100vw"],
