@@ -1,6 +1,4 @@
 $form-z-index: 0 !default;
-$form-section-colored-padding-lap-and-larger: $spacing * 3;
-$form-colored: $color-ui-20 !default;
 $form-field-header-width: 36%;
 $form-field-main-width: 64%;
 $form-section-header-min-width: $spacing * 28;
@@ -34,7 +32,6 @@ $form-control-max-width: $spacing * 60;
 }
 
 .form__title {
-	margin: 0;
 
 	@include media(0, $range-hand) {
 		font-size: $font-size-300;
@@ -58,28 +55,31 @@ $form-control-max-width: $spacing * 60;
 }
 
 .form__section {
-	border-top: 1px dashed $color-ui-100;
 
-	@include media(0, $range-palm) {
-		padding-top: $spacing * 1.5;
-		padding-bottom: $spacing * 1.5;
-	}
-	@include media($range-hand) {
-		padding-top: $spacing * 2;
-		padding-bottom: $spacing * 2;
-	}
-	@include media($range-lap, false) {
-		padding-top: $spacing * 3;
-		padding-bottom: $spacing * 3;
-	}
+	&:not(:first-child) {
+		border-top: 1px dashed $color-ui-100;
 
-	&:first-child {
-		padding-top: 0;
-		border-top: none;
+		@include media(0, $range-palm) {
+			padding-top: $spacing * 1.5;
+		}
+		@include media($range-hand) {
+			padding-top: $spacing * 2;
+		}
+		@include media($range-lap, false) {
+			padding-top: $spacing * 3;
+		}
 	}
 
-	&:last-child {
-		padding-bottom: 0;
+	&:not(:last-child) {
+		@include media(0, $range-palm) {
+			padding-bottom: $spacing * 1.5;
+		}
+		@include media($range-hand) {
+			padding-bottom: $spacing * 2;
+		}
+		@include media($range-lap, false) {
+			padding-bottom: $spacing * 3;
+		}
 	}
 
 	&.is-hidden {
@@ -87,50 +87,23 @@ $form-control-max-width: $spacing * 60;
 	}
 
 	.form--90 & {
-		padding-top: $spacing * 1.5;
-		padding-bottom: $spacing * 1.5;
 		border-top: 0;
 
-		&:first-child {
-			padding-top: 0; // FIX for specificity.
+		&:not(:first-child) {
+			padding-top: $spacing * 1.5;
 		}
 
-		&:last-child {
-			padding-bottom: 0; // FIX for specificity.
+		&:not(:last-child) {
+			padding-bottom: $spacing * 1.5;
 		}
 	}
 }
 
 .form__section--no-border {
-	border-top: none;
-}
 
-.form__section--colored {
-	margin-bottom: $spacing / 2;
-	border-top: none;
-	border-radius: $border-radius-100;
-	background-color: $form-colored;
-
-	&,
-	&:first-child,
-	&:last-child {
-		@include media(0, $range-palm) {
-			padding: $spacing * 1.5;
-		}
-		@include media($range-hand) {
-			padding: $spacing * 2;
-		}
-		@include media($range-lap, false) {
-			padding: $form-section-colored-padding-lap-and-larger;
-		}
-	}
-
-	& + .form__section {
+	&:not(:first-child) {
+		padding-top: 0;
 		border-top: none;
-	}
-
-	& + .form__section--colored {
-		margin-top: $spacing;
 	}
 }
 
@@ -165,25 +138,22 @@ $form-control-max-width: $spacing * 60;
 .form__fieldset {
 	position: relative;
 
-	@include media(0, $range-palm) {
-		margin-top: $spacing * 1.5;
-	}
-	@include media($range-hand) {
-		margin-top: $spacing * 2;
-	}
-	@include media($range-lap, false) {
-		margin-top: $spacing * 3;
-	}
-
-	&:first-child {
-		margin-top: 0;
+	&:not(:first-child) {
+		@include media(0, $range-palm) {
+			margin-top: $spacing * 1.5;
+		}
+		@include media($range-hand) {
+			margin-top: $spacing * 2;
+		}
+		@include media($range-lap, false) {
+			margin-top: $spacing * 3;
+		}
 	}
 
 	.form--90 & {
-		margin-top: $spacing * 1.25;
 
-		&:first-child {
-			margin-top: 0; // FIX for specificity.
+		&:not(:first-child) {
+			margin-top: $spacing * 1.25;
 		}
 	}
 }
@@ -205,11 +175,10 @@ $form-control-max-width: $spacing * 60;
 }
 
 .form__field {
-	margin-top: $spacing * 1.5;
 	width: 100%;
 
-	&:first-child {
-		margin-top: 0;
+	&:not(:first-child) {
+		margin-top: $spacing * 1.5;
 	}
 
 	.form--right-aligned-labels &,
@@ -271,14 +240,6 @@ $form-control-max-width: $spacing * 60;
 			text-align: left;
 		}
 	}
-
-	.form--right-aligned-labels .form__section--colored &,
-	.form--left-aligned-labels .form__section--colored & {
-		@include media($range-lap, false) {
-			min-width: ($form-section-header-min-width) - ($form-section-colored-padding-lap-and-larger);
-			width: calc($form-field-header-width - #{ ((36 / 100 * ($form-section-colored-padding-lap-and-larger * 2)) - $form-section-colored-padding-lap-and-larger) * -1 });
-		}
-	}
 }
 
 .form__field-label {
@@ -293,7 +254,7 @@ $form-control-max-width: $spacing * 60;
 			flex-direction: column;
 			min-height: $control-size-100;
 			font-size: $font-size-200;
-			justify-content: center; // NOTE: To vertical align content with input. Works in combination flex-direction column.
+			justify-content: center; // NOTE: To vertical align content with input. Works in combination with flex-direction column.
 		}
 	}
 
@@ -367,13 +328,6 @@ $form-control-max-width: $spacing * 60;
 			width: auto;
 		}
 	}
-
-	.form--right-aligned-labels .form__section--colored &,
-	.form--left-aligned-labels .form__section--colored & {
-		@include media($range-lap, false) {
-			width: calc($form-field-main-width + #{ ((64 / 100 * ($form-section-colored-padding-lap-and-larger * 2)) - $form-section-colored-padding-lap-and-larger) });
-		}
-	}
 }
 
 .form__field-section {
@@ -435,21 +389,6 @@ $form-control-max-width: $spacing * 60;
 	}
 	@include media($range-lap, false) {
 		font-size: $font-size-100;
-	}
-}
-
-.form__footer {
-
-	@include media(0, $range-hand) {
-		padding-top: $spacing * 1.5;
-	}
-	@include media($range-lap, false) {
-		padding-top: $spacing * 2.5;
-	}
-
-	.form--90 & {
-		padding-top: $spacing;
-		border-top: 0;
 	}
 }
 
