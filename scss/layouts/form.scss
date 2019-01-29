@@ -398,18 +398,16 @@ $form-control-max-width: $spacing * 60;
 	.form--right-aligned-labels &,
 	.form--left-aligned-labels & {
 		@include media($range-lap, false) {
-			display: flex;
-			flex-direction: column;
-			margin: 0;
-			padding-left: $form-field-header-width;
+			margin-left: calc(#{$form-field-header-width} - #{$spacing * 1});
+			padding-left: calc(#{$form-section-header-min-width} - #{$form-field-header-width});
+			width: calc(#{$form-field-main-width} + #{$spacing * 2});
+			max-width: calc(#{$form-control-max-width} + #{$spacing * 2});
 		}
 	}
 
-	.form--top-aligned-labels & {
+	.form--inlined-actions & {
 		@include media($range-lap, false) {
-			display: block;
-			margin: $spacing * -1;
-			padding-left: 0;
+			display: flex;
 		}
 	}
 }
@@ -423,29 +421,13 @@ $form-control-max-width: $spacing * 60;
 	.form--right-aligned-labels &,
 	.form--left-aligned-labels & {
 		@include media($range-lap, false) {
-			margin-right: 0;
-			margin-bottom: 0;
-			margin-left: 0;
 			max-width: $form-control-max-width;
-			width: 100%;
-
-			&:first-child {
-				margin-top: 0;
-			}
 		}
 	}
 
-	.form--top-aligned-labels & {
+	.form--inlined-actions & {
 		@include media($range-lap, false) {
-			margin-right: $spacing;
-			margin-bottom: $spacing;
-			margin-left: $spacing;
-			max-width: none;
-			width: auto;
-
-			&:first-child {
-				margin-top: $spacing;
-			}
+			flex-grow: 1;
 		}
 	}
 }
