@@ -1,3 +1,7 @@
+# 1.23.1
+
+## Bugfix
+* Fix missing comma's in srcset of placeholder images
 
 # 1.23.0
 
