@@ -16,6 +16,10 @@ Align labels above the input fields, can be used to reset other form modifiers w
 ```
 form--top-aligned-labels
 ```
+Align actions inline
+```
+form--inlined-actions
+```
 
 ## Structure
 ```
