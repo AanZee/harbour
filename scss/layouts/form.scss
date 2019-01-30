@@ -4,21 +4,6 @@ $form-field-main-width: 64%;
 $form-section-header-min-width: $spacing * 28;
 $form-control-max-width: $spacing * 60;
 
-.form {
-}
-
-.form--90 {
-}
-
-.form--top-aligned-labels {
-}
-
-.form--right-aligned-labels {
-}
-
-.form--left-aligned-labels {
-}
-
 .form__header {
 	@include media(0, $range-hand) {
 		padding-bottom: $spacing * 1.5;
