@@ -53,14 +53,9 @@ form (modifier)
 	layoutInnerModifiers="layout__inner--condensed"
 %}
 
-#### Colored sections form
-{% include_relative examples/colored-sections-form.html %}
-{% include example.html
-	content=colored-sections-form
-	layoutInnerModifiers="layout__inner--condensed"
-%}
+#### Left aligned labels and inlined actions
+A form with labels aligned on the left side of the form. Can be used for example in edit mode to enable scannability in the labels.
 
-#### Left aligned labels form
 {% include_relative examples/left-aligned-labels-form.html %}
 {% include example.html
 	content=left-aligned-labels-form

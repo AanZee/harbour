@@ -1,5 +1,5 @@
 {% capture left-aligned-labels-form %}
-<form class="form form--left-aligned-labels">
+<form class="form form--left-aligned-labels form--inlined-actions">
 	<div class="form__section">
 		<div class="form__fieldset">
 			<div class="form__field">
@@ -43,11 +43,16 @@
 	<div class="form__footer">
 		<div class="form__actions">
 			<div class="form__action">
-				<button class="button button--primary button--full"
+				<button class="button button--primary"
 					type="submit"
 				>
 					Submit
 				</button>
+			</div>
+			<div class="form__action">
+				<a class="button">
+					Additional action
+				</a>
 			</div>
 		</div>
 	</div>
