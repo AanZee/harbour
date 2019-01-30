@@ -83,14 +83,6 @@ $form-control-max-width: $spacing * 60;
 	}
 }
 
-.form__section--no-border {
-
-	&:not(:first-child) {
-		padding-top: 0;
-		border-top: none;
-	}
-}
-
 .form__section-header {
 	@include media(0, $range-palm) {
 		margin-bottom: $spacing * 1.5;
