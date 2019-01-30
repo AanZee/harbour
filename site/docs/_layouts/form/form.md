@@ -58,7 +58,7 @@ form (modifier)
 %}
 
 #### Left aligned labels and inlined actions
-A form with labels aligned on the left side of the form. Can be used for example in edit mode to enable scannability in the labels.
+A form with labels aligned on the left side of the form. Can be used for example in edit mode to enable scannability of the labels.
 
 {% include_relative examples/left-aligned-labels-form.html %}
 {% include example.html
