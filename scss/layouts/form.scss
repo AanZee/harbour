@@ -17,7 +17,6 @@ $form-control-max-width: $spacing * 60;
 }
 
 .form__title {
-
 	@include media(0, $range-hand) {
 		font-size: $font-size-300;
 	}
