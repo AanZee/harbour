@@ -136,7 +136,6 @@ $form-control-max-width: $spacing * 60;
 
 .form__fieldset-feedback-text {
 	position: relative;
-	top: $spacing;
 	margin-top: $spacing * -1;
 	padding: ($spacing / 2) ($spacing * 2.5);
 	background-color: $color-error;
