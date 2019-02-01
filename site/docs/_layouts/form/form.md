@@ -39,7 +39,7 @@ form (modifier)
 │	│	│	│	│	├── form__field-supporting-text (optional)
 │	│	│	├── form__field-main
 │	│	│	│	├── form__field-section
-│	│	│	│	│	├── other BEM component (e.g. text-input or input-stepper)
+│	│	│	│	│	├── other BEM component (e.g. text-input or content)
 │	│	│	│	│	├── form__input-helper-text (optional)
 │	│	│	│	│	├── form__input-feedback-text (optional)
 ├── form__footer (modifier)
@@ -49,10 +49,12 @@ form (modifier)
 
 ## Example HTML
 
-### Sections form
-{% include_relative examples/sections-form.html %}
+### Advanced form
+A default form with multiple sections and a extra field sections including content.
+
+{% include_relative examples/advanced-form.html %}
 {% include example.html
-	content=sections-form
+	content=advanced-form
 	layoutInnerModifiers="layout__inner--condensed"
 %}
 

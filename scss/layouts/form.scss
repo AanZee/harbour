@@ -388,10 +388,9 @@ $form-control-max-width: $spacing * 60;
 }
 
 .form__action {
-	margin-top: $spacing;
-	margin-right: $spacing;
-	margin-bottom: $spacing;
-	margin-left: $spacing;
+	margin: $spacing;
+	display: flex;
+	align-items: center;
 
 	.form--right-aligned-labels &,
 	.form--left-aligned-labels & {
