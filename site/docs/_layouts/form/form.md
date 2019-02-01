@@ -49,16 +49,14 @@ form (modifier)
 
 ## Example HTML
 
-### Modifier examples
-
-#### Sections form
+### Sections form
 {% include_relative examples/sections-form.html %}
 {% include example.html
 	content=sections-form
 	layoutInnerModifiers="layout__inner--condensed"
 %}
 
-#### Left aligned labels and inlined actions
+### Left aligned labels and inlined actions
 A form with labels aligned on the left side of the form. Can be used for example in edit mode to enable scannability of the labels.
 
 {% include_relative examples/left-aligned-labels-form.html %}
