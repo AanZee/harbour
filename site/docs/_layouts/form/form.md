@@ -39,6 +39,7 @@ form (modifier)
 │	│	│	│	│	├── form__field-supporting-text (optional)
 │	│	│	├── form__field-main
 │	│	│	│	├── form__field-section
+│	│	│	│	│	├── other BEM component (e.g. text-input or input-stepper)
 │	│	│	│	│	├── form__input-helper-text (optional)
 │	│	│	│	│	├── form__input-feedback-text (optional)
 ├── form__footer (modifier)
