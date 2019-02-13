@@ -49,6 +49,24 @@ form (modifier)
 
 ## Example HTML
 
+### Login form
+A simple form with labels above the input fields (default).
+
+{% include_relative examples/login-form.html %}
+{% include example.html
+	content=login-form
+	layoutInnerModifiers="layout__inner--condensed"
+%}
+
+
+### Personal info form
+A form with labels on the left side of the form and right aligned labels.
+
+{% include_relative examples/personal-info-form.html %}
+{% include example.html
+	content=personal-info-form
+%}
+
 ### Advanced form
 A default form with multiple sections and a extra field sections including content.
 
@@ -64,21 +82,4 @@ A form with labels aligned on the left side of the form. Can be used for example
 {% include_relative examples/left-aligned-labels-form.html %}
 {% include example.html
 	content=left-aligned-labels-form
-%}
-
-### Login form
-A simple form with labels above the input fields (default).
-
-{% include_relative examples/login-form.html %}
-{% include example.html
-	content=login-form
-	layoutInnerModifiers="layout__inner--condensed"
-%}
-
-### Personal info form
-A form with labels on the left side of the form and right aligned labels.
-
-{% include_relative examples/personal-info-form.html %}
-{% include example.html
-	content=personal-info-form
 %}
