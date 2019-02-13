@@ -158,9 +158,6 @@ $form-control-max-width: $spacing * 60;
 
 	.form--right-aligned-labels &,
 	.form--left-aligned-labels & {
-		@include media(0, $range-hand) {
-			display: block;
-		}
 		@include media($range-lap, false) {
 			display: flex;
 		}
@@ -208,7 +205,7 @@ $form-control-max-width: $spacing * 60;
 	.form--top-aligned-labels & {
 		@include media($range-lap, false) {
 			display: block;
-			margin-bottom: $spacing / 4;
+			margin-bottom: $spacing / 8;
 			padding-right: 0;
 			min-width: 0;
 			width: auto;
@@ -396,6 +393,12 @@ $form-control-max-width: $spacing * 60;
 	.form--left-aligned-labels & {
 		@include media($range-lap, false) {
 			max-width: $form-control-max-width;
+		}
+	}
+
+	.form--top-aligned-labels & {
+		@include media($range-lap, false) {
+			max-width: none;
 		}
 	}
 }
