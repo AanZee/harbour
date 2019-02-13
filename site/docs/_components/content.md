@@ -47,19 +47,51 @@ title: Content
 		<li>3 cups raw finely ground carrots</li>
 		<li>4 ounces finely chopped walnuts</li>
 	</ul>
-	<h5>Keep in mind</h5>
+	<h4>Keep in mind</h4>
 	<p>Jelly-o liquorice jelly gingerbread muffin sweet roll dessert powder. Cookie chocolate cake muffin. Sugar plum caramels bonbon chocolate jelly lemon drops sweet donut. Cookie sweet halvah wafer. Pie lemon drops cheesecake powder powder cake powder. Lollipop jelly cotton candy tootsie roll tiramisu. Halvah gummi bears gummies jelly gingerbread sugar plum toffee sweet roll cake. Pie lollipop lemon drops chocolate oat cake sesame snaps. Chupa chups gummi bears cake gummies dragée. Dessert pudding tart. Tootsie roll powder apple pie chocolate bar. <a href="">Sesame snaps liquorice donut cake oat cake croissant pastry.</a> Jelly beans fruitcake wafer sweet.</p>
-	<p>Brownie chocolate dragée jelly-o ice cream jelly sugar plum marshmallow lollipop. Croissant croissant jelly-o dessert candy. Danish powder toffee marzipan marzipan jelly icing ice cream. Marzipan lemon drops dessert. Jelly beans croissant liquorice chupa chups tart carrot cake. Cheesecake caramels jujubes chocolate cake candy halvah lollipop. Caramels danish topping</p>
-	<h3>Instructions</h3>
+	<h2>Instructions</h2>
 	<ol>
 		<li>In a mixing bowl, mix sugar, vegetable oil, and eggs. In another bowl, sift together flour, baking soda, salt, and cinnamon. Fold dry ingredients into wet mixture and blend well. Fold in carrots and chopped nuts until well blended. Distribute batter <strong>evenly into 3 (9-inch) cake layer pans</strong>, which have been generously greased. There will be approximately 1 pound 5 ounces of batter per pan. Place in preheated oven and bake for 50 to 60 minutes. Cool layers in pans, for approximately 1 hour. Store layers in pans, inverted, in closed cupboard to prevent drying. Layers must be a minimum of 1 day old.</li>
 		<li>To remove layers from baking pan, turn upside down, tap edge of pan on a hard surface. Center a 9-inch cake circle on top of revolving cake stand. Remove paper from bottom of layer cake. </li>
 		<li>Place first layer, bottom side down, at center of cake stand. With a spatula, evenly spread approximately 3 1/2 ounces of frosting on the layer. Center second layer on top of first layer with topside down. Again with a spatula, evenly spread approximately 3 1/2 ounces of frosting on the layer. Center third layer on top of second layer with topside down. Using both hands, press firmly but gently, all layers together to get one firm cake. With spatula, spread remainder of frosting to cover top and sides of cake. Refrigerated until needed. Display on counter or cake stand with a plastic cover.</li>
 	</ol>
 	<h2>Gummies lemon drops lollipop wafer chocolate bar</h2>
-	<p>
-		Chocolate dragée topping pudding sweet roll sesame snaps carrot cake marshmallow. Chocolate cake pudding chupa chups chupa chups wafer lemon drops. <em>Muffin brownie cotton candy bear claw.</em> Sweet pastry candy muffin. Croissant marshmallow gummi bears marzipan candy bonbon sweet candy canes sugar plum. Oat cake powder croissant. Topping gingerbread muffin dragée jujubes bear claw pudding. Dragée jelly beans marshmallow cupcake muffin fruitcake candy canes ice cream. Liquorice oat cake lollipop lemon drops chocolate cake fruitcake. Gummies oat cake gummies danish brownie bonbon. Tiramisu jelly-o icing pastry dessert marzipan donut. Bear claw apple pie chocolate bar muffin.
-	</p>
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th>Lollipop</th>
+				<th>Gummies</th>
+				<th>Chocolate</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>&euro; 1</td>
+				<td>one</td>
+				<td>one</td>
+				<td>one</td>
+			</tr>
+			<tr>
+				<td>&euro; 2</td>
+				<td>two</td>
+				<td>two</td>
+				<td>three</td>
+			</tr>
+			<tr>
+				<td>&euro; 3</td>
+				<td>three</td>
+				<td>three</td>
+				<td>five</td>
+			</tr>
+			<tr>
+				<td>&euro; 4</td>
+				<td>four</td>
+				<td>four</td>
+				<td>seven</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 {% endcapture %}
 {% include example.html
