@@ -377,6 +377,13 @@ $form-control-max-width: $spacing * 60;
 		}
 	}
 
+	.form--top-aligned-labels {
+		margin-left: $spacing * -1;
+		padding-left: 0;
+		max-width: auto;
+		width: auto;
+	}
+
 	.form--inlined-actions & {
 		@include media($range-lap, false) {
 			display: flex;
