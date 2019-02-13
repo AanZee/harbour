@@ -68,7 +68,7 @@ A form with labels on the left side of the form and right aligned labels.
 %}
 
 ### Advanced form
-A default form with multiple sections and a extra field sections including content.
+A default form with multiple sections, helper text, a extra field sections including content and feedback text.
 
 {% include_relative examples/advanced-form.html %}
 {% include example.html
