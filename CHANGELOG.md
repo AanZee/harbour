@@ -1,3 +1,8 @@
+# 1.24.0
+
+## Feature
+* Add form layout component
+
 # 1.23.1
 
 ## Bugfix
