@@ -45,7 +45,7 @@ $password-input-webkit-credentials-auto-fill-button-toggle
 	<input class="password-input__input"
 		id="new-password"
 		name="new-password"
-		type="text"
+		type="password"
 		required
 		autocomplete="new-password"
 		spellcheck="false"
@@ -55,12 +55,12 @@ $password-input-webkit-credentials-auto-fill-button-toggle
 		<button class="password-input__visibility-toggle"
 			type="button"
 		>
+			<span class="password-input__visibility-toggle-label">
+				Show
+			</span>
 			<span class="password-input__visibility-toggle-label"
 				style="display:none;"
 			>
-				Show
-			</span>
-			<span class="password-input__visibility-toggle-label">
 				Hide
 			</span>
 		</button>
