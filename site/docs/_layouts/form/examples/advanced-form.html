@@ -1,0 +1,103 @@
+{% capture advanced-form %}
+<form class="form">
+	<div class="form__section">
+		<div class="form__fieldset">
+			<div class="form__field">
+				<label class="form__field-header"
+					for="advanced-form-label-1"
+				>
+					<span class="form__field-label">
+						Label 1
+						<span class="form__field-supporting-text">Field supporting text</span>
+					</span>
+				</label>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<input class="text-input"
+							id="advanced-form-label-1"
+							name="advanced-form-label-1"
+							type="text"
+						>
+						<p class="form__input-helper-text">
+							Label 1 helper text
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="form__field">
+				<label class="form__field-header"
+					for="advanced-form-label-2"
+				>
+					<span class="form__field-label">
+						Label 2
+					</span>
+				</label>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<input class="text-input"
+							id="advanced-form-label-2"
+							name="advanced-form-label-2"
+							type="text"
+						>
+					</div>
+					<div class="form__field-section">
+						<div class="content content--90">
+							<p>A form section with a content component.</p>
+							<ul>
+								<li>Example 1</li>
+								<li>Example 2</li>
+								<li>Example 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form__section">
+		<div class="form__fieldset">
+			<div class="form__field">
+				<label class="form__field-header"
+					for="advanced-form-label-3"
+				>
+					<span class="form__field-label">
+						Label 3
+					</span>
+				</label>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<input class="text-input is-invalid"
+							id="advanced-form-label-3"
+							name="advanced-form-label-3"
+							type="text"
+						>
+						<label class="form__input-feedback-text"
+							for="advanced-form-label-3"
+						>
+							You must enter a label 3
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form__footer">
+		<div class="form__actions">
+			<div class="form__action">
+				<button class="button button--primary"
+					type="submit"
+				>
+					Submit
+				</button>
+			</div>
+			<div class="form__action">
+				<a class="link"
+					href="#"
+				>
+					Previous step
+				</a>
+			</div>
+		</div>
+	</div>
+</form>
+{% endcapture %}

@@ -1,0 +1,79 @@
+{% capture login-form %}
+<form class="form">
+	<div class="form__section">
+		<div class="form__fieldset">
+			<div class="form__field">
+				<label class="form__field-header"
+					for="email"
+				>
+					<span class="form__field-label">
+						Email
+					</span>
+				</label>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<input class="text-input"
+							id="email"
+							name="email"
+							type="email"
+							autocomplete="username"
+							autocorrect="off"
+							spellcheck="false"
+							required
+						>
+					</div>
+				</div>
+			</div>
+			<div class="form__field">
+				<label class="form__field-header"
+					for="password"
+				>
+					<span class="form__field-label">
+						Password
+					</span>
+				</label>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<div class="password-input">
+							<input class="password-input__input"
+								id="password"
+								name="password"
+								type="password"
+								autocomplete="current-password"
+								autocorrect="off"
+								spellcheck="false"
+								required
+							>
+							<div class="password-input__toolbar">
+								<button class="password-input__visibility-toggle"
+									type="button"
+								>
+									<span class="password-input__visibility-toggle-label">
+										Show
+									</span>
+									<span class="password-input__visibility-toggle-label"
+										style="display:none;"
+									>
+										Hide
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form__footer">
+		<div class="form__actions">
+			<div class="form__action">
+				<button class="button button--primary button--full"
+					type="submit"
+				>
+					Submit
+				</button>
+			</div>
+		</div>
+	</div>
+</form>
+{% endcapture %}
