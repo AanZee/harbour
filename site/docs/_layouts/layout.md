@@ -55,7 +55,6 @@ layout__inner--compressed
 ```
 
 ### Adjust section__inner padding
-
 ```
 layout__inner--padded-0 (60, 70, 80, 90, 200, 300)
 layout__inner--padded-top-bottom-0 (60, 70, 80, 90, 200, 300)
