@@ -1,0 +1,136 @@
+{% capture personal-info-form %}
+<form class="form form--right-aligned-labels">
+	<div class="form__section">
+		<div class="form__fieldset">
+			<div class="form__field">
+				<label class="form__field-header"
+					for="given-name"
+				>
+					<span class="form__field-label">
+						Given name
+					</span>
+				</label>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<input class="text-input"
+							id="given-name"
+							name="given-name"
+							type="text"
+							autocapitalize="none"
+							autocomplete="given-name"
+							autocorrect="off"
+							spellcheck="false"
+							required
+						>
+					</div>
+				</div>
+			</div>
+			<div class="form__field">
+				<label class="form__field-header"
+					for="family-name"
+				>
+					<span class="form__field-label">
+						Family name
+					</span>
+				</label>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<input class="text-input"
+							id="family-name"
+							name="family-name"
+							type="text"
+							autocapitalize="none"
+							autocomplete="family-name"
+							autocorrect="off"
+							spellcheck="false"
+							required
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form__fieldset">
+			<div class="form__field">
+				<label class="form__field-header"
+					for="street-address"
+				>
+					<span class="form__field-label">
+						Street and house number
+					</span>
+				</label>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<input class="text-input"
+							id="street-address"
+							name="street-address"
+							type="text"
+							autocapitalize="off"
+							autocomplete="street-address"
+							autocorrect="off"
+							spellcheck="false"
+							required
+						>
+					</div>
+				</div>
+			</div>
+			<div class="form__field">
+				<label class="form__field-header"
+					for="postal-code"
+				>
+					<span class="form__field-label">
+						Postal code
+					</span>
+				</label>
+				<div class="form__field-main">
+					<div class="form__field-section">
+						<input class="text-input text-input--max-width-80"
+							id="postal-code"
+							name="postal-code"
+							type="text"
+							autocapitalize="characters"
+							autocomplete="postal-code"
+							autocorrect="off"
+							spellcheck="false"
+							required
+						>
+					</div>
+				</div>
+			</div>
+			<div class="form__field">
+				<label class="form__field-header"
+					for="city"
+				>
+					<span class="form__field-label">
+						City
+					</span>
+				</label>
+				<div class="form__field-main">
+					<div class="form__field-section form__field-section--text-input">
+						<input class="text-input"
+							id="city"
+							name="city"
+							type="text"
+							autocapitalize="on"
+							autocorrect="on"
+							autocomplete="address-level2"
+							spellcheck="true"
+							required
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form__footer">
+		<div class="form__actions">
+			<div class="form__action">
+				<button class="button button--full button--primary"
+					type="submit"
+				>
+					Submit
+				</button>
+			</div>
+		</div>
+	</div>
+</form>
+{% endcapture %}
