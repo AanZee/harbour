@@ -67,28 +67,28 @@ title: Content
 		</thead>
 		<tbody>
 			<tr>
-				<td>&euro; 1</td>
-				<td>one</td>
-				<td>one</td>
-				<td>one</td>
+				<td>25g</td>
+				<td>&euro; 2,00</td>
+				<td>&euro; 1,00</td>
+				<td>&euro; 3,00</td>
 			</tr>
 			<tr>
-				<td>&euro; 2</td>
-				<td>two</td>
-				<td>two</td>
-				<td>three</td>
+				<td>50g</td>
+				<td>&euro; 3,00</td>
+				<td>&euro; 1,50</td>
+				<td>&euro; 4,50</td>
 			</tr>
 			<tr>
-				<td>&euro; 3</td>
-				<td>three</td>
-				<td>three</td>
-				<td>five</td>
+				<td>100g</td>
+				<td>&euro; 4,50</td>
+				<td>&euro; 2,25</td>
+				<td>&euro; 6,75</td>
 			</tr>
 			<tr>
-				<td>&euro; 4</td>
-				<td>four</td>
-				<td>four</td>
-				<td>seven</td>
+				<td>500g</td>
+				<td>&euro; 6,75</td>
+				<td>&euro; 3,35</td>
+				<td>&euro; 9,00</td>
 			</tr>
 		</tbody>
 	</table>
