@@ -3,8 +3,9 @@ layout: docs
 title: Icons
 ---
 
-[figure_01]: {{ site.baseurl }}../../images/figure_01.png "figure_01 Lineweight and shape-characteristics"
-[figure_02]: {{ site.baseurl }}../../images/figure_02.png "figure_02 Border-radius"
+[figure_01]: {{ site.baseurl }}../../images/variables/icons/icon-lineweights.svg
+[figure_02]: {{ site.baseurl }}../../images/variables/icons/icon-shape-essence.svg
+[figure_03]: {{ site.baseurl }}../../images/variables/icons/icon-border-radius.svg
 
 **A collection of neutral, basic UI-icons - designed for Harbour-components**
 
@@ -24,13 +25,15 @@ All Harbour Icons are designed and optimized on a 32x32 pixel grid. All icons ex
 
 #### Icon-weights
 
-Harbour Icons are available in 5 weights: bold, regular, light, thin and hair. Starting point for these weights are the following lineweights: 8px for bold, 6px for regular, 4px for light, 2px for thin and 1px for hair on a 32x32 pixelgrid. All dimensions are recalculated to maintain specific lineweights for each iconweight. (So: No shortcuts when rotating or transforming shapes.)
+Harbour icons are available in 5 weights: bold, regular, light, thin and hair. Starting point for these weights are the following lineweights: 8px for bold, 6px for regular, 4px for light, 2px for thin and 1px for hair on a 32x32 pixelgrid.
+![Icon lineweight][figure_01]
 
-![alt text][figure_01]
+All dimensions are recalculated to maintain specific lineweights for each iconweight. **Please don't use shortcuts when rotating or transforming shapes.**
+![Icon shape-essence throughout lineweights][figure_02]
 
 #### Border-radius
 
-To make the icons pair well with Harbour’s fonts each fontweight has it’s own border radii. In the table below you can find which radius you need when creating new icons. There’s a setting for inner-corners, outer-corners and single points.
+To make the icons pair well with Harbour’s fonts each fontweight has it’s own border radius. In the table below you can find which radius you need when creating new icons. There’s a setting for inner-corners, outer-corners and single points.
 
 | Icon-weights | inner-corner | outer-corner | single-point |
 |-------|--------|---------|---------|
@@ -40,8 +43,8 @@ To make the icons pair well with Harbour’s fonts each fontweight has it’s ow
 | Thin - 2px | 0.375 | 0.75 | 0.375 |
 | Hair - 1px | 0.25 | 0.5 | 0.25 |
 
-
-![alt text][figure_02]
+Outer and inner radius on the left and single-point radius on the right icon:
+![Icon border-radius][figure_03]
 
 #### Solid shapes in icons
 
