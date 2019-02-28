@@ -6,7 +6,7 @@ $button-color: $color-text-light !default;
 $button-background-color: $color-ui !default;
 $button-hover-color: $color-text-light !default;
 $button-hover-background-color: $color-ui-200 !default;
-$button-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-secondary-400 !default;
+$button-focus-box-shadow: inset 0 0 0 ($spacing / 4) $color-focus !default;
 $button-active-color: $color-text-light !default;
 $button-active-background-color: $color-ui-400 !default;
 $button-outset-box-shadow: 0 $button-outset 0 0 shade($button-background-color, 25%) !default;

@@ -5,26 +5,34 @@
 // Only use descriptive colors to define functional colors in this document.
 $color-harbour-black: #000000;
 $color-harbour-white: #ffffff;
-$color-harbour-grey: #65778B;
-$color-harbour-yellow: #EFB756;
+
+$color-harbour-grey: #949494;
+$color-harbour-cobalt: #168BFF;
+$color-harbour-marine: #032543;
+$color-harbour-violet: #7961DB;
+$color-harbour-orange: #F67100;
+
+$color-harbour-yellow: #FFD406;
+$color-harbour-red: #D9232D;
+$color-harbour-green: #59C826;
+
 $color-harbour-purple: #8C5383;
 $color-harbour-blue: #3185FC;
-$color-harbour-red: #E24D3F;
-$color-harbour-green: #729B79;
+
 
 // ## Functional colors
 // Always use a descriptive color to define a functional color. Always use the right functional color even when two (or more) functional colors have the same descriptive color (e.g. $color-heading and $color-primary). This will help when you want to target a specific color.
 
 // ### Hierarchical
-$color-primary: $color-harbour-red !default;
-$color-secondary: $color-harbour-blue !default;
-$color-tertiary: $color-harbour-purple !default;
+$color-primary: $color-harbour-violet !default;
+$color-secondary: $color-harbour-cobalt !default;
+$color-tertiary: $color-harbour-grey !default;
 $color-quaternary: $color-harbour-grey !default;
 
 // ### Typography
-$color-heading: $color-harbour-black !default;
-$color-subheading: $color-harbour-black !default;
-$color-text: $color-harbour-black !default;
+$color-heading: $color-harbour-marine !default;
+$color-subheading: $color-harbour-marine !default;
+$color-text: $color-harbour-marine !default;
 $color-text-light: $color-harbour-white !default;
 
 // ### User Interface
@@ -34,8 +42,8 @@ $color-ui: $color-harbour-grey !default;
 $color-error: $color-harbour-red !default;
 $color-success: $color-harbour-green !default;
 $color-warning: $color-harbour-yellow !default;
-$color-select: $color-harbour-purple !default;
-$color-focus: $color-harbour-green !default;
+$color-select: $color-harbour-cobalt !default;
+$color-focus: $color-harbour-cobalt !default;
 
 // ## Additional colors
 // Can be used for shared color variables in different components (e.g. $color-icon), in specific state (e.g. $color-logged-in) or themes (e.g. $color-corporate)
@@ -45,6 +53,7 @@ $color-background-dark: $color-harbour-black !default;
 $color-background-neutral: $color-harbour-grey !default;
 $color-background-colored: $color-harbour-blue !default;
 $color-background-complementary: $color-harbour-yellow !default;
+$color-highlight: $color-harbour-orange !default;
 
 // ## Ranges
 // Please keep the same variable order as above
@@ -307,6 +316,8 @@ $color-focus-700: shade($color-focus, 60%) !default;
 $color-focus-800: shade($color-focus, 70%) !default;
 $color-focus-900: shade($color-focus, 80%) !default;
 $color-focus-1000: shade($color-focus, 90%) !default;
+
+
 
 // ## Social media colors
 $color-facebook: #3b5998 !default;

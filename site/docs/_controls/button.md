@@ -6,8 +6,7 @@ title: Button
 The classes belonging to the `button` component can be used to style both the `<button>` and `<a>` element.
 
 {% capture button %}
-<button class="button" type="button">Action</button>
-<a class="button button--primary button--outline" href="/">Link</a>
+<button class="button" type="button">button</button>
 {% endcapture %}
 {% include example.html
 	content=button
@@ -17,26 +16,19 @@ The classes belonging to the `button` component can be used to style both the `<
 ### Hover, focus and active
 
 {% capture button-states %}
-<button class="button is-hovered" type="button">is-hovered</button>
-<button class="button is-focused" type="button">is-focused</button>
-<button class="button is-active" type="button">is-active</button>
+<button class="button" type="button">button</button>
+<button class="button is-hovered" type="button">button-is-hovered</button>
+<button class="button is-focused" type="button">button-is-focused</button>
+<button class="button is-active" type="button">button-is-active</button>
+<button class="button is-disabled" type="button">button-is-disabled</button>
 {% endcapture %}
 {% include example.html
 	content=button-states
 %}
 
-### Disabled
-{% capture button-disabled %}
-<button class="button is-disabled" type="button">is-disabled</button>
-{% endcapture %}
-{% include example.html
-	content=button-disabled
-%}
-
 ## Available modifiers
 ### Colors
 {% capture button-colors %}
-<button class="button button--call-to-action" type="button">button--call-to-action</button>
 <button class="button button--primary" type="button">button--primary</button>
 <button class="button button--secondary" type="button">button--secondary</button>
 {% endcapture %}
@@ -47,6 +39,8 @@ The classes belonging to the `button` component can be used to style both the `<
 ### Outline version (available in all colors)
 {% capture button-outline %}
 <button class="button button--outline" type="button">button--outline</button>
+<button class="button button--primary button--outline" type="button">button--outline button--primary</button>
+<button class="button button--secondary button--outline" type="button">button--outline button--secondary</button>
 {% endcapture %}
 {% include example.html
 	content=button-outline
@@ -56,11 +50,19 @@ The classes belonging to the `button` component can be used to style both the `<
 {% capture button-sizes %}
 <button class="button button--80" type="button">button--80</button>
 <button class="button button--90" type="button">button--90</button>
+<button class="button" type="button">button</button>
 <button class="button button--200" type="button">button--200</button>
-<button class="button button--full" type="button">button--full</button>
 {% endcapture %}
 {% include example.html
 	content=button-sizes
+%}
+
+### Full
+{% capture button-full %}
+<button class="button button--full" type="button">button--full</button>
+{% endcapture %}
+{% include example.html
+	content=button-full
 %}
 
 ## Available local variables
