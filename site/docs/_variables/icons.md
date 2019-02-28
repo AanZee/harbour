@@ -3,35 +3,43 @@ layout: docs
 title: Icons
 ---
 
-[figure_01]: {{ site.baseurl }}../../images/variables/icons/icon-lineweights.svg
-[figure_02]: {{ site.baseurl }}../../images/variables/icons/icon-shape-essence.svg
-[figure_03]: {{ site.baseurl }}../../images/variables/icons/icon-border-radius.svg
+## A collection of neutral, basic UI-icons - designed for Harbour-components.
 
-**A collection of neutral, basic UI-icons - designed for Harbour-components**
+With the development of Harbour as a starting point in the development of client applications the need for  well-designed, neutral, basic UI-icons that could be used in the Harbour-components became clear. After defining a list of required icons we started the design of these icons with undermentioned principles.
 
-_**With the development of Harbour as a starting point in the development of client applications the need for  well-designed, neutral, basic UI-icons that could be used in the Harbour-components became clear. After defining a list of required icons we started the design of these icons with undermentioned principles.**_
+### Characteristics
 
+Icon design in general focuses on capturing the essence of a shape into a simple image. This goes for Harbour UI-icons as well. As a addition to this principle there are a few extra things to keep in mind when designing new icons:
 
+- Harbour UI-icons are icons used in Harbour-components. If there’s no need for an icon in a specific component it doesn’t have to be a part of Harbour UI-icons.
+- Avoid overdesigning icons by keeping exotic shapes and quirky visualizations away from your design.
+- K.I.S.S. (keep it simple, stupid) and when things get overcomplicated: start again and K.I.S.S.
 
-### Design principles and guidelines
+### Solid shapes in icons
 
-#### Style
+All icons that are solid shapes in stead of a line or combination of lines (for example the caret or the circle), there are no weight variants.
+
+## Design principles
+ 
+### Style
 
 All Harbour UI-icons are designed to pair with system fonts as SF Pro and Roboto, the default font selection for the Harbour-components. Limiting the style elements is needed to make sure that the appearance of Harbour-components are clearly that of a starting point, which needs customization.
 
-#### Grid
+### Grid
 
 All Harbour Icons are designed and optimized on a 32x32 pixel grid. All icons expand to the edges of the grid as much as possible (at least one of the x or y-axis). This gridsize forces the design to be simple and straightforward without limiting characteristics. In addition to that 32x32 pixels is a format that goes well with IOS and Android icon development standards.
 
-#### Icon-weights
+### Icon-weights
 
 Harbour icons are available in 5 weights: bold, regular, light, thin and hair. Starting point for these weights are the following lineweights: 8px for bold, 6px for regular, 4px for light, 2px for thin and 1px for hair on a 32x32 pixelgrid.
-![Icon lineweight][figure_01]
+
+![Icon lineweight]({{ site.baseurl }}../../images/variables/icons/icon-lineweights.svg)
 
 All dimensions are recalculated to maintain specific lineweights for each iconweight. **Please don't use shortcuts when rotating or transforming shapes.**
-![Icon shape-essence throughout lineweights][figure_02]
 
-#### Border-radius
+![Icon shape-essence throughout lineweights]({{ site.baseurl }}../../images/variables/icons/icon-shape-essence.svg)
+
+### Border-radius
 
 To make the icons pair well with Harbour’s fonts each fontweight has it’s own border radius. In the table below you can find which radius you need when creating new icons. There’s a setting for inner-corners, outer-corners and single points.
 
@@ -44,85 +52,44 @@ To make the icons pair well with Harbour’s fonts each fontweight has it’s ow
 | Hair - 1px | 0.25 | 0.5 | 0.25 |
 
 Outer and inner radius on the left and single-point radius on the right icon:
-![Icon border-radius][figure_03]
+![Icon border-radius]({{ site.baseurl }}../../images/variables/icons/icon-border-radius.svg)
 
-#### Solid shapes in icons
+## Development
 
-All icons that are solid shapes in stead of a line or combination of lines (for example the caret or the circle), there are no weight variants. These icons can be found in the regular section of this document only. 
+### Optimizing and exporting icons
 
-#### Characteristics
+Make sure to optimize your .svg file with [SVGO plug-in](https://github.com/svg/svgo) with our [custom settings](/attachments/svgo.json).
 
-Icon design in general focusses on capturing the essence of a shape into a simple image. This goes for Harbour UI-icons as well. As a addition to this principle there are a few extra things to keep in mind when designing new icons:
+###  Available SCSS variables
 
-- Harbour UI-icons are icons used in Harbour-components. (If there’s no need for an icon in a specific 	component it doesn’t have to be a part of Harbour UI-icons.)
-- Avoid overdesigning icons by keeping exotic shapes and quirky visualizations away from your design.
-- K.I.S.S. (keep it simple, stupid) and when things get overcomplicated: start again and K.I.S.S. 
-
-#### Optimizing and exporting icons
-
-Make sure to optimise your .svg file with SVGO Optimizer plug-in with the custom settings as shared in the Harbour confluence.
+Below we offer a overview with our current icons including the SCSS variable wich you can use in your Harbour-components. For icons with different weights there is a shorthand available which is the default. This default variable is used in most of our components and controls. Our own icon set uses the regular weight as default, but you are free to set a different default.
 
 {% capture icon-collection %}
 <section class="layout">
-	<div class="layout__section">
-		<header class="heading-group">
-			<h1 class="heading-group__headline">
-				Icon overview and available SCSS variables
-			</h1>
-			<p class="headings-group__supporting-text">
-				For the icons with different weights there is a shorthand available which is the default. This default variable is used in most of our components and controls. Our own icon set uses the regular weight as default.
-			</p>
-		</header>
-	</div>
 	{% comment %}
 		<!-- Loop over all icons in the _data/icons/docs.json file. icon[0] stand for the key (e.g. 'arrow-down') and icon[1] contains the value; the description and the weights array.  -->
 	{% endcomment %}
 	{% for icon in site.data.icons.docs %}
 		<div class="layout__section">
-			<div class="layout__section">
-				<header class="heading-group">
-					<h1 class="heading-group__title">
-						{{ icon[0] | capitalize }}
-					</h1>
+			<header class="heading-group">
+				<h1 class="heading-group__title">
+					{{ icon[0] | capitalize }}
+				</h1>
+				{% if icon[1].weights.size > 0 %}
+					<h2 class="heading-group__underline">
+						Shorthand: <span class="heading-group__emphasis">$icon-{{ icon[0] }}</span>
+					</h2>
+				{% endif %}
+				<p class="heading-group__supporting-text">
+					{{ icon[1].description }}
+				</p>
+			</header>
+		</div>
+		<div class="layout__section layout__section--spaced-60 layout__section--colored">
+			<div class="layout__inner layout__inner--padded-80">
+				<div class="collection collection--grid-one-whole-till-one-third">
 					{% if icon[1].weights.size > 0 %}
-						<h2 class="heading-group__underline">
-							Shorthand: <span class="heading-group__emphasis">$icon-{{ icon[0] }}</span>
-						</h2>
-					{% endif %}
-					<p class="heading-group__supporting-text">
-						{{ icon[1].description }}
-					</p>
-				</header>
-			</div>
-			<div class="layout__section layout__section--spaced-60 layout__section--colored">
-				<div class="layout__inner layout__inner--padded-80">
-					<div class="collection collection--grid-one-whole-till-one-third">
-						{% if icon[1].weights.size > 0 %}
-							{% for weight in icon[1].weights %}
-								<div class="collection__item">
-									<div class="card card--90">
-										<div class="card__actions">
-											<div class="card__primary-action">
-												<header class="card__header">
-													<div class="card__icon">
-														{% comment %}
-															<!-- Generate icon key to get the values from the scss-variables.json. Then select the right icon and strip single quotes and SCSS !default flag to get the original SVG. -->
-														{% endcomment %}
-														{% assign icon-key = 'icon-' | append: icon[0] | append: '-' | append: weight %}
-														{{ site.data.icons.scss-variables[icon-key] | replace: "'", '' | replace: ' !default', '' }}
-													</div>
-													<div class="card__heading-group">
-														<h1 class="card__title">
-															$icon-{{ icon[0] }}-{{ weight }}
-														</h1>
-													</div>
-												</header>
-											</div>
-										</div>
-									</div>
-								</div>
-							{% endfor %}
-						{% else  %}
+						{% for weight in icon[1].weights %}
 							<div class="collection__item">
 								<div class="card card--90">
 									<div class="card__actions">
@@ -130,14 +97,14 @@ Make sure to optimise your .svg file with SVGO Optimizer plug-in with the custom
 											<header class="card__header">
 												<div class="card__icon">
 													{% comment %}
-														<!-- Generate icon key to get the values from the scss-variables.json. Then select the right icon and strip single quotes and SCSS !default flag to get the original SVG. -->
+														<!-- Generate icon key to get the values from the scss-icon-variables.json. Then select the right icon and strip single quotes and SCSS !default flag to get the original SVG. -->
 													{% endcomment %}
-													{% assign icon-key = 'icon-' | append: icon[0] %}
-													{{ site.data.icons.scss-variables[icon-key] | replace: "'", '' | replace: ' !default', '' }}
+													{% assign icon-key = 'icon-' | append: icon[0] | append: '-' | append: weight %}
+													{{ site.data.icons.scss-icon-variables[icon-key] | replace: "'", '' | replace: ' !default', '' }}
 												</div>
 												<div class="card__heading-group">
 													<h1 class="card__title">
-														$icon-{{ icon[0] }}
+														$icon-{{ icon[0] }}-{{ weight }}
 													</h1>
 												</div>
 											</header>
@@ -145,8 +112,31 @@ Make sure to optimise your .svg file with SVGO Optimizer plug-in with the custom
 									</div>
 								</div>
 							</div>
-						{% endif %}
-					</div>
+						{% endfor %}
+					{% else  %}
+						<div class="collection__item">
+							<div class="card card--90">
+								<div class="card__actions">
+									<div class="card__primary-action">
+										<header class="card__header">
+											<div class="card__icon">
+												{% comment %}
+													<!-- Generate icon key to get the values from the scss-icon-variables.json. Then select the right icon and strip single quotes and SCSS !default flag to get the original SVG. -->
+												{% endcomment %}
+												{% assign icon-key = 'icon-' | append: icon[0] %}
+												{{ site.data.icons.scss-icon-variables[icon-key] | replace: "'", '' | replace: ' !default', '' }}
+											</div>
+											<div class="card__heading-group">
+												<h1 class="card__title">
+													$icon-{{ icon[0] }}
+												</h1>
+											</div>
+										</header>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endif %}
 				</div>
 			</div>
 		</div>
