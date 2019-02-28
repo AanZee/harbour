@@ -58,7 +58,7 @@ Outer and inner radius on the left and single-point radius on the right icon:
 
 ### Optimizing and exporting icons
 
-Make sure to optimize your .svg file with [SVGO plug-in](https://github.com/svg/svgo) with our [custom settings](/attachments/svgo.json).
+**To do: add bullit list**
 
 ###  Available SCSS variables
 
