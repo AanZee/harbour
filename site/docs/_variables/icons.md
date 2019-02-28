@@ -33,11 +33,11 @@ All Harbour Icons are designed and optimized on a 32x32 pixel grid. All icons ex
 
 Harbour icons are available in 5 weights: bold, regular, light, thin and hair. Starting point for these weights are the following lineweights: 8px for bold, 6px for regular, 4px for light, 2px for thin and 1px for hair on a 32x32 pixelgrid.
 
-![Icon lineweight]({{ site.baseurl }}../../images/variables/icons/icon-lineweights.svg)
+![Icon lineweight]({{ site.baseurl }}/images/variables/icons/icon-lineweights.svg)
 
 All dimensions are recalculated to maintain specific lineweights for each iconweight. **Please don't use shortcuts when rotating or transforming shapes.**
 
-![Icon shape-essence throughout lineweights]({{ site.baseurl }}../../images/variables/icons/icon-shape-essence.svg)
+![Icon shape-essence throughout lineweights]({{ site.baseurl }}/images/variables/icons/icon-shape-essence.svg)
 
 ### Border-radius
 
@@ -52,7 +52,7 @@ To make the icons pair well with Harbour’s fonts each fontweight has it’s ow
 | Hair - 1px | 0.25 | 0.5 | 0.25 |
 
 Outer and inner radius on the left and single-point radius on the right icon:
-![Icon border-radius]({{ site.baseurl }}../../images/variables/icons/icon-border-radius.svg)
+![Icon border-radius]({{ site.baseurl }}/images/variables/icons/icon-border-radius.svg)
 
 ## Development
 
