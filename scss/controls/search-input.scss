@@ -1,7 +1,9 @@
 $search-input-button-gap: $spacing * 2 !default;
 $search-input-border: $input-border  !default;
-$search-input-border-radius: $input-border-radius !default;
 $search-input-button-background-color: $input-background-color !default;
+
+// Local variables
+$search-input-border-radius: $input-border-radius;
 
 .search-input {
 	position: relative;
@@ -15,14 +17,6 @@ $search-input-button-background-color: $input-background-color !default;
 
 .search-input--90 {
 	height: $control-size-90;
-}
-
-.search-input--narrow {
-	max-width: $spacing * 40;
-}
-
-.search-input--condensed {
-	max-width: $spacing * 32;
 }
 
 .search-input__input-box {
@@ -50,25 +44,6 @@ $search-input-button-background-color: $input-background-color !default;
 
 		&:last-child {
 			border-radius: $control-size-100 / 2;
-		}
-	}
-
-	.search-input--icon & {
-		padding-left: $control-size-100;
-
-		&::after {
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: block;
-			width: $control-size-100;
-			height: $control-size-100;
-			background-image: url(get-svg-uri($icon-search-bold, $color-ui-400));
-			background-position: center center;
-			background-size: $icon-size-100;
-			background-repeat: no-repeat;
-			content: '';
-			pointer-events: none;
 		}
 	}
 
@@ -103,14 +78,22 @@ $search-input-button-background-color: $input-background-color !default;
 		pointer-events: none;
 	}
 
+	&::-ms-clear {
+		// @NOTE: Hide Internet Explorer input clear action
+		display: none;
+	}
+
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration {
+		// @NOTE: Hide webkit input clear action (https://stackoverflow.com/questions/9421551/how-do-i-remove-all-default-webkit-search-field-styling)
+		-webkit-appearance: none;
+	}
+
 	&::-ms-value {
 		background: none; // NOTE To remove blue background on IE10+ when selected.
 		color: $color-text; // NOTE To make sure the text is readable on a light background from item-pop-up-menu when selected and input is not checked.
-	}
-
-	&::placeholder {
-		color: $color-text-80;
-		opacity: $opacity-100;
 	}
 
 	&:-webkit-autofill {
@@ -132,10 +115,6 @@ $search-input-button-background-color: $input-background-color !default;
 
 	.search-input--90.search-input--rounded & {
 		padding-left: $control-size-90 / 2;
-	}
-
-	.search-input--icon & {
-		padding-left: 0;
 	}
 }
 
@@ -175,18 +154,23 @@ $search-input-button-background-color: $input-background-color !default;
 	}
 }
 
-.search-input__action {
+.search-input__clear-action {
 	position: relative;
 	display: inline-block;
+	overflow: hidden;
 	padding: $spacing ($spacing * 2);
 	min-width: $control-size-100;
+	width: $control-size-100;
 	height: 100%;
 	border-radius: $search-input-border-radius;
+	background-image: url(get-svg-uri($icon-cross, $color-text-300));
 	background-position: center center;
 	background-size: $icon-size-100;
 	background-repeat: no-repeat;
+	color: transparent;
 	vertical-align: middle;
 	cursor: default;
+	user-select: none;
 
 	&:first-child::before {
 		position: absolute;
@@ -202,23 +186,15 @@ $search-input-button-background-color: $input-background-color !default;
 		min-width: $control-size-90;
 	}
 
-	.search-input__action--clear ~ &:not(.search-input__action--clear):not(.search-input__action--search),
-	.search-input__action--search ~ &:not(.search-input__action--clear):not(.search-input__action--search) {
-		padding-left: $spacing * 0.5;
-	}
-
 	.search-input--rounded .search-input__input-box:last-child &:last-child {
 		border-top-right-radius: $control-size-100 / 2;
 		border-bottom-right-radius: $control-size-100 / 2;
 	}
-}
 
-.search-input__action--clear {
-	background-image: url(get-svg-uri($icon-cross, $color-text-300));
-}
-
-.search-input__action--search {
-	background-image: url(get-svg-uri($icon-search-bold, $color-text-300));
+	.search-input__input:not(:valid) + .search-input__toolbar &,
+	.search-input__input:disabled {
+		display: none;
+	}
 }
 
 .search-input__button {
@@ -249,16 +225,4 @@ $search-input-button-background-color: $input-background-color !default;
 		border-top-right-radius: $control-size-100 / 2;
 		border-bottom-right-radius: $control-size-100 / 2;
 	}
-}
-
-.search-input__button--primary {
-	background-color: $color-primary;
-}
-
-.search-input__button--secondary {
-	background-color: $color-secondary;
-}
-
-.search-input__button--tertiary {
-	background-color: $color-tertiary;
 }
