@@ -14,7 +14,7 @@ title: Search Input
             <button class="search-input__clear-action">Clear</button>
         </div>
     </div>
-    <button class="search-input__button">
+    <button class="search-input__search-action">
         Search
     </button>
 </div>
@@ -35,7 +35,7 @@ search-input (modifier)
 │   ├── search-input__input
 │   ├── search-input__toolbar
 │   │   ├── search-input__clear-action
-├── search-input__button
+├── search-input__search-action
 ```
 
 {% capture search-input--devided-action %}
@@ -44,13 +44,13 @@ search-input (modifier)
         <input class="search-input__input"
             type="search"
             required
-            value="search querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch query"
+            value="search query"
         >
         <div class="search-input__toolbar">
             <button class="search-input__clear-action">Clear</button>
         </div>
     </div>
-    <button class="search-input__button">
+    <button class="search-input__search-action">
         Search
     </button>
 </div>
@@ -78,7 +78,7 @@ search-input--90
             <button class="search-input__clear-action">Clear</button>
         </div>
     </div>
-    <button class="search-input__button">
+    <button class="search-input__search-action">
         Search
     </button>
 </div>
@@ -107,7 +107,7 @@ search-input--button-separated
             <button class="search-input__clear-action">Clear</button>
         </div>
     </div>
-    <button class="search-input__button">
+    <button class="search-input__search-action">
         Search
     </button>
 </div>
@@ -129,7 +129,7 @@ search-input--button-separated
             <button class="search-input__clear-action">Clear</button>
         </div>
     </div>
-    <button class="search-input__button">
+    <button class="search-input__search-action">
         Search
     </button>
 </div>
@@ -160,7 +160,7 @@ search-input__input:focus
             <button class="search-input__clear-action">Clear</button>
         </div>
     </div>
-    <button class="search-input__button"
+    <button class="search-input__search-action"
         disabled
     >
         Search
