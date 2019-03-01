@@ -165,8 +165,7 @@ gulp.task('buildScss', ['buildStylelintScss'], function() {
 gulp.task('watchJekyll', () => {
 	const isWatch = true;
 	const options = [
-		'--watch', // Enable auto-regeneration of the site when files are modified
-		'--incremental', // Only re-build pages that have changed
+		'--watch' // Enable auto-regeneration of the site when files are modified
 	];
 
 	return buildJekyll(isWatch, options);
