@@ -175,7 +175,7 @@ search-input__input:focus
         <input class="search-input__input"
             type="search"
             required
-            disabled
+            value="search query"
         >
         <div class="search-input__toolbar">
             <button class="search-input__clear-action">Clear</button>
@@ -190,10 +190,10 @@ search-input__input:focus
 	content=search-input--devided-action
 %}
 
-##### disabled / is-disabled??
+##### is-disabled (in combination with disabled attribute to prevent keyboard navigation)
 
 {% capture search-input--devided-action %}
-<div class="search-input">
+<div class="search-input is-disabled">
     <div class="search-input__input-box">
         <input class="search-input__input"
             type="search"
@@ -205,7 +205,9 @@ search-input__input:focus
             <button class="search-input__clear-action">Clear</button>
         </div>
     </div>
-    <button class="search-input__button">
+    <button class="search-input__button"
+        disabled
+    >
         Search
     </button>
 </div>
