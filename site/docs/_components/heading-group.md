@@ -43,7 +43,7 @@ The supporting text contains a description or short summary to support the title
 
 ### Emphasis
 
-The emphasys class is used to highlight a certain piece of text to draw the attention of the user. For example a price or a USP.
+The emphasis class is used to highlight a certain piece of text to draw the attention of the user. For example a price or a USP.
 
 ## Available modifiers
 
