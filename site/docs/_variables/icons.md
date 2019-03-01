@@ -19,6 +19,10 @@ Icon design in general focuses on capturing the essence of a shape into a simple
 
 All icons that are solid shapes in stead of a line or combination of lines (for example the caret or the circle), there are no weight variants.
 
+### Optimizing and exporting icons
+
+**To do: add bullit list**
+
 ## Design principles
  
 ### Style
@@ -54,13 +58,17 @@ To make the icons pair well with Harbour’s fonts each fontweight has it’s ow
 Outer and inner radius on the left and single-point radius on the right icon:
 ![Icon border-radius]({{ site.baseurl }}/images/variables/icons/icon-border-radius.svg)
 
-## Development
+## SCSS Usage
 
-### Optimizing and exporting icons
+### Size variables
 
-**To do: add bullit list**
+{% capture my_include %}{% include scss/variables/icon-sizes.scss %}{% endcapture %}
 
-###  Available SCSS variables
+```scss
+{{ my_include | rstrip }}
+```
+
+###  Icon Variables
 
 Below we offer a overview with our current icons including the SCSS variable wich you can use in your Harbour-components. For icons with different weights there is a shorthand available which is the default. This default variable is used in most of our components and controls. Our own icon set uses the regular weight as default, but you are free to set a different default.
 
