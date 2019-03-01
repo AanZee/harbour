@@ -44,7 +44,7 @@ search-input (modifier)
         <input class="search-input__input"
             type="search"
             required
-            value="search query"
+            value="search querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch querysearch query"
         >
         <div class="search-input__toolbar">
             <button class="search-input__clear-action">Clear</button>
@@ -161,34 +161,9 @@ search-input--button-separated
 ## Available states
 
 ```text
-is-loading
-
 search-input__input:disabled
 search-input__input:focus
 ```
-
-##### is-loading
-
-{% capture search-input--devided-action %}
-<div class="search-input is-loading">
-    <div class="search-input__input-box">
-        <input class="search-input__input"
-            type="search"
-            required
-            value="search query"
-        >
-        <div class="search-input__toolbar">
-            <button class="search-input__clear-action">Clear</button>
-        </div>
-    </div>
-    <button class="search-input__button">
-        Search
-    </button>
-</div>
-{% endcapture %}
-{% include example.html
-	content=search-input--devided-action
-%}
 
 ##### is-disabled (in combination with disabled attribute to prevent keyboard navigation)
 
