@@ -87,26 +87,6 @@ search-input--90
 	content=search-input--devided-action
 %}
 
-{% capture search-input--devided-action %}
-<div class="search-input search-input--90 search-input--rounded">
-    <div class="search-input__input-box">
-        <input class="search-input__input"
-            type="search"
-            required
-        >
-        <div class="search-input__toolbar">
-            <button class="search-input__clear-action">Clear</button>
-        </div>
-    </div>
-    <button class="search-input__button">
-        Search
-    </button>
-</div>
-{% endcapture %}
-{% include example.html
-	content=search-input--devided-action
-%}
-
 ### Other
 
 ```text
