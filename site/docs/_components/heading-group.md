@@ -25,6 +25,10 @@ A brief summary of your title or headline. This should only consist of up to 50 
 
 The headline indicates the nature of the page below it. A page should only have one headline (at the top).
 
+### Underline
+
+An underline is a supporting text for the headline. It is always used in combination with a headline.
+
 ### Title
 
 "A title can be used to identify the work, to place it in context, to convey a minimal summary of its contents, and to pique the reader's curiosity." - Wikipedia
@@ -32,10 +36,6 @@ The headline indicates the nature of the page below it. A page should only have 
 ### Subtitle
 
 The subtitle is a second title which is often longer and explains more than the title.
-
-### Underline
-
-@TODO: [HAR-260]
 
 ### Supporting text
 
@@ -77,15 +77,15 @@ heading-group (modifiers)
 	<h1 class="heading-group__headline">
 		Headline
 	</h1>
+	<p class="heading-group__underline">
+		Underline
+	</p>
 	<h2 class="heading-group__title">
 		Title
 	</h2>
 	<h3 class="heading-group__subtitle">
 		Subtitle
 	</h3>
-	<p class="heading-group__underline">
-		Underline
-	</p>
 	<p class="heading-group__supporting-text">
 		Supporting text to provide more details about your subject with an
 		<span class="heading-group__emphasis">
@@ -111,15 +111,15 @@ heading-group (modifiers)
 			<h1 class="heading-group__headline">
 				Headline
 			</h1>
+			<p class="heading-group__underline">
+				Underline
+			</p>
 			<h2 class="heading-group__title">
 				Title
 			</h2>
 			<h3 class="heading-group__subtitle">
 				Subtitle
 			</h3>
-			<p class="heading-group__underline">
-				Underline
-			</p>
 			<p class="heading-group__supporting-text">
 				Supporting text to provide more details about your subject with an
 				<span class="heading-group__emphasis">
@@ -144,8 +144,8 @@ heading-group (modifiers)
 	<h1 class="heading-group__headline">
 		Headline
 	</h1>
-	<h2 class="heading-group__subtitle">
-		Subtitle
+	<h2 class="heading-group__underline">
+		Underline
 	</h2>
 </div>
 {% endcapture %}
@@ -160,6 +160,9 @@ heading-group (modifiers)
 	<h1 class="heading-group__title">
 		Section title
 	</h1>
+	<h2 class="heading-group__subtitle">
+		Section subtitle
+	</h2>
 	<span class="heading-group__supporting-text">
 		Laborum cupidatat consequat nostrud esse ea duis qui do consectetur. Laborum officia minim veniam qui labore tempor consequat duis officia irure dolor quis fugiat nulla. Incididunt cillum ullamco amet non labore irure amet quis. Amet do amet ut ea aute anim non laboris amet.
 	</span>
