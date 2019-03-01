@@ -1,0 +1,233 @@
+$search-input-button-gap: $spacing * 2 !default;
+$search-input-border: $input-border  !default;
+$search-input-button-background-color: $input-background-color !default;
+
+// Local variables
+$search-input-border-radius: $input-border-radius;
+
+.search-input {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: $control-size-100;
+	color: $input-color;
+	font-size: $input-font-size;
+	line-height: $input-line-height;
+
+	&.is-disabled {
+		opacity: $opacity-disabled;
+		pointer-events: none;
+	}
+}
+
+.search-input--90 {
+	height: $control-size-90;
+}
+
+.search-input__input-box {
+	position: relative;
+	display: flex;
+	justify-content: stretch;
+	width: 100%;
+	height: $control-size-100;
+	border: $search-input-border;
+	border-top-left-radius: $search-input-border-radius;
+	border-bottom-left-radius: $search-input-border-radius;
+	background-color: $input-background-color;
+
+	&:last-child {
+		border-radius: $search-input-border-radius;
+	}
+
+	.search-input--button-separated & {
+		border-radius: $search-input-border-radius;
+	}
+
+	.search-input--rounded & {
+		border-top-left-radius: $control-size-100 / 2;
+		border-bottom-left-radius: $control-size-100 / 2;
+
+		&:last-child {
+			border-radius: $control-size-100 / 2;
+		}
+	}
+
+	.search-input--90 & {
+		height: $control-size-90;
+	}
+}
+
+.search-input__input {
+	position: relative;
+	padding-top: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
+	padding-right: 0;
+	padding-bottom: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
+	padding-left: $spacing * 1.5;
+	width: 100%;
+	height: $control-size-100 - 2px;
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
+	color: $input-color;
+	font-size: $input-font-size;
+	line-height: $input-line-height;
+	transition: $input-transition;
+	appearance: none;
+
+	&:focus {
+		box-shadow: none;
+	}
+
+	&::-ms-clear {
+		// @NOTE: Hide Internet Explorer input clear action
+		display: none;
+	}
+
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration {
+		// @NOTE: Hide webkit input clear action (https://stackoverflow.com/questions/9421551/how-do-i-remove-all-default-webkit-search-field-styling)
+		-webkit-appearance: none;
+	}
+
+	&::-ms-value {
+		background: none; // NOTE To remove blue background on IE10+ when selected.
+		color: $color-text; // NOTE To make sure the text is readable on a light background from item-pop-up-menu when selected and input is not checked.
+	}
+
+	&:-webkit-autofill {
+		padding-right: $spacing * 1.5;
+		border: $input-autofill-border;
+		background-color: $input-autofill-background-color;
+		box-shadow: $input-autofill-box-shadow, $input-autofill-box-shadow-background;
+	}
+
+	.search-input--90 & {
+		padding: ($spacing * 0.75) ($spacing * 1.5);
+		height: $control-size-90 - 2px;
+		font-size: $font-size-100;
+	}
+
+	.search-input--rounded & {
+		padding-left: $control-size-100 / 2;
+	}
+
+	.search-input--90.search-input--rounded & {
+		padding-left: $control-size-90 / 2;
+	}
+}
+
+.search-input__toolbar {
+	flex: 0 0 auto;
+	display: block;
+
+	&::after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: none;
+		content: '';
+		pointer-events: none;
+
+		.search-input__input:focus ~ & {
+			display: block;
+			border: $input-focus-border;
+			box-shadow: $input-focus-box-shadow;
+
+			.search-input--rounded & {
+				border-radius: $control-size-100 / 2;
+			}
+
+			.search-input__input-box:not(:last-child) & {
+				border-top-right-radius: $search-input-border-radius;
+				border-bottom-right-radius: $search-input-border-radius;
+			}
+		}
+
+		.search-input__input:-webkit-autofill:focus ~ & {
+			border: $input-autofill-focus-border;
+			box-shadow: $input-autofill-focus-box-shadow, $input-autofill-focus-box-shadow-background;
+		}
+	}
+}
+
+.search-input__clear-action {
+	position: relative;
+	display: inline-block;
+	padding: $spacing ($spacing * 2);
+	min-width: $control-size-100;
+	width: $control-size-100;
+	height: 100%;
+	border-radius: $search-input-border-radius;
+	background-image: url(get-svg-uri($icon-cross-circle-solid, $color-ui));
+	background-position: center center;
+	background-size: $icon-size-100;
+	background-repeat: no-repeat;
+	color: transparent;
+	font-size: 1px;
+	vertical-align: middle;
+	cursor: default;
+	user-select: none;
+
+	&:first-child::before {
+		position: absolute;
+		top: 0;
+		left: -$spacing;
+		bottom: 0;
+		width: $spacing;
+		background-image: linear-gradient(to right, transparent 0%, $input-background-color 100%);
+		content: '';
+	}
+
+	.search-input--90 & {
+		min-width: $control-size-90;
+	}
+
+	.search-input--rounded .search-input__input-box:last-child &:last-child {
+		border-top-right-radius: $control-size-100 / 2;
+		border-bottom-right-radius: $control-size-100 / 2;
+	}
+
+	.search-input__input:not(:valid) + .search-input__toolbar &,
+	.search-input__input:disabled {
+		display: none;
+	}
+}
+
+.search-input__search-action {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: $spacing ($spacing * 2);
+	min-width: $control-size-100;
+	border: $search-input-border;
+	border-left: none;
+	border-top-right-radius: $search-input-border-radius;
+	border-bottom-right-radius: $search-input-border-radius;
+	background-color: $search-input-button-background-color;
+	cursor: default;
+	user-select: none;
+	color: $color-text;
+
+	&:disabled {
+		opacity: $opacity-100;
+	}
+
+	.search-input--90 & {
+		min-width: $control-size-90;
+	}
+
+	.search-input--button-separated & {
+		margin-left: $search-input-button-gap;
+		border-left: $input-border;
+		border-radius: $search-input-border-radius;
+	}
+
+	.search-input--rounded & {
+		border-top-right-radius: $control-size-100 / 2;
+		border-bottom-right-radius: $control-size-100 / 2;
+	}
+}
