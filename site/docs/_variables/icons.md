@@ -98,6 +98,16 @@ Outer and inner radius on the left and single-point radius on the right icon:
 
 Below we offer a overview with our current icons including the SCSS variable wich you can use in your Harbour-components. For icons with different weights there is a shorthand available which is the default. This default variable is used in most of our components and controls. Our own icon set uses the regular weight as default, but you are free to set a different default.
 
+### Example
+```scss
+.component__icon {
+	background-position: center center;
+	background-size: $icon-size-100 $icon-size-100;
+	background-repeat: no-repeat;
+	background-image: url(get-svg-uri($icon-arrow-down, $color-text));
+}
+```
+
 {% capture icon-collection %}
 <section class="layout">
 	{% comment %}
