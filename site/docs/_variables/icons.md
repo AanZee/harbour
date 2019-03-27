@@ -21,10 +21,36 @@ All icons that are solid shapes in stead of a line or combination of lines (for 
 
 ### Optimizing and exporting icons
 
-**To do: add bullit list**
+To keep Harbour icons as small and flexible as possible we need to take a few basic principles into account:
+* make sure the final icon shape consists of as few paths as possible
+* flatten and merge your paths and shapes as much as possible
+* remove unnecessary vectorpoints
+* avoid groupings
+* use shapes (outlines and fill) in stead of lines with a line weight.
+* convert text elements to shapes (outlines)
+
+After exporting the icons from a graphical editor you have to optimise the svg-code:
+* Remove xml tag with version and encoding properties
+* width and height properties (don’t lose the view box property)
+* Remove comments
+* Remove &lt;title&gt; and description &lt;desc&gt;  and definitions &lt;defs&gt; tags
+* Remove unnecessary grouping tags &lt;g&gt; and their properties
+
+The remaining svg code can be optimised [here](http://petercollingridge.appspot.com/svg-optimiser).
+
+Make sure you've set the following options:
+* Whitespace: remove
+* Style type: styleString
+* Truncate attribute numbers: 1 decimal place
+* Truncate SVG size numbers: 1 decimal place
+* Truncate style numbers: 2 significant figures
+* Check all other option-boxes
+
+The optimised code can be used in Harbour.
+Don't forget to add a fill property fill="#000" to the optimised path(s)!
 
 ## Design principles
- 
+
 ### Style
 
 All Harbour UI-icons are designed to pair with system fonts as SF Pro and Roboto, the default font selection for the Harbour-components. Limiting the style elements is needed to make sure that the appearance of Harbour-components are clearly that of a starting point, which needs customization.
