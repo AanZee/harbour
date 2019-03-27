@@ -19,7 +19,7 @@
 		"stylelint": "9.10.1",
 		"stylelint-declaration-block-no-ignored-properties": "1.1.0",
 		"stylelint-declaration-strict-value": "1.1.2",
-		"stylelint-order": "2.0.0"
+		"stylelint-order": "2.1.0"
 	},
 	"devDependencies": {
 		"browser-sync": "2.26.3",
@@ -29,7 +29,7 @@
 		"gulp-postcss": "8.0.0",
 		"gulp-sass": "4.0.2",
 		"node-sass-tilde-importer": "1.0.2",
-		"postcss-reporter": "6.0.0",
+		"postcss-reporter": "6.0.1",
 		"postcss-scss": "2.0.0"
 	}
 }
