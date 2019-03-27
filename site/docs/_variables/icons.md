@@ -58,29 +58,30 @@ Outer and inner radius on the left and single-point radius on the right icon:
 ## Optimization and export
 
 To keep the icons as small and flexible as possible we need to take a few basic principles into account:
-* make sure the final icon shape consists of as few paths as possible
-* flatten and merge your paths and shapes as much as possible
-* remove unnecessary vector points
-* avoid groupings
-* use shapes (outlines and fill) in stead of lines with a line weight.
-* convert text elements to shapes (outlines)
+* Make sure the final icon shape consists of as few paths as possible.
+* Flatten and merge your paths and shapes as much as possible.
+* Remove unnecessary vector points.
+* Avoid groupings.
+* Use shapes (outlines and fill) in stead of lines with a line weight.
+* Convert text elements to shapes (outlines).
 
-After exporting the icons from a graphical editor you have to optimise the svg-code:
-* Remove xml tag with version and encoding properties
-* width and height properties (don’t lose the view box property)
-* Remove comments
-* Remove `<title>` and description `<desc>`  and definitions `<defs>` tags
-* Remove unnecessary grouping tags `<g>` and their properties
+After exporting the icons from a graphical editor you have to optimise the SVG code:
+* Remove xml tag with version and encoding properties.
+* Add width and height properties (don’t lose the viewBox property).
+* Remove comments.
+* Remove `<title>` and description `<desc>`  and definitions `<defs>` tags.
+* Remove unnecessary grouping tags `<g>` and their properties.
 
-The remaining svg code can be optimized [online](http://petercollingridge.appspot.com/svg-optimiser).
+The remaining 
+code can be optimized [online](http://petercollingridge.appspot.com/svg-optimiser).
 
 Make sure you've set the following options:
-* Whitespace: remove
-* Style type: styleString
-* Truncate attribute numbers: 1 decimal place
-* Truncate SVG size numbers: 1 decimal place
-* Truncate style numbers: 2 significant figures
-* Check all other option-boxes
+* whitespace: remove
+* style type: styleString
+* truncate attribute numbers: 1 decimal place
+* truncate SVG size numbers: 1 decimal place
+* truncate style numbers: 2 significant figures
+* check all other option-boxes
 
 The optimized code can be added to the codebase by the steps in the [contribution page](https://github.com/AanZee/harbour/blob/master/docs/CONTRIBUTING.md).
 
