@@ -4,6 +4,7 @@ title: Icons
 ---
 
 ## A collection of neutral, basic UI-icons - designed for Harbour-components.
+[Design principles](#design-principles) - [Optimization and export](#optimization-and-export) - [Usage](#usage) - [Icon variables](#icon-variables)
 
 With the development of Harbour as a starting point in the development of client applications the need for  well-designed, neutral, basic UI-icons that could be used in the its components became clear. After defining a list of required icons we started the design of these icons with undermentioned principles.
 
@@ -18,35 +19,6 @@ Icon design in general focuses on capturing the essence of a shape into a simple
 ### Solid shapes in icons
 
 All icons that are solid shapes in stead of a line or combination of lines (for example the caret or the circle), there are no weight variants.
-
-### Optimizing and exporting icons
-
-To keep the icons as small and flexible as possible we need to take a few basic principles into account:
-* make sure the final icon shape consists of as few paths as possible
-* flatten and merge your paths and shapes as much as possible
-* remove unnecessary vector points
-* avoid groupings
-* use shapes (outlines and fill) in stead of lines with a line weight.
-* convert text elements to shapes (outlines)
-
-After exporting the icons from a graphical editor you have to optimise the svg-code:
-* Remove xml tag with version and encoding properties
-* width and height properties (don’t lose the view box property)
-* Remove comments
-* Remove `<title>` and description `<desc>`  and definitions `<defs>` tags
-* Remove unnecessary grouping tags `<g>` and their properties
-
-The remaining svg code can be optimized [online](http://petercollingridge.appspot.com/svg-optimiser).
-
-Make sure you've set the following options:
-* Whitespace: remove
-* Style type: styleString
-* Truncate attribute numbers: 1 decimal place
-* Truncate SVG size numbers: 1 decimal place
-* Truncate style numbers: 2 significant figures
-* Check all other option-boxes
-
-The optimized code can be added to the codebase by the steps in the [contribution page](https://github.com/AanZee/harbour/blob/master/docs/CONTRIBUTING.md).
 
 ## Design principles
 
@@ -83,7 +55,36 @@ To make the icons pair well with Harbour’s fonts each fontweight has it’s ow
 Outer and inner radius on the left and single-point radius on the right icon:
 ![Icon border-radius]({{ site.baseurl }}/images/variables/icons/icon-border-radius.svg)
 
-## SCSS Usage
+## Optimization and export
+
+To keep the icons as small and flexible as possible we need to take a few basic principles into account:
+* make sure the final icon shape consists of as few paths as possible
+* flatten and merge your paths and shapes as much as possible
+* remove unnecessary vector points
+* avoid groupings
+* use shapes (outlines and fill) in stead of lines with a line weight.
+* convert text elements to shapes (outlines)
+
+After exporting the icons from a graphical editor you have to optimise the svg-code:
+* Remove xml tag with version and encoding properties
+* width and height properties (don’t lose the view box property)
+* Remove comments
+* Remove `<title>` and description `<desc>`  and definitions `<defs>` tags
+* Remove unnecessary grouping tags `<g>` and their properties
+
+The remaining svg code can be optimized [online](http://petercollingridge.appspot.com/svg-optimiser).
+
+Make sure you've set the following options:
+* Whitespace: remove
+* Style type: styleString
+* Truncate attribute numbers: 1 decimal place
+* Truncate SVG size numbers: 1 decimal place
+* Truncate style numbers: 2 significant figures
+* Check all other option-boxes
+
+The optimized code can be added to the codebase by the steps in the [contribution page](https://github.com/AanZee/harbour/blob/master/docs/CONTRIBUTING.md).
+
+## Usage
 
 ### Size variables
 
@@ -92,10 +93,6 @@ Outer and inner radius on the left and single-point radius on the right icon:
 ```scss
 {{ my_include | rstrip }}
 ```
-
-###  Icon Variables
-
-Below we offer a overview with our current icons including the SCSS variable which you can use in your components. For icons with different weights there is a shorthand available which is the default. This default variable is used in most of our components and controls. Our own icon set uses the regular weight as default, but you are free to set a different default.
 
 ### Example
 ```scss
@@ -106,6 +103,9 @@ Below we offer a overview with our current icons including the SCSS variable whi
 	background-image: url(get-svg-uri($icon-arrow-down, $color-text));
 }
 ```
+
+### Icon variables
+Below we offer a overview with our current icons including the SCSS variable which you can use in your components. For icons with different weights there is a shorthand available which is the default. This default variable is used in most of our components and controls. Our own icon set uses the regular weight as default, but you are free to set a different default.
 
 {% capture icon-collection %}
 <section class="layout">
