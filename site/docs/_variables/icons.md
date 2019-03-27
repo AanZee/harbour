@@ -5,11 +5,11 @@ title: Icons
 
 ## A collection of neutral, basic UI-icons - designed for Harbour-components.
 
-With the development of Harbour as a starting point in the development of client applications the need for  well-designed, neutral, basic UI-icons that could be used in the Harbour-components became clear. After defining a list of required icons we started the design of these icons with undermentioned principles.
+With the development of Harbour as a starting point in the development of client applications the need for  well-designed, neutral, basic UI-icons that could be used in the its components became clear. After defining a list of required icons we started the design of these icons with undermentioned principles.
 
 ### Characteristics
 
-Icon design in general focuses on capturing the essence of a shape into a simple image. This goes for Harbour UI-icons as well. As a addition to this principle there are a few extra things to keep in mind when designing new icons:
+Icon design in general focuses on capturing the essence of a shape into a simple image. This goes for these UI-icons as well. As a addition to this principle there are a few extra things to keep in mind when designing new icons:
 
 - Harbour UI-icons are icons used in Harbour-components. If there’s no need for an icon in a specific component it doesn’t have to be a part of Harbour UI-icons.
 - Avoid overdesigning icons by keeping exotic shapes and quirky visualizations away from your design.
@@ -21,10 +21,10 @@ All icons that are solid shapes in stead of a line or combination of lines (for 
 
 ### Optimizing and exporting icons
 
-To keep Harbour icons as small and flexible as possible we need to take a few basic principles into account:
+To keep the icons as small and flexible as possible we need to take a few basic principles into account:
 * make sure the final icon shape consists of as few paths as possible
 * flatten and merge your paths and shapes as much as possible
-* remove unnecessary vectorpoints
+* remove unnecessary vector points
 * avoid groupings
 * use shapes (outlines and fill) in stead of lines with a line weight.
 * convert text elements to shapes (outlines)
@@ -33,10 +33,10 @@ After exporting the icons from a graphical editor you have to optimise the svg-c
 * Remove xml tag with version and encoding properties
 * width and height properties (don’t lose the view box property)
 * Remove comments
-* Remove &lt;title&gt; and description &lt;desc&gt;  and definitions &lt;defs&gt; tags
-* Remove unnecessary grouping tags &lt;g&gt; and their properties
+* Remove `<title>` and description `<desc>`  and definitions `<defs>` tags
+* Remove unnecessary grouping tags `<g>` and their properties
 
-The remaining svg code can be optimised [here](http://petercollingridge.appspot.com/svg-optimiser).
+The remaining svg code can be optimized [online](http://petercollingridge.appspot.com/svg-optimiser).
 
 Make sure you've set the following options:
 * Whitespace: remove
@@ -46,8 +46,7 @@ Make sure you've set the following options:
 * Truncate style numbers: 2 significant figures
 * Check all other option-boxes
 
-The optimised code can be used in Harbour.
-Don't forget to add a fill property fill="#000" to the optimised path(s)!
+The optimized code can be added to the codebase by the steps in the [contribution page](https://github.com/AanZee/harbour/blob/master/docs/CONTRIBUTING.md).
 
 ## Design principles
 
@@ -96,7 +95,7 @@ Outer and inner radius on the left and single-point radius on the right icon:
 
 ###  Icon Variables
 
-Below we offer a overview with our current icons including the SCSS variable wich you can use in your Harbour-components. For icons with different weights there is a shorthand available which is the default. This default variable is used in most of our components and controls. Our own icon set uses the regular weight as default, but you are free to set a different default.
+Below we offer a overview with our current icons including the SCSS variable which you can use in your components. For icons with different weights there is a shorthand available which is the default. This default variable is used in most of our components and controls. Our own icon set uses the regular weight as default, but you are free to set a different default.
 
 ### Example
 ```scss
