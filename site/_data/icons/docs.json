@@ -108,9 +108,7 @@
 		"weights": [
 			"regular",
 			"bold",
-			"light",
-			"thin",
-			"hair"
+			"light"
 		]
 	},
 	"exclamation-circle-solid": {
@@ -126,9 +124,7 @@
 		"weights": [
 			"regular",
 			"bold",
-			"light",
-			"thin",
-			"hair"
+			"light"
 		]
 	},
 	"minus": {
