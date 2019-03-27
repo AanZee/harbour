@@ -16,7 +16,7 @@
 		"bourbon": "5.1.0",
 		"normalize.scss": "github:AanZee/normalize.scss#8.0.2",
 		"reset-css": "4.0.1",
-		"stylelint": "9.8.0",
+		"stylelint": "9.10.1",
 		"stylelint-declaration-block-no-ignored-properties": "1.1.0",
 		"stylelint-declaration-strict-value": "1.1.2",
 		"stylelint-order": "2.0.0"
