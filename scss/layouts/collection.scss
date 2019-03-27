@@ -12,6 +12,15 @@
 
 .collection__item {
 
+	.collection--list > &:not(:last-child) {
+		@include media(0, $range-hand) {
+			margin-bottom: $spacing;
+		}
+		@include media($range-lap, false) {
+			margin-bottom: $spacing * 2;
+		}
+	}
+
 	.collection--grid-one-whole-till-one-third > & {
 
 		@include media(0, $range-hand-m) {

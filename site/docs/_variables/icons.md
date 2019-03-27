@@ -77,78 +77,86 @@ Below we offer a overview with our current icons including the SCSS variable wic
 	{% comment %}
 		<!-- Loop over all icons in the _data/icons/docs.json file. icon[0] stand for the key (e.g. 'arrow-down') and icon[1] contains the value; the description and the weights array.  -->
 	{% endcomment %}
-	{% for icon in site.data.icons.docs %}
-		<div class="layout__section">
-			<header class="heading-group">
-				<h1 class="heading-group__title">
-					{{ icon[0] | capitalize }}
-				</h1>
-				{% if icon[1].weights.size > 0 %}
-					<h2 class="heading-group__underline">
-						Shorthand: <span class="heading-group__emphasis">$icon-{{ icon[0] }}</span>
-					</h2>
-				{% endif %}
-				<p class="heading-group__supporting-text">
-					{{ icon[1].description }}
-				</p>
-			</header>
-		</div>
-		<div class="layout__section layout__section--spaced-60 layout__section--colored">
-			<div class="layout__inner layout__inner--padded-80">
-				<div class="collection collection--grid-one-whole-till-one-third">
-					{% if icon[1].weights.size > 0 %}
-						{% for weight in icon[1].weights %}
-							<div class="collection__item">
-								<div class="card card--90">
-									<div class="card__actions">
-										<div class="card__primary-action">
-											<header class="card__header">
-												<div class="card__icon">
-													{% comment %}
-														<!-- Generate icon key to get the values from the scss-icon-variables.json. Then select the right icon and strip single quotes and SCSS !default flag to get the original SVG. -->
-													{% endcomment %}
-													{% assign icon-key = 'icon-' | append: icon[0] | append: '-' | append: weight %}
-													{{ site.data.icons.scss-icon-variables[icon-key] | replace: "'", '' | replace: ' !default', '' }}
+	<div class="collection collection--grid-one-whole-till-one-third">
+		{% for icon in site.data.icons.docs %}
+			<div class="collection__item">
+				<section class="card">
+					<div class="card__actions">
+						<div class="card__primary-action">
+							<header class="card__header">
+								<div class="card__heading-group">
+									<h1 class="card__title">
+										{{ icon[0] | capitalize }}
+									</h1>
+									{% if icon[1].weights.size > 0 %}
+										<h2 class="card__subtitle">
+											Shorthand: <span class="card__metadata"><span class="tag tag--90">$icon-{{ icon[0] }}</span></span>
+										</h2>
+									{% endif %}
+									<p class="card__excerpt">
+										{{ icon[1].description }}
+									</p>
+								</div>
+							</header>
+						</div>
+					</div>
+					<div class="card__details">
+						<div class="collection collection--list">
+							{% if icon[1].weights.size > 0 %}
+								{% for weight in icon[1].weights %}
+									<div class="collection__item">
+										<div class="card card--90">
+											<div class="card__actions">
+												<div class="card__primary-action">
+													<header class="card__header">
+														<div class="card__icon">
+															{% comment %}
+																<!-- Generate icon key to get the values from the scss-icon-variables.json. Then select the right icon and strip single quotes and SCSS !default flag to get the original SVG. -->
+															{% endcomment %}
+															{% assign icon-key = 'icon-' | append: icon[0] | append: '-' | append: weight %}
+															{{ site.data.icons.scss-icon-variables[icon-key] | replace: "'", '' | replace: ' !default', '' }}
+														</div>
+														<div class="card__heading-group">
+															<h1 class="card__title">
+																$icon-{{ icon[0] }}-{{ weight }}
+															</h1>
+														</div>
+													</header>
 												</div>
-												<div class="card__heading-group">
-													<h1 class="card__title">
-														$icon-{{ icon[0] }}-{{ weight }}
-													</h1>
-												</div>
-											</header>
+											</div>
+										</div>
+									</div>
+								{% endfor %}
+							{% else  %}
+								<div class="collection__item">
+									<div class="card card--90">
+										<div class="card__actions">
+											<div class="card__primary-action">
+												<header class="card__header">
+													<div class="card__icon">
+														{% comment %}
+															<!-- Generate icon key to get the values from the scss-icon-variables.json. Then select the right icon and strip single quotes and SCSS !default flag to get the original SVG. -->
+														{% endcomment %}
+														{% assign icon-key = 'icon-' | append: icon[0] %}
+														{{ site.data.icons.scss-icon-variables[icon-key] | replace: "'", '' | replace: ' !default', '' }}
+													</div>
+													<div class="card__heading-group">
+														<h1 class="card__title">
+															$icon-{{ icon[0] }}
+														</h1>
+													</div>
+												</header>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						{% endfor %}
-					{% else  %}
-						<div class="collection__item">
-							<div class="card card--90">
-								<div class="card__actions">
-									<div class="card__primary-action">
-										<header class="card__header">
-											<div class="card__icon">
-												{% comment %}
-													<!-- Generate icon key to get the values from the scss-icon-variables.json. Then select the right icon and strip single quotes and SCSS !default flag to get the original SVG. -->
-												{% endcomment %}
-												{% assign icon-key = 'icon-' | append: icon[0] %}
-												{{ site.data.icons.scss-icon-variables[icon-key] | replace: "'", '' | replace: ' !default', '' }}
-											</div>
-											<div class="card__heading-group">
-												<h1 class="card__title">
-													$icon-{{ icon[0] }}
-												</h1>
-											</div>
-										</header>
-									</div>
-								</div>
-							</div>
+							{% endif %}
 						</div>
-					{% endif %}
-				</div>
+					</div>
+				</section>
 			</div>
-		</div>
-	{% endfor %}
+		{% endfor %}
+	</div>
 </section>
 {% endcapture %}
 
