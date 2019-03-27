@@ -36,7 +36,7 @@ const jekyllSiteRoot = '_gh_pages';
  * Check if there are any stylelint errors in the SCSS
  * @param {Boolean} isBuild
  */
-function stylelintScss(isBuild) {
+const stylelintScss = (isBuild) => {
 	return gulp.src(stylelintGlobs)
 		.pipe(postcss(
 			[
@@ -54,22 +54,22 @@ function stylelintScss(isBuild) {
 				syntax: postcssScssParser
 			}
 		)).on('error', function (error) {
-			console.log('Error in stylelintScss(): ', error);
+			log('Error in stylelintScss(): ', error);
 			if (isBuild) {
 				process.exit(1);
 			}
 		});
-}
+};
 
 /**
  * compileScss
  * Compiles SCSS to CSS
  * @param {Boolean} isBuild
  */
-function compileScss(isBuild) {
+const compileScss = (isBuild) => {
 	const outputStyle = isBuild ? 'compressed' : 'expanded';
 	let hasCompilerError = false;
-
+	log('compileScss 4');
 	return gulp.src(scssIndex)
 		.pipe(
 			sass({
@@ -90,95 +90,88 @@ function compileScss(isBuild) {
 				process.exit(1);
 			}
 			if (!hasCompilerError) {
-				console.log('[' + getTimestamp() + '] Compiled SCSS to CSS');
+				log('Compiled SCSS to CSS');
 			}
 		});
-}
+};
 
 /**
  * buildJekyll
  * Compile Jekyll website from source
- * @param {Boolean} isWatch - To exit main process when an error occurs in Jekyll while watching
  * @param {Array} options - Flags to pass to the jekyll process
  */
-function buildJekyll(isWatch, options) {
+const buildJekyll = (options) => {
 	const arguments = ['build'].concat(options);
 	const env = Object.create( process.env );
 	env.packageVersion = packageJson.version;
 
-	const jekyll = child.spawn('jekyll', arguments, { env: env });
+	return child.spawn('jekyll', arguments, { env: env });
+};
 
-	const jekyllLogger = (buffer) => {
+/**
+ * jekyllLogging
+ * Watch jekyll process and output log
+ * @param jekyll - The jekyll process
+ */
+const jekyllLogging = (jekyll) => {
+	const logger = (buffer) => {
 		buffer.toString()
 			.split(/\n/)
 			.forEach((message) => log('Jekyll: ' + message));
 	};
 
-	jekyll.stdout.on('data', jekyllLogger);
-	jekyll.stderr.on('data', jekyllLogger);
-
-	if (isWatch) {
-		jekyll.on('close', (code) => {
-			console.log(`Jekyll process exited with code ${code}, stopping Gulp task`);
-			process.exit();
-		});
-	}
-}
-
-/**
- * getTimestamp
- * Return current time
- */
-function getTimestamp() {
-	const time = new Date();
-	const hours = time.getHours();
-	const minutes = time.getMinutes();
-	const seconds = time.getSeconds();
-
-	return hours + ':' + minutes + ':' + seconds;
-}
+	jekyll.stdout.on('data', logger);
+	jekyll.stderr.on('data', logger);
+};
 
 gulp.task('stylelintScss', function() {
 	const isBuild = false;
 	gulp.watch(scssGlobs, function() {
+		log('compileScss 3');
 		return stylelintScss(isBuild);
 	});
 });
 
-gulp.task('compileScss', ['stylelintScss'], function() {
+gulp.task('compileScss', gulp.series('stylelintScss', () => {
 	const isBuild = false;
+	log('compileScss');
 	gulp.watch(scssGlobs, function() {
+		log('compileScss 2');
 		return compileScss(isBuild);
 	});
-});
+}));
 
 gulp.task('buildStylelintScss', function() {
 	const isBuild = true;
 	return stylelintScss(isBuild);
 });
 
-gulp.task('buildScss', ['buildStylelintScss'], function() {
+gulp.task('buildScss', gulp.series('buildStylelintScss', (done) => {
 	const isBuild = true;
-	return compileScss(isBuild);
-});
+	compileScss(isBuild);
+	done();
+}));
 
 gulp.task('watchJekyll', () => {
-	const isWatch = true;
-	const options = [
-		'--watch' // Enable auto-regeneration of the site when files are modified
-	];
+	const jekyll = buildJekyll(['--watch']);
 
-	return buildJekyll(isWatch, options);
+	jekyllLogging(jekyll);
+
+	jekyll.on('close', (code) => {
+		log(`Jekyll process exited with code ${code}, stopping Gulp task`);
+		return process.exit();
+	});
 });
 
-gulp.task('buildJekyllSite', ['buildScss'], function() {
-	const isWatch = false;
-	const options = [];
+gulp.task('buildJekyllSite', gulp.series('buildScss', (done) => {
+	const jekyll = buildJekyll([]);
 
-	return buildJekyll(isWatch, options);
-});
+	jekyllLogging(jekyll);
 
-gulp.task('serveJekyll', () => {
+	done();
+}));
+
+gulp.task('serveJekyll', (done) => {
 	browserSync.init({
 		files: [jekyllSiteRoot + '/**'],
 		port: 4000,
@@ -186,8 +179,9 @@ gulp.task('serveJekyll', () => {
 			baseDir: jekyllSiteRoot
 		}
 	});
+	done();
 });
 
 // CLI Tasks
-gulp.task('start', ['compileScss', 'watchJekyll', 'serveJekyll']);
-gulp.task('build', ['buildJekyllSite']);
+gulp.task('start', gulp.parallel('compileScss', 'watchJekyll', 'serveJekyll'));
+gulp.task('build', gulp.parallel('buildJekyllSite'));
