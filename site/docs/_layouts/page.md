@@ -11,9 +11,9 @@ page__main--colored
 ## Structure
 ```
 page
-├── page__header
+├── page__header (optional)
 ├── page__main (modifier)
-├── page__footer
+├── page__footer (optional)
 ```
 
 ## Example HTML
