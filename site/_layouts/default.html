@@ -23,7 +23,7 @@
 								<div class="layout__section layout__section--bordered-bottom">
 									<div class="layout__inner layout__inner--padded-left-right-60 layout__inner--padded-top-bottom-60">
 										<div class="heading-group heading-group--light">
-											<h2  class="heading-group__subtitle">{{ collection.label | capitalize }}</h2>
+											<h2 class="heading-group__subtitle">{{ collection.label | capitalize }}</h2>
 										</div>
 									</div>
 								</div>
@@ -49,32 +49,45 @@
 			</div>
 		</div>
 		<div class="split-view__main">
-			<section class="layout">
-				<div class="layout__section">
-					<div class="layout__inner">
-						<section class="layout__section">
-							<div class="content">
-								<h1>{{ page.title }}</h1>
-								{{ content }}
+			<div class="page">
+				<main class="page__main">
+					<section class="layout">
+						<div class="layout__inner">
+							<div class="layout__section layout__section--bordered-bottom">
+								<div class="layout__inner layout__inner--padded-top-bottom-70 layout__inner--padded-left-right-0">
+									<div class="heading-group">
+										<h1 class="heading-group__headline">{{ page.title }}</h1>
+									</div>
+								</div>
 							</div>
-						</section>
-					</div>
-				</div>
-				<div class="layout__section layout__section--bordered-top">
-					<div class="layout__inner">
-						<div class="content content--200 content--centered">
-							<p>When I'm not surfing or sailing, I am to be found at the harbour working on my boat.</p>
+							<section class="layout__section">
+								<div class="content">
+
+									{{ content }}
+								</div>
+							</section>
+						</div>
+					</section>
+				</main>
+				<footer class="page__footer">
+					<div class="layout">
+						<div class="layout__section layout__section--bordered-top">
+							<div class="layout__inner">
+								<div class="content content--200 content--centered">
+									<p>When I'm not surfing or sailing, I am to be found at the harbour working on my boat.</p>
+								</div>
+							</div>
+						</div>
+						<div class="layout__section layout__section--spaced-0 layout__section--neutral">
+							<div class="layout__inner layout__inner--padded-top-bottom-60">
+								<div class="content content--centered content--90">
+									<p>Build on {{ site.time | date: "%-d %B %Y %R"}}</p>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="layout__section layout__section--spaced-0 layout__section--neutral">
-					<div class="layout__inner layout__inner--padded-top-bottom-60">
-						<div class="content content--centered content--90">
-							<p>Deployed on {{ site.time | date: "%-d %B %Y %R"}}</p>
-						</div>
-					</div>
-				</div>
-			</section>
+				</footer>
+			</div>
 		</div>
 	</body>
 	<script>
