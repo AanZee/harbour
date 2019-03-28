@@ -28,14 +28,6 @@ $menu-padding-item-horizontal-padding: $spacing * 2 !default;
 		color: $color-text-light;
 	}
 
-	.menu--90 & {
-		font-size: $font-size-90;
-	}
-
-	.menu--200 & {
-		font-size: $font-size-200;
-	}
-
 	.menu--padding & {
 		padding-right: $menu-padding-item-horizontal-padding;
 		padding-left: $menu-padding-item-horizontal-padding;
