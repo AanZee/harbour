@@ -15,6 +15,11 @@
 		bottom: 0;
 		width: $spacing * 35;
 		box-shadow: $box-shadow;
+		overflow-y: scroll;
+		overflow-x: none;
+		-webkit-overflow-scrolling: touch;
+		overscroll-behavior: contain;
+		-ms-scroll-chaining: none;
 	}
 }
 
