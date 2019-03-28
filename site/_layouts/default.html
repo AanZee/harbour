@@ -1,8 +1,62 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		{% include head.html %}
 	</head>
-	<body>
-		{{ content }}
+	<body class="split-view">
+		<div class="split-view__sidebar">
+			<header class="heading-group">
+				<h1 class="heading-group__title">
+					<a href="{{ '/' | relative_url }}">
+						Harbour
+					</a>
+				</h1>
+			</header>
+
+			<footer class="layout">
+				<div class="layout__section layout__section--spaced-0 layout__section--colored">
+					<div class="layout__inner layout__inner--padded-top-bottom-80">
+						When I'm not surfing or sailing, I am to be found at the harbour working on my boat.
+					</div>
+				</div>
+				<div class="layout__section layout__section--spaced-0 layout__section--dark">
+					<div class="layout__inner layout__inner--padded-top-bottom-70">
+						<div class="content content--90 content--light">
+							Harbour {{ site.packageVersion }} &middot; {{ site.branchName }} &middot; {{ site.time | date: "%-d %B %Y %R"}}
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<div class="split-view__main">
+			<section class="layout">
+				<div class="layout__section">
+					<div class="layout__inner">
+						<section class="content">
+							<h1>{{ page.title }}</h1>
+							{{ content }}
+						</section>
+					</div>
+				</div>
+			</section>
+		</div>
 	</body>
+	<script>
+		const codeBlockParents = document.querySelectorAll('[js-code-block-parent]');
+
+		codeBlockParents.forEach(function(codeBlockParent) {
+			const codeBlockToggle = codeBlockParent.querySelector('[js-code-block-toggle]');
+			const codeBlock = codeBlockParent.querySelector('[js-code-block]');
+
+			codeBlockToggle.addEventListener('click', function() {
+				if (codeBlock.style.display === "none") {
+					codeBlock.style.display = "block";
+					codeBlockToggle.innerHTML = "&lt;&#47;&gt; Hide code";
+				} else {
+					codeBlock.style.display = "none";
+					codeBlockToggle.innerHTML = "&lt;&#47;&gt; Show code";
+				}
+			});
+		});
+	</script>
 </html>
