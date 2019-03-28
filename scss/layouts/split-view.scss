@@ -1,0 +1,32 @@
+.split-view {
+
+	@include media($range-lap, false) {
+		padding-left: $spacing * 35;
+	}
+}
+
+.split-view__sidebar {
+	background-color: $color-background-neutral;
+
+	@include media($range-lap, false) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: $spacing * 35;
+		box-shadow: $box-shadow;
+	}
+}
+
+.split-view__sidebar-header {
+	background-color: $color-secondary;
+}
+
+.split-view__sidebar-main {
+	@include media(0, $range-hand) {
+		display: none;
+	}
+}
+
+.split-view__main {
+}
