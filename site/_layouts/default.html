@@ -13,23 +13,39 @@
 						</a>
 					</h1>
 				</div>
-				Harbour {{ site.packageVersion }} &middot; {{ site.branchName }} &middot; {{ site.time | date: "%-d %B %Y %R"}}
+				{{ site.packageVersion }} &middot; {{ site.branchName }}
 			</header>
 			<div class="split-view__sidebar-main">
-				{% for collection in site.collections %}
-					{% if collection.label != 'posts' %}
-						<h2>{{ collection.label | capitalize }}</h2>
-						<div class="menu menu--light menu--padding">
-						{% for page in collection.docs %}
-							<a class="menu__item"
-								href="{{ page.url | relative_url }}"
-							>
-								{{ page.title }}
-							</a>
+				<div class="layout">
+					<div class="layout__inner layout__inner--padded-left-right-0">
+						{% for collection in site.collections %}
+							{% if collection.label != 'posts' %}
+								<div class="layout__section layout__section--bordered-bottom">
+									<div class="layout__inner layout__inner--padded-left-right-60 layout__inner--padded-top-bottom-60">
+										<div class="heading-group heading-group--light">
+											<h2  class="heading-group__subtitle">{{ collection.label | capitalize }}</h2>
+										</div>
+									</div>
+								</div>
+								<div class="layout__section layout__section--bordered-bottom layout__section--spaced-0">
+									<div class="menu menu--light menu--padding">
+										{% for collection-item in collection.docs %}
+											{% if page.url == collection-item.url %}
+												<a class="menu__item is-current"
+											{% else %}
+												<a class="menu__item"
+											{% endif %}
+												href="{{ collection-item.url | relative_url }}"
+											>
+												{{ collection-item.title }}
+											</a>
+										{% endfor %}
+									</div>
+								</div>
+							{% endif %}
 						{% endfor %}
-						</div>
-					{% endif %}
-				{% endfor %}
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="split-view__main">
@@ -46,8 +62,15 @@
 				</div>
 				<div class="layout__section layout__section--bordered-top">
 					<div class="layout__inner">
-						<div class="content content--centered">
+						<div class="content content--200 content--centered">
 							<p>When I'm not surfing or sailing, I am to be found at the harbour working on my boat.</p>
+						</div>
+					</div>
+				</div>
+				<div class="layout__section layout__section--spaced-0 layout__section--neutral">
+					<div class="layout__inner layout__inner--padded-top-bottom-60">
+						<div class="content content--centered content--90">
+							<p>Deployed on {{ site.time | date: "%-d %B %Y %R"}}</p>
 						</div>
 					</div>
 				</div>

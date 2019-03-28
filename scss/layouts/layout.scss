@@ -251,6 +251,10 @@ $layout-spacing-variations: (
 	background-color: $layout-section-colored-background-color;
 }
 
+.layout__section--neutral {
+	background-color: $layout-section-neutral-background-color;
+}
+
 .layout__section--light {
 	background-color: $layout-section-light-background-color;
 }

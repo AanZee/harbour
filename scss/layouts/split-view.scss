@@ -20,13 +20,11 @@
 
 .split-view__sidebar-header {
 	background-color: $color-secondary;
+	padding: $spacing ($spacing * 2);
 }
 
 .split-view__sidebar-main {
 	@include media(0, $range-hand) {
 		display: none;
 	}
-}
-
-.split-view__main {
 }

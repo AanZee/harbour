@@ -20,6 +20,11 @@ $menu-padding-item-horizontal-padding: $spacing * 2 !default;
 	line-height: $line-height-20;
 	user-select: none;
 
+	&.is-current {
+		color: $color-text;
+		background-color: $color-select;
+	}
+
 	&:not(:first-child) {
 		border-top: $menu-item-border;
 	}
