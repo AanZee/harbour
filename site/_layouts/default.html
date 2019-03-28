@@ -6,45 +6,44 @@
 	<body class="split-view">
 		<div class="split-view__sidebar">
 			<header class="split-view__sidebar-header">
-				<div class="heading-group">
-					<h1 class="heading-group__title">
-						<a href="{{ '/' | relative_url }}">
-							Harbour
-						</a>
-					</h1>
+				<div class="split-view__status-bar">
+					{{ site.packageVersion }} &middot; {{ site.branchName }}
 				</div>
-				{{ site.packageVersion }} &middot; {{ site.branchName }}
+				<a
+					class="split-view__logo"
+					href="{{ '/' | relative_url }}"
+				>
+					Harbour
+				</a>
 			</header>
 			<div class="split-view__sidebar-main">
 				<div class="layout">
-					<div class="layout__inner layout__inner--padded-left-right-0">
-						{% for collection in site.collections %}
-							{% if collection.label != 'posts' %}
-								<div class="layout__section layout__section--bordered-bottom">
-									<div class="layout__inner layout__inner--padded-left-right-60 layout__inner--padded-top-bottom-60">
-										<div class="heading-group heading-group--light">
-											<h2 class="heading-group__subtitle">{{ collection.label | capitalize }}</h2>
-										</div>
+					{% for collection in site.collections %}
+						{% if collection.label != 'posts' %}
+							<div class="layout__section layout__section--bordered-bottom">
+								<div class="layout__inner layout__inner--padded-left-right-70 layout__inner--padded-top-bottom-60">
+									<div class="heading-group heading-group--light">
+										<h2 class="heading-group__subtitle">{{ collection.label | capitalize }}</h2>
 									</div>
 								</div>
-								<div class="layout__section layout__section--bordered-bottom layout__section--spaced-0">
-									<div class="menu menu--light menu--padding">
-										{% for collection-item in collection.docs %}
-											{% if page.url == collection-item.url %}
-												<a class="menu__item is-current"
-											{% else %}
-												<a class="menu__item"
-											{% endif %}
-												href="{{ collection-item.url | relative_url }}"
-											>
-												{{ collection-item.title }}
-											</a>
-										{% endfor %}
-									</div>
+							</div>
+							<div class="layout__section layout__section--bordered-bottom layout__section--spaced-0">
+								<div class="menu menu--light menu--padding">
+									{% for collection-item in collection.docs %}
+										{% if page.url == collection-item.url %}
+											<a class="menu__item is-current"
+										{% else %}
+											<a class="menu__item"
+										{% endif %}
+											href="{{ collection-item.url | relative_url }}"
+										>
+											{{ collection-item.title }}
+										</a>
+									{% endfor %}
 								</div>
-							{% endif %}
-						{% endfor %}
-					</div>
+							</div>
+						{% endif %}
+					{% endfor %}
 				</div>
 			</div>
 		</div>
