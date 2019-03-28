@@ -1,5 +1,5 @@
 const autoprefixer = require('autoprefixer');
-const browserSync = require('browser-sync').create();
+const browsersync = require('browser-sync').create();
 const child = require('child_process');
 const gulp = require('gulp');
 const log = require('fancy-log');
@@ -9,11 +9,10 @@ const postcssScssParser = require('postcss-scss');
 const sass = require('gulp-sass');
 const stylelint = require('stylelint');
 const tildeImporter = require('node-sass-tilde-importer');
+
 const packageJson = require('./package.json');
-
 const harbourStylelintJson = '.stylelintrc.json';
-
-// First we define all scss files to watch. Not all watched files need linting, so we define a second glob
+const scssIndex = 'scss/index.scss';
 const scssGlobs = 'scss/**/*.scss';
 const stylelintGlobs = [
 	'scss/components/*.scss',
@@ -24,52 +23,61 @@ const stylelintGlobs = [
 	'scss/vendor-overrides/*.scss',
 	'!scss/**/index.scss'
 ];
-const scssIndex = 'scss/index.scss';
-
-// Compiled css is placed in Jekyll source folder.
+const siteGlobs = [
+	"./site/**/*",
+];
 const cssFolder = 'site/css/';
-// Destination for build Jekyll site.
 const jekyllSiteRoot = '_gh_pages';
 
-/**
- * stylelintScss
- * Check if there are any stylelint errors in the SCSS
- * @param {Boolean} isBuild
- */
-const stylelintScss = (isBuild) => {
+let isBuild = false; // Used to keep process running when encountering errors while developing
+
+function setBuild(done) {
+	isBuild = true;
+	done();
+}
+
+function browserSync(done) {
+	browsersync.init({
+		server: {
+			baseDir: jekyllSiteRoot,
+		},
+		port: 4000
+	});
+	done();
+}
+
+function browserSyncReload(done) {
+	console.log('browserSyncReload');
+	browsersync.reload();
+	done();
+}
+
+function lintScss() {
 	return gulp.src(stylelintGlobs)
 		.pipe(postcss(
 			[
 				stylelint({
 					configFile: harbourStylelintJson
 				}),
-				postcssReporter(
-					{
-						clearAllMessages: true,
-						throwError: isBuild
-					}
-				)
+				postcssReporter({
+					clearAllMessages: true, // NOTE: prevent double error message
+					throwError: isBuild,
+				})
 			],
 			{
 				syntax: postcssScssParser
 			}
-		)).on('error', function (error) {
-			log('Error in stylelintScss(): ', error);
-			if (isBuild) {
-				process.exit(1);
-			}
+		))
+		.on('error', function () {
+			log('SCSS linting error while running build');
+			process.exit(1);
 		});
-};
+}
 
-/**
- * compileScss
- * Compiles SCSS to CSS
- * @param {Boolean} isBuild
- */
-const compileScss = (isBuild) => {
+// Build Scss
+function buildScss() {
 	const outputStyle = isBuild ? 'compressed' : 'expanded';
 	let hasCompilerError = false;
-	log('compileScss 4');
 	return gulp.src(scssIndex)
 		.pipe(
 			sass({
@@ -85,6 +93,7 @@ const compileScss = (isBuild) => {
 			autoprefixer()
 		]))
 		.pipe(gulp.dest(cssFolder))
+		.pipe(browsersync.stream())
 		.on('finish', function() {
 			if (hasCompilerError && isBuild) {
 				process.exit(1);
@@ -93,95 +102,24 @@ const compileScss = (isBuild) => {
 				log('Compiled SCSS to CSS');
 			}
 		});
-};
+}
 
-/**
- * buildJekyll
- * Compile Jekyll website from source
- * @param {Array} options - Flags to pass to the jekyll process
- */
-const buildJekyll = (options) => {
-	const arguments = ['build'].concat(options);
+function jekyll() {
 	const env = Object.create( process.env );
 	env.packageVersion = packageJson.version;
 
-	return child.spawn('jekyll', arguments, { env: env });
-};
+	return child.spawn("bundle", ["exec", "jekyll", "build"], { stdio: 'inherit', env });
+}
 
-/**
- * jekyllLogging
- * Watch jekyll process and output log
- * @param jekyll - The jekyll process
- */
-const jekyllLogging = (jekyll) => {
-	const logger = (buffer) => {
-		buffer.toString()
-			.split(/\n/)
-			.forEach((message) => log('Jekyll: ' + message));
-	};
+function watchFiles() {
+	// Watch files that need linting and trigger linting process
+	gulp.watch(stylelintGlobs, lintScss);
+	// Watch all scss files (including ones that don't need linting) and trigger compilation
+	gulp.watch(scssGlobs, buildScss);
+	// Watch site source folder and trigger jekyll
+	gulp.watch(siteGlobs, gulp.series(jekyll, browserSyncReload));
+}
 
-	jekyll.stdout.on('data', logger);
-	jekyll.stderr.on('data', logger);
-};
-
-gulp.task('stylelintScss', function() {
-	const isBuild = false;
-	gulp.watch(scssGlobs, function() {
-		log('compileScss 3');
-		return stylelintScss(isBuild);
-	});
-});
-
-gulp.task('compileScss', gulp.series('stylelintScss', () => {
-	const isBuild = false;
-	log('compileScss');
-	gulp.watch(scssGlobs, function() {
-		log('compileScss 2');
-		return compileScss(isBuild);
-	});
-}));
-
-gulp.task('buildStylelintScss', function() {
-	const isBuild = true;
-	return stylelintScss(isBuild);
-});
-
-gulp.task('buildScss', gulp.series('buildStylelintScss', (done) => {
-	const isBuild = true;
-	compileScss(isBuild);
-	done();
-}));
-
-gulp.task('watchJekyll', () => {
-	const jekyll = buildJekyll(['--watch']);
-
-	jekyllLogging(jekyll);
-
-	jekyll.on('close', (code) => {
-		log(`Jekyll process exited with code ${code}, stopping Gulp task`);
-		return process.exit();
-	});
-});
-
-gulp.task('buildJekyllSite', gulp.series('buildScss', (done) => {
-	const jekyll = buildJekyll([]);
-
-	jekyllLogging(jekyll);
-
-	done();
-}));
-
-gulp.task('serveJekyll', (done) => {
-	browserSync.init({
-		files: [jekyllSiteRoot + '/**'],
-		port: 4000,
-		server: {
-			baseDir: jekyllSiteRoot
-		}
-	});
-	done();
-});
-
-// CLI Tasks
-gulp.task('start', gulp.parallel('compileScss', 'watchJekyll', 'serveJekyll'));
-gulp.task('build', gulp.parallel('buildJekyllSite'));
+// Exported tasks
+exports.build = gulp.series(setBuild, lintScss, gulp.parallel(buildScss, jekyll));
+exports.start = gulp.parallel(watchFiles, browserSync);
