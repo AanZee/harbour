@@ -4,11 +4,18 @@
 		{% include head.html %}
 	</head>
 	<body class="split-view">
+		<input class="split-view__navigation-status"
+			type="checkbox"
+			id="show-navigation"
+		>
 		<div class="split-view__sidebar">
 			<header class="split-view__sidebar-header">
 				<div class="split-view__status-bar">
 					{{ site.packageVersion }} &middot; {{ site.branchName }}
 				</div>
+				<label for="show-navigation">
+					Show overview
+				</label>
 				<a
 					class="split-view__logo"
 					href="{{ '/' | relative_url }}"

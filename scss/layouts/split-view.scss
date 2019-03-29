@@ -1,8 +1,17 @@
 .split-view {
+	position: relative;
 
 	@include media($range-desk, false) {
 		padding-left: $spacing * 35;
 	}
+}
+
+.split-view__navigation-status {
+	position: absolute;
+	top: 0; // FIX: Fixes some render bugs.
+	left: 0; // FIX: Fixes some render bugs.
+	z-index: -100; // NOTE: Put the input behind the label so it doesn't overlay text.
+	opacity: 0; // NOTE: we use this instead of display:none to allow focusing.
 }
 
 .split-view__sidebar {
@@ -44,8 +53,20 @@
 	@include media(0, $range-lap) {
 		display: none;
 	}
+
+	.split-view__navigation-status:checked ~ .split-view__sidebar & {
+		@include media(0, $range-lap) {
+			display: block;
+		}
+	}
 }
 
 .split-view__main {
 	height: 100%;
+
+	.split-view__navigation-status:checked ~ & {
+		@include media(0, $range-lap) {
+			display: none;
+		}
+	}
 }
