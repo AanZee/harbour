@@ -1,6 +1,6 @@
 .split-view {
 
-	@include media($range-lap, false) {
+	@include media($range-desk, false) {
 		padding-left: $spacing * 35;
 	}
 }
@@ -8,7 +8,7 @@
 .split-view__sidebar {
 	background-color: $color-background-neutral;
 
-	@include media($range-lap, false) {
+	@include media($range-desk, false) {
 		position: fixed;
 		top: 0;
 		bottom: 0;
@@ -41,7 +41,7 @@
 }
 
 .split-view__sidebar-main {
-	@include media(0, $range-hand) {
+	@include media(0, $range-lap) {
 		display: none;
 	}
 }
