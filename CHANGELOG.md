@@ -1,3 +1,17 @@
+# 1.25.0
+
+## Features
+* Add centralized icon json
+* Add autofix to stylelint when running `npm run start`
+
+## Improvements
+* Add a set of icons
+* Update to gulp 4
+* Add missing css properties to stylelint order/properties array
+
+## Breaking changes
+* Add JSON SCSS importer
+
 # 1.24.1
 
 ## Bugfix
