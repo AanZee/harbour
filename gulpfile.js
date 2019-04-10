@@ -24,8 +24,8 @@ const stylelintGlobs = [
 const siteGlobs = [
 	"./site/**/*",
 ];
-const cssFolder = 'site/css/';
 const jekyllSiteRoot = '_gh_pages';
+const cssFolder = '_gh_pages/css/';
 
 let isBuild = false; // Used to keep process running when encountering errors while developing
 
@@ -99,6 +99,7 @@ function buildScss() {
 			autoprefixer()
 		]))
 		.pipe(gulp.dest(cssFolder))
+		.pipe(browsersync.stream())
 		.on('finish', function() {
 			if (hasCompilerError && isBuild) {
 				process.exit(1);

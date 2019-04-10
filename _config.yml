@@ -5,6 +5,7 @@ highlighter: rouge
 # Settings
 source: "site"
 destination: ./_gh_pages
+keep_files: [css/index.css]
 collections_dir: docs
 collections:
   components:
