@@ -1,3 +1,8 @@
+# 1.24.1
+
+## Bugfix
+* Fix typo in layout inner padding properties
+
 # 1.24.0
 
 ## Feature
