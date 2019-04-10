@@ -4,8 +4,6 @@ const child = require('child_process');
 const gulp = require('gulp');
 const log = require('fancy-log');
 const postcss = require('gulp-postcss');
-const postcssReporter = require('postcss-reporter');
-const postcssScssParser = require('postcss-scss');
 const sass = require('gulp-sass');
 const stylelint = require('stylelint');
 const tildeImporter = require('node-sass-tilde-importer');
@@ -47,30 +45,38 @@ function browserSync(done) {
 }
 
 function browserSyncReload(done) {
-	console.log('browserSyncReload');
 	browsersync.reload();
 	done();
 }
 
 function lintScss() {
-	return gulp.src(stylelintGlobs)
-		.pipe(postcss(
-			[
-				stylelint({
-					configFile: harbourStylelintJson
-				}),
-				postcssReporter({
-					clearAllMessages: true, // NOTE: prevent double error message
-					throwError: isBuild,
-				})
-			],
-			{
-				syntax: postcssScssParser
+	return stylelint
+		.lint({
+			files: stylelintGlobs,
+			configFile: harbourStylelintJson,
+			fix: !isBuild
+		})
+		.then(function(report) {
+			if (report.errored) {
+				const erroredResults = report.results.filter(result => result.errored);
+
+				erroredResults.map((erroredResult) => {
+					log(`⚠️  Errors found in ${erroredResult.source}`);
+					erroredResult.warnings.map((warning) => {
+						log(`❌  Error on line ${warning.line}:${warning.column} -> ${warning.rule}`);
+					});
+				});
+
+				// Provide exit code for pipeline/CLI integration, when in build mode
+				if (isBuild) {
+					process.exit(1);
+				}
 			}
-		))
-		.on('error', function () {
-			log('SCSS linting error while running build');
-			process.exit(1);
+
+			if (!report.errored) {
+				let suffix = isBuild ? 'stylint build task succesful' : 'or we\'ve automatically fixed them';
+				log(`🔥 💯 🔥  No style errors found ${suffix}`);
+			}
 		});
 }
 
@@ -93,13 +99,12 @@ function buildScss() {
 			autoprefixer()
 		]))
 		.pipe(gulp.dest(cssFolder))
-		.pipe(browsersync.stream())
 		.on('finish', function() {
 			if (hasCompilerError && isBuild) {
 				process.exit(1);
 			}
 			if (!hasCompilerError) {
-				log('Compiled SCSS to CSS');
+				log('🎨  Compiled SCSS to CSS');
 			}
 		});
 }
