@@ -2,6 +2,7 @@ const autoprefixer = require('autoprefixer');
 const browsersync = require('browser-sync').create();
 const child = require('child_process');
 const gulp = require('gulp');
+const jsonImporter = require('node-sass-json-importer');
 const log = require('fancy-log');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
@@ -88,7 +89,7 @@ function buildScss() {
 		.pipe(
 			sass({
 				outputStyle: outputStyle,
-				importer: tildeImporter
+				importer: [tildeImporter, jsonImporter()]
 			})
 			.on('error', function(error) {
 				hasCompilerError = true;

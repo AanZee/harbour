@@ -871,6 +871,7 @@ label.card__primary-action {
 	border-top: $card-sections-border;
 	border-bottom-right-radius: $card-border-radius;
 	border-bottom-left-radius: $card-border-radius;
+	background-color: $color-background-neutral;
 
 	.card--horizontal & {
 		@include media($range-lap, false) {
