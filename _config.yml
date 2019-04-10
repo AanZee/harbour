@@ -13,3 +13,5 @@ collections:
     output: true
   layouts:
     output: true
+  variables:
+    output: true

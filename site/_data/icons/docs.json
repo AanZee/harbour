@@ -1,0 +1,172 @@
+{
+	"arrow-down": {
+		"description": "Used to indicate direction (down) of a follow up action in UI elements.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"arrow-left": {
+		"description": "Used to indicate direction (left) of a follow up action in UI elements.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"arrow-right": {
+		"description": "Used to indicate direction (right) of a follow up action in UI elements.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"arrow-up": {
+		"description": "Used to indicate direction (up) of a follow up action in UI elements.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"check": {
+		"description": "Used to indicate positive feedback.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"chevron-down": {
+		"description": "Used to indicate direction (down) of a follow up action in UI elements.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"chevron-left": {
+		"description": "Used to indicate direction (left) of a follow up action in UI elements.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"chevron-right": {
+		"description": "Used to indicate direction (right) of a follow up action in UI elements.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"chevron-up": {
+		"description": "Used to indicate direction (up) of a follow up action in UI elements.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"cross": {
+		"description": "Used to indicate a dismiss action.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"cross-circle-solid": {
+		"description": "Used to indicate a dismiss action.",
+		"weights": []
+	},
+	"exclamation": {
+		"description": "Used to indicate a warning.",
+		"weights": [
+			"regular",
+			"bold",
+			"light"
+		]
+	},
+	"exclamation-circle-solid": {
+		"description": "Used to indicate a warning.",
+		"weights": []
+	},
+	"exclamation-triangle-solid": {
+		"description": "Used to indicate a warning.",
+		"weights": []
+	},
+	"information": {
+		"description": "Used to indicate information.",
+		"weights": [
+			"regular",
+			"bold",
+			"light"
+		]
+	},
+	"minus": {
+		"description": "Used to indicate removal.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"minus-circle-solid": {
+		"description": "Used to indicate removal.",
+		"weights": []
+	},
+	"placeholder": {
+		"description": "Placeholder for when an icon is missing.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"plus": {
+		"description": "Used to indicate adding.",
+		"weights": [
+			"regular",
+			"bold",
+			"light",
+			"thin",
+			"hair"
+		]
+	},
+	"plus-circle-solid": {
+		"description": "Used to indicate adding.",
+		"weights": []
+	},
+	"spinner": {
+		"description": "Used for a loading animation.",
+		"weights": []
+	}
+}
