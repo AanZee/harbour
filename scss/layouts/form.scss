@@ -224,9 +224,9 @@ $form-control-max-width: $spacing * 60;
 		@include media($range-lap, false) {
 			display: flex; // NOTE: To be able to align content.
 			flex-direction: column;
+			justify-content: center; // NOTE: To vertical align content with input. Works in combination with flex-direction column.
 			min-height: $control-size-100;
 			font-size: $font-size-200;
-			justify-content: center; // NOTE: To vertical align content with input. Works in combination with flex-direction column.
 		}
 	}
 
@@ -393,8 +393,8 @@ $form-control-max-width: $spacing * 60;
 
 .form__action {
 	display: flex;
-	margin: $spacing;
 	align-items: center;
+	margin: $spacing;
 
 	.form--right-aligned-labels &,
 	.form--left-aligned-labels & {
