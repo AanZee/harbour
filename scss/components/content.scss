@@ -385,8 +385,7 @@ table {
 			margin-top: $line-height-60 * $font-size-100;
 			margin-bottom: $line-height-60 * $font-size-100;
 			/* stylelint-disable */
-			background:
-				/* Shadow covers */
+			background: /* Shadow covers */
 				linear-gradient(to right, $color-background-light 30%, rgba(255, 255, 255, 0)),
 				linear-gradient(to right, rgba(255, 255, 255, 0), $color-background-light 70%),
 				/* Shadows */
