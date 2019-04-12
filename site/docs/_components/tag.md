@@ -33,14 +33,17 @@ tag (modifiers)
 
 ### Sizes
 {% capture tag-sizes %}
-<span class="tag">
-	Tag
+<span class="tag tag--80">
+	Tag 80
 </span>
 <span class="tag tag--90">
 	Tag 90
 </span>
-<span class="tag tag--80">
-	Tag 80
+<span class="tag">
+	Tag
+</span>
+<span class="tag tag--200">
+	Tag
 </span>
 {% endcapture %}
 {% include example.html

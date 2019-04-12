@@ -25,6 +25,7 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 }
 
 .input-stepper__input {
+	order: 2;
 	padding-top: (($control-size-100 - ($line-height-20 * $font-size-200)) / 2);
 	padding-right: $spacing;
 	padding-bottom: (($control-size-100 - ($line-height-20 * $font-size-200)) / 2);
@@ -37,7 +38,6 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	text-align: center;
 	font-size: $font-size-200;
 	line-height: $line-height-20;
-	order: 2;
 	appearance: none;
 
 	.input-stepper.is-skeleton & {
@@ -109,12 +109,12 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 
 .input-stepper__control--decrease {
 	@include border-left-radius($border-radius-200);
-	background-image: url(get-svg-uri($icon-minus, $color-text));
 	order: 1;
+	background-image: url(get-svg-uri($icon-minus, $color-text));
 
 	.input-stepper--vertical & {
-		border-radius: 0 0 $border-radius-100 $border-radius-100;
 		order: 3;
+		border-radius: 0 0 $border-radius-100 $border-radius-100;
 	}
 
 	.input-stepper--secondary & {
@@ -124,12 +124,12 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 
 .input-stepper__control--increase {
 	@include border-right-radius($border-radius-200);
-	background-image: url(get-svg-uri($icon-plus, $color-text));
 	order: 3;
+	background-image: url(get-svg-uri($icon-plus, $color-text));
 
 	.input-stepper--vertical & {
-		border-radius: $border-radius-100 $border-radius-100 0 0;
 		order: 1;
+		border-radius: $border-radius-100 $border-radius-100 0 0;
 	}
 
 	.input-stepper--secondary & {

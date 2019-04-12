@@ -95,9 +95,9 @@ $card-horizontal-media-width-200: 50% !default;
 
 .card--horizontal {
 	flex-direction: row;
-	max-width: none;
-	align-items: stretch;
 	flex-wrap: wrap;
+	align-items: stretch;
+	max-width: none;
 }
 
 .card--stretched {
@@ -131,21 +131,21 @@ $card-horizontal-media-width-200: 50% !default;
 	flex-direction: column;
 
 	.card--horizontal & {
-		flex-direction: row;
 		flex-basis: 100%;
+		flex-direction: row;
 	}
 }
 
 .card__primary-action {
 	position: relative;
 	display: flex;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-wrap: wrap;
+	align-items: center;
 	min-width: 0;
 	border-radius: $card-border-radius;
 	cursor: default;
-	flex-wrap: wrap;
-	flex-grow: 1;
-	flex-shrink: 1;
-	align-items: center;
 
 	.card--horizontal & {
 		flex-wrap: nowrap;
@@ -188,15 +188,15 @@ label.card__primary-action {
 
 .card__media {
 	position: relative;
+	align-self: flex-start;
 	overflow: hidden;
 	width: 100%;
 	border-top-left-radius: $card-border-radius;
 	border-top-right-radius: $card-border-radius;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
-	user-select: none;
-	align-self: flex-start;
 	background-color: $card-is-skeleton-fill;
+	user-select: none;
 
 	&::before {
 		z-index: $card-z-index - 1;
@@ -242,10 +242,10 @@ label.card__primary-action {
 	}
 
 	.card--horizontal & {
+		flex-shrink: 0; // NOTE: Needed to maintain width of media when cards in the same view have different length of content
 		min-width: $spacing * 8;
 		width: $card-horizontal-media-width-100;
 		border-radius: $card-border-radius - 1px;
-		flex-shrink: 0; // NOTE: Needed to maintain width of media when cards in the same view have different length of content
 
 		@include media(0, $range-palm) {
 			margin-top: $card-padding-top-bottom-90;
@@ -306,9 +306,9 @@ label.card__primary-action {
 
 .card__header {
 	display: flex;
-	min-width: 0;
 	flex-grow: 1;
 	flex-shrink: 1;
+	min-width: 0;
 
 	@include media(0, $range-hand) {
 		margin-top: $card-padding-top-bottom-90;
@@ -482,10 +482,10 @@ label.card__primary-action {
 }
 
 .card__icon {
-	margin-right: $spacing * 1.5;
-	flex-shrink: 0;
 	flex-grow: 0;
+	flex-shrink: 0;
 	align-self: flex-start;
+	margin-right: $spacing * 1.5;
 
 	@include media(0, $range-hand) {
 		margin-top: (($card-header-90-height - $card-icon-90-size) / 2);
@@ -725,9 +725,9 @@ label.card__primary-action {
 			height: $card-header-100-height;
 		}
 		@include media($range-lap, false) {
+			align-self: center;
 			margin-left: $card-padding-left-right-200;
 			height: $card-header-200-height;
-			align-self: center;
 		}
 	}
 
@@ -751,12 +751,12 @@ label.card__primary-action {
 }
 
 .card__excerpt {
+	flex-basis: 100%;
 	margin-top: $card-heading-group-100-spacing;
 	max-width: $text-width-300;
 	color: $color-text;
 	word-break: break-word;
 	font-weight: normal;
-	flex-basis: 100%;
 
 	@include media(0, $range-hand) {
 		font-size: $card-excerpt-90-font-size;
@@ -793,9 +793,9 @@ label.card__primary-action {
 
 .card__supplemental-actions {
 	display: flex;
-	border-top: $card-sections-border;
-	flex-shrink: 0;
 	flex-basis: 100%;
+	flex-shrink: 0;
+	border-top: $card-sections-border;
 
 	@include media(0, $range-hand) {
 		padding-top: $card-padding-top-bottom-90;
@@ -816,13 +816,13 @@ label.card__primary-action {
 			display: none;
 		}
 		@include media($range-lap, false) {
+			flex-basis: auto;
 			padding-top: $card-padding-top-bottom-200;
 			padding-right: $card-padding-left-right-200;
 			padding-bottom: $card-padding-top-bottom-200;
 			padding-left: $card-padding-left-right-200;
 			border-top: none;
 			border-left: $card-sections-border;
-			flex-basis: auto;
 		}
 	}
 
@@ -852,8 +852,8 @@ label.card__primary-action {
 
 	.card--horizontal & {
 		@include media($range-lap, false) {
-			height: $card-header-200-height;
 			align-self: center;
+			height: $card-header-200-height;
 		}
 	}
 
@@ -863,6 +863,7 @@ label.card__primary-action {
 }
 
 .card__details {
+	flex-basis: 100%;
 	padding-top: $card-padding-top-bottom-100;
 	padding-right: $card-padding-left-right-100;
 	padding-bottom: $card-padding-top-bottom-100;
@@ -870,7 +871,7 @@ label.card__primary-action {
 	border-top: $card-sections-border;
 	border-bottom-right-radius: $card-border-radius;
 	border-bottom-left-radius: $card-border-radius;
-	flex-basis: 100%;
+	background-color: $color-background-neutral;
 
 	.card--horizontal & {
 		@include media($range-lap, false) {

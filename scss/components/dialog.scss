@@ -23,11 +23,11 @@ $dialog-error-icon-fill: $color-error-600 !default;
 
 .dialog {
 	display: flex;
+	align-items: center;
 	border: $dialog-border-width solid $dialog-border-color;
 	border-radius: $dialog-border-radius;
 	background-color: $dialog-background-color;
 	color: $dialog-color;
-	align-items: center;
 
 	@include media(0, $range-hand) {
 		padding: $spacing * 1.5;
@@ -56,8 +56,8 @@ $dialog-error-icon-fill: $color-error-600 !default;
 }
 
 .dialog__icon {
-	margin-right: $spacing * 2;
 	flex-shrink: 0;
+	margin-right: $spacing * 2;
 	fill: $dialog-icon-fill;
 
 	@include media(0, $range-hand) {

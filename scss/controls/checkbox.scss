@@ -6,7 +6,6 @@ $checkbox-border-radius: $checkbox-border-width !default;
 $checkbox-input-label-spacing: $spacing !default;
 
 .checkbox {
-	user-select: none;
 	position: relative;
 	display: block;
 	margin: 0;
@@ -19,6 +18,7 @@ $checkbox-input-label-spacing: $spacing !default;
 	font-size: $font-size-200;
 	line-height: $line-height-60;
 	cursor: default;
+	user-select: none;
 }
 
 label.checkbox {
