@@ -26,7 +26,7 @@ $menu-padding-item-horizontal-padding: $spacing * 2 !default;
 
 	&.is-current {
 		background-color: $color-select;
-		color: $color-text;
+		color: $color-text-light;
 	}
 
 	.menu--light & {
