@@ -31,25 +31,58 @@
 	}
 }
 
-.split-view__logo {
-	@include font-smoothing;
-	display: block;
-	margin: $spacing * 2;
-	color: $color-text-light;
-	font-size: $font-size-500;
-	font-weight: $font-weight-200;
-}
-
 .split-view__status-bar {
 	@include ellipsis($display: block);
 	padding: (($spacing / 8) $spacing);
-	background-color: $color-background-dark;
+	background-color: $color-background-colored;
 	color: $color-text-light;
 	text-align: center;
 	font-size: $font-size-60;
 }
 
+.split-view__sidebar-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.split-view__logo {
+	display: block;
+	margin: $spacing * 2;
+	color: $color-text;
+	font-size: $font-size-400;
+	font-weight: $font-weight-200;
+}
+
+.split-view__toggle {
+
+	@include media(0, $range-lap) {
+		margin: $spacing * 2;
+	}
+
+	@include media($range-desk, false) {
+		display: none;
+	}
+}
+
+.split-view__show-action {
+
+	.split-view__navigation-status:checked ~ .split-view__sidebar & {
+		display: none;
+	}
+}
+
+.split-view__hide-action {
+	display: none;
+
+	.split-view__navigation-status:checked ~ .split-view__sidebar & {
+		display: inline;
+	}
+}
+
 .split-view__sidebar-main {
+	border-top: $border-ui-100;
+
 	@include media(0, $range-lap) {
 		display: none;
 	}

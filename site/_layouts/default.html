@@ -9,19 +9,30 @@
 			id="show-navigation"
 		>
 		<div class="split-view__sidebar">
+			<div class="split-view__status-bar">
+				{{ site.packageVersion }} &middot; {{ site.branchName }}
+			</div>
 			<header class="split-view__sidebar-header">
-				<div class="split-view__status-bar">
-					{{ site.packageVersion }} &middot; {{ site.branchName }}
-				</div>
-				<label for="show-navigation">
-					Show overview
-				</label>
 				<a
 					class="split-view__logo"
 					href="{{ '/' | relative_url }}"
 				>
 					Harbour
 				</a>
+				<label class="split-view__toggle"
+					for="show-navigation"
+				>
+					<div class="split-view__show-action">
+						<div class="button button--80">
+							Show overview
+						</div>
+					</div>
+					<div class="split-view__hide-action">
+						<div class="button button--80">
+							Hide overview
+						</div>
+					</div>
+				</label>
 			</header>
 			<div class="split-view__sidebar-main">
 				<div class="layout">
@@ -29,13 +40,13 @@
 						{% if collection.label != 'posts' %}
 							<div class="layout__section layout__section--bordered-bottom">
 								<div class="layout__inner layout__inner--padded-left-right-70 layout__inner--padded-top-bottom-60">
-									<div class="heading-group heading-group--light">
-										<h2 class="heading-group__subtitle">{{ collection.label | capitalize }}</h2>
+									<div class="heading-group">
+										<h2 class="heading-group__running-head">{{ collection.label | capitalize }}</h2>
 									</div>
 								</div>
 							</div>
 							<div class="layout__section layout__section--bordered-bottom layout__section--spaced-0">
-								<div class="menu menu--light menu--padding">
+								<div class="menu menu--padding">
 									{% for collection-item in collection.docs %}
 										{% if page.url == collection-item.url %}
 											<a class="menu__item is-current"
