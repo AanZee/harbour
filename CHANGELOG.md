@@ -1,3 +1,13 @@
+# 1.25.2
+
+## Bugfix
+* Update outdated SCSS `@elseif` notation to `@else if` in media.scss
+
+# 1.25.1
+
+## Bugfix
+* Move `node-sass-tilde-importer` to dependencies in `package.json`
+
 # 1.25.0
 
 ## Features
