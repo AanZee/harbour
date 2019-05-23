@@ -1,4 +1,4 @@
-.split-view {
+.menu-view {
 	position: relative;
 
 	@include media($range-desk, false) {
@@ -6,7 +6,7 @@
 	}
 }
 
-.split-view__navigation-status {
+.menu-view__navigation-status {
 	position: absolute;
 	top: 0; // FIX: Fixes some render bugs.
 	left: 0; // FIX: Fixes some render bugs.
@@ -14,7 +14,7 @@
 	opacity: 0; // NOTE: we use this instead of display:none to allow focusing.
 }
 
-.split-view__sidebar {
+.menu-view__sidebar {
 	background-color: $color-background-neutral;
 
 	@include media($range-desk, false) {
@@ -31,7 +31,7 @@
 	}
 }
 
-.split-view__status-bar {
+.menu-view__status-bar {
 	@include ellipsis($display: block);
 	padding: (($spacing / 8) $spacing);
 	background-color: $color-background-colored;
@@ -40,13 +40,13 @@
 	font-size: $font-size-60;
 }
 
-.split-view__sidebar-header {
+.menu-view__sidebar-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.split-view__logo {
+.menu-view__logo {
 	display: block;
 	margin: $spacing * 2;
 	color: $color-text;
@@ -54,7 +54,7 @@
 	font-weight: $font-weight-200;
 }
 
-.split-view__toggle {
+.menu-view__toggle {
 
 	@include media(0, $range-lap) {
 		margin: $spacing * 2;
@@ -65,39 +65,39 @@
 	}
 }
 
-.split-view__show-action {
+.menu-view__show-action {
 
-	.split-view__navigation-status:checked ~ .split-view__sidebar & {
+	.menu-view__navigation-status:checked ~ .menu-view__sidebar & {
 		display: none;
 	}
 }
 
-.split-view__hide-action {
+.menu-view__hide-action {
 	display: none;
 
-	.split-view__navigation-status:checked ~ .split-view__sidebar & {
+	.menu-view__navigation-status:checked ~ .menu-view__sidebar & {
 		display: inline;
 	}
 }
 
-.split-view__sidebar-main {
+.menu-view__sidebar-main {
 	border-top: $border-ui-100;
 
 	@include media(0, $range-lap) {
 		display: none;
 	}
 
-	.split-view__navigation-status:checked ~ .split-view__sidebar & {
+	.menu-view__navigation-status:checked ~ .menu-view__sidebar & {
 		@include media(0, $range-lap) {
 			display: block;
 		}
 	}
 }
 
-.split-view__main {
+.menu-view__main {
 	height: 100%;
 
-	.split-view__navigation-status:checked ~ & {
+	.menu-view__navigation-status:checked ~ & {
 		@include media(0, $range-lap) {
 			display: none;
 		}
