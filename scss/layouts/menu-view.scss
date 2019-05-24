@@ -11,7 +11,7 @@
 	}
 }
 
-.menu-view__navigation-status {
+.menu-view__menu-status {
 	position: absolute;
 	top: 0; // FIX: Fixes some render bugs.
 	left: 0; // FIX: Fixes some render bugs.
@@ -73,7 +73,7 @@
 
 .menu-view__show-action {
 
-	.menu-view__navigation-status:checked ~ .menu-view__sidebar & {
+	.menu-view__menu-status:checked ~ .menu-view__sidebar & {
 		display: none;
 	}
 }
@@ -81,19 +81,19 @@
 .menu-view__hide-action {
 	display: none;
 
-	.menu-view__navigation-status:checked ~ .menu-view__sidebar & {
+	.menu-view__menu-status:checked ~ .menu-view__sidebar & {
 		display: inline;
 	}
 }
 
-.menu-view__sidebar-main {
+.menu-view__menu {
 	border-top: $border-ui-100;
 
 	@include media(0, $range-lap) {
 		display: none;
 	}
 
-	.menu-view__navigation-status:checked ~ .menu-view__sidebar & {
+	.menu-view__menu-status:checked ~ .menu-view__sidebar & {
 		@include media(0, $range-lap) {
 			display: block;
 		}
@@ -103,7 +103,7 @@
 .menu-view__main {
 	flex-grow: 1;
 
-	.menu-view__navigation-status:checked ~ & {
+	.menu-view__menu-status:checked ~ & {
 		@include media(0, $range-lap) {
 			display: none;
 		}

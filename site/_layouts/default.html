@@ -4,9 +4,9 @@
 		{% include head.html %}
 	</head>
 	<body class="menu-view">
-		<input class="menu-view__navigation-status"
+		<input class="menu-view__menu-status"
 			type="checkbox"
-			id="show-navigation"
+			id="show-menu"
 		>
 		<div class="menu-view__sidebar">
 			<div class="menu-view__status-bar">
@@ -20,21 +20,21 @@
 					Harbour
 				</a>
 				<label class="menu-view__toggle"
-					for="show-navigation"
+					for="show-menu"
 				>
 					<div class="menu-view__show-action">
 						<div class="button button--80">
-							Show overview
+							Show menu
 						</div>
 					</div>
 					<div class="menu-view__hide-action">
 						<div class="button button--80">
-							Hide overview
+							Hide menu
 						</div>
 					</div>
 				</label>
 			</header>
-			<div class="menu-view__sidebar-main">
+			<div class="menu-view__menu">
 				<div class="layout">
 					{% for collection in site.collections %}
 						{% if collection.label != 'posts' %}
