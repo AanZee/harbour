@@ -54,7 +54,17 @@ $content-table-cell-padding-lap-and-larger: $spacing * 1.5;
 	color: $color-text-light;
 }
 
-// TODO HAR-148: Add content width modifiers (--expanded, narrow, etc) when text width setting is added
+.content--max-width-90 {
+	max-width: $text-width-90;
+}
+
+.content--max-width-200 {
+	max-width: $text-width-200;
+}
+
+.content--stretched {
+	max-width: none;
+}
 
 h1 {
 
