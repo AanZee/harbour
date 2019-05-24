@@ -1,5 +1,10 @@
 .menu-view {
 	position: relative;
+	display: flex;
+
+	@include media(0, $range-lap) {
+		flex-direction: column;
+	}
 
 	@include media($range-desk, false) {
 		padding-left: $spacing * 35;
@@ -15,6 +20,7 @@
 }
 
 .menu-view__sidebar {
+	flex-shrink: 0;
 	background-color: $color-background-neutral;
 
 	@include media($range-desk, false) {
@@ -25,8 +31,8 @@
 		overflow-x: none;
 		overflow-y: scroll;
 		width: $spacing * 35;
-		-webkit-overflow-scrolling: touch;
 		overscroll-behavior: contain;
+		-webkit-overflow-scrolling: touch;
 		-ms-scroll-chaining: none;
 	}
 }
@@ -95,7 +101,7 @@
 }
 
 .menu-view__main {
-	height: 100%;
+	flex-grow: 1;
 
 	.menu-view__navigation-status:checked ~ & {
 		@include media(0, $range-lap) {
