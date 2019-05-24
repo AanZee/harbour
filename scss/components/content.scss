@@ -4,7 +4,7 @@ $content-table-cell-padding-hand-and-smaller: $spacing;
 $content-table-cell-padding-lap-and-larger: $spacing * 1.5;
 
 .content {
-	max-width: 40em;
+	max-width: $text-width-100;
 	line-height: $line-height-60;
 
 	@include media(0, $range-hand) {
