@@ -14,7 +14,7 @@ $checkbox-input-label-spacing: $spacing !default;
 	padding-bottom: (($control-size-100 - ($font-size-200 * $line-height-60)) / 2);
 	padding-left: $checkbox-input-size + $checkbox-input-label-spacing;
 	min-height: $control-size-100;
-	max-width: $text-width-200;
+	max-width: $text-width-100;
 	font-size: $font-size-200;
 	line-height: $line-height-60;
 	cursor: default;
