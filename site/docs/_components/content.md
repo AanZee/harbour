@@ -1,7 +1,33 @@
 ---
-layout: docs
+layout: default
 title: Content
 ---
+
+## Available modifiers
+
+### Font size
+```
+content--90
+content--200
+```
+
+### Alignment
+```
+content--centered
+content--centering
+```
+
+### Appearance
+```
+content--light
+```
+
+### Text length
+```
+content--max-width-90
+content--max-width-200
+content--stretched
+```
 
 ## Headings
 {% capture content-headings %}

@@ -1,8 +1,127 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		{% include head.html %}
 	</head>
-	<body>
-		{{ content }}
+	<body class="menu-view">
+		<input class="menu-view__menu-status"
+			type="checkbox"
+			id="show-menu"
+		>
+		<div class="menu-view__sidebar">
+			<div class="menu-view__status-bar">
+				{{ site.packageVersion }} &middot; {{ site.branchName }}
+			</div>
+			<header class="menu-view__sidebar-header">
+				<a
+					class="menu-view__logo"
+					href="{{ '/' | relative_url }}"
+				>
+					Harbour
+				</a>
+				<label class="menu-view__toggle"
+					for="show-menu"
+				>
+					<div class="menu-view__show-action">
+						<div class="button button--80">
+							Show menu
+						</div>
+					</div>
+					<div class="menu-view__hide-action">
+						<div class="button button--80">
+							Hide menu
+						</div>
+					</div>
+				</label>
+			</header>
+			<div class="menu-view__menu">
+				<div class="layout">
+					{% for collection in site.collections %}
+						{% if collection.label != 'posts' %}
+							<div class="layout__section layout__section--bordered-bottom">
+								<div class="layout__inner layout__inner--padded-left-right-70 layout__inner--padded-top-bottom-60">
+									<div class="heading-group">
+										<h2 class="heading-group__running-head">{{ collection.label | capitalize }}</h2>
+									</div>
+								</div>
+							</div>
+							<div class="layout__section layout__section--bordered-bottom layout__section--spaced-0">
+								<div class="menu menu--padding">
+									{% for collection-item in collection.docs %}
+										{% if page.url == collection-item.url %}
+											<a class="menu__item is-current"
+										{% else %}
+											<a class="menu__item"
+										{% endif %}
+											href="{{ collection-item.url | relative_url }}"
+										>
+											{{ collection-item.title }}
+										</a>
+									{% endfor %}
+								</div>
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="menu-view__main">
+			<div class="page">
+				<main class="page__main">
+					<section class="layout">
+						<div class="layout__inner">
+							<div class="layout__section layout__section--bordered-bottom">
+								<div class="layout__inner layout__inner--padded-top-bottom-70 layout__inner--padded-left-right-0">
+									<div class="heading-group">
+										<h1 class="heading-group__headline">{{ page.title }}</h1>
+									</div>
+								</div>
+							</div>
+							<div class="layout__section">
+								<div class="content">
+									{{ content }}
+								</div>
+							</div>
+						</div>
+					</section>
+				</main>
+				<footer class="page__footer">
+					<div class="layout">
+						<div class="layout__section layout__section--bordered-top">
+							<div class="layout__inner">
+								<div class="content content--200 content--centered">
+									<p>When I'm not surfing or sailing, I am to be found at the harbour working on my boat.</p>
+								</div>
+							</div>
+						</div>
+						<div class="layout__section layout__section--spaced-0 layout__section--neutral">
+							<div class="layout__inner layout__inner--padded-top-bottom-60">
+								<div class="content content--centered content--90">
+									<p>Build on {{ site.time | date: "%-d %B %Y %R"}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
 	</body>
+	<script>
+		const codeBlockParents = document.querySelectorAll('[js-code-block-parent]');
+
+		codeBlockParents.forEach(function(codeBlockParent) {
+			const codeBlockToggle = codeBlockParent.querySelector('[js-code-block-toggle]');
+			const codeBlock = codeBlockParent.querySelector('[js-code-block]');
+
+			codeBlockToggle.addEventListener('click', function() {
+				if (codeBlock.style.display === "none") {
+					codeBlock.style.display = "block";
+					codeBlockToggle.innerHTML = "&lt;&#47;&gt; Hide code";
+				} else {
+					codeBlock.style.display = "none";
+					codeBlockToggle.innerHTML = "&lt;&#47;&gt; Show code";
+				}
+			});
+		});
+	</script>
 </html>
