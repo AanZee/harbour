@@ -1,3 +1,18 @@
+# 1.26.0
+
+## Features
+* Add max width modifiers `content--max-width-90`, `content--max-width-200` and `content--stretched` to content component
+* Add menu component
+* Add menu view layout
+* Add `layout__section--neutral`
+
+## Improvements
+* Replace content max width value by the sizing variable `$text-width-100`
+* Replace checkbox max width value by the sizing variable `$text-width-200`
+* Add yml settings to editconfig
+* Improve `$color-background-neutral`
+* Merge Jekyll templates to one `default` template
+
 # 1.25.2
 
 ## Bugfix

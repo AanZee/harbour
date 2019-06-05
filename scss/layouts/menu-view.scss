@@ -1,0 +1,111 @@
+.menu-view {
+	position: relative;
+	display: flex;
+
+	@include media(0, $range-lap) {
+		flex-direction: column;
+	}
+
+	@include media($range-desk, false) {
+		padding-left: $spacing * 35;
+	}
+}
+
+.menu-view__menu-status {
+	position: absolute;
+	top: 0; // FIX: Fixes some render bugs.
+	left: 0; // FIX: Fixes some render bugs.
+	z-index: -100; // NOTE: Put the input behind the label so it doesn't overlay text.
+	opacity: 0; // NOTE: we use this instead of display:none to allow focusing.
+}
+
+.menu-view__sidebar {
+	flex-shrink: 0;
+	background-color: $color-background-neutral;
+
+	@include media($range-desk, false) {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		overflow-x: none;
+		overflow-y: scroll;
+		width: $spacing * 35;
+		overscroll-behavior: contain;
+		-webkit-overflow-scrolling: touch;
+		-ms-scroll-chaining: none;
+	}
+}
+
+.menu-view__status-bar {
+	@include ellipsis($display: block);
+	padding: (($spacing / 8) $spacing);
+	background-color: $color-background-colored;
+	color: $color-text-light;
+	text-align: center;
+	font-size: $font-size-60;
+}
+
+.menu-view__sidebar-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.menu-view__logo {
+	display: block;
+	margin: $spacing * 2;
+	color: $color-text;
+	font-size: $font-size-400;
+	font-weight: $font-weight-200;
+}
+
+.menu-view__toggle {
+
+	@include media(0, $range-lap) {
+		margin: $spacing * 2;
+	}
+
+	@include media($range-desk, false) {
+		display: none;
+	}
+}
+
+.menu-view__show-action {
+
+	.menu-view__menu-status:checked ~ .menu-view__sidebar & {
+		display: none;
+	}
+}
+
+.menu-view__hide-action {
+	display: none;
+
+	.menu-view__menu-status:checked ~ .menu-view__sidebar & {
+		display: inline;
+	}
+}
+
+.menu-view__menu {
+	border-top: $border-ui-100;
+
+	@include media(0, $range-lap) {
+		display: none;
+	}
+
+	.menu-view__menu-status:checked ~ .menu-view__sidebar & {
+		@include media(0, $range-lap) {
+			display: block;
+		}
+	}
+}
+
+.menu-view__main {
+	flex-grow: 1;
+
+	.menu-view__menu-status:checked ~ & {
+		@include media(0, $range-lap) {
+			display: none;
+		}
+	}
+}

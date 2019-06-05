@@ -1,0 +1,40 @@
+@import 'variables/index';
+@import 'utilities/index';
+
+$menu-item-vertical-padding: $spacing * 1.5 !default;
+$menu-item-border: $border-ui-100 !default;
+$menu-item-horizontal-padding: $spacing * 2 !default;
+
+.menu--light {
+	@include font-smoothing;
+}
+
+.menu__item {
+	display: block;
+	padding-top: $menu-item-vertical-padding;
+	padding-bottom: $menu-item-vertical-padding;
+	width: 100%;
+	color: $color-text-200;
+	text-align: left;
+	font-size: $font-size-100;
+	line-height: $line-height-20;
+	user-select: none;
+
+	&:not(:first-child) {
+		border-top: $menu-item-border;
+	}
+
+	&.is-current {
+		background-color: $color-select;
+		color: $color-text-light;
+	}
+
+	.menu--light & {
+		color: $color-text-light;
+	}
+
+	.menu--padding & {
+		padding-right: $menu-item-horizontal-padding;
+		padding-left: $menu-item-horizontal-padding;
+	}
+}
