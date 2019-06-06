@@ -1,3 +1,8 @@
+# 1.26.3
+
+## Bugfix
+* Fix images on production site
+
 # 1.26.2
 
 ## Bugfix
