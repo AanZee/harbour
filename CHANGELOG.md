@@ -1,3 +1,8 @@
+# 1.26.1
+
+## Bugfix
+* Remove unused header and footer include and move head to default layout
+
 # 1.26.0
 
 ## Features
