@@ -18,7 +18,7 @@ echo "Installing npm packages"
 npm install
 
 echo "Building website"
-JEKYLL_BASE_URL=/ npm run build
+npm run build
 
 echo "Deploying master to S3 root"
 aws configure set preview.cloudfront true
