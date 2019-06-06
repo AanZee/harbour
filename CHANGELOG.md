@@ -1,3 +1,8 @@
+# 1.26.2
+
+## Bugfix
+* Fix footer content text alignment with new max-width variables
+
 # 1.26.1
 
 ## Bugfix
