@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		{% include head.html %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, width=device-width, user-scalable=no">
+		<title>Harbour Styleguide{%- if page.title -%}&nbsp;&middot; {{ page.title }}{% endif %}</title>
+		<link rel="stylesheet" href="{{ '/css/index.css' | relative_url }}">
 	</head>
 	<body class="menu-view">
 		<input class="menu-view__menu-status"
