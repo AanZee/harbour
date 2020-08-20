@@ -1,3 +1,9 @@
+# 1.26.4
+
+## Bugfix
+* Add missing gem
+* Add package-lock.json
+
 # 1.26.3
 
 ## Bugfix
