@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // For IE11 we use 'tables' to fix a render bug with sticky bottom bar
 
 .page {
@@ -18,7 +20,7 @@
 
 	@include is-ie-10-or-11 {
 		display: table-row;
-		height: $spacing / 8;
+		height: math.div($spacing, 8);
 	}
 }
 
@@ -44,6 +46,6 @@
 
 	@include is-ie-10-or-11 {
 		display: table-row;
-		height: $spacing / 8;
+		height: math.div($spacing, 8);
 	}
 }

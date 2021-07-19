@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $input-stepper-button-background-color: $color-ui-80 !default;
 
 .input-stepper {
@@ -26,9 +28,15 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 
 .input-stepper__input {
 	order: 2;
-	padding-top: (($control-size-100 - ($line-height-20 * $font-size-200)) / 2);
+	padding-top: math.div(
+		($control-size-100 - ($line-height-20 * $font-size-200)),
+		2
+	);
 	padding-right: $spacing;
-	padding-bottom: (($control-size-100 - ($line-height-20 * $font-size-200)) / 2);
+	padding-bottom: math.div(
+		($control-size-100 - ($line-height-20 * $font-size-200)),
+		2
+	);
 	padding-left: $spacing;
 	width: $control-size-200;
 	height: $control-size-100;
@@ -49,7 +57,16 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 	}
 
 	.input-stepper.is-loading & {
-		background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
+		background-image: linear-gradient(
+			-45deg,
+			rgba(0, 0, 0, 0.1) 25%,
+			transparent 25%,
+			transparent 50%,
+			rgba(0, 0, 0, 0.1) 50%,
+			rgba(0, 0, 0, 0.1) 75%,
+			transparent 75%,
+			transparent
+		);
 		background-size: 50px 50px;
 		background-repeat: repeat;
 		opacity: $opacity-100; // NOTE: reset disabled styling.
@@ -138,7 +155,6 @@ $input-stepper-button-background-color: $color-ui-80 !default;
 }
 
 @keyframes InputStepperIndeterminateProgress {
-
 	0% {
 		background-position: 0 0;
 	}
