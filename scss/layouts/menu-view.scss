@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .menu-view {
 	position: relative;
 	display: flex;
@@ -39,7 +41,7 @@
 
 .menu-view__status-bar {
 	@include ellipsis($display: block);
-	padding: (($spacing / 8) $spacing);
+	padding: math.div($spacing, 8) $spacing;
 	background-color: $color-background-colored;
 	color: $color-text-light;
 	text-align: center;
@@ -61,7 +63,6 @@
 }
 
 .menu-view__toggle {
-
 	@include media(0, $range-lap) {
 		margin: $spacing * 2;
 	}
@@ -72,7 +73,6 @@
 }
 
 .menu-view__show-action {
-
 	.menu-view__menu-status:checked ~ .menu-view__sidebar & {
 		display: none;
 	}

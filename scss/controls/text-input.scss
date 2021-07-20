@@ -1,9 +1,17 @@
+@use 'sass:math';
+
 .text-input {
 	position: relative;
 	display: block;
-	padding-top: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
+	padding-top: math.div(
+		($control-size-100 - ($input-line-height * $input-font-size)),
+		2
+	);
 	padding-right: $spacing * 1.5;
-	padding-bottom: (($control-size-100 - ($input-line-height * $input-font-size)) / 2);
+	padding-bottom: math.div(
+		($control-size-100 - ($input-line-height * $input-font-size)),
+		2
+	);
 	padding-left: $spacing * 1.5;
 	width: 100%;
 	height: $control-size-100;
@@ -30,7 +38,8 @@
 	&.is-valid,
 	&.is-invalid {
 		padding-right: $control-size-100;
-		background-position: right (($control-size-100 - $icon-size-100) / 2) center;
+		background-position: right math.div(($control-size-100 - $icon-size-100), 2)
+			center;
 		background-size: $icon-size-100 $icon-size-100;
 		background-repeat: no-repeat;
 	}
@@ -38,7 +47,10 @@
 	&.is-valid {
 		border: $input-is-valid-border;
 		background-color: $input-is-valid-background-color;
-		background-image: url(get-svg-uri($input-is-valid-icon, $input-is-valid-icon-color));
+		background-image: url(get-svg-uri(
+			$input-is-valid-icon,
+			$input-is-valid-icon-color
+		));
 		box-shadow: $input-is-valid-box-shadow;
 
 		&:focus {
@@ -51,7 +63,10 @@
 	&.is-invalid {
 		border: $input-is-invalid-border;
 		background-color: $input-is-invalid-background-color;
-		background-image: url(get-svg-uri($input-is-invalid-icon, $input-is-invalid-icon-color));
+		background-image: url(get-svg-uri(
+			$input-is-invalid-icon,
+			$input-is-invalid-icon-color
+		));
 		box-shadow: $input-is-invalid-box-shadow;
 
 		&:focus {
@@ -70,12 +85,14 @@
 		padding-right: $spacing * 1.5;
 		border: $input-autofill-border;
 		background-color: $input-autofill-background-color;
-		box-shadow: $input-autofill-box-shadow, $input-autofill-box-shadow-background;
+		box-shadow: $input-autofill-box-shadow,
+			$input-autofill-box-shadow-background;
 
 		&:focus {
 			border: $input-autofill-focus-border;
 			background-color: $input-autofill-focus-background-color;
-			box-shadow: $input-autofill-focus-box-shadow, $input-autofill-focus-box-shadow-background;
+			box-shadow: $input-autofill-focus-box-shadow,
+				$input-autofill-focus-box-shadow-background;
 		}
 	}
 }

@@ -1,6 +1,7 @@
 // NOTE: Makes sure on laptops with 1.25 resolution, the higher quality image is loaded.
 @mixin hidpi($ratio: 1.25) {
-	@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi) {
 		@content;
 	}
 }

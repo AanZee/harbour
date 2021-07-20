@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $spacing: 8px;
 
 $golden-ratio-70: 23.6% !default;
@@ -6,11 +8,11 @@ $golden-ratio-90: 50% !default;
 $golden-ratio-100: 61.8% !default;
 $golden-ratio-200: 161.8% !default;
 
-$aspect-ratio-portrait: 100% / 2 * 3 !default;
-$aspect-ratio-landscape: 100% / 3 * 2 !default;
+$aspect-ratio-portrait: math.div(100%, 2) * 3 !default;
+$aspect-ratio-landscape: math.div(100%, 3) * 2 !default;
 $aspect-ratio-square: 100% !default;
-$aspect-ratio-wide: 100% / 16 * 9 !default;
-$aspect-ratio-ultra-wide: 100% / 239 * 100 !default;
+$aspect-ratio-wide: math.div(100%, 16) * 9 !default;
+$aspect-ratio-ultra-wide: math.div(100%, 239) * 100 !default;
 
 $control-size-40: $spacing * 2 !default;
 $control-size-50: $spacing * 2.5 !default;

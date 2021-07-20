@@ -11,7 +11,6 @@
 }
 
 .collection__item {
-
 	.collection--list > &:not(:last-child) {
 		@include media(0, $range-hand) {
 			margin-bottom: $spacing;
@@ -22,7 +21,6 @@
 	}
 
 	.collection--grid-one-whole-till-one-third > & {
-
 		@include media(0, $range-hand-m) {
 			margin: $spacing * 1;
 			width: calc(100% - #{$spacing * 2});

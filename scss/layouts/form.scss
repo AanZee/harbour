@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $form-z-index: 0 !default;
 $form-field-header-width: 36%;
 $form-field-main-width: 64%;
@@ -29,7 +31,7 @@ $form-control-max-width: $spacing * 60;
 	max-width: $text-width-200;
 
 	@include media(0, $range-hand) {
-		margin-top: $spacing / 4;
+		margin-top: math.div($spacing, 4);
 		font-size: $font-size-100;
 	}
 	@include media($range-lap, false) {
@@ -39,7 +41,6 @@ $form-control-max-width: $spacing * 60;
 }
 
 .form__section {
-
 	&:not(:first-child) {
 		border-top: 1px dashed $color-ui-100;
 
@@ -127,7 +128,6 @@ $form-control-max-width: $spacing * 60;
 	}
 
 	.form--90 & {
-
 		&:not(:first-child) {
 			margin-top: $spacing * 1.25;
 		}
@@ -137,7 +137,7 @@ $form-control-max-width: $spacing * 60;
 .form__fieldset-feedback-text {
 	position: relative;
 	margin-top: $spacing * -1;
-	padding: ($spacing / 2) ($spacing * 2.5);
+	padding: math.div($spacing, 2) ($spacing * 2.5);
 	background-color: $color-error;
 	color: $color-text-light;
 	font-size: $font-size-90;
@@ -170,13 +170,14 @@ $form-control-max-width: $spacing * 60;
 	}
 }
 
-.form__field.is-hidden { // NOTE: is-hidden styling is seperated from main form__field-label styling due to stylelint settings which doesn't accept .is-hidden to come after modifier styles
+.form__field.is-hidden {
+	// NOTE: is-hidden styling is seperated from main form__field-label styling due to stylelint settings which doesn't accept .is-hidden to come after modifier styles
 	display: none;
 }
 
 .form__field-header {
 	display: block; // NOTE: Set block for when field-header is a label element.
-	margin-bottom: $spacing / 8;
+	margin-bottom: math.div($spacing, 8);
 
 	.form--right-aligned-labels &,
 	.form--left-aligned-labels & {
@@ -205,7 +206,7 @@ $form-control-max-width: $spacing * 60;
 	.form--top-aligned-labels & {
 		@include media($range-lap, false) {
 			display: block;
-			margin-bottom: $spacing / 8;
+			margin-bottom: math.div($spacing, 8);
 			padding-right: 0;
 			min-width: auto;
 			width: auto;
@@ -239,7 +240,8 @@ $form-control-max-width: $spacing * 60;
 	}
 }
 
-.form__field-label.is-hidden { // NOTE: is-hidden styling is seperated from main form__field-label styling due to stylelint settings which doesn't accept .is-hidden to come after modifier styles
+.form__field-label.is-hidden {
+	// NOTE: is-hidden styling is seperated from main form__field-label styling due to stylelint settings which doesn't accept .is-hidden to come after modifier styles
 	display: none;
 }
 
@@ -258,9 +260,7 @@ $form-control-max-width: $spacing * 60;
 
 	.form--right-aligned-labels &,
 	.form--left-aligned-labels & {
-
 		@include media($range-lap, false) {
-
 			&::before {
 				content: none;
 			}
@@ -272,9 +272,7 @@ $form-control-max-width: $spacing * 60;
 	}
 
 	.form--top-aligned-labels & {
-
 		@include media($range-lap, false) {
-
 			&::before {
 				content: ' (';
 			}
@@ -287,7 +285,6 @@ $form-control-max-width: $spacing * 60;
 }
 
 .form__field-main {
-
 	.form--right-aligned-labels &,
 	.form--left-aligned-labels & {
 		@include media($range-lap, false) {
@@ -328,9 +325,9 @@ $form-control-max-width: $spacing * 60;
 .form__input-feedback-text {
 	position: relative;
 	display: block;
-	margin-top: $spacing / 2;
+	margin-top: math.div($spacing, 2);
 	margin-right: 0;
-	margin-bottom: $spacing / 4;
+	margin-bottom: math.div($spacing, 4);
 	max-width: $text-width-200;
 	color: $color-error;
 	line-height: $line-height-60;
@@ -349,9 +346,9 @@ $form-control-max-width: $spacing * 60;
 
 .form__input-helper-text {
 	display: block;
-	margin-top: $spacing / 2;
+	margin-top: math.div($spacing, 2);
 	margin-right: 0;
-	margin-bottom: $spacing / 4;
+	margin-bottom: math.div($spacing, 4);
 	max-width: $text-width-200;
 	color: $color-text-70;
 	line-height: $line-height-60;
@@ -371,7 +368,9 @@ $form-control-max-width: $spacing * 60;
 	.form--left-aligned-labels & {
 		@include media($range-lap, false) {
 			margin-left: calc(#{$form-field-header-width} - #{$spacing * 1});
-			padding-left: calc(#{$form-section-header-min-width} - #{$form-field-header-width});
+			padding-left: calc(
+				#{$form-section-header-min-width} - #{$form-field-header-width}
+			);
 			max-width: calc(#{$form-control-max-width} + #{$spacing * 2});
 			width: calc(#{$form-field-main-width} + #{$spacing * 2});
 		}

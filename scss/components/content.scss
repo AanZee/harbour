@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $content-table-border-color: $color-ui-30 !default;
 
 $content-table-cell-padding-hand-and-smaller: $spacing;
@@ -67,123 +69,115 @@ $content-table-cell-padding-lap-and-larger: $spacing * 1.5;
 }
 
 h1 {
-
 	.content & {
 		font-weight: bold;
 		line-height: $line-height-40;
 
 		@include media(0, $range-hand) {
-			margin-top: $line-height-40 * $font-size-500 / 2;
-			margin-bottom: $line-height-40 * $font-size-500 / 2;
+			margin-top: math.div($line-height-40 * $font-size-500, 2);
+			margin-bottom: math.div($line-height-40 * $font-size-500, 2);
 			font-size: $font-size-500;
 		}
 		@include media($range-lap, false) {
-			margin-top: $line-height-40 * $font-size-600 / 2;
-			margin-bottom: $line-height-40 * $font-size-600 / 2;
+			margin-top: math.div($line-height-40 * $font-size-600, 2);
+			margin-bottom: math.div($line-height-40 * $font-size-600, 2);
 			font-size: $font-size-600;
 		}
 	}
 }
 
 h2 {
-
 	.content & {
 		font-weight: bold;
 		line-height: $line-height-40;
 
 		@include media(0, $range-hand) {
-			margin-top: $line-height-40 * $font-size-400 / 2;
-			margin-bottom: $line-height-40 * $font-size-400 / 2;
+			margin-top: math.div($line-height-40 * $font-size-400, 2);
+			margin-bottom: math.div($line-height-40 * $font-size-400, 2);
 			font-size: $font-size-400;
 		}
 		@include media($range-lap, false) {
-			margin-top: $line-height-40 * $font-size-500 / 2;
-			margin-bottom: $line-height-40 * $font-size-500 / 2;
+			margin-top: math.div($line-height-40 * $font-size-500, 2);
+			margin-bottom: math.div($line-height-40 * $font-size-500, 2);
 			font-size: $font-size-500;
 		}
 	}
 }
 
 h3 {
-
 	.content & {
 		font-weight: bold;
 		line-height: $line-height-40;
 
 		@include media(0, $range-hand) {
-			margin-top: $line-height-40 * $font-size-300 / 2;
-			margin-bottom: $line-height-40 * $font-size-300 / 2;
+			margin-top: math.div($line-height-40 * $font-size-300, 2);
+			margin-bottom: math.div($line-height-40 * $font-size-300, 2);
 			font-size: $font-size-300;
 		}
 		@include media($range-lap, false) {
-			margin-top: $line-height-40 * $font-size-400 / 2;
-			margin-bottom: $line-height-40 * $font-size-400 / 2;
+			margin-top: math.div($line-height-40 * $font-size-400, 2);
+			margin-bottom: math.div($line-height-40 * $font-size-400, 2);
 			font-size: $font-size-400;
 		}
 	}
 }
 
 h4 {
-
 	.content & {
 		font-weight: bold;
 		line-height: $line-height-40;
 
 		@include media(0, $range-hand) {
-			margin-top: $line-height-40 * $font-size-200 / 2;
-			margin-bottom: $line-height-40 * $font-size-200 / 2;
+			margin-top: math.div($line-height-40 * $font-size-200, 2);
+			margin-bottom: math.div($line-height-40 * $font-size-200, 2);
 			font-size: $font-size-200;
 		}
 		@include media($range-lap, false) {
-			margin-top: $line-height-40 * $font-size-300 / 2;
-			margin-bottom: $line-height-40 * $font-size-300 / 2;
+			margin-top: math.div($line-height-40 * $font-size-300, 2);
+			margin-bottom: math.div($line-height-40 * $font-size-300, 2);
 			font-size: $font-size-300;
 		}
 	}
 }
 
 h5 {
-
 	.content & {
 		font-weight: bold;
 		line-height: $line-height-40;
 
 		@include media(0, $range-hand) {
-			margin-top: $line-height-40 * $font-size-100 / 2;
-			margin-bottom: $line-height-40 * $font-size-100 / 2;
+			margin-top: math.div($line-height-40 * $font-size-100, 2);
+			margin-bottom: math.div($line-height-40 * $font-size-100, 2);
 			font-size: $font-size-100;
 		}
 		@include media($range-lap, false) {
-			margin-top: $line-height-40 * $font-size-200 / 2;
-			margin-bottom: $line-height-40 * $font-size-200 / 2;
+			margin-top: math.div($line-height-40 * $font-size-200, 2);
+			margin-bottom: math.div($line-height-40 * $font-size-200, 2);
 			font-size: $font-size-200;
 		}
 	}
 }
 
 h6 {
-
 	.content & {
 		font-weight: bold;
 		line-height: $line-height-40;
 
 		@include media(0, $range-hand) {
-			margin-top: $line-height-40 * $font-size-90 / 2;
-			margin-bottom: $line-height-40 * $font-size-90 / 2;
+			margin-top: math.div($line-height-40 * $font-size-90, 2);
+			margin-bottom: math.div($line-height-40 * $font-size-90, 2);
 			font-size: $font-size-90;
 		}
 		@include media($range-lap, false) {
-			margin-top: $line-height-40 * $font-size-100 / 2;
-			margin-bottom: $line-height-40 * $font-size-100 / 2;
+			margin-top: math.div($line-height-40 * $font-size-100, 2);
+			margin-bottom: math.div($line-height-40 * $font-size-100, 2);
 			font-size: $font-size-100;
 		}
 	}
 }
 
 p {
-
 	.content & {
-
 		@include media(0, $range-hand) {
 			margin-top: $line-height-60 * $font-size-100;
 			margin-bottom: $line-height-60 * $font-size-100;
@@ -195,7 +189,6 @@ p {
 	}
 
 	.content--90 & {
-
 		@include media(0, $range-hand) {
 			margin-top: $line-height-60 * $font-size-90;
 			margin-bottom: $line-height-60 * $font-size-90;
@@ -207,7 +200,6 @@ p {
 	}
 
 	.content--200 & {
-
 		@include media(0, $range-hand) {
 			margin-top: $line-height-60 * $font-size-200;
 			margin-bottom: $line-height-60 * $font-size-200;
@@ -221,7 +213,6 @@ p {
 
 ol,
 ul {
-
 	.content & {
 		list-style-position: outside;
 
@@ -234,7 +225,6 @@ ul {
 	}
 
 	.content--90 & {
-
 		@include media(0, $range-hand) {
 			margin-left: $line-height-60 * $font-size-90;
 		}
@@ -244,7 +234,6 @@ ul {
 	}
 
 	.content--200 & {
-
 		@include media(0, $range-hand) {
 			margin-left: $line-height-60 * $font-size-200;
 		}
@@ -255,23 +244,19 @@ ul {
 }
 
 ol {
-
 	.content & {
 		list-style: decimal;
 	}
 }
 
 ul {
-
 	.content & {
 		list-style: disc;
 	}
 }
 
 li {
-
 	.content & {
-
 		@include media(0, $range-hand) {
 			margin-top: $line-height-60 * $font-size-100;
 			margin-bottom: $line-height-60 * $font-size-100;
@@ -283,7 +268,6 @@ li {
 	}
 
 	.content--90 & {
-
 		@include media(0, $range-hand) {
 			margin-top: $line-height-60 * $font-size-90;
 			margin-bottom: $line-height-60 * $font-size-90;
@@ -295,7 +279,6 @@ li {
 	}
 
 	.content--200 & {
-
 		@include media(0, $range-hand) {
 			margin-top: $line-height-60 * $font-size-200;
 			margin-bottom: $line-height-60 * $font-size-200;
@@ -308,30 +291,25 @@ li {
 }
 
 a {
-
 	.content & {
 		text-decoration: underline;
 	}
 }
 
 strong {
-
 	.content & {
 		font-weight: bold;
 	}
 }
 
 em {
-
 	.content & {
 		font-style: italic;
 	}
 }
 
 .highlighter-rouge {
-
 	.content & {
-
 		@include media(0, $range-hand) {
 			margin-top: $line-height-60 * $font-size-100;
 			margin-bottom: $line-height-60 * $font-size-100;
@@ -344,7 +322,6 @@ em {
 }
 
 code {
-
 	.content & {
 		font-family: $font-family-monospace;
 
@@ -357,7 +334,6 @@ code {
 	}
 
 	.content--90 & {
-
 		@include media(0, $range-hand) {
 			font-size: $font-size-80;
 		}
@@ -367,7 +343,6 @@ code {
 	}
 
 	.content--200 & {
-
 		@include media(0, $range-hand) {
 			font-size: $font-size-100;
 		}
@@ -378,16 +353,16 @@ code {
 }
 
 .highlight {
-
 	.content & {
 		border-radius: $border-radius-100;
 	}
 }
 
 table {
-
 	.content & {
-		border-top: (($spacing / 4) solid $content-table-border-color);  // FIX: Temporary solution to fix stylelint, will be fixed in HAR-149
+		border-top: (
+			math.div($spacing, 4) solid $content-table-border-color
+		); // FIX: Temporary solution to fix stylelint, will be fixed in HAR-149
 
 		@include media(0, $range-hand) {
 			display: block;
@@ -395,18 +370,36 @@ table {
 			margin-top: $line-height-60 * $font-size-100;
 			margin-bottom: $line-height-60 * $font-size-100;
 			/* stylelint-disable */
-			background: /* Shadow covers */
-				linear-gradient(to right, $color-background-light 30%, rgba(255, 255, 255, 0)),
-				linear-gradient(to right, rgba(255, 255, 255, 0), $color-background-light 70%),
+			background: /* Shadow covers */ linear-gradient(
+					to right,
+					$color-background-light 30%,
+					rgba(255, 255, 255, 0)
+				),
+				linear-gradient(
+					to right,
+					rgba(255, 255, 255, 0),
+					$color-background-light 70%
+				),
 				/* Shadows */
-				radial-gradient(farthest-side at 0 50%, rgba($color-shadow, $opacity-20), rgba($color-shadow, 0)),
-				radial-gradient(farthest-side at 100% 50%, rgba($color-shadow, $opacity-20), rgba($color-shadow, 0));
+					radial-gradient(
+						farthest-side at 0 50%,
+						rgba($color-shadow, $opacity-20),
+						rgba($color-shadow, 0)
+					),
+				radial-gradient(
+					farthest-side at 100% 50%,
+					rgba($color-shadow, $opacity-20),
+					rgba($color-shadow, 0)
+				);
 			/* stylelint-enable */
 			background-color: $color-background-light;
 			/* Opera doesn't support this in the shorthand */
 			background-attachment: local, local, scroll, scroll;
 			background-position: left, right, left, right;
-			background-size: ($spacing * 5) 100%, ($spacing * 5) 100%, ($spacing * 1.5) 100%, ($spacing * 1.5) 100%;
+			/* stylelint-disable */
+			background-size: ($spacing * 5) 100%, ($spacing * 5) 100%,
+				($spacing * 1.5) 100%, ($spacing * 1.5) 100%;
+			/* stylelint-enable */
 			background-repeat: no-repeat;
 		}
 		@include media($range-lap, false) {
@@ -417,7 +410,6 @@ table {
 	}
 
 	.content--90 & {
-
 		@include media(0, $range-hand) {
 			margin-top: $line-height-60 * $font-size-90;
 			margin-bottom: $line-height-60 * $font-size-90;
@@ -429,7 +421,6 @@ table {
 	}
 
 	.content--200 & {
-
 		@include media(0, $range-hand) {
 			margin-top: $line-height-60 * $font-size-200;
 			margin-bottom: $line-height-60 * $font-size-200;
@@ -442,42 +433,46 @@ table {
 }
 
 thead {
-
 	.content & {
-		border-bottom: (($spacing / 4) solid $content-table-border-color); // FIX: Temporary solution to fix stylelint, will be fixed in HAR-149
+		border-bottom: (
+			math.div($spacing, 4) solid $content-table-border-color
+		); // FIX: Temporary solution to fix stylelint, will be fixed in HAR-149
 	}
 }
 
 thead tr {
-
 	.content & {
-		border-bottom: (($spacing / 8) solid $content-table-border-color); // FIX: Temporary solution to fix stylelint, will be fixed in HAR-149
+		border-bottom: (
+			math.div($spacing, 8) solid $content-table-border-color
+		); // FIX: Temporary solution to fix stylelint, will be fixed in HAR-149
 	}
 }
 
 tbody {
-
 	.content & {
-		border-bottom: (($spacing / 4) solid $content-table-border-color); // FIX: Temporary solution to fix stylelint, will be fixed in HAR-149
+		border-bottom: (
+			math.div($spacing, 4) solid $content-table-border-color
+		); // FIX: Temporary solution to fix stylelint, will be fixed in HAR-149
 	}
 }
 
 tbody tr {
-
 	.content & {
-		border-bottom: (($spacing / 8) solid $content-table-border-color); // FIX: Temporary solution to fix stylelint, will be fixed in HAR-149
+		border-bottom: (
+			math.div($spacing, 8) solid $content-table-border-color
+		); // FIX: Temporary solution to fix stylelint, will be fixed in HAR-149
 	}
 }
 
 tfoot {
-
 	.content & {
-		border-bottom: (($spacing / 4) solid $content-table-border-color); // FIX: Temporary solution to fix stylelint, will be fixed in HAR-149
+		border-bottom: (
+			math.div($spacing, 4) solid $content-table-border-color
+		); // FIX: Temporary solution to fix stylelint, will be fixed in HAR-149
 	}
 }
 
 th {
-
 	.content & {
 		color: $color-heading-100;
 		text-align: left;
@@ -494,7 +489,6 @@ th {
 }
 
 td {
-
 	.content & {
 		text-align: left;
 
@@ -510,7 +504,6 @@ td {
 }
 
 img {
-
 	.content & {
 		display: block;
 
@@ -525,7 +518,6 @@ img {
 	}
 
 	.content--90 & {
-
 		@include media(0, $range-hand) {
 			margin-top: $line-height-60 * $font-size-90;
 			margin-bottom: $line-height-60 * $font-size-90;
@@ -537,7 +529,6 @@ img {
 	}
 
 	.content--200 & {
-
 		@include media(0, $range-hand) {
 			margin-top: $line-height-60 * $font-size-200;
 			margin-bottom: $line-height-60 * $font-size-200;
