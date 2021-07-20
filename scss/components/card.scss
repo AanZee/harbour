@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $card-title-color: $color-heading;
 $card-z-index: 0 !default;
 $card-is-skeleton-fill: $color-ui-60 !default;
@@ -17,7 +19,8 @@ $card-subtitle-90-line-height: $line-height-40 !default;
 $card-excerpt-90-font-size: $font-size-100 !default;
 $card-excerpt-90-line-height: $line-height-60 !default;
 $card-icon-90-size: $card-title-90-font-size * $card-title-90-line-height * 2 !default;
-$card-header-90-height: $card-title-90-font-size * $card-title-90-line-height + $card-subtitle-90-font-size * $card-subtitle-90-line-height !default;
+$card-header-90-height: $card-title-90-font-size * $card-title-90-line-height +
+	$card-subtitle-90-font-size * $card-subtitle-90-line-height !default;
 @if $card-icon-90-size > $card-header-90-height {
 	$card-icon-90-size: $card-header-90-height;
 }
@@ -33,7 +36,8 @@ $card-subtitle-100-line-height: $line-height-40 !default;
 $card-excerpt-100-font-size: $font-size-100 !default;
 $card-excerpt-100-line-height: $line-height-60 !default;
 $card-icon-100-size: $card-title-100-font-size * $card-title-100-line-height * 2 !default;
-$card-header-100-height: $card-title-100-font-size * $card-title-100-line-height + $card-subtitle-100-font-size * $card-subtitle-100-line-height !default;
+$card-header-100-height: $card-title-100-font-size * $card-title-100-line-height +
+	$card-subtitle-100-font-size * $card-subtitle-100-line-height !default;
 @if $card-icon-100-size > $card-header-100-height {
 	$card-icon-100-size: $card-header-100-height;
 }
@@ -49,7 +53,8 @@ $card-subtitle-200-line-height: $line-height-40 !default;
 $card-excerpt-200-font-size: $font-size-200 !default;
 $card-excerpt-200-line-height: $line-height-60 !default;
 $card-icon-200-size: $card-title-200-font-size * $card-title-200-line-height * 2 !default;
-$card-header-200-height: $card-title-200-font-size * $card-title-200-line-height + $card-subtitle-200-font-size * $card-subtitle-200-line-height !default;
+$card-header-200-height: $card-title-200-font-size * $card-title-200-line-height +
+	$card-subtitle-200-font-size * $card-subtitle-200-line-height !default;
 @if $card-icon-200-size > $card-header-200-height {
 	$card-icon-200-size: $card-header-200-height;
 }
@@ -262,7 +267,6 @@ label.card__primary-action {
 			margin-bottom: $card-padding-top-bottom-200;
 			margin-left: $card-padding-left-right-200;
 		}
-
 	}
 
 	.card--horizontal.card--90 & {
@@ -286,14 +290,12 @@ label.card__primary-action {
 
 	.card.is-skeleton &,
 	.card.is-loading & {
-
 		& > img {
 			visibility: hidden;
 		}
 	}
 
 	.card.is-updating & {
-
 		& > img {
 			opacity: $opacity-disabled;
 		}
@@ -382,27 +384,27 @@ label.card__primary-action {
 			content: '';
 
 			@include media(0, $range-hand) {
-				top: $card-header-90-height / 2;
+				top: math.div($card-header-90-height, 2);
 			}
 			@include media($range-lap, false) {
-				top: $card-header-100-height / 2;
+				top: math.div($card-header-100-height, 2);
 			}
 
 			.card--90 & {
-				top: $card-header-90-height / 2;
+				top: math.div($card-header-90-height, 2);
 				width: $icon-size-70;
 				height: $icon-size-70;
 			}
 
 			.card--200 & {
-				top: $card-header-200-height / 2;
+				top: math.div($card-header-200-height, 2);
 				width: $icon-size-90;
 				height: $icon-size-90;
 			}
 
 			.card--horizontal & {
 				@include media(0, $range-hand) {
-					top: $card-header-90-height / 2;
+					top: math.div($card-header-90-height, 2);
 				}
 				@include media($range-lap, false) {
 					top: 50%;
@@ -441,19 +443,22 @@ label.card__primary-action {
 
 	a.card__primary-action &,
 	button.card__primary-action & {
-
 		&::after {
-			background-image: url(get-svg-uri($card-primary-action-icon, $card-primary-action-icon-color));
+			background-image: url(get-svg-uri(
+				$card-primary-action-icon,
+				$card-primary-action-icon-color
+			));
 		}
 	}
 
 	button.card__primary-action &,
 	label.card__primary-action & {
-
 		&::after {
-
 			.card--expandable .card__expand-status ~ .card__actions & {
-				background-image: url(get-svg-uri($card-primary-expand-icon, $card-primary-action-icon-color));
+				background-image: url(get-svg-uri(
+					$card-primary-expand-icon,
+					$card-primary-action-icon-color
+				));
 				transition: transform 200ms;
 			}
 
@@ -488,14 +493,14 @@ label.card__primary-action {
 	margin-right: $spacing * 1.5;
 
 	@include media(0, $range-hand) {
-		margin-top: (($card-header-90-height - $card-icon-90-size) / 2);
-		margin-bottom: (($card-header-90-height - $card-icon-90-size) / 2);
+		margin-top: math.div(($card-header-90-height - $card-icon-90-size), 2);
+		margin-bottom: math.div(($card-header-90-height - $card-icon-90-size), 2);
 		width: $card-icon-90-size;
 		height: $card-icon-90-size;
 	}
 	@include media($range-lap, false) {
-		margin-top: (($card-header-100-height - $card-icon-100-size) / 2);
-		margin-bottom: (($card-header-100-height - $card-icon-100-size) / 2);
+		margin-top: math.div(($card-header-100-height - $card-icon-100-size), 2);
+		margin-bottom: math.div(($card-header-100-height - $card-icon-100-size), 2);
 		width: $card-icon-100-size;
 		height: $card-icon-100-size;
 	}
@@ -515,29 +520,35 @@ label.card__primary-action {
 
 	.card--horizontal & {
 		@include media($range-hand) {
-			margin-top: (($card-header-100-height - $card-icon-100-size) / 2);
-			margin-bottom: (($card-header-100-height - $card-icon-100-size) / 2);
+			margin-top: math.div(($card-header-100-height - $card-icon-100-size), 2);
+			margin-bottom: math.div(
+				($card-header-100-height - $card-icon-100-size),
+				2
+			);
 			width: $card-icon-100-size;
 			height: $card-icon-100-size;
 		}
 		@include media($range-lap, false) {
-			margin-top: (($card-header-200-height - $card-icon-200-size) / 2);
-			margin-bottom: (($card-header-200-height - $card-icon-200-size) / 2);
+			margin-top: math.div(($card-header-200-height - $card-icon-200-size), 2);
+			margin-bottom: math.div(
+				($card-header-200-height - $card-icon-200-size),
+				2
+			);
 			width: $card-icon-200-size;
 			height: $card-icon-200-size;
 		}
 	}
 
 	.card--90 & {
-		margin-top: (($card-header-90-height - $card-icon-90-size) / 2);
-		margin-bottom: (($card-header-90-height - $card-icon-90-size) / 2);
+		margin-top: math.div(($card-header-90-height - $card-icon-90-size), 2);
+		margin-bottom: math.div(($card-header-90-height - $card-icon-90-size), 2);
 		width: $card-icon-90-size;
 		height: $card-icon-90-size;
 	}
 
 	.card--200 & {
-		margin-top: (($card-header-200-height - $card-icon-200-size) / 2);
-		margin-bottom: (($card-header-200-height - $card-icon-200-size) / 2);
+		margin-top: math.div(($card-header-200-height - $card-icon-200-size), 2);
+		margin-bottom: math.div(($card-header-200-height - $card-icon-200-size), 2);
 		width: $card-icon-200-size;
 		height: $card-icon-200-size;
 	}
@@ -567,7 +578,10 @@ label.card__primary-action {
 			display: block;
 			width: 50%;
 			height: 50%;
-			background-image: url(get-svg-uri($icon-spinner, $card-is-loading-icon-color));
+			background-image: url(get-svg-uri(
+				$icon-spinner,
+				$card-is-loading-icon-color
+			));
 			background-position: center center;
 			background-size: 100% 100%;
 			background-repeat: no-repeat;

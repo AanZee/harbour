@@ -1,3 +1,9 @@
+# 1.27.1
+
+## Bugfix
+
+- Change last `/` to `math.div()` since using `/` for divisions is deprecated in SCSS.
+
 # 1.27.0
 
 ## Features
