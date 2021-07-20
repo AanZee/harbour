@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $checkbox-input-size: $spacing * 2.5 !default;
 $checkbox-90-input-size: $spacing * 2 !default;
 $checkbox-input-color: $color-ui-300 !default;
@@ -9,9 +11,15 @@ $checkbox-input-label-spacing: $spacing !default;
 	position: relative;
 	display: block;
 	margin: 0;
-	padding-top: (($control-size-100 - ($font-size-200 * $line-height-60)) / 2);
+	padding-top: math.div(
+		($control-size-100 - ($font-size-200 * $line-height-60)),
+		2
+	);
 	padding-right: 0;
-	padding-bottom: (($control-size-100 - ($font-size-200 * $line-height-60)) / 2);
+	padding-bottom: math.div(
+		($control-size-100 - ($font-size-200 * $line-height-60)),
+		2
+	);
 	padding-left: $checkbox-input-size + $checkbox-input-label-spacing;
 	min-height: $control-size-100;
 	max-width: $text-width-100;
@@ -26,7 +34,7 @@ label.checkbox {
 }
 
 .checkbox--colored {
-	padding-right: (($control-size-100 - $checkbox-input-size) / 2);
+	padding-right: math.div(($control-size-100 - $checkbox-input-size), 2);
 	padding-left: $control-size-100;
 	border-radius: $border-radius-100;
 	background-color: $color-ui-20;
@@ -42,14 +50,20 @@ label.checkbox {
 }
 
 .checkbox--90 {
-	padding-top: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
-	padding-bottom: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
+	padding-top: math.div(
+		($control-size-90 - ($font-size-100 * $line-height-60)),
+		2
+	);
+	padding-bottom: math.div(
+		($control-size-90 - ($font-size-100 * $line-height-60)),
+		2
+	);
 	padding-left: $checkbox-90-input-size + $checkbox-input-label-spacing;
 	min-height: $control-size-90;
 	font-size: $font-size-100;
 
 	&.checkbox--colored {
-		padding-right: (($control-size-90 - $checkbox-90-input-size) / 2);
+		padding-right: math.div(($control-size-90 - $checkbox-90-input-size), 2);
 		padding-left: $control-size-90;
 	}
 }
@@ -65,33 +79,62 @@ label.checkbox {
 }
 
 .checkbox--padded-90 {
-	padding-top: (($control-size-90 - ($font-size-200 * $line-height-60)) / 2);
-	padding-bottom: (($control-size-90 - ($font-size-200 * $line-height-60)) / 2);
+	padding-top: math.div(
+		($control-size-90 - ($font-size-200 * $line-height-60)),
+		2
+	);
+	padding-bottom: math.div(
+		($control-size-90 - ($font-size-200 * $line-height-60)),
+		2
+	);
 	min-height: $control-size-90;
 
 	&.checkbox--90 {
-		padding-top: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
-		padding-bottom: (($control-size-90 - ($font-size-100 * $line-height-60)) / 2);
+		padding-top: math.div(
+			($control-size-90 - ($font-size-100 * $line-height-60)),
+			2
+		);
+		padding-bottom: math.div(
+			($control-size-90 - ($font-size-100 * $line-height-60)),
+			2
+		);
 	}
 }
 
 .checkbox--padded-100 {
-
 	&.checkbox--90 {
-		padding-top: (($control-size-100 - ($font-size-100 * $line-height-60)) / 2);
-		padding-bottom: (($control-size-100 - ($font-size-100 * $line-height-60)) / 2);
+		padding-top: math.div(
+			($control-size-100 - ($font-size-100 * $line-height-60)),
+			2
+		);
+		padding-bottom: math.div(
+			($control-size-100 - ($font-size-100 * $line-height-60)),
+			2
+		);
 		min-height: $control-size-100;
 	}
 }
 
 .checkbox--padded-200 {
-	padding-top: (($control-size-200 - ($font-size-200 * $line-height-60)) / 2);
-	padding-bottom: (($control-size-200 - ($font-size-200 * $line-height-60)) / 2);
+	padding-top: math.div(
+		($control-size-200 - ($font-size-200 * $line-height-60)),
+		2
+	);
+	padding-bottom: math.div(
+		($control-size-200 - ($font-size-200 * $line-height-60)),
+		2
+	);
 	min-height: $control-size-200;
 
 	&.checkbox--90 {
-		padding-top: (($control-size-200 - ($font-size-100 * $line-height-60)) / 2);
-		padding-bottom: (($control-size-200 - ($font-size-100 * $line-height-60)) / 2);
+		padding-top: math.div(
+			($control-size-200 - ($font-size-100 * $line-height-60)),
+			2
+		);
+		padding-bottom: math.div(
+			($control-size-200 - ($font-size-100 * $line-height-60)),
+			2
+		);
 		min-height: $control-size-200;
 	}
 }
@@ -110,7 +153,7 @@ label.checkbox {
 
 	&:first-of-type::before {
 		position: absolute;
-		top: (($control-size-100 - $checkbox-input-size) / 2);
+		top: math.div(($control-size-100 - $checkbox-input-size), 2);
 		left: 0;
 		display: block;
 		box-sizing: border-box;
@@ -124,49 +167,55 @@ label.checkbox {
 		content: '';
 
 		.checkbox--colored & {
-			left: (($control-size-100 - $checkbox-input-size) / 2);
+			left: math.div(($control-size-100 - $checkbox-input-size), 2);
 		}
 
 		.checkbox--90 & {
-			top: (($control-size-90 - $checkbox-90-input-size) / 2);
+			top: math.div(($control-size-90 - $checkbox-90-input-size), 2);
 			width: $checkbox-90-input-size;
 			height: $checkbox-90-input-size;
 		}
 
 		.checkbox--colored.checkbox--90 & {
-			left: (($control-size-90 - $checkbox-90-input-size) / 2);
+			left: math.div(($control-size-90 - $checkbox-90-input-size), 2);
 		}
 
 		.checkbox--padded-0 & {
-			top: ((($font-size-200 * $line-height-60) - $checkbox-input-size) / 2);
+			top: math.div(
+				(($font-size-200 * $line-height-60) - $checkbox-input-size),
+				2
+			);
 		}
 
 		.checkbox--padded-0.checkbox--90 & {
-			top: ((($font-size-100 * $line-height-60) - $checkbox-90-input-size) / 2);
+			top: math.div(
+				(($font-size-100 * $line-height-60) - $checkbox-90-input-size),
+				2
+			);
 		}
 
 		.checkbox--padded-90 & {
-			top: (($control-size-90 - $checkbox-input-size) / 2);
+			top: math.div(($control-size-90 - $checkbox-input-size), 2);
 		}
 
 		.checkbox--padded-90.checkbox--90 & {
-			top: (($control-size-90 - $checkbox-90-input-size) / 2);
+			top: math.div(($control-size-90 - $checkbox-90-input-size), 2);
 		}
 
 		.checkbox--padded-100 & {
-			top: (($control-size-100 - $checkbox-input-size) / 2);
+			top: math.div(($control-size-100 - $checkbox-input-size), 2);
 		}
 
 		.checkbox--padded-100.checkbox--90 & {
-			top: (($control-size-100 - $checkbox-90-input-size) / 2);
+			top: math.div(($control-size-100 - $checkbox-90-input-size), 2);
 		}
 
 		.checkbox--padded-200 & {
-			top: (($control-size-200 - $checkbox-input-size) / 2);
+			top: math.div(($control-size-200 - $checkbox-input-size), 2);
 		}
 
 		.checkbox--padded-200.checkbox--90 & {
-			top: (($control-size-200 - $checkbox-90-input-size) / 2);
+			top: math.div(($control-size-200 - $checkbox-90-input-size), 2);
 		}
 
 		input:checked ~ & {
@@ -176,8 +225,12 @@ label.checkbox {
 			background-repeat: no-repeat;
 
 			.checkbox--90 & {
-				background-image: url(get-svg-uri($icon-check-bold, $checkbox-input-color));
-				background-size: ($checkbox-90-input-size - 6px) ($checkbox-90-input-size - 6px);
+				background-image: url(get-svg-uri(
+					$icon-check-bold,
+					$checkbox-input-color
+				));
+				background-size: ($checkbox-90-input-size - 6px)
+					($checkbox-90-input-size - 6px);
 			}
 		}
 

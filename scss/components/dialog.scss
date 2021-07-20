@@ -1,4 +1,6 @@
-$dialog-border-width: ($spacing / 8) !default;
+@use 'sass:math';
+
+$dialog-border-width: math.div($spacing, 8) !default;
 $dialog-border-radius: $border-radius-200 !default;
 
 $dialog-border-color: $color-secondary !default;
@@ -32,7 +34,7 @@ $dialog-error-icon-fill: $color-error-600 !default;
 	@include media(0, $range-hand) {
 		padding: $spacing * 1.5;
 	}
-	@include media($range-lap,false) {
+	@include media($range-lap, false) {
 		padding: $spacing * 2;
 	}
 }

@@ -5,7 +5,7 @@ const gulp = require('gulp');
 const jsonImporter = require('node-sass-json-importer');
 const log = require('fancy-log');
 const postcss = require('gulp-postcss');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const stylelint = require('stylelint');
 const tildeImporter = require('node-sass-tilde-importer');
 
