@@ -1,7 +1,10 @@
-@mixin align($method: absolute, $horizontal: center, $vertical: center, $parent: null) {
-
+@mixin align(
+	$method: absolute,
+	$horizontal: center,
+	$vertical: center,
+	$parent: null
+) {
 	@if $method == 'absolute' {
-
 		@if $parent {
 			@at-root #{$parent} {
 				position: relative;
@@ -14,138 +17,98 @@
 			transform: translate(-50%, -50%);
 			left: 50%;
 			top: 50%;
-		}
-
-		@else if $horizontal == 'center' {
+		} @else if $horizontal == 'center' {
 			transform: translateX(-50%);
 			left: 50%;
-		}
-
-		@else if $vertical == 'center' {
+		} @else if $vertical == 'center' {
 			transform: translateY(-50%);
 			top: 50%;
 		}
 
 		@if $horizontal == 'left' {
 			left: 0;
-		}
-
-		@else if $horizontal == 'right' {
+		} @else if $horizontal == 'right' {
 			right: 0;
 		}
 
 		@if $vertical == 'top' {
 			top: 0;
-		}
-
-		@else if $vertical == 'bottom' {
+		} @else if $vertical == 'bottom' {
 			bottom: 0;
 		}
 	}
 
 	@if $method == 'fixed' {
-
 		position: fixed;
 
 		@if $horizontal == 'center' and $vertical == 'center' {
 			transform: translate(-50%, -50%);
 			left: 50%;
 			top: 50%;
-		}
-
-		@else if $horizontal == 'center' {
+		} @else if $horizontal == 'center' {
 			transform: translateX(-50%);
 			left: 50%;
-		}
-
-		@else if $vertical == 'center' {
+		} @else if $vertical == 'center' {
 			transform: translateY(-50%);
 			top: 50%;
 		}
 
 		@if $horizontal == 'left' {
 			left: 0;
-		}
-
-		@else if $horizontal == 'right' {
+		} @else if $horizontal == 'right' {
 			right: 0;
 		}
 
 		@if $vertical == 'top' {
 			top: 0;
-		}
-
-		@else if $vertical == 'bottom' {
+		} @else if $vertical == 'bottom' {
 			bottom: 0;
 		}
 	}
 
 	@if $method == 'flex' {
-
 		@if $parent {
 			@at-root #{$parent} {
 				display: flex;
 
 				@if $horizontal == 'left' {
 					justify-content: flex-start;
-				}
-
-				@else if $horizontal == 'center' {
+				} @else if $horizontal == 'center' {
 					justify-content: center;
-				}
-
-				@else if $horizontal == 'right' {
+				} @else if $horizontal == 'right' {
 					justify-content: flex-end;
 				}
 
 				@if $vertical == 'top' {
 					align-items: flex-start;
-				}
-
-				@else if $vertical == 'center' {
+				} @else if $vertical == 'center' {
 					align-items: center;
-				}
-
-				@else if $vertical == 'bottom' {
+				} @else if $vertical == 'bottom' {
 					align-items: flex-end;
 				}
 			}
-		}
-
-		@else {
-
+		} @else {
 			display: flex;
 
 			@if $horizontal == 'left' {
 				justify-content: flex-start;
-			}
-
-			@else if $horizontal == 'center' {
+			} @else if $horizontal == 'center' {
 				justify-content: center;
-			}
-
-			@else if $horizontal == 'right' {
+			} @else if $horizontal == 'right' {
 				justify-content: flex-end;
 			}
 
 			@if $vertical == 'top' {
 				align-items: flex-start;
-			}
-
-			@else if $vertical == 'center' {
+			} @else if $vertical == 'center' {
 				align-items: center;
-			}
-
-			@else if $vertical == 'bottom' {
+			} @else if $vertical == 'bottom' {
 				align-items: flex-end;
 			}
-
 		}
-
 	}
 
 	@if $method == 'table' {
-
 		@if $parent {
 			@at-root #{$parent} {
 				display: table;
@@ -156,28 +119,19 @@
 
 		@if $horizontal == 'left' {
 			text-align: left;
-		}
-
-		@else if $horizontal == 'center' {
+		} @else if $horizontal == 'center' {
 			text-align: center;
-		}
-
-		@else if $horizontal == 'right' {
+		} @else if $horizontal == 'right' {
 			text-align: right;
 		}
 
 		@if $vertical == 'top' {
 			vertical-align: top;
-		}
-
-		@else if $vertical == 'center' {
+		} @else if $vertical == 'center' {
 			vertical-align: middle;
-		}
-
-		@else if $vertical == 'bottom' {
+		} @else if $vertical == 'bottom' {
 			vertical-align: bottom;
 		}
-
 	}
 
 	@if $method == 'margin' {
@@ -186,30 +140,21 @@
 		@if $horizontal == 'left' {
 			margin-left: 0;
 			margin-right: auto;
-		}
-
-		@else if $horizontal == 'center' {
+		} @else if $horizontal == 'center' {
 			margin-left: auto;
 			margin-right: auto;
-		}
-
-		@else if $horizontal == 'right' {
+		} @else if $horizontal == 'right' {
 			margin-left: auto;
 			margin-right: 0;
 		}
 	}
 
 	@if $method == 'text' {
-
 		@if $horizontal == 'left' {
 			text-align: left;
-		}
-
-		@else if $horizontal == 'center' {
+		} @else if $horizontal == 'center' {
 			text-align: center;
-		}
-
-		@else if $horizontal == 'right' {
+		} @else if $horizontal == 'right' {
 			text-align: right;
 		}
 	}

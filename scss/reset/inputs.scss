@@ -24,8 +24,8 @@ select {
 	display: none; // NOTE: Remove the cross from input fields in IE
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
 	margin: 0; // NOTE: Apparently some margin are still there even though it's hidden
 	-webkit-appearance: none; // NOTE: Remove 'spinner' controls in numberic input fields on WebKit browsers. Used because 'display: none;' will crash Chrome on hover.
 }

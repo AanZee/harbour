@@ -9,7 +9,12 @@
 	$min-width: $media-1-start;
 	$max-width: if($media-2 == null, $media-1-end, $media-2-end);
 
-	@if ($min-width == 0 and $max-width == false) or $min-width == false or $max-width == 0 {
+	@if ($min-width == 0 and $max-width == false) or
+		$min-width ==
+		false or
+		$max-width ==
+		0
+	{
 		@error "Ranges can't start with 'false', end with '0' or start with '0' and end with false in the same query";
 	}
 
@@ -25,7 +30,9 @@
 		@error "The end of your second range can't be lower than the end of the first range";
 	}
 
-	@if ($orientation and ($orientation != landscape and $orientation != portrait)) {
+	@if (
+		$orientation and ($orientation != landscape and $orientation != portrait)
+	) {
 		@error "Orientation value must be landscape or portrait";
 	}
 

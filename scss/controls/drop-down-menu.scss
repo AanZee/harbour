@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $drop-down-menu-icon: $icon-chevron-down !default;
 
 .drop-down-menu {
@@ -26,7 +28,6 @@ $drop-down-menu-icon: $icon-chevron-down !default;
 }
 
 .drop-down-menu--90 {
-
 	&::after {
 		width: $control-size-90;
 		height: $icon-size-90;
@@ -93,7 +94,8 @@ $drop-down-menu-icon: $icon-chevron-down !default;
 
 	.drop-down-menu.is-valid &,
 	.drop-down-menu.is-invalid & {
-		padding-right: ($control-size-100 * 2) - (($control-size-100 - $icon-size-100) / 2);
+		padding-right: ($control-size-100 * 2) -
+			math.div(($control-size-100 - $icon-size-100), 2);
 		background-position: right $control-size-100 center;
 		background-size: $icon-size-100;
 		background-repeat: no-repeat;
@@ -102,7 +104,10 @@ $drop-down-menu-icon: $icon-chevron-down !default;
 	.drop-down-menu.is-valid & {
 		border: $input-is-valid-border;
 		background-color: $input-is-valid-background-color;
-		background-image: url(get-svg-uri($input-is-valid-icon, $input-is-valid-icon-color));
+		background-image: url(get-svg-uri(
+			$input-is-valid-icon,
+			$input-is-valid-icon-color
+		));
 		box-shadow: $input-is-valid-box-shadow;
 
 		&:focus {
@@ -115,7 +120,10 @@ $drop-down-menu-icon: $icon-chevron-down !default;
 	.drop-down-menu.is-invalid & {
 		border: $input-is-invalid-border;
 		background-color: $input-is-invalid-background-color;
-		background-image: url(get-svg-uri($input-is-invalid-icon, $input-is-invalid-icon-color));
+		background-image: url(get-svg-uri(
+			$input-is-invalid-icon,
+			$input-is-invalid-icon-color
+		));
 		box-shadow: $input-is-invalid-box-shadow;
 
 		&:focus {
@@ -126,9 +134,15 @@ $drop-down-menu-icon: $icon-chevron-down !default;
 	}
 
 	.drop-down-menu--90 & {
-		padding-top: (($control-size-90 - ($input-line-height * $input-font-size)) / 2);
+		padding-top: math.div(
+			($control-size-90 - ($input-line-height * $input-font-size)),
+			2
+		);
 		padding-right: $control-size-90;
-		padding-bottom: (($control-size-90 - ($input-line-height * $input-font-size)) / 2);
+		padding-bottom: math.div(
+			($control-size-90 - ($input-line-height * $input-font-size)),
+			2
+		);
 		padding-left: $spacing;
 		height: $control-size-90;
 		font-size: $font-size-100;
@@ -136,7 +150,8 @@ $drop-down-menu-icon: $icon-chevron-down !default;
 
 	.drop-down-menu--90.is-valid &,
 	.drop-down-menu--90.is-invalid & {
-		padding-right: ($control-size-90 * 2) - (($control-size-90 - $icon-size-90) / 2);
+		padding-right: ($control-size-90 * 2) -
+			math.div(($control-size-90 - $icon-size-90), 2);
 		background-position: right $control-size-90 center;
 		background-size: $icon-size-90;
 	}
@@ -145,12 +160,14 @@ $drop-down-menu-icon: $icon-chevron-down !default;
 		padding-right: $spacing * 1.5;
 		border: $input-autofill-border;
 		background-color: $input-autofill-background-color;
-		box-shadow: $input-autofill-box-shadow, $input-autofill-box-shadow-background;
+		box-shadow: $input-autofill-box-shadow,
+			$input-autofill-box-shadow-background;
 
 		&:focus {
 			border: $input-autofill-focus-border;
 			background-color: $input-autofill-focus-background-color;
-			box-shadow: $input-autofill-focus-box-shadow, $input-autofill-focus-box-shadow-background;
+			box-shadow: $input-autofill-focus-box-shadow,
+				$input-autofill-focus-box-shadow-background;
 		}
 	}
 

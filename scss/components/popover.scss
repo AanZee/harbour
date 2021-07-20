@@ -44,9 +44,7 @@ $popover-z-index-lap-and-larger: 600 !default;
 	align-items: center;
 
 	@include media($range-lap, false) {
-
 		.popover--arrow & {
-
 			&::before,
 			&::after {
 				position: absolute;
@@ -78,11 +76,12 @@ $popover-z-index-lap-and-larger: 600 !default;
 		}
 
 		.popover--arrow.popover--left-bottom-aligned-body & {
-
 			&::before {
 				top: auto;
 				right: auto;
-				bottom: (($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px);
+				bottom: (
+					($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px
+				);
 				left: $popover-arrow-horizontal-position;
 				border-top-color: transparent;
 				border-bottom-color: rgba($color-ui-100, 0.075);
@@ -99,11 +98,12 @@ $popover-z-index-lap-and-larger: 600 !default;
 		}
 
 		.popover--arrow.popover--center-bottom-aligned-body & {
-
 			&::before {
 				top: auto;
 				right: auto;
-				bottom: (($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px);
+				bottom: (
+					($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px
+				);
 				left: 50%;
 				border-top-color: transparent;
 				border-bottom-color: rgba($color-ui-100, 0.075);
@@ -122,11 +122,12 @@ $popover-z-index-lap-and-larger: 600 !default;
 		}
 
 		.popover--arrow.popover--right-bottom-aligned-body & {
-
 			&::before {
 				top: auto;
 				right: $popover-arrow-horizontal-position;
-				bottom: (($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px);
+				bottom: (
+					($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px
+				);
 				left: auto;
 				border-top-color: transparent;
 				border-bottom-color: rgba($color-ui-100, 0.075);
@@ -143,9 +144,10 @@ $popover-z-index-lap-and-larger: 600 !default;
 		}
 
 		.popover--arrow.popover--left-top-aligned-body & {
-
 			&::before {
-				top: (($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px);
+				top: (
+					($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px
+				);
 				right: auto;
 				bottom: auto;
 				left: $popover-arrow-horizontal-position;
@@ -164,9 +166,10 @@ $popover-z-index-lap-and-larger: 600 !default;
 		}
 
 		.popover--arrow.popover--center-top-aligned-body & {
-
 			&::before {
-				top: (($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px);
+				top: (
+					($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px
+				);
 				right: auto;
 				bottom: auto;
 				left: 50%;
@@ -187,9 +190,10 @@ $popover-z-index-lap-and-larger: 600 !default;
 		}
 
 		.popover--arrow.popover--right-top-aligned-body & {
-
 			&::before {
-				top: (($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px);
+				top: (
+					($popover-arrow-size * -1) + $popover-arrow-vertical-position + 1px
+				);
 				right: $popover-arrow-horizontal-position;
 				bottom: auto;
 				left: auto;
@@ -208,7 +212,6 @@ $popover-z-index-lap-and-larger: 600 !default;
 		}
 
 		.popover--arrow.popover--center-aligned-arrow & {
-
 			&::before {
 				left: 50%;
 				transform: translate(-50%, 0);
@@ -291,7 +294,9 @@ $popover-z-index-lap-and-larger: 600 !default;
 
 	.popover--left-bottom-aligned-body.popover--arrow & {
 		@include media($range-lap, false) {
-			top: calc(100% + #{$popover-arrow-size + ($popover-arrow-vertical-position * -1)});
+			top: calc(
+				100% + #{$popover-arrow-size + ($popover-arrow-vertical-position * -1)}
+			);
 		}
 	}
 
@@ -307,7 +312,9 @@ $popover-z-index-lap-and-larger: 600 !default;
 
 	.popover--center-bottom-aligned-body.popover--arrow & {
 		@include media($range-lap, false) {
-			top: calc(100% + #{$popover-arrow-size + ($popover-arrow-vertical-position * -1)});
+			top: calc(
+				100% + #{$popover-arrow-size + ($popover-arrow-vertical-position * -1)}
+			);
 		}
 	}
 
@@ -323,7 +330,9 @@ $popover-z-index-lap-and-larger: 600 !default;
 
 	.popover--right-bottom-aligned-body.popover--arrow & {
 		@include media($range-lap, false) {
-			top: calc(100% + #{$popover-arrow-size + ($popover-arrow-vertical-position * -1)});
+			top: calc(
+				100% + #{$popover-arrow-size + ($popover-arrow-vertical-position * -1)}
+			);
 		}
 	}
 
@@ -391,7 +400,6 @@ $popover-z-index-lap-and-larger: 600 !default;
 }
 
 @keyframes popoverBodyShowLapAndHigher {
-
 	0% {
 		display: none;
 		opacity: 0;

@@ -14,6 +14,7 @@ The classes belonging to the `button` component can be used to style both the `<
 %}
 
 ## Available states
+
 ### Hover, focus and active
 
 {% capture button-states %}
@@ -26,6 +27,7 @@ The classes belonging to the `button` component can be used to style both the `<
 %}
 
 ### Disabled
+
 {% capture button-disabled %}
 <button class="button is-disabled" type="button">is-disabled</button>
 {% endcapture %}
@@ -34,7 +36,9 @@ The classes belonging to the `button` component can be used to style both the `<
 %}
 
 ## Available modifiers
+
 ### Colors
+
 {% capture button-colors %}
 <button class="button button--call-to-action" type="button">button--call-to-action</button>
 <button class="button button--primary" type="button">button--primary</button>
@@ -45,6 +49,7 @@ The classes belonging to the `button` component can be used to style both the `<
 %}
 
 ### Outline version (available in all colors)
+
 {% capture button-outline %}
 <button class="button button--outline" type="button">button--outline</button>
 {% endcapture %}
@@ -53,6 +58,7 @@ The classes belonging to the `button` component can be used to style both the `<
 %}
 
 ### Sizes
+
 {% capture button-sizes %}
 <button class="button button--80" type="button">button--80</button>
 <button class="button button--90" type="button">button--90</button>
@@ -64,7 +70,9 @@ The classes belonging to the `button` component can be used to style both the `<
 %}
 
 ## Available local variables
+
 ### Default button (ui colors)
+
 ```
 $button-color
 $button-background-color
@@ -78,6 +86,7 @@ $button-disabled-background-color
 ```
 
 ### Call to action
+
 ```
 $button-call-to-action-color
 $button-call-to-action-background-color
@@ -91,6 +100,7 @@ $button-call-to-action-disabled-background-color
 ```
 
 ### Primary
+
 ```
 $button-primary-color
 $button-primary-background-color
@@ -104,6 +114,7 @@ $button-primary-disabled-background-color
 ```
 
 ### Secondary
+
 ```
 $button-secondary-color: red;
 $button-secondary-background-color
@@ -117,6 +128,7 @@ $button-secondary-disabled-background-color
 ```
 
 ### Outline
+
 ```
 $button-outline-border-width
 ```

@@ -31,38 +31,38 @@ $layout-spacing-variations: (
 		palm-and-smaller: $spacing,
 		hand: $spacing,
 		lap: $spacing,
-		desk-and-larger: $spacing
+		desk-and-larger: $spacing,
 	),
 	70: (
 		palm-and-smaller: $spacing,
 		hand: $spacing * 1.25,
 		lap: $spacing * 1.5,
-		desk-and-larger: $spacing * 1.75
+		desk-and-larger: $spacing * 1.75,
 	),
 	80: (
 		palm-and-smaller: $spacing * 1.5,
 		hand: $spacing * 1.5,
 		lap: $spacing * 2,
-		desk-and-larger: $spacing * 2.5
+		desk-and-larger: $spacing * 2.5,
 	),
 	90: (
 		palm-and-smaller: $spacing * 1.5,
 		hand: $spacing * 2,
 		lap: $spacing * 3,
-		desk-and-larger: $spacing * 4
+		desk-and-larger: $spacing * 4,
 	),
 	200: (
 		palm-and-smaller: $spacing * 2,
 		hand: $spacing * 4,
 		lap: $spacing * 6,
-		desk-and-larger: $spacing * 8
+		desk-and-larger: $spacing * 8,
 	),
 	300: (
 		palm-and-smaller: $spacing * 2,
 		hand: $spacing * 5,
 		lap: $spacing * 8,
-		desk-and-larger: $spacing * 11
-	)
+		desk-and-larger: $spacing * 11,
+	),
 );
 
 // Generates media queries with the provided spacing properties
@@ -122,35 +122,39 @@ $layout-spacing-variations: (
 }
 
 .layout__section--spacing-0 {
-
 	> :not(:first-child) {
 		margin-top: 0;
 	}
 }
 
-@each $layout-spacing-variation-city-block, $layout-spacing-variation-ranges in $layout-spacing-variations {
-
+@each $layout-spacing-variation-city-block,
+	$layout-spacing-variation-ranges in $layout-spacing-variations
+{
 	.layout__section--spacing-#{$layout-spacing-variation-city-block} {
-
 		> :not(:first-child) {
-			@include layout-get-ranges('margin-top', $layout-spacing-variation-ranges);
+			@include layout-get-ranges(
+				'margin-top',
+				$layout-spacing-variation-ranges
+			);
 		}
 	}
 }
 
 .layout__section--spaced-0 {
-
 	&:not(:first-child) {
 		margin-top: 0;
 	}
 }
 
-@each $layout-spacing-variation-city-block, $layout-spacing-variation-ranges in $layout-spacing-variations {
-
+@each $layout-spacing-variation-city-block,
+	$layout-spacing-variation-ranges in $layout-spacing-variations
+{
 	.layout__section--spaced-#{$layout-spacing-variation-city-block} {
-
 		&:not(:first-child) {
-			@include layout-get-ranges('margin-top', $layout-spacing-variation-ranges);
+			@include layout-get-ranges(
+				'margin-top',
+				$layout-spacing-variation-ranges
+			);
 		}
 	}
 }
@@ -334,8 +338,9 @@ $layout-spacing-variations: (
 	padding: 0;
 }
 
-@each $layout-spacing-variation-city-block, $layout-spacing-variation-ranges in $layout-spacing-variations {
-
+@each $layout-spacing-variation-city-block,
+	$layout-spacing-variation-ranges in $layout-spacing-variations
+{
 	.layout__inner--padded-#{$layout-spacing-variation-city-block} {
 		@include layout-get-ranges('padding', $layout-spacing-variation-ranges);
 	}
@@ -346,10 +351,14 @@ $layout-spacing-variations: (
 	padding-bottom: 0;
 }
 
-@each $layout-spacing-variation-city-block, $layout-spacing-variation-ranges in $layout-spacing-variations {
-
+@each $layout-spacing-variation-city-block,
+	$layout-spacing-variation-ranges in $layout-spacing-variations
+{
 	.layout__inner--padded-top-bottom-#{$layout-spacing-variation-city-block} {
-		@include layout-get-ranges(('padding-top', 'padding-bottom'), $layout-spacing-variation-ranges);
+		@include layout-get-ranges(
+			('padding-top', 'padding-bottom'),
+			$layout-spacing-variation-ranges
+		);
 	}
 }
 
@@ -358,10 +367,14 @@ $layout-spacing-variations: (
 	padding-left: 0;
 }
 
-@each $layout-spacing-variation-city-block, $layout-spacing-variation-ranges in $layout-spacing-variations {
-
+@each $layout-spacing-variation-city-block,
+	$layout-spacing-variation-ranges in $layout-spacing-variations
+{
 	.layout__inner--padded-left-right-#{$layout-spacing-variation-city-block} {
-		@include layout-get-ranges(('padding-right', 'padding-left'), $layout-spacing-variation-ranges);
+		@include layout-get-ranges(
+			('padding-right', 'padding-left'),
+			$layout-spacing-variation-ranges
+		);
 	}
 }
 
@@ -369,8 +382,9 @@ $layout-spacing-variations: (
 	padding-top: 0;
 }
 
-@each $layout-spacing-variation-city-block, $layout-spacing-variation-ranges in $layout-spacing-variations {
-
+@each $layout-spacing-variation-city-block,
+	$layout-spacing-variation-ranges in $layout-spacing-variations
+{
 	.layout__inner--padded-top-#{$layout-spacing-variation-city-block} {
 		@include layout-get-ranges('padding-top', $layout-spacing-variation-ranges);
 	}
@@ -380,10 +394,14 @@ $layout-spacing-variations: (
 	padding-right: 0;
 }
 
-@each $layout-spacing-variation-city-block, $layout-spacing-variation-ranges in $layout-spacing-variations {
-
+@each $layout-spacing-variation-city-block,
+	$layout-spacing-variation-ranges in $layout-spacing-variations
+{
 	.layout__inner--padded-right-#{$layout-spacing-variation-city-block} {
-		@include layout-get-ranges('padding-right', $layout-spacing-variation-ranges);
+		@include layout-get-ranges(
+			'padding-right',
+			$layout-spacing-variation-ranges
+		);
 	}
 }
 
@@ -391,10 +409,14 @@ $layout-spacing-variations: (
 	padding-bottom: 0;
 }
 
-@each $layout-spacing-variation-city-block, $layout-spacing-variation-ranges in $layout-spacing-variations {
-
+@each $layout-spacing-variation-city-block,
+	$layout-spacing-variation-ranges in $layout-spacing-variations
+{
 	.layout__inner--padded-bottom-#{$layout-spacing-variation-city-block} {
-		@include layout-get-ranges('padding-bottom', $layout-spacing-variation-ranges);
+		@include layout-get-ranges(
+			'padding-bottom',
+			$layout-spacing-variation-ranges
+		);
 	}
 }
 
@@ -402,10 +424,14 @@ $layout-spacing-variations: (
 	padding-left: 0;
 }
 
-@each $layout-spacing-variation-city-block, $layout-spacing-variation-ranges in $layout-spacing-variations {
-
+@each $layout-spacing-variation-city-block,
+	$layout-spacing-variation-ranges in $layout-spacing-variations
+{
 	.layout__inner--padded-left-#{$layout-spacing-variation-city-block} {
-		@include layout-get-ranges('padding-left', $layout-spacing-variation-ranges);
+		@include layout-get-ranges(
+			'padding-left',
+			$layout-spacing-variation-ranges
+		);
 	}
 }
 
@@ -529,17 +555,21 @@ $layout-spacing-variations: (
 	flex-basis: $spacing * 35;
 
 	@include media(0, $range-hand) {
+		/* prettier-ignore */
 		min-width: calc(#{$layout-column-one-third-percentage} - #{$layout-column-spacing-hand-and-smaller * 2});
 	}
 	@include media($range-lap, false) {
+		/* prettier-ignore */
 		min-width: calc(#{$layout-column-one-third-percentage} - #{$layout-column-spacing-lap-and-larger * 2});
 	}
 
 	.layout__columns--spacing-90 > & {
 		@include media(0, $range-hand) {
-			min-width: calc(#{$layout-column-one-third-percentage} - #{$layout-column-spacing-90-hand-and-smaller * 2});
+			/* prettier-ignore */
+			min-width: calc(#{$layout-column-one-third-percentage} - #{$layout-column-spacing-90-hand-and-smaller *2});
 		}
 		@include media($range-lap, false) {
+			/* prettier-ignore */
 			min-width: calc(#{$layout-column-one-third-percentage} - #{$layout-column-spacing-90-lap-and-larger * 2});
 		}
 	}
@@ -554,17 +584,21 @@ $layout-spacing-variations: (
 	flex-grow: 2;
 
 	@include media(0, $range-hand) {
+		/* prettier-ignore */
 		min-width: calc(#{$layout-column-two-thirds-percentage} - #{$layout-column-spacing-hand-and-smaller * 2});
 	}
 	@include media($range-lap, false) {
+		/* prettier-ignore */
 		min-width: calc(#{$layout-column-two-thirds-percentage} - #{$layout-column-spacing-lap-and-larger * 2});
 	}
 
 	.layout__columns--spacing-90 > & {
 		@include media(0, $range-hand) {
+			/* prettier-ignore */
 			min-width: calc(#{$layout-column-two-thirds-percentage} - #{$layout-column-spacing-90-hand-and-smaller * 2});
 		}
 		@include media($range-lap, false) {
+			/* prettier-ignore */
 			min-width: calc(#{$layout-column-two-thirds-percentage} - #{$layout-column-spacing-90-lap-and-larger * 2});
 		}
 	}
