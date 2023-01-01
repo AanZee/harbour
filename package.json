@@ -14,7 +14,7 @@
 	},
 	"dependencies": {
 		"bourbon": "5.1.0",
-		"node-sass-json-importer": "4.1.0",
+		"node-sass-json-importer": "4.3.0",
 		"node-sass-tilde-importer": "1.0.2",
 		"normalize.scss": "github:AanZee/normalize.scss#8.0.2",
 		"reset-css": "4.0.1",
